@@ -1,0 +1,21 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  title: "Vector- en functieruimten -- Slides"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - href: slides/H1.qmd
+        text: H1
+      - href: slides/H2.qmd
+        text: H2
+      - href: slides/H3.qmd
+        text: H3
+
+format:
+  html:
+    theme: cosmo
+    toc: true

@@ -1,0 +1,1129 @@
+[
+  {
+    "objectID": "slides/H3.html",
+    "href": "slides/H3.html",
+    "title": "Hoofdstuk 3 - Lineaire operatoren en eigenwaarden",
+    "section": "",
+    "text": "$$ % Math operators % % \n% VECTORS\n% specifically for vectors in F^n \n% MATRICES\n% SCALARS \n% LINEAR MAPS\n% FIELDS \n% RELATIONS \n% % % % % % % % %\n%\n$$\n\nHerhaling:\n\nMachten en veeltermen van operatoren\nKarakteristieke veelterm\nEigenwaarden en eigenvectoren, diagonalisatie"
+  },
+  {
+    "objectID": "slides/H3.html#doel-van-dit-hoofdstuk",
+    "href": "slides/H3.html#doel-van-dit-hoofdstuk",
+    "title": "Hoofdstuk 3 - Lineaire operatoren en eigenwaarden",
+    "section": "",
+    "text": "$$ % Math operators % % \n% VECTORS\n% specifically for vectors in F^n \n% MATRICES\n% SCALARS \n% LINEAR MAPS\n% FIELDS \n% RELATIONS \n% % % % % % % % %\n%\n$$\n\nHerhaling:\n\nMachten en veeltermen van operatoren\nKarakteristieke veelterm\nEigenwaarden en eigenvectoren, diagonalisatie"
+  },
+  {
+    "objectID": "slides/H3.html#doel-van-dit-hoofdstuk-1",
+    "href": "slides/H3.html#doel-van-dit-hoofdstuk-1",
+    "title": "Hoofdstuk 3 - Lineaire operatoren en eigenwaarden",
+    "section": "Doel van dit hoofdstuk",
+    "text": "Doel van dit hoofdstuk\nNieuw:\n\nIdempotente en nilpotente operatoren\nMinimaalveelterm, Cayley-Hamiltontheorema\nCompanion-matrix van een veelterm\nInvariante deelruimten en veralgemeende eigenruimten, Jordan-decompositie\nFuncties van operatoren\nToepassing: Lineaire dynamische sytemen"
+  },
+  {
+    "objectID": "slides/H3.html#machten-en-veeltermen-1",
+    "href": "slides/H3.html#machten-en-veeltermen-1",
+    "title": "Hoofdstuk 3 - Lineaire operatoren en eigenwaarden",
+    "section": "Machten en veeltermen",
+    "text": "Machten en veeltermen\nLineaire operator = endomorfisme: \\({\\hat{A}} \\in \\mathop{\\mathrm{End}}(V) = \\mathop{\\mathrm{Hom}}(V,V)\\)\n\n\\(\\mathop{\\mathrm{End}}(V)\\) is een “associatieve algebra met eenheid” = “ring die een vectorruimte is”\nMachten: aangezien \\({\\hat{A}}\\) een afbeelding \\((V \\to V)\\) is, kunnen we composities nemen van \\({\\hat{A}}\\) met zichzelf:\n\\({\\hat{A}}^n = \\underbrace{{\\hat{A}} \\circ {\\hat{A}} \\circ \\cdots \\circ {\\hat{A}}}_{\\text{$n$ times}}\\) en \\({\\hat{A}}^0 = {\\hat{1}}_V\\)\nVeeltermen: aangezien \\(\\mathop{\\mathrm{End}}(V)\\) ook een vectorruimte is, kunnen we lineaire combinaties nemen\n\\(p({\\hat{A}}) = p_s {\\hat{A}}^s + p_{s-1} {\\hat{A}}^{s-1} + \\ldots + p_1 {\\hat{A}} + p_0 {\\hat{1}}_V \\in \\mathop{\\mathrm{End}}(V)\\)"
+  },
+  {
+    "objectID": "slides/H3.html#eigenschappen-van-veeltermen",
+    "href": "slides/H3.html#eigenschappen-van-veeltermen",
+    "title": "Hoofdstuk 3 - Lineaire operatoren en eigenwaarden",
+    "section": "Eigenschappen van veeltermen",
+    "text": "Eigenschappen van veeltermen\n\nVoor twee veeltermen \\(p(x)\\) en \\(q(x)\\) en \\({\\hat{A}}\\in \\mathop{\\mathrm{End}}(V)\\) geldt\n\n\\[[p({\\hat{A}}),q({\\hat{A}})] = p({\\hat{A}})q({\\hat{A}}) - q({\\hat{A}})p({\\hat{A}}) = {\\hat{0}}\\]\n\nVoor een veelterm \\(p(x)\\), een lineaire operator \\({\\hat{A}}\\in \\mathop{\\mathrm{End}}(V)\\) en een lineaire transformatie (=inverteerbare lineaire afbeelding) \\({\\hat{T}} \\in \\mathop{\\mathrm{Hom}}(V,W)\\) geldt\n\n\\[\\underbrace{p({\\hat{T}} {\\hat{A}} {\\hat{T}}^{-1})}_{\\in \\mathop{\\mathrm{End}}(W)} = {\\hat{T}} \\underbrace{p({\\hat{A}})}_{\\in \\mathop{\\mathrm{End}}(V)} {\\hat{T}}^{-1}\\]"
+  },
+  {
+    "objectID": "slides/H3.html#nilpotente-operatoren",
+    "href": "slides/H3.html#nilpotente-operatoren",
+    "title": "Hoofdstuk 3 - Lineaire operatoren en eigenwaarden",
+    "section": "Nilpotente operatoren",
+    "text": "Nilpotente operatoren\n\nEen element \\(a\\) fvan een ring \\(R\\) dat voldoet aan aan \\(a^s = 0\\) heet nilpotent met index \\(s\\) (als \\(n=s\\) de kleinste waarde is waarvoor \\(a^n=0\\))\nNilpotente operatoren \\({\\hat{N}} \\in \\mathop{\\mathrm{End}}(V)\\) voldoen dus aan \\({\\hat{N}}^s = {\\hat{0}}\\) en spelen een rol bij de veralgemeene eigenwaardendecompositie\nVoorbeeld: \\({\\mathsf{A}} = \\begin{bmatrix} 0 & c \\\\ 0 & 0 \\end{bmatrix}\\) is nilpotent met index \\(s=2\\) (voor elke \\(c \\neq 0\\))"
+  },
+  {
+    "objectID": "slides/H3.html#projectie-operator",
+    "href": "slides/H3.html#projectie-operator",
+    "title": "Hoofdstuk 3 - Lineaire operatoren en eigenwaarden",
+    "section": "Projectie-operator",
+    "text": "Projectie-operator\n\nEen element \\(a\\) van een ring \\(R\\) dat voldoet aan \\(a^2 = a\\) heet idempotent.\nIdempotente lineaire operatoren \\({\\hat{P}} \\in \\mathop{\\mathrm{End}}(V)\\) worden vaak projectie-operatoren, of kortweg projectoren, genoemd, omwille van de volgende eigenschap:\n\n\\({\\hat{P}}^2 ={\\hat{P}} \\Rightarrow V = \\mathop{\\mathrm{im}}({\\hat{P}}) \\oplus \\mathop{\\mathrm{ker}}({\\hat{P}})\\) (bewijs aan bord)\n\\(\\forall {v}\\in V: {v}= \\underbrace{{\\hat{P}}{v}}_{{v}_1} + \\underbrace{({\\hat{1}}- {\\hat{P}}){v}}_{{v}_2}\\)\nomgekeerd: gegeven \\(V = V_1 \\oplus V_2\\), de decompositie \\({v}= {v}_1 + {v}_2\\) definieert een projector op \\(V_1\\) parallel met \\(V_2\\): \\({\\hat{P}}{v}= {v}_1 \\in V_1\\) (en \\({v}_2 = {v}-{v}_1 = ({\\hat{1}}- {\\hat{P}}){v}\\))."
+  },
+  {
+    "objectID": "slides/H3.html#annihilerende-veeltermen",
+    "href": "slides/H3.html#annihilerende-veeltermen",
+    "title": "Hoofdstuk 3 - Lineaire operatoren en eigenwaarden",
+    "section": "Annihilerende veeltermen",
+    "text": "Annihilerende veeltermen\n\nEen veelterm \\(p \\in {\\mathbb{F}}[x]\\) annihileert \\({\\hat{A}}\\in \\mathop{\\mathrm{End}}(V)\\) als \\(p({\\hat{A}})={\\hat{0}}\\)\nVoorbeeld: \\({\\hat{P}}^2 = {\\hat{P}} \\Rightarrow p(x) = x^2 - x\\) annihileert \\({\\hat{P}}\\)\n\\(V\\) eindig-dimensionaal \\(\\Rightarrow \\mathop{\\mathrm{dim}}(\\mathop{\\mathrm{End}}(V)) = \\mathop{\\mathrm{dim}}(V)^2\\)\n\n\\(\\Rightarrow\\) er bestaat een \\(s\\) waarvoor \\(\\{{\\hat{A}}^0,{\\hat{A}}^1,\\ldots,{\\hat{A}}^k\\,\\ldots,{\\hat{A}}^s\\}\\) niet meer lineair onafhankelijk is\nminimaalveelterm \\(m_{{\\hat{A}}}(x)= x^s + \\ldots\\) is de monische veelterm van laagste graad \\(s\\) die \\({\\hat{A}}\\) annihileert en is uniek\n\nElke annihilerende veelterm \\(p\\) van \\({\\hat{A}}\\) voldoet aan\n\\(p(x) = m_{{\\hat{A}}}(x) q(x)\\) (bewijs aan bord)"
+  },
+  {
+    "objectID": "slides/H3.html#eigenwaarden-en-eigenvectoren",
+    "href": "slides/H3.html#eigenwaarden-en-eigenvectoren",
+    "title": "Hoofdstuk 3 - Lineaire operatoren en eigenwaarden",
+    "section": "Eigenwaarden en eigenvectoren",
+    "text": "Eigenwaarden en eigenvectoren\n\n\\({\\hat{A}} \\in \\mathop{\\mathrm{End}}(V)\\), \\(\\lambda \\in {\\mathbb{F}}\\), \\({v}\\in V\\) met \\({v}\\neq {o}\\):\n\\[{\\hat{A}} {v}= \\lambda {v}\\]\n\nEigenwaarde (karakteristieke waarde) \\(\\lambda\\), eigenvector \\({v}\\)\nelke \\(a {v}\\) met \\(a \\neq 0\\) is ook een eigenvector"
+  },
+  {
+    "objectID": "slides/H3.html#eigenwaarden-en-eigenvectoren-1",
+    "href": "slides/H3.html#eigenwaarden-en-eigenvectoren-1",
+    "title": "Hoofdstuk 3 - Lineaire operatoren en eigenwaarden",
+    "section": "Eigenwaarden en eigenvectoren",
+    "text": "Eigenwaarden en eigenvectoren\n\nBelang van het veld \\({\\mathbb{F}}\\): \\({\\mathsf{A}} = \\begin{bmatrix}  0 & -1 \\\\ 1 & 0  \\end{bmatrix}\\)\n\n\\(\\lambda \\in {\\mathbb{R}}\\): geen\n\\(\\lambda \\in {\\mathbb{C}}\\): \\({\\mathsf{A}}(\\boldsymbol{e}_1 \\pm {\\mathrm{i}}\\boldsymbol{e}_2) = \\mp {\\mathrm{i}}(\\boldsymbol{e}_1 \\pm {\\mathrm{i}}\\boldsymbol{e}_2)\\)\n\\(\\Rightarrow \\lambda = +{\\mathrm{i}}\\) en \\(\\lambda = -{\\mathrm{i}}\\)\n\nBelang van domein: \\({\\hat{D}} = \\frac{{\\mathrm{d}}\\ }{{\\mathrm{d}}x}\\)\n\nOp \\(C^{\\infty}({\\mathbb{R}},{\\mathbb{F}})\\): \\(\\frac{{\\mathrm{d}}\\ }{{\\mathrm{d}}x} {\\mathrm{e}}^{\\lambda x} = \\lambda {\\mathrm{e}}^{\\lambda x}\\)\nOp \\({\\mathbb{F}}[x]\\): geen eigenvectoren / eigenwaarden"
+  },
+  {
+    "objectID": "slides/H3.html#eigenruimten",
+    "href": "slides/H3.html#eigenruimten",
+    "title": "Hoofdstuk 3 - Lineaire operatoren en eigenwaarden",
+    "section": "Eigenruimten",
+    "text": "Eigenruimten\n\nEigenruimte \\(V_\\lambda = \\{{v}\\in V | {\\hat{A}} {v}= \\lambda {v}\\} = \\mathop{\\mathrm{ker}}({\\hat{A}} - \\lambda )\\)\n\n\\(\\Rightarrow\\) \\(\\lambda\\) is eigenwaarde als \\(\\mathop{\\mathrm{dim}}(V_\\lambda) &gt; 0\\)\n\\(r_\\lambda = \\mathop{\\mathrm{dim}}(V_\\lambda)\\): geometrische multipliciteit\n\n\\(V\\) eindigdimensionaal: \\(r_\\lambda &gt; 0 \\Rightarrow \\mathop{\\mathrm{rank}}({\\hat{A}}-\\lambda {\\hat{1}}) &lt; \\mathop{\\mathrm{dim}}(V)\\) en dus is \\({\\hat{A}}-\\lambda {\\hat{1}}\\) niet injectief en niet-inverteerbaar. Er geldt dus ook \\(\\det({\\hat{A}}-\\lambda {\\hat{1}})=0\\)."
+  },
+  {
+    "objectID": "slides/H3.html#spectrum",
+    "href": "slides/H3.html#spectrum",
+    "title": "Hoofdstuk 3 - Lineaire operatoren en eigenwaarden",
+    "section": "Spectrum",
+    "text": "Spectrum\n\nSpectrum: \\(\\sigma_{{\\hat{A}}} = \\{ \\lambda \\in {\\mathbb{F}}| ({\\hat{A}} - \\lambda)\\) heeft geen ‘goed gedefinieerde inverse’\\(\\}\\)\n\\(V\\) eindig-dimensionaal: \\(\\sigma = \\{\\lambda_1,\\ldots,\\lambda_m\\}\\) bevat alleen eigenwaarden\n\\(V\\) oneindig-dimensionaal: zie later\nTerzijde: \\({\\hat{R}}_{{\\hat{A}}}(z) = (z{\\hat{1}}-{\\hat{A}})^{-1}\\) voor waarden \\(z \\in {\\mathbb{C}}\\setminus \\sigma_{{\\hat{A}}}\\) is de resolvent. Nuttig in theoretische fysica met behulp van technieken uit de complexe analyse."
+  },
+  {
+    "objectID": "slides/H3.html#eigenschappen-van-eigenwaarden-en-eigenruimten",
+    "href": "slides/H3.html#eigenschappen-van-eigenwaarden-en-eigenruimten",
+    "title": "Hoofdstuk 3 - Lineaire operatoren en eigenwaarden",
+    "section": "Eigenschappen van eigenwaarden en eigenruimten",
+    "text": "Eigenschappen van eigenwaarden en eigenruimten\n\n\\({\\hat{A}}{v}= \\lambda {v}\\Rightarrow p({\\hat{A}}){v}= p(\\lambda) {v}\\)\n\\(p(x)\\) is een annihilerende veelterm van \\(\\map{A\\)}$: \\(\\lambda\\) is een nulpunt van \\(p\\)\nverzameling van eigenvectoren \\(\\{{v}_1,\\ldots,{v}_k\\}\\) horende bij onderling verschillende eigenwaarden \\(\\{\\lambda_1,\\ldots,\\lambda_k\\}\\) met \\(\\lambda_i\\neq \\lambda_j\\) zijn linear onafhankelijk (bewijs aan bord).\n\\(\\Rightarrow\\) Som van eigenruimten \\(\\sum_{k} V_{\\lambda_k}\\) wordt directe som \\(\\bigoplus_{k} V_{\\lambda_k}\\)\n\\(\\Rightarrow \\sum_{\\lambda \\in \\sigma_{{\\hat{A}}}} r_\\lambda \\leq \\mathop{\\mathrm{dim}}(V)\\)"
+  },
+  {
+    "objectID": "slides/H3.html#eigenruimten-van-producten-van-lineaire-afbeeldingen",
+    "href": "slides/H3.html#eigenruimten-van-producten-van-lineaire-afbeeldingen",
+    "title": "Hoofdstuk 3 - Lineaire operatoren en eigenwaarden",
+    "section": "Eigenruimten van producten van lineaire afbeeldingen",
+    "text": "Eigenruimten van producten van lineaire afbeeldingen\nBeschouw \\({\\hat{A}} \\in \\mathop{\\mathrm{Hom}}(V,W)\\) en \\({\\hat{B}} \\in \\mathop{\\mathrm{Hom}}(W,V)\\), dan is \\({\\hat{A}}{\\hat{B}} \\in \\mathop{\\mathrm{Hom}}(W,W)\\) en \\({\\hat{B}}{\\hat{A}} \\in \\mathop{\\mathrm{Hom}}(V,V)\\).\n\nElke eigenwaarde \\(\\lambda\\neq 0\\) van \\({\\hat{B}}{\\hat{A}}\\) is ook een eigenwaarde van \\({\\hat{A}}{\\hat{B}}\\) (en vice versa)\nEigenruimte \\(W_\\lambda\\) van \\({\\hat{A}}{\\hat{B}}\\) is komt overeen met \\({\\hat{A}} V_\\lambda\\), en \\(\\mathop{\\mathrm{dim}}(W_\\lambda) = \\mathop{\\mathrm{dim}}(V_\\lambda)\\), i.e. de restrictie van \\({\\hat{A}}\\) tot \\(V_\\lambda\\) is injectief\n\n\\(((\\lambda^{-1}{\\hat{B}})\\circ {\\hat{A}}){v}= {v},\\qquad \\forall {v}\\in V_\\lambda\\)\n\\(({\\hat{A}} \\circ (\\lambda^{-1}{\\hat{B}})){w}= {w},\\qquad \\forall {w}\\in W_\\lambda\\)"
+  },
+  {
+    "objectID": "slides/H3.html#karakteristieke-veelterm",
+    "href": "slides/H3.html#karakteristieke-veelterm",
+    "title": "Hoofdstuk 3 - Lineaire operatoren en eigenwaarden",
+    "section": "Karakteristieke veelterm",
+    "text": "Karakteristieke veelterm\nVoor \\(V\\) eindig-dimensionaal en \\({\\hat{A}}\\in \\mathop{\\mathrm{End}}(V)\\) \\[k_{{\\hat{A}}}(z) = \\det(z{\\hat{1}}- {\\hat{A}}) = z^n + c_{n-1} z^{n-1} + \\ldots + c_0\\]\nmet \\(c_{n-1} = - \\mathop{\\mathrm{tr}}({\\hat{A}})\\) en \\(c_0 = (-1)^n \\det({\\hat{A}})\\).\n\nElke eigenwaarde is een nulpunt, elk nulpunt is een eigenwaarde\n\\(k_{{\\hat{A}}} = (z - \\lambda_1)^{q_{\\lambda_1}} (z- \\lambda_2)^{q_{\\lambda_2}} \\ldots (z-\\lambda_m)^{q_{\\lambda_m}}\\)\nmet \\(q_{\\lambda}\\) de algebraische multipliciteit\n\\(\\mathop{\\mathrm{tr}}({\\hat{A}})= q_{\\lambda_1} \\lambda_1+ q_{\\lambda_2} \\lambda_2+ \\cdots + q_{\\lambda_m} \\lambda_m = \\sum_{\\lambda \\in \\sigma_{{\\hat{A}}}} q_{\\lambda} \\lambda\\)\n\\(\\det({\\hat{A}})= \\lambda_1^{q_{\\lambda_1}} \\lambda_2^{q_{\\lambda_2}} \\cdots \\lambda_m^{q_{\\lambda_m} } = \\prod_{\\lambda \\in \\sigma_{{\\hat{A}}}} \\lambda^{q_{\\lambda}}\\)"
+  },
+  {
+    "objectID": "slides/H3.html#companian-matrix",
+    "href": "slides/H3.html#companian-matrix",
+    "title": "Hoofdstuk 3 - Lineaire operatoren en eigenwaarden",
+    "section": "Companian matrix",
+    "text": "Companian matrix\nGegeven een veelterm \\(p(z) = z^n + p_{n-1} z^{n-1} + \\ldots + p_0 \\in {\\mathbb{F}}[z]\\), construeer een matrix \\({\\mathsf{A}} \\in {\\mathbb{F}}^n\\) zodat \\(p(z) = k_{{\\mathsf{A}}}(z)\\)?\n\nCompanion matrix \\[  {\\mathsf{C}}_p = \\begin{bmatrix}\n      0 & 1 & 0 & \\ldots & 0 & 0\\\\\n      0 & 0 & 1 &\\ldots & 0 & 0\\\\\n      \\vdots & \\vdots & \\vdots & \\ddots & \\vdots & \\vdots\\\\\n      0 & 0 & 0 &\\ldots & 0 & 1\\\\\n      -p_0 & -p_1 & -p_2& \\ldots & -p_{n-2} & -p_{n-1}\n  \\end{bmatrix}\n\\]\n(bewijs aan bord)"
+  },
+  {
+    "objectID": "slides/H3.html#stelling-van-caley---hamilton",
+    "href": "slides/H3.html#stelling-van-caley---hamilton",
+    "title": "Hoofdstuk 3 - Lineaire operatoren en eigenwaarden",
+    "section": "Stelling van Caley - Hamilton",
+    "text": "Stelling van Caley - Hamilton\n\nDe karakteristieke veelterm \\(k_{{\\hat{A}}}(z)\\) annihileert \\({\\hat{A}}\\) (bewijs aan bord).\n\\(\\Rightarrow k_{{\\hat{A}}}(z)= m_{{\\hat{A}}}(z) q(z)\\) met bovendien: \\(k_{{\\hat{A}}}(z)\\) en \\(m_{{\\hat{A}}}(z)\\) hebben dezelfde nulpunten\n\\(\\Rightarrow k_{{\\hat{A}}}(z) = \\prod_{\\lambda \\in \\sigma_{{\\hat{A}}}}(z - \\lambda)^{q_\\lambda}\\), \\(m_{{\\hat{A}}}(z) = \\prod_{\\lambda \\in \\sigma_{{\\hat{A}}}}(z - \\lambda)^{s_\\lambda}\\) met \\(s_\\lambda \\leq q_\\lambda\\)\nToepassingen:\n\\({\\hat{A}}^n = - c_{n-1} {\\hat{A}}^{n-1} - \\ldots - c_1 {\\hat{A}} - c_0 {\\hat{1}}\\)\nen als \\(c_0 = (-1)^n \\det({\\hat{A}}) \\neq 0\\):\n\\({\\hat{A}}^{-1} = \\frac{(-1)^{n-1}}{\\det({\\hat{A}})} \\left({\\hat{A}}^{n-1} + c_{n-1} {\\hat{A}}^{n-2} + \\ldots + c_1 {\\hat{1}}\\right)\\)"
+  },
+  {
+    "objectID": "slides/H3.html#voorbeelden-van-karakteristieke-en-minimaalveelterm",
+    "href": "slides/H3.html#voorbeelden-van-karakteristieke-en-minimaalveelterm",
+    "title": "Hoofdstuk 3 - Lineaire operatoren en eigenwaarden",
+    "section": "Voorbeelden van karakteristieke en minimaalveelterm",
+    "text": "Voorbeelden van karakteristieke en minimaalveelterm\n\n\\({\\mathsf{A}} = \\begin{bmatrix} 1 & 0 & 0 & 0\\\\ 0 & 1 & 0 & 0 \\\\ 0 & 0 & 0 & 0 \\\\ 0 & 0 & 0 & 0 \\end{bmatrix}\\)\n\\(\\rightarrow m_{{\\mathsf{A}}}(z) = z(z- 1)\\) en \\(k_{{\\mathsf{A}}}(z) = z^2 (z-1)^2\\)\n\\({\\mathsf{A}} = \\begin{bmatrix} 1 & c \\\\ 0 & 1 \\end{bmatrix}\\)\n\\(\\rightarrow k_{{\\mathsf{A}}}(z) = m_{{\\mathsf{A}}}(z) = (z- 1)^2\\)."
+  },
+  {
+    "objectID": "slides/H3.html#diagonalisatie",
+    "href": "slides/H3.html#diagonalisatie",
+    "title": "Hoofdstuk 3 - Lineaire operatoren en eigenwaarden",
+    "section": "Diagonalisatie",
+    "text": "Diagonalisatie\n\n\\({\\hat{A}} \\in \\mathop{\\mathrm{End}}(V)\\) is diagonaliseerbaar als\n\\[\\bigoplus_{\\lambda \\in \\sigma_{{\\hat{A}}}} V_\\lambda = V \\Leftrightarrow \\sum_{\\lambda \\in \\sigma_{{\\hat{A}}}} r_\\lambda = \\mathop{\\mathrm{dim}}(V)\\]\n\\(\\sum_{\\lambda \\in \\sigma_{{\\hat{A}}}} r_\\lambda &lt; \\mathop{\\mathrm{dim}}(V)\\): \\({\\hat{A}}\\) is niet-diagonaliseerbaar of defect\nEr bestaat een basis van eigenvectoren\nMatrixrepresentatie: er bestaat een basistransformatie \\({\\mathsf{V}}\\) naar deze nieuwe basis van eigenvectoren zodat\n\\({\\mathsf{A}} = {\\mathsf{V}}{\\mathsf{D}} {\\mathsf{V}}^{-1} \\quad \\Leftrightarrow \\quad {\\mathsf{A}} {\\mathsf{V}} = {\\mathsf{V}} {\\mathsf{D}}\\) met\n\\({\\mathsf{D}} = \\text{diag}(\\begin{bmatrix} \\lambda_{i_1} & \\lambda_{i_2} & \\cdots & \\lambda_{i_n} \\end{bmatrix})\\)"
+  },
+  {
+    "objectID": "slides/H3.html#diagonalisatie-voorbeelden",
+    "href": "slides/H3.html#diagonalisatie-voorbeelden",
+    "title": "Hoofdstuk 3 - Lineaire operatoren en eigenwaarden",
+    "section": "Diagonalisatie: voorbeelden",
+    "text": "Diagonalisatie: voorbeelden\n\n\\(\\underbrace{\\begin{bmatrix} 0 & -1 \\\\ 1 & 0 \\end{bmatrix}}_{{\\mathsf{A}}}\\underbrace{\\begin{bmatrix} 1 & 1 \\\\ -{\\mathrm{i}}& + {\\mathrm{i}}\\end{bmatrix}}_{{\\mathsf{V}}} = \\underbrace{\\begin{bmatrix} 1 & 1 \\\\ -{\\mathrm{i}}& +{\\mathrm{i}}\\end{bmatrix}}_{{\\mathsf{V}}} \\underbrace{\\begin{bmatrix} {\\mathrm{i}}& 0 \\\\ 0 & -{\\mathrm{i}}\\end{bmatrix}}_{{\\mathsf{D}}}\\)\n\\({\\mathsf{A}} = \\begin{bmatrix} 1 & c \\\\ 0 & 1 \\end{bmatrix}\\): \\(m_{{\\mathsf{A}}}(z)=(z-1)^2\\)\n\\(\\Rightarrow\\) niet diagonaliseerbaar: \\(\\sigma_{{\\mathsf{A}}} = \\{1\\}\\) met \\(r_1 = 1 &lt; q_1=2\\)"
+  },
+  {
+    "objectID": "slides/H3.html#spectrale-decompositie",
+    "href": "slides/H3.html#spectrale-decompositie",
+    "title": "Hoofdstuk 3 - Lineaire operatoren en eigenwaarden",
+    "section": "Spectrale decompositie",
+    "text": "Spectrale decompositie\n\\({\\hat{A}}\\) diagonaliseerbaar: \\(\\bigoplus_{\\lambda \\in \\sigma_{{\\hat{A}}}} V_\\lambda = V\\)\n\nspectrale projector \\({\\hat{P}}_\\lambda\\) op \\(V_\\lambda\\) parallel met \\(\\bigoplus_{\\lambda' \\neq \\lambda} V_{\\lambda'}\\)\neigenschappen:\n\n\\({\\hat{P}}_\\lambda {\\hat{P}}_{\\lambda'} = \\delta_{\\lambda,\\lambda'} {\\hat{P}}_\\lambda\\)\n\\(\\sum_{\\lambda \\in \\sigma_{{\\hat{A}}}} {\\hat{P}}_\\lambda = {\\hat{1}}_V\\) (resolutie van de identiteit)\n\\({\\hat{A}} {\\hat{P}}_\\lambda = {\\hat{P}}_\\lambda {\\hat{A}} = \\lambda {\\hat{P}}_\\lambda\\)\n\nspectrale decompositie: \\({\\hat{A}} = \\sum_{\\lambda \\in \\sigma_{{\\hat{A}}}} \\lambda {\\hat{P}}_\\lambda\\)\n(diagonaalvorm in operatornotatie)\n\\(\\Rightarrow p({\\hat{A}}) = \\sum p(\\lambda) {\\hat{P}}_\\lambda,\\quad {\\hat{A}}^{-1} = \\sum \\lambda^{-1} {\\hat{P}}_\\lambda\\) (als \\(0\\not\\in \\sigma_{{\\hat{A}}}\\))"
+  },
+  {
+    "objectID": "slides/H3.html#spectrale-decompositie-1",
+    "href": "slides/H3.html#spectrale-decompositie-1",
+    "title": "Hoofdstuk 3 - Lineaire operatoren en eigenwaarden",
+    "section": "Spectrale decompositie",
+    "text": "Spectrale decompositie\nExpliciete uitdrukkingen voor de spectrale projector:\n\n\\({\\hat{P}}_\\lambda = \\prod_{\\substack{\\lambda'\\in\\sigma_{{\\hat{A}}}\\\\\\lambda\\neq \\lambda'}} \\frac{({\\hat{A}} - \\lambda')}{(\\lambda - \\lambda')}\\)\nTerzijde: \\({\\hat{P}}_{\\lambda}=\\lim_{z \\to \\lambda} (z - \\lambda) R_{{\\hat{A}}}(z)\\)"
+  },
+  {
+    "objectID": "slides/H3.html#spectrale-decompositie-2",
+    "href": "slides/H3.html#spectrale-decompositie-2",
+    "title": "Hoofdstuk 3 - Lineaire operatoren en eigenwaarden",
+    "section": "Spectrale decompositie",
+    "text": "Spectrale decompositie\nDiagonaliseerbare operatoren \\({\\hat{A}},{\\hat{B}} \\in \\mathop{\\mathrm{End}}(V)\\) die bovendien commuteren, d.w.z.\n\\({\\left[{\\hat{A}},{\\hat{B}}\\right]}={\\hat{A}}{\\hat{B}} - {\\hat{B}}{\\hat{A}}={\\hat{0}}\\)\nhebben een gezamelijke spectrale decompositie\n\\[\\begin{align}\n    {\\hat{P}}_{i} {\\hat{P}}_j &= \\delta_{i,j} {\\hat{P}}_i,&\\sum_{i\\in I} {\\hat{P}}_i = {\\hat{1}}_V\\\\\n    {\\hat{A}} &= \\sum_{i\\in I} \\lambda_{i} {\\hat{P}}_i&{\\hat{B}} = \\sum_{i\\in I} \\mu_{i} {\\hat{P}}_i\n\\end{align}\\]\n(bewijs aan bord)"
+  },
+  {
+    "objectID": "slides/H3.html#invariante-deelruimten",
+    "href": "slides/H3.html#invariante-deelruimten",
+    "title": "Hoofdstuk 3 - Lineaire operatoren en eigenwaarden",
+    "section": "Invariante deelruimten",
+    "text": "Invariante deelruimten\nVoor \\({\\hat{A}}\\in \\mathop{\\mathrm{End}}(V)\\), een invariante deelruimte is een deelruimte \\(U {\\preccurlyeq}V\\) waarvoor \\({\\hat{A}} U = \\{ {\\hat{A}} {u}| {u}\\in U\\} {\\preccurlyeq}U\\).\n\nDe restrictie van \\({\\hat{A}}\\) tot \\(U\\), genoteerd als \\(\\left.{\\hat{A}}\\right|_{U}\\), kan geïnterproteerd worden als een lineaire operator op \\(U\\)\nGegeven een basis \\(B_U = \\{{u}_1,\\ldots,{u}_k\\}\\) voor \\(U\\), die uitgebreidt wordt tot een volledige basis \\(B_V = \\{{u}_1, \\ldots, {u}_k, {u}_{k+1}, \\ldots, {u}_n \\}\\) voor \\(V\\), dan geldt:\n\\({\\mathsf{A}} = \\Phi_{B_V} ({\\hat{A}}) = \\begin{bmatrix}  {\\mathsf{A}}_U & \\cdots\\\\ {\\mathsf{O}}& \\ddots  \\end{bmatrix}\\)\nmet \\({\\mathsf{A}}_U = \\Phi_{B_U}\\left(\\left.{\\hat{A}}\\right|_{U}\\right)\\)."
+  },
+  {
+    "objectID": "slides/H3.html#invariante-deelruimten-1",
+    "href": "slides/H3.html#invariante-deelruimten-1",
+    "title": "Hoofdstuk 3 - Lineaire operatoren en eigenwaarden",
+    "section": "Invariante deelruimten",
+    "text": "Invariante deelruimten\n\nAls we een complement \\(U^\\text{c}\\) voor \\(U\\) kunnen kiezen (met dus \\(V = U \\oplus U^\\text{c}\\)) die zelf ook een invariante deelruimte is ten opzichte van \\({\\hat{A}}\\), dan krijgen we\n\\({\\mathsf{A}} = \\Phi_{B_V} ({\\hat{A}}) = \\begin{bmatrix}  {\\mathsf{A}}_U & {\\mathsf{O}}\\\\ {\\mathsf{O}}& {\\mathsf{A}}_{U^\\text{c}}  \\end{bmatrix}\\) (blokdiagonaalmatrix)\nmet dus \\(B_V = B_U \\cup B_{U^{\\text{c}}}\\).\nNotatie: \\({\\mathsf{A}} = {\\mathsf{A}}_U \\oplus {\\mathsf{A}}_{U^\\text{c}}\\) (directe som van matrices)\nDirecte som van operatoren: gegeven \\({\\hat{A}}_i \\in \\mathop{\\mathrm{End}}(V_i)\\) voor \\(i=1,2\\), we definiëren \\({\\hat{A}} = {\\hat{A}}_1 \\oplus {\\hat{A}}_2 \\in \\mathop{\\mathrm{End}}(V_1 \\oplus V_2)\\) via de eigenschap dat \\(\\left.{\\hat{A}}\\right|_{V_i} = {\\hat{A}}_i\\) voor \\(i=1,2\\)."
+  },
+  {
+    "objectID": "slides/H3.html#invariante-deelruimten-voorbeelden-en-eigenschappen",
+    "href": "slides/H3.html#invariante-deelruimten-voorbeelden-en-eigenschappen",
+    "title": "Hoofdstuk 3 - Lineaire operatoren en eigenwaarden",
+    "section": "Invariante deelruimten: voorbeelden en eigenschappen",
+    "text": "Invariante deelruimten: voorbeelden en eigenschappen\nInvariante deelruimte van een gegeven operator \\({\\hat{A}}\\in\\mathop{\\mathrm{End}}(V)\\)\n\nTriviaal: \\(\\{{o}\\}\\) en \\(V\\)\nEigenvector \\({\\mathbb{F}}{v}_{\\lambda} = \\{a {v}_{\\lambda}; a \\in {\\mathbb{F}}\\}\\); eigenruimte \\(V_\\lambda\\)\n\\(\\mathop{\\mathrm{im}}({\\hat{A}})\\): \\({\\hat{A}} \\mathop{\\mathrm{im}}({\\hat{A}}) {\\preccurlyeq}\\mathop{\\mathrm{im}}({\\hat{A}})\\)\n\\(\\mathop{\\mathrm{ker}}({\\hat{A}})\\): \\({\\hat{A}} \\mathop{\\mathrm{ker}}({\\hat{A}}) = \\{0\\} {\\preccurlyeq}\\mathop{\\mathrm{ker}}({\\hat{A}})\\)"
+  },
+  {
+    "objectID": "slides/H3.html#invariante-deelruimten-2",
+    "href": "slides/H3.html#invariante-deelruimten-2",
+    "title": "Hoofdstuk 3 - Lineaire operatoren en eigenwaarden",
+    "section": "Invariante deelruimten",
+    "text": "Invariante deelruimten\n\n\\({\\hat{A}}\\) en \\({\\hat{A}} + a {\\hat{1}}\\) hebben dezelfde invariante deelruimten\nTwee reeksen van invariante deelruimten:\n\n\\(\\{{o}\\} = \\mathop{\\mathrm{ker}}(({\\hat{A}}-{a}{\\hat{1}})^0) {\\preccurlyeq}\\mathop{\\mathrm{ker}}({\\hat{A}}-{a}{\\hat{1}}) {\\preccurlyeq}\\) \\(\\qquad\\mathop{\\mathrm{ker}}(({\\hat{A}}-{a}{\\hat{1}})^2) {\\preccurlyeq}\\ldots {\\preccurlyeq}\\mathop{\\mathrm{ker}}(({\\hat{A}}-{a}{\\hat{1}})^k) {\\preccurlyeq}\\ldots\\)\n\\(V = \\mathop{\\mathrm{im}}(({\\hat{A}}-{a}{\\hat{1}})^0) {\\succcurlyeq}\\mathop{\\mathrm{im}}({\\hat{A}}-{a}{\\hat{1}}) {\\succcurlyeq}\\) \\(\\qquad\\mathop{\\mathrm{im}}(({\\hat{A}}-{a}{\\hat{1}})^2) {\\succcurlyeq}\\ldots {\\succcurlyeq}\\mathop{\\mathrm{im}}(({\\hat{A}}-{a}{\\hat{1}})^k) {\\succcurlyeq}\\ldots\\)\n\nDimensie van deze deelruimten is monotoon stijgend (strikte relatie, eigenlijke deelruimten) in de eerste reeks, en monotoon dalend in de tweede, tot een bepaalde index \\(k=s\\), waar beide reeksen stabiliseren:\n\n\\(\\mathop{\\mathrm{ker}}(({\\hat{A}}-{a}{\\hat{1}})^s) = \\mathop{\\mathrm{ker}}(({\\hat{A}}-{a}{\\hat{1}})^{s+1})= \\ldots\\)\n\\(\\mathop{\\mathrm{im}}(({\\hat{A}}-{a}{\\hat{1}})^s) = \\mathop{\\mathrm{im}}(({\\hat{A}}-{a}{\\hat{1}})^{s+1})= \\ldots\\)\n\nEr geldt dan ook \\(V = \\mathop{\\mathrm{ker}}(({\\hat{A}}-{a}{\\hat{1}})^s) \\oplus \\mathop{\\mathrm{im}}(({\\hat{A}}-{a}{\\hat{1}})^s)\\)"
+  },
+  {
+    "objectID": "slides/H3.html#veralgemeende-eigenruimten",
+    "href": "slides/H3.html#veralgemeende-eigenruimten",
+    "title": "Hoofdstuk 3 - Lineaire operatoren en eigenwaarden",
+    "section": "Veralgemeende eigenruimten:",
+    "text": "Veralgemeende eigenruimten:\nGegeven een eigenwaarde \\(\\lambda \\in \\sigma_{{\\hat{A}}}\\), dan bestaat er een \\(s\\) zodat\n\\[V = \\underbrace{\\mathop{\\mathrm{ker}}(({\\hat{A}}-\\lambda{\\hat{1}})^s)}_{\\text{veralgemeende eigenruimte $U_\\lambda$}} \\oplus \\underbrace{\\mathop{\\mathrm{im}}(({\\hat{A}}-\\lambda{\\hat{1}})^s)}_{\\text{complement $U_\\lambda^{\\text{c}}$}}\\]\nmet \\(U_\\lambda\\) en \\(U_\\lambda^{\\text{c}}\\) beide invariante deelruimten van \\({\\hat{A}}\\)\n\nPer constructie is \\({\\hat{A}}|_{U_\\lambda} = \\lambda {\\hat{1}}_{U_\\lambda} + {\\hat{N}}\\) voor een nilpotente operator \\({\\hat{N}}\\) met index \\(s\\)\n\\(\\Rightarrow\\) \\(m_{{\\hat{A}}|_{U_\\lambda}}(z) = (z-\\lambda)^s\\) en \\(k_{{\\hat{A}}|_{U_\\lambda}}(z) = (z-\\lambda)^{\\mathop{\\mathrm{dim}}(U_\\lambda)}\\)\nPer constructie is \\({\\hat{A}}|_{U_{\\lambda}^{\\text{c}}}-\\lambda {\\hat{1}}_{U_\\lambda}^{\\text{c}}\\) injectief/inverteerbaar, zodat \\({\\hat{A}}|_{U_{\\lambda}^{\\text{c}}}\\) geen eigenwaarden \\(\\lambda\\) kan hebben.\n\\(\\Rightarrow\\) \\(m_{{\\hat{A}}}(z) = m_{{\\hat{A}}|_{U_\\lambda}}(z) m_{{\\hat{A}}|_{U_\\lambda^{\\text{c}}}}(z)\\) en \\(k_{{\\hat{A}}}(z) = k_{{\\hat{A}}|_{U_\\lambda}}(z) \\underbrace{k_{{\\hat{A}}|_{U_\\lambda^{\\text{c}}}}(z)}_{\\text{geen polen $\\lambda$}}\\)\n\n\\(\\Rightarrow\\) \\(\\mathop{\\mathrm{dim}}(U_\\lambda) = q_\\lambda\\) en \\(s = s_\\lambda\\) (macht van \\((z-\\lambda)\\) in \\(m_{{\\hat{A}}}(z)\\))"
+  },
+  {
+    "objectID": "slides/H3.html#veralgemeende-eigenruimten-voorbeeld",
+    "href": "slides/H3.html#veralgemeende-eigenruimten-voorbeeld",
+    "title": "Hoofdstuk 3 - Lineaire operatoren en eigenwaarden",
+    "section": "Veralgemeende eigenruimten: voorbeeld",
+    "text": "Veralgemeende eigenruimten: voorbeeld\n\\(p(z) = (z-1)(z+1)^2 = z^3 + z^2 - z - 1 \\Rightarrow {\\mathsf{C}}_p = \\begin{bmatrix} 0 & 1 & 0 \\\\ 0 & 0 & 1 \\\\ 1 & 1 & -1 \\end{bmatrix}\\):\n\nvanwege de constructie: \\(\\sigma_{{\\mathsf{C}}_p} = \\{-1, +1\\}\\) met \\(q_{-1} = 2\\) en \\(q_{+1} = 1\\)\n\\({\\mathsf{C}}_p {v}_\\lambda = \\lambda {v}_\\lambda \\Rightarrow \\boldsymbol{v}_\\lambda = {a}\\begin{bmatrix} 1 \\\\ \\lambda \\\\ \\lambda^2 \\end{bmatrix} \\Rightarrow r_{-1} = r_{+1} = 1\\)\n\\(\\boldsymbol{v}_{+1} = (1,1,1)\\): \\(V_{+1} = U_{+1} = {\\mathbb{F}}\\boldsymbol{v}_{+1}\\)\n\\(\\boldsymbol{v}_{-1} = (1,-1,1)\\): \\(V_{-1} = {\\mathbb{F}}\\boldsymbol{v}_{-1}\\)\n\\(U_{-1} = \\mathop{\\mathrm{ker}}(({\\mathsf{C}}_p - (-1) {\\mathsf{I}})^2) = \\mathop{\\mathrm{ker}}\\left(\\begin{bmatrix}  1 & 1 & 0 \\\\ 0 & 1 & 1 \\\\ 1 & 1 & 0  \\end{bmatrix}^2\\right) = \\mathop{\\mathrm{ker}}\\left(\\begin{bmatrix} 1 & 2 & 1 \\\\ 1 & 2 & 1 \\\\ 1 & 2 & 1 \\end{bmatrix}\\right)\\)"
+  },
+  {
+    "objectID": "slides/H3.html#veralgemeende-eigenruimten-voorbeeld-1",
+    "href": "slides/H3.html#veralgemeende-eigenruimten-voorbeeld-1",
+    "title": "Hoofdstuk 3 - Lineaire operatoren en eigenwaarden",
+    "section": "Veralgemeende eigenruimten: voorbeeld",
+    "text": "Veralgemeende eigenruimten: voorbeeld\n\\(p(z) = (z-1)(z+1)^2 = z^3 + z^2 - z - 1 \\Rightarrow {\\mathsf{C}}_p = \\begin{bmatrix} 0 & 1 & 0 \\\\ 0 & 0 & 1 \\\\ 1 & 1 & -1 \\end{bmatrix}\\):\n\n\\(U_{-1} = \\mathop{\\mathrm{ker}}(({\\mathsf{C}}_p - (-1) {\\mathsf{I}})^2) = \\mathop{\\mathrm{ker}}\\left(\\begin{bmatrix}  1 & 1 & 0 \\\\ 0 & 1 & 1 \\\\ 1 & 1 & 0  \\end{bmatrix}^2\\right) = \\mathop{\\mathrm{ker}}\\left(\\begin{bmatrix} 1 & 2 & 1 \\\\ 1 & 2 & 1 \\\\ 1 & 2 & 1 \\end{bmatrix}\\right)\\)\nbasis voor \\(U_{-1}\\): \\(\\{\\boldsymbol{v}_{-1}=(+1,-1,+1), \\boldsymbol{w}_{-1} = (1, 0, -1)\\}\\)\n\\({\\mathsf{C}}_p \\begin{bmatrix} 1 & 1\\\\ -1 & 0 \\\\ 1 & -1\\end{bmatrix} = \\begin{bmatrix} -1 & 0 \\\\ 1 & -1 \\\\ -1 & 2 \\end{bmatrix}=\\begin{bmatrix} 1 & 1\\\\ -1 & 0 \\\\ 1 & -1\\end{bmatrix} \\underbrace{\\begin{bmatrix} -1 & 1 \\\\ 0 & -1\\end{bmatrix}}_{\\left.{\\mathsf{C}}_p\\right|_{U_{-1}} = (-1) {\\mathsf{I}}+ {\\mathsf{N}}}\\)"
+  },
+  {
+    "objectID": "slides/H3.html#veralgemeende-eigenruimten-1",
+    "href": "slides/H3.html#veralgemeende-eigenruimten-1",
+    "title": "Hoofdstuk 3 - Lineaire operatoren en eigenwaarden",
+    "section": "Veralgemeende eigenruimten",
+    "text": "Veralgemeende eigenruimten\n\nWe kunnen nu \\(V\\) volledig ontbinden als\n\\(V = U_{\\lambda_1} \\oplus U_{\\lambda_1}^{\\text{c}} = U_{\\lambda_1} \\oplus (U_{\\lambda_2} \\oplus \\cdots) = \\bigoplus_{\\lambda \\in \\sigma_{{\\hat{A}}}} U_\\lambda\\)\nElke deelruimte in deze ontbinding is een invariante deelruimte van \\({\\hat{A}}\\), en er geldt\n\\[{\\hat{A}}|_{U_\\lambda} = \\lambda {\\hat{1}}_{U_\\lambda} + {\\hat{N}}_\\lambda\\]\nmet \\(({\\hat{N}}_\\lambda)^{s_\\lambda} ={\\hat{0}}\\) (nilpotent met index \\(s^\\lambda\\))\nAls alle \\(s_\\lambda=1\\) \\(\\Leftrightarrow\\) alle \\(N_\\lambda={\\hat{0}}\\) \\(\\Rightarrow\\) diagonaalvorm"
+  },
+  {
+    "objectID": "slides/H3.html#jordan-normaalvorm-geen-bewijzen",
+    "href": "slides/H3.html#jordan-normaalvorm-geen-bewijzen",
+    "title": "Hoofdstuk 3 - Lineaire operatoren en eigenwaarden",
+    "section": "Jordan normaalvorm (geen bewijzen)",
+    "text": "Jordan normaalvorm (geen bewijzen)\n\nWe kunnen een specifieke basis kiezen voor \\(U_\\lambda\\) zodat \\({\\hat{N}}_\\lambda\\) een canonische vorm / normaalvorm aanneemt\nBeschouw de \\(k \\times k\\) matrix \\({\\mathsf{N}}_k = \\begin{bmatrix} 0 & 1 & 0 & \\cdots & 0 & 0\\\\ 0 & 0 & 1 & \\cdots & 0 & 0 \\\\  \\vdots & \\vdots & \\vdots & \\ddots & \\vdots & \\vdots\\\\  0 & 0 & 0 & \\cdots & 0 & 1\\\\  0 & 0 & 0 & \\cdots & 0 & 0  \\end{bmatrix}\\)\n\\(\\Rightarrow\\) nilpotent met index \\(k\\)\nGegeven \\({\\hat{N}}\\) met \\({\\hat{N}}^s={\\hat{0}}\\), er bestaat een basis \\(B\\) zodat:\n\\[{\\mathsf{N}} = \\Phi_B({\\hat{N}}) = \\bigoplus_{k=1}^s \\bigoplus_{i=1}^{p_k} {\\mathsf{N}}_k\\]\nmet \\(p_k \\geq 0\\) het aantal keer dat er een blok met index \\(k\\) voorkomt, en dus \\(p_s \\geq 1\\)."
+  },
+  {
+    "objectID": "slides/H3.html#jordan-normaalvorm-geen-bewijzen-1",
+    "href": "slides/H3.html#jordan-normaalvorm-geen-bewijzen-1",
+    "title": "Hoofdstuk 3 - Lineaire operatoren en eigenwaarden",
+    "section": "Jordan normaalvorm (geen bewijzen)",
+    "text": "Jordan normaalvorm (geen bewijzen)\n\nJordan normaalvorm / canonische vorm: er bestaat een basis \\(B\\) zodat\n\\[{\\mathsf{J}}_{{\\hat{A}}}= \\Phi_B({\\hat{A}}) = \\bigoplus_{\\lambda \\in \\sigma_{{\\hat{A}}}} \\bigoplus_{k=1}^{s_\\lambda} \\bigoplus_{i=1}^{p^{(\\lambda)}_{k}} {\\mathsf{J}}_k(\\lambda)\\]\nmet \\(J_k(\\lambda) = \\lambda {\\mathsf{I}}_{k} + {\\mathsf{N}}_k\\) (Jordan-blokken)\nen \\(p^{(\\lambda)}_k \\geq 0\\) voor \\(k=1,\\ldots,s_\\lambda-1\\) en \\(p^{(\\lambda)}_{s_\\lambda} &gt; 0\\)\nPer Jordan-blok is er 1 eigenvector: \\(r_\\lambda = \\sum_{k=1}^{s_\\lambda} p_k^{(\\lambda)}\\) en \\(q_\\lambda = \\sum_{k=1}^{s_\\lambda} k p_k^{(\\lambda)}\\)\nJordan decompositie: er bestaat een basistransformatie \\({\\mathsf{V}} \\in \\mathop{\\mathrm{GL}}(n,{\\mathbb{C}})\\) zodat\n\\[{\\mathsf{A}}= {\\mathsf{V}} {\\mathsf{J}}_{\\mathsf{A}} {\\mathsf{V}}^{-1} = {\\mathsf{V}} \\left[\\bigoplus_{\\lambda \\in \\sigma_{{\\mathsf{A}}}} \\bigoplus_{k=1}^{s_\\lambda} \\bigoplus_{i=1}^{p^{(\\lambda)}_{k}} {\\mathsf{J}}_k(\\lambda) \\right]{\\mathsf{V}}^{-1}\\]"
+  },
+  {
+    "objectID": "slides/H3.html#companion-matrix-herbekeken",
+    "href": "slides/H3.html#companion-matrix-herbekeken",
+    "title": "Hoofdstuk 3 - Lineaire operatoren en eigenwaarden",
+    "section": "Companion matrix herbekeken",
+    "text": "Companion matrix herbekeken\nVoor een companion matrix \\({\\mathsf{C}} \\in {\\mathbb{F}}^{n \\times n}\\) met (unieke) eigenwaarden \\({\\lambda_1,\\lambda_2,\\cdots,\\lambda_m}\\) geldt\n\n\\(r_\\lambda=1\\) met \\(\\boldsymbol{v}_\\lambda = (1,\\lambda,\\ldots,\\lambda^{n-1})\\); \\(s_\\lambda=q_\\lambda\\): 1 Jordan-blok per eigenwaarde\nals \\(m = n\\) (alle \\(q_\\lambda=1\\), alle eigenwaarden verschillend): diagonalisatie van \\({\\mathsf{C}}\\) via\n\\({\\mathsf{V}}(\\lambda_1,\\ldots,\\lambda_n) = \\begin{bmatrix} 1 & 1 & 1 &\\dots & 1\\\\  \\lambda_1 & \\lambda_2 & \\lambda_3 & \\dots & \\lambda_n\\\\  \\lambda_1^2 & \\lambda_2^2 & \\lambda_3^2 & \\dots & \\lambda_n^2\\\\  \\vdots & \\vdots & \\vdots & \\ddots & \\vdots\\\\  \\lambda_1^{n-1} & \\lambda_2^{n-1} & \\lambda_3^{n-1} &\\dots & \\lambda_n^{n-1}  \\end{bmatrix}\\) (Vandermonde matrix)\n\\(q_\\lambda = s_\\lambda &gt; 1\\): Jordan-basisvectoren voor \\(k=1,\\ldots,q_\\lambda\\):\n\\((\\boldsymbol{u}_{\\lambda,k})^i = \\frac{1}{k!}\\frac{{\\mathrm{d}}^k }{{\\mathrm{d}}\\lambda^k} \\lambda^{i-1} = \\begin{cases} 0,& i \\leq k \\\\ {i-1 \\choose k} \\lambda^{i-1-k},& i &gt; k\\end{cases}\\qquad (\\text{voor $i=1,\\ldots,n$})\\)\n(afgeleiden als gevolg van limiet van samenvallende eigenwaarden)"
+  },
+  {
+    "objectID": "slides/H3.html#sensitiviteit-van-eigenwaarden-en-eigenruimten",
+    "href": "slides/H3.html#sensitiviteit-van-eigenwaarden-en-eigenruimten",
+    "title": "Hoofdstuk 3 - Lineaire operatoren en eigenwaarden",
+    "section": "Sensitiviteit van eigenwaarden en eigenruimten",
+    "text": "Sensitiviteit van eigenwaarden en eigenruimten\n\nsensitiviteitsanalyse \\(\\approx\\) perturbatietheorie\nHoe sterk verandert de eigenwaardedecompositie of Jordandecompositie van een matrix bij een kleine variatie in de matrixcomponenten? Is er een notie van “continuïteit” of “gladheid”?\nmoeilijk en uitgebreid onderwerp waarvoor we nog niet alle gereedschappen en concepten ter beschikking hebben (normen, hermitische matrices, …)"
+  },
+  {
+    "objectID": "slides/H3.html#sensitiviteit-van-eigenwaarden-en-eigenruimten-1",
+    "href": "slides/H3.html#sensitiviteit-van-eigenwaarden-en-eigenruimten-1",
+    "title": "Hoofdstuk 3 - Lineaire operatoren en eigenwaarden",
+    "section": "Sensitiviteit van eigenwaarden en eigenruimten",
+    "text": "Sensitiviteit van eigenwaarden en eigenruimten\n\nVoorbeeld 1: \\({\\mathsf{A}}_1({\\varepsilon})=\\begin{equation} {\\mathsf{A}}_1({\\varepsilon}) = \\begin{bmatrix}  0 & 1\\\\ {\\varepsilon}& 0  \\end{bmatrix} \\end{equation}\\)\n\n\\({\\varepsilon}= 0\\): \\(\\sigma_{{\\mathsf{A}}}=\\{0\\}\\) met \\(q_0 = s_0 = 2\\), \\(r_0=1\\): 1 Jordan blok\n\\({\\varepsilon}&gt; 0\\): \\(\\sigma_{{\\mathsf{A}}}=\\{+\\sqrt{{\\varepsilon}},-\\sqrt{{\\varepsilon}}\\}\\) en \\({\\mathsf{V}}({\\varepsilon}) = \\begin{bmatrix}  1 & 1 \\\\ +\\sqrt{{\\varepsilon}} & -\\sqrt{{\\varepsilon}} \\end{bmatrix}\\)\n\nVoorbeeld 2: \\({\\mathsf{A}}_2({\\varepsilon}) = \\begin{bmatrix}  0 & 1\\\\ 0 & {\\varepsilon}\\end{bmatrix}\\)\n\n\\({\\varepsilon}= 0\\): \\(\\sigma_{{\\mathsf{A}}}=\\{0\\}\\) met \\(q_0 = s_0 = 2\\), \\(r_0=1\\): 1 Jordan blok\n\\({\\varepsilon}&gt; 0\\): \\(\\sigma_{{\\mathsf{A}}}=\\{0,{\\varepsilon}\\}\\) met \\({\\mathsf{V}}({\\varepsilon}) = \\begin{bmatrix}  1 & 1 \\\\ 0 & {\\varepsilon}\\end{bmatrix}\\)\n\n\nProblemen omdat \\(\\mathop{\\mathrm{GL}}(V)\\) niet compact is: limieten van inverteerbare matrices kunnen niet-inverteerbare matrices opleveren"
+  },
+  {
+    "objectID": "slides/H3.html#verwante-eigenwaardenproblemen",
+    "href": "slides/H3.html#verwante-eigenwaardenproblemen",
+    "title": "Hoofdstuk 3 - Lineaire operatoren en eigenwaarden",
+    "section": "Verwante eigenwaardenproblemen",
+    "text": "Verwante eigenwaardenproblemen\n\n\\({\\mathsf{A}} \\boldsymbol{v} = \\lambda \\boldsymbol{v} \\Rightarrow {\\overline{{\\mathsf{A}}}} {\\overline{\\boldsymbol{v}}} = {\\overline{\\lambda}} {\\overline{\\boldsymbol{v}}}\\)\n\n\\({\\mathsf{A}}\\) reëel: voor elke \\(\\lambda \\in {\\mathbb{C}}\\) is ook \\({\\overline{\\lambda}}\\) een eigenwaarde (complex toegevoegde paren), bijbehorende eigenvectoren zijn ook complex toegevoegd\n\\({\\mathsf{A}}\\) reëel en \\(\\lambda\\) reëel: zowel \\(\\boldsymbol{v}\\) als \\({\\overline{\\boldsymbol{v}}}\\) zijn eigenvectoren, en dus ook de reële combinaties \\(\\mathop{\\mathrm{Re}}(\\boldsymbol{v}) = (\\boldsymbol{v}+{\\overline{\\boldsymbol{v}}})/2\\) en \\(\\mathop{\\mathrm{Im}}(\\boldsymbol{v}) = (\\boldsymbol{v}+{\\overline{\\boldsymbol{v}}})/(2{\\mathrm{i}})\\) (minstens 1 van beide is niet nul)\n\\(\\Rightarrow\\) eigenvectoren horende bij reële eigenwaarden kunnen reëel worden gekozen"
+  },
+  {
+    "objectID": "slides/H3.html#verwante-eigenwaardenproblemen-1",
+    "href": "slides/H3.html#verwante-eigenwaardenproblemen-1",
+    "title": "Hoofdstuk 3 - Lineaire operatoren en eigenwaarden",
+    "section": "Verwante eigenwaardenproblemen",
+    "text": "Verwante eigenwaardenproblemen\n\n\\({\\mathsf{A}}\\) en \\({\\mathsf{A}}^{\\mathsf{T}}\\) hebben dezelfde karakteristieke veelterm (en minimaalveelterm)\nVoor elke eigenwaarde \\(\\lambda\\) van \\({\\mathsf{A}}\\) bestaan er ook “linker” eigenvectoren\n\\(\\boldsymbol{w}^{\\mathsf{T}}{\\mathsf{A}} = \\lambda \\boldsymbol{w}^{\\mathsf{T}}\\iff {\\mathsf{A}}^{\\mathsf{T}}\\boldsymbol{w} = \\lambda \\boldsymbol{w}\\)\n\nIntrinsieke betekenis:\nals \\({\\mathsf{A}} = \\Phi_B({\\hat{A}})\\) voor een basis \\(B=\\{{e}_1,\\ldots,{e}_n\\}\\), beschouw dan duale basis \\(B^\\ast=\\{\\varepsilon^1,\\ldots,\\varepsilon^n\\}\\) met \\(\\varepsilon^i[{e}_j] = \\delta^i_{\\ j}\\):\n\\(\\omega = w_i \\varepsilon^i\\) voldoet aan \\({\\hat{A}}^\\ast(\\omega) = \\lambda \\omega\\)"
+  },
+  {
+    "objectID": "slides/H3.html#verwante-eigenwaardenproblemen-2",
+    "href": "slides/H3.html#verwante-eigenwaardenproblemen-2",
+    "title": "Hoofdstuk 3 - Lineaire operatoren en eigenwaarden",
+    "section": "Verwante eigenwaardenproblemen",
+    "text": "Verwante eigenwaardenproblemen\nStel \\({\\hat{A}}^\\ast(\\omega') = \\lambda' \\omega'\\) en \\({\\hat{A}}{v}= \\lambda {v}\\):\n\n\\(\\omega'[{\\hat{A}}{v}] = ({\\hat{A}}^\\ast \\omega')[{v}] \\Rightarrow \\lambda \\omega'[{v}] = \\lambda' \\omega'[{v}]\\)\n\\(\\lambda \\neq \\lambda' \\Rightarrow \\omega'[{v}] = 0\\)\n\\(\\lambda = \\lambda'\\) : \\(\\omega[{v}] \\neq 0\\)?\nUit Jordan-decompositie \\({\\mathsf{J}}_{{\\mathsf{A}}} = \\bigoplus_{\\lambda \\in \\sigma_{{\\hat{A}}}} \\bigoplus_{k=1}^{s_\\lambda} \\bigoplus_{i=1}^{p^{(\\lambda)}_{k-1}} {\\mathsf{J}}^{(k)}(\\lambda)\\) leren we dat elke Jordan-blok één rechter-eigenvector oplevert (de basisvector geassocieerd met de eerste kolom van het blok), en één linker-eigenvector (de basisvector geassocieerd met de laatste rij van het blok)\n\\(\\Rightarrow \\omega[{v}] \\neq 0\\) enkel als ze horen bij een Jordan-blok van grootte \\(1\\)"
+  },
+  {
+    "objectID": "slides/H3.html#functies-van-lineaire-operatoren-1",
+    "href": "slides/H3.html#functies-van-lineaire-operatoren-1",
+    "title": "Hoofdstuk 3 - Lineaire operatoren en eigenwaarden",
+    "section": "Functies van lineaire operatoren",
+    "text": "Functies van lineaire operatoren\n\nWe kunnen al veeltermen \\(p({\\hat{A}})\\) en inverses \\({\\hat{A}}^{-1}\\) berekenen:\nsamen geeft dit alle rationale functies \\(r({\\hat{A}})=p({\\hat{A}})/q({\\hat{A}})\\)\nAndere functies \\(f\\) van \\({\\hat{A}} \\in \\mathop{\\mathrm{End}}(V)\\)?\nHoe definieren we \\(f({\\hat{A}})\\)?"
+  },
+  {
+    "objectID": "slides/H3.html#functies-van-lineaire-operatoren-verwachtingen",
+    "href": "slides/H3.html#functies-van-lineaire-operatoren-verwachtingen",
+    "title": "Hoofdstuk 3 - Lineaire operatoren en eigenwaarden",
+    "section": "Functies van lineaire operatoren: verwachtingen",
+    "text": "Functies van lineaire operatoren: verwachtingen\n\n\\({\\hat{A}}{v}= \\lambda {v}\\Rightarrow f({\\hat{A}}){v}= f(\\lambda){v}\\)\n\\(f\\) moet goed gedefinieerd zijn voor alle \\(\\lambda \\in \\sigma_{{\\hat{A}}}\\)\nVoor elke lineaire transformatie \\({\\hat{T}} \\in \\mathop{\\mathrm{Hom}}(V,W)\\): \\(f({\\hat{T}} {\\hat{A}} {\\hat{T}}^{-1}) = {\\hat{T}} f({\\hat{A}}) {\\hat{T}}^{-1}\\)\nVoor \\({\\hat{A}} \\in \\mathop{\\mathrm{End}}(V)\\) en \\({\\hat{B}} \\in \\mathop{\\mathrm{End}}(W)\\): \\(f({\\hat{A}} \\oplus {\\hat{B}}) = f({\\hat{A}}) \\oplus f({\\hat{B}})\\)\n(blokdiagonale matrix: \\(f\\) werkt op afzonderlijke diagonaalblokken)\nVoor \\({\\hat{A}},{\\hat{B}} \\in \\mathop{\\mathrm{End}}(V)\\) met \\({\\left[{\\hat{A}},{\\hat{B}}\\right]}={\\hat{0}}\\) en twee functies \\(f,g\\): \\({\\left[f({\\hat{A}}),g({\\hat{B}})\\right]}={\\hat{0}}\\)"
+  },
+  {
+    "objectID": "slides/H3.html#functies-van-lineaire-operatoren-definitie-1",
+    "href": "slides/H3.html#functies-van-lineaire-operatoren-definitie-1",
+    "title": "Hoofdstuk 3 - Lineaire operatoren en eigenwaarden",
+    "section": "Functies van lineaire operatoren: definitie 1",
+    "text": "Functies van lineaire operatoren: definitie 1\n\nAls \\({\\hat{A}}\\) diagonaliseerbaar is, definitie van \\(f({\\hat{A}})\\) via diagonaalvorm / spectrale decompositie:\n\\[{\\hat{A}} = \\sum_{\\lambda} \\lambda {\\hat{P}}_\\lambda \\Rightarrow f({\\hat{A}}) = \\sum_\\lambda f(\\lambda) {\\hat{P}}_\\lambda\\]\nVoorbeeld:\n\\({\\mathsf{A}} = \\begin{bmatrix}  0 & -\\theta\\\\ \\theta & 0  \\end{bmatrix} = \\underbrace{\\begin{bmatrix} 1 & 1 \\\\ -{\\mathrm{i}}& +{\\mathrm{i}}\\end{bmatrix}}_{{\\mathsf{V}}} \\underbrace{\\begin{bmatrix} {\\mathrm{i}}\\theta & 0 \\\\ 0 & -{\\mathrm{i}}\\theta\\end{bmatrix}}_{{\\mathsf{D}}} \\underbrace{\\begin{bmatrix} \\frac{1}{2} & +\\frac{{\\mathrm{i}}}{2} \\\\ \\frac{1}{2} & -\\frac{{\\mathrm{i}}}{2}\\end{bmatrix}}_{{\\mathsf{V}}^{-1}}\\)\n\\(\\exp({\\mathsf{A}}) = \\begin{bmatrix} 1 & 1 \\\\ -{\\mathrm{i}}& +{\\mathrm{i}}\\end{bmatrix} \\begin{bmatrix} {\\mathrm{e}}^{{\\mathrm{i}}\\theta } & 0 \\\\ 0 & {\\mathrm{e}}^{-{\\mathrm{i}}\\theta} \\end{bmatrix} \\begin{bmatrix} \\frac{1}{2} & +\\frac{{\\mathrm{i}}}{2} \\\\ \\frac{1}{2} & -\\frac{{\\mathrm{i}}}{2}\\end{bmatrix} = \\begin{bmatrix}  \\cos(\\theta) & -\\sin(\\theta) \\\\ \\sin(\\theta) & \\cos(\\theta)  \\end{bmatrix}\\)"
+  },
+  {
+    "objectID": "slides/H3.html#functies-van-lineaire-operatoren-definitie-2",
+    "href": "slides/H3.html#functies-van-lineaire-operatoren-definitie-2",
+    "title": "Hoofdstuk 3 - Lineaire operatoren en eigenwaarden",
+    "section": "Functies van lineaire operatoren: definitie 2",
+    "text": "Functies van lineaire operatoren: definitie 2\nAls \\(f(z) = \\sum_{n=0}^{+\\infty} f_n z^n\\) een Taylorreeks rond \\(z=0\\) (Maclaurin reeks) heeft:\n\\[f({\\hat{A}}) = \\sum_{n=0}^{+\\infty} f_n {\\hat{A}}^n\\]\nBetekenis van een reeks van een operator? Convergentie? Zie Hoofdstuk 4\n\nVoorbeeld: \\(f(z)=\\exp(z)=\\sum_{n=0}^{+\\infty} \\frac{1}{n!} z^n\\)\n\\({\\mathsf{A}}^{2n+1} = (-1)^{n} \\begin{bmatrix}  0 & -\\theta^{2n+1}\\\\ \\theta^{2n+1} & 0  \\end{bmatrix}\\) en \\({\\mathsf{A}}^{2n} = (-1)^n \\begin{bmatrix}  \\theta^{2n} & 0\\\\ 0 & \\theta^{2n}  \\end{bmatrix}\\) voor alle \\(n\\in {\\mathbb{N}}\\)\n\\(f({\\mathsf{A}}) = \\sum_{n=0}^{+\\infty} \\frac{(-1)^n}{(2n)!} \\begin{bmatrix}  \\theta^{2n} & 0\\\\ 0 & \\theta^{2n}  \\end{bmatrix} + \\sum_{n=0}^{+\\infty} \\frac{(-1)^n}{(2n+1)!}\\begin{bmatrix}  0 & -\\theta^{2n+1}\\\\ \\theta^{2n+1} & 0  \\end{bmatrix}\\)\n\\(\\qquad = \\begin{bmatrix}  \\cos(\\theta) & -\\sin(\\theta) \\\\ \\sin(\\theta) & \\cos(\\theta)  \\end{bmatrix}\\)"
+  },
+  {
+    "objectID": "slides/H3.html#functies-van-lineaire-operatoren-definitie-3",
+    "href": "slides/H3.html#functies-van-lineaire-operatoren-definitie-3",
+    "title": "Hoofdstuk 3 - Lineaire operatoren en eigenwaarden",
+    "section": "Functies van lineaire operatoren: definitie 3",
+    "text": "Functies van lineaire operatoren: definitie 3\nVia Jordan-decompositie: \\(f({\\mathsf{A}}) = {\\mathsf{V}} \\left[\\bigoplus_{\\lambda \\in \\sigma_{{\\mathsf{A}}}} \\bigoplus_{k=1}^{s_\\lambda} \\bigoplus_{i=1}^{p^{(\\lambda)}_{k}} f\\left({\\mathsf{J}}_k(\\lambda)\\right) \\right]{\\mathsf{V}}^{-1}\\)\n\nfunctie van een Jordan-blok \\(J_k(\\lambda)\\): voldoende dat \\(f\\) een Taylorreeks rond \\(z=\\lambda\\) heeft met eindige convergentieradius \\(a\\):\n\n\\(f(z) = \\sum_{n=0}^{+\\infty} \\frac{f^{(n)}(\\lambda)}{n!} (z - \\lambda)^n, \\qquad \\forall z\\ \\text{met}\\ |z - \\lambda| &lt; a,\\ \\text{voor een $a &gt; 0$}\\)\n\\(f(J_k(\\lambda)) = \\sum_{n=0}^{+\\infty} \\frac{f^{(n)}(\\lambda)}{n!} (J_k(\\lambda) - \\lambda{\\mathsf{I}}_k)^n = \\sum_{n=0}^{+\\infty} \\frac{f^{(n)}(\\lambda)}{n!} ({\\mathsf{N}}_k)^n = \\sum_{n=0}^{k-1} \\frac{f^{(n)}(\\lambda)}{n!} ({\\mathsf{N}}_k)^n\\)\n\n\n\n\\(\\Rightarrow f({\\mathsf{J}}^{(k)}(\\lambda)) = \\begin{bmatrix}  f(\\lambda) & f^{(1)}(\\lambda) & \\frac{f^{(2)}(\\lambda)}{2} & \\frac{f^{(3)}(\\lambda)}{3!} & \\cdots & \\frac{f^{(k-2)}(\\lambda)}{(k-2)!} & \\frac{f^{(k-1)}(\\lambda)}{(k-1)!}\\\\ 0 & f(\\lambda) & f^{(1)}(\\lambda) & \\frac{f^{(2)}(\\lambda)}{2} & \\cdots & \\frac{f^{(k-3)}(\\lambda)}{(k-3)!} & \\frac{f^{(k-2)}(\\lambda)}{(k-2)!}\\\\ 0 & 0 & f(\\lambda) & f^{(1)}(\\lambda) & \\cdots & \\frac{f^{(k-4)}(\\lambda)}{(k-4)!} & \\frac{f^{(k-3)}(\\lambda)}{(k-3)!}\\\\ 0 & 0 & 0 & f(\\lambda) & \\cdots & \\frac{f^{(k-5)}(\\lambda)}{(k-5)!} & \\frac{f^{(k-4)}(\\lambda)}{(k-4)!}\\\\  \\vdots & \\vdots & \\vdots & \\vdots & \\ddots & \\vdots & \\vdots\\\\  0 & 0 & 0 & 0 & \\cdots & f(\\lambda) & f^{(1)}(\\lambda)\\\\  0 & 0 & 0 & 0 & \\cdots & 0 & f(\\lambda)  \\end{bmatrix}\\)"
+  },
+  {
+    "objectID": "slides/H3.html#exponentiële-functie",
+    "href": "slides/H3.html#exponentiële-functie",
+    "title": "Hoofdstuk 3 - Lineaire operatoren en eigenwaarden",
+    "section": "Exponentiële functie",
+    "text": "Exponentiële functie\n\\(\\exp(t J^{(k)}(\\lambda)) = e^{t \\lambda} \\left({\\mathsf{I}}+ t {\\mathsf{N}}_k + \\frac{t^2}{2} \\big({\\mathsf{N}}_k\\big)^2 + \\ldots \\right)  \\\\  = e^{t \\lambda} \\begin{bmatrix} 1 & t & \\frac{t^2}{2} & \\frac{t^3}{3!} & \\cdots & \\frac{t^{k-2}}{(k-2)!} & \\frac{t^{k-1}}{(k-1)!}\\\\ 0 & 1 & t & \\frac{t^2}{2} & \\cdots & \\frac{t^{k-3}}{(k-3)!} & \\frac{t^{k-2}}{(k-2)!}\\\\ 0 & 0 & 1 & t & \\cdots & \\frac{t^{k-4}}{(k-4)!} & \\frac{t^{k-3}}{(k-3)!}\\\\ 0 & 0 & 0 & 1 & \\cdots & \\frac{t^{k-5}}{(k-5)!} & \\frac{t^{k-4}}{(k-4)!}\\\\  \\vdots & \\vdots & \\vdots & \\vdots & \\ddots & \\vdots & \\vdots\\\\  0 & 0 & 0 & 0 & \\cdots & 1 & t\\\\  0 & 0 & 0 & 0 & \\cdots & 0 & 1  \\end{bmatrix}\\)"
+  },
+  {
+    "objectID": "slides/H3.html#exponentiële-functie-eigenschappen",
+    "href": "slides/H3.html#exponentiële-functie-eigenschappen",
+    "title": "Hoofdstuk 3 - Lineaire operatoren en eigenwaarden",
+    "section": "Exponentiële functie: eigenschappen",
+    "text": "Exponentiële functie: eigenschappen\n\n\\(\\exp({\\hat{A}})\\) is goed gedefinieerd en uniek\nexponentiële van reële matrix is reëel\n\\({\\mathrm{e}}^{t_1 {\\hat{A}}} {\\mathrm{e}}^{t_2{\\hat{A}}} = {\\mathrm{e}}^{(t_1 + t_2){\\hat{A}}}\\) en \\((\\exp({\\hat{A}}))^{-1} = \\exp(-{\\hat{A}})\\)\n\\(\\det(\\exp({\\hat{A}})) = \\exp(\\mathop{\\mathrm{tr}}({\\hat{A}}))\\)\n\\(\\frac{{\\mathrm{d}}\\ }{{\\mathrm{d}}t} {\\mathrm{e}}^{t{\\hat{A}}} = {\\hat{A}} {\\mathrm{e}}^{t {\\hat{A}}} = {\\mathrm{e}}^{t{\\hat{A}}} {\\hat{A}}\\)\n\nMaar niet:\n\n\\(\\exp({\\hat{A}} + {\\hat{B}}) \\neq \\exp({\\hat{A}})\\exp({\\hat{B}}) \\neq \\exp({\\hat{B}})\\exp({\\hat{A}})\\)\n\\(\\frac{{\\mathrm{d}}\\ }{{\\mathrm{d}}t} {\\mathrm{e}}^{{\\mathsf{A}}(t)}\\neq \\frac{{\\mathrm{d}}{\\mathsf{A}}(t)}{{\\mathrm{d}}t} {\\mathrm{e}}^{{\\mathsf{A}}(t)}\\neq {\\mathrm{e}}^{{\\mathsf{A}}(t)} \\frac{{\\mathrm{d}}{\\mathsf{A}}(t)}{{\\mathrm{d}}t}\\)"
+  },
+  {
+    "objectID": "slides/H3.html#exponentiële-functie-eigenschappen-1",
+    "href": "slides/H3.html#exponentiële-functie-eigenschappen-1",
+    "title": "Hoofdstuk 3 - Lineaire operatoren en eigenwaarden",
+    "section": "Exponentiële functie: eigenschappen",
+    "text": "Exponentiële functie: eigenschappen\n\nBaker-Campbell-Haussdorf formule: \\(e^{t{\\hat{A}}} e^{t{\\hat{B}}} = e^{{\\hat{C}}}\\) met \\({\\hat{C}} = t({\\hat{A}} + {\\hat{B}}) + \\frac{t^2}{2} {\\left[{\\hat{A}},{\\hat{B}}\\right]} +\\)\n\\(\\qquad \\frac{t^3}{12} {\\left[{\\hat{A}},{\\left[{\\hat{A}},{\\hat{B}}\\right]}\\right]}- \\frac{t^3}{12} {\\left[{\\hat{B}},{\\left[{\\hat{A}},{\\hat{B}}\\right]}\\right]}+\\mathop{\\mathrm{\\mathscr{O}}}(t^4)\\)\nZassenhaus formule\n\\(e^{t({\\hat{A}}+{\\hat{B}})} = e^{t{\\hat{A}}} e^{t{\\hat{B}}} e^{-\\frac{t^2}{2} {\\left[{\\hat{A}},{\\hat{B}}\\right]}}e^{\\frac{t^3}{6}\\left(2 {\\left[{\\hat{B}},{\\left[{\\hat{A}},{\\hat{B}}\\right]}\\right]}+ {\\left[{\\hat{A}},{\\left[{\\hat{A}},{\\hat{B}}\\right]}\\right]}\\right)}\\cdots\\)\n\nBewijs: door uitwerking van de Taylorreeks en vergelijken van de machten in \\(t\\)"
+  },
+  {
+    "objectID": "slides/H3.html#logaritmische-functie-en-machten",
+    "href": "slides/H3.html#logaritmische-functie-en-machten",
+    "title": "Hoofdstuk 3 - Lineaire operatoren en eigenwaarden",
+    "section": "Logaritmische functie en machten",
+    "text": "Logaritmische functie en machten\n\\(f(z) = \\log(z)\\) of \\(f(z)=z^{\\alpha}\\) met \\(\\alpha \\not\\in{\\mathbb{N}}\\): geen Taylorreeks rond \\(z=0\\)\n\\[\\begin{align*}\n    \\log(z) &= \\log(\\lambda + (z-\\lambda)) = \\log(\\lambda) + \\log\\left(1 + \\frac{z-\\lambda}{\\lambda}\\right) \\\\\n    &= \\log(\\lambda) + \\sum_{n=1}^{+\\infty} (-1)^{n+1} \\frac{(z-\\lambda)^n}{n\\lambda^n}\n\\end{align*}\\]\n\\[\\begin{equation}\n    z^\\alpha = \\lambda^\\alpha\\left(1 + \\frac{z-\\lambda}{\\lambda}\\right)^\\alpha = \\lambda^\\alpha \\sum_{n=0}^{+\\infty} \\frac{\\alpha (\\alpha-1)\n    \\cdots (\\alpha - n + 1)}{n!}\\left(\\frac{z-\\lambda}{\\lambda}\\right)^n\n\\end{equation}\\]\nVoor de definitie van \\(\\log(\\lambda)\\) of \\(\\lambda^{\\alpha}\\): meerdere keuzes (vertakkingslijnen in complexe analyse)\n\\(\\Rightarrow\\) typisch niet uniek (meerdere \\({\\hat{B}}\\) voldoen aan \\({\\hat{A}}=\\exp({\\hat{B}})\\) voor gegeven \\({\\hat{A}}\\)), maar altijd mogelijk zolang geen \\(\\lambda=0\\)"
+  },
+  {
+    "objectID": "slides/H3.html#logaritmische-functie-en-machten-1",
+    "href": "slides/H3.html#logaritmische-functie-en-machten-1",
+    "title": "Hoofdstuk 3 - Lineaire operatoren en eigenwaarden",
+    "section": "Logaritmische functie en machten",
+    "text": "Logaritmische functie en machten\n\nVoorbeeld: \\(J_3(\\lambda)^{1/2}=\\begin{bmatrix}  \\lambda & 1 & 0\\\\ 0 & \\lambda & 1 \\\\ 0 & 0 & \\lambda  \\end{bmatrix}^{1/2} = \\begin{bmatrix} \\sqrt{\\lambda} & \\frac{1}{2\\sqrt{\\lambda}} & -\\frac{1}{4 \\lambda^{3/2}}\\\\ 0 & \\sqrt{\\lambda} & \\frac{1}{2\\sqrt{\\lambda}} \\\\ 0 & 0 & \\sqrt{\\lambda}\\end{bmatrix}\\)"
+  },
+  {
+    "objectID": "slides/H1.html",
+    "href": "slides/H1.html",
+    "title": "Hoofdstuk 1 - Elementaire wiskundige structuren",
+    "section": "",
+    "text": "$$ % Math operators % % \n% VECTORS\n% specifically for vectors in F^n \n% MATRICES\n% SCALARS \n% LINEAR MAPS\n% FIELDS \n% RELATIONS \n% % % % % % % % %\n%\n$$\n\n\nBelangrijkste wiskundige concepten:\nHerhaling (voornamelijk)\nNotatie en terminologie\nGeen bewijzen, geen letterlijke vragen\nWeinig voorbeelden om beknopt te blijven"
+  },
+  {
+    "objectID": "slides/H1.html#doel-van-dit-hoofdstuk",
+    "href": "slides/H1.html#doel-van-dit-hoofdstuk",
+    "title": "Hoofdstuk 1 - Elementaire wiskundige structuren",
+    "section": "",
+    "text": "$$ % Math operators % % \n% VECTORS\n% specifically for vectors in F^n \n% MATRICES\n% SCALARS \n% LINEAR MAPS\n% FIELDS \n% RELATIONS \n% % % % % % % % %\n%\n$$\n\n\nBelangrijkste wiskundige concepten:\nHerhaling (voornamelijk)\nNotatie en terminologie\nGeen bewijzen, geen letterlijke vragen\nWeinig voorbeelden om beknopt te blijven"
+  },
+  {
+    "objectID": "slides/H1.html#verzamelingen",
+    "href": "slides/H1.html#verzamelingen",
+    "title": "Hoofdstuk 1 - Elementaire wiskundige structuren",
+    "section": "Verzamelingen",
+    "text": "Verzamelingen\n\nverzameling met hoofdletters \\(A, B, \\ldots\\)\nelementen \\(a, b, c \\in A\\) met kleine letters\ndeelverzameling \\(B \\subseteq A\\)\nunie \\(A \\cup B\\), doorsnede \\(A \\cap B\\), verschil \\(A \\setminus B\\)\ncomplement van een deelverzameling \\(B \\subseteq A\\): \\(B^{\\text{c}} = \\{ a \\in A | a \\not\\in B\\}\\)\nCartesisch product \\(A \\times B = \\{(a,b); \\forall a \\in A, \\forall b \\in B \\}\\)"
+  },
+  {
+    "objectID": "slides/H1.html#verzamelingen-1",
+    "href": "slides/H1.html#verzamelingen-1",
+    "title": "Hoofdstuk 1 - Elementaire wiskundige structuren",
+    "section": "Verzamelingen",
+    "text": "Verzamelingen\n\nbelangrijkste verzamelingen:\n\nlege verzameling \\(\\{\\}\\)\nnatuurlijke getallen \\({\\mathbb{N}}= \\{0,1,2,\\ldots\\}\\), \\({\\mathbb{N}}_0 = {\\mathbb{N}}\\setminus \\{0\\}\\)\ngehele getallen \\({\\mathbb{Z}}\\)\nrationale getallen \\({\\mathbb{Q}}\\)\nreële getallen \\({\\mathbb{R}}\\)\nniet-negatieve getallen \\({\\mathbb{R}}_{\\geq 0}\\), positieve getallen \\({\\mathbb{R}}_{&gt;0}\\)\n\\(\\overline{{\\mathbb{R}}} = {\\mathbb{R}}\\cup \\{-\\infty,+\\infty\\}\\)\ncomplexe getallen \\({\\mathbb{C}}\\)"
+  },
+  {
+    "objectID": "slides/H1.html#afbeeldingen",
+    "href": "slides/H1.html#afbeeldingen",
+    "title": "Hoofdstuk 1 - Elementaire wiskundige structuren",
+    "section": "Afbeeldingen",
+    "text": "Afbeeldingen\n\n\\(\\varphi: A \\to B : a \\mapsto \\varphi(a)\\):\n\nafbeelding \\(\\varphi\\), domein \\(A\\), codomein \\(B\\)\nargument \\(a\\), waarde of beeld \\(\\varphi(a)\\)\nbeeld van \\(C \\subseteq A\\): \\(\\varphi(C) = \\{\\varphi(a) | a \\in C\\}\\)\ninvers beeld (preimage) van \\(D \\subseteq B\\):1 \\(\\varphi^{-1}(D) = \\{a \\in A | \\varphi(a) \\in D\\}\\)\n\ncompositie \\(\\varphi \\circ \\psi\\), identiteitsafbeelding \\(\\mathop{\\mathrm{id}}_A\\)"
+  },
+  {
+    "objectID": "slides/H1.html#afbeeldingen-1",
+    "href": "slides/H1.html#afbeeldingen-1",
+    "title": "Hoofdstuk 1 - Elementaire wiskundige structuren",
+    "section": "Afbeeldingen",
+    "text": "Afbeeldingen\n\ninjectief: elk element \\(b \\in B\\) is het beeld van ten hoogste één \\(a \\in A\\), of dus \\(\\varphi^{-1}(\\{b\\})\\) bevat 0 of 1 elementen\nsurjectief: elk element \\(b \\in B\\) is het beeld van minstens één \\(a \\in A\\), of dus \\(\\varphi(A) = B\\)\nbijectief: injectief en surjectief, elk element \\(b \\in B\\) is het beeld van exact één \\(a \\in A\\)\n\ninverse afbeelding \\(a = \\varphi^{-1}(b)\\)\n\\(\\varphi^{-1} \\circ \\varphi = \\mathop{\\mathrm{id}}_A\\), \\(\\varphi \\circ \\varphi^{-1} = \\mathop{\\mathrm{id}}_B\\)"
+  },
+  {
+    "objectID": "slides/H1.html#kardinaliteit",
+    "href": "slides/H1.html#kardinaliteit",
+    "title": "Hoofdstuk 1 - Elementaire wiskundige structuren",
+    "section": "Kardinaliteit",
+    "text": "Kardinaliteit\nKardinaliteit = aantal elementen in een verzameling\nNotatie: \\(\\vert A \\vert\\) of \\(\\# A\\)\n\nEindig: \\(I_n = \\{1,2,\\ldots,n\\} \\Rightarrow \\vert I_n\\vert = n\\)\nOneindig:\n\nAftelbaar: \\({\\mathbb{N}}\\), \\({\\mathbb{Z}}\\), \\({\\mathbb{Q}}\\)\nJe kan de elementen nummeren = bijectie met \\({\\mathbb{N}}\\)\nOnaftelbaar: \\({\\mathbb{R}}\\), \\({\\mathbb{C}}\\)\n\nWerken met oneindige cardinaliteit:\n\\(\\vert A \\vert \\leq \\vert B \\vert \\Leftrightarrow\\) er bestaat een injectieve afbeelding van \\(B\\) naar \\(A\\)"
+  },
+  {
+    "objectID": "slides/H1.html#relaties",
+    "href": "slides/H1.html#relaties",
+    "title": "Hoofdstuk 1 - Elementaire wiskundige structuren",
+    "section": "Relaties",
+    "text": "Relaties\nRelatie tussen elementen \\(a \\in A\\) en \\(b \\in B\\) = deelverzameling van koppels \\((a,b) \\in A \\times B\\)"
+  },
+  {
+    "objectID": "slides/H1.html#relaties-1",
+    "href": "slides/H1.html#relaties-1",
+    "title": "Hoofdstuk 1 - Elementaire wiskundige structuren",
+    "section": "Relaties",
+    "text": "Relaties\n\nEquivalentierelatie \\(\\sim\\) tussen elementen \\(a, b, c \\in A\\)\n\nDefinitie\n\nreflexiviteit: \\(a \\sim a\\) voor alle \\(a \\in A\\)\nsymmetrie: \\(a \\sim b\\) impliceert \\(b \\sim a\\)\ntransitiviteit: \\(a \\sim b\\) en \\(b \\sim c\\) impliceert \\(a \\sim c\\)\n\nEquivalentieklasse \\([a] = \\{b \\in A | b \\sim a\\}\\)\n\nverschillende equivalentieklassen zijn disjunct: \\(\\lnot(a \\sim b) \\Rightarrow [a] \\cap [b] = \\{\\}\\)\nequivalentieklassen partitioneren \\(A\\)\nquotiëntverzameling \\(A/ \\sim\\) = verzameling van equivalentieklassen"
+  },
+  {
+    "objectID": "slides/H1.html#relaties-2",
+    "href": "slides/H1.html#relaties-2",
+    "title": "Hoofdstuk 1 - Elementaire wiskundige structuren",
+    "section": "Relaties",
+    "text": "Relaties\n\nEquivalentierelatie \\(\\sim\\) tussen elementen \\(a, b, c \\in A\\)\n\nVoorbeeld (dat vaak terugkomt):\n\\(\\forall a,b \\in {\\mathbb{Z}}\\), \\(a \\sim b \\Leftrightarrow (b-a) \\in n {\\mathbb{Z}}\\)\n\\([a] = \\{ b \\in {\\mathbb{Z}}| b \\mod n = a\\}\\)\n\\({\\mathbb{Z}}/ \\sim = {\\mathbb{Z}}/ (n {\\mathbb{Z}})\\)\nin fysica: \\({\\mathbb{Z}}_n\\): gehele getallen modulo \\(n\\)"
+  },
+  {
+    "objectID": "slides/H1.html#relaties-3",
+    "href": "slides/H1.html#relaties-3",
+    "title": "Hoofdstuk 1 - Elementaire wiskundige structuren",
+    "section": "Relaties",
+    "text": "Relaties\n\nPartiële orde relatie \\(a \\preccurlyeq b\\) tussen elementen $a, b \\(A\\)\n\nDefinitie\n\nreflexiviteit: \\(a \\preccurlyeq a\\) voor alle \\(a \\in A\\)\nanitsymmetrie: \\(a \\preccurlyeq b \\land b \\preccurlyeq a\\) impliceert \\(a=b\\)\ntransitiviteit: \\(a \\preccurlyeq b\\) en \\(b \\preccurlyeq c\\) impliceert \\(a \\preccurlyeq c\\)\n\nEigenschappen:\n\ngrootste element \\(a\\): \\(b \\preccurlyeq a\\) voor alle \\(b \\in A\\)\n(uniek maar hoeft niet te bestaan)\nmaximaal element \\(a\\): \\(a \\preccurlyeq b\\) impliceert \\(b = a\\)\n(niet uniek)"
+  },
+  {
+    "objectID": "slides/H1.html#bineaire-operatie",
+    "href": "slides/H1.html#bineaire-operatie",
+    "title": "Hoofdstuk 1 - Elementaire wiskundige structuren",
+    "section": "Bineaire operatie",
+    "text": "Bineaire operatie\nEen afbeelding \\(\\cdot: A \\times A \\to A: (a,b) \\mapsto a \\cdot b\\)\nMogelijke eigenschappen (\\(\\forall a, b, c \\in A\\))\n\nAssociativiteit: \\(a \\cdot (b \\cdot c) = (a \\cdot b) \\cdot c\\)\nNeutraal element: \\(\\exists e \\in A : a \\cdot e = a = e \\cdot a\\)\nInverses: \\(\\exists a^{-1} \\in A: a \\cdot a^{-1} = a^{-1} \\cdot a = e\\)\nCommutativiteit: \\(a \\cdot b = b \\cdot a\\)"
+  },
+  {
+    "objectID": "slides/H1.html#groep",
+    "href": "slides/H1.html#groep",
+    "title": "Hoofdstuk 1 - Elementaire wiskundige structuren",
+    "section": "Groep",
+    "text": "Groep\nEen groep \\((G, \\cdot)\\) is een verzameling \\(G\\) met een associatieve binaire operatie \\(\\cdot\\) die een neutraal element en inverses heeft.\nIndien de groepsoperatie ook commutatief is wordt de groep meestal een Abelse groep genoemd en de operatie meestal genoteerd als \\(+\\)\n\nVoorbeelden: \\(({\\mathbb{Z}}, +)\\), \\(({\\mathbb{Z}}_n, +_{\\bmod n})\\)\nGroepen in de fysica: symmetrieën\n\nRuimtelijk: translaties, rotaties, reflecties\nInterne symmetrieën: vooral kwantum\n\nTriviale groep: \\((\\{e\\}, \\cdot)\\) (steeds neutraal element!)"
+  },
+  {
+    "objectID": "slides/H1.html#homomorfisme",
+    "href": "slides/H1.html#homomorfisme",
+    "title": "Hoofdstuk 1 - Elementaire wiskundige structuren",
+    "section": "Homomorfisme",
+    "text": "Homomorfisme\nHomomorfisme = structuurbewarende afbeelding\nGroepshomomorfisme \\(\\varphi\\) van \\((G, \\cdot)\\) naar \\((H, \\circ)\\): \\(\\varphi(g_1 \\cdot g_2) = \\varphi(g_1) \\circ \\varphi(g_2)\\)\nBijkomende terminologie:\n\nEndomorphisme: homorphisme van structuur naar zichzelf\nIsomorphisme: bijectief homomorfisme (notatie vaak \\(\\phi\\))\nAutomorphisme: bijectief endomorfisme"
+  },
+  {
+    "objectID": "slides/H1.html#automorfismegroep",
+    "href": "slides/H1.html#automorfismegroep",
+    "title": "Hoofdstuk 1 - Elementaire wiskundige structuren",
+    "section": "Automorfismegroep:",
+    "text": "Automorfismegroep:\nVoor elke verzameling \\(A\\), met eventuele structuur (groep, partiële order, ring, veld, vectorruimte, …):\nDe verzameling \\(\\mathop{\\mathrm{Aut}}(A)\\) van alle mogelijke automorfismen van \\(A\\) met als binaire operatie \\(\\circ\\) (compositie) heeft associativiteit, neutraal element \\(\\mathop{\\mathrm{id}}_A\\) and inverses\n\\(\\Rightarrow (\\mathop{\\mathrm{Aut}}(A), \\circ)\\) is een groep: automorfismegroep van \\(A\\) !\nVoorbeeld:\n\n\\(I_n = \\{1,\\ldots,n\\}\\) zonder extra structuur\n\\(\\Rightarrow \\mathop{\\mathrm{Aut}}(I_n) = S_n\\), de permutatiegroep van \\(n\\) elementen"
+  },
+  {
+    "objectID": "slides/H1.html#voorbeelden-van-homomorfismen",
+    "href": "slides/H1.html#voorbeelden-van-homomorfismen",
+    "title": "Hoofdstuk 1 - Elementaire wiskundige structuren",
+    "section": "Voorbeelden van homomorfismen",
+    "text": "Voorbeelden van homomorfismen\n\nTriviaal homomorfise van elke groep \\((G,\\cdot)\\) naar triviale groep \\((\\{e\\},\\cdot)\\): \\(\\forall g \\in G: \\varphi(g) = e\\).\nMet behulp van:\n\nGroep 1: \\({\\mathbb{Z}}_n = \\{0,1,\\ldots,n-1\\}\\) met \\(+\\) modulo \\(n\\)\nGroep 2: \\(C_n = \\{\\omega^k ; k=0,\\ldots, n-1\\}\\) met \\(\\omega = {\\mathrm{e}}^{{\\mathrm{i}}\\frac{2\\pi}{n}}\\) en vermenigvuldiging (cyclische groep)\n\nIsomorphisme: \\(k \\in {\\mathbb{Z}}_n \\mapsto \\omega^k \\in C_n\\)\n\\(\\Rightarrow\\) isomorfisme \\({\\mathbb{Z}}_n \\cong C_n\\)\nSurjectief homomorphisme: \\(a \\in C_{2n} \\mapsto a^2 \\in C_{n}\\)\nInjectief homomorphisme: \\(k \\in {\\mathbb{Z}}_{n} \\mapsto 2k \\in {\\mathbb{Z}}_{2n}\\)"
+  },
+  {
+    "objectID": "slides/H1.html#voorbeelden-van-homomorfismen-1",
+    "href": "slides/H1.html#voorbeelden-van-homomorfismen-1",
+    "title": "Hoofdstuk 1 - Elementaire wiskundige structuren",
+    "section": "Voorbeelden van homomorfismen",
+    "text": "Voorbeelden van homomorfismen\nVan permutatiegroep \\(S_n\\) naar \\({\\mathbb{Z}}_2\\):\n\nOntbind een willekeure permutatie \\(\\sigma \\in S_n\\) als een samenstelling van elementaire transposities \\(\\tau_{i,j}\\)\nAantal transposities modulo 2 hangt niet af van gekozen ontbinding: pariteit \\(P(\\sigma) \\in {\\mathbb{Z}}_2\\)\n\\(\\mathop{\\mathrm{sgn}}(\\sigma) = (-1)^{P(\\sigma)} \\in C_2\\)"
+  },
+  {
+    "objectID": "slides/H1.html#groepsacties",
+    "href": "slides/H1.html#groepsacties",
+    "title": "Hoofdstuk 1 - Elementaire wiskundige structuren",
+    "section": "Groepsacties",
+    "text": "Groepsacties\n\nGegeven een verzameling \\(A\\) (configuratieruimte van een fysisch systeem), beschrijf hoe elementen \\(g\\) van een groep \\(G\\) (symmetrietransformaties) inwerkt op de elementen \\(a \\in A\\) en ze transformeert naar nieuwe elementen \\(b \\in A\\)\nMet elke \\(g \\in G\\) moeten we dus een afbeelding \\(A \\to A\\) associeren, meer bepaald een automorphisme.\n\\(\\Rightarrow\\) groepsactie is homomorphisme van \\(G\\) naar \\(\\mathop{\\mathrm{Aut}}(A)\\)\nWanneer \\(A\\) een (eindig-dimensionale) vectorruimte is, is \\(\\mathop{\\mathrm{Aut}}(A)\\) isomorf met de verzameling van inverteerbare matrices en wordt een groepsactie een representatie genoemd."
+  },
+  {
+    "objectID": "slides/H1.html#deelgroepen-en-kern",
+    "href": "slides/H1.html#deelgroepen-en-kern",
+    "title": "Hoofdstuk 1 - Elementaire wiskundige structuren",
+    "section": "Deelgroepen en kern",
+    "text": "Deelgroepen en kern\n\nDeelgroep \\(H\\): een deelverzameling \\(H \\subseteq G\\) die tevens nog steeds een groep is\nNormale subgroep: een subgroep \\(N \\subseteq G\\) zodat \\(g n g^{-1} \\in N\\) voor alle \\(g \\in G\\) en \\(n \\in N\\)\nVoor een homomorphisme \\(\\varphi:(G,\\cdot) \\to (H,\\circ)\\)\n\nis het beeld \\(\\varphi(G)\\) een subgroep van \\(H\\)\nis het invers beeld \\(\\varphi^{-1}(e_H)\\) een normale subgroup van \\(G\\), die de naam \\(\\mathop{\\mathrm{ker}}(\\varphi)\\) krijgt\n\\(ker(\\varphi) = \\{e_G\\} \\leftrightarrow \\varphi\\) is injectief"
+  },
+  {
+    "objectID": "slides/H1.html#quotientgroep",
+    "href": "slides/H1.html#quotientgroep",
+    "title": "Hoofdstuk 1 - Elementaire wiskundige structuren",
+    "section": "Quotientgroep",
+    "text": "Quotientgroep\n\nQuotientgroup \\(G/N\\) voor \\(N\\) normale subgroep van \\(G\\):\n\n\\(g \\sim h\\) als \\(g^{-1} h \\in N\\), en dus ook \\(h g^{-1} \\in N\\)\n\\([g] = \\{g \\cdot n, \\forall n \\in N\\} = \\{n'\\cdot g, \\forall n \\in N\\}\\)\n\\(G/N\\): groep van equivalentieklassen met operatie\n\\([g_1] \\cdot [g_2] = [g_1 \\cdot g_2]\\)\nhangt niet af van gekozen representant: \\((g_1 \\cdot n_1) \\cdot (g_2 \\cdot n_2) = (g_1 \\cdot g_2) \\cdot (g_2^{-1} \\cdot n_1 \\cdot g_2) \\cdot n_2\\) \\(= (g_1 \\cdot g_2) \\cdot n_1' \\cdot n_2 = (g_1 \\cdot g_2) \\cdot n_3\\)"
+  },
+  {
+    "objectID": "slides/H1.html#ring",
+    "href": "slides/H1.html#ring",
+    "title": "Hoofdstuk 1 - Elementaire wiskundige structuren",
+    "section": "Ring",
+    "text": "Ring\nAbelse groep \\((R, +)\\) met tweede binaire operatie \\(\\cdot\\) die associatief is en een neutraal element heeft, met bijkomende distributiviteitseigenschap:\n\\(a \\cdot (b + c) = a\\cdot b + a \\cdot c\\); \\((b+c) \\cdot a = b \\cdot a + c \\cdot a\\)\nVoorbeelden:\n\n\\(({\\mathbb{Z}}, +, \\cdot)\\) en \\(({\\mathbb{Z}}_n, +_{\\bmod n}, \\cdot_{\\bmod n})\\)\ntriviale ring \\((\\{0,1\\}, +, \\cdot)\\)\n\\(R[x]\\): polynomen in \\(x\\) met coefficienten uit ring \\(R\\)\n\\(R^{n \\times n}\\): \\(n \\times n\\) matrices met elementen uit \\(R\\)\n(in dat geval is \\(\\cdot\\) niet commutatief)"
+  },
+  {
+    "objectID": "slides/H1.html#ring-1",
+    "href": "slides/H1.html#ring-1",
+    "title": "Hoofdstuk 1 - Elementaire wiskundige structuren",
+    "section": "Ring",
+    "text": "Ring\nIn een ring is er een neutraal element \\(0\\) van \\(+\\) en een (ander!) neutraal element \\(1\\) van \\(\\cdot\\). Verder kunnen er nog elementen zijn met een speciale rol:\n\nIdempotent: \\(a \\cdot a = a\\)\nNilpotent met index \\(p\\): \\(a^p = 0\\)\nMultiplicatief invers element: \\(a^{-1}\\) zodat \\(a^{-1}\\cdot a = a\\cdot a^{-1} = 1\\)\nNuldeler: \\(a b = 0\\) voor minstens 1 element \\(b \\neq 0\\).\n\n\n\nIn een eindige ring geldt voor elk element dat het ofwel een nuldeler is, of dat het een multipicatief inverse heeft."
+  },
+  {
+    "objectID": "slides/H1.html#ring-en-veld",
+    "href": "slides/H1.html#ring-en-veld",
+    "title": "Hoofdstuk 1 - Elementaire wiskundige structuren",
+    "section": "Ring en veld",
+    "text": "Ring en veld\n\nHet additief neutraal element \\(0\\) heeft nooit een multiplicatief inverse\nEen ring waaarbij elk niet-\\(0\\) element een multiplicatief inverse heeft: lichaam / delingsring\nEen delingsring waarbij \\(\\cdot\\) commutatief is: veld\n\nVoorbeeld van velden: \\({\\mathbb{Q}}\\), \\({\\mathbb{R}}\\), \\({\\mathbb{C}}\\), \\({\\mathbb{Z}}_p\\) voor \\(p\\) priem\nAlgebraisch gesloten veld: elke niet-constante veelterm heeft een nulpunt \\(\\Rightarrow {\\mathbb{C}}\\)\nBelangrijkste voorbeeld van delingsring: quaternionen \\({\\mathbb{H}}\\)"
+  },
+  {
+    "objectID": "slides/H1.html#vectorruimte",
+    "href": "slides/H1.html#vectorruimte",
+    "title": "Hoofdstuk 1 - Elementaire wiskundige structuren",
+    "section": "Vectorruimte",
+    "text": "Vectorruimte\nEen vectorruimte \\(V=\\{{o}_V, {v},{w},\\ldots\\}\\) over een veld \\({\\mathbb{F}}=\\{0,1,a,b,c,\\ldots)\\) (scalairen genoemd) is een abelse groep \\((V,+)\\) met een afbeelding \\({\\mathbb{F}}\\times V \\to V\\) (vermenigvuldigen met scalairen), met als eigenschappen\n\n\\(a({v}+ {w}) = a {v}+ a {w}\\)\n\\((a+b) {v}= a {v}+ b {v}\\)\n\\(a (b {v}) = (a b) {v}\\)\n\\(1 {v}= vv\\)\n\nAndere verwachte eigenschappen volgen, zoals \\(0 {v}= {o}_V\\), \\(\\ldots\\)\n\\({\\mathbb{F}}\\) is typisch \\({\\mathbb{R}}\\) of \\({\\mathbb{C}}\\)"
+  },
+  {
+    "objectID": "slides/H1.html#voorbeelden",
+    "href": "slides/H1.html#voorbeelden",
+    "title": "Hoofdstuk 1 - Elementaire wiskundige structuren",
+    "section": "Voorbeelden",
+    "text": "Voorbeelden\n\nTriviale vector ruimte: \\(\\{{o}\\}\\) (voor om het even welk veld)\n\\({\\mathbb{F}}^n = {\\mathbb{F}}\\times {\\mathbb{F}}\\times \\cdots \\times {\\mathbb{F}}\\): n-tuples\n\nmeestal voorgesteld als kolom\nelementen genoteerd in het vet: \\(\\boldsymbol{v}\\in {\\mathbb{F}}^n\\)\nelementsgewijze optelling en vermenigvuldiging met scalairen\nin het bijzonder: \\({\\mathbb{F}}^1 \\cong {\\mathbb{F}}\\) als veld over zichzelf\n\n\\({\\mathbb{C}}\\) als veld over \\({\\mathbb{R}}\\): het complexe vlak\nanaloog: \\({\\mathbb{H}}\\) als veld over \\({\\mathbb{R}}\\), of over \\({\\mathbb{C}}\\)\n\\({\\mathbb{F}}^{n\\times m}\\): \\(n \\times m\\) matrices, opnieuw met componentsgewijze optelling en vermenigvuldiging met scalairen (≠ matrixvermenigvuldiging)"
+  },
+  {
+    "objectID": "slides/H1.html#deelruimten",
+    "href": "slides/H1.html#deelruimten",
+    "title": "Hoofdstuk 1 - Elementaire wiskundige structuren",
+    "section": "Deelruimten",
+    "text": "Deelruimten\n\nDeelverzameling \\(W\\) van een vectorruimte \\(V\\) die gesloten is onder vectoroptelling (=deelgroep) en vermenigvuldiging met scalairen\nNotatie: \\(W {\\preccurlyeq}V\\)\nTriviale deelruimte: \\(\\{{o}_V\\}\\)\nEigenlijke deelruimte: \\(W \\neq \\{{o}_V\\}\\) en \\(W \\neq V\\)"
+  },
+  {
+    "objectID": "slides/H1.html#meer-voorbeelden",
+    "href": "slides/H1.html#meer-voorbeelden",
+    "title": "Hoofdstuk 1 - Elementaire wiskundige structuren",
+    "section": "Meer voorbeelden",
+    "text": "Meer voorbeelden\n\nVectorruimte \\({\\mathbb{F}}^{\\mathcal{D}}\\): functies van een bepaald domein \\(\\mathcal{D}\\) (bvb \\({\\mathbb{R}}\\) of \\({\\mathbb{R}}^3\\)) naar \\({\\mathbb{F}}\\)\n\npuntsgewijze optelling en vermenigvuldiging met scalairen\n\nVoor \\(\\mathcal{D} \\subseteq {\\mathbb{R}}^n\\): Optelling en scalaire vermenigvuldiging behoudt de meeste analytische eigenschappen, dus interessante deelruimtes:\n\nContinue functies: \\(C(\\mathcal{D},{\\mathbb{F}})\\)\n\\(n\\)-maal continue afleidbare functies: \\(C^k(\\mathcal{D},{\\mathbb{F}})\\)\ngladde functies: \\(C^{\\infty}(\\mathcal{D},{\\mathbb{F}})\\)\nanalytische functies \\(C^{\\omega}(\\mathcal{D},{\\mathbb{F}})\\)"
+  },
+  {
+    "objectID": "slides/H1.html#homomorfismen",
+    "href": "slides/H1.html#homomorfismen",
+    "title": "Hoofdstuk 1 - Elementaire wiskundige structuren",
+    "section": "Homomorfismen",
+    "text": "Homomorfismen\nStructuurbehoudende afbeelding tussen twee vectorruimten \\(V\\) and \\(W\\):\n\\(\\varphi:V\\to W\\) met \\(\\varphi (a_1 {v}_1 + a_2 {v}_2) = a_1 \\varphi({v}_1) + a_2 \\varphi({v}_2)\\)\n\nvector-homomorfismen \\(\\mathop{\\mathrm{Hom}}(V,W)\\):\nlineaire afbeeldingen \\(\\rightarrow\\) Hoofdstuk 2\nvector-endomorfismen \\(\\mathop{\\mathrm{End}}(V) = \\mathop{\\mathrm{Hom}}(V,V)\\):\nlineaire operatoren \\(\\rightarrow\\) Hoofdstuk 3\nvector-isomorfismen:\nlineaire transformaties\nvector-automorfismegroep \\(\\mathop{\\mathrm{GL}}(V)\\):\nalgemeen lineaire groep"
+  },
+  {
+    "objectID": "slides/H1.html#lineaire-combinaties",
+    "href": "slides/H1.html#lineaire-combinaties",
+    "title": "Hoofdstuk 1 - Elementaire wiskundige structuren",
+    "section": "Lineaire combinaties",
+    "text": "Lineaire combinaties\nGegeven een deelverzameling \\(S \\subseteq V\\) van een vectorruimte \\(V\\) over \\({\\mathbb{F}}\\) (dus niet noodzakelijk een deelruimte):\n\nEen lineaire combinatie uit \\(S\\) is elke vector \\({v}= \\sum_{i=1}^m a_i {v}_i\\) met \\(a_i \\in {\\mathbb{F}}\\), \\({v}_i \\in S\\) voor \\(i=1,\\ldots,m\\) voor een eindige integer \\(m\\)2"
+  },
+  {
+    "objectID": "slides/H1.html#lineaire-span-en-compleetheid",
+    "href": "slides/H1.html#lineaire-span-en-compleetheid",
+    "title": "Hoofdstuk 1 - Elementaire wiskundige structuren",
+    "section": "Lineaire span en compleetheid",
+    "text": "Lineaire span en compleetheid\n\n\\(\\mathop{\\mathrm{span}}(S)\\) of \\({\\mathbb{F}}S\\) is de verzameling van alle lineaire combinaties uit \\(S\\); dit is een deelruimte: \\(\\mathop{\\mathrm{span}}(S) {\\preccurlyeq}V\\)\nDeelruimte \\(W\\) is voortgebracht door \\(S\\) als \\(\\mathop{\\mathrm{span}}(S)=W\\)\n\\(\\mathop{\\mathrm{span}}(\\{\\}) = \\{{o}_V\\}\\)\n\\(S\\) is compleet als \\(\\mathop{\\mathrm{span}}(S)=V\\)\nAls de kleinste verzameling \\(S\\) waarvoor \\(\\mathop{\\mathrm{span}}(S)=V\\) een eindige kardinaliteit \\(|S|=n\\) heeft, dan wordt \\(V\\) een \\(n\\)-dimensionale vectorruimte genoemd: \\(\\mathop{\\mathrm{dim}}(V)=n\\)\nAls er geen eindige verzameling \\(S\\) bestaat waarvoor \\(\\mathop{\\mathrm{span}}(S)=V\\), dan wordt \\(V\\) een oneindig-dimensionale vectorruimte genoemd"
+  },
+  {
+    "objectID": "slides/H1.html#lineaire-onafhankelijkheid-en-basis",
+    "href": "slides/H1.html#lineaire-onafhankelijkheid-en-basis",
+    "title": "Hoofdstuk 1 - Elementaire wiskundige structuren",
+    "section": "Lineaire onafhankelijkheid en basis",
+    "text": "Lineaire onafhankelijkheid en basis\n\nEen deelverzameling \\(S \\subseteq V\\) van een vectorruimte \\(V\\) over \\({\\mathbb{F}}\\) wordt lineair onafhankelijk genoemd als voor elke lineaire combinatie \\(\\sum_{i=1}^m a_i {v}_i\\) geldt dat de vergelijking \\(\\sum_{i=1}^m a_i {v}_i = {o}_V\\) impliceert dat \\(a_i = 0\\) voor \\(i=1,\\ldots,m\\).\nEen verzameling \\(S\\) die tegelijkertijd lineair onafhankelijk is en compleet is (\\(V\\) voortbrengt) wordt een basis genoemd\nVoorbeeld: \\(\\{\\boldsymbol{e}_i =(0,\\ldots,\\underbrace{0,1,0}_{\\text{positie $i$}},\\ldots,0); i=1,\\ldots,n\\}\\) is een basis voor \\({\\mathbb{F}}^n\\)"
+  },
+  {
+    "objectID": "slides/H1.html#basis-eigenschappen",
+    "href": "slides/H1.html#basis-eigenschappen",
+    "title": "Hoofdstuk 1 - Elementaire wiskundige structuren",
+    "section": "Basis: eigenschappen",
+    "text": "Basis: eigenschappen\n\nUit elke complete verzameling \\(S\\) kunnen we een basis \\(B\\subseteq S\\) extraheren\nElke lineair onafhankelijke verzameling \\(S\\) kunnen we uitbreiden tot een basis \\(B \\supseteq S\\)\nElke lineair onafhankelijke verzameling \\(S\\) uit een \\(n\\)-dimensionale vectorruimte heeft ten hoogste \\(n\\) elementen\nElke lineair onafhankelijke verzameling \\(S\\) met \\(n\\) elementen uit een \\(n\\)-dimensionale vectorruimte is een basis, en elke basis heeft exact \\(n\\) elementen\nElke vectorruimte (ook oneindig-dimensionale) hebben een basis (Hamel-basis), maar die is vaak niet constructief en niet praktisch"
+  },
+  {
+    "objectID": "slides/H1.html#coordinaten-en-indexnotatie",
+    "href": "slides/H1.html#coordinaten-en-indexnotatie",
+    "title": "Hoofdstuk 1 - Elementaire wiskundige structuren",
+    "section": "Coordinaten en indexnotatie",
+    "text": "Coordinaten en indexnotatie\nGegeven een basis \\(B = \\{{e}_i, i=1,\\ldots,n\\}\\) voor een eindig-dimensionale vectorruimte:\n\nElke vector \\({v}\\in V\\) kan 1-op-1 geassocieerd worden aan een \\(n\\)-tuple \\(\\boldsymbol{v}=(v^1,\\ldots,v^n) \\in {\\mathbb{F}}^n\\) zodat\n\\({v}= \\sum_{i=1}^n v^i {e}_i = v^i {e}_i\\) (Einstein sommatie-conventie)\n\\(\\boldsymbol{v} = \\phi_B({v})\\): \\(\\phi_B\\) coordinatenisomorfisme\nElke \\(n\\)-dimensionale vectorruimte is isomorf met \\({\\mathbb{F}}^n\\)\nElke twee \\(n\\)-dimensionale vectorruimten zijn isomorf: \\(V \\cong W\\)"
+  },
+  {
+    "objectID": "slides/H1.html#indexnotatie",
+    "href": "slides/H1.html#indexnotatie",
+    "title": "Hoofdstuk 1 - Elementaire wiskundige structuren",
+    "section": "Indexnotatie",
+    "text": "Indexnotatie\n\nCoordinaten / componenten van een vector voorgesteld met contravariante index (bovenindex)\nEinstein-sommatieconventie: elk symbool dat éénmaal als bovenindex (contravariant) en éénmaal als benedenindex (covariant) voorkomt impliceert een sommatie over zijn bereik\nKronecker-delta: \\(\\delta^i_j = \\begin{cases} 1, i=j\\\\ 0, i \\neq j\\end{cases}\\)"
+  },
+  {
+    "objectID": "slides/H1.html#bewerkingen-met-deelruimten",
+    "href": "slides/H1.html#bewerkingen-met-deelruimten",
+    "title": "Hoofdstuk 1 - Elementaire wiskundige structuren",
+    "section": "Bewerkingen met deelruimten",
+    "text": "Bewerkingen met deelruimten\n\n\\(W {\\preccurlyeq}V\\) impliceert \\(\\mathop{\\mathrm{dim}}(W) \\leq \\mathop{\\mathrm{dim}}(V)\\)\nAls \\(V\\) eindig-dimensionaal is:\n\\(\\mathop{\\mathrm{dim}}(W) = \\mathop{\\mathrm{dim}}(V)\\) impliceert \\(W = V\\)"
+  },
+  {
+    "objectID": "slides/H1.html#bewerkingen-met-deelruimten-1",
+    "href": "slides/H1.html#bewerkingen-met-deelruimten-1",
+    "title": "Hoofdstuk 1 - Elementaire wiskundige structuren",
+    "section": "Bewerkingen met deelruimten",
+    "text": "Bewerkingen met deelruimten\nVoor deelruimten \\(W_1,W_2 {\\preccurlyeq}V\\):\n\n\\((W_1 \\cap W_2)\\) is een deelruimte\n\\(W_1 + W_2 = {\\mathbb{F}}(W_1 \\cup W_2)\\) is een deelruimte:\n\n\\({v}= {w}_1 + {w}_2\\) voor een \\({w}_1 \\in W_1\\) en \\({w}_2 \\in W_2\\).\n\\(\\mathop{\\mathrm{dim}}(W_1+W_2) = \\mathop{\\mathrm{dim}}(W_1) + \\mathop{\\mathrm{dim}}(W_2) - \\mathop{\\mathrm{dim}}(W_1 \\cap W_2)\\)\n\nals \\(W_1 \\cap W_2 = \\{{o}\\}\\): (interne) directe som \\(W_1 \\oplus W_2\\)\n\nontbinding \\({v}= {w}_1 + {w}_2\\) is uniek\n\\(\\mathop{\\mathrm{dim}}(W_1 \\oplus W_2) = \\mathop{\\mathrm{dim}}(W_1) + \\mathop{\\mathrm{dim}}(W_2)\\)"
+  },
+  {
+    "objectID": "slides/H1.html#bewerkingen-met-deelruimten-2",
+    "href": "slides/H1.html#bewerkingen-met-deelruimten-2",
+    "title": "Hoofdstuk 1 - Elementaire wiskundige structuren",
+    "section": "Bewerkingen met deelruimten",
+    "text": "Bewerkingen met deelruimten\nVoor vectorruimten \\(V_1\\) en \\(V_2\\): \\(V_1 \\times V_2\\) is vectorruimte\n\nVectorstructuur:\n\n\\(({v}_1,{v}_2) + ({w}_1, {w}_2) = ({w}_1,{w}_2)\\)\n\\(a ({v}_1, {v}_2)= (a {v}_1, a {v}_2)\\)\n\nnotatie: \\(V_1 \\oplus V_2\\), naam: (externe) directe som\n\\({v}_1 \\mapsto ({v}_1,{o}_{V_2})\\) en \\({v}_2 \\mapsto ({o}_{V_1},{v}_2)\\) definiëren natuurlijke inbedding van \\(V_1\\) en \\(V_2\\) als subruimtes van \\(V_1 \\oplus V_2\\)\n\n\\(\\Rightarrow\\) geen onderscheid tussen interne en externe directe som"
+  },
+  {
+    "objectID": "slides/H1.html#bewerkingen-met-deelruimten-3",
+    "href": "slides/H1.html#bewerkingen-met-deelruimten-3",
+    "title": "Hoofdstuk 1 - Elementaire wiskundige structuren",
+    "section": "Bewerkingen met deelruimten",
+    "text": "Bewerkingen met deelruimten\nGegeven een deelruimte \\(W \\subseteq V\\):\n\nals \\(V = W \\oplus U\\), dan is \\(U\\) een complement van \\(W\\) in \\(V\\)\n\nkeuze voor complement \\(U\\) is niet uniek\nvoor elke keuze geldt \\(\\mathop{\\mathrm{dim}}(U) = \\mathop{\\mathrm{dim}}(V) - \\mathop{\\mathrm{dim}}(W) = \\mathop{\\mathrm{codim}}(W)\\)\n\nquotientruimte \\(V/W\\):\n\nequivalentierelatie \\({v}_1 \\sim {v}_2 \\Leftrightarrow ({v}_2-{v}_1) \\in W\\)\n\\((W,+)\\) is normale subgroup van \\((V,+)\\)\nequivalentieklassen: \\({v}+ W = \\{{v}+ {w}; {w}{w}\\in W\\}\\)\n\\(\\mathop{\\mathrm{dim}}(V/W) = \\mathop{\\mathrm{dim}}(V) - \\mathop{\\mathrm{dim}}(W)\\)"
+  },
+  {
+    "objectID": "slides/H1.html#affiene-ruimte",
+    "href": "slides/H1.html#affiene-ruimte",
+    "title": "Hoofdstuk 1 - Elementaire wiskundige structuren",
+    "section": "Affiene ruimte",
+    "text": "Affiene ruimte\nGegeven een vectorruimte \\(V\\), een geassocierde affiene ruimte is een verzameling van punten \\(A = \\{P, Q, \\ldots\\}\\) waarop de abelse groep \\((V,+)\\) een groepsactie heeft, of dus\n\n\\(\\forall P \\in A: P + {o}_V = P\\)\n\\(\\forall P \\in A, {v},{w}\\in V: P + ({v}+ {w}) = (P+{v}) + {w}\\)\n\nmet bovendien:\n\nals \\(P + {v}= P\\) voor een bepaalde \\(P\\), dan is \\({v}= {o}_V\\)\n\\(\\forall P, Q \\in A\\): er bestaat een \\({v}\\) zodat \\(Q = P + {v}\\)\n\nnotatie: \\({v}= Q - P\\)\n\n\n\\(A\\) is zoals de vectorruimte \\(V\\) die zijn oorsprong is vergeten"
+  },
+  {
+    "objectID": "slides/H1.html#algebra",
+    "href": "slides/H1.html#algebra",
+    "title": "Hoofdstuk 1 - Elementaire wiskundige structuren",
+    "section": "Algebra",
+    "text": "Algebra\nEen vectorruimte \\(V\\) met een binaire operatie \\(\\odot: V \\times V \\mapsto V\\) dat lineair is beide argumenten afzonderlijk (= bilineair)\n\n\\((a_1 {v}_1 + a_2 {v}_2) \\odot {w}= a_1 ({v}_1 \\odot {w}) + a_2 ({v}_2 \\odot {w})\\)\n\\({v}\\odot (b_1 {w}_1 + b_2 {w}_2) = b_1 ({v}\\odot {w}_1) + b_2 ({v}\\odot {w}_2)\\)\n\nTen opzichte van een basis \\(B = \\{{e}_1,\\ldots,{e}_n\\}\\): \\((v^i {e}_i) \\odot (w^j {e}_j) = v^i w^j ({e}_i \\odot {e}_j) = v^i v^j \\underbrace{f_{ij}^k}_{\\text{structuurconstanten}} {e}_k\\)"
+  },
+  {
+    "objectID": "slides/H1.html#algebras-1",
+    "href": "slides/H1.html#algebras-1",
+    "title": "Hoofdstuk 1 - Elementaire wiskundige structuren",
+    "section": "Algebras",
+    "text": "Algebras\n\nAssociatieve algebra \\((V,\\cdot)\\):\n\n\\(({u}\\cdot {v}) \\cdot {w}= {u}\\cdot ({v}\\cdot {w})\\)\nvaak ook met een neutraal element\nbelangrijkste voorbeeld: vierkante matrices \\({\\mathbb{F}}^{n \\times n}\\)\ncommutator: \\([{v},{w}] = {v}\\cdot {w}- {w}\\cdot {v}\\)\n\nAlternerend product: \\({v}\\odot {v}= 0 \\Rightarrow {v}\\odot {w}= -{w}\\odot {v}\\)\nLie-algebra: algebra met alternered product, genoteerd als \\([{v}, {w}] = -[{w},{v}]\\) dat voldoet aan Jacobi-identiteit\n\\([{u},[{v},{w}]] + [{v},[{w},{u}]] + [{w},[{u},{v}]] = 0\\)\n\\(\\rightarrow\\) kan gemaakt worden uit associatieve algebra m.b.v. commutator"
+  },
+  {
+    "objectID": "slides/H1.html#footnotes",
+    "href": "slides/H1.html#footnotes",
+    "title": "Hoofdstuk 1 - Elementaire wiskundige structuren",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nInvers beeld gedraagt vereist geen injectiviteit, en gedraagt zich beter dan beeld onder unie en doorsnede: \\(\\varphi^{-1}(D_1 \\cup D_2) = \\varphi^{-1}(D_1) \\cup \\varphi^{-1}(D_2)\\) en analoog voor \\(\\cap\\)↩︎\n\\(S\\) zelf kan eindig of oneindig veel elementen bevatten, maar we hebben geen manier om op dit moment betekenis te geven aan een oneindige som (=reeks)↩︎"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Vector and Function Spaces – Slides",
+    "section": "",
+    "text": "Order By\n       Default\n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Title\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\nDate\n\n\nTitle\n\n\nAuthor\n\n\n\n\n\n\nSep 25, 2023\n\n\nHoofdstuk 1 - Elementaire wiskundige structuren\n\n\nJutho Haegeman\n\n\n\n\nSep 26, 2023\n\n\nHoofdstuk 2 - Lineaire afbeeldingen\n\n\nJutho Haegeman\n\n\n\n\nOct 10, 2023\n\n\nHoofdstuk 3 - Lineaire operatoren en eigenwaarden\n\n\nJutho Haegeman\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "slides/H2.html",
+    "href": "slides/H2.html",
+    "title": "Hoofdstuk 2 - Lineaire afbeeldingen",
+    "section": "",
+    "text": "$$ % Math operators % % \n% VECTORS\n% specifically for vectors in F^n \n% MATRICES\n% SCALARS \n% LINEAR MAPS\n% FIELDS \n% RELATIONS \n% % % % % % % % %\n%\n$$\n\nHerhaling:\n\nLineaire afbeeldingen: definities, elementaire eigenschappen, voorstelling als matrices\nEigenschappen van matrices en determinanten\nMatrixinverse\nLineaire transformaties, algemene lineaire groep, basistransformaties\nLineaire stelsels: oplossingstructuur en relevante matrixontbindingen"
+  },
+  {
+    "objectID": "slides/H2.html#doel-van-dit-hoofdstuk",
+    "href": "slides/H2.html#doel-van-dit-hoofdstuk",
+    "title": "Hoofdstuk 2 - Lineaire afbeeldingen",
+    "section": "",
+    "text": "$$ % Math operators % % \n% VECTORS\n% specifically for vectors in F^n \n% MATRICES\n% SCALARS \n% LINEAR MAPS\n% FIELDS \n% RELATIONS \n% % % % % % % % %\n%\n$$\n\nHerhaling:\n\nLineaire afbeeldingen: definities, elementaire eigenschappen, voorstelling als matrices\nEigenschappen van matrices en determinanten\nMatrixinverse\nLineaire transformaties, algemene lineaire groep, basistransformaties\nLineaire stelsels: oplossingstructuur en relevante matrixontbindingen"
+  },
+  {
+    "objectID": "slides/H2.html#doel-van-dit-hoofdstuk-1",
+    "href": "slides/H2.html#doel-van-dit-hoofdstuk-1",
+    "title": "Hoofdstuk 2 - Lineaire afbeeldingen",
+    "section": "Doel van dit hoofdstuk",
+    "text": "Doel van dit hoofdstuk\nNieuw (?)\n\nLineaire functionalen en duale ruimte\nDeterminanten als volume(verandering), Jacobianen en substituties in meervoudige integralen\nLineaire afbeeldingen in reële en complexe vectorruimten; antilineaire afbeeldingen\nBlokmatrices en Schur complementen"
+  },
+  {
+    "objectID": "slides/H2.html#definitie",
+    "href": "slides/H2.html#definitie",
+    "title": "Hoofdstuk 2 - Lineaire afbeeldingen",
+    "section": "Definitie",
+    "text": "Definitie\nHomomorfismen tussen vectorruimten: \\(\\varphi \\in \\mathop{\\mathrm{Hom}}(V,W)\\)\n\nStructuurbehoud:\n\nAdditiviteit: \\(\\varphi({v}_1 + {v}_2) = \\varphi({v}_1) + \\varphi({v}_2)\\)1\nHomogeniteit: \\(\\varphi(a {v}) = a \\varphi({v})\\)\n\n\\(\\Rightarrow\\) lineairiteit \\(\\varphi(a_1 {v}_1 + a_2 {w}) = a_1 \\varphi({v}_1) + a_2 \\varphi({v}_2)\\)\nNieuwe notatie: \\({\\hat{A}}:V \\to W: {v}\\mapsto {\\hat{A}}({v}) = {\\hat{A}}{v}\\)\n(hoofdletter Latijns alfabet, hoedje, functiehaakjes niet noodzakelijk)"
+  },
+  {
+    "objectID": "slides/H2.html#voorbeelden",
+    "href": "slides/H2.html#voorbeelden",
+    "title": "Hoofdstuk 2 - Lineaire afbeeldingen",
+    "section": "Voorbeelden",
+    "text": "Voorbeelden\n\n\\(\\mathop{\\mathrm{Hom}}({\\mathbb{F}}^n, {\\mathbb{F}}^n) \\cong {\\mathbb{F}}^{m \\times n}\\): matrices die werken op standaard kolomvectoren via matrix-vector-vermenigvuldiging\nDe identiteitsafbeelding \\({\\hat{1}}_V\\)\nAfgeleide-operator \\({\\hat{D}}\\), die werkt op functies op een interval \\(I \\subseteq {\\mathbb{R}}\\) als \\(({\\hat{D}}f)(x) = \\frac{{\\mathrm{d}}f}{{\\mathrm{d}}x}(x) = f'(x)\\)\n\nDomein \\(C^k(I,{\\mathbb{F}}) \\Rightarrow\\) codomein \\(C^{k-1}(I,{\\mathbb{F}})\\)\nDomein \\(C^{\\infty}(I,{\\mathbb{F}})\\) = codomain: lineaire operator\n\nIntegraaltransformaties: Fouriertransformatie, Laplace-transformatie,"
+  },
+  {
+    "objectID": "slides/H2.html#eigenschappen",
+    "href": "slides/H2.html#eigenschappen",
+    "title": "Hoofdstuk 2 - Lineaire afbeeldingen",
+    "section": "Eigenschappen",
+    "text": "Eigenschappen\n\n\\(\\mathop{\\mathrm{Hom}}(V,W)\\) is zelf een vectorruimte over \\({\\mathbb{F}}\\),\n\nPuntsgewijze definitie, gebruik makende van vectorstructuur die bestaat in codomein \\(W\\): \\(({\\hat{A}}+{\\hat{B}})({v}) = {\\hat{A}}({v}) + {\\hat{B}}({v})\\) en \\((a {\\hat{A}})({v}) = a {\\hat{A}}(v)\\).\n‘Nulvector’ is de nulafbeelding \\({\\hat{0}}\\) die voldoet aan \\({\\hat{0}} {v}= {o}_W\\), \\(\\forall {v}\\in V\\)\n\nCompositie van lineaire afbeeldingen:\n\n\\(\\circ: \\mathop{\\mathrm{Hom}}(V,W) \\times \\mathop{\\mathrm{Hom}}(U,V) \\to \\mathop{\\mathrm{Hom}}(U,W)\\)\n\\({\\hat{A}} \\circ {\\hat{B}}\\) is bilineair in zijn argumenten\n\n\\((\\mathop{\\mathrm{End}}(V), \\circ)\\) is een associatieve algebra met \\({\\hat{1}}_V\\) als eenheidselement"
+  },
+  {
+    "objectID": "slides/H2.html#beeldruimte",
+    "href": "slides/H2.html#beeldruimte",
+    "title": "Hoofdstuk 2 - Lineaire afbeeldingen",
+    "section": "Beeldruimte",
+    "text": "Beeldruimte\n\\(\\mathop{\\mathrm{im}}({\\hat{A}}) = {\\hat{A}}(V) = \\{{\\hat{A}}{v}; {v}\\in V\\}\\)\n\n\\(\\mathop{\\mathrm{im}}({\\hat{A}}) {\\preccurlyeq}W\\)\nrang: \\(\\mathop{\\mathrm{rank}}({\\hat{A}}) = \\mathop{\\mathrm{dim}}(\\mathop{\\mathrm{im}}({\\hat{A}}))\\)"
+  },
+  {
+    "objectID": "slides/H2.html#kern-of-nulruimte",
+    "href": "slides/H2.html#kern-of-nulruimte",
+    "title": "Hoofdstuk 2 - Lineaire afbeeldingen",
+    "section": "Kern (of nulruimte)",
+    "text": "Kern (of nulruimte)\nZelfde definitie als voor groep: \\(\\mathop{\\mathrm{ker}}({\\hat{A}}) = {\\hat{A}}^{-1}(\\{{o}_W\\})\\)\n\n\\(\\mathop{\\mathrm{ker}}({\\hat{A}}) {\\preccurlyeq}V\\)\nnulliteit: \\(\\mathop{\\mathrm{nullity}}({\\hat{A}}) = \\mathop{\\mathrm{dim}}(\\mathop{\\mathrm{ker}}({\\hat{A}}))\\)\ninjectieve afbeelding \\(\\Leftrightarrow \\mathop{\\mathrm{nullity}}({\\hat{A}}) = 0\\)\ninjectieve afbeeldingen behouden lineaire onafhankelijkheid en dimensie\nvoor \\(U{\\preccurlyeq}V\\): \\(\\mathop{\\mathrm{dim}}({\\hat{A}}U) = \\mathop{\\mathrm{dim}}(U)\\)\n\nVoorbeeld: \\(\\mathop{\\mathrm{ker}}({\\hat{D}})\\) de verzameling van constante functies"
+  },
+  {
+    "objectID": "slides/H2.html#rang-nulliteitsstelling",
+    "href": "slides/H2.html#rang-nulliteitsstelling",
+    "title": "Hoofdstuk 2 - Lineaire afbeeldingen",
+    "section": "Rang-nulliteitsstelling",
+    "text": "Rang-nulliteitsstelling\nGegeven een afbeelding \\({\\hat{A}}:V \\to W\\)\n\nEquivalentierelatie \\({v}\\sim {u}\\Leftrightarrow ({v}- {u}) \\in \\mathop{\\mathrm{ker}}({\\hat{A}}) \\Leftrightarrow {\\hat{A}}{v}= {\\hat{A}}{u}\\)\nMet elke equivalentieklasse \\([{v}]\\) is een uniek punt in \\(\\mathop{\\mathrm{im}}({\\hat{A}})\\) geassocieerd\nWe kunnen een bijectieve afbeelding definiëren van de quotiëntruimte \\(V /\\mathop{\\mathrm{ker}}({\\hat{A}})\\) naar \\(\\mathop{\\mathrm{im}}({\\hat{A}})\\)\nVoor \\(V\\) eindig-dimensionaal:\n\\(\\mathop{\\mathrm{dim}}(\\mathop{\\mathrm{im}}({\\hat{A}})) = \\mathop{\\mathrm{dim}}(V/\\mathop{\\mathrm{ker}}({\\hat{A}})) = \\mathop{\\mathrm{dim}}(V) - \\mathop{\\mathrm{dim}}(\\mathop{\\mathrm{ker}}({\\hat{A}}))\\)\n\\(\\Rightarrow\\mathop{\\mathrm{rank}}({\\hat{A}}) + \\mathop{\\mathrm{nullity}}({\\hat{A}}) = \\mathop{\\mathrm{dim}}({\\hat{V}})\\)"
+  },
+  {
+    "objectID": "slides/H2.html#rang-nulliteitsstelling-1",
+    "href": "slides/H2.html#rang-nulliteitsstelling-1",
+    "title": "Hoofdstuk 2 - Lineaire afbeeldingen",
+    "section": "Rang-nulliteitsstelling",
+    "text": "Rang-nulliteitsstelling\nGevolgen:\n\nVoor \\(V,W\\) eindigdimensionaal en \\(\\mathop{\\mathrm{dim}}(V) = \\mathop{\\mathrm{dim}}(W)\\) zijn volgende eigenschappen equivalent:\n\ninjectief: \\(\\mathop{\\mathrm{nullity}}({\\hat{A}}) = 0\\)\nsurjectief: \\(\\mathop{\\mathrm{rank}}({\\hat{A}}) = \\mathop{\\mathrm{dim}}(W) = \\mathop{\\mathrm{dim}}(V)\\)\nbijectief\n\nVoor een vierkante matrix \\({\\mathsf{A}} \\in {\\mathbb{F}}^{n \\times n}\\) impliceert het bestaan van een linker- of rechterinverse meteen dat dit een volwaardig inverse is: \\({\\mathsf{A}}^{-1}\\)"
+  },
+  {
+    "objectID": "slides/H2.html#voorbeeld",
+    "href": "slides/H2.html#voorbeeld",
+    "title": "Hoofdstuk 2 - Lineaire afbeeldingen",
+    "section": "Voorbeeld",
+    "text": "Voorbeeld\nBeschouw de vectorruimte \\({\\mathbb{F}}^{{\\mathbb{N}}_0}\\), de vectorruimte van oneindig lange tuples met als lineaire afbeeldingen:\n\n\\({\\hat{R}}(v^1,v^2,v^3,\\ldots) = (0, v^1, v^2, \\ldots)\\)\n\\({\\hat{L}}(v^1,v^2,v^3,\\ldots) = (v^2,v^3,v^4, \\ldots)\\)\n\nEr geldt dat:\n\n\\({\\hat{L}} {\\hat{R}} = {\\hat{1}}\\)\n\\({\\hat{R}}{\\hat{L}}={\\hat{P}}\\) met \\({\\hat{P}}(v^1,v^2,v^3,\\ldots) = (0, v^2, v^3, \\ldots)\\)"
+  },
+  {
+    "objectID": "slides/H2.html#matrixvoorstelling-van-lineaire-afbeeldingen",
+    "href": "slides/H2.html#matrixvoorstelling-van-lineaire-afbeeldingen",
+    "title": "Hoofdstuk 2 - Lineaire afbeeldingen",
+    "section": "Matrixvoorstelling van lineaire afbeeldingen",
+    "text": "Matrixvoorstelling van lineaire afbeeldingen\nBeschouw een lineaire afbeelding \\({\\hat{A}}:V \\to W\\) waar \\(V\\) en \\(W\\) eindig-dimensionaal zijn en een basis \\(B_V = \\{{e}_1,\\ldots,{e}_n\\}\\) en \\(B_W = \\{{f}_1,\\ldots,{f}_m\\}\\) hebben:\n\\[{\\hat{A}}({e}_j) = {f}_i A^i_{\\ j} \\Rightarrow {w}= {\\hat{A}}({v}) = v^j {\\hat{A}}({e}_j) = (A^i_{\\ j} v^j) {f}_i = w^i {f}_i\\]\nMet behulp van\n\n\\(\\boldsymbol{v} = \\phi_{B_V}({v}) \\in {\\mathbb{F}}^n\\), \\(\\boldsymbol{w} = \\phi_{B_W}({w}) \\in {\\mathbb{F}}^m\\)\n\\({\\mathsf{A}} = \\Phi_{B_W,B_V}({\\hat{A}}) = \\phi_{B_W}\\circ {\\hat{A}} \\circ \\phi_{B_V}^{-1} \\in {\\mathbb{F}}^{m \\times n}\\) : matrixvoorstelling\n\ngeldt dus \\(\\boldsymbol{w}= {\\mathsf{A}}\\boldsymbol{v}\\): matrix - vector product"
+  },
+  {
+    "objectID": "slides/H2.html#matrixvoorstelling-en-compositie",
+    "href": "slides/H2.html#matrixvoorstelling-en-compositie",
+    "title": "Hoofdstuk 2 - Lineaire afbeeldingen",
+    "section": "Matrixvoorstelling en compositie",
+    "text": "Matrixvoorstelling en compositie\nVoor de compositie van lineaire afbeeldingen geldt:\n\\({\\hat{C}} = {\\hat{A}}\\circ {\\hat{B}} \\Rightarrow {\\mathsf{C}} = {\\mathsf{A}} \\cdot {\\mathsf{B}}\\): matrix - matrix product “\\(\\cdot\\)”\nEnkele eigenschappen van matrixvermenigvuldiging:\n\n\\({\\mathsf{A}} \\in {\\mathbb{F}}^{m\\times n}, {\\mathsf{B}}\\in{\\mathbb{F}}^{n \\times p} \\Rightarrow {\\mathsf{C}} \\in {\\mathbb{F}}^{m \\times p}\\)\nassociatief, neutraal element = \\({\\mathsf{I}}_n\\) (\\(n \\times n\\) eenheidsmatrix), niet commutatief, bilineair\ncomputationele complexiteit: \\(mnp\\) vermenigvuldigingen en \\(mn(p-1)\\) addities van scalairen (naïve telling)\ngeheugencomplexiteit: \\(mn + np + mp\\) scalairen\nvoor \\(m \\approx n \\approx p\\): \\(\\mathop{\\mathrm{\\mathscr{O}}}(n^3)\\) bewerkingen op \\(\\mathop{\\mathrm{\\mathscr{O}}}(n^2)\\) data"
+  },
+  {
+    "objectID": "slides/H2.html#lineaire-extensie-en-vrije-vectorruimte",
+    "href": "slides/H2.html#lineaire-extensie-en-vrije-vectorruimte",
+    "title": "Hoofdstuk 2 - Lineaire afbeeldingen",
+    "section": "Lineaire extensie en vrije vectorruimte",
+    "text": "Lineaire extensie en vrije vectorruimte\n\nVoor een verzameling \\(S\\) waarvan we de elementen \\(\\{a_1, a_2,\\ldots\\}\\) beschouwen als abstracte entiteiten zonder vooraf bestaande vectorstructuur:\n\nde vrije vectorruimte \\({\\mathbb{F}}S\\) bestaat uit alle “formele” lineaire combinaties, waarbij we de elementen van \\(S\\)$ als abstracte basisvectoren beschouwen (zie H1)\n\nVoor verzamelingen \\(S,S'\\) en een afbeelding \\(\\varphi:S\\to S'\\):\n\nDe lineaire extensie van \\(\\varphi\\) is een lineaire afbeelding \\(\\mathop{\\mathrm{Hom}}({\\mathbb{F}}S, {\\mathbb{F}}S')\\), gedefinieerd als\n\\[{\\hat{\\varphi}}({v}) = v^i {\\hat{\\varphi}}(a_i) = v^i \\varphi(a_i)\\]\nmet \\(\\varphi(a_i)\\) een element uit \\(S'\\) (= basisvector uit \\({\\mathbb{F}}S'\\))."
+  },
+  {
+    "objectID": "slides/H2.html#voorbeeld-van-lineaire-extensie-1",
+    "href": "slides/H2.html#voorbeeld-van-lineaire-extensie-1",
+    "title": "Hoofdstuk 2 - Lineaire afbeeldingen",
+    "section": "Voorbeeld van lineaire extensie (1)",
+    "text": "Voorbeeld van lineaire extensie (1)\n\nBeschouw de verzameling van bits \\(S=\\{0,1\\}\\) en de bit-flip-operatie \\(\\varphi:S\\to S\\) met \\(\\varphi(0) =1\\), \\(\\varphi(1) = 0\\)\n\\({\\mathbb{C}}S \\cong {\\mathbb{C}}^2\\) en \\({\\hat{\\varphi}} \\cong \\begin{bmatrix} 0 & 1 \\\\ 1 & 0 \\end{bmatrix}\\)\nIndien we de standaard basisvectoren van \\({\\mathbb{C}}S\\) noteren als \\(\\vert 0 \\rangle\\) en \\(\\vert 1 \\rangle\\) (de zogenaamde ket-notatie van Dirac), dan komt dat overeen met de taal waarin quantum bits (qubits) geformuleerd worden. De flip-operatie op een qubit wordt beschreven door bovenstaande matrix, die ook \\(\\sigma^x\\) wordt genoemd, en 1 van de drie Pauli matrices is."
+  },
+  {
+    "objectID": "slides/H2.html#voorbeeld-van-lineaire-extensie-2",
+    "href": "slides/H2.html#voorbeeld-van-lineaire-extensie-2",
+    "title": "Hoofdstuk 2 - Lineaire afbeeldingen",
+    "section": "Voorbeeld van lineaire extensie (2)",
+    "text": "Voorbeeld van lineaire extensie (2)\nBeschouw een groep \\(G = \\{g_1,g_2,\\ldots\\}\\). Met elk groepselement kunnen we een element uit \\(\\mathop{\\mathrm{Aut}}(G)\\) associeren, namelijk op 2 verschillende manieren:\n\nlinker-multiplicatie: \\(L_{g} (h) = g h\\) zodat \\(L_{g_1} L_{g_2} = L_{g_1 g_2}\\)\nrechter-multiplicatie: \\(R_{g}(h) = h g^{-1}\\) zodat \\(R_{g_1} R_{g_2} = R_{g_1 g_2}\\)\n\nDeze transformaties kunnen gepromoveerd worden tot lineaire transformaties op \\({\\mathbb{C}}G\\), waarbij \\({\\hat{L}}_g\\) en \\({\\hat{R}}_g\\) zullen worden voorgesteld door “permutatiematrices’: vierkante matrices met enkel nul en één, zodat er exact één element één is in elke rij en elke kolom. Deze staan gekend als de linker en rechter reguliere representatie, en spelen een belangrijke rol bij de ontwikkeling van representatietheorie."
+  },
+  {
+    "objectID": "slides/H2.html#bewerkingen-met-matrices",
+    "href": "slides/H2.html#bewerkingen-met-matrices",
+    "title": "Hoofdstuk 2 - Lineaire afbeeldingen",
+    "section": "Bewerkingen met matrices",
+    "text": "Bewerkingen met matrices\nGegeven een matrix \\({\\mathsf{A}}\\) met componenten \\(A^i_{\\ j}\\)\n\nTransponeren: \\([{\\mathsf{A}}^{\\mathsf{T}}]^i_{\\ j} = A^j_{\\ i}\\) \\(\\Rightarrow\\) later: \\(({\\mathsf{A}}^{\\mathsf{T}})_i^{\\ j} = A^j_{\\ i}\\)\n\n\\(({\\mathsf{A}}^{\\mathsf{T}})^{\\mathsf{T}}={\\mathsf{A}}\\)\n\\((a_1 {\\mathsf{A}}_1 + a_2 {\\mathsf{A}}_2)^{\\mathsf{T}}= a_1 {\\mathsf{A}}_1^{\\mathsf{T}}+ a_2 {\\mathsf{A}}_2^{\\mathsf{T}}\\) (lineair)\n\\(({\\mathsf{A}}{\\mathsf{B}})^{\\mathsf{T}}= {\\mathsf{B}}^{\\mathsf{T}}{\\mathsf{A}}^{\\mathsf{T}}\\)\n\nHermitisch toevoegen (hermitisch conjugeren, hermitisch transponeren): \\(({\\mathsf{A}}^{\\mathsf{H}})^i_{\\ j} = {\\overline{\\left(A^j_{\\ i}\\right)}}\\)\n\n\\(({\\mathsf{A}}^{\\mathsf{H}})^{\\mathsf{H}}={\\mathsf{A}}\\)\n\\((a_1 {\\mathsf{A}}_1 + a_2 {\\mathsf{A}}_2)^{\\mathsf{H}}= {\\overline{a_1}} {\\mathsf{A}}_1^{\\mathsf{H}}+ {\\overline{a_2}} {\\mathsf{A}}_2^{\\mathsf{H}}\\)\n\\(({\\mathsf{A}} \\cdot {\\mathsf{B}})^{\\mathsf{H}}= {\\mathsf{B}}^{\\mathsf{H}}\\cdot {\\mathsf{A}}^{\\mathsf{H}}\\)"
+  },
+  {
+    "objectID": "slides/H2.html#bewerkingen-met-matrices-1",
+    "href": "slides/H2.html#bewerkingen-met-matrices-1",
+    "title": "Hoofdstuk 2 - Lineaire afbeeldingen",
+    "section": "Bewerkingen met matrices",
+    "text": "Bewerkingen met matrices\nEen matrix kan de voorstelling zijn van verschillende soorten objecten uit de lineaire algebra (zie H5: bilineaire en sesquilineaire afbeeldingen).\nVoor matrices als voorstelling van een lineaire afbeelding hebben volgende definities geen betekenis door ‘index mismatch’:\n\nsymmetrisch: \\({\\mathsf{A}} = {\\mathsf{A}}^{\\mathsf{T}}\\)\nantisymmetrisch of scheef-symmetrisch: \\({\\mathsf{A}} = -{\\mathsf{A}}^{\\mathsf{T}}\\)\nHermitisch: \\({\\mathsf{A}} = {\\mathsf{A}}^{\\mathsf{H}}\\)\nanti-Hermitisch of scheef-Hermitisch: \\({\\mathsf{A}} = -{\\mathsf{A}}^{\\mathsf{H}}\\)"
+  },
+  {
+    "objectID": "slides/H2.html#rang-van-een-matrix",
+    "href": "slides/H2.html#rang-van-een-matrix",
+    "title": "Hoofdstuk 2 - Lineaire afbeeldingen",
+    "section": "Rang van een matrix",
+    "text": "Rang van een matrix\nEen matrix \\({\\mathsf{A}}\\in {\\mathbb{F}}^{m \\times n}\\) kan een lineaire afbeelding van \\({\\mathbb{F}}^n\\) naar \\({\\mathbb{F}}^m\\) voorstellen.\n\n\\(\\mathop{\\mathrm{im}}({\\mathsf{A}}) {\\preccurlyeq}{\\mathbb{F}}^m\\) staat ook gekend als de kolomruimte van \\({\\mathsf{A}}\\), de ruimte opgespannen door de kolommen van \\({\\mathsf{A}}\\)\nde dimensie van die ruimte, zijnde \\(\\mathop{\\mathrm{rank}}({\\mathsf{A}})\\), wordt soms ook de kolomrang genoemd\nDe rijen van de matrix \\({\\mathsf{A}}\\) definieren vectoren van lengte \\(n\\), en spannen een deelruimte op van \\({\\mathbb{F}}^n\\), de rijruimte\nDe bijbehorende dimensie is de rijrang van \\({\\mathsf{A}}\\)\nStelling 1: rijrang = kolomrang (aan bord) \\(\\Rightarrow\\) rang!\nStelling 2: \\(\\mathop{\\mathrm{rank}}({\\mathsf{A}}\\cdot {\\mathsf{B}}) \\leq \\min(\\mathop{\\mathrm{rank}}({\\mathsf{A}}), \\mathop{\\mathrm{rank}}({\\mathsf{B}}))\\)"
+  },
+  {
+    "objectID": "slides/H2.html#spoor",
+    "href": "slides/H2.html#spoor",
+    "title": "Hoofdstuk 2 - Lineaire afbeeldingen",
+    "section": "Spoor",
+    "text": "Spoor\nGegeven een vierkante matrix \\({\\mathsf{A}} \\in {\\mathbb{F}}^{n \\times n}\\)\n\nSpoor \\(\\mathop{\\mathrm{tr}}({\\mathsf{A}}) = A^i_{\\ i}\\)\nTriviaal: \\(\\mathop{\\mathrm{tr}}({\\mathsf{A}}\\cdot {\\mathsf{B}}) = \\mathop{\\mathrm{tr}}({\\mathsf{B}}\\cdot {\\mathsf{A}})\\)"
+  },
+  {
+    "objectID": "slides/H2.html#determinant",
+    "href": "slides/H2.html#determinant",
+    "title": "Hoofdstuk 2 - Lineaire afbeeldingen",
+    "section": "Determinant",
+    "text": "Determinant\nGegeven een vierkante matrix \\({\\mathsf{A}} \\in {\\mathbb{F}}^{n \\times n}\\)\n\nLeibniz formule \\[\\begin{align}\n\\det({\\mathsf{A}}) &= \\sum_{\\sigma \\in S_n} \\mathop{\\mathrm{sgn}}(\\sigma) A^1_{\\ \\sigma(1)} A^2_{\\ \\sigma(2)} \\cdots A^n_{\\ \\sigma(n)}\\\\\n&= \\epsilon^{j_1j_2\\cdots j_n} A^1_{\\ j_1} A^2_{\\ j_2} \\cdots A^n_{\\ j_n}\n\\end{align}\\]\nmet \\(\\epsilon^{i_1i_2\\cdots i_n} = \\begin{cases} \\mathop{\\mathrm{sgn}}(\\sigma),&\\sigma=(i_1,i_2,\\ldots,i_n) \\in S_n\\\\ 0, &(i_1,i_2,\\ldots,i_n) \\not\\in S_n\\end{cases}\\)\nLevi-Civita symbool\n\\(n!\\) termen met elk \\(n\\) vermenigvuldigingen ? praktische algoritmes voor determinant hebben complexiteit \\(\\mathop{\\mathrm{\\mathscr{O}}}(n^3)\\)"
+  },
+  {
+    "objectID": "slides/H2.html#determinant-als-volume",
+    "href": "slides/H2.html#determinant-als-volume",
+    "title": "Hoofdstuk 2 - Lineaire afbeeldingen",
+    "section": "Determinant als volume",
+    "text": "Determinant als volume\n\nBeschouw de determinant als een multivariate functie van de \\(n\\) kolommen van de matrix \\({\\mathsf{A}} \\eqsim (\\boldsymbol{a}_1,\\boldsymbol{a}_2, \\ldots,\\boldsymbol{a}_n)\\). De determinant is volledig en uniek gekarakteriseerd door:\n\nlineariteit in elke kolom = multilineaire functie\nalternerend in twee opeenvolgende kolommen: \\(\\boldsymbol{a}_i =\\boldsymbol{a}_{i+1} \\Rightarrow \\det = 0\\)\neenheidsmatrix \\({\\mathsf{I}}_n \\eqsim\\) standaardbasis \\((\\boldsymbol{e}_1,\\ldots,\\boldsymbol{e}_n)\\) \\(\\Rightarrow \\det = 1\\)\n\neigenschappen die je verwacht voor het volume van een parallellopipidum opgespannen \\((\\boldsymbol{a}_1, \\ldots,\\boldsymbol{a}_n)\\)\n\\(\\Rightarrow \\det({\\mathsf{A}})\\) is de volumeverandering door de lineaire afbeelding \\({\\mathsf{A}}\\)"
+  },
+  {
+    "objectID": "slides/H2.html#determinant-verdere-eigenschappen",
+    "href": "slides/H2.html#determinant-verdere-eigenschappen",
+    "title": "Hoofdstuk 2 - Lineaire afbeeldingen",
+    "section": "Determinant: verdere eigenschappen",
+    "text": "Determinant: verdere eigenschappen\n\n\\(\\det({\\mathsf{A}}) =0 \\iff \\mathop{\\mathrm{rank}}({\\mathsf{A}}) &lt; n\\)\n\\(\\epsilon^{j_1j_2\\cdots j_n} A^{i_1}_{\\ j_1} A^{i_2}_{\\ j_2} \\cdots A^{i_n}_{\\ j_n} = \\epsilon^{i_1i_2\\cdots i_n}\\)\n\\(\\det({\\mathsf{A}}\\cdot{\\mathsf{B}}) = \\det({\\mathsf{A}})\\det({\\mathsf{B}})\\)\nTwee opeenvolgende transformaties \\(\\Rightarrow\\) product van volumeveranderingen"
+  },
+  {
+    "objectID": "slides/H2.html#determinant-toepassing",
+    "href": "slides/H2.html#determinant-toepassing",
+    "title": "Hoofdstuk 2 - Lineaire afbeeldingen",
+    "section": "Determinant: toepassing",
+    "text": "Determinant: toepassing\nBeschouw een multidimensionele integraal \\(\\int_V g(\\boldsymbol{x}) {\\mathrm{d}}x^1 {\\mathrm{d}}x^2 \\cdots {\\mathrm{d}}x^n\\)\nStel dat we een algemene (niet noodzakelijk lineaire) coordinatentransformatie willen doorvoeren: \\(\\boldsymbol{x} = \\boldsymbol{f}(\\boldsymbol{y})\\) met \\(\\boldsymbol{f}:{\\mathbb{R}}^n \\to {\\mathbb{R}}^n\\) of dus \\(x^i = f^i(y^1,y^2,\\ldots,y^n)\\)\nRond een bepaald punt \\(\\boldsymbol{x}_k =\\boldsymbol{f}(\\boldsymbol{y}_k)\\) geldt de eerste-orde Taylor benadering: \\[\\begin{align}\nx^i &= f^i(\\boldsymbol{y}) = f^i(\\boldsymbol{y}_k + (\\boldsymbol{y}-\\boldsymbol{y}_k)) \\\\\n&= f^i(\\boldsymbol{y}_k) + \\frac{\\partial f^i}{\\partial y^j}(\\boldsymbol{y}_k) (y^j - y_k^j) \\\\\n&= x^i_k + \\frac{\\partial f^i}{\\partial y^j}(\\boldsymbol{y}_k) (y^j - y_k^j)\n\\end{align}\\]"
+  },
+  {
+    "objectID": "slides/H2.html#determinant-toepassing-1",
+    "href": "slides/H2.html#determinant-toepassing-1",
+    "title": "Hoofdstuk 2 - Lineaire afbeeldingen",
+    "section": "Determinant: toepassing",
+    "text": "Determinant: toepassing\nDe Jacobiaan \\({\\mathsf{J}}_{\\boldsymbol{f}}(\\boldsymbol{y})\\) met componenten\n\\[ ({\\mathsf{J}}_{\\boldsymbol{f}}(\\boldsymbol{y}))^i_{\\ j} = \\frac{\\partial f^i}{\\partial y^j}(\\boldsymbol{y}) \\]\nbeschrijft de lineaire benadering van \\(\\boldsymbol{f}\\) in de buurt van het punt \\(\\boldsymbol{y}\\).\nDit brengt een volumeverandering teweeg gegeven door\n\\[ {\\mathrm{d}}x^1 {\\mathrm{d}}x^2 \\cdots {\\mathrm{d}}x^n = {\\left\\lvert\\det({\\mathsf{J}}_{\\boldsymbol{f}}(\\boldsymbol{y}))\\right\\rvert} {\\mathrm{d}}y^1 {\\mathrm{d}}y^2 \\cdots {\\mathrm{d}}y^n\\]\n\\(\\Rightarrow\\int_V g(\\boldsymbol{x}) {\\mathrm{d}}x^1 {\\mathrm{d}}x^2 \\cdots {\\mathrm{d}}x^n\\) \\(\\qquad =\\int_{V'} g(\\boldsymbol{f}(\\boldsymbol{y})) {\\left\\lvert\\det({\\mathsf{J}}_{\\boldsymbol{f}}(\\boldsymbol{y}))\\right\\rvert} {\\mathrm{d}}y^1 {\\mathrm{d}}y^2 \\cdots {\\mathrm{d}}y^n\\)"
+  },
+  {
+    "objectID": "slides/H2.html#determinant-toepassing-2",
+    "href": "slides/H2.html#determinant-toepassing-2",
+    "title": "Hoofdstuk 2 - Lineaire afbeeldingen",
+    "section": "Determinant: toepassing",
+    "text": "Determinant: toepassing\nVoorbeeld: poolcoördinaten \\(x = \\rho \\cos \\theta, y = \\rho \\sin \\theta\\)\n\\[\\begin{align*}\n  {\\mathsf{J}}(r,\\theta) = \\begin{bmatrix}\n    \\frac{\\partial x}{\\partial \\rho} & \\frac{\\partial x}{\\partial \\theta} \\\\ \\frac{\\partial y}{\\partial \\rho} & \\frac{\\partial y}{\\partial \\theta}\n  \\end{bmatrix} = \\begin{bmatrix}\n    \\cos(\\theta) & -\\rho \\sin(\\theta) \\\\ \\sin(\\theta) & \\rho \\cos(\\theta)\n  \\end{bmatrix}\n\\end{align*}\\]\n\\[{\\left\\lvert\\det({\\mathsf{J}}(\\rho,\\theta))\\right\\rvert} = \\rho \\Rightarrow {\\mathrm{d}}x {\\mathrm{d}}y = \\rho {\\mathrm{d}}\\rho {\\mathrm{d}}\\theta \\]\nOpmerking:\n\nDe absolute waarde heeft te maken met het feit dat een determinant de verandering van een geörienteerd volume beschrijft. Voor de volume-integraal is dit teken (dat aangeeft of de oriëntatie al dan niet behouden blijft) niet van belang"
+  },
+  {
+    "objectID": "slides/H2.html#matrix-inverse",
+    "href": "slides/H2.html#matrix-inverse",
+    "title": "Hoofdstuk 2 - Lineaire afbeeldingen",
+    "section": "Matrix inverse:",
+    "text": "Matrix inverse:\n\n\\((k,l)\\)-minor \\(M_k^{\\ l}\\) van een matrix \\({\\mathsf{A}} \\in {\\mathbb{F}}^{n\\times n}\\) is de determinant van de matrix die overblijft na het verwijderen van rij \\(k\\) en kolom \\(l\\)\nLaplace-expansie van determinant:\n\\(\\det({\\mathsf{A}}) = \\sum_l A^k_{\\ l} (-1)^{k-l} M_k^{\\ l}\\) (geen sommatieconventie)\nveralgemening: \\(\\sum_l A^i_{\\ l} (-1)^{k-l} M_k^{\\ l} = \\det({\\mathsf{A}}) \\delta^i_{\\ k}\\)\nMet behulp van \\((\\mathop{\\mathrm{adj}}({\\mathsf{A}}))^i_{\\ j} = (-1)^{j-i} M_j^{\\ i}\\):\n\\({\\mathsf{A}} \\cdot \\mathop{\\mathrm{adj}}({\\mathsf{A}}) = \\det({\\mathsf{A}}) {\\mathsf{I}}_n\\)\nals \\(\\det({\\mathsf{A}})\\neq 0\\): \\(\\Rightarrow\\ {\\mathsf{A}}^{-1} = \\det({\\mathsf{A}})^{-1} \\mathop{\\mathrm{adj}}({\\mathsf{A}})\\)\nals \\(\\det({\\mathsf{A}}) = 0\\): \\({\\mathsf{A}}\\) is singulier, ontaard, niet-inverteerbaar"
+  },
+  {
+    "objectID": "slides/H2.html#afgeleide-van-een-determinant",
+    "href": "slides/H2.html#afgeleide-van-een-determinant",
+    "title": "Hoofdstuk 2 - Lineaire afbeeldingen",
+    "section": "Afgeleide van een determinant",
+    "text": "Afgeleide van een determinant\nBeschouw een matrixwaardige functie \\({\\mathsf{A}}(t)\\), i.e. een matrix waarvan de elementen (continue, afleidbare) functies zijn van de tijd.\n\nJacobi’s formule:\n\\[\\begin{align}\n\\frac{{\\mathrm{d}}\\ }{{\\mathrm{d}}t} \\det({\\mathsf{A}}(t)) &= \\mathop{\\mathrm{tr}}\\left[\\mathop{\\mathrm{adj}}({\\mathsf{A}}(t)) \\frac{{\\mathrm{d}}{\\mathsf{A}}}{{\\mathrm{d}}t}(t)\\right]\\\\\n&= \\det({\\mathsf{A}}(t)) \\mathop{\\mathrm{tr}}\\left[{\\mathsf{A}}^{-1}(t) \\frac{{\\mathrm{d}}{\\mathsf{A}}}{{\\mathrm{d}}t}(t)\\right]\n\\end{align}\\]\nBewijs: aan bord"
+  },
+  {
+    "objectID": "slides/H2.html#lineaire-groep",
+    "href": "slides/H2.html#lineaire-groep",
+    "title": "Hoofdstuk 2 - Lineaire afbeeldingen",
+    "section": "Lineaire groep",
+    "text": "Lineaire groep\n\n\\(\\mathop{\\mathrm{Aut}}(V)\\) voor vectorruimte \\(V\\) wordt genoteerd als \\(\\mathop{\\mathrm{GL}}(V)\\) en de “algemene lineaire groep” voor \\(V\\) genoemd.\n\\(\\mathop{\\mathrm{GL}}({\\mathbb{F}}^n)= \\mathop{\\mathrm{GL}}(n;{\\mathbb{F}})\\): inverteerbare \\(n \\times n\\) matrices\n\nvierkante matrices waarvoor \\(\\det({\\mathsf{A}}) \\neq 0\\)\nvoor \\({\\mathbb{F}}={\\mathbb{R}}\\): \\(\\det({\\mathsf{A}}) &gt; 0\\) of \\(\\det({\\mathsf{A}}) &lt; 0\\)\n\\(\\Rightarrow\\) twee onsamenhangende delen\nvoor \\({\\mathbb{F}}= {\\mathbb{C}}\\): samenhangend\n\nSpeciale lineaire groep \\(\\mathop{\\mathrm{SL}}(n; {\\mathbb{F}})\\): \\(n\\times n\\) matrices met \\(\\det({\\mathsf{A}}) = 1\\)"
+  },
+  {
+    "objectID": "slides/H2.html#basistransformaties",
+    "href": "slides/H2.html#basistransformaties",
+    "title": "Hoofdstuk 2 - Lineaire afbeeldingen",
+    "section": "Basistransformaties",
+    "text": "Basistransformaties\nEindigdimensionale vectorruimte \\(V\\) met twee verschillende keuzes van basis \\(B = \\{{e}_1,{e}_2,\\ldots,{e}_n\\}\\) en \\(\\tilde{B} = \\{\\tilde{{e}}_1,\\ldots,\\tilde{{e}}_n\\}\\):\n\n\\({e}_j = \\tilde{{e}}_i T^i_{\\ j} \\Rightarrow {v}= v^j {e}_j = \\tilde{v}^i \\tilde{{e}}_i = v^j T^i_j \\tilde{{e}}_i \\Rightarrow \\tilde{\\boldsymbol{v}} = {\\mathsf{T}} \\boldsymbol{v}\\)\n\\(\\boldsymbol{v} = \\phi_{B}({v})\\) en \\(\\tilde{\\boldsymbol{v}} = \\phi_{\\tilde{B}}({v})\\)\n\\(\\Rightarrow \\tilde{\\boldsymbol{v}} = \\phi_{\\tilde{B}} \\circ \\phi_B^{-1}(\\boldsymbol{v})\\)\n\\(\\Rightarrow {\\mathsf{T}} = \\phi_{\\tilde{B}} \\circ \\phi_B^{-1}: {\\mathbb{F}}^n \\to {\\mathbb{F}}^n\\); \\({\\mathsf{T}} \\in \\mathop{\\mathrm{GL}}(n;{\\mathbb{F}})\\)"
+  },
+  {
+    "objectID": "slides/H2.html#basistransformaties-1",
+    "href": "slides/H2.html#basistransformaties-1",
+    "title": "Hoofdstuk 2 - Lineaire afbeeldingen",
+    "section": "Basistransformaties",
+    "text": "Basistransformaties\nBeschouw twee eindigdimensionale vectorruimten \\(V\\) en \\(W\\) met verschillende keuzes van basis \\(B_V\\) en \\(\\tilde{B}_V\\), alsook \\(B_W\\) en \\(\\tilde{B}_W\\) en een lineaire afbeelding \\({\\hat{A}}:V\\to W\\):\n\nMatrixrepresentatie \\({\\mathsf{A}} = \\phi_{B_W} \\circ {\\hat{A}} \\circ \\phi_{B_V}^{-1}\\)\nMatrixrepresentatie \\[\\begin{align}\n\\tilde{{\\mathsf{A}}} &= \\phi_{\\tilde{B}_W} \\circ {\\hat{A}} \\circ \\phi_{\\tilde{B}_V}^{-1}\\\\\n& = \\phi_{\\tilde{B}_W} \\circ (\\phi_{B_W}^{-1} \\circ {\\mathsf{A}} \\circ \\phi_{B_V}) \\circ \\phi_{\\tilde{B}_V}^{-1}\\\\\n&= (\\phi_{\\tilde{B}_W} \\circ \\phi_{B_W}^{-1}) \\circ {\\mathsf{A}} \\circ (\\phi_{\\tilde{B}_V} \\circ \\phi_{B_V})^{-1}\\\\\n&= {\\mathsf{T}}_W \\cdot {\\mathsf{A}} \\cdot {\\mathsf{T}}_V^{-1}\n\\end{align}\\]"
+  },
+  {
+    "objectID": "slides/H2.html#basistransformaties-2",
+    "href": "slides/H2.html#basistransformaties-2",
+    "title": "Hoofdstuk 2 - Lineaire afbeeldingen",
+    "section": "Basistransformaties",
+    "text": "Basistransformaties\nVoor \\(V = W\\) en dus een lineaire operator \\({\\hat{A}}\\) op V\n\n\\(\\tilde{{\\mathsf{A}}} = {\\mathsf{T}} {\\mathsf{A}} {\\mathsf{T}}^{-1}\\): gelijkvormigheidstransformatie\nGerelateerd zijn via een gelijkvormigheidstransformtie is een equivalentierelatie\nEigenshappen van \\({\\mathsf{A}}\\) die invariant zijn onder gelijkvormigheidstransformaties zijn basisonafhankelijk, en zijn dus intrinsieke eigenschappen die kunnen worden geassocieerd aan het wiskundige object \\({\\hat{A}}\\)\nVoorbeelden:\n\n\\(\\det({\\mathsf{A}}) = \\det(\\tilde{{\\mathsf{A}}})\\)\n\\(\\mathop{\\mathrm{tr}}({\\mathsf{A}}) = \\mathop{\\mathrm{tr}}(\\tilde{{\\mathsf{A}}})\\)"
+  },
+  {
+    "objectID": "slides/H2.html#functionalen",
+    "href": "slides/H2.html#functionalen",
+    "title": "Hoofdstuk 2 - Lineaire afbeeldingen",
+    "section": "Functionalen",
+    "text": "Functionalen\n\nAfbeelding van vectorruimte \\(V\\) naar het scalaire veld \\({\\mathbb{F}}\\)\nVaak in de context van functieruimten, vaak niet-lineair\nVoorbeeld: pad van een deeltje gedurende een tijdsinterval \\(I\\): \\(q:I \\to {\\mathbb{R}}^3: t \\mapsto q(t)\\)\n\n\\(q \\in C(I, {\\mathbb{R}}^3)\\)\nActie \\(S: C(I,{\\mathbb{R}}^3) \\mapsto {\\mathbb{R}}: q \\mapsto S[q] = \\int_I L(q,\\dot{q},t)\\,{\\mathrm{d}}t\\)\n\nLineaire functionalen: \\(\\mathop{\\mathrm{Hom}}(V, {\\mathbb{F}})\\)\nVoorbeeld: linearisatie van een functie \\(f:{\\mathbb{R}}^n \\to {\\mathbb{R}}\\)\n\\[ f(\\boldsymbol{x}) = f(\\boldsymbol{x}_0) + \\underbrace{\\frac{\\partial f}{\\partial x^i} (x^i-x^i_0)}_{\\text{lineaire functionaal van $\\boldsymbol{x}-\\boldsymbol{x}_0$}} + \\ldots\\]"
+  },
+  {
+    "objectID": "slides/H2.html#lineaire-functionalen-en-duale-ruimte",
+    "href": "slides/H2.html#lineaire-functionalen-en-duale-ruimte",
+    "title": "Hoofdstuk 2 - Lineaire afbeeldingen",
+    "section": "Lineaire functionalen en duale ruimte",
+    "text": "Lineaire functionalen en duale ruimte\nBeschouw eindigdimensionale vectorruimte \\(V\\) met basis \\(B = \\{{e}_1,\\ldots,{e}_n\\}\\):\n\nLineaire functionaal = duale vector = covector\n\\(\\xi[{v}] = v^i \\xi[{e}_i] = \\begin{bmatrix} \\xi[{e}_1] & \\cdots & \\xi[{e}_n] \\end{bmatrix} \\begin{bmatrix} v^1 \\\\ \\vdots \\\\ v^n\\end{bmatrix}\\)\n\\(\\Rightarrow\\) coordinatenrepresentatie is rijmatrix\nduale ruimte \\(V^\\ast = \\mathop{\\mathrm{Hom}}(V,{\\mathbb{F}})\\) met \\(\\mathop{\\mathrm{dim}}(V) = \\mathop{\\mathrm{dim}}(V^\\ast)\\)\nDuale basis: \\(B^\\ast=\\{\\epsilon^1,\\ldots,\\epsilon^n\\}\\) met \\(\\epsilon^i[{e}_j] = \\delta^i_j\\)\n\n\\(\\xi = \\xi_i \\epsilon^i\\) met \\(\\xi_i = \\xi[{e}_i]\\)\ncovariante indices"
+  },
+  {
+    "objectID": "slides/H2.html#lineaire-functionalen-eigenschappen",
+    "href": "slides/H2.html#lineaire-functionalen-eigenschappen",
+    "title": "Hoofdstuk 2 - Lineaire afbeeldingen",
+    "section": "Lineaire functionalen: eigenschappen",
+    "text": "Lineaire functionalen: eigenschappen\n\n\\(\\mathop{\\mathrm{rank}}(\\xi) \\leq \\mathop{\\mathrm{dim}}({\\mathbb{F}}) = 1\\)\nals \\(\\mathop{\\mathrm{rank}}(\\xi) = 0\\): triviale functionaal die elke vector op 0 afbeeldt\nalle andere:\n\n\\(\\mathop{\\mathrm{rank}}(\\xi)=1 \\Rightarrow \\mathop{\\mathrm{nullity}}(\\xi) = \\mathop{\\mathrm{dim}}(V)-1\\)\n\\(\\mathop{\\mathrm{ker}}(\\xi)\\) has \\(\\mathop{\\mathrm{codim}}= 1\\): hyperplanes\nals \\(\\mathop{\\mathrm{ker}}(\\xi) = \\mathop{\\mathrm{ker}}(\\chi)\\): \\(\\xi = a \\chi\\) voor een scalair \\(a \\in {\\mathbb{F}}\\)"
+  },
+  {
+    "objectID": "slides/H2.html#lineaire-functionalen-meer-voorbeelden-uit-de-fysica",
+    "href": "slides/H2.html#lineaire-functionalen-meer-voorbeelden-uit-de-fysica",
+    "title": "Hoofdstuk 2 - Lineaire afbeeldingen",
+    "section": "Lineaire functionalen: meer voorbeelden uit de fysica",
+    "text": "Lineaire functionalen: meer voorbeelden uit de fysica\n\nKracht: duale vector die snelheid (=vector) afbeeldt op vermogen (scalair): $P = F_i v^i\nDoor de wet van Newton: momentum is duale vector\nRelatie tussen momentum en snelheid: \\(p_i = M_{ij} v^j\\) met \\(M\\) de massa-matrix, volgt uit kinetische energie als kwadratische vorm (zie H5) van snelheid: \\(T = \\frac{1}{2} v^i M_{ij} v^j\\)\nContinue functies \\(V = C({\\mathbb{R}}; {\\mathbb{F}})\\): Dirac-delta \\(\\delta_a[f] = f(a)\\)\n\\(\\Rightarrow\\) zie H9 voor theorie van distributies"
+  },
+  {
+    "objectID": "slides/H2.html#lineaire-functionalen-en-basistransformaties",
+    "href": "slides/H2.html#lineaire-functionalen-en-basistransformaties",
+    "title": "Hoofdstuk 2 - Lineaire afbeeldingen",
+    "section": "Lineaire functionalen en basistransformaties",
+    "text": "Lineaire functionalen en basistransformaties\nVectorruimte \\(V\\) met twee basissen \\(B\\) en \\(\\tilde{B}\\)\n\nWe weten al: \\(\\boldsymbol{v} = \\phi_B({v})\\), \\(\\tilde{\\boldsymbol{v}} = \\phi_{\\tilde{B}}({v}) = (\\phi_{\\tilde{B}} \\circ \\phi_{B}^{-1})(\\boldsymbol{v}) = {\\mathsf{T}} \\boldsymbol{v}\\)\nLineaire functionaal \\(\\xi:V \\to {\\mathbb{F}}\\):\n\\(\\xi[v] = \\underbrace{(\\xi \\circ \\phi_B^{-1})}_{\\text{rijvector $\\xi_i$}} (\\boldsymbol{v}) = (\\xi \\circ \\phi_{\\tilde{B}}^{-1})\\circ (\\phi_{\\tilde{B}} \\circ \\phi_B^{-1}) (\\boldsymbol{v})\\)\n\\(\\xi_i = \\tilde{\\xi}_i T^i_{\\ j}\\) of dus\n\\(\\tilde{\\xi}_j = ({\\mathsf{T}}^{-1})^i_{\\ j} \\xi_i = ({\\mathsf{T}}^{-{\\mathsf{T}}})^{\\ i}_j \\xi_i\\)\n\\({\\mathsf{T}}^{-{\\mathsf{T}}} = ({\\mathsf{T}}^{-1})^{\\mathsf{T}}= ({\\mathsf{T}}^{\\mathsf{T}})^{-1}\\)"
+  },
+  {
+    "objectID": "slides/H2.html#duale-lineaire-afbeeldingen-en-de-getransponeerde",
+    "href": "slides/H2.html#duale-lineaire-afbeeldingen-en-de-getransponeerde",
+    "title": "Hoofdstuk 2 - Lineaire afbeeldingen",
+    "section": "Duale lineaire afbeeldingen en de getransponeerde",
+    "text": "Duale lineaire afbeeldingen en de getransponeerde\nGegeven vectorruimten \\(V, W\\) en een lineaire afbeelding \\({\\hat{A}} \\in \\mathop{\\mathrm{Hom}}(V,W)\\)\nVoor elke \\(\\xi \\in W^\\ast\\) definieren we een \\(\\chi \\in V^\\ast\\) via\n\\[ \\chi[{v}] = \\xi[{\\hat{A}}{v}] = (\\xi \\circ {\\hat{A}})({v})\\]\nWe noteren \\(\\chi = {\\hat{A}}^\\ast (\\xi)\\) en noemen \\({\\hat{A}}^\\ast \\in \\mathop{\\mathrm{Hom}}(W^\\ast,V^\\ast)\\) de duale lineaire afbeelding\nIn coordinaten:\n\\[ \\chi_j = \\xi_i A^i_{\\ j} = ({\\mathsf{A}}^{\\mathsf{T}})^{\\ i}_j \\xi_i\\]\n\\(\\Rightarrow\\) transponeren geeft de matrix-representatie van de duale lineaire afbeelding"
+  },
+  {
+    "objectID": "slides/H2.html#affiene-ruimten-herhaling",
+    "href": "slides/H2.html#affiene-ruimten-herhaling",
+    "title": "Hoofdstuk 2 - Lineaire afbeeldingen",
+    "section": "Affiene ruimten: herhaling",
+    "text": "Affiene ruimten: herhaling\n\nAffiene ruimte \\(A\\) over een vectorruimte \\(V\\): verzameling van punten \\(A=\\{P, Q, \\ldots\\}\\) zodat voor elke \\(P \\in A, {v}\\in V\\) er exact één \\(Q\\) bestaat waarvoor \\(Q = P + {v}\\), en vice versa, voor elke \\(P,Q \\in A\\) bestaat er exact één \\({v}\\in V\\) zodat \\(Q = P + {v}\\).\nNa keuze van 1 vast punt \\(O \\in A\\), de oorsprong, kunnen we elk punt \\(P\\in A\\) karakteriseren via \\(x_{PO}\\) zodat \\(P = O + x_{PO}\\)"
+  },
+  {
+    "objectID": "slides/H2.html#affiene-transformaties-1",
+    "href": "slides/H2.html#affiene-transformaties-1",
+    "title": "Hoofdstuk 2 - Lineaire afbeeldingen",
+    "section": "Affiene transformaties",
+    "text": "Affiene transformaties\n\nAffiene transformaties:\n\nlineaire transformaties \\({\\hat{T}} \\in \\mathop{\\mathrm{GL}}(V)\\) kunnen werken als \\(P \\mapsto P' = O + {\\hat{T}}(x_{PO})\\)\ntranslaties: vectoren \\({v}\\in V\\) kunnen werken als \\(P \\mapsto P' = O + {v}+ x_{PO}\\)\nbeide samen: \\(({\\hat{T}},{v}): P \\mapsto P' = O + {v}+ {\\hat{T}} x_{PO}\\)\n\nCompositie van affiene transformaties:\n\n\\(({\\hat{T}}_1,{v}_1) \\circ ({\\hat{T}}_2,{v}_2) = ({\\hat{T}}_1{\\hat{T}}_2, {v}_1 + {\\hat{T}}_1 {v}_2)\\)\n\\(({\\hat{T}},{v})^{-1} = ({\\hat{T}}^{-1}, -{\\hat{T}}^{-1}{v})\\)\n\\(\\Rightarrow\\) (A) = (V) = \\(V \\rtimes \\mathop{\\mathrm{GL}}(V)\\) (semidirect product)"
+  },
+  {
+    "objectID": "slides/H2.html#affiene-transformaties-als-matrix",
+    "href": "slides/H2.html#affiene-transformaties-als-matrix",
+    "title": "Hoofdstuk 2 - Lineaire afbeeldingen",
+    "section": "Affiene transformaties als matrix",
+    "text": "Affiene transformaties als matrix\nVoor \\(V = {\\mathbb{F}}^n\\) kunnen we de affiene transformaties voorstellen als\n\\[  \\begin{bmatrix}\n        \\boldsymbol{x}'\\\\ 1\n    \\end{bmatrix} = \\begin{bmatrix}\n        {\\mathsf{T}} & \\boldsymbol{v} \\\\ {\\mathsf{O}}_{n \\times 1} & 1\n    \\end{bmatrix} \\begin{bmatrix}\n        \\boldsymbol{x} \\\\ 1\n    \\end{bmatrix}\n\\]\nIn abstracte termen:\n\\(\\mathop{\\mathrm{Aff}}(V)\\) is een deelgroep van \\(\\mathop{\\mathrm{GL}}(V \\oplus {\\mathbb{F}})\\)"
+  },
+  {
+    "objectID": "slides/H2.html#van-reële-naar-complexe-ruimte",
+    "href": "slides/H2.html#van-reële-naar-complexe-ruimte",
+    "title": "Hoofdstuk 2 - Lineaire afbeeldingen",
+    "section": "Van reële naar complexe ruimte",
+    "text": "Van reële naar complexe ruimte\n\nGegeven een reële vectorruimte \\(W\\). Kunnen we \\(W\\) ‘uitbreiden’ tot een vectorruimte over \\({\\mathbb{C}}\\)?\n\nEindigdimensionaal: Kies basis \\(B \\Rightarrow W \\cong {\\mathbb{R}}^n\\), breidt uit tot \\({\\mathbb{C}}^n\\), d.w.z. laat complexe expansiecoëfficiënten toe, of dus, \\(W = {\\mathbb{R}}B \\Rightarrow W^{{\\mathbb{C}}} = {\\mathbb{C}}B\\).\nBemerk dat \\(\\mathop{\\mathrm{dim}}_{{\\mathbb{R}}}(V) = \\mathop{\\mathrm{dim}}_{{\\mathbb{C}}}(W^{{\\mathbb{C}}})\\)\nWe zullen dit vaak impliciet doen, bvb. voor eigenwaarden en eigenvectoren van een reële matrix."
+  },
+  {
+    "objectID": "slides/H2.html#van-reële-naar-complexe-ruimte-1",
+    "href": "slides/H2.html#van-reële-naar-complexe-ruimte-1",
+    "title": "Hoofdstuk 2 - Lineaire afbeeldingen",
+    "section": "Van reële naar complexe ruimte",
+    "text": "Van reële naar complexe ruimte\n\nGegeven een reële vectorruimte \\(W\\). Kunnen we \\(W\\) ‘uitbreiden’ tot een vectorruimte over \\({\\mathbb{C}}\\)?\n\nBasisonafhankelijke constructie:\nDefinieer \\(W^{\\mathbb{C}}= W \\times W\\), met\n\nvectoradditie \\(({w}_1,{w}_2) + ({w}_1',{w}_2') = ({w}_1+ {w}_1', {w}_2 + {w}_2')\\) (idem als voor \\(W \\oplus W\\))\nvermenigvuldiging met complexe scalairen: \\((a + {\\mathrm{i}}b) ({w}_1,{w}_2) = (a {w}_1 - b {w}_2, b {w}_1 + a {w}_2)\\)\n\n\\(\\Rightarrow\\) genoteerd als \\(W^{\\mathbb{C}}= W \\oplus ({\\mathrm{i}}W)\\)"
+  },
+  {
+    "objectID": "slides/H2.html#van-complexe-naar-reële-ruimte",
+    "href": "slides/H2.html#van-complexe-naar-reële-ruimte",
+    "title": "Hoofdstuk 2 - Lineaire afbeeldingen",
+    "section": "Van complexe naar reële ruimte:",
+    "text": "Van complexe naar reële ruimte:\n\nGegeven een complexe vectorruimte \\(V\\). Kunnen we \\(V\\) ‘herinterpreteren’ als een vectorruimte over \\({\\mathbb{R}}\\)?\n\nBehoudt dezelfde verzameling van vectoren \\(V^{{\\mathbb{R}}} = V\\), beperk de vermenigvuldiging met scalairen tot reële scalairen\n\n\\(\\Rightarrow\\) dit verandert de betekenis van “lineaire afhankelijkheid”, “lineaire span”, “voortbrengendheid”, “compleetheid”, “basis” en “dimensie”"
+  },
+  {
+    "objectID": "slides/H2.html#van-complexe-naar-reële-ruimte-1",
+    "href": "slides/H2.html#van-complexe-naar-reële-ruimte-1",
+    "title": "Hoofdstuk 2 - Lineaire afbeeldingen",
+    "section": "Van complexe naar reële ruimte:",
+    "text": "Van complexe naar reële ruimte:\n\nGegeven een complexe vectorruimte \\(V\\). Kunnen we \\(V\\) ‘herinterpreteren’ als een vectorruimte over \\({\\mathbb{R}}\\)?\n\nStel \\(V\\) eindig-dimensionaal met basis \\(B=\\{{e}_1,\\ldots,{e}_n\\}\\). Om elke vector te kunnne expanderen met behulp van reële coefficiënten moeten we de basis uitbreiden tot \\(B^{\\mathbb{R}}= \\{{e}_1,\\ldots,{e}_n,{\\mathrm{i}}{e}_1, \\ldots, {\\mathrm{i}}{e}_n\\}\\).\n\\(\\mathop{\\mathrm{dim}}_{{\\mathbb{C}}}(V) = n \\Rightarrow \\mathop{\\mathrm{dim}}_{{\\mathbb{R}}}(V^{\\mathbb{R}}) = 2 n = 2 \\mathop{\\mathrm{dim}}_{{\\mathbb{C}}}(V)\\)\n\\(V \\cong {\\mathbb{C}}^n\\) en \\(V^{\\mathbb{R}}\\cong {\\mathbb{R}}^{2n}\\) (met \\(V = V^{\\mathbb{R}}\\) als verzameling)\n\\(\\boldsymbol{v}^{\\mathbb{R}}= (\\mathop{\\mathrm{Re}}(\\boldsymbol{v}), \\mathop{\\mathrm{Im}}(\\boldsymbol{v}))\\)"
+  },
+  {
+    "objectID": "slides/H2.html#complexe-lineaire-afbeeldingen",
+    "href": "slides/H2.html#complexe-lineaire-afbeeldingen",
+    "title": "Hoofdstuk 2 - Lineaire afbeeldingen",
+    "section": "Complexe lineaire afbeeldingen",
+    "text": "Complexe lineaire afbeeldingen\nBeschouw nu twee complexe vectorruimten \\(V\\) en \\(W\\), en hun reële versie \\(V^{\\mathbb{R}}\\) en \\(W^{\\mathbb{R}}\\).\nEen (complexe) lineaire afbeelding \\({\\hat{A}}\\in \\mathop{\\mathrm{Hom}}_{{\\mathbb{C}}}(V,W)\\) voldoet aan\n\\[{\\hat{A}}(a_1 {v}_1 + a_2 {v}_2) = a_1 {\\hat{A}}({v}_1) + a_2 {\\hat{A}}({v}_2)\\]\nAls dit geldt voor \\(a_1,a_2 \\in {\\mathbb{C}}\\), dan zeker voor \\(a_1,a_2 \\in {\\mathbb{R}}\\)\n\\(\\Rightarrow {\\hat{A}} \\in \\mathop{\\mathrm{Hom}}_{{\\mathbb{R}}}(V^{\\mathbb{R}}, W^{\\mathbb{R}})\\)\nEr bestaat en inclusie van complexe lineaire afbeeldingen in \\(\\mathop{\\mathrm{Hom}}(V,W)\\) naar reële lineaire afbeelding in \\(\\mathop{\\mathrm{Hom}}_{{\\mathbb{R}}}(V^{\\mathbb{R}}, W^{\\mathbb{R}})\\)"
+  },
+  {
+    "objectID": "slides/H2.html#complexe-lineaire-afbeeldingen-1",
+    "href": "slides/H2.html#complexe-lineaire-afbeeldingen-1",
+    "title": "Hoofdstuk 2 - Lineaire afbeeldingen",
+    "section": "Complexe lineaire afbeeldingen",
+    "text": "Complexe lineaire afbeeldingen\nAls matrix: \\({\\mathsf{A}}^{\\mathbb{R}}= \\begin{bmatrix} \\mathop{\\mathrm{Re}}({\\mathsf{A}}) & -\\mathop{\\mathrm{Im}}({\\mathsf{A}}) \\\\ \\mathop{\\mathrm{Im}}({\\mathsf{A}}) & \\mathop{\\mathrm{Re}}({\\mathsf{A}}) \\end{bmatrix}\\)\nNiet alle afbeeldingen in \\(\\mathop{\\mathrm{Hom}}_{{\\mathbb{R}}}(V^{\\mathbb{R}},W^{\\mathbb{R}})\\) komen overeen met complexe lineaire afbeeldingen \\({\\hat{A}} \\in \\mathop{\\mathrm{Hom}}_{{\\mathbb{C}}}(V,W)\\).\nWat is de betekenis van de andere, en is er een natuurlijke keuze voor het complement?"
+  },
+  {
+    "objectID": "slides/H2.html#complexe-lineaire-afbeeldingen-2",
+    "href": "slides/H2.html#complexe-lineaire-afbeeldingen-2",
+    "title": "Hoofdstuk 2 - Lineaire afbeeldingen",
+    "section": "Complexe lineaire afbeeldingen",
+    "text": "Complexe lineaire afbeeldingen\n\nIn \\(V^{\\mathbb{R}}\\) kan je niet vermenigvuldigen met \\({\\mathrm{i}}\\).\nMaar je kan wel werken met de linaire afbeelding \\({\\hat{J}}_V = {\\mathrm{i}}{\\hat{1}}_V\\), en deze vormt een geldige lineaire afbeelding die ook bestaat in \\(\\mathop{\\mathrm{End}}_{{\\mathbb{R}}}(V^{\\mathbb{R}})\\).\nUiteraard geldt \\({\\hat{J}}_V^2 = - {\\hat{1}}_V\\).\nMatrixrepresentatie als reële matrix: \\[{\\mathsf{J}}_V^{\\mathbb{R}}= \\begin{bmatrix} {\\mathsf{O}}_{n \\times n} & -{\\mathsf{I}}_{n \\times n} \\\\ {\\mathsf{I}}_{n \\times n} & {\\mathsf{O}}_{n \\times n} \\end{bmatrix}\\]\nComplexe lineaire afbeelding: \\({\\hat{A}}\\circ {\\hat{J}}_V = {\\hat{J}}_W \\circ{\\hat{A}}\\)"
+  },
+  {
+    "objectID": "slides/H2.html#reële-lineaire-afbeeldingen",
+    "href": "slides/H2.html#reële-lineaire-afbeeldingen",
+    "title": "Hoofdstuk 2 - Lineaire afbeeldingen",
+    "section": "Reële lineaire afbeeldingen",
+    "text": "Reële lineaire afbeeldingen\nBeschouw nu een willekeurige (reëel lineaire) afbeelding \\({\\hat{L}} \\in \\mathop{\\mathrm{Hom}}_{{\\mathbb{R}}}(V^{\\mathbb{R}},W^{\\mathbb{R}})\\).\nWe kunnen deze uniek ontbinden als\n\\[{\\hat{L}} = \\underbrace{\\frac{1}{2}({\\hat{L}} - {\\hat{J}}_W {\\hat{L}} {\\hat{J}}_V)}_{{\\hat{A}}} + \\underbrace{\\frac{1}{2} ({\\hat{L}} + {\\hat{J}}_W {\\hat{L}} {\\hat{J}}_V)}_{{\\hat{B}}}\\]\nwaarbij geldt:\n\n\\({\\hat{J}}_W \\circ {\\hat{A}} = {\\hat{A}} \\circ {\\hat{J}}_V\\) (complexe lineaire afbeelding)\n\\({\\hat{J}}_W \\circ {\\hat{B}} = - {\\hat{B}} \\circ {\\hat{J}}_V\\)"
+  },
+  {
+    "objectID": "slides/H2.html#antilineaire-afbeeldingen",
+    "href": "slides/H2.html#antilineaire-afbeeldingen",
+    "title": "Hoofdstuk 2 - Lineaire afbeeldingen",
+    "section": "Antilineaire afbeeldingen",
+    "text": "Antilineaire afbeeldingen\nDit leidt tot een nieuwe definitie:\nEen afbeelding \\({\\hat{B}}:V \\to W\\) tussen complexe vectorruimten \\(V\\) en \\(W\\) wordt antilineair genoemd indien ze voldoet aan\n\n\\({\\hat{B}}({v}_1 + {v}_2) = {\\hat{B}}({v}_1) + {\\hat{B}}({v}_2)\\)\n\\({\\hat{B}}({a}{v}) = {\\overline{{a}}} {\\hat{B}}({v})\\)"
+  },
+  {
+    "objectID": "slides/H2.html#antilineaire-afbeeldingen-eigenschappen",
+    "href": "slides/H2.html#antilineaire-afbeeldingen-eigenschappen",
+    "title": "Hoofdstuk 2 - Lineaire afbeeldingen",
+    "section": "Antilineaire afbeeldingen: eigenschappen",
+    "text": "Antilineaire afbeeldingen: eigenschappen\n\nCompositie van even aantal antilineaire afbeeldingen is (complex) lineaire afbeelding\nComplexe lineaire combinaties van antilineaire afbeeldingen zijn antilineaire afbeeldingen (antilineaire afbeeldingen vormen een complexe vectorruimte)\nElke reëel lineaire afbeelding tussen \\(V^{\\mathbb{R}}\\) en \\(W^{\\mathbb{R}}\\) kan uniek ontbonden worden als som van een lineaire afbeeldingen tussen \\(V\\) en \\(W\\) en een antilineaire afbeeldingen tussen \\(V\\) en \\(W\\)"
+  },
+  {
+    "objectID": "slides/H2.html#antilineaire-afbeeldingen-conjugatie",
+    "href": "slides/H2.html#antilineaire-afbeeldingen-conjugatie",
+    "title": "Hoofdstuk 2 - Lineaire afbeeldingen",
+    "section": "Antilineaire afbeeldingen: conjugatie",
+    "text": "Antilineaire afbeeldingen: conjugatie\n\nBeschouw een basis \\(B\\) voor de complexe vectorruimte \\(V\\), die dus een bijbehorende basis \\(B^{\\mathbb{R}}= \\{{e}_1,\\ldots,{e}_n,{\\mathrm{i}}{e}_1,\\ldots,{\\mathrm{i}}{e}_n\\}\\) voor \\(V^{\\mathbb{R}}\\) impliceert.\nDe specifieke afbeelding \\({\\hat{C}}_B \\in \\mathop{\\mathrm{End}}_{{\\mathbb{R}}}(V^{\\mathbb{R}})\\) met matrixrepresentatie \\({\\mathsf{C}}_B^{{\\mathbb{R}}} = \\begin{bmatrix} {\\mathsf{I}}_{n\\times n} & {\\mathsf{O}}_{n \\times n} \\\\ {\\mathsf{O}}_{n \\times n} & -{\\mathsf{I}}_{n \\times n} \\end{bmatrix}\\) noemen we de complexe conjugatie-operator geassocieerd aan de basiskeuze \\(B\\). Ten opzichte van \\(V\\), is \\({\\hat{C}}_B\\) een zuiver antilineaire operator.\nElke andere antilineaire operator \\({\\hat{B}}\\) kan nu geschreven worden als een product \\({\\hat{B}} = {\\hat{B}}' \\circ {\\hat{C}}_B\\), waarbij \\({\\hat{B}}' \\in \\mathop{\\mathrm{Hom}}(V,W)\\) een gewone (complex) lineaire afbeelding."
+  },
+  {
+    "objectID": "slides/H2.html#reële-complexe-en-antilineaire-afbeeldingen-matrixgedaante",
+    "href": "slides/H2.html#reële-complexe-en-antilineaire-afbeeldingen-matrixgedaante",
+    "title": "Hoofdstuk 2 - Lineaire afbeeldingen",
+    "section": "Reële, complexe en antilineaire afbeeldingen: matrixgedaante",
+    "text": "Reële, complexe en antilineaire afbeeldingen: matrixgedaante\n\\[\\begin{align}\n    {\\mathsf{L}} &= \\begin{bmatrix}\n        {\\mathsf{L}}_{11} & {\\mathsf{L}}_{12} \\\\ {\\mathsf{L}}_{21} & {\\mathsf{L}}_{22}\n    \\end{bmatrix} \\\\\n  &=\\begin{bmatrix}\n        {\\mathsf{A}}_{1} & -{\\mathsf{A}}_{2} \\\\ {\\mathsf{A}}_2 & {\\mathsf{A}}_1\n    \\end{bmatrix} + \\begin{bmatrix}\n        {\\mathsf{B}}_1 & {\\mathsf{B}}_2 \\\\ {\\mathsf{B}}_2 & -{\\mathsf{B}}_1\n    \\end{bmatrix} \\nonumber\\\\\n    &= \\begin{bmatrix}\n        {\\mathsf{A}}_{1} & -{\\mathsf{A}}_{2} \\\\ {\\mathsf{A}}_2 & {\\mathsf{A}}_1\n    \\end{bmatrix} + \\begin{bmatrix}\n        {\\mathsf{B}}_1 & -{\\mathsf{B}}_2 \\\\ {\\mathsf{B}}_2 & {\\mathsf{B}}_1\n    \\end{bmatrix}\\begin{bmatrix}\n        {\\mathsf{I}}& {\\mathsf{O}}\\\\ {\\mathsf{O}}& -{\\mathsf{I}}\n    \\end{bmatrix}\\label{eq:linalg:reallinearblockform}\n\\end{align}\\]\n\\[\\Rightarrow {\\mathsf{A}} = {\\mathsf{A}}_1 + {\\mathrm{i}}{\\mathsf{A}}_2\\]"
+  },
+  {
+    "objectID": "slides/H2.html#antilineaire-afbeelding-voorbeeld",
+    "href": "slides/H2.html#antilineaire-afbeelding-voorbeeld",
+    "title": "Hoofdstuk 2 - Lineaire afbeeldingen",
+    "section": "Antilineaire afbeelding: voorbeeld",
+    "text": "Antilineaire afbeelding: voorbeeld\nTijdsomkeringsymmetrie in kwantummechanica:\n\nActie op golffunctie \\({\\hat{T}}: \\psi(x) \\mapsto {\\overline{\\psi(x)}}\\)\nStel: \\(\\psi_p(x) \\sim {\\mathrm{e}}^{{\\mathrm{i}}p x} \\Rightarrow {\\hat{T}} \\psi_p = \\psi_{-p}\\)\nGolffunctie in momentumruimte (\\(\\cong\\) Fouriertransformatie)\n\\(\\Psi(p) \\sim \\int {\\mathrm{e}}^{-{\\mathrm{i}}p x} \\psi(x)\\,{\\mathrm{d}}x\\)\nActie van tijdsomkering op momentum-golffunctie\n\\(\\Rightarrow ({\\hat{T}} \\Psi) = {\\overline{\\Psi(-p)}}\\)\n= Complexe conjugatie + spiegeling van momentum"
+  },
+  {
+    "objectID": "slides/H2.html#lineaire-systemen-definitie-en-terminologie",
+    "href": "slides/H2.html#lineaire-systemen-definitie-en-terminologie",
+    "title": "Hoofdstuk 2 - Lineaire afbeeldingen",
+    "section": "Lineaire systemen: definitie en terminologie",
+    "text": "Lineaire systemen: definitie en terminologie\nVind \\({x}\\) zodat voldaan is aan \\({\\hat{A}} {x}= {y}\\)\n\n\\({y}= {o}\\): homogeen, \\({y}\\neq {o}\\): inhomogeen\n\\({y}\\in \\mathop{\\mathrm{im}}({\\hat{A}})\\): er bestaan één of meerdere oplossingen \\({x}= {x}' + {x}_0\\), met \\({x}'\\) een particuliere oplossing die voldoet aan \\({\\hat{A}}{x}' = {y}\\), en \\({x}_0 \\in \\mathop{\\mathrm{ker}}({\\hat{A}})\\) een oplossing van het homogene probleem\n\\(\\mathop{\\mathrm{nullity}}({\\hat{A}}) = 0\\): homogeen probleem laat enkel de triviale oplossing \\({x}_0 = {o}\\) toe"
+  },
+  {
+    "objectID": "slides/H2.html#lineaire-systemen-voorbeelden",
+    "href": "slides/H2.html#lineaire-systemen-voorbeelden",
+    "title": "Hoofdstuk 2 - Lineaire afbeeldingen",
+    "section": "Lineaire systemen: voorbeelden",
+    "text": "Lineaire systemen: voorbeelden\n\nStandaardvorm eindig-dimensionaal probleem: \\({\\mathsf{A}} \\boldsymbol{x} = \\boldsymbol{y}\\) met \\({\\mathsf{A}} \\in {\\mathbb{F}}^{m \\times n}\\), \\(\\boldsymbol{x} \\in {\\mathbb{F}}^n\\) en \\(\\boldsymbol{y} \\in {\\mathbb{F}}^m\\)\n\n\\(m &lt; n \\Rightarrow \\mathop{\\mathrm{nullity}}({\\mathsf{A}}) &gt; 0\\): als oplossing bestaat is ze niet uniek (ondergedetermineerd)\n\\(m &gt; n \\Rightarrow \\mathop{\\mathrm{rank}}({\\mathsf{A}}) \\leq n &lt; m\\): \\(\\mathop{\\mathrm{im}}({\\mathsf{A}})\\) is een eigenlijke deelruimte van \\({\\mathbb{F}}^m\\); er bestaan rechterleden \\(\\boldsymbol{y}\\) waarvoor geen oplossing bestaat (overgedetermineerd)\nhet bestaan van een unieke oplossing voor elk rechterlid \\(\\boldsymbol{y}\\) kan enkel als \\(m=n\\) en \\(\\mathop{\\mathrm{rank}}({\\mathsf{A}}) = n \\Leftrightarrow \\mathop{\\mathrm{nullity}}({\\mathsf{A}}) = 0\\)"
+  },
+  {
+    "objectID": "slides/H2.html#lineaire-systemen-voorbeelden-1",
+    "href": "slides/H2.html#lineaire-systemen-voorbeelden-1",
+    "title": "Hoofdstuk 2 - Lineaire afbeeldingen",
+    "section": "Lineaire systemen: voorbeelden",
+    "text": "Lineaire systemen: voorbeelden\n\n\\(({\\hat{D}}-\\frac{1}{\\tau}{\\hat{1}})f = {o}\\Leftrightarrow \\frac{{\\mathrm{d}}\\ f}{{\\mathrm{d}}t} - \\frac{1}{\\tau} f(t) = 0\\): homogeen probleem\n\\(\\Rightarrow f(t) = c {\\mathrm{e}}^{-\\frac{t}{\\tau}}\\): \\(\\Rightarrow \\mathop{\\mathrm{nullity}}({\\hat{D}} - \\frac{1}{\\tau}{\\hat{1}}) = 1\\)\n\\(\\begin{cases}\\frac{{\\mathrm{d}}\\ f}{{\\mathrm{d}}t} - \\frac{1}{\\tau} f(t) = 0\\\\ f(0) = f_0 \\end{cases}\\)\n\\(\\Rightarrow f(t) = f_0 {\\mathrm{e}}^{-\\frac{t}{\\tau}}\\) (unieke oplossing)"
+  },
+  {
+    "objectID": "slides/H2.html#lineaire-systemen-oplossingsstrategie",
+    "href": "slides/H2.html#lineaire-systemen-oplossingsstrategie",
+    "title": "Hoofdstuk 2 - Lineaire afbeeldingen",
+    "section": "Lineaire systemen: oplossingsstrategie",
+    "text": "Lineaire systemen: oplossingsstrategie\n\nEen matrix \\({\\mathsf{A}} \\in {\\mathbb{F}}^{m \\times n}\\) heet\n\nbovendriehoeks als \\(A^i_{\\ j} = 0\\) voor alle \\(1 \\leq j &lt; i \\leq m\\)\nbenedendriehoeks als \\(A^i_{\\ j}=0\\) voor alle \\(1 \\leq i &lt; j \\leq n\\)\n\nVoor een boven-/benedendriehoeksmatrix \\({\\mathsf{A}} \\in {\\mathbb{F}}^{n \\times n}\\) is \\(\\mathop{\\mathrm{rank}}({\\mathsf{A}}) \\neq 0\\), en dus bestaat \\({\\mathsf{A}}^{-1}\\), als alle diagonaalelementen \\(A^i_{\\ i} \\neq 0\\) voor \\(i=1,\\ldots,n\\).\nVoor een boven-/benedendriehoeksmatrix \\({\\mathsf{A}} \\in {\\mathbb{F}}^{n \\times n}\\) met \\(\\mathop{\\mathrm{rank}}({\\mathsf{A}}) \\neq 0\\) kan de oplossing \\({x}= {\\mathsf{A}}^{-1}{y}\\) berekend worden via voorwaartse/achterwaardse substitutie met een kost die schaalt als \\(\\mathop{\\mathrm{\\mathscr{O}}}(n^2)\\), of als \\(\\mathop{\\mathrm{\\mathscr{O}}}(n^3/3)\\) indien \\({\\mathsf{A}}^{-1}\\) volledig wordt berekend."
+  },
+  {
+    "objectID": "slides/H2.html#lineaire-systemen-oplossingsstrategie-1",
+    "href": "slides/H2.html#lineaire-systemen-oplossingsstrategie-1",
+    "title": "Hoofdstuk 2 - Lineaire afbeeldingen",
+    "section": "Lineaire systemen: oplossingsstrategie",
+    "text": "Lineaire systemen: oplossingsstrategie\nVoor een algemene matrix \\({\\mathsf{A}} \\in {\\mathbb{F}}^{n \\times n}\\):\n\nGaussische eliminatie \\(\\Rightarrow {\\mathsf{A}} = {\\mathsf{L}}{\\mathsf{U}}\\): LU ontbinding\n\n\\(L\\): L(ower), benedendriehoeksmatrix met elementen \\(1\\) op de diagonaal\n\\(U\\): U(pper), bovendriehoeksmatrix met vrije elementen op diagonaal\nsoms \\({\\mathsf{A}} = {\\mathsf{L}} {\\mathsf{D}} \\tilde{{\\mathsf{U}}}\\) met dan ook diagonaalelementen \\(1\\) in \\(\\tilde{{\\mathsf{U}}}\\)\n\nInclusief pivoteren: \\(\\Rightarrow {\\mathsf{P}} {\\mathsf{A}} = {\\mathsf{L}} {\\mathsf{U}}\\) met \\({\\mathsf{P}}\\) een permutatie matrix is\nComplexiteit voor \\(m=n\\): \\(\\mathop{\\mathrm{\\mathscr{O}}}(\\frac{2}{3} n^3)\\)"
+  },
+  {
+    "objectID": "slides/H2.html#toepassingen-van-lu-decompositie",
+    "href": "slides/H2.html#toepassingen-van-lu-decompositie",
+    "title": "Hoofdstuk 2 - Lineaire afbeeldingen",
+    "section": "Toepassingen van LU decompositie",
+    "text": "Toepassingen van LU decompositie\n\n\\(\\underbrace{\\det({\\mathsf{P}})}_{\\mathop{\\mathrm{sgn}}(\\sigma)} \\det({\\mathsf{A}}) = \\underbrace{\\det({\\mathsf{L}})}_{\\prod_i L^i_{\\ i} = 1} \\underbrace{\\det({\\mathsf{U}})}_{\\prod_j U^j_{\\ j}} \\Rightarrow \\mathop{\\mathrm{\\mathscr{O}}}(n^3)\\)\nMultidimensionale Gaussische distributie\n\\[f_{\\boldsymbol{X}}(\\boldsymbol{x}) = Z \\exp\\left[-\\frac{1}{2} \\sum_{i,j=1}^{n}(x^i - \\mu^i) A_{i,j} (x^j - \\mu^j)\\right]\\\\\n= Z \\exp\\left[-\\frac{1}{2} (\\boldsymbol{x}-\\boldsymbol{\\mu})^{\\mathsf{T}}{\\mathsf{A}} (\\boldsymbol{x}-\\boldsymbol{\\mu})\\right]\\]\nHoe \\(Z\\) kiezen zodat \\(\\int f_{\\boldsymbol{X}}(\\boldsymbol{x})\\,{\\mathrm{d}}^n\\boldsymbol{x} = 1\\)?"
+  },
+  {
+    "objectID": "slides/H2.html#multidimensionale-gaussische-distributie-1",
+    "href": "slides/H2.html#multidimensionale-gaussische-distributie-1",
+    "title": "Hoofdstuk 2 - Lineaire afbeeldingen",
+    "section": "Multidimensionale Gaussische distributie (1)",
+    "text": "Multidimensionale Gaussische distributie (1)\n\\(f_{\\boldsymbol{X}}(\\boldsymbol{x}) = Z {\\mathrm{e}}^{-\\frac{1}{2} (\\boldsymbol{x}-\\boldsymbol{\\mu})^{\\mathsf{T}}{\\mathsf{A}} (\\boldsymbol{x}-\\boldsymbol{\\mu})}\\)\n\nnormering\n\n\\({\\mathsf{A}} = {\\mathsf{A}}^T \\Rightarrow {\\mathsf{A}} = {\\mathsf{L}} {\\mathsf{D}} {\\mathsf{L}}^{\\mathsf{T}}\\)\nsubstitutie: \\(\\boldsymbol{y} = {\\mathsf{L}}^{\\mathsf{T}}(\\boldsymbol{x}-\\boldsymbol{\\mu}) \\Leftrightarrow \\boldsymbol{x}=\\boldsymbol{\\mu} + \\boldsymbol{L}^{-{\\mathsf{T}}}\\boldsymbol{x}\\)\n\\(\\Rightarrow {\\mathsf{J}} = {\\mathsf{L}}^{-{\\mathsf{T}}}, \\det({\\mathsf{J}}) = 1\\)\n\\(\\int f_{\\boldsymbol{X}}(\\boldsymbol{x})\\,{\\mathrm{d}}^n \\boldsymbol{x} = \\int_{{\\mathbb{R}}^n} Z \\exp\\left[-\\frac{1}{2}\\boldsymbol{y}^{\\mathsf{T}}{\\mathsf{D}} \\boldsymbol{y} \\right] \\,{\\mathrm{d}}^n \\boldsymbol{y} \\\\ = Z \\prod_{i=1}^n\\left( \\int_{-\\infty}^{+\\infty} {\\mathrm{e}}^{-\\frac{1}{2} d_i (y^i)^2}\\,{\\mathrm{d}}y^i\\right)\\\\  = Z \\prod_{i=1}^n \\sqrt{\\frac{2\\pi}{d_i}} = Z \\frac{(2\\pi)^{n/2}}{\\sqrt{\\det({\\mathsf{D}})}} =Z \\frac{(2\\pi)^{n/2}}{\\sqrt{\\det({\\mathsf{A}})}}\\)\n\\(\\Rightarrow Z = \\sqrt{\\frac{\\det({\\mathsf{A}})}{(2\\pi)^n}}\\)"
+  },
+  {
+    "objectID": "slides/H2.html#multidimensionale-gaussische-distributie-2",
+    "href": "slides/H2.html#multidimensionale-gaussische-distributie-2",
+    "title": "Hoofdstuk 2 - Lineaire afbeeldingen",
+    "section": "Multidimensionale Gaussische distributie (2)",
+    "text": "Multidimensionale Gaussische distributie (2)\n\\(f_{\\boldsymbol{X}}(\\boldsymbol{x}) = Z {\\mathrm{e}}^{-\\frac{1}{2} (\\boldsymbol{x}-\\boldsymbol{\\mu})^{\\mathsf{T}}{\\mathsf{A}} (\\boldsymbol{x}-\\boldsymbol{\\mu})}\\)\n\ngemiddelde en covariantie\n\nmomentgenererende functie \\(M_{\\boldsymbol{X}}(\\boldsymbol{t}) = \\langle {\\mathrm{e}}^{\\sum_{i=1}^n t_i X^i} \\rangle = \\int_{{\\mathbb{R}}^n} {\\mathrm{e}}^{\\sum_{i=1}^n t_i x^i} f_{\\boldsymbol{X}}(\\boldsymbol{x})\\,{\\mathrm{d}}^n \\boldsymbol{x}\\\\ {\\mathrm{e}}^{\\frac{1}{2} \\boldsymbol{t}^{\\mathsf{T}}{\\mathsf{A}}^{-1} \\boldsymbol{t} + \\boldsymbol{t}^{\\mathsf{T}}\\boldsymbol{\\mu}}\\)\n\\(\\langle X^i\\rangle = \\left.\\frac{\\partial M_{\\boldsymbol{X}}}{\\partial t_i}\\right|_{\\boldsymbol{t}=\\boldsymbol{0}} = \\mu^i\\)\n\\(\\langle X^i X^j\\rangle = \\left.\\frac{\\partial^2 M_{\\boldsymbol{X}}}{\\partial t_i \\partial t_j}\\right|_{\\boldsymbol{t}=\\boldsymbol{0}} = ({\\mathsf{A}}^{-1})^{ij} + \\mu^i \\mu^j\\)\ncovariantiematrix \\(\\Sigma^{ij} = \\langle (X^i-\\langle X^i \\rangle)(X^j-\\langle X^j \\rangle)\\rangle = \\\\ \\langle X^i X^j \\rangle - \\langle X^i \\rangle \\langle X^j \\rangle = ({\\mathsf{A}}^{-1})^{ij}\\)"
+  },
+  {
+    "objectID": "slides/H2.html#blokmatrices",
+    "href": "slides/H2.html#blokmatrices",
+    "title": "Hoofdstuk 2 - Lineaire afbeeldingen",
+    "section": "Blokmatrices",
+    "text": "Blokmatrices\n\nLineair stelsel dat bestaat uit twee delen voor 1 groep onbekenden: \\({\\hat{A}}_1 {x}= {y}_1\\) en \\({\\hat{A}}_2 {x}= {y}_2\\)\n\\(\\Rightarrow \\begin{bmatrix}  {\\mathsf{A}}_1 \\\\ {\\mathsf{A}}_2  \\end{bmatrix} \\boldsymbol{x} = \\begin{bmatrix}  \\boldsymbol{y}_1 \\\\ \\boldsymbol{y}_2  \\end{bmatrix}\\)\n\n\\({\\mathsf{A}}_1 \\in {\\mathbb{F}}^{m_1 \\times n}, {\\mathsf{A}}_2 \\in {\\mathbb{F}}^{m_2 \\times n}\\)\n(technisch: directe som \\({y}_1 \\oplus {y}_2\\))\n\nTwee groepen van onbekenden:\n\\(\\begin{bmatrix}  {\\mathsf{A}}_{11} & {\\mathsf{A}}_{12} \\\\ {\\mathsf{A}}_{21} & {\\mathsf{A}}_{22}  \\end{bmatrix}  \\begin{bmatrix}  \\boldsymbol{x}_1 \\\\ \\boldsymbol{x}_2  \\end{bmatrix} =  \\begin{bmatrix}  \\boldsymbol{y}_1 \\\\ \\boldsymbol{y}_2  \\end{bmatrix}\\)\n\n\\({\\mathsf{A}}_{ij} \\in {\\mathbb{F}}^{m_i \\times n_j}\\) voor \\(i,j=1,2\\)"
+  },
+  {
+    "objectID": "slides/H2.html#blokmatrices-en-blok-ldu-decompositie",
+    "href": "slides/H2.html#blokmatrices-en-blok-ldu-decompositie",
+    "title": "Hoofdstuk 2 - Lineaire afbeeldingen",
+    "section": "Blokmatrices en blok-LDU-decompositie:",
+    "text": "Blokmatrices en blok-LDU-decompositie:\n\\(\\begin{bmatrix}  {\\mathsf{A}}_{11} & {\\mathsf{A}}_{12} \\\\ {\\mathsf{A}}_{21} & {\\mathsf{A}}_{22}  \\end{bmatrix}\\) met \\(m_1=n_1\\) en \\(m_2 = n_2\\):\n\n\\({\\mathsf{A}}_{11}\\) en \\({\\mathsf{A}}_{22}\\) zijn vierkante matrices\n\\({\\mathsf{A}}_{11}\\) inverteerbaar \\(\\Rightarrow\\) blok-LDU-decompositie:\n\n\n\\[    {\\mathsf{A}} = \\underbrace{\\begin{bmatrix}\n        {\\mathsf{I}}_{n_1} & {\\mathsf{O}}\\\\ {\\mathsf{A}}_{21} {\\mathsf{A}}_{11}^{-1} & {\\mathsf{I}}_{n_2}\n    \\end{bmatrix}}_{{\\mathsf{L}}}\n    \\underbrace{\\begin{bmatrix}\n        {\\mathsf{A}}_{11}& {\\mathsf{O}}\\\\\n        {\\mathsf{O}}& {\\mathsf{A}}_{22} - {\\mathsf{A}}_{21} {\\mathsf{A}}_{11}^{-1} {\\mathsf{A}}_{12}\n    \\end{bmatrix}}_{{\\mathsf{D}}}\n    \\underbrace{\\begin{bmatrix}\n        {\\mathsf{I}}_{n_1} &  {\\mathsf{A}}_{11}^{-1} {\\mathsf{A}}_{12}\\\\\n        {\\mathsf{O}}& {\\mathsf{I}}_{n_2}\n    \\end{bmatrix}}_{{\\mathsf{U}}}\\]\n\n\nSchur complement \\(({\\mathsf{A}}/{\\mathsf{A}}_{11}) = {\\mathsf{A}}_{22} - {\\mathsf{A}}_{21} {\\mathsf{A}}_{11}^{-1} {\\mathsf{A}}_{12}\\)\n\\(\\det({\\mathsf{A}}) = \\det({\\mathsf{A}}_{11}) \\det({\\mathsf{A}}/{\\mathsf{A}}_{11})\\)"
+  },
+  {
+    "objectID": "slides/H2.html#blokmatrices-en-blok-ldu-decompositie-1",
+    "href": "slides/H2.html#blokmatrices-en-blok-ldu-decompositie-1",
+    "title": "Hoofdstuk 2 - Lineaire afbeeldingen",
+    "section": "Blokmatrices en blok-LDU-decompositie:",
+    "text": "Blokmatrices en blok-LDU-decompositie:\n\n\\[\\begin{align}\n    {\\mathsf{A}}^{-1} &= {\\mathsf{U}}^{-1} {\\mathsf{D}}^{-1} {\\mathsf{L}}^{-1}\\nonumber\\\\\n    &= \\begin{bmatrix}\n        {\\mathsf{I}}_{n_1} &  -{\\mathsf{A}}_{11}^{-1} {\\mathsf{A}}_{12}\\\\\n        {\\mathsf{O}}& {\\mathsf{I}}_{n_2}\n    \\end{bmatrix}\\begin{bmatrix}\n        {\\mathsf{A}}_{11}^{-1}& {\\mathsf{O}}\\\\\n        {\\mathsf{O}}& ({\\mathsf{A}}_{22} - {\\mathsf{A}}_{21} {\\mathsf{A}}_{11}^{-1} {\\mathsf{A}}_{12})^{-1}\n    \\end{bmatrix}\\begin{bmatrix}\n        {\\mathsf{I}}_{n_1} & {\\mathsf{O}}\\\\ -{\\mathsf{A}}_{21} {\\mathsf{A}}_{11}^{-1} & {\\mathsf{I}}_{n_2}\n    \\end{bmatrix}   \\nonumber\\\\\n    &= \\begin{bmatrix}\n    {\\mathsf{A}}_{11}^{-1} + {\\mathsf{A}}_{11}^{-1} {\\mathsf{A}}_{12} ({\\mathsf{A}}_{22} - {\\mathsf{A}}_{21} {\\mathsf{A}}_{11}^{-1} {\\mathsf{A}}_{12})^{-1}  {\\mathsf{A}}_{21} {\\mathsf{A}}_{11}^{-1} & -{\\mathsf{A}}_{11}^{-1} {\\mathsf{A}}_{12} ({\\mathsf{A}}_{22} - {\\mathsf{A}}_{21} {\\mathsf{A}}_{11}^{-1} {\\mathsf{A}}_12)^{-1}\\\\\n        -({\\mathsf{A}}_{22} - {\\mathsf{A}}_{21} {\\mathsf{A}}_{11}^{-1} {\\mathsf{A}}_{12})^{-1}  {\\mathsf{A}}_{21} {\\mathsf{A}}_{11}^{-1} & ({\\mathsf{A}}_{22} - {\\mathsf{A}}_{21} {\\mathsf{A}}_{11}^{-1} {\\mathsf{A}}_{12})^{-1}\n    \\end{bmatrix}\n\\end{align}\\]\n\n\nToepassing: probabiliteitsdistributie\n\\(f_{\\boldsymbol{X}}(\\boldsymbol{x}_1,\\boldsymbol{x}_2) = \\sqrt{\\frac{\\det({\\mathsf{A}})}{(2\\pi)^n}} {\\mathrm{e}}^{-\\frac{1}{2} \\begin{bmatrix}  \\boldsymbol{x}_1 \\\\ \\boldsymbol{x}_2\\end{bmatrix}^{\\mathsf{T}}\\begin{bmatrix}  {\\mathsf{A}}_{11} & {\\mathsf{A}}_{12} \\\\ {\\mathsf{A}}_{21} & {\\mathsf{A}}_{22}  \\end{bmatrix} \\begin{bmatrix}  \\boldsymbol{x}_1 \\\\ \\boldsymbol{x}_2\\end{bmatrix}}\\)\n\nmarginale distributie van \\(\\boldsymbol{X}_2\\):\n\\(f_{\\boldsymbol{X}_2}(\\boldsymbol{x}_2) = \\int_{{\\mathbb{R}}^{n_1}} f_{\\boldsymbol{X}}(\\boldsymbol{x}_1,\\boldsymbol{x}_2) \\,{\\mathrm{d}}^{n_1} \\boldsymbol{x}_1\\)"
+  },
+  {
+    "objectID": "slides/H2.html#blokmatrices-en-blok-ldu-decompositie-2",
+    "href": "slides/H2.html#blokmatrices-en-blok-ldu-decompositie-2",
+    "title": "Hoofdstuk 2 - Lineaire afbeeldingen",
+    "section": "Blokmatrices en blok-LDU-decompositie:",
+    "text": "Blokmatrices en blok-LDU-decompositie:\n\nToepassing: probabiliteitsdistributie\n\\(f_{\\boldsymbol{X}}(\\boldsymbol{x}_1,\\boldsymbol{x}_2) = \\sqrt{\\frac{\\det({\\mathsf{A}})}{(2\\pi)^n}} {\\mathrm{e}}^{-\\frac{1}{2} \\begin{bmatrix}  \\boldsymbol{x}_1 \\\\ \\boldsymbol{x}_2\\end{bmatrix}^{\\mathsf{T}}\\begin{bmatrix}  {\\mathsf{A}}_{11} & {\\mathsf{A}}_{12} \\\\ {\\mathsf{A}}_{21} & {\\mathsf{A}}_{22}  \\end{bmatrix} \\begin{bmatrix}  \\boldsymbol{x}_1 \\\\ \\boldsymbol{x}_2\\end{bmatrix}}\\)\n\nmarginale distributie van \\(\\boldsymbol{X}_2\\):\n\\(f_{\\boldsymbol{X}_2}(\\boldsymbol{x}_2) = \\int_{{\\mathbb{R}}^{n_1}} f_{\\boldsymbol{X}}(\\boldsymbol{x}_1,\\boldsymbol{x}_2) \\,{\\mathrm{d}}^{n_1} \\boldsymbol{x}_1\\)\nsubstitutie: \\(\\boldsymbol{x}_1 = \\boldsymbol{y}_1 - {\\mathsf{A}}_{11}^{-1} {\\mathsf{A}}_{12} \\boldsymbol{x}_2\\)\n\\(\\Rightarrow f_{\\boldsymbol{X}_2}(\\boldsymbol{x}_2) =\\sqrt{\\frac{\\det({\\mathsf{A}}/{\\mathsf{A}}_{11})}{(2\\pi)^{n_2}}} {\\mathrm{e}}^{-\\frac{1}{2} \\boldsymbol{x}_2^{\\mathsf{T}}({\\mathsf{A}}/{\\mathsf{A}}_{11}) \\boldsymbol{x}_2}\\)\nNog steeds Gaussische distributie. Covariantiematrix voor \\(\\boldsymbol{x}_2\\) is gegeven door \\(({\\mathsf{A}}/{\\mathsf{A}}_{11})^{-1}\\)"
+  },
+  {
+    "objectID": "slides/H2.html#sherman-morrison-woodbury-matrixidentiteit",
+    "href": "slides/H2.html#sherman-morrison-woodbury-matrixidentiteit",
+    "title": "Hoofdstuk 2 - Lineaire afbeeldingen",
+    "section": "Sherman-Morrison-Woodbury matrixidentiteit",
+    "text": "Sherman-Morrison-Woodbury matrixidentiteit\nVoor vierkante matrices \\({\\mathsf{A}} \\in {\\mathbb{F}}^{n\\times n}\\), \\({\\mathsf{C}} \\in {\\mathbb{F}}^{k \\times k}\\) en matrices \\({\\mathsf{U}} \\in {\\mathbb{F}}^{n \\times k}\\), \\({\\mathsf{V}} \\in {\\mathbb{F}}^{k \\times n}\\), de matrixidentiteit van Woodbury stelt dat\n\\[\\begin{equation}\n    ({\\mathsf{A}} + {\\mathsf{U}} {\\mathsf{C}} {\\mathsf{V}})^{-1} = {\\mathsf{A}}^{-1} - {\\mathsf{A}}^{-1} {\\mathsf{U}} ({\\mathsf{C}}^{-1} + {\\mathsf{V}} {\\mathsf{A}}^{-1} {\\mathsf{U}})^{-1} {\\mathsf{V}} {\\mathsf{A}}^{-1}\n\\end{equation}\\]\n\nBewijs: aan bord\n\\(k=1\\): “rang-1 updates” \\(\\rightarrow\\) Sherman-Morrison formule\n\\(({\\mathsf{A}} + \\boldsymbol{u} \\boldsymbol{v}^{\\mathsf{T}})^{-1} = {\\mathsf{A}}^{-1} - \\frac{{\\mathsf{A}}^{-1}\\boldsymbol{u} \\boldsymbol{v}^{{\\mathsf{T}}} {\\mathsf{A}}^{-1} }{1 + \\boldsymbol{v}^{\\mathsf{T}}{\\mathsf{A}}^{-1} \\boldsymbol{u}}\\)"
+  },
+  {
+    "objectID": "slides/H2.html#toepassingen",
+    "href": "slides/H2.html#toepassingen",
+    "title": "Hoofdstuk 2 - Lineaire afbeeldingen",
+    "section": "Toepassingen",
+    "text": "Toepassingen\n\nRecursieve structuur van inverse van som\n\n\\[\\begin{align}\n({\\mathsf{A}} + {\\mathsf{B}})^{-1} &= {\\mathsf{A}}^{-1} - {\\mathsf{A}}^{-1} ({\\mathsf{B}}^{-1} + {\\mathsf{A}}^{-1})^{-1} {\\mathsf{A}}^{-1} \\\\\n    &= {\\mathsf{A}}^{-1} - {\\mathsf{A}}^{-1} ({\\mathsf{I}}+ {\\mathsf{A}} {\\mathsf{B}}^{-1} )^{-1}\\\\\n    &= {\\mathsf{A}}^{-1} - {\\mathsf{A}}^{-1} {\\mathsf{B}} ({\\mathsf{A}} + {\\mathsf{B}})^{-1}\\\\\n  &=  \\sum_{k=0}^{\\infty} (-{\\mathsf{A}}^{-1} {\\mathsf{B}})^k{\\mathsf{A}}^{-1}\n  \\end{align}\\]\n\nAfgeleide van de matrixinverse van een matrixwaardige functie:\n\\[\\frac{{\\mathrm{d}}{\\mathsf{A}}^{-1}}{{\\mathrm{d}}x}(x) = -{\\mathsf{A}}^{-1}(x) \\frac{{\\mathrm{d}}{\\mathsf{A}}}{{\\mathrm{d}}x}(x) {\\mathsf{A}}^{-1}(x)\\]"
+  },
+  {
+    "objectID": "slides/H2.html#footnotes",
+    "href": "slides/H2.html#footnotes",
+    "title": "Hoofdstuk 2 - Lineaire afbeeldingen",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nAdditiviteit impliceert homogeniteit voor rationale getallen, en bij uitbreiding reële getallen als we over een notie van continuïteit zouden beschikken↩︎"
+  }
+]
