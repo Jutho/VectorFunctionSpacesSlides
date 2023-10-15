@@ -419,7 +419,7 @@ Voor $\map{A}\in \End(V)$, een invariante deelruimte is een deelruimte $U \subsp
 
 * De restrictie van $\map{A}$ tot $U$, genoteerd als $\left.\map{A}\right|_{U}$, kan geïnterproteerd worden als een lineaire operator op $U$
 
-* Gegeven een basis $B_U = \{\vu_1,\ldots,\vu_k\}$ voor $U$, die uitgebreidt wordt tot een volledige basis $B_V = \{\vu_1, \ldots, \vu_k, \vu_{k+1}, \ldots, \vu_n \}$ voor $V$, dan geldt:
+* Gegeven een basis $B_U = \{\vu_1,\ldots,\vu_k\}$ voor $U$, die uitgebreid wordt tot een volledige basis $B_V = \{\vu_1, \ldots, \vu_k, \vu_{k+1}, \ldots, \vu_n \}$ voor $V$, dan geldt:
 
   $\mat{A} = \Phi_{B_V} (\map{A}) = \begin{bmatrix}
 		\mat{A}_U & \cdots\\ \zeromat & \ddots

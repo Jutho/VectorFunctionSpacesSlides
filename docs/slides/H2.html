@@ -287,7 +287,7 @@ ul.task-list li input[type="checkbox"] {
 <li>Additiviteit: <span class="math inline">\(\varphi({v}_1 + {v}_2) = \varphi({v}_1) + \varphi({v}_2)\)</span><a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></li>
 <li>Homogeniteit: <span class="math inline">\(\varphi(a {v}) = a \varphi({v})\)</span></li>
 </ul>
-<p><span class="math inline">\(\Rightarrow\)</span> <strong>lineairiteit</strong> <span class="math inline">\(\varphi(a_1 {v}_1 + a_2 {w}) = a_1 \varphi({v}_1) + a_2 \varphi({v}_2)\)</span></p></li>
+<p><span class="math inline">\(\Rightarrow\)</span> <strong>lineariteit</strong> <span class="math inline">\(\varphi(a_1 {v}_1 + a_2 {w}) = a_1 \varphi({v}_1) + a_2 \varphi({v}_2)\)</span></p></li>
 <li><p>Nieuwe notatie: <span class="math inline">\({\hat{A}}:V \to W: {v}\mapsto {\hat{A}}({v}) = {\hat{A}}{v}\)</span></p>
 <p>(hoofdletter Latijns alfabet, hoedje, functiehaakjes niet noodzakelijk)</p></li>
 </ul>
@@ -414,7 +414,7 @@ ul.task-list li input[type="checkbox"] {
 <ul>
 <li>Voor een verzameling <span class="math inline">\(S\)</span> waarvan we de elementen <span class="math inline">\(\{a_1, a_2,\ldots\}\)</span> beschouwen als abstracte entiteiten zonder vooraf bestaande vectorstructuur:
 <ul>
-<li>de <strong>vrije vectorruimte</strong> <span class="math inline">\({\mathbb{F}}S\)</span> bestaat uit alle “formele” lineaire combinaties, waarbij we de elementen van <span class="math inline">\(S\)</span>$ als abstracte basisvectoren beschouwen (zie H1)</li>
+<li>de <strong>vrije vectorruimte</strong> <span class="math inline">\({\mathbb{F}}S\)</span> bestaat uit alle “formele” lineaire combinaties, waarbij we de elementen van <span class="math inline">\(S\)</span> als abstracte basisvectoren beschouwen (zie H1)</li>
 </ul></li>
 <li>Voor verzamelingen <span class="math inline">\(S,S'\)</span> en een afbeelding <span class="math inline">\(\varphi:S\to S'\)</span>:
 <ul>
@@ -462,7 +462,7 @@ ul.task-list li input[type="checkbox"] {
 <section id="bewerkingen-met-matrices-1" class="level2">
 <h2 class="anchored" data-anchor-id="bewerkingen-met-matrices-1">Bewerkingen met matrices</h2>
 <p>Een matrix kan de voorstelling zijn van verschillende soorten objecten uit de lineaire algebra (zie H5: bilineaire en sesquilineaire afbeeldingen).</p>
-<p>Voor matrices als voorstelling van een lineaire afbeelding hebben volgende definities geen betekenis door ‘index mismatch’:</p>
+<p>Voor matrices als voorstelling van een lineaire afbeelding hebben volgende definities geen betekenis door ‘index mismatch’; desalniettemin voeren we volgende definities toch al in op het niveau van matrices. We komen ze later terug tegen in de context van bilineaire en sesquilineaire vormen, waar ze een intrinsieke betekenis hebben:</p>
 <ul>
 <li>symmetrisch: <span class="math inline">\({\mathsf{A}} = {\mathsf{A}}^{\mathsf{T}}\)</span></li>
 <li>antisymmetrisch of scheef-symmetrisch: <span class="math inline">\({\mathsf{A}} = -{\mathsf{A}}^{\mathsf{T}}\)</span></li>
@@ -500,7 +500,8 @@ ul.task-list li input[type="checkbox"] {
 \end{align}\]</span></p>
 <p>met <span class="math inline">\(\epsilon^{i_1i_2\cdots i_n} = \begin{cases} \mathop{\mathrm{sgn}}(\sigma),&amp;\sigma=(i_1,i_2,\ldots,i_n) \in S_n\\ 0, &amp;(i_1,i_2,\ldots,i_n) \not\in S_n\end{cases}\)</span></p>
 <p><strong>Levi-Civita symbool</strong></p></li>
-<li><p><span class="math inline">\(n!\)</span> termen met elk <span class="math inline">\(n\)</span> vermenigvuldigingen ? praktische algoritmes voor determinant hebben complexiteit <span class="math inline">\(\mathop{\mathrm{\mathscr{O}}}(n^3)\)</span></p></li>
+<li><p><span class="math inline">\(n!\)</span> termen met elk <span class="math inline">\(n\)</span> vermenigvuldigingen ?</p>
+<p>praktische algoritmes voor determinant hebben complexiteit <span class="math inline">\(\mathop{\mathrm{\mathscr{O}}}(n^3)\)</span></p></li>
 </ul>
 </section>
 <section id="determinant-als-volume" class="level2">
@@ -557,7 +558,7 @@ x^i &amp;= f^i(\boldsymbol{y}) = f^i(\boldsymbol{y}_k + (\boldsymbol{y}-\boldsym
 <p><span class="math display">\[{\left\lvert\det({\mathsf{J}}(\rho,\theta))\right\rvert} = \rho \Rightarrow {\mathrm{d}}x {\mathrm{d}}y = \rho {\mathrm{d}}\rho {\mathrm{d}}\theta \]</span></p>
 <p>Opmerking:</p>
 <ul>
-<li>De absolute waarde heeft te maken met het feit dat een determinant de verandering van een geörienteerd volume beschrijft. Voor de volume-integraal is dit teken (dat aangeeft of de oriëntatie al dan niet behouden blijft) niet van belang</li>
+<li>De absolute waarde heeft te maken met het feit dat een determinant de verandering van een geörienteerd volume beschrijft. Voor de volume-integraal is dit teken (dat aangeeft of de oriëntatie al dan niet behouden blijft) niet van belang, of wordt het gecompenseerd door hoe de integratiegrenzen geordend worden.</li>
 </ul>
 </section>
 <section id="matrix-inverse" class="level2">
@@ -606,7 +607,7 @@ x^i &amp;= f^i(\boldsymbol{y}) = f^i(\boldsymbol{y}_k + (\boldsymbol{y}-\boldsym
 <h2 class="anchored" data-anchor-id="basistransformaties">Basistransformaties</h2>
 <p>Eindigdimensionale vectorruimte <span class="math inline">\(V\)</span> met twee verschillende keuzes van basis <span class="math inline">\(B = \{{e}_1,{e}_2,\ldots,{e}_n\}\)</span> en <span class="math inline">\(\tilde{B} = \{\tilde{{e}}_1,\ldots,\tilde{{e}}_n\}\)</span>:</p>
 <ul>
-<li><p><span class="math inline">\({e}_j = \tilde{{e}}_i T^i_{\ j} \Rightarrow {v}= v^j {e}_j = \tilde{v}^i \tilde{{e}}_i = v^j T^i_j \tilde{{e}}_i \Rightarrow \tilde{\boldsymbol{v}} = {\mathsf{T}} \boldsymbol{v}\)</span></p></li>
+<li><p><span class="math inline">\({e}_j = \tilde{{e}}_i T^i_{\ j} \Rightarrow {v}= v^j {e}_j = \tilde{v}^i \tilde{{e}}_i = v^j T^i_{\ j} \tilde{{e}}_i \Rightarrow \tilde{\boldsymbol{v}} = {\mathsf{T}} \boldsymbol{v}\)</span></p></li>
 <li><p><span class="math inline">\(\boldsymbol{v} = \phi_{B}({v})\)</span> en <span class="math inline">\(\tilde{\boldsymbol{v}} = \phi_{\tilde{B}}({v})\)</span></p>
 <p><span class="math inline">\(\Rightarrow \tilde{\boldsymbol{v}} = \phi_{\tilde{B}} \circ \phi_B^{-1}(\boldsymbol{v})\)</span></p>
 <p><span class="math inline">\(\Rightarrow {\mathsf{T}} = \phi_{\tilde{B}} \circ \phi_B^{-1}: {\mathbb{F}}^n \to {\mathbb{F}}^n\)</span>; <span class="math inline">\({\mathsf{T}} \in \mathop{\mathrm{GL}}(n;{\mathbb{F}})\)</span></p></li>
@@ -631,7 +632,7 @@ x^i &amp;= f^i(\boldsymbol{y}) = f^i(\boldsymbol{y}_k + (\boldsymbol{y}-\boldsym
 <ul>
 <li><p><span class="math inline">\(\tilde{{\mathsf{A}}} = {\mathsf{T}} {\mathsf{A}} {\mathsf{T}}^{-1}\)</span>: <strong>gelijkvormigheidstransformatie</strong></p></li>
 <li><p>Gerelateerd zijn via een gelijkvormigheidstransformtie is een equivalentierelatie</p></li>
-<li><p>Eigenshappen van <span class="math inline">\({\mathsf{A}}\)</span> die invariant zijn onder gelijkvormigheidstransformaties zijn basisonafhankelijk, en zijn dus intrinsieke eigenschappen die kunnen worden geassocieerd aan het wiskundige object <span class="math inline">\({\hat{A}}\)</span></p></li>
+<li><p>Eigenschappen van <span class="math inline">\({\mathsf{A}}\)</span> die invariant zijn onder gelijkvormigheidstransformaties zijn basisonafhankelijk, en zijn dus intrinsieke eigenschappen die kunnen worden geassocieerd aan het wiskundige object <span class="math inline">\({\hat{A}}\)</span></p></li>
 <li><p>Voorbeelden:</p>
 <ul>
 <li><span class="math inline">\(\det({\mathsf{A}}) = \det(\tilde{{\mathsf{A}}})\)</span></li>
@@ -647,9 +648,9 @@ x^i &amp;= f^i(\boldsymbol{y}) = f^i(\boldsymbol{y}_k + (\boldsymbol{y}-\boldsym
 <ul>
 <li><p>Afbeelding van vectorruimte <span class="math inline">\(V\)</span> naar het scalaire veld <span class="math inline">\({\mathbb{F}}\)</span></p></li>
 <li><p>Vaak in de context van functieruimten, vaak niet-lineair</p></li>
-<li><p>Voorbeeld: pad van een deeltje gedurende een tijdsinterval <span class="math inline">\(I\)</span>: <span class="math inline">\(q:I \to {\mathbb{R}}^3: t \mapsto q(t)\)</span></p>
+<li><p>Voorbeeld: pad <span class="math inline">\(q(t)\)</span> van een deeltje gedurende een tijdsinterval <span class="math inline">\(I\)</span>:</p>
 <ul>
-<li><span class="math inline">\(q \in C(I, {\mathbb{R}}^3)\)</span></li>
+<li><span class="math inline">\(q:I \to {\mathbb{R}}^3: t \mapsto q(t)\)</span>; <span class="math inline">\(q \in C(I, {\mathbb{R}}^3)\)</span></li>
 <li>Actie <span class="math inline">\(S: C(I,{\mathbb{R}}^3) \mapsto {\mathbb{R}}: q \mapsto S[q] = \int_I L(q,\dot{q},t)\,{\mathrm{d}}t\)</span></li>
 </ul></li>
 <li><p><strong>Lineaire functionalen</strong>: <span class="math inline">\(\mathop{\mathrm{Hom}}(V, {\mathbb{F}})\)</span></p></li>
@@ -688,7 +689,7 @@ x^i &amp;= f^i(\boldsymbol{y}) = f^i(\boldsymbol{y}_k + (\boldsymbol{y}-\boldsym
 <section id="lineaire-functionalen-meer-voorbeelden-uit-de-fysica" class="level2">
 <h2 class="anchored" data-anchor-id="lineaire-functionalen-meer-voorbeelden-uit-de-fysica">Lineaire functionalen: meer voorbeelden uit de fysica</h2>
 <ul>
-<li><p>Kracht: duale vector die snelheid (=vector) afbeeldt op vermogen (scalair): $P = F_i v^i</p></li>
+<li><p>Kracht: duale vector die snelheid (=vector) afbeeldt op vermogen (scalair): <span class="math inline">\(P = F_i v^i\)</span></p></li>
 <li><p>Door de wet van Newton: momentum is duale vector</p></li>
 <li><p>Relatie tussen momentum en snelheid: <span class="math inline">\(p_i = M_{ij} v^j\)</span> met <span class="math inline">\(M\)</span> de massa-matrix, volgt uit kinetische energie als kwadratische vorm (zie H5) van snelheid: <span class="math inline">\(T = \frac{1}{2} v^i M_{ij} v^j\)</span></p></li>
 <li><p>Continue functies <span class="math inline">\(V = C({\mathbb{R}}; {\mathbb{F}})\)</span>: Dirac-delta <span class="math inline">\(\delta_a[f] = f(a)\)</span></p>
@@ -740,7 +741,7 @@ x^i &amp;= f^i(\boldsymbol{y}) = f^i(\boldsymbol{y}_k + (\boldsymbol{y}-\boldsym
 <ul>
 <li><span class="math inline">\(({\hat{T}}_1,{v}_1) \circ ({\hat{T}}_2,{v}_2) = ({\hat{T}}_1{\hat{T}}_2, {v}_1 + {\hat{T}}_1 {v}_2)\)</span></li>
 <li><span class="math inline">\(({\hat{T}},{v})^{-1} = ({\hat{T}}^{-1}, -{\hat{T}}^{-1}{v})\)</span></li>
-<li><span class="math inline">\(\Rightarrow\)</span> (A) = (V) = <span class="math inline">\(V \rtimes \mathop{\mathrm{GL}}(V)\)</span> (semidirect product)</li>
+<li><span class="math inline">\(\Rightarrow \mathop{\mathrm{Aut}}(A) = \mathop{\mathrm{Aff}}(V) = V \rtimes \mathop{\mathrm{GL}}(V)\)</span> (semidirect product)</li>
 </ul></li>
 </ul>
 </section>
@@ -767,7 +768,7 @@ x^i &amp;= f^i(\boldsymbol{y}) = f^i(\boldsymbol{y}_k + (\boldsymbol{y}-\boldsym
 <li>Gegeven een reële vectorruimte <span class="math inline">\(W\)</span>. Kunnen we <span class="math inline">\(W\)</span> ‘uitbreiden’ tot een vectorruimte over <span class="math inline">\({\mathbb{C}}\)</span>?
 <ul>
 <li>Eindigdimensionaal: Kies basis <span class="math inline">\(B \Rightarrow W \cong {\mathbb{R}}^n\)</span>, breidt uit tot <span class="math inline">\({\mathbb{C}}^n\)</span>, d.w.z. laat complexe expansiecoëfficiënten toe, of dus, <span class="math inline">\(W = {\mathbb{R}}B \Rightarrow W^{{\mathbb{C}}} = {\mathbb{C}}B\)</span>.</li>
-<li>Bemerk dat <span class="math inline">\(\mathop{\mathrm{dim}}_{{\mathbb{R}}}(V) = \mathop{\mathrm{dim}}_{{\mathbb{C}}}(W^{{\mathbb{C}}})\)</span></li>
+<li>Bemerk dat <span class="math inline">\(\mathop{\mathrm{dim}}_{{\mathbb{R}}}(W) = \mathop{\mathrm{dim}}_{{\mathbb{C}}}(W^{{\mathbb{C}}})\)</span></li>
 <li>We zullen dit vaak impliciet doen, bvb. voor eigenwaarden en eigenvectoren van een reële matrix.</li>
 </ul></li>
 </ul>

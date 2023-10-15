@@ -220,7 +220,7 @@ Notatie: $\vert A \vert$ of $\# A$
 
 * Werken met oneindige cardinaliteit:
   
-  $\vert A \vert \leq \vert B \vert \Leftrightarrow$ er bestaat een injectieve afbeelding van $B$ naar $A$
+  $\vert A \vert \leq \vert B \vert \Leftrightarrow$ er bestaat een injectieve afbeelding van $A$ naar $B$
 
 ## Relaties
 Relatie tussen elementen $a \in A$ en $b \in B$ = deelverzameling van koppels $(a,b) \in A \times B$
@@ -251,7 +251,7 @@ Relatie tussen elementen $a \in A$ en $b \in B$ = deelverzameling van koppels $(
 
 
 ## Relaties
-2.  Partiële orde relatie $a \preccurlyeq b$ tussen elementen $a, b \in $A$
+2.  Partiële orde relatie $a \preccurlyeq b$ tussen elementen $a, b \in A$
     * Definitie
       - reflexiviteit: $a \preccurlyeq a$ voor alle $a \in A$
       - anitsymmetrie: $a \preccurlyeq b \land b \preccurlyeq a$ impliceert $a=b$
@@ -356,7 +356,7 @@ Van permutatiegroep $S_n$ naar $\bbZ_2$:
 * Voor een homomorphisme $\varphi:(G,\cdot) \to (H,\circ)$
   - is het beeld $\varphi(G)$ een subgroep van $H$
   - is het invers beeld $\varphi^{-1}(e_H)$ een normale subgroup van $G$, die de naam $\ker(\varphi)$ krijgt
-  - $ker(\varphi) = \{e_G\} \leftrightarrow \varphi$ is injectief
+  - $\ker(\varphi) = \{e_G\} \Leftrightarrow \varphi$ is injectief
 
 ## Quotientgroep
 
@@ -381,7 +381,7 @@ $a \cdot (b + c) = a\cdot b + a \cdot c$; $(b+c) \cdot a = b \cdot a + c \cdot a
 Voorbeelden:
 
 * $(\bbZ, +, \cdot)$ en $(\bbZ_n, +_{\bmod n}, \cdot_{\bmod n})$
-* triviale ring $(\{0,1\}, +, \cdot)$
+* triviale ring $(\{0=1\}, +, \cdot)$
 * $R[x]$: polynomen in $x$ met coefficienten uit ring $R$
 * $R^{n \times n}$: $n \times n$ matrices met elementen uit $R$
   
@@ -389,7 +389,7 @@ Voorbeelden:
   
 ## Ring
 
-In een ring is er een neutraal element $0$ van $+$ en een (ander!) neutraal element $1$ van $\cdot$. Verder kunnen er nog elementen zijn met een speciale rol:
+In een ring is er een neutraal element $0$ van $+$ en een neutraal element $1$ van $\cdot$. Verder kunnen er nog elementen zijn met een speciale rol:
 
 * Idempotent: $a \cdot a = a$
 * Nilpotent met index $p$: $a^p = 0$
@@ -437,7 +437,7 @@ $\bbF$ is typisch $\bbR$ of $\bbC$
   - in het bijzonder: $\bbF^1 \cong \bbF$ als veld over zichzelf
 * $\bbC$ als veld over $\bbR$: het complexe vlak
 * analoog: $\bbH$ als veld over $\bbR$, of over $\bbC$
-* $\bbF^{n\times m}$: $n \times m$ matrices, opnieuw met componentsgewijze optelling en vermenigvuldiging met scalairen (≠ matrixvermenigvuldiging)
+* $\bbF^{m\times n}$: $m \times n$ matrices, opnieuw met componentsgewijze optelling en vermenigvuldiging met scalairen (≠ matrixvermenigvuldiging)
 
 ## Deelruimten
 
@@ -452,9 +452,9 @@ $\bbF$ is typisch $\bbR$ of $\bbC$
   - puntsgewijze optelling en vermenigvuldiging met scalairen
 * Voor $\mathcal{D} \subseteq \bbR^n$: Optelling en scalaire vermenigvuldiging behoudt de meeste analytische eigenschappen, dus interessante deelruimtes:
   - Continue functies: $C(\mathcal{D},\bbF)$
-  - $n$-maal continue afleidbare functies: $C^k(\mathcal{D},\bbF)$
+  - $k$-maal continue afleidbare functies: $C^k(\mathcal{D},\bbF)$
   - gladde functies: $C^{\infty}(\mathcal{D},\bbF)$
-  - analytische functies $C^{\omega}(\mathcal{D},\bbF)$
+  - analytische functies $C^{\omega}(\mathcal{D},\bbF)$ (functies met convergerende Taylorreeks binnen $\mathcal{D}$)
 
 ## Homomorfismen
 
@@ -527,7 +527,7 @@ Gegeven een basis $B = \{\ve_i, i=1,\ldots,n\}$ voor een eindig-dimensionale vec
 
   $\vv = \sum_{i=1}^n v^i \ve_i =  v^i \ve_i$ (Einstein sommatie-conventie)
 
-* $\vec{v} = \phi_B(\vv)$: $\phi_B$ coordinatenisomorfisme
+* $\vec{v} = \phi_B(\vv)$ met $\phi_B:V \to \bbF^n$: coordinatenisomorfisme
 
 * Elke $n$-dimensionale vectorruimte is isomorf met $\bbF^n$
 
@@ -590,7 +590,7 @@ Gegeven een deelruimte $W \subseteq V$:
 
 ## Affiene ruimte
 
-Gegeven een vectorruimte $V$, een geassocierde affiene ruimte is een verzameling van punten $A = \{P, Q, \ldots\}$ waarop de abelse groep $(V,+)$ een groepsactie heeft, of dus
+Gegeven een vectorruimte $V$, een geassocieerde affiene ruimte is een verzameling van punten $A = \{P, Q, \ldots\}$ waarop de abelse groep $(V,+)$ een groepsactie heeft, of dus
 
 * $\forall P \in A: P + \zerovec_V = P$
 * $\forall P \in A, \vv,\vw \in V: P + (\vv + \vw) = (P+\vv) + \vw$
@@ -598,7 +598,7 @@ Gegeven een vectorruimte $V$, een geassocierde affiene ruimte is een verzameling
 met bovendien:
 
 * als $P + \vv = P$ voor een bepaalde $P$, dan is $\vv = \zerovec_V$
-* $\forall P, Q \in A$: er bestaat een $\vv$ zodat $Q = P + \vv$
+* $\forall P, Q \in A$: er bestaat een $\vv\in V$ zodat $Q = P + \vv$
   * notatie: $\vv = Q - P$
 
 $A$ is zoals de vectorruimte $V$ die zijn oorsprong is vergeten
@@ -614,6 +614,7 @@ dat lineair is beide argumenten afzonderlijk (= bilineair)
 * $\vv \odot (b_1 \vw_1 + b_2 \vw_2) = b_1 (\vv \odot \vw_1) + b_2 (\vv \odot \vw_2)$
 
 Ten opzichte van een basis $B = \{\ve_1,\ldots,\ve_n\}$:
+
 $(v^i \ve_i) \odot (w^j \ve_j) = v^i w^j (\ve_i \odot \ve_j) = v^i v^j \underbrace{f_{ij}^k}_{\text{structuurconstanten}} \ve_k$
 
 ## Algebras

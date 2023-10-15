@@ -186,7 +186,7 @@ Homomorfismen tussen vectorruimten: $\varphi \in \Hom(V,W)$
   * Additiviteit: $\varphi(\vv_1 + \vv_2) = \varphi(\vv_1) + \varphi(\vv_2)$^[Additiviteit impliceert homogeniteit voor rationale getallen, en bij uitbreiding reële getallen als we over een notie van continuïteit zouden beschikken]
   * Homogeniteit: $\varphi(a \vv) = a \varphi(\vv)$
 
-  $\Rightarrow$ **lineairiteit** $\varphi(a_1 \vv_1 + a_2 \vw) = a_1 \varphi(\vv_1) + a_2 \varphi(\vv_2)$
+  $\Rightarrow$ **lineariteit** $\varphi(a_1 \vv_1 + a_2 \vw) = a_1 \varphi(\vv_1) + a_2 \varphi(\vv_2)$
 
 * Nieuwe notatie: $\map{A}:V \to W: \vv \mapsto \map{A}(\vv) = \map{A}\vv$
 
@@ -309,7 +309,7 @@ Enkele eigenschappen van matrixvermenigvuldiging:
 ## Lineaire extensie en vrije vectorruimte
 
 * Voor een verzameling $S$ waarvan we de elementen $\{a_1, a_2,\ldots\}$ beschouwen als abstracte entiteiten zonder vooraf bestaande vectorstructuur:
-  * de **vrije vectorruimte** $\bbF S$ bestaat uit alle "formele" lineaire combinaties, waarbij we de elementen van $S$$ als abstracte basisvectoren beschouwen (zie H1)
+  * de **vrije vectorruimte** $\bbF S$ bestaat uit alle "formele" lineaire combinaties, waarbij we de elementen van $S$ als abstracte basisvectoren beschouwen (zie H1)
 
 * Voor verzamelingen $S,S'$ en een afbeelding $\varphi:S\to S'$: 
   * De **lineaire extensie** van $\varphi$ is een lineaire afbeelding $\Hom(\bbF S, \bbF S')$, gedefinieerd als 
@@ -353,7 +353,7 @@ Gegeven een matrix $\mat{A}$ met componenten $A^i_{\ j}$
 
 Een matrix kan de voorstelling zijn van verschillende soorten objecten uit de lineaire algebra (zie H5: bilineaire en sesquilineaire afbeeldingen).
 
-Voor matrices als voorstelling van een lineaire afbeelding hebben volgende definities geen betekenis door 'index mismatch':
+Voor matrices als voorstelling van een lineaire afbeelding hebben volgende definities geen betekenis door 'index mismatch'; desalniettemin voeren we volgende definities toch al in op het niveau van matrices. We komen ze later terug tegen in de context van bilineaire en sesquilineaire vormen, waar ze een intrinsieke betekenis hebben:
 
 * symmetrisch: $\mat{A} = \mat{A}^\transpose$
 * antisymmetrisch of scheef-symmetrisch: $\mat{A} = -\mat{A}^\transpose$
@@ -394,7 +394,9 @@ Gegeven een vierkante matrix $\mat{A} \in \bbF^{n \times n}$
 
   **Levi-Civita symbool**
 
-* $n!$ termen met elk $n$ vermenigvuldigingen ? praktische algoritmes voor determinant hebben complexiteit $\order(n^3)$
+* $n!$ termen met elk $n$ vermenigvuldigingen ? 
+
+  praktische algoritmes voor determinant hebben complexiteit $\order(n^3)$
 
 ## Determinant als volume
 
@@ -462,7 +464,7 @@ $$\abs{\det(\mat{J}(\rho,\theta))} = \rho \Rightarrow \drm x \drm y = \rho \drm 
 
 Opmerking:
 
-* De absolute waarde heeft te maken met het feit dat een determinant de verandering van een geörienteerd volume beschrijft. Voor de volume-integraal is dit teken (dat aangeeft of de oriëntatie al dan niet behouden blijft) niet van belang
+* De absolute waarde heeft te maken met het feit dat een determinant de verandering van een geörienteerd volume beschrijft. Voor de volume-integraal is dit teken (dat aangeeft of de oriëntatie al dan niet behouden blijft) niet van belang, of wordt het gecompenseerd door hoe de integratiegrenzen geordend worden.
 
 ## Matrix inverse:
 
@@ -515,7 +517,7 @@ Beschouw een matrixwaardige functie $\mat{A}(t)$, i.e. een matrix waarvan de ele
 Eindigdimensionale vectorruimte $V$ met twee verschillende keuzes van basis
 $B = \{\ve_1,\ve_2,\ldots,\ve_n\}$ en $\tilde{B} = \{\tilde{\ve}_1,\ldots,\tilde{\ve}_n\}$:
 
-* $\ve_j = \tilde{\ve}_i T^i_{\ j} \Rightarrow \vv = v^j \ve_j = \tilde{v}^i \tilde{\ve}_i = v^j T^i_j \tilde{\ve}_i \Rightarrow \tilde{\vec{v}} = \mat{T} \vec{v}$
+* $\ve_j = \tilde{\ve}_i T^i_{\ j} \Rightarrow \vv = v^j \ve_j = \tilde{v}^i \tilde{\ve}_i = v^j T^i_{\ j} \tilde{\ve}_i \Rightarrow \tilde{\vec{v}} = \mat{T} \vec{v}$
 * $\vec{v} = \phi_{B}(\vv)$ en $\tilde{\vec{v}} = \phi_{\tilde{B}}(\vv)$
 
   $\Rightarrow \tilde{\vec{v}} = \phi_{\tilde{B}} \circ \phi_B^{-1}(\vec{v})$
@@ -544,7 +546,7 @@ Voor $V = W$ en dus een lineaire operator $\map{A}$ op V
 
 * Gerelateerd zijn via een gelijkvormigheidstransformtie is een equivalentierelatie
 
-* Eigenshappen van $\mat{A}$ die invariant zijn onder gelijkvormigheidstransformaties zijn basisonafhankelijk, en zijn dus intrinsieke eigenschappen die kunnen worden geassocieerd aan het wiskundige object $\map{A}$
+* Eigenschappen van $\mat{A}$ die invariant zijn onder gelijkvormigheidstransformaties zijn basisonafhankelijk, en zijn dus intrinsieke eigenschappen die kunnen worden geassocieerd aan het wiskundige object $\map{A}$
 
 * Voorbeelden:
   * $\det(\mat{A}) = \det(\tilde{\mat{A}})$
@@ -558,9 +560,9 @@ Voor $V = W$ en dus een lineaire operator $\map{A}$ op V
 
 * Vaak in de context van functieruimten, vaak niet-lineair
 
-* Voorbeeld: pad van een deeltje gedurende een tijdsinterval $I$: $q:I \to \bbR^3: t \mapsto q(t)$
+* Voorbeeld: pad $q(t)$ van een deeltje gedurende een tijdsinterval $I$:
 
-  * $q \in C(I, \bbR^3)$
+  * $q:I \to \bbR^3: t \mapsto q(t)$; $q \in C(I, \bbR^3)$
   * Actie $S: C(I,\bbR^3) \mapsto \bbR: q \mapsto S[q] = \int_I L(q,\dot{q},t)\,\drm t$
 
 * **Lineaire functionalen**: $\Hom(V, \bbF)$
@@ -595,7 +597,7 @@ Beschouw eindigdimensionale vectorruimte $V$ met basis $B = \{\ve_1,\ldots,\ve_n
 
 ## Lineaire functionalen: meer voorbeelden uit de fysica
 
-* Kracht: duale vector die snelheid (=vector) afbeeldt op vermogen (scalair): $P = F_i v^i
+* Kracht: duale vector die snelheid (=vector) afbeeldt op vermogen (scalair): $P = F_i v^i$
 * Door de wet van Newton: momentum is duale vector
 * Relatie tussen momentum en snelheid: $p_i = M_{ij} v^j$
   met $M$ de massa-matrix, volgt uit kinetische energie als kwadratische vorm (zie H5) van snelheid: $T = \frac{1}{2} v^i M_{ij} v^j$
@@ -654,7 +656,7 @@ $\Rightarrow$ transponeren geeft de matrix-representatie van de duale lineaire a
 * Compositie van affiene transformaties:
   *  $(\map{T}_1,\vv_1) \circ (\map{T}_2,\vv_2) = (\map{T}_1\map{T}_2, \vv_1 + \map{T}_1 \vv_2)$
   * $(\map{T},\vv)^{-1} = (\map{T}^{-1}, -\map{T}^{-1}\vv)$
-  * $\Rightarrow$ \Aut(A) = \Aff(V) = $V \rtimes \GL(V)$ (semidirect product)
+  * $\Rightarrow \Aut(A) = \Aff(V) = V \rtimes \GL(V)$ (semidirect product)
 
 ## Affiene transformaties als matrix
 
@@ -679,7 +681,7 @@ $\Aff(V)$ is een deelgroep van $\GL(V \oplus \bbF)$
 
 * Gegeven een reële vectorruimte $W$. Kunnen we $W$ 'uitbreiden' tot een vectorruimte over $\bbC$? 
   * Eindigdimensionaal: Kies basis $B \Rightarrow W \cong \bbR^n$, breidt uit tot $\bbC^n$, d.w.z. laat complexe expansiecoëfficiënten toe, of dus, $W = \bbR B \Rightarrow W^{\bbC} = \bbC B$. 
-  * Bemerk dat $\dim_{\bbR}(V) = \dim_{\bbC}(W^{\bbC})$
+  * Bemerk dat $\dim_{\bbR}(W) = \dim_{\bbC}(W^{\bbC})$
   * We zullen dit vaak impliciet doen, bvb. voor eigenwaarden en eigenvectoren van een reële matrix.
 
 ## Van reële naar complexe ruimte
