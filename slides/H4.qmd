@@ -1,7 +1,7 @@
 ---
 title: "Hoofdstuk 4 - Normen en afstanden"
 author: "Jutho Haegeman"
-date: "17/10/2023"
+date: "10/17/2023"
 # format:
 #   revealjs:
 #     theme: solarized
