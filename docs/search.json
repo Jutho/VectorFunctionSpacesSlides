@@ -343,6 +343,90 @@
     "text": "Logaritmische functie en machten\n\nVoorbeeld: \\(J_3(\\lambda)^{1/2}=\\begin{bmatrix}  \\lambda & 1 & 0\\\\ 0 & \\lambda & 1 \\\\ 0 & 0 & \\lambda  \\end{bmatrix}^{1/2} = \\begin{bmatrix} \\sqrt{\\lambda} & \\frac{1}{2\\sqrt{\\lambda}} & -\\frac{1}{4 \\lambda^{3/2}}\\\\ 0 & \\sqrt{\\lambda} & \\frac{1}{2\\sqrt{\\lambda}} \\\\ 0 & 0 & \\sqrt{\\lambda}\\end{bmatrix}\\)"
   },
   {
+    "objectID": "slides/H3.html#dynamische-systemen",
+    "href": "slides/H3.html#dynamische-systemen",
+    "title": "Hoofdstuk 3 - Lineaire operatoren en eigenwaarden",
+    "section": "Dynamische systemen",
+    "text": "Dynamische systemen\nEen dynamisch systeem is een algemene naam voor de wiskundige modellering van een tijdsafhankelijk fenomeen of process van natuurlijke of menselijke origine (fysisch, chemisch, biologisch, ecologisch, economisch, sociaal, …)."
+  },
+  {
+    "objectID": "slides/H3.html#dynamische-systemen-1",
+    "href": "slides/H3.html#dynamische-systemen-1",
+    "title": "Hoofdstuk 3 - Lineaire operatoren en eigenwaarden",
+    "section": "Dynamische systemen",
+    "text": "Dynamische systemen\nIngrediënten van een (deterministisch en autonoom/translatie-invariant) dynamisch systeem:\n\nToestandsruimte / configuratieruimte \\(S\\): verzameling van toestanden waarin het systeem zich op bepaald tijdstip kan bevinden\nVerzameling \\(T\\) van tijdstippen \\(t\\) waarover het systemen kan worden geëvolueerd, waarbij tijdstippen kunnen worden opgeteld: \\(t_1 + t_2 \\in T\\) voor alle \\(t_1,t_2 \\in T\\)\n\\((T,+)\\) is een abelse monoïde; inverse evolutie moet niet bestaan\nEvolutieregel \\(\\Phi_t:S\\to S\\) voor alle \\(t \\in T\\) zodat \\(\\Phi_{t_1} \\circ \\Phi_{t_2} = \\Phi_{t_1 + t_2}\\) en \\(\\Phi_0 = \\mathop{\\mathrm{id}}_S\\)"
+  },
+  {
+    "objectID": "slides/H3.html#dynamische-systemen-2",
+    "href": "slides/H3.html#dynamische-systemen-2",
+    "title": "Hoofdstuk 3 - Lineaire operatoren en eigenwaarden",
+    "section": "Dynamische systemen",
+    "text": "Dynamische systemen\n\nIn deze cursus: \\(S\\) is vectorruimte\nEvolutieregel vaak geschreven als \\(\\Phi:T \\times S \\to S\\)\nOpsplitsing in:\n\n\\(T = ({\\mathbb{R}}_{\\geq 0},+)\\): continue (tijd) dynamisch systemen\n\\(T = ({\\mathbb{N}}, +)\\): discrete (tijd) dynamisch systemen\n\nAlgemene concepten:\n\n‘fixpunt’, vast punt of evenwichtspunt \\(x^\\ast\\): \\(\\Phi(t,x^\\ast) = x^\\ast, \\forall t \\in T\\)\ntraject \\(\\gamma_x: T\\to S : t \\mapsto \\Phi(t,x)\\); baan \\(O_x = \\gamma_x(T)\\)"
+  },
+  {
+    "objectID": "slides/H3.html#discreet-dynamisch-systeem",
+    "href": "slides/H3.html#discreet-dynamisch-systeem",
+    "title": "Hoofdstuk 3 - Lineaire operatoren en eigenwaarden",
+    "section": "Discreet dynamisch systeem",
+    "text": "Discreet dynamisch systeem\n\\(\\Phi_n(x) = (\\Phi_{n-1} \\circ \\phi)(x) = \\underbrace{\\phi \\circ \\phi \\circ \\cdots \\circ \\phi}_{\\text{$n$ times}}(x) = \\phi^n(x)\\)\nmet \\(\\phi = \\Phi_1\\)\n\\(\\Rightarrow \\boldsymbol{x}_{n+1} = \\phi(x_{n})\\) : recurrentierelatie, iteratief process"
+  },
+  {
+    "objectID": "slides/H3.html#discreet-dynamisch-systeem-1",
+    "href": "slides/H3.html#discreet-dynamisch-systeem-1",
+    "title": "Hoofdstuk 3 - Lineaire operatoren en eigenwaarden",
+    "section": "Discreet dynamisch systeem",
+    "text": "Discreet dynamisch systeem\nBeschouw nu \\(S = {\\mathbb{R}}^m\\): \\(\\boldsymbol{x}\\), \\(\\boldsymbol{\\phi}\\), \n\nEvenwichtspunt: \\(\\boldsymbol{\\phi}(\\boldsymbol{x}^\\ast) = \\boldsymbol{x}^\\ast\\)\nAffien: \\(\\boldsymbol{\\phi}(\\boldsymbol{x}) = {\\mathsf{A}}\\boldsymbol{x}+\\boldsymbol{b}\\); linear: \\(\\boldsymbol{\\phi}(\\boldsymbol{x}) = {\\mathsf{A}}\\boldsymbol{x}\\)\nTypische dynamische systemen zijn niet linear:\n\\(\\Rightarrow\\) linearisatie rond evenwichtspunt\n\\(\\boldsymbol{\\phi}(\\boldsymbol{x}_\\ast + \\boldsymbol{y}_n) \\approx \\underbrace{\\boldsymbol{\\phi}(\\boldsymbol{x}^\\ast)}_{= \\boldsymbol{x}^\\ast} + \\underbrace{\\sum_{j=1}^{n}\\frac{\\partial \\boldsymbol{\\phi}}{\\partial x^j}(\\boldsymbol{x}^\\ast) (\\boldsymbol{y}_n)^j}_{={\\mathsf{J}}_{\\boldsymbol{\\phi}}(\\boldsymbol{x}^\\ast) \\boldsymbol{y}_n}+ \\mathop{\\mathrm{\\mathscr{O}}}(\\boldsymbol{y}^2)\\)\n\\(\\Rightarrow\\) eigenschappen van \\({\\mathsf{J}}_{\\varphi}(\\boldsymbol{x}^ast)\\) bepalen gedrag rond en stabiliteit van \\(\\boldsymbol{x}^\\ast\\)"
+  },
+  {
+    "objectID": "slides/H3.html#discreet-dynamisch-systeem-2",
+    "href": "slides/H3.html#discreet-dynamisch-systeem-2",
+    "title": "Hoofdstuk 3 - Lineaire operatoren en eigenwaarden",
+    "section": "Discreet dynamisch systeem",
+    "text": "Discreet dynamisch systeem\n\\(\\boldsymbol{x}_n = {\\mathsf{A}} \\boldsymbol{x}_{n-1} \\Rightarrow \\boldsymbol{x}_n = {\\mathsf{A}}^n \\boldsymbol{x}_0\\)\nPerturbaties rond \\(\\boldsymbol{x}^\\ast=\\boldsymbol{0}\\) bepaald door eigenwaarden (Jordan-decompositie) van \\({\\mathsf{A}}\\):\n\n\\({\\left\\lvert\\lambda\\right\\rvert}\\) &gt; 1: afstand tot evenwichtspunt neemt exponentieel toe\nalle \\({\\left\\lvert\\lambda\\right\\rvert} &lt; 1\\): perturbaties rond evenwicht convergeren terug naar evenwichtspunt \\(\\Rightarrow\\) stabiliteit\n\\(\\lambda = \\exp({\\mathrm{i}}2\\pi/p)\\) periodieke oplossingen met periode \\(p\\)"
+  },
+  {
+    "objectID": "slides/H3.html#recurrentierelaties",
+    "href": "slides/H3.html#recurrentierelaties",
+    "title": "Hoofdstuk 3 - Lineaire operatoren en eigenwaarden",
+    "section": "Recurrentierelaties",
+    "text": "Recurrentierelaties\n\nDynamisch systeem: \\(\\boldsymbol{x}_{n+1}= \\boldsymbol{\\phi}(\\boldsymbol{x}_n)\\)\nMeer algemeen: \\(\\boldsymbol{x}_{n+1}= \\boldsymbol{\\phi}(n, \\boldsymbol{x}_n)\\)\nNiet autonoom / tijdshomogeen / translatie-invariant\nHogere orde (maar autonoom): \\(\\boldsymbol{x}_{n+k} = \\boldsymbol{\\phi}(\\boldsymbol{x}_{n}, \\dots, \\boldsymbol{x}_{n+k-2}, \\boldsymbol{x}_{n+k-1})\\)\nkan omgezet worden in een eerste orde relatie voor \\(\\boldsymbol{y}_{n} = (\\boldsymbol{x}_{n}, \\dots, \\boldsymbol{x}_{n+k-2}, \\boldsymbol{x}_{n+k-1}) \\in {\\mathbb{R}}^{km}\\)\n\\[\\begin{align*}\\small\n  \\boldsymbol{y}_{n+1} = \\boldsymbol{\\psi}(\\boldsymbol{y}_n) &= \\boldsymbol{\\psi}(\\boldsymbol{x}_{n}, \\dots, \\boldsymbol{x}_{n+k-2}, \\boldsymbol{x}_{n+k-1})  \\\\\n  &= (\\boldsymbol{x}_{n+1}, \\dots, \\boldsymbol{x}_{n+k-1}, \\boldsymbol{\\phi}(\\boldsymbol{x}_{n}, \\dots, \\boldsymbol{x}_{n+k-2}, \\boldsymbol{x}_{n+k-1}))\n\\end{align*}\\]"
+  },
+  {
+    "objectID": "slides/H3.html#recurrentierelaties-1",
+    "href": "slides/H3.html#recurrentierelaties-1",
+    "title": "Hoofdstuk 3 - Lineaire operatoren en eigenwaarden",
+    "section": "Recurrentierelaties",
+    "text": "Recurrentierelaties\n\\[\\boldsymbol{x}_{n+k} = {\\mathsf{A}}_{0} \\boldsymbol{x}_{n} + {\\mathsf{A}}_{1} \\boldsymbol{x}_{n+1} + \\dots + {\\mathsf{A}}_{k-2} \\boldsymbol{x}_{n+k-2} + {\\mathsf{A}}_{k-1} \\boldsymbol{x}_{n_k-1}\\]\n\\[\\begin{equation}\n\\Rightarrow \\boldsymbol{y}_{n+1} = \\begin{bmatrix}\n        \\boldsymbol{x}_{n+1} \\\\ \\boldsymbol{x}_{n+2} \\\\ \\dots \\\\ \\boldsymbol{x}_{n+k-1} \\\\ \\boldsymbol{x}_{n+k}\n    \\end{bmatrix} = \\begin{bmatrix} {\\mathsf{O}}& {\\mathsf{I}}& \\dots & {\\mathsf{O}}& {\\mathsf{O}}\\\\\n{\\mathsf{O}}& {\\mathsf{O}}& \\dots & {\\mathsf{O}}& {\\mathsf{O}}\\\\\n\\vdots & \\vdots & \\ddots & \\vdots & \\vdots\\\\\n{\\mathsf{O}}& {\\mathsf{O}}& \\dots & {\\mathsf{O}}& {\\mathsf{I}}\\\\\n{\\mathsf{A}}_{0} & {\\mathsf{A}}_{1} & \\dots & {\\mathsf{A}}_{k-2} & {\\mathsf{A}}_{k-1}\n\\end{bmatrix}\\begin{bmatrix}\n        \\boldsymbol{x}_{n} \\\\ \\boldsymbol{x}_{n+1} \\\\ \\dots \\\\ \\boldsymbol{x}_{n+k-2} \\\\ \\boldsymbol{x}_{n+k-1}\n    \\end{bmatrix}.\n\\end{equation}\\]\nVoor \\(k=1\\) (\\(x_n\\) scalair): \\(y_{n+1} = {\\mathsf{C}} \\boldsymbol{y}_n = {\\mathsf{C}}^{n+1}\\boldsymbol{y}_0\\) met \\({\\mathsf{C}}\\) een companion matrix\n\nAlgemene oplossing is een lineaire combinatie van elementaire oplossingen \\(x_n = n^j \\lambda^n\\) voor \\(\\lambda\\) een nulpunt van de bijbehorende polynoom en \\(j=0,1,\\ldots,q-1\\) met \\(q\\) de algebraïsche multipliciteit van \\(\\lambda\\).\nPolynoom voor \\(\\lambda\\) kan gevonden worden door oplossingen \\(x_n=\\lambda^n\\) in te vullen in de recurrentierelatie\nLineaire combinatie vinden door te “matchen” met beginvoorwaarden \\(x_0,\\ldots,x_{k-1}\\)."
+  },
+  {
+    "objectID": "slides/H3.html#recurrentierelatie-voorbeeld",
+    "href": "slides/H3.html#recurrentierelatie-voorbeeld",
+    "title": "Hoofdstuk 3 - Lineaire operatoren en eigenwaarden",
+    "section": "Recurrentierelatie: voorbeeld",
+    "text": "Recurrentierelatie: voorbeeld\nBekendste voorbeeld: Fibonacci\n\\(x_{n+2} = x_{n} + x_{n+1}\\)\n\\(\\Rightarrow \\lambda^2 = \\lambda + 1\\)\n\\(\\Rightarrow: \\lambda = \\frac{1\\pm \\sqrt{5}}{2}\\)\n\\(x_0 = 0, x_1 = 1 \\Rightarrow (x_n)_{n \\in {\\mathbb{N}}} = (0,1,1,2,3,5,8,13,\\ldots)\\)"
+  },
+  {
+    "objectID": "slides/H3.html#continue-dynamische-systemen",
+    "href": "slides/H3.html#continue-dynamische-systemen",
+    "title": "Hoofdstuk 3 - Lineaire operatoren en eigenwaarden",
+    "section": "Continue dynamische systemen",
+    "text": "Continue dynamische systemen\nEr is geen “kleinste eenheid van evolutie”\n\\(\\dot{\\boldsymbol{x}}(t) = \\boldsymbol{\\varphi}(\\boldsymbol{x}(t))\\) (eerste orde differentiaalvergelijking)\n\nEvenwichtspunt \\(\\boldsymbol{\\varphi}(\\boldsymbol{x}^\\ast) = \\boldsymbol{0}\\)\nLinearisatie rond evenwichtspunt\n\\(\\boldsymbol{\\varphi}(\\boldsymbol{x}_\\ast + \\boldsymbol{y}(t)) \\approx \\underbrace{\\boldsymbol{\\phi}(\\boldsymbol{x}^\\ast)}_{=\\boldsymbol{0}} + \\underbrace{\\sum_{j=1}^{n}\\frac{\\partial \\boldsymbol{\\varphi}}{\\partial x^j}(\\boldsymbol{x}^\\ast) (\\boldsymbol{y}(t))^j}_{={\\mathsf{J}}_{\\boldsymbol{\\phi}}(\\boldsymbol{x}^\\ast) \\boldsymbol{y}(t)}+ \\mathop{\\mathrm{\\mathscr{O}}}(\\boldsymbol{y}^2)\\)"
+  },
+  {
+    "objectID": "slides/H3.html#continue-dynamische-systemen-1",
+    "href": "slides/H3.html#continue-dynamische-systemen-1",
+    "title": "Hoofdstuk 3 - Lineaire operatoren en eigenwaarden",
+    "section": "Continue dynamische systemen",
+    "text": "Continue dynamische systemen\n\nLineaire systemen: \\(\\dot{\\boldsymbol{x}}(t) = {\\mathsf{A}}\\boldsymbol{x}(t)\\)\n\\(\\Rightarrow\\boldsymbol{x}(t) = {\\mathrm{e}}^{t{\\mathsf{A}}} \\boldsymbol{x}_0\\)\nPerturbaties rond \\(\\boldsymbol{x}^\\ast=\\boldsymbol{0}\\) bepaald door eigenwaarden (Jordan-decompositie) van \\({\\mathsf{A}}\\):\n\nalle \\(\\mathop{\\mathrm{Re}}{\\lambda}&lt;0\\): perturbaties sterven uit, evenwichtspunt stabiel\neen \\(\\mathop{\\mathrm{Re}}{\\lambda}&gt;0\\): perturbatie groeit exponentieel in de tijd\n\\(\\lambda = {\\mathrm{i}}2\\pi/p\\): periodieke baan met periode \\(p\\)"
+  },
+  {
+    "objectID": "slides/H3.html#hogere-orde-differentiaalvergelijkingen",
+    "href": "slides/H3.html#hogere-orde-differentiaalvergelijkingen",
+    "title": "Hoofdstuk 3 - Lineaire operatoren en eigenwaarden",
+    "section": "Hogere orde differentiaalvergelijkingen",
+    "text": "Hogere orde differentiaalvergelijkingen\n\n\\(\\boldsymbol{x}^{(k)}(t) = \\boldsymbol{\\varphi}(t, \\boldsymbol{x}(t), \\dot{\\boldsymbol{x}(t)},\\ldots, \\boldsymbol{x}^{(k-1)}(t))\\)\nHerleidbaar naar eerste orde differentiaalvergelijking voor \\(\\boldsymbol{y}(t) = (\\boldsymbol{x}(t), \\dot{\\boldsymbol{x}}(t), \\ddot{\\boldsymbol{x}}(t), \\dots, \\boldsymbol{x}^{(k-1)}(t))\\)\nVoor \\(k=1\\) (\\(x(t)\\) scalair):\n\\(x^{(k)}(t) = a_{0} x(t) + a_{1} \\dot{x}(t) + \\dots + a_{k-2} x^{(k-2)}(t) + a_{k-1} x^{(k-1)}(t)\\)\n\\(\\Rightarrow \\dot{\\boldsymbol{y}}(t) = {\\mathsf{C}} \\boldsymbol{y}(t)\\) met \\({\\mathsf{C}}\\) een companion matrix\n\nAlgemene oplossing is een lineaire combinatie van elementaire oplossingen \\(x(t) = t^j {\\mathrm{e}}^{\\lambda t}\\) voor \\(\\lambda\\) een nulpunt van de bijbehorende polynoom en \\(j=0,1,\\ldots,q-1\\) met \\(q\\) de algebraïsche multipliciteit van \\(\\lambda\\)\nPolynoom voor \\(\\lambda\\) kan gevonden worden door oplossingen \\(x(t)={\\mathrm{e}}^{\\lambda t}\\) in te vullen in de recurrentierelatie\nLineaire combinatie vinden door te “matchen” met beginvoorwaarden \\(x(0),\\dot{x}(0),\\ldots,x^{(k-1)}(0)\\)."
+  },
+  {
     "objectID": "slides/H1.html",
     "href": "slides/H1.html",
     "title": "Hoofdstuk 1 - Elementaire wiskundige structuren",
@@ -641,7 +725,84 @@
     "href": "index.html",
     "title": "Vector and Function Spaces – Slides",
     "section": "",
-    "text": "Order By\n       Default\n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Title\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\nDate\n\n\nTitle\n\n\nAuthor\n\n\n\n\n\n\nSep 25, 2023\n\n\nHoofdstuk 1 - Elementaire wiskundige structuren\n\n\nJutho Haegeman\n\n\n\n\nSep 26, 2023\n\n\nHoofdstuk 2 - Lineaire afbeeldingen\n\n\nJutho Haegeman\n\n\n\n\nOct 10, 2023\n\n\nHoofdstuk 3 - Lineaire operatoren en eigenwaarden\n\n\nJutho Haegeman\n\n\n\n\n\n\nNo matching items"
+    "text": "Order By\n       Default\n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Title\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\nDate\n\n\nTitle\n\n\nAuthor\n\n\n\n\n\n\nSep 25, 2023\n\n\nHoofdstuk 1 - Elementaire wiskundige structuren\n\n\nJutho Haegeman\n\n\n\n\nSep 26, 2023\n\n\nHoofdstuk 2 - Lineaire afbeeldingen\n\n\nJutho Haegeman\n\n\n\n\nOct 10, 2023\n\n\nHoofdstuk 3 - Lineaire operatoren en eigenwaarden\n\n\nJutho Haegeman\n\n\n\n\nMay 10, 2024\n\n\nHoofdstuk 4 - Normen en afstanden\n\n\nJutho Haegeman\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "slides/H4.html",
+    "href": "slides/H4.html",
+    "title": "Hoofdstuk 4 - Normen en afstanden",
+    "section": "",
+    "text": "$$ % Math operators % % \n% VECTORS\n% specifically for vectors in F^n \n% MATRICES\n% SCALARS \n% LINEAR MAPS\n% FIELDS \n% RELATIONS \n% % % % % % % % %\n%\n$$\n\n\nConcept van norm = lengte van een vector\nNorm geeft aanleiding tot een afstand tussen vectoren\nVormt de basis om concepten uit analyse te importeren\n(rijen, reeksen, continuïteit, …)"
+  },
+  {
+    "objectID": "slides/H4.html#doel-van-dit-hoofdstuk",
+    "href": "slides/H4.html#doel-van-dit-hoofdstuk",
+    "title": "Hoofdstuk 4 - Normen en afstanden",
+    "section": "",
+    "text": "$$ % Math operators % % \n% VECTORS\n% specifically for vectors in F^n \n% MATRICES\n% SCALARS \n% LINEAR MAPS\n% FIELDS \n% RELATIONS \n% % % % % % % % %\n%\n$$\n\n\nConcept van norm = lengte van een vector\nNorm geeft aanleiding tot een afstand tussen vectoren\nVormt de basis om concepten uit analyse te importeren\n(rijen, reeksen, continuïteit, …)"
+  },
+  {
+    "objectID": "slides/H4.html#norm",
+    "href": "slides/H4.html#norm",
+    "title": "Hoofdstuk 4 - Normen en afstanden",
+    "section": "Norm",
+    "text": "Norm\nGegeven een vectorruimte \\(V\\). Een norm is een afbeelding \\(V \\to {\\mathbb{R}}: {v}\\mapsto {\\left\\lVert{v}\\right\\rVert}\\) die voldoet aan\n\nabsolute homogeniteit: \\({\\left\\lVert{a}{v}\\right\\rVert} = {\\left\\lvert{a}\\right\\rvert} {\\left\\lVert{v}\\right\\rVert}\\)\n\\(\\Rightarrow {\\left\\lVert{o}\\right\\rVert} = 0\\) ,\nsubadditiviteit / driehoeksongelijkheid: \\({\\left\\lVert{v}+ {w}\\right\\rVert} \\leq {\\left\\lVert{v}\\right\\rVert} + {\\left\\lVert{w}\\right\\rVert}\\)\n\\(\\Rightarrow {\\left\\lVert{o}\\right\\rVert} = 0 \\leq {\\left\\lVert{v}\\right\\rVert} + {\\left\\lVert-{v}\\right\\rVert} = 2 {\\left\\lVert vv\\right\\rVert}\\)\npositief definiet: \\({\\left\\lVert vv\\right\\rVert} = 0 \\Leftrightarrow {v}= 0\\)\n\nVoor de eerste eigenschap hebben we op het veld van scalairen \\({\\mathbb{F}}\\) een absolute waarde \\({\\left\\lvert{a}\\right\\rvert}\\) nodig. Voor \\({\\mathbb{R}}\\) en \\({\\mathbb{C}}\\) komt dit overeen met de gekende definitie."
+  },
+  {
+    "objectID": "slides/H4.html#voorbeelden",
+    "href": "slides/H4.html#voorbeelden",
+    "title": "Hoofdstuk 4 - Normen en afstanden",
+    "section": "Voorbeelden:",
+    "text": "Voorbeelden:\n\n\\(V = {\\mathbb{F}}^n\\): \\({\\left\\lVert{v}\\right\\rVert} = \\sum_{i=1}^n {\\left\\lvert v^i\\right\\rvert}\\)\n\\(V = {\\mathbb{R}}^2\\): \\({\\left\\lVert(x,y)\\right\\rVert} = \\sqrt{x^2 + y^2}\\)\n\\(V = C(I,{\\mathbb{F}})\\) voor een interval \\(I=[a,b] \\subseteq {\\mathbb{R}}\\): \\({\\left\\lVert f\\right\\rVert} = \\int_I {\\left\\lvert f(x)\\right\\rvert}\\,{\\mathrm{d}}x\\) (zie later)"
+  },
+  {
+    "objectID": "slides/H4.html#hölder-p-norm",
+    "href": "slides/H4.html#hölder-p-norm",
+    "title": "Hoofdstuk 4 - Normen en afstanden",
+    "section": "Hölder \\(p\\)-norm",
+    "text": "Hölder \\(p\\)-norm\nVoor \\(V = {\\mathbb{F}}^n\\) hebben we een familie van normen\n\\[{\\left\\lVert{v}\\right\\rVert}_p = \\left[\\sum_{i=1}^{n} {\\left\\lvert v^i\\right\\rvert}^p\\right]^{1/p}\\]\ninclusief de limiet \\(p\\to \\infty\\):\n\\[{\\left\\lVert{v}\\right\\rVert}_\\infty = \\max \\{{\\left\\lvert{v}^i\\right\\rvert}, i=1,\\ldots,n\\}\\]"
+  },
+  {
+    "objectID": "slides/H4.html#hölder-p-norm-1",
+    "href": "slides/H4.html#hölder-p-norm-1",
+    "title": "Hoofdstuk 4 - Normen en afstanden",
+    "section": "Hölder \\(p\\)-norm",
+    "text": "Hölder \\(p\\)-norm\n\n\\({\\left\\lVert\\cdot\\right\\rVert}_p\\) is absoluut homogeen en positief definiet per constructie.\ndriehoeksongelijkheid kunnen we in een aantal stappen bewijzen, waarvoor we \\(q = p/(p-1)\\) invoeren, of dus \\(1/p + 1/q = 1\\) (inclusief \\(p=0 \\leftrightarrow q=\\infty\\) en vice versa):\n\nYoung’s ongelijkheid: \\(\\forall a,b \\in {\\mathbb{R}}_{\\geq 0}: ab \\leq \\frac{a^p}{p} + \\frac{b^q}{q}\\)\nHölder’s ongelijkheid: \\(\\sum_{i=1}^n {\\left\\lvert v^i\\right\\rvert}{\\left\\lvert w^i\\right\\rvert} \\leq {\\left\\lVert v\\right\\rVert}_p {\\left\\lVert w\\right\\rVert}_q\\)\nMinkowski’s ongelijkheid: \\({\\left\\lVert{v}+{w}\\right\\rVert}_p \\leq {\\left\\lVert{v}\\right\\rVert}_p + {\\left\\lVert{w}\\right\\rVert}_p\\)"
+  },
+  {
+    "objectID": "slides/H4.html#hölder-p-norm-2",
+    "href": "slides/H4.html#hölder-p-norm-2",
+    "title": "Hoofdstuk 4 - Normen en afstanden",
+    "section": "Hölder \\(p\\)-norm",
+    "text": "Hölder \\(p\\)-norm\nUitbreiding naar oneindig-dimensionale ruimten:\n\n\\(\\ell^p({\\mathbb{N}}_0,{\\mathbb{F}}) {\\preccurlyeq}{\\mathbb{F}}^{{\\mathbb{N}}_0}\\): de ruimte van alle rijen \\((v^1,v^2,v^3,\\ldots)\\) waarvoor \\(\\sum_{i=1}^{+\\infty} {\\left\\lvert v^i\\right\\rvert}^p\\) convergeert naar een eindige waarde\n\nnorm \\({\\left\\lVert{v}\\right\\rVert}_\\infty = \\left[\\sum_{i=1}^{+\\infty} {\\left\\lvert v^i\\right\\rvert}^p\\right]^{1/p}\\) is eindig\nspeciaal geval \\(p=\\infty\\):\n\\({\\left\\lVert{v}\\right\\rVert}_\\infty = \\sup\\{{\\left\\lvert v^i\\right\\rvert}, i\\in {\\mathbb{N}}_0\\}\\) (supremum norm)\n\\(\\ell^\\infty({\\mathbb{N}}_0,{\\mathbb{F}})\\): ruimte van begrensde rijen\n\nBewijs van eigenschappen norm als limiet \\(n\\to\\infty\\) van bewijs voor \\({\\mathbb{F}}^n\\)."
+  },
+  {
+    "objectID": "slides/H4.html#hölder-p-norm-3",
+    "href": "slides/H4.html#hölder-p-norm-3",
+    "title": "Hoofdstuk 4 - Normen en afstanden",
+    "section": "Hölder \\(p\\)-norm",
+    "text": "Hölder \\(p\\)-norm\nUitbreiding naar oneindig-dimensionale ruimten:\n\nVoor \\(V = C^0([a,b],{\\mathbb{F}})\\): \\({\\left\\lVert f\\right\\rVert}_p = \\left(\\int_a^b {\\left\\lvert f(x)\\right\\rvert}^p\\,{\\mathrm{d}}x\\right)^{1/p}\\)\n\nContinuïteit en compactheid van interval \\([a,b]\\) noodzakelijk om goed gedefinieerd te zijn (geen divergenties), en voor de eigenschap \\({\\left\\lVert f\\right\\rVert}_p=0 \\implies f=0\\)\nDriehoeksongelijkheid kan op analoge manier bewezen worden\nMeer over functies in H7"
+  },
+  {
+    "objectID": "slides/H4.html#metrische-ruimten",
+    "href": "slides/H4.html#metrische-ruimten",
+    "title": "Hoofdstuk 4 - Normen en afstanden",
+    "section": "Metrische ruimten",
+    "text": "Metrische ruimten\nGegegeven een verzameling \\(X\\), een metriek of afstandsfunctie is een functie \\(d:X \\times X \\to {\\mathbb{R}}_{\\geq 0}\\) met eigenschappen:\n\n\\(d(x,y) = 0 \\iff x=y\\)\n\\(d(x,y) = d(y,x)\\)\n\\(d(x,y) + d(y,z) \\geq d(x,z)\\)\n\nen dan noemen we \\((X,d)\\) een metrische ruimte (ruimte wijst niet noodzakelijk op vectorruimte)\n\nEen genormeerde vectorruimte \\((V,{\\left\\lVert\\cdot\\right\\rVert})\\) wordt een metrische ruimte met de keuze \\(d({v},{w}) = {\\left\\lVert{v}-{w}\\right\\rVert}\\)"
+  },
+  {
+    "objectID": "slides/H4.html#metrische-ruimten-1",
+    "href": "slides/H4.html#metrische-ruimten-1",
+    "title": "Hoofdstuk 4 - Normen en afstanden",
+    "section": "Metrische ruimten",
+    "text": "Metrische ruimten\nBelang van metrische ruimten is dat we concepten uit analyse van functies \\({\\mathbb{R}}\\to {\\mathbb{R}}\\) kunnen veralgemenen:\n\nConvergentie van een rij \\((x_n \\in X)_{n \\in {\\mathbb{N}}_0}\\):\n\n\\(\\lim_{n \\to \\infty} x_n = x \\iff \\lim_{n \\to \\infty} d(x_n,x) = 0\\)\nof dus: \\(\\forall \\epsilon &gt; 0, \\exists N_\\epsilon \\in {\\mathbb{N}}_0\\) zodat \\(n \\geq N_\\epsilon \\implies d(x,x_n) \\leq \\epsilon\\)\n\nContinuïteit van \\(\\Phi:X \\to Y\\) tussen metrische ruimten \\((X,d_X)\\) en \\((Y,d_Y)\\):\n\n\\(\\Phi\\) is continu in \\(x \\in X\\): \\(\\lim_{n \\to \\infty} \\Phi(x_n) = \\Phi(x)\\) voor alle rijen \\((x_n)_{n \\in{\\mathbb{N}}_0}\\) met \\(\\lim_{n\\to\\infty} x_n = x\\)\n\\(\\Phi\\) is continu in \\(x \\in X\\): \\(\\forall \\epsilon &gt; 0\\), \\(\\exists \\delta_{\\epsilon} &gt; 0\\) zodat \\(d_X(x',x) &lt; \\delta_\\epsilon \\implies d_Y(\\Phi(x'),\\Phi(x))\\)\n\\(\\Phi\\) continu in volledig \\(X\\): \\(\\lim_{n\\to\\infty}\\Phi(x_n) = \\Phi(\\lim_{n\\to\\infty} x_n)\\) voor alle convergerende rijen\n\n\n\n\nVoor een continue afbeelding \\(\\Phi\\) kan \\(\\delta_\\epsilon\\) in de tweede definitie nog steeds afhangen van \\(x\\). Is dat niet nodig, dan heet \\(\\Phi\\) ook “uniform continu”."
+  },
+  {
+    "objectID": "slides/H4.html#metrische-ruimten-2",
+    "href": "slides/H4.html#metrische-ruimten-2",
+    "title": "Hoofdstuk 4 - Normen en afstanden",
+    "section": "Metrische ruimten",
+    "text": "Metrische ruimten\n\nEen afbeelding \\(\\Phi:X \\to Y\\) tussen metrische ruimten \\((X,d_X)\\) en \\((Y,d_Y)\\) is isometrisch als \\(d_Y(\\Phi(x),\\Phi(x')) = d_X(x,x')\\) voor alle \\(x,x'\\in X\\)\n\nEen isometrische afbeelding is automatisch injectief\nEen bijectieve isometrische afbeelding definieert een isomorfisme"
   },
   {
     "objectID": "slides/H2.html",

@@ -1,0 +1,269 @@
+---
+title: "Hoofdstuk 4 - Normen en afstanden"
+author: "Jutho Haegeman"
+date: "17/10/2023"
+# format:
+#   revealjs:
+#     theme: solarized
+#     chalkboard: true
+---
+
+## Doel van dit hoofdstuk
+
+
+::: {.hidden}
+$$
+% Math operators
+\DeclareMathOperator{\Aut}{Aut}
+\DeclareMathOperator{\End}{End}
+\DeclareMathOperator{\Hom}{Hom}
+\DeclareMathOperator{\GL}{GL}
+\DeclareMathOperator{\SL}{SL}
+\DeclareMathOperator{\Unitary}{U}
+\DeclareMathOperator{\Orthogonal}{O}
+\DeclareMathOperator{\SU}{SU}
+\DeclareMathOperator{\SO}{SO}
+\DeclareMathOperator{\Aff}{Aff}
+\DeclareMathOperator{\dom}{dom}
+\DeclareMathOperator{\cod}{codom}
+\DeclareMathOperator{\D}{\mathcal{D}}
+\DeclareMathOperator{\E}{\mathcal{E}}
+\DeclareMathOperator{\R}{\mathcal{R}}
+\DeclareMathOperator{\Schw}{\mathcal{S}}
+\DeclareMathOperator{\im}{im}
+%\DeclareMathOperator{\ker}{ker}
+%\DeclareMathOperator{\dim}{dim}
+\DeclareMathOperator{\codim}{codim}
+\DeclareMathOperator{\convhull}{co}
+
+\newcommand{\opgreek}[1]{\begingroup\mathgroup-1 #1\endgroup}
+\DeclareMathOperator{\rank}{rank}
+\DeclareMathOperator{\nullity}{nullity}
+
+\DeclareMathOperator{\Pv}{Pv}
+
+\DeclareMathOperator{\tr}{tr}
+\DeclareMathOperator{\sgn}{sgn}
+\DeclareMathOperator{\id}{id}
+\DeclareMathOperator{\adj}{adj}
+
+\DeclareMathOperator*{\varmin}{min}
+\DeclareMathOperator*{\varmax}{max}
+\DeclareMathOperator*{\argmin}{arg\ min}
+\DeclareMathOperator*{\argmax}{arg\ max}
+\DeclareMathOperator{\order}{\mathscr{O}}
+\DeclareMathOperator{\sign}{sgn}
+\DeclareMathOperator{\spanop}{span}
+\DeclareMathOperator{\arctanh}{arctanh}
+\DeclareMathOperator{\arccosh}{arccosh}
+\DeclareMathOperator{\arcsinh}{arcsinh}
+\DeclareMathOperator{\arccot}{arccot}
+\DeclareMathOperator{\sinc}{sinc}
+
+
+\newcommand{\commutator}[2]{{\left[#1,#2\right]}}
+\newcommand{\anticommutator}[2]{{\left\{#1,#2\right\}}}
+
+\DeclareMathOperator{\real}{Re}
+\DeclareMathOperator{\imag}{Im}
+\newcommand{\conj}[1]{{\overline{#1}}}
+\newcommand{\abs}[1]{{\left\lvert#1\right\rvert}}
+\newcommand{\norm}[1]{{\left\lVert#1\right\rVert}}
+\newcommand{\inner}[2]{{\left\langle#1,#2\right\rangle}}
+
+\newcommand{\drm}{{\mathrm{d}}}
+\newcommand{\erm}{{\mathrm{e}}}
+\newcommand{\irm}{{\mathrm{i}}}
+
+
+% VECTORS
+\newcommand{\vect}[1]{{#1}}
+\renewcommand{\vec}[1]{\boldsymbol{#1}} % specifically for vectors in F^n
+\newcommand{\zerovec}{{o}}
+\newcommand{\vu}{\vect{u}}
+\newcommand{\vv}{\vect{v}}
+\newcommand{\vw}{\vect{w}}
+\newcommand{\ve}{\vect{e}}
+\newcommand{\vf}{\vect{f}}
+\newcommand{\vx}{\vect{x}}
+\newcommand{\vy}{\vect{y}}
+
+% MATRICES
+\newcommand{\mat}[1]{{\mathsf{#1}}}
+\newcommand{\zeromat}{\mat{O}}
+\newcommand{\idmat}{\mat{I}}
+
+% SCALARS
+\newcommand{\scalara}{{a}}
+\newcommand{\scalarb}{{b}}
+\newcommand{\scalarc}{{c}}
+
+% LINEAR MAPS
+\DeclareMathAlphabet{\mymathbb}{U}{BOONDOX-ds}{m}{n}
+\newcommand{\map}[1]{{\hat{#1}}}
+\newcommand{\idmap}{\map{1}}
+\newcommand{\zeromap}{\map{0}}
+
+\newcommand{\transpose}{{\mathsf{T}}}
+\newcommand{\hermitian}{{\mathsf{H}}}
+
+\renewcommand{\d}{{\mathrm{d}}}
+
+% FIELDS
+\newcommand{\bbF}{{\mathbb{F}}}
+\newcommand{\bbN}{{\mathbb{N}}}
+\newcommand{\bbZ}{{\mathbb{Z}}}
+\newcommand{\bbQ}{{\mathbb{Q}}}
+\newcommand{\bbR}{{\mathbb{R}}}
+\newcommand{\bbC}{{\mathbb{C}}}
+\newcommand{\bbH}{{\mathbb{H}}}
+\newcommand{\bbT}{{\mathbb{T}}}
+
+% RELATIONS
+\newcommand{\subspace}{{\preccurlyeq}}
+\newcommand{\supspace}{{\succcurlyeq}}
+
+%\newcommand{\vz}{{\bm{z}}}
+%\newcommand{\ovz}{{\overline{\bm{z}}}}
+%\newcommand{\oz}{{\overline{z}}}
+%\newcommand{\vu}{{\bm{u}}}
+%\newcommand{\ovu}{{\overline{\bm{u}}}}
+%\newcommand{\ou}{{\overline{u}}}
+%\newcommand{\vr}{{\bm{r}}}
+%\newcommand{\ovr}{{\overline{\bm{r}}}}
+%\newcommand{\orr}{{\overline{r}}}
+
+\newcommand{\eps}{{\varepsilon}}
+\newcommand{\levicivita}{{\epsilon}}
+
+\newcommand{\sx}{{\sigma^x}}
+\newcommand{\sy}{{\sigma^y}}
+\newcommand{\sz}{{\sigma^z}}
+\renewcommand{\sp}{{\sigma^+}}
+\newcommand{\sm}{{\sigma^-}}
+%
+
+\DeclareMathOperator*{\sumint}{%
+\mathchoice%
+  {\ooalign{$\displaystyle\sum$\cr\hidewidth$\displaystyle\int$\hidewidth\cr}}
+  {\ooalign{\raisebox{.14\height}{\scalebox{.7}{$\textstyle\sum$}}\cr\hidewidth$\textstyle\int$\hidewidth\cr}}
+  {\ooalign{\raisebox{.2\height}{\scalebox{.6}{$\scriptstyle\sum$}}\cr$\scriptstyle\int$\cr}}
+  {\ooalign{\raisebox{.2\height}{\scalebox{.6}{$\scriptstyle\sum$}}\cr$\scriptstyle\int$\cr}}
+}
+$$
+:::
+
+* Concept van norm = lengte van een vector
+* Norm geeft aanleiding tot een afstand tussen vectoren
+* Vormt de basis om concepten uit analyse te importeren
+
+  (rijen, reeksen, continuïteit, …)
+
+# Genormeerde vectorruimten
+
+## Norm
+
+Gegeven een vectorruimte $V$. Een norm is een afbeelding $V \to \bbR : \vv \mapsto \norm{\vv}$ die voldoet aan
+
+* absolute homogeniteit: $\norm{\scalara \vv} = \abs{\scalara} \norm{\vv}$
+
+  $\Rightarrow \norm{\zerovec} = 0$ , 
+* subadditiviteit / driehoeksongelijkheid: $\norm{\vv + \vw } \leq \norm{\vv} + \norm{\vw}$
+
+  $\Rightarrow \norm{\zerovec} = 0 \leq \norm{\vv} + \norm{-\vv} = 2 \norm{vv}$ 
+
+* positief definiet: $\norm{vv} = 0 \Leftrightarrow \vv = 0$
+
+Voor de eerste eigenschap hebben we op het veld van scalairen $\bbF$ een **absolute waarde** $\abs{\scalara}$ nodig. Voor $\bbR$ en $\bbC$ komt dit overeen met de gekende definitie. 
+
+## Voorbeelden:
+
+* $V = \bbF^n$: $\norm{\vv} = \sum_{i=1}^n \abs{v^i}$
+* $V = \bbR^2$: $\norm{(x,y)} = \sqrt{x^2 + y^2}$
+* $V = C(I,\bbF)$ voor een interval $I=[a,b] \subseteq \bbR$: $\norm{f} = \int_I \abs{f(x)}\,\drm x$ (zie later)
+
+## Hölder $p$-norm
+
+Voor $V = \bbF^n$ hebben we een familie van normen
+
+$$\norm{\vv}_p = \left[\sum_{i=1}^{n} \abs{v^i}^p\right]^{1/p}$$
+
+inclusief de limiet $p\to \infty$:
+
+$$\norm{\vv}_\infty = \max \{\abs{\vv^i}, i=1,\ldots,n\}$$
+
+## Hölder $p$-norm
+
+* $\norm{\cdot}_p$ is absoluut homogeen en positief definiet per constructie.
+
+* driehoeksongelijkheid kunnen we in een aantal stappen bewijzen, waarvoor we $q = p/(p-1)$ invoeren, of dus $1/p + 1/q = 1$ (inclusief $p=0 \leftrightarrow q=\infty$ en vice versa):
+
+  * Young's ongelijkheid: $\forall a,b \in \bbR_{\geq 0}: ab \leq \frac{a^p}{p} + \frac{b^q}{q}$
+  * Hölder's ongelijkheid: $\sum_{i=1}^n \abs{v^i}\abs{w^i} \leq \norm{v}_p \norm{w}_q$
+  * Minkowski's ongelijkheid: $\norm{\vv+\vw}_p \leq \norm{\vv}_p + \norm{\vw}_p$
+
+## Hölder $p$-norm
+
+Uitbreiding naar oneindig-dimensionale ruimten:
+
+* $\ell^p(\bbN_0,\bbF) \subspace \bbF^{\bbN_0}$: de ruimte van alle rijen $(v^1,v^2,v^3,\ldots)$ waarvoor $\sum_{i=1}^{+\infty} \abs{v^i}^p$ convergeert naar een eindige waarde
+
+    * norm $\norm{\vv}_\infty = \left[\sum_{i=1}^{+\infty} \abs{v^i}^p\right]^{1/p}$ is eindig
+
+    * speciaal geval $p=\infty$:
+    
+      $\norm{\vv}_\infty = \sup\{\abs{v^i}, i\in \bbN_0\}$ (supremum norm)
+
+      $\ell^\infty(\bbN_0,\bbF)$: ruimte van begrensde rijen
+
+  Bewijs van eigenschappen norm als limiet $n\to\infty$ van bewijs voor $\bbF^n$.
+
+## Hölder $p$-norm
+
+Uitbreiding naar oneindig-dimensionale ruimten:
+
+* Voor $V = C^0([a,b],\bbF)$: $\norm{f}_p = \left(\int_a^b \abs{f(x)}^p\,\drm x\right)^{1/p}$
+
+  * Continuïteit en compactheid van interval $[a,b]$ noodzakelijk om goed gedefinieerd te zijn (geen divergenties), en voor de eigenschap $\norm{f}_p=0 \implies f=0$
+  * Driehoeksongelijkheid kan op analoge manier bewezen worden
+  * Meer over functies in H7
+
+## Metrische ruimten
+
+Gegegeven een verzameling $X$, een metriek of afstandsfunctie is een functie $d:X \times X \to \bbR_{\geq 0}$ met eigenschappen:
+
+* $d(x,y) = 0 \iff x=y$
+* $d(x,y) = d(y,x)$
+* $d(x,y) + d(y,z) \geq d(x,z)$
+
+en dan noemen we $(X,d)$ een metrische ruimte
+(ruimte wijst niet noodzakelijk op vectorruimte)
+
+* Een genormeerde vectorruimte $(V,\norm{\cdot})$ wordt een metrische ruimte met de keuze $d(\vv,\vw) = \norm{\vv-\vw}$
+
+## Metrische ruimten {.smaller}
+
+Belang van metrische ruimten is dat we concepten uit analyse van functies $\bbR \to \bbR$ kunnen veralgemenen:
+
+* Convergentie van een rij $(x_n \in X)_{n \in \bbN_0}$:
+
+  * $\lim_{n \to \infty} x_n = x \iff \lim_{n \to \infty} d(x_n,x) = 0$
+
+  * of dus: $\forall \epsilon > 0, \exists N_\epsilon \in \bbN_0$ zodat $n \geq N_\epsilon \implies d(x,x_n) \leq \epsilon$
+
+
+* Continuïteit van $\Phi:X \to Y$ tussen metrische ruimten $(X,d_X)$ en $(Y,d_Y)$:
+
+  * $\Phi$ is continu in $x \in X$: $\lim_{n \to \infty} \Phi(x_n) = \Phi(x)$ voor alle rijen $(x_n)_{n \in\bbN_0}$ met $\lim_{n\to\infty} x_n = x$
+  * $\Phi$ is continu in $x \in X$: $\forall \epsilon > 0$, $\exists \delta_{\epsilon} > 0$ zodat $d_X(x',x) < \delta_\epsilon \implies d_Y(\Phi(x'),\Phi(x))$
+  * $\Phi$ continu in volledig $X$: $\lim_{n\to\infty}\Phi(x_n) = \Phi(\lim_{n\to\infty} x_n)$ voor alle convergerende rijen 
+
+::: aside
+Voor een continue afbeelding $\Phi$ kan $\delta_\epsilon$ in de tweede definitie nog steeds afhangen van $x$. Is dat niet nodig, dan heet $\Phi$ ook "uniform continu".
+:::
+
+## Metrische ruimten
+
+* Een afbeelding $\Phi:X \to Y$ tussen metrische ruimten $(X,d_X)$ en $(Y,d_Y)$ is **isometrisch** als $d_Y(\Phi(x),\Phi(x')) = d_X(x,x')$ voor alle $x,x'\in X$
+  * Een isometrische afbeelding is automatisch injectief
+  * Een bijectieve isometrische afbeelding definieert een isomorfisme 

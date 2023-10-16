@@ -803,3 +803,158 @@ $\Rightarrow$ typisch niet uniek (meerdere $\map{B}$ voldoen aan $\map{A}=\exp(\
 		\lambda & 1 & 0\\ 0 & \lambda & 1 \\ 0 & 0 & \lambda
 	\end{bmatrix}^{1/2} = \begin{bmatrix} \sqrt{\lambda} & \frac{1}{2\sqrt{\lambda}} & -\frac{1}{4 \lambda^{3/2}}\\ 0 & \sqrt{\lambda}  & \frac{1}{2\sqrt{\lambda}} \\ 0 & 0 & \sqrt{\lambda}\end{bmatrix}$
 
+# Toepassing: lineaire dynamische systemen
+
+## Dynamische systemen
+
+Een **dynamisch systeem** is een algemene naam voor de wiskundige modellering van een tijdsafhankelijk fenomeen of process van natuurlijke of menselijke origine (fysisch, chemisch, biologisch, ecologisch, economisch, sociaal, …). 
+
+## Dynamische systemen
+
+Ingrediënten van een (deterministisch en autonoom/translatie-invariant) dynamisch systeem:
+
+* Toestandsruimte / configuratieruimte $S$: verzameling van toestanden waarin het systeem zich op bepaald tijdstip kan bevinden
+* Verzameling $T$ van tijdstippen $t$ waarover het systemen kan worden geëvolueerd, waarbij tijdstippen kunnen worden opgeteld: $t_1 + t_2 \in T$ voor alle $t_1,t_2 \in T$
+
+  $(T,+)$ is een abelse monoïde; inverse evolutie moet niet bestaan
+
+* Evolutieregel $\Phi_t:S\to S$ voor alle $t \in T$ zodat $\Phi_{t_1} \circ \Phi_{t_2} = \Phi_{t_1 + t_2}$ en $\Phi_0 = \id_S$
+
+## Dynamische systemen
+
+* In deze cursus: $S$ is vectorruimte
+* Evolutieregel vaak geschreven als $\Phi:T \times S \to S$
+* Opsplitsing in:
+  * $T = (\bbR_{\geq 0},+)$: continue (tijd) dynamisch systemen
+  * $T = (\bbN, +)$: discrete (tijd) dynamisch systemen
+* Algemene concepten:
+  * 'fixpunt', vast punt of evenwichtspunt $x^\ast$: $\Phi(t,x^\ast) = x^\ast, \forall t \in T$
+  * traject $\gamma_x: T\to S : t \mapsto \Phi(t,x)$; baan $O_x = \gamma_x(T)$
+
+## Discreet dynamisch systeem
+
+$\Phi_n(x) = (\Phi_{n-1} \circ \phi)(x) = \underbrace{\phi \circ \phi \circ \cdots \circ \phi}_{\text{$n$ times}}(x) = \phi^n(x)$
+
+  met $\phi = \Phi_1$
+
+$\Rightarrow \vec{x}_{n+1} = \phi(x_{n})$ : recurrentierelatie, iteratief process
+
+## Discreet dynamisch systeem
+
+Beschouw nu $S = \bbR^m$: $\vec{x}$, $\vec{\phi}$, \ldots
+
+* Evenwichtspunt: $\vec{\phi}(\vec{x}^\ast) = \vec{x}^\ast$
+* Affien: $\vec{\phi}(\vec{x}) = \mat{A}\vec{x}+\vec{b}$; linear: $\vec{\phi}(\vec{x}) = \mat{A}\vec{x}$
+* Typische dynamische systemen zijn niet linear:
+
+  $\Rightarrow$ linearisatie rond evenwichtspunt
+
+  $\vec{\phi}(\vec{x}_\ast + \vec{y}_n) \approx \underbrace{\vec{\phi}(\vec{x}^\ast)}_{= \vec{x}^\ast} + \underbrace{\sum_{j=1}^{n}\frac{\partial \vec{\phi}}{\partial x^j}(\vec{x}^\ast) (\vec{y}_n)^j}_{=\mat{J}_{\vec{\phi}}(\vec{x}^\ast) \vec{y}_n}+ \order(\vec{y}^2)$
+
+  $\Rightarrow$ eigenschappen van $\mat{J}_{\varphi}(\vec{x}^ast)$ bepalen gedrag rond en stabiliteit van $\vec{x}^\ast$
+
+## Discreet dynamisch systeem
+
+$\vec{x}_n = \mat{A} \vec{x}_{n-1} \Rightarrow \vec{x}_n = \mat{A}^n \vec{x}_0$
+
+Perturbaties rond $\vec{x}^\ast=\vec{0}$ bepaald door eigenwaarden (Jordan-decompositie) van $\mat{A}$:
+
+* $\abs{\lambda}$ > 1: afstand tot evenwichtspunt neemt exponentieel toe
+* alle $\abs{\lambda} < 1$: perturbaties rond evenwicht convergeren terug naar evenwichtspunt $\Rightarrow$ stabiliteit
+* $\lambda = \exp(\irm 2\pi/p)$ periodieke oplossingen met periode $p$
+
+## Recurrentierelaties
+
+* Dynamisch systeem: $\vec{x}_{n+1}= \vec{\phi}(\vec{x}_n)$
+* Meer algemeen: $\vec{x}_{n+1}= \vec{\phi}(n, \vec{x}_n)$
+
+  Niet autonoom / tijdshomogeen / translatie-invariant
+
+* Hogere orde (maar autonoom): $\vec{x}_{n+k} = \vec{\phi}(\vec{x}_{n}, \dots, \vec{x}_{n+k-2}, \vec{x}_{n+k-1})$
+
+  kan omgezet worden in een eerste orde relatie voor $\vec{y}_{n} = (\vec{x}_{n}, \dots, \vec{x}_{n+k-2}, \vec{x}_{n+k-1}) \in \bbR^{km}$
+
+  \begin{align*}\small
+ 	\vec{y}_{n+1} = \vec{\psi}(\vec{y}_n) &= \vec{\psi}(\vec{x}_{n}, \dots, \vec{x}_{n+k-2}, \vec{x}_{n+k-1})  \\
+ 	&= (\vec{x}_{n+1}, \dots, \vec{x}_{n+k-1}, \vec{\phi}(\vec{x}_{n}, \dots, \vec{x}_{n+k-2}, \vec{x}_{n+k-1}))
+\end{align*}
+
+## Recurrentierelaties {.smaller}
+
+$$\vec{x}_{n+k} = \mat{A}_{0} \vec{x}_{n} + \mat{A}_{1} \vec{x}_{n+1} + \dots + \mat{A}_{k-2} \vec{x}_{n+k-2} + \mat{A}_{k-1} \vec{x}_{n_k-1}$$
+
+\begin{equation}
+\Rightarrow \vec{y}_{n+1} = \begin{bmatrix}
+		\vec{x}_{n+1} \\ \vec{x}_{n+2} \\ \dots \\ \vec{x}_{n+k-1} \\ \vec{x}_{n+k}
+	\end{bmatrix} = \begin{bmatrix} \zeromat & \idmat & \dots & \zeromat & \zeromat \\
+ \zeromat & \zeromat & \dots & \zeromat & \zeromat\\
+ \vdots & \vdots & \ddots & \vdots & \vdots\\
+ \zeromat & \zeromat & \dots & \zeromat & \idmat\\
+ \mat{A}_{0} & \mat{A}_{1} & \dots & \mat{A}_{k-2} & \mat{A}_{k-1}
+ \end{bmatrix}\begin{bmatrix}
+		\vec{x}_{n} \\ \vec{x}_{n+1} \\ \dots \\ \vec{x}_{n+k-2} \\ \vec{x}_{n+k-1}
+	\end{bmatrix}.
+\end{equation}
+
+Voor $k=1$ ($x_n$ scalair): $y_{n+1} = \mat{C} \vec{y}_n = \mat{C}^{n+1}\vec{y}_0$ met $\mat{C}$ een companion matrix
+
+  * Algemene oplossing is een lineaire combinatie van elementaire oplossingen $x_n = n^j \lambda^n$ voor $\lambda$ een nulpunt van de bijbehorende polynoom en $j=0,1,\ldots,q-1$ met $q$ de algebraïsche multipliciteit van $\lambda$.
+
+  * Polynoom voor $\lambda$ kan gevonden worden door oplossingen $x_n=\lambda^n$ in te vullen in de recurrentierelatie
+
+  * Lineaire combinatie vinden door te "matchen" met beginvoorwaarden $x_0,\ldots,x_{k-1}$. 
+
+## Recurrentierelatie: voorbeeld
+
+Bekendste voorbeeld: Fibonacci
+
+$x_{n+2} = x_{n} + x_{n+1}$
+
+$\Rightarrow \lambda^2 = \lambda + 1$
+
+$\Rightarrow: \lambda = \frac{1\pm \sqrt{5}}{2}$
+
+$x_0 = 0, x_1 = 1 \Rightarrow (x_n)_{n \in \bbN} = (0,1,1,2,3,5,8,13,\ldots)$
+
+## Continue dynamische systemen
+
+Er is geen "kleinste eenheid van evolutie"
+
+$\dot{\vec{x}}(t) = \vec{\varphi}(\vec{x}(t))$ (eerste orde differentiaalvergelijking)
+
+* Evenwichtspunt $\vec{\varphi}(\vec{x}^\ast) = \vec{0}$
+* Linearisatie rond evenwichtspunt
+
+  $\vec{\varphi}(\vec{x}_\ast + \vec{y}(t)) \approx \underbrace{\vec{\phi}(\vec{x}^\ast)}_{=\vec{0}} + \underbrace{\sum_{j=1}^{n}\frac{\partial \vec{\varphi}}{\partial x^j}(\vec{x}^\ast) (\vec{y}(t))^j}_{=\mat{J}_{\vec{\phi}}(\vec{x}^\ast) \vec{y}(t)}+ \order(\vec{y}^2)$
+
+## Continue dynamische systemen
+
+* Lineaire systemen: $\dot{\vec{x}}(t) = \mat{A}\vec{x}(t)$
+
+  $\Rightarrow\vec{x}(t) = \erm^{t\mat{A}} \vec{x}_0$
+
+* Perturbaties rond $\vec{x}^\ast=\vec{0}$ bepaald door eigenwaarden (Jordan-decompositie) van $\mat{A}$:
+
+  * alle $\real{\lambda}<0$: perturbaties sterven uit, evenwichtspunt stabiel
+  * een $\real{\lambda}>0$: perturbatie groeit exponentieel in de tijd
+  * $\lambda = \irm 2\pi/p$: periodieke baan met periode $p$
+
+## Hogere orde differentiaalvergelijkingen {.smaller}
+
+* $\vec{x}^{(k)}(t) = \vec{\varphi}(t, \vec{x}(t), \dot{\vec{x}(t)},\ldots, \vec{x}^{(k-1)}(t))$
+
+  Herleidbaar naar eerste orde differentiaalvergelijking voor $\vec{y}(t) = (\vec{x}(t), \dot{\vec{x}}(t), \ddot{\vec{x}}(t), \dots, \vec{x}^{(k-1)}(t))$
+
+* Voor $k=1$ ($x(t)$ scalair):
+
+  $x^{(k)}(t) = a_{0} x(t) + a_{1} \dot{x}(t) + \dots + a_{k-2} x^{(k-2)}(t) + a_{k-1} x^{(k-1)}(t)$
+
+  $\Rightarrow \dot{\vec{y}}(t) = \mat{C} \vec{y}(t)$ met $\mat{C}$ een companion matrix
+
+  * Algemene oplossing is een lineaire combinatie van elementaire oplossingen $x(t) = t^j \erm^{\lambda t}$ voor $\lambda$ een nulpunt van de bijbehorende polynoom en $j=0,1,\ldots,q-1$ met $q$ de algebraïsche multipliciteit van $\lambda$
+
+  * Polynoom voor $\lambda$ kan gevonden worden door oplossingen $x(t)=\erm^{\lambda t}$ in te vullen in de recurrentierelatie
+
+  * Lineaire combinatie vinden door te "matchen" met beginvoorwaarden $x(0),\dot{x}(0),\ldots,x^{(k-1)}(0)$. 
+
+

@@ -173,6 +173,21 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#logaritmische-functie-en-machten" id="toc-logaritmische-functie-en-machten" class="nav-link" data-scroll-target="#logaritmische-functie-en-machten">Logaritmische functie en machten</a></li>
   <li><a href="#logaritmische-functie-en-machten-1" id="toc-logaritmische-functie-en-machten-1" class="nav-link" data-scroll-target="#logaritmische-functie-en-machten-1">Logaritmische functie en machten</a></li>
   </ul></li>
+  <li><a href="#toepassing-lineaire-dynamische-systemen" id="toc-toepassing-lineaire-dynamische-systemen" class="nav-link" data-scroll-target="#toepassing-lineaire-dynamische-systemen">Toepassing: lineaire dynamische systemen</a>
+  <ul class="collapse">
+  <li><a href="#dynamische-systemen" id="toc-dynamische-systemen" class="nav-link" data-scroll-target="#dynamische-systemen">Dynamische systemen</a></li>
+  <li><a href="#dynamische-systemen-1" id="toc-dynamische-systemen-1" class="nav-link" data-scroll-target="#dynamische-systemen-1">Dynamische systemen</a></li>
+  <li><a href="#dynamische-systemen-2" id="toc-dynamische-systemen-2" class="nav-link" data-scroll-target="#dynamische-systemen-2">Dynamische systemen</a></li>
+  <li><a href="#discreet-dynamisch-systeem" id="toc-discreet-dynamisch-systeem" class="nav-link" data-scroll-target="#discreet-dynamisch-systeem">Discreet dynamisch systeem</a></li>
+  <li><a href="#discreet-dynamisch-systeem-1" id="toc-discreet-dynamisch-systeem-1" class="nav-link" data-scroll-target="#discreet-dynamisch-systeem-1">Discreet dynamisch systeem</a></li>
+  <li><a href="#discreet-dynamisch-systeem-2" id="toc-discreet-dynamisch-systeem-2" class="nav-link" data-scroll-target="#discreet-dynamisch-systeem-2">Discreet dynamisch systeem</a></li>
+  <li><a href="#recurrentierelaties" id="toc-recurrentierelaties" class="nav-link" data-scroll-target="#recurrentierelaties">Recurrentierelaties</a></li>
+  <li><a href="#recurrentierelaties-1" id="toc-recurrentierelaties-1" class="nav-link" data-scroll-target="#recurrentierelaties-1">Recurrentierelaties</a></li>
+  <li><a href="#recurrentierelatie-voorbeeld" id="toc-recurrentierelatie-voorbeeld" class="nav-link" data-scroll-target="#recurrentierelatie-voorbeeld">Recurrentierelatie: voorbeeld</a></li>
+  <li><a href="#continue-dynamische-systemen" id="toc-continue-dynamische-systemen" class="nav-link" data-scroll-target="#continue-dynamische-systemen">Continue dynamische systemen</a></li>
+  <li><a href="#continue-dynamische-systemen-1" id="toc-continue-dynamische-systemen-1" class="nav-link" data-scroll-target="#continue-dynamische-systemen-1">Continue dynamische systemen</a></li>
+  <li><a href="#hogere-orde-differentiaalvergelijkingen" id="toc-hogere-orde-differentiaalvergelijkingen" class="nav-link" data-scroll-target="#hogere-orde-differentiaalvergelijkingen">Hogere orde differentiaalvergelijkingen</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -766,6 +781,150 @@ ul.task-list li input[type="checkbox"] {
 <h2 class="anchored" data-anchor-id="logaritmische-functie-en-machten-1">Logaritmische functie en machten</h2>
 <ul>
 <li>Voorbeeld: <span class="math inline">\(J_3(\lambda)^{1/2}=\begin{bmatrix}  \lambda &amp; 1 &amp; 0\\ 0 &amp; \lambda &amp; 1 \\ 0 &amp; 0 &amp; \lambda  \end{bmatrix}^{1/2} = \begin{bmatrix} \sqrt{\lambda} &amp; \frac{1}{2\sqrt{\lambda}} &amp; -\frac{1}{4 \lambda^{3/2}}\\ 0 &amp; \sqrt{\lambda} &amp; \frac{1}{2\sqrt{\lambda}} \\ 0 &amp; 0 &amp; \sqrt{\lambda}\end{bmatrix}\)</span></li>
+</ul>
+</section>
+</section>
+<section id="toepassing-lineaire-dynamische-systemen" class="level1">
+<h1>Toepassing: lineaire dynamische systemen</h1>
+<section id="dynamische-systemen" class="level2">
+<h2 class="anchored" data-anchor-id="dynamische-systemen">Dynamische systemen</h2>
+<p>Een <strong>dynamisch systeem</strong> is een algemene naam voor de wiskundige modellering van een tijdsafhankelijk fenomeen of process van natuurlijke of menselijke origine (fysisch, chemisch, biologisch, ecologisch, economisch, sociaal, …).</p>
+</section>
+<section id="dynamische-systemen-1" class="level2">
+<h2 class="anchored" data-anchor-id="dynamische-systemen-1">Dynamische systemen</h2>
+<p>Ingrediënten van een (deterministisch en autonoom/translatie-invariant) dynamisch systeem:</p>
+<ul>
+<li><p>Toestandsruimte / configuratieruimte <span class="math inline">\(S\)</span>: verzameling van toestanden waarin het systeem zich op bepaald tijdstip kan bevinden</p></li>
+<li><p>Verzameling <span class="math inline">\(T\)</span> van tijdstippen <span class="math inline">\(t\)</span> waarover het systemen kan worden geëvolueerd, waarbij tijdstippen kunnen worden opgeteld: <span class="math inline">\(t_1 + t_2 \in T\)</span> voor alle <span class="math inline">\(t_1,t_2 \in T\)</span></p>
+<p><span class="math inline">\((T,+)\)</span> is een abelse monoïde; inverse evolutie moet niet bestaan</p></li>
+<li><p>Evolutieregel <span class="math inline">\(\Phi_t:S\to S\)</span> voor alle <span class="math inline">\(t \in T\)</span> zodat <span class="math inline">\(\Phi_{t_1} \circ \Phi_{t_2} = \Phi_{t_1 + t_2}\)</span> en <span class="math inline">\(\Phi_0 = \mathop{\mathrm{id}}_S\)</span></p></li>
+</ul>
+</section>
+<section id="dynamische-systemen-2" class="level2">
+<h2 class="anchored" data-anchor-id="dynamische-systemen-2">Dynamische systemen</h2>
+<ul>
+<li>In deze cursus: <span class="math inline">\(S\)</span> is vectorruimte</li>
+<li>Evolutieregel vaak geschreven als <span class="math inline">\(\Phi:T \times S \to S\)</span></li>
+<li>Opsplitsing in:
+<ul>
+<li><span class="math inline">\(T = ({\mathbb{R}}_{\geq 0},+)\)</span>: continue (tijd) dynamisch systemen</li>
+<li><span class="math inline">\(T = ({\mathbb{N}}, +)\)</span>: discrete (tijd) dynamisch systemen</li>
+</ul></li>
+<li>Algemene concepten:
+<ul>
+<li>‘fixpunt’, vast punt of evenwichtspunt <span class="math inline">\(x^\ast\)</span>: <span class="math inline">\(\Phi(t,x^\ast) = x^\ast, \forall t \in T\)</span></li>
+<li>traject <span class="math inline">\(\gamma_x: T\to S : t \mapsto \Phi(t,x)\)</span>; baan <span class="math inline">\(O_x = \gamma_x(T)\)</span></li>
+</ul></li>
+</ul>
+</section>
+<section id="discreet-dynamisch-systeem" class="level2">
+<h2 class="anchored" data-anchor-id="discreet-dynamisch-systeem">Discreet dynamisch systeem</h2>
+<p><span class="math inline">\(\Phi_n(x) = (\Phi_{n-1} \circ \phi)(x) = \underbrace{\phi \circ \phi \circ \cdots \circ \phi}_{\text{$n$ times}}(x) = \phi^n(x)\)</span></p>
+<p>met <span class="math inline">\(\phi = \Phi_1\)</span></p>
+<p><span class="math inline">\(\Rightarrow \boldsymbol{x}_{n+1} = \phi(x_{n})\)</span> : recurrentierelatie, iteratief process</p>
+</section>
+<section id="discreet-dynamisch-systeem-1" class="level2">
+<h2 class="anchored" data-anchor-id="discreet-dynamisch-systeem-1">Discreet dynamisch systeem</h2>
+<p>Beschouw nu <span class="math inline">\(S = {\mathbb{R}}^m\)</span>: <span class="math inline">\(\boldsymbol{x}\)</span>, <span class="math inline">\(\boldsymbol{\phi}\)</span>, </p>
+<ul>
+<li><p>Evenwichtspunt: <span class="math inline">\(\boldsymbol{\phi}(\boldsymbol{x}^\ast) = \boldsymbol{x}^\ast\)</span></p></li>
+<li><p>Affien: <span class="math inline">\(\boldsymbol{\phi}(\boldsymbol{x}) = {\mathsf{A}}\boldsymbol{x}+\boldsymbol{b}\)</span>; linear: <span class="math inline">\(\boldsymbol{\phi}(\boldsymbol{x}) = {\mathsf{A}}\boldsymbol{x}\)</span></p></li>
+<li><p>Typische dynamische systemen zijn niet linear:</p>
+<p><span class="math inline">\(\Rightarrow\)</span> linearisatie rond evenwichtspunt</p>
+<p><span class="math inline">\(\boldsymbol{\phi}(\boldsymbol{x}_\ast + \boldsymbol{y}_n) \approx \underbrace{\boldsymbol{\phi}(\boldsymbol{x}^\ast)}_{= \boldsymbol{x}^\ast} + \underbrace{\sum_{j=1}^{n}\frac{\partial \boldsymbol{\phi}}{\partial x^j}(\boldsymbol{x}^\ast) (\boldsymbol{y}_n)^j}_{={\mathsf{J}}_{\boldsymbol{\phi}}(\boldsymbol{x}^\ast) \boldsymbol{y}_n}+ \mathop{\mathrm{\mathscr{O}}}(\boldsymbol{y}^2)\)</span></p>
+<p><span class="math inline">\(\Rightarrow\)</span> eigenschappen van <span class="math inline">\({\mathsf{J}}_{\varphi}(\boldsymbol{x}^ast)\)</span> bepalen gedrag rond en stabiliteit van <span class="math inline">\(\boldsymbol{x}^\ast\)</span></p></li>
+</ul>
+</section>
+<section id="discreet-dynamisch-systeem-2" class="level2">
+<h2 class="anchored" data-anchor-id="discreet-dynamisch-systeem-2">Discreet dynamisch systeem</h2>
+<p><span class="math inline">\(\boldsymbol{x}_n = {\mathsf{A}} \boldsymbol{x}_{n-1} \Rightarrow \boldsymbol{x}_n = {\mathsf{A}}^n \boldsymbol{x}_0\)</span></p>
+<p>Perturbaties rond <span class="math inline">\(\boldsymbol{x}^\ast=\boldsymbol{0}\)</span> bepaald door eigenwaarden (Jordan-decompositie) van <span class="math inline">\({\mathsf{A}}\)</span>:</p>
+<ul>
+<li><span class="math inline">\({\left\lvert\lambda\right\rvert}\)</span> &gt; 1: afstand tot evenwichtspunt neemt exponentieel toe</li>
+<li>alle <span class="math inline">\({\left\lvert\lambda\right\rvert} &lt; 1\)</span>: perturbaties rond evenwicht convergeren terug naar evenwichtspunt <span class="math inline">\(\Rightarrow\)</span> stabiliteit</li>
+<li><span class="math inline">\(\lambda = \exp({\mathrm{i}}2\pi/p)\)</span> periodieke oplossingen met periode <span class="math inline">\(p\)</span></li>
+</ul>
+</section>
+<section id="recurrentierelaties" class="level2">
+<h2 class="anchored" data-anchor-id="recurrentierelaties">Recurrentierelaties</h2>
+<ul>
+<li><p>Dynamisch systeem: <span class="math inline">\(\boldsymbol{x}_{n+1}= \boldsymbol{\phi}(\boldsymbol{x}_n)\)</span></p></li>
+<li><p>Meer algemeen: <span class="math inline">\(\boldsymbol{x}_{n+1}= \boldsymbol{\phi}(n, \boldsymbol{x}_n)\)</span></p>
+<p>Niet autonoom / tijdshomogeen / translatie-invariant</p></li>
+<li><p>Hogere orde (maar autonoom): <span class="math inline">\(\boldsymbol{x}_{n+k} = \boldsymbol{\phi}(\boldsymbol{x}_{n}, \dots, \boldsymbol{x}_{n+k-2}, \boldsymbol{x}_{n+k-1})\)</span></p>
+<p>kan omgezet worden in een eerste orde relatie voor <span class="math inline">\(\boldsymbol{y}_{n} = (\boldsymbol{x}_{n}, \dots, \boldsymbol{x}_{n+k-2}, \boldsymbol{x}_{n+k-1}) \in {\mathbb{R}}^{km}\)</span></p>
+<p><span class="math display">\[\begin{align*}\small
+  \boldsymbol{y}_{n+1} = \boldsymbol{\psi}(\boldsymbol{y}_n) &amp;= \boldsymbol{\psi}(\boldsymbol{x}_{n}, \dots, \boldsymbol{x}_{n+k-2}, \boldsymbol{x}_{n+k-1})  \\
+  &amp;= (\boldsymbol{x}_{n+1}, \dots, \boldsymbol{x}_{n+k-1}, \boldsymbol{\phi}(\boldsymbol{x}_{n}, \dots, \boldsymbol{x}_{n+k-2}, \boldsymbol{x}_{n+k-1}))
+\end{align*}\]</span></p></li>
+</ul>
+</section>
+<section id="recurrentierelaties-1" class="level2 smaller">
+<h2 class="smaller anchored" data-anchor-id="recurrentierelaties-1">Recurrentierelaties</h2>
+<p><span class="math display">\[\boldsymbol{x}_{n+k} = {\mathsf{A}}_{0} \boldsymbol{x}_{n} + {\mathsf{A}}_{1} \boldsymbol{x}_{n+1} + \dots + {\mathsf{A}}_{k-2} \boldsymbol{x}_{n+k-2} + {\mathsf{A}}_{k-1} \boldsymbol{x}_{n_k-1}\]</span></p>
+<p><span class="math display">\[\begin{equation}
+\Rightarrow \boldsymbol{y}_{n+1} = \begin{bmatrix}
+        \boldsymbol{x}_{n+1} \\ \boldsymbol{x}_{n+2} \\ \dots \\ \boldsymbol{x}_{n+k-1} \\ \boldsymbol{x}_{n+k}
+    \end{bmatrix} = \begin{bmatrix} {\mathsf{O}}&amp; {\mathsf{I}}&amp; \dots &amp; {\mathsf{O}}&amp; {\mathsf{O}}\\
+{\mathsf{O}}&amp; {\mathsf{O}}&amp; \dots &amp; {\mathsf{O}}&amp; {\mathsf{O}}\\
+\vdots &amp; \vdots &amp; \ddots &amp; \vdots &amp; \vdots\\
+{\mathsf{O}}&amp; {\mathsf{O}}&amp; \dots &amp; {\mathsf{O}}&amp; {\mathsf{I}}\\
+{\mathsf{A}}_{0} &amp; {\mathsf{A}}_{1} &amp; \dots &amp; {\mathsf{A}}_{k-2} &amp; {\mathsf{A}}_{k-1}
+\end{bmatrix}\begin{bmatrix}
+        \boldsymbol{x}_{n} \\ \boldsymbol{x}_{n+1} \\ \dots \\ \boldsymbol{x}_{n+k-2} \\ \boldsymbol{x}_{n+k-1}
+    \end{bmatrix}.
+\end{equation}\]</span></p>
+<p>Voor <span class="math inline">\(k=1\)</span> (<span class="math inline">\(x_n\)</span> scalair): <span class="math inline">\(y_{n+1} = {\mathsf{C}} \boldsymbol{y}_n = {\mathsf{C}}^{n+1}\boldsymbol{y}_0\)</span> met <span class="math inline">\({\mathsf{C}}\)</span> een companion matrix</p>
+<ul>
+<li><p>Algemene oplossing is een lineaire combinatie van elementaire oplossingen <span class="math inline">\(x_n = n^j \lambda^n\)</span> voor <span class="math inline">\(\lambda\)</span> een nulpunt van de bijbehorende polynoom en <span class="math inline">\(j=0,1,\ldots,q-1\)</span> met <span class="math inline">\(q\)</span> de algebraïsche multipliciteit van <span class="math inline">\(\lambda\)</span>.</p></li>
+<li><p>Polynoom voor <span class="math inline">\(\lambda\)</span> kan gevonden worden door oplossingen <span class="math inline">\(x_n=\lambda^n\)</span> in te vullen in de recurrentierelatie</p></li>
+<li><p>Lineaire combinatie vinden door te “matchen” met beginvoorwaarden <span class="math inline">\(x_0,\ldots,x_{k-1}\)</span>.</p></li>
+</ul>
+</section>
+<section id="recurrentierelatie-voorbeeld" class="level2">
+<h2 class="anchored" data-anchor-id="recurrentierelatie-voorbeeld">Recurrentierelatie: voorbeeld</h2>
+<p>Bekendste voorbeeld: Fibonacci</p>
+<p><span class="math inline">\(x_{n+2} = x_{n} + x_{n+1}\)</span></p>
+<p><span class="math inline">\(\Rightarrow \lambda^2 = \lambda + 1\)</span></p>
+<p><span class="math inline">\(\Rightarrow: \lambda = \frac{1\pm \sqrt{5}}{2}\)</span></p>
+<p><span class="math inline">\(x_0 = 0, x_1 = 1 \Rightarrow (x_n)_{n \in {\mathbb{N}}} = (0,1,1,2,3,5,8,13,\ldots)\)</span></p>
+</section>
+<section id="continue-dynamische-systemen" class="level2">
+<h2 class="anchored" data-anchor-id="continue-dynamische-systemen">Continue dynamische systemen</h2>
+<p>Er is geen “kleinste eenheid van evolutie”</p>
+<p><span class="math inline">\(\dot{\boldsymbol{x}}(t) = \boldsymbol{\varphi}(\boldsymbol{x}(t))\)</span> (eerste orde differentiaalvergelijking)</p>
+<ul>
+<li><p>Evenwichtspunt <span class="math inline">\(\boldsymbol{\varphi}(\boldsymbol{x}^\ast) = \boldsymbol{0}\)</span></p></li>
+<li><p>Linearisatie rond evenwichtspunt</p>
+<p><span class="math inline">\(\boldsymbol{\varphi}(\boldsymbol{x}_\ast + \boldsymbol{y}(t)) \approx \underbrace{\boldsymbol{\phi}(\boldsymbol{x}^\ast)}_{=\boldsymbol{0}} + \underbrace{\sum_{j=1}^{n}\frac{\partial \boldsymbol{\varphi}}{\partial x^j}(\boldsymbol{x}^\ast) (\boldsymbol{y}(t))^j}_{={\mathsf{J}}_{\boldsymbol{\phi}}(\boldsymbol{x}^\ast) \boldsymbol{y}(t)}+ \mathop{\mathrm{\mathscr{O}}}(\boldsymbol{y}^2)\)</span></p></li>
+</ul>
+</section>
+<section id="continue-dynamische-systemen-1" class="level2">
+<h2 class="anchored" data-anchor-id="continue-dynamische-systemen-1">Continue dynamische systemen</h2>
+<ul>
+<li><p>Lineaire systemen: <span class="math inline">\(\dot{\boldsymbol{x}}(t) = {\mathsf{A}}\boldsymbol{x}(t)\)</span></p>
+<p><span class="math inline">\(\Rightarrow\boldsymbol{x}(t) = {\mathrm{e}}^{t{\mathsf{A}}} \boldsymbol{x}_0\)</span></p></li>
+<li><p>Perturbaties rond <span class="math inline">\(\boldsymbol{x}^\ast=\boldsymbol{0}\)</span> bepaald door eigenwaarden (Jordan-decompositie) van <span class="math inline">\({\mathsf{A}}\)</span>:</p>
+<ul>
+<li>alle <span class="math inline">\(\mathop{\mathrm{Re}}{\lambda}&lt;0\)</span>: perturbaties sterven uit, evenwichtspunt stabiel</li>
+<li>een <span class="math inline">\(\mathop{\mathrm{Re}}{\lambda}&gt;0\)</span>: perturbatie groeit exponentieel in de tijd</li>
+<li><span class="math inline">\(\lambda = {\mathrm{i}}2\pi/p\)</span>: periodieke baan met periode <span class="math inline">\(p\)</span></li>
+</ul></li>
+</ul>
+</section>
+<section id="hogere-orde-differentiaalvergelijkingen" class="level2 smaller">
+<h2 class="smaller anchored" data-anchor-id="hogere-orde-differentiaalvergelijkingen">Hogere orde differentiaalvergelijkingen</h2>
+<ul>
+<li><p><span class="math inline">\(\boldsymbol{x}^{(k)}(t) = \boldsymbol{\varphi}(t, \boldsymbol{x}(t), \dot{\boldsymbol{x}(t)},\ldots, \boldsymbol{x}^{(k-1)}(t))\)</span></p>
+<p>Herleidbaar naar eerste orde differentiaalvergelijking voor <span class="math inline">\(\boldsymbol{y}(t) = (\boldsymbol{x}(t), \dot{\boldsymbol{x}}(t), \ddot{\boldsymbol{x}}(t), \dots, \boldsymbol{x}^{(k-1)}(t))\)</span></p></li>
+<li><p>Voor <span class="math inline">\(k=1\)</span> (<span class="math inline">\(x(t)\)</span> scalair):</p>
+<p><span class="math inline">\(x^{(k)}(t) = a_{0} x(t) + a_{1} \dot{x}(t) + \dots + a_{k-2} x^{(k-2)}(t) + a_{k-1} x^{(k-1)}(t)\)</span></p>
+<p><span class="math inline">\(\Rightarrow \dot{\boldsymbol{y}}(t) = {\mathsf{C}} \boldsymbol{y}(t)\)</span> met <span class="math inline">\({\mathsf{C}}\)</span> een companion matrix</p>
+<ul>
+<li><p>Algemene oplossing is een lineaire combinatie van elementaire oplossingen <span class="math inline">\(x(t) = t^j {\mathrm{e}}^{\lambda t}\)</span> voor <span class="math inline">\(\lambda\)</span> een nulpunt van de bijbehorende polynoom en <span class="math inline">\(j=0,1,\ldots,q-1\)</span> met <span class="math inline">\(q\)</span> de algebraïsche multipliciteit van <span class="math inline">\(\lambda\)</span></p></li>
+<li><p>Polynoom voor <span class="math inline">\(\lambda\)</span> kan gevonden worden door oplossingen <span class="math inline">\(x(t)={\mathrm{e}}^{\lambda t}\)</span> in te vullen in de recurrentierelatie</p></li>
+<li><p>Lineaire combinatie vinden door te “matchen” met beginvoorwaarden <span class="math inline">\(x(0),\dot{x}(0),\ldots,x^{(k-1)}(0)\)</span>.</p></li>
+</ul></li>
 </ul>
 
 
