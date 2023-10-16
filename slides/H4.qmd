@@ -172,7 +172,7 @@ Gegeven een vectorruimte $V$. Een norm is een afbeelding $V \to \bbR : \vv \maps
 
   $\Rightarrow \norm{\zerovec} = 0 \leq \norm{\vv} + \norm{-\vv} = 2 \norm{vv}$ 
 
-* positief definiet: $\norm{vv} = 0 \Leftrightarrow \vv = 0$
+* positief definiet: $\norm{\vv} = 0 \Leftrightarrow \vv = 0$
 
 Voor de eerste eigenschap hebben we op het veld van scalairen $\bbF$ een **absolute waarde** $\abs{\scalara}$ nodig. Voor $\bbR$ en $\bbC$ komt dit overeen met de gekende definitie. 
 
