@@ -132,6 +132,22 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#metrische-ruimten" id="toc-metrische-ruimten" class="nav-link" data-scroll-target="#metrische-ruimten">Metrische ruimten</a></li>
   <li><a href="#metrische-ruimten-1" id="toc-metrische-ruimten-1" class="nav-link" data-scroll-target="#metrische-ruimten-1">Metrische ruimten</a></li>
   <li><a href="#metrische-ruimten-2" id="toc-metrische-ruimten-2" class="nav-link" data-scroll-target="#metrische-ruimten-2">Metrische ruimten</a></li>
+  <li><a href="#metrische-ruimten-3" id="toc-metrische-ruimten-3" class="nav-link" data-scroll-target="#metrische-ruimten-3">Metrische ruimten</a></li>
+  <li><a href="#continuïteit-in-genormeerde-vectorruimte" id="toc-continuïteit-in-genormeerde-vectorruimte" class="nav-link" data-scroll-target="#continuïteit-in-genormeerde-vectorruimte">Continuïteit in genormeerde vectorruimte</a></li>
+  <li><a href="#convergentie-in-functieruimten" id="toc-convergentie-in-functieruimten" class="nav-link" data-scroll-target="#convergentie-in-functieruimten">Convergentie in functieruimten</a></li>
+  <li><a href="#equivalentie-van-normen" id="toc-equivalentie-van-normen" class="nav-link" data-scroll-target="#equivalentie-van-normen">Equivalentie van normen</a></li>
+  <li><a href="#compacte-verzameling-geen-bewijzen" id="toc-compacte-verzameling-geen-bewijzen" class="nav-link" data-scroll-target="#compacte-verzameling-geen-bewijzen">Compacte verzameling (geen bewijzen)</a></li>
+  <li><a href="#compacte-verzamelingen-geen-bewijzen" id="toc-compacte-verzamelingen-geen-bewijzen" class="nav-link" data-scroll-target="#compacte-verzamelingen-geen-bewijzen">Compacte verzamelingen (geen bewijzen)</a></li>
+  </ul></li>
+  <li><a href="#banachruimten-geen-bewijzen" id="toc-banachruimten-geen-bewijzen" class="nav-link" data-scroll-target="#banachruimten-geen-bewijzen">Banachruimten (geen bewijzen)</a>
+  <ul class="collapse">
+  <li><a href="#cauchy-rijen-en-compleetheid" id="toc-cauchy-rijen-en-compleetheid" class="nav-link" data-scroll-target="#cauchy-rijen-en-compleetheid">Cauchy rijen en compleetheid</a></li>
+  <li><a href="#banachruimten" id="toc-banachruimten" class="nav-link" data-scroll-target="#banachruimten">Banachruimten</a></li>
+  <li><a href="#banachruimten-1" id="toc-banachruimten-1" class="nav-link" data-scroll-target="#banachruimten-1">Banachruimten</a></li>
+  <li><a href="#banachruimten-complete-verzameling" id="toc-banachruimten-complete-verzameling" class="nav-link" data-scroll-target="#banachruimten-complete-verzameling">Banachruimten: complete verzameling</a></li>
+  <li><a href="#banachruimten-complete-verzameling-1" id="toc-banachruimten-complete-verzameling-1" class="nav-link" data-scroll-target="#banachruimten-complete-verzameling-1">Banachruimten: complete verzameling</a></li>
+  <li><a href="#banachruimten-2" id="toc-banachruimten-2" class="nav-link" data-scroll-target="#banachruimten-2">Banachruimten</a></li>
+  <li><a href="#banachruimten-en-basis" id="toc-banachruimten-en-basis" class="nav-link" data-scroll-target="#banachruimten-en-basis">Banachruimten en basis</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -295,16 +311,189 @@ ul.task-list li input[type="checkbox"] {
 <ul>
 <li>Een afbeelding <span class="math inline">\(\Phi:X \to Y\)</span> tussen metrische ruimten <span class="math inline">\((X,d_X)\)</span> en <span class="math inline">\((Y,d_Y)\)</span> is <strong>isometrisch</strong> als <span class="math inline">\(d_Y(\Phi(x),\Phi(x')) = d_X(x,x')\)</span> voor alle <span class="math inline">\(x,x'\in X\)</span>
 <ul>
+<li>Een isometrische afbeelding is automatisch (uniform) continu (<span class="math inline">\(\delta_\epsilon = \epsilon\)</span>)</li>
 <li>Een isometrische afbeelding is automatisch injectief</li>
-<li>Een bijectieve isometrische afbeelding definieert een isomorfisme</li>
+<li>Een bijectieve isometrische afbeelding definieert een isomorfisme tussen <span class="math inline">\((X, d_X)\)</span> en <span class="math inline">\((Y, d_Y)\)</span></li>
 </ul></li>
 </ul>
+</section>
+<section id="metrische-ruimten-3" class="level2 smaller">
+<h2 class="smaller anchored" data-anchor-id="metrische-ruimten-3">Metrische ruimten</h2>
+<p>Topologische concepten in een metrische ruimte <span class="math inline">\((X,d)\)</span>:</p>
+<ul>
+<li>Open bol: <span class="math inline">\(B_r(x) = \{x'\in X| d(x,x') \leq r\}\)</span></li>
+<li>Open (deel)verzameling <span class="math inline">\(S\)</span>: <span class="math inline">\(\forall x \in S, \exists \epsilon&gt;0\)</span> zodat <span class="math inline">\(B_r(x) \subseteq S\)</span></li>
+<li>Gesloten deelverzameling <span class="math inline">\(S\)</span> als <span class="math inline">\(S^\text{c} = X \setminus S\)</span> open is
+<ul>
+<li><span class="math inline">\(\Rightarrow\)</span> een convergerende rij <span class="math inline">\((x_n \in S)\)</span> voldoet aan <span class="math inline">\(\lim_{n\to\infty x_n} \in S\)</span></li>
+<li><span class="math inline">\(X\)</span> and <span class="math inline">\(\{\}\)</span> zijn zowel open als gesloten</li>
+</ul></li>
+<li>Sluiting <span class="math inline">\(\overline{S}\)</span>: kleinste gesloten verzameling die <span class="math inline">\(S\)</span> bevat = <span class="math inline">\(S\)</span> en al zijn limietpunten</li>
+<li>Dichte deelverzameling <span class="math inline">\(S\)</span>: als <span class="math inline">\(\overline{S} = X\)</span></li>
+<li>Begrensde verzameling <span class="math inline">\(S\)</span>: <span class="math inline">\(\exists M \in {\mathbb{R}}_{\geq 0}\)</span> zodat <span class="math inline">\(d(x,y)&lt;M, \forall x,y \in S\)</span></li>
+<li>Compacte verzameling: zie verderop</li>
+<li><span class="math inline">\(X\)</span> is <strong>separabel</strong> (scheidbaar?) als <span class="math inline">\(X\)</span> een aftelbare dichte deelverzameling heeft</li>
+</ul>
+</section>
+<section id="continuïteit-in-genormeerde-vectorruimte" class="level2 smaller">
+<h2 class="smaller anchored" data-anchor-id="continuïteit-in-genormeerde-vectorruimte">Continuïteit in genormeerde vectorruimte</h2>
+<p>We beschouwen nu een genormeerde vectorruimte <span class="math inline">\((V,{\left\lVert\cdot\right\rVert})\)</span> als metrische ruimte met metriek <span class="math inline">\(d({v},{w}) = {\left\lVert{v}-{w}\right\rVert}\)</span></p>
+<ul>
+<li><p>De norm <span class="math inline">\({\left\lVert\cdot\right\rVert}:V\to {\mathbb{R}}\)</span> is zelf een continue afbeelding (bewijs aan bord)</p>
+<p><span class="math inline">\(\Rightarrow\)</span> voor een convergente rij <span class="math inline">\((v_n \in V)_{n\in{\mathbb{N}}_0}\)</span> is de geassocieerde rij <span class="math inline">\(({\left\lVert{v}_n\right\rVert})_{n\in{\mathbb{N}}_0}\)</span> convergent</p></li>
+<li><p>Vector optelling <span class="math inline">\(+:V \times V \to V\)</span> en scalaire vermenigvuldiging <span class="math inline">\({\mathbb{F}}\times V \to V\)</span> zijn continue afbeeldingen<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p></li>
+</ul>
+</section>
+<section id="convergentie-in-functieruimten" class="level2 smaller">
+<h2 class="smaller anchored" data-anchor-id="convergentie-in-functieruimten">Convergentie in functieruimten</h2>
+<p>Beschouw opnieuw <span class="math inline">\(C^0([a,b],{\mathbb{F}})\)</span> met nu de <span class="math inline">\(p=\infty\)</span>-norm, welke zich herleidt tot:<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a></p>
+<p><span class="math display">\[{\left\lVert f\right\rVert}_p = \sup_{x\in [a,b]}{\left\lvert f(x)\right\rvert} = \max_{x\in[a,b]}{\left\lvert f(x)\right\rvert}\]</span></p>
+<p>Convergentie: <span class="math inline">\(\lim_{n\to \infty} f_n = f\)</span> als</p>
+<ul>
+<li><p><span class="math inline">\(\max_{x\in [a,b]} {\left\lvert f_n(x)-f(x)\right\rvert} &lt; \epsilon\)</span> voor alle <span class="math inline">\(n &gt; N_\epsilon\)</span></p></li>
+<li><p><span class="math inline">\({\left\lvert f_n(x)-f(x)\right\rvert} &lt; \epsilon\)</span> voor alle <span class="math inline">\(x \in [a,b]\)</span> voor alle <span class="math inline">\(n &gt; N_\epsilon\)</span></p>
+<p><span class="math inline">\(\Rightarrow\)</span> <strong>uniforme convergentie</strong> van een reeks</p>
+<p><span class="math inline">\(\Rightarrow\)</span> <span class="math inline">\({\left\lVert f\right\rVert}_{\infty}\)</span> voor continue functies wordt de uniform-norm genoemd</p></li>
+<li><p>contrast met <strong>puntsgewijze convergentie</strong>:</p>
+<p><span class="math inline">\({\left\lvert f_n(x)-f(x)\right\rvert} &lt; \epsilon\)</span> voor alle <span class="math inline">\(n &gt; N_{\epsilon,x}\)</span> voor alle <span class="math inline">\(x \in [a,b]\)</span></p>
+<p>kan niet worden bekomen met behulp van norm (tegenvoorbeeld aan bord)</p></li>
+</ul>
+</section>
+<section id="equivalentie-van-normen" class="level2 smaller">
+<h2 class="smaller anchored" data-anchor-id="equivalentie-van-normen">Equivalentie van normen</h2>
+<ul>
+<li><p>Twee normen voor een vectorruimte <span class="math inline">\(V\)</span> zijn equivalent als ze aanleiding geven tot dezelfde definitie van convergerende rijen (met dan dezelfde limietpunten)</p></li>
+<li><p>Stelling: twee normen <span class="math inline">\({\left\lVert\cdot\right\rVert}_a\)</span> en <span class="math inline">\({\left\lVert\cdot\right\rVert}_b\)</span> zijn equivalent als en slechts als er constanten <span class="math inline">\(C \geq c &gt; 0\)</span> bestaan zodat <span class="math inline">\(c {\left\lVert{v}\right\rVert}_a \leq {\left\lVert{v}\right\rVert}_b \leq C{\left\lVert{v}\right\rVert}_a\)</span> voor alle <span class="math inline">\({v}\in V\)</span></p>
+<p>(bewijs aan bord)</p></li>
+<li><p>Stelling: voor een eindig-dimensionale vectorruimte <span class="math inline">\(V\)</span> zijn alle normen equivalent</p>
+<p>(bewijs aan bord)</p></li>
+<li><p>Voorbeelden voor <span class="math inline">\(\boldsymbol{v} \in {\mathbb{F}}^n\)</span>:</p>
+<ul>
+<li><span class="math inline">\(\frac{{\left\lVert{v}\right\rVert}_1}{\sqrt{n}} \leq {\left\lVert\boldsymbol{v}\right\rVert}_2 \leq {\left\lVert{v}\right\rVert}_1\)</span></li>
+<li><span class="math inline">\(\frac{{\left\lVert{v}\right\rVert}_1}{n} \leq {\left\lVert\boldsymbol{v}\right\rVert}_\infty \leq {\left\lVert{v}\right\rVert}_1\)</span></li>
+</ul></li>
+</ul>
+</section>
+<section id="compacte-verzameling-geen-bewijzen" class="level2">
+<h2 class="anchored" data-anchor-id="compacte-verzameling-geen-bewijzen">Compacte verzameling (geen bewijzen)</h2>
+<ul>
+<li><p>Een verzameling <span class="math inline">\(U\)</span> is compact als</p>
+<ul>
+<li>Wanneer <span class="math inline">\(U\)</span> wordt bedekt door open verzamelingen <span class="math inline">\(\mathcal{V}=\{V_1,V_2,\ldots,\}\)</span> (i.e.&nbsp;<span class="math inline">\(U \subseteq \bigcup \mathcal{V}\)</span>), dan wordt <span class="math inline">\(U\)</span> ook bedekt door een eindig aantal van die verzamelingen</li>
+<li>Elke rij <span class="math inline">\(({v}_n \in U)\)</span> heeft een convergerende deelrij met limietpunt in <span class="math inline">\(U\)</span></li>
+</ul>
+<p>(equivalente karakterisaties in metrische ruimten)</p></li>
+<li><p>Stelling: in een eindig-dimensionale vectorruimte <span class="math inline">\(V\)</span> is een deelverzameling <span class="math inline">\(U\)</span> compact als en slechts als <span class="math inline">\(U\)</span> begrensd en gesloten is (analoog aan Vectoranalayse).</p></li>
+</ul>
+</section>
+<section id="compacte-verzamelingen-geen-bewijzen" class="level2">
+<h2 class="anchored" data-anchor-id="compacte-verzamelingen-geen-bewijzen">Compacte verzamelingen (geen bewijzen)</h2>
+<p>In een oneindig-dimensionale vectorruimte zijn gesloten begrensde deelverzamelingen niet compact.</p>
+<ul>
+<li><p>Voorbeeld: <span class="math inline">\(C^0([a,b],{\mathbb{F}})\)</span> met <span class="math inline">\({\left\lVert\cdot\right\rVert}_\infty\)</span></p>
+<ul>
+<li>Beschouw de gesloten eenheidsbol: <span class="math inline">\(\overline{B_1({o})} = \{{v}\in V|{\left\lVert{v}\right\rVert} \leq 1\}\)</span></li>
+<li>Beschouw de rij <span class="math inline">\(\{f_n(x)=x^n\}\)</span> met elke <span class="math inline">\({\left\lVert f_n\right\rVert} = 1\)</span>. Er bestaat geen convergente deelrij.</li>
+</ul></li>
+<li><p>Technisch (Riesz lemma): Beschouw een eigenlijke gesloten deelruimte <span class="math inline">\(W{\preccurlyeq}V\)</span>. Voor elke <span class="math inline">\(\epsilon \in (0,1)\)</span> kunnen we een <span class="math inline">\({v}_\epsilon \in V\)</span> vinden waarvoor <span class="math inline">\({\left\lVert{v}_\epsilon\right\rVert}=1\)</span> en <span class="math inline">\({\left\lVert{v}_\epsilon - {w}\right\rVert} &gt; \epsilon\)</span> voor alle <span class="math inline">\(w \in W\)</span>.</p></li>
+</ul>
+</section>
+</section>
+<section id="banachruimten-geen-bewijzen" class="level1">
+<h1>Banachruimten (geen bewijzen)</h1>
+<section id="cauchy-rijen-en-compleetheid" class="level2">
+<h2 class="anchored" data-anchor-id="cauchy-rijen-en-compleetheid">Cauchy rijen en compleetheid</h2>
+<ul>
+<li><p>Een Cauchy-rij in een metrische ruimte <span class="math inline">\((X,d)\)</span> is een rij <span class="math inline">\((x_n \in X)_{n\in{\mathbb{N}}_0}\)</span> zodat <span class="math inline">\(\forall \epsilon &gt;0: \exists N_\epsilon \in {\mathbb{N}}\)</span> met dan <span class="math inline">\(n,m &gt; N_\epsilon \implies d(x_n,x_m) &lt; \epsilon\)</span></p>
+<p>(intuïtief: elementen in de staart van de rij komen arbitrair dicht bij elkaar)</p></li>
+<li><p>Een convergente rij is altijd een Cauchy-rij</p></li>
+<li><p>Als elke Cauchy-rij convergeert wordt <span class="math inline">\(X\)</span> (metrisch) compleet genoemd</p></li>
+<li><p>Een genormeerde vectorruimte <span class="math inline">\((V,{\left\lVert\cdot\right\rVert})\)</span> die metrisch compleet is wordt een Banachruimte genoemd</p></li>
+</ul>
+</section>
+<section id="banachruimten" class="level2">
+<h2 class="anchored" data-anchor-id="banachruimten">Banachruimten</h2>
+<p>Voorbeelden:</p>
+<ul>
+<li>Elke eindig-dimensionale vectorruimte, met om het even welke keuze van norm</li>
+<li>Elke eindig-dimensionale deelruimte <span class="math inline">\(W\)</span> van een oneindig-dimensionale vectorruimte <span class="math inline">\(V\)</span>, met als norm de restrictie van <span class="math inline">\({\left\lVert\cdot\right\rVert}\)</span> tot <span class="math inline">\(W\)</span></li>
+<li>De ruimte <span class="math inline">\(\ell^p({\mathbb{F}})\)</span> van oneindige rijen met eindige <span class="math inline">\(p\)</span>-norm (en dit voor alle <span class="math inline">\(p \in [1,+\infty]\)</span>)</li>
+<li>Ruimte <span class="math inline">\(C^0([a,b],{\mathbb{F}})\)</span> met maximumnorm/uniformnorm <span class="math inline">\({\left\lVert\cdot\right\rVert}_\infty\)</span> voor begrensd (compact) interval <span class="math inline">\([a,b]\)</span></li>
+</ul>
+</section>
+<section id="banachruimten-1" class="level2">
+<h2 class="anchored" data-anchor-id="banachruimten-1">Banachruimten</h2>
+<p>Tegenvoorbeeld:</p>
+<ul>
+<li>Ruimte <span class="math inline">\({\mathbb{F}}[x]\)</span> van polynomen met norm <span class="math inline">\({\left\lVert p\right\rVert}= \max_{x \in [a,b]} {\left\lvert p(x)\right\rvert}\)</span>
+<ul>
+<li><span class="math inline">\(p_n(x) = \sum_{k=0}^n \frac{1}{k!}x^k\)</span> definieert een Cauchy-rij</li>
+<li><span class="math inline">\(\lim_{n\to\infty} p_n\)</span> bestaat niet als polynoom</li>
+</ul></li>
+<li>Herinterpreteer <span class="math inline">\({\mathbb{F}}[x]\)</span> als (eigenlijke) deelruimte van <span class="math inline">\(C^0([a,b],{\mathbb{F}})\)</span>
+<ul>
+<li><p><span class="math inline">\(\lim_{n\to\infty} p_n = \exp\)</span> bestaat als continue functie</p>
+<p><span class="math inline">\(\Rightarrow\)</span> een oneindige deelruimte van een Banachruimte is niet noodzakelijk gesloten</p></li>
+</ul></li>
+</ul>
+</section>
+<section id="banachruimten-complete-verzameling" class="level2">
+<h2 class="anchored" data-anchor-id="banachruimten-complete-verzameling">Banachruimten: complete verzameling</h2>
+<p>Aangezien (oneindig-dimensionale) deelruimten <span class="math inline">\(W {\preccurlyeq}V\)</span> open kunnen zijn, kunnen we hun sluiting <span class="math inline">\(\overline{W}\)</span> bekijken.</p>
+<ul>
+<li><p>Zoals eerder: als <span class="math inline">\(\overline{W}=V\)</span>, dan is <span class="math inline">\(W\)</span> een <strong>dichte</strong> deelruimte</p>
+<p>Elke vector <span class="math inline">\({v}\in V\)</span> kan arbitrair dicht benaderd worden door een vector <span class="math inline">\({w}\in W\)</span>:</p>
+<p><span class="math inline">\(\forall \epsilon &gt; 0, {v}\in V : \exists {w}\in W\)</span> zodat <span class="math inline">\({\left\lVert{v}-{w}\right\rVert}&lt;\epsilon\)</span></p></li>
+<li><p>Een verzameling <span class="math inline">\(S\)</span> waarvoor <span class="math inline">\({\mathbb{F}}S\)</span> dicht is, of dus <span class="math inline">\(\overline{{\mathbb{F}}S}=V\)</span>, wordt een totale, fundamentele of complete verzameling genoemd</p>
+<p>(Contrast met H1: complete verzameling als <span class="math inline">\({\mathbb{F}}S = V\)</span>)</p></li>
+</ul>
+</section>
+<section id="banachruimten-complete-verzameling-1" class="level2">
+<h2 class="anchored" data-anchor-id="banachruimten-complete-verzameling-1">Banachruimten: complete verzameling</h2>
+<p>Voorbeeld: stelling van Stone-Weierstrass</p>
+<p>Equivalente formuleringen:</p>
+<ul>
+<li>Elke continue functie kan aribtrair dicht (in uniform-norm) benaderd worden door een veelterm</li>
+<li><span class="math inline">\({\mathbb{F}}[x]\)</span> is een dichte deelverzameling van <span class="math inline">\(C^0([a,b],{\mathbb{F}})\)</span></li>
+<li><span class="math inline">\(\{x^n, n=0,1,2,\ldots\}\)</span> is een complete verzameling voor <span class="math inline">\(C^0([a,b],{\mathbb{F}})\)</span></li>
+</ul>
+</section>
+<section id="banachruimten-2" class="level2 smaller">
+<h2 class="smaller anchored" data-anchor-id="banachruimten-2">Banachruimten</h2>
+<p>Van rijen naar reeksen in genormeerde vectorruimten <span class="math inline">\((V,{\left\lVert\cdot\right\rVert})\)</span></p>
+<ul>
+<li><p>Convergentie van reeksen: als rij van partieelsommen convergeert</p>
+<p><span class="math inline">\(\sum_{n=1}^{+\infty} {v}_n ={v}\iff \lim_{n\to\infty} \sum_{k=1}^{n} {v}_k = {v}\iff \lim_{n\to \infty} {\left\lVert\sum_{k=1}^{n} {v}_k - {v}\right\rVert} = 0\)</span></p></li>
+<li><p>Een reeks <span class="math inline">\(\sum_{n=1}^{+\infty} {v}_n\)</span> is absoluut convergent als de reeks <span class="math inline">\(\sum_{n=1}^{+\infty} {\left\lVert{v}_n\right\rVert}\)</span> convergeert</p>
+<p>(absolute convergentie is zeker geen nodige voorwaarde voor convergentie van een reeks)</p></li>
+<li><p>Stelling: Een genormeerde vectorruimte is metrisch compleet (Banachruimte) als en slechts als absolute convergentie een voldoende voorwaarde is voor convergentie van een reeks (elke absoluut convergente reeks convergeert).</p></li>
+</ul>
+</section>
+<section id="banachruimten-en-basis" class="level2 smaller">
+<h2 class="smaller anchored" data-anchor-id="banachruimten-en-basis">Banachruimten en basis</h2>
+<p>Convergentie van rijen en reeksen laat een nieuw concept van basis toe in Banachruimten <span class="math inline">\((V,{\left\lVert\cdot\right\rVert})\)</span></p>
+<ul>
+<li><p>Een <em>Schauder basis</em> is een rij <span class="math inline">\(({e}_n \in V)_{n \in {\mathbb{N}}_0}\)</span> zodat voor elke vector <span class="math inline">\({v}\in V\)</span> een rij van coefficiënten <span class="math inline">\((a^n \in {\mathbb{F}})_{n \in {\mathbb{N}}_0}\)</span> bestaat, zodat de reeks <span class="math inline">\(\sum_{n =1}^{+\infty} a^n {e}_n\)</span> convergeert naar <span class="math inline">\({v}\)</span></p></li>
+<li><p>De rij <span class="math inline">\((x^n)_{n \in {\mathbb{N}}}\)</span> is <strong>geen (!!)</strong> Schauder basis voor <span class="math inline">\((C^0([a,b],{\mathbb{F}}), {\left\lVert\cdot\right\rVert}_{\infty})\)</span>:</p>
+<ul>
+<li><p>een reeks <span class="math inline">\(\sum_{n=0}^{+\infty} a_n x^n\)</span> die convergeert met betrekking tot <span class="math inline">\({\left\lVert\cdot\right\rVert}_{\infty}\)</span> (uniforme convergentie) geeft sowieso aanleiding tot een analytische functie</p></li>
+<li><p>een continue functie zoals <span class="math inline">\({\left\lvert x\right\rvert}\)</span> heeft geen convergente Taylorreeks</p></li>
+</ul></li>
+</ul>
+<p><span class="math inline">\(\Rightarrow\)</span> allerlei technische subtiliteiten die verdwijnen in het geval van Hilbertruimten (zie volgend hoofdstuk)</p>
 
 
 </section>
 </section>
 
-</main> <!-- /main -->
+
+<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+
+<ol>
+<li id="fn1"><p>Hiervoor hebben we het volgende nodig: de productverzameling <span class="math inline">\(X \times Y\)</span> van twee metrische ruimten <span class="math inline">\((X, d_X)\)</span> en <span class="math inline">\((Y, d_Y)\)</span> is metrische ruimte, bevoorbeeld met metriek <span class="math inline">\(d_{X,Y}((x,y), (x',y')) = d_X(x,x') + d_Y(y,y')\)</span>}<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>Extremumstelling van Weierstrass: <span class="math inline">\(\sup\)</span> wordt <span class="math inline">\(\max\)</span> voor continue <span class="math inline">\(f\)</span> begrensd interval <span class="math inline">\([a,b]\)</span><a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {

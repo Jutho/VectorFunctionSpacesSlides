@@ -265,5 +265,175 @@ Voor een continue afbeelding $\Phi$ kan $\delta_\epsilon$ in de tweede definitie
 ## Metrische ruimten
 
 * Een afbeelding $\Phi:X \to Y$ tussen metrische ruimten $(X,d_X)$ en $(Y,d_Y)$ is **isometrisch** als $d_Y(\Phi(x),\Phi(x')) = d_X(x,x')$ voor alle $x,x'\in X$
+  * Een isometrische afbeelding is automatisch (uniform) continu ($\delta_\epsilon = \epsilon$)
   * Een isometrische afbeelding is automatisch injectief
-  * Een bijectieve isometrische afbeelding definieert een isomorfisme 
+  * Een bijectieve isometrische afbeelding definieert een isomorfisme tussen $(X, d_X)$ en $(Y, d_Y)$
+
+## Metrische ruimten {.smaller}
+
+Topologische concepten in een metrische ruimte $(X,d)$:
+
+* Open bol: $B_r(x) = \{x'\in X| d(x,x') \leq r\}$
+* Open (deel)verzameling $S$: $\forall x \in S, \exists \epsilon>0$ zodat $B_r(x) \subseteq S$
+* Gesloten deelverzameling $S$ als $S^\text{c} = X \setminus S$ open is
+  * $\Rightarrow$ een convergerende rij $(x_n \in S)$ voldoet aan $\lim_{n\to\infty x_n} \in S$
+  * $X$ and $\{\}$ zijn zowel open als gesloten
+* Sluiting $\overline{S}$: kleinste gesloten verzameling die $S$ bevat = $S$ en al zijn limietpunten
+* Dichte deelverzameling $S$: als $\overline{S} = X$
+* Begrensde verzameling $S$: $\exists M \in \bbR_{\geq 0}$ zodat $d(x,y)<M, \forall x,y \in S$
+* Compacte verzameling: zie verderop
+* $X$ is **separabel** (scheidbaar?) als $X$ een aftelbare dichte deelverzameling heeft
+
+## Continuïteit in genormeerde vectorruimte {.smaller}
+
+We beschouwen nu een genormeerde vectorruimte $(V,\norm{\cdot})$ als metrische ruimte met metriek $d(\vv,\vw) = \norm{\vv-\vw}$
+
+* De norm $\norm{\cdot}:V\to \bbR$ is zelf een continue afbeelding (bewijs aan bord)
+
+  $\Rightarrow$ voor een convergente rij $(v_n \in V)_{n\in\bbN_0}$ is de geassocieerde rij $(\norm{\vv_n})_{n\in\bbN_0}$ convergent
+* Vector optelling $+:V \times V \to V$ en scalaire vermenigvuldiging $\bbF \times V \to V$ zijn continue afbeeldingen^[Hiervoor hebben we het volgende nodig: de productverzameling $X \times Y$ van twee metrische ruimten $(X, d_X)$ en $(Y, d_Y)$ is metrische ruimte, bevoorbeeld met metriek $d_{X,Y}((x,y), (x',y')) = d_X(x,x') + d_Y(y,y')$}]
+
+## Convergentie in functieruimten {.smaller}
+
+Beschouw opnieuw $C^0([a,b],\bbF)$ met nu de $p=\infty$-norm, welke zich herleidt tot:^[Extremumstelling van Weierstrass: $\sup$ wordt $\max$ voor continue $f$ begrensd interval $[a,b]$]
+
+$$\norm{f}_p = \sup_{x\in [a,b]}\abs{f(x)} = \max_{x\in[a,b]}\abs{f(x)}$$
+
+Convergentie: $\lim_{n\to \infty} f_n = f$ als
+
+* $\max_{x\in [a,b]} \abs{f_n(x)-f(x)} < \epsilon$ voor alle $n > N_\epsilon$
+* $\abs{f_n(x)-f(x)} < \epsilon$ voor alle $x \in [a,b]$ voor alle $n > N_\epsilon$
+
+  $\Rightarrow$ **uniforme convergentie** van een reeks
+
+  $\Rightarrow$ $\norm{f}_{\infty}$ voor continue functies wordt de uniform-norm genoemd
+
+* contrast met **puntsgewijze convergentie**:
+
+  $\abs{f_n(x)-f(x)} < \epsilon$ voor alle $n > N_{\epsilon,x}$ voor alle $x \in [a,b]$
+
+  kan niet worden bekomen met behulp van norm (tegenvoorbeeld aan bord)
+
+## Equivalentie van normen {.smaller}
+
+* Twee normen voor een vectorruimte $V$ zijn equivalent als ze aanleiding geven tot dezelfde definitie van convergerende rijen (met dan dezelfde limietpunten)
+
+* Stelling: twee normen $\norm{\cdot}_a$ en $\norm{\cdot}_b$ zijn equivalent als en slechts als er constanten $C \geq c > 0$ bestaan zodat $c \norm{\vv}_a \leq \norm{\vv}_b \leq C\norm{\vv}_a$ voor alle $\vv \in V$
+
+  (bewijs aan bord)
+
+* Stelling: voor een eindig-dimensionale vectorruimte $V$ zijn alle normen equivalent 
+
+  (bewijs aan bord)
+
+* Voorbeelden voor $\vec{v} \in \bbF^n$:
+  * $\frac{\norm{\vv}_1}{\sqrt{n}} \leq \norm{\vec{v}}_2 \leq \norm{\vv}_1$
+  * $\frac{\norm{\vv}_1}{n} \leq \norm{\vec{v}}_\infty \leq \norm{\vv}_1$
+
+## Compacte verzameling (geen bewijzen)
+
+* Een verzameling $U$ is compact als
+
+  * Wanneer $U$ wordt bedekt door open verzamelingen $\mathcal{V}=\{V_1,V_2,\ldots,\}$ (i.e. $U \subseteq \bigcup \mathcal{V}$), dan wordt $U$ ook bedekt door een eindig aantal van die verzamelingen
+  * Elke rij $(\vv_n \in U)$ heeft een convergerende deelrij met limietpunt in $U$
+  
+  (equivalente karakterisaties in metrische ruimten)
+
+* Stelling: in een eindig-dimensionale vectorruimte $V$ is een deelverzameling $U$ compact als en slechts als $U$ begrensd en gesloten is (analoog aan Vectoranalayse).
+
+## Compacte verzamelingen (geen bewijzen)
+
+In een oneindig-dimensionale vectorruimte zijn gesloten begrensde deelverzamelingen niet compact.
+
+* Voorbeeld: $C^0([a,b],\bbF)$ met $\norm{\cdot}_\infty$
+  
+  * Beschouw de gesloten eenheidsbol: $\overline{B_1(\zerovec)} = \{\vv \in V|\norm{\vv} \leq 1\}$
+  * Beschouw de rij $\{f_n(x)=x^n\}$ met elke $\norm{f_n} = 1$. Er bestaat geen  convergente deelrij.
+
+* Technisch (Riesz lemma): Beschouw een eigenlijke gesloten deelruimte $W\subspace V$. Voor elke $\epsilon \in (0,1)$ kunnen we een $\vv_\epsilon \in V$ vinden waarvoor $\norm{\vv_\epsilon}=1$ en $\norm{\vv_\epsilon - \vw} > \epsilon$ voor alle $w \in W$.
+
+# Banachruimten (geen bewijzen)
+
+## Cauchy rijen en compleetheid
+
+* Een Cauchy-rij in een metrische ruimte $(X,d)$ is een rij $(x_n \in X)_{n\in\bbN_0}$ zodat $\forall \epsilon >0: \exists N_\epsilon \in \bbN$ met dan $n,m > N_\epsilon \implies d(x_n,x_m) < \epsilon$
+
+  (intuïtief: elementen in de staart van de rij komen arbitrair dicht bij elkaar)
+
+* Een convergente rij is altijd een Cauchy-rij
+* Als elke Cauchy-rij convergeert wordt $X$ (metrisch) compleet genoemd
+* Een genormeerde vectorruimte $(V,\norm{\cdot})$ die metrisch compleet is wordt een Banachruimte genoemd
+
+## Banachruimten
+
+Voorbeelden:
+
+* Elke eindig-dimensionale vectorruimte, met om het even welke keuze van norm
+* Elke eindig-dimensionale deelruimte $W$ van een oneindig-dimensionale vectorruimte $V$, met als norm de restrictie van $\norm{\cdot}$ tot $W$
+* De ruimte $\ell^p(\bbF)$ van oneindige rijen met eindige $p$-norm (en dit voor alle $p \in [1,+\infty]$)
+* Ruimte $C^0([a,b],\bbF)$ met maximumnorm/uniformnorm $\norm{\cdot}_\infty$ voor begrensd (compact) interval $[a,b]$
+
+## Banachruimten
+
+Tegenvoorbeeld:
+
+* Ruimte $\bbF[x]$ van polynomen met norm $\norm{p}= \max_{x \in [a,b]} \abs{p(x)}$
+  * $p_n(x) = \sum_{k=0}^n \frac{1}{k!}x^k$ definieert een Cauchy-rij
+  * $\lim_{n\to\infty} p_n$ bestaat niet als polynoom
+
+* Herinterpreteer $\bbF[x]$ als (eigenlijke) deelruimte van $C^0([a,b],\bbF)$
+  * $\lim_{n\to\infty} p_n = \exp$ bestaat als continue functie
+
+    $\Rightarrow$ een oneindige deelruimte van een Banachruimte is niet noodzakelijk gesloten
+
+## Banachruimten: complete verzameling
+
+Aangezien (oneindig-dimensionale) deelruimten $W \subspace V$ open kunnen zijn, kunnen we hun sluiting $\overline{W}$ bekijken. 
+
+* Zoals eerder: als $\overline{W}=V$, dan is $W$ een **dichte** deelruimte
+
+  Elke vector $\vv \in V$ kan arbitrair dicht benaderd worden door een vector $\vw \in W$:
+  
+  $\forall \epsilon > 0, \vv \in V : \exists \vw \in W$ zodat $\norm{\vv-\vw}<\epsilon$
+
+* Een verzameling $S$ waarvoor $\bbF S$ dicht is, of dus $\overline{\bbF S}=V$, wordt een totale, fundamentele of complete verzameling genoemd
+
+  (Contrast met H1: complete verzameling als $\bbF S = V$)
+
+## Banachruimten: complete verzameling
+
+Voorbeeld: stelling van Stone-Weierstrass
+
+Equivalente formuleringen:
+
+* Elke continue functie kan aribtrair dicht (in uniform-norm) benaderd worden door een veelterm
+* $\bbF[x]$ is een dichte deelverzameling van $C^0([a,b],\bbF)$
+* $\{x^n, n=0,1,2,\ldots\}$ is een complete verzameling voor $C^0([a,b],\bbF)$
+
+## Banachruimten {.smaller}
+
+Van rijen naar reeksen in genormeerde vectorruimten $(V,\norm{\cdot})$
+
+* Convergentie van reeksen: als rij van partieelsommen convergeert
+
+  $\sum_{n=1}^{+\infty} \vv_n	=\vv \iff  \lim_{n\to\infty} \sum_{k=1}^{n} \vv_k = \vv \iff \lim_{n\to \infty} \norm{\sum_{k=1}^{n} \vv_k - \vv } = 0$
+
+* Een reeks $\sum_{n=1}^{+\infty} \vv_n$ is absoluut convergent als de reeks $\sum_{n=1}^{+\infty} \norm{\vv_n}$ convergeert
+
+  (absolute convergentie is zeker geen nodige voorwaarde voor convergentie van een reeks)
+
+* Stelling: Een genormeerde vectorruimte is metrisch compleet (Banachruimte) als en slechts als absolute convergentie een voldoende voorwaarde is voor convergentie van een reeks (elke absoluut convergente reeks convergeert).
+
+## Banachruimten en basis {.smaller}
+
+Convergentie van rijen en reeksen laat een nieuw concept van basis toe in Banachruimten $(V,\norm{\cdot})$
+
+* Een *Schauder basis* is een rij $(\ve_n \in V)_{n \in \bbN_0}$ zodat voor elke vector $\vv \in V$ een rij van coefficiënten $(a^n \in \bbF)_{n \in \bbN_0}$ bestaat, zodat de reeks $\sum_{n =1}^{+\infty} a^n \ve_n$ convergeert naar $\vv$
+
+* De rij $(x^n)_{n \in \bbN}$ is **geen (!!)** Schauder basis voor $(C^0([a,b],\bbF), \norm{\cdot}_{\infty})$:
+
+  * een reeks $\sum_{n=0}^{+\infty} a_n x^n$ die convergeert met betrekking tot $\norm{\cdot}_{\infty}$ (uniforme convergentie) geeft sowieso aanleiding tot een analytische functie
+
+  * een continue functie zoals $\abs{x}$ heeft geen convergente Taylorreeks
+
+$\Rightarrow$ allerlei technische subtiliteiten die verdwijnen in het geval van Hilbertruimten (zie volgend hoofdstuk)

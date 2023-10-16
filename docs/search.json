@@ -802,7 +802,105 @@
     "href": "slides/H4.html#metrische-ruimten-2",
     "title": "Hoofdstuk 4 - Normen en afstanden",
     "section": "Metrische ruimten",
-    "text": "Metrische ruimten\n\nEen afbeelding \\(\\Phi:X \\to Y\\) tussen metrische ruimten \\((X,d_X)\\) en \\((Y,d_Y)\\) is isometrisch als \\(d_Y(\\Phi(x),\\Phi(x')) = d_X(x,x')\\) voor alle \\(x,x'\\in X\\)\n\nEen isometrische afbeelding is automatisch injectief\nEen bijectieve isometrische afbeelding definieert een isomorfisme"
+    "text": "Metrische ruimten\n\nEen afbeelding \\(\\Phi:X \\to Y\\) tussen metrische ruimten \\((X,d_X)\\) en \\((Y,d_Y)\\) is isometrisch als \\(d_Y(\\Phi(x),\\Phi(x')) = d_X(x,x')\\) voor alle \\(x,x'\\in X\\)\n\nEen isometrische afbeelding is automatisch (uniform) continu (\\(\\delta_\\epsilon = \\epsilon\\))\nEen isometrische afbeelding is automatisch injectief\nEen bijectieve isometrische afbeelding definieert een isomorfisme tussen \\((X, d_X)\\) en \\((Y, d_Y)\\)"
+  },
+  {
+    "objectID": "slides/H4.html#metrische-ruimten-3",
+    "href": "slides/H4.html#metrische-ruimten-3",
+    "title": "Hoofdstuk 4 - Normen en afstanden",
+    "section": "Metrische ruimten",
+    "text": "Metrische ruimten\nTopologische concepten in een metrische ruimte \\((X,d)\\):\n\nOpen bol: \\(B_r(x) = \\{x'\\in X| d(x,x') \\leq r\\}\\)\nOpen (deel)verzameling \\(S\\): \\(\\forall x \\in S, \\exists \\epsilon&gt;0\\) zodat \\(B_r(x) \\subseteq S\\)\nGesloten deelverzameling \\(S\\) als \\(S^\\text{c} = X \\setminus S\\) open is\n\n\\(\\Rightarrow\\) een convergerende rij \\((x_n \\in S)\\) voldoet aan \\(\\lim_{n\\to\\infty x_n} \\in S\\)\n\\(X\\) and \\(\\{\\}\\) zijn zowel open als gesloten\n\nSluiting \\(\\overline{S}\\): kleinste gesloten verzameling die \\(S\\) bevat = \\(S\\) en al zijn limietpunten\nDichte deelverzameling \\(S\\): als \\(\\overline{S} = X\\)\nBegrensde verzameling \\(S\\): \\(\\exists M \\in {\\mathbb{R}}_{\\geq 0}\\) zodat \\(d(x,y)&lt;M, \\forall x,y \\in S\\)\nCompacte verzameling: zie verderop\n\\(X\\) is separabel (scheidbaar?) als \\(X\\) een aftelbare dichte deelverzameling heeft"
+  },
+  {
+    "objectID": "slides/H4.html#continuïteit-in-genormeerde-vectorruimte",
+    "href": "slides/H4.html#continuïteit-in-genormeerde-vectorruimte",
+    "title": "Hoofdstuk 4 - Normen en afstanden",
+    "section": "Continuïteit in genormeerde vectorruimte",
+    "text": "Continuïteit in genormeerde vectorruimte\nWe beschouwen nu een genormeerde vectorruimte \\((V,{\\left\\lVert\\cdot\\right\\rVert})\\) als metrische ruimte met metriek \\(d({v},{w}) = {\\left\\lVert{v}-{w}\\right\\rVert}\\)\n\nDe norm \\({\\left\\lVert\\cdot\\right\\rVert}:V\\to {\\mathbb{R}}\\) is zelf een continue afbeelding (bewijs aan bord)\n\\(\\Rightarrow\\) voor een convergente rij \\((v_n \\in V)_{n\\in{\\mathbb{N}}_0}\\) is de geassocieerde rij \\(({\\left\\lVert{v}_n\\right\\rVert})_{n\\in{\\mathbb{N}}_0}\\) convergent\nVector optelling \\(+:V \\times V \\to V\\) en scalaire vermenigvuldiging \\({\\mathbb{F}}\\times V \\to V\\) zijn continue afbeeldingen1"
+  },
+  {
+    "objectID": "slides/H4.html#convergentie-in-functieruimten",
+    "href": "slides/H4.html#convergentie-in-functieruimten",
+    "title": "Hoofdstuk 4 - Normen en afstanden",
+    "section": "Convergentie in functieruimten",
+    "text": "Convergentie in functieruimten\nBeschouw opnieuw \\(C^0([a,b],{\\mathbb{F}})\\) met nu de \\(p=\\infty\\)-norm, welke zich herleidt tot:2\n\\[{\\left\\lVert f\\right\\rVert}_p = \\sup_{x\\in [a,b]}{\\left\\lvert f(x)\\right\\rvert} = \\max_{x\\in[a,b]}{\\left\\lvert f(x)\\right\\rvert}\\]\nConvergentie: \\(\\lim_{n\\to \\infty} f_n = f\\) als\n\n\\(\\max_{x\\in [a,b]} {\\left\\lvert f_n(x)-f(x)\\right\\rvert} &lt; \\epsilon\\) voor alle \\(n &gt; N_\\epsilon\\)\n\\({\\left\\lvert f_n(x)-f(x)\\right\\rvert} &lt; \\epsilon\\) voor alle \\(x \\in [a,b]\\) voor alle \\(n &gt; N_\\epsilon\\)\n\\(\\Rightarrow\\) uniforme convergentie van een reeks\n\\(\\Rightarrow\\) \\({\\left\\lVert f\\right\\rVert}_{\\infty}\\) voor continue functies wordt de uniform-norm genoemd\ncontrast met puntsgewijze convergentie:\n\\({\\left\\lvert f_n(x)-f(x)\\right\\rvert} &lt; \\epsilon\\) voor alle \\(n &gt; N_{\\epsilon,x}\\) voor alle \\(x \\in [a,b]\\)\nkan niet worden bekomen met behulp van norm (tegenvoorbeeld aan bord)"
+  },
+  {
+    "objectID": "slides/H4.html#equivalentie-van-normen",
+    "href": "slides/H4.html#equivalentie-van-normen",
+    "title": "Hoofdstuk 4 - Normen en afstanden",
+    "section": "Equivalentie van normen",
+    "text": "Equivalentie van normen\n\nTwee normen voor een vectorruimte \\(V\\) zijn equivalent als ze aanleiding geven tot dezelfde definitie van convergerende rijen (met dan dezelfde limietpunten)\nStelling: twee normen \\({\\left\\lVert\\cdot\\right\\rVert}_a\\) en \\({\\left\\lVert\\cdot\\right\\rVert}_b\\) zijn equivalent als en slechts als er constanten \\(C \\geq c &gt; 0\\) bestaan zodat \\(c {\\left\\lVert{v}\\right\\rVert}_a \\leq {\\left\\lVert{v}\\right\\rVert}_b \\leq C{\\left\\lVert{v}\\right\\rVert}_a\\) voor alle \\({v}\\in V\\)\n(bewijs aan bord)\nStelling: voor een eindig-dimensionale vectorruimte \\(V\\) zijn alle normen equivalent\n(bewijs aan bord)\nVoorbeelden voor \\(\\boldsymbol{v} \\in {\\mathbb{F}}^n\\):\n\n\\(\\frac{{\\left\\lVert{v}\\right\\rVert}_1}{\\sqrt{n}} \\leq {\\left\\lVert\\boldsymbol{v}\\right\\rVert}_2 \\leq {\\left\\lVert{v}\\right\\rVert}_1\\)\n\\(\\frac{{\\left\\lVert{v}\\right\\rVert}_1}{n} \\leq {\\left\\lVert\\boldsymbol{v}\\right\\rVert}_\\infty \\leq {\\left\\lVert{v}\\right\\rVert}_1\\)"
+  },
+  {
+    "objectID": "slides/H4.html#compacte-verzameling-geen-bewijzen",
+    "href": "slides/H4.html#compacte-verzameling-geen-bewijzen",
+    "title": "Hoofdstuk 4 - Normen en afstanden",
+    "section": "Compacte verzameling (geen bewijzen)",
+    "text": "Compacte verzameling (geen bewijzen)\n\nEen verzameling \\(U\\) is compact als\n\nWanneer \\(U\\) wordt bedekt door open verzamelingen \\(\\mathcal{V}=\\{V_1,V_2,\\ldots,\\}\\) (i.e. \\(U \\subseteq \\bigcup \\mathcal{V}\\)), dan wordt \\(U\\) ook bedekt door een eindig aantal van die verzamelingen\nElke rij \\(({v}_n \\in U)\\) heeft een convergerende deelrij met limietpunt in \\(U\\)\n\n(equivalente karakterisaties in metrische ruimten)\nStelling: in een eindig-dimensionale vectorruimte \\(V\\) is een deelverzameling \\(U\\) compact als en slechts als \\(U\\) begrensd en gesloten is (analoog aan Vectoranalayse)."
+  },
+  {
+    "objectID": "slides/H4.html#compacte-verzamelingen-geen-bewijzen",
+    "href": "slides/H4.html#compacte-verzamelingen-geen-bewijzen",
+    "title": "Hoofdstuk 4 - Normen en afstanden",
+    "section": "Compacte verzamelingen (geen bewijzen)",
+    "text": "Compacte verzamelingen (geen bewijzen)\nIn een oneindig-dimensionale vectorruimte zijn gesloten begrensde deelverzamelingen niet compact.\n\nVoorbeeld: \\(C^0([a,b],{\\mathbb{F}})\\) met \\({\\left\\lVert\\cdot\\right\\rVert}_\\infty\\)\n\nBeschouw de gesloten eenheidsbol: \\(\\overline{B_1({o})} = \\{{v}\\in V|{\\left\\lVert{v}\\right\\rVert} \\leq 1\\}\\)\nBeschouw de rij \\(\\{f_n(x)=x^n\\}\\) met elke \\({\\left\\lVert f_n\\right\\rVert} = 1\\). Er bestaat geen convergente deelrij.\n\nTechnisch (Riesz lemma): Beschouw een eigenlijke gesloten deelruimte \\(W{\\preccurlyeq}V\\). Voor elke \\(\\epsilon \\in (0,1)\\) kunnen we een \\({v}_\\epsilon \\in V\\) vinden waarvoor \\({\\left\\lVert{v}_\\epsilon\\right\\rVert}=1\\) en \\({\\left\\lVert{v}_\\epsilon - {w}\\right\\rVert} &gt; \\epsilon\\) voor alle \\(w \\in W\\)."
+  },
+  {
+    "objectID": "slides/H4.html#cauchy-rijen-en-compleetheid",
+    "href": "slides/H4.html#cauchy-rijen-en-compleetheid",
+    "title": "Hoofdstuk 4 - Normen en afstanden",
+    "section": "Cauchy rijen en compleetheid",
+    "text": "Cauchy rijen en compleetheid\n\nEen Cauchy-rij in een metrische ruimte \\((X,d)\\) is een rij \\((x_n \\in X)_{n\\in{\\mathbb{N}}_0}\\) zodat \\(\\forall \\epsilon &gt;0: \\exists N_\\epsilon \\in {\\mathbb{N}}\\) met dan \\(n,m &gt; N_\\epsilon \\implies d(x_n,x_m) &lt; \\epsilon\\)\n(intuïtief: elementen in de staart van de rij komen arbitrair dicht bij elkaar)\nEen convergente rij is altijd een Cauchy-rij\nAls elke Cauchy-rij convergeert wordt \\(X\\) (metrisch) compleet genoemd\nEen genormeerde vectorruimte \\((V,{\\left\\lVert\\cdot\\right\\rVert})\\) die metrisch compleet is wordt een Banachruimte genoemd"
+  },
+  {
+    "objectID": "slides/H4.html#banachruimten",
+    "href": "slides/H4.html#banachruimten",
+    "title": "Hoofdstuk 4 - Normen en afstanden",
+    "section": "Banachruimten",
+    "text": "Banachruimten\nVoorbeelden:\n\nElke eindig-dimensionale vectorruimte, met om het even welke keuze van norm\nElke eindig-dimensionale deelruimte \\(W\\) van een oneindig-dimensionale vectorruimte \\(V\\), met als norm de restrictie van \\({\\left\\lVert\\cdot\\right\\rVert}\\) tot \\(W\\)\nDe ruimte \\(\\ell^p({\\mathbb{F}})\\) van oneindige rijen met eindige \\(p\\)-norm (en dit voor alle \\(p \\in [1,+\\infty]\\))\nRuimte \\(C^0([a,b],{\\mathbb{F}})\\) met maximumnorm/uniformnorm \\({\\left\\lVert\\cdot\\right\\rVert}_\\infty\\) voor begrensd (compact) interval \\([a,b]\\)"
+  },
+  {
+    "objectID": "slides/H4.html#banachruimten-1",
+    "href": "slides/H4.html#banachruimten-1",
+    "title": "Hoofdstuk 4 - Normen en afstanden",
+    "section": "Banachruimten",
+    "text": "Banachruimten\nTegenvoorbeeld:\n\nRuimte \\({\\mathbb{F}}[x]\\) van polynomen met norm \\({\\left\\lVert p\\right\\rVert}= \\max_{x \\in [a,b]} {\\left\\lvert p(x)\\right\\rvert}\\)\n\n\\(p_n(x) = \\sum_{k=0}^n \\frac{1}{k!}x^k\\) definieert een Cauchy-rij\n\\(\\lim_{n\\to\\infty} p_n\\) bestaat niet als polynoom\n\nHerinterpreteer \\({\\mathbb{F}}[x]\\) als (eigenlijke) deelruimte van \\(C^0([a,b],{\\mathbb{F}})\\)\n\n\\(\\lim_{n\\to\\infty} p_n = \\exp\\) bestaat als continue functie\n\\(\\Rightarrow\\) een oneindige deelruimte van een Banachruimte is niet noodzakelijk gesloten"
+  },
+  {
+    "objectID": "slides/H4.html#banachruimten-complete-verzameling",
+    "href": "slides/H4.html#banachruimten-complete-verzameling",
+    "title": "Hoofdstuk 4 - Normen en afstanden",
+    "section": "Banachruimten: complete verzameling",
+    "text": "Banachruimten: complete verzameling\nAangezien (oneindig-dimensionale) deelruimten \\(W {\\preccurlyeq}V\\) open kunnen zijn, kunnen we hun sluiting \\(\\overline{W}\\) bekijken.\n\nZoals eerder: als \\(\\overline{W}=V\\), dan is \\(W\\) een dichte deelruimte\nElke vector \\({v}\\in V\\) kan arbitrair dicht benaderd worden door een vector \\({w}\\in W\\):\n\\(\\forall \\epsilon &gt; 0, {v}\\in V : \\exists {w}\\in W\\) zodat \\({\\left\\lVert{v}-{w}\\right\\rVert}&lt;\\epsilon\\)\nEen verzameling \\(S\\) waarvoor \\({\\mathbb{F}}S\\) dicht is, of dus \\(\\overline{{\\mathbb{F}}S}=V\\), wordt een totale, fundamentele of complete verzameling genoemd\n(Contrast met H1: complete verzameling als \\({\\mathbb{F}}S = V\\))"
+  },
+  {
+    "objectID": "slides/H4.html#banachruimten-complete-verzameling-1",
+    "href": "slides/H4.html#banachruimten-complete-verzameling-1",
+    "title": "Hoofdstuk 4 - Normen en afstanden",
+    "section": "Banachruimten: complete verzameling",
+    "text": "Banachruimten: complete verzameling\nVoorbeeld: stelling van Stone-Weierstrass\nEquivalente formuleringen:\n\nElke continue functie kan aribtrair dicht (in uniform-norm) benaderd worden door een veelterm\n\\({\\mathbb{F}}[x]\\) is een dichte deelverzameling van \\(C^0([a,b],{\\mathbb{F}})\\)\n\\(\\{x^n, n=0,1,2,\\ldots\\}\\) is een complete verzameling voor \\(C^0([a,b],{\\mathbb{F}})\\)"
+  },
+  {
+    "objectID": "slides/H4.html#banachruimten-2",
+    "href": "slides/H4.html#banachruimten-2",
+    "title": "Hoofdstuk 4 - Normen en afstanden",
+    "section": "Banachruimten",
+    "text": "Banachruimten\nVan rijen naar reeksen in genormeerde vectorruimten \\((V,{\\left\\lVert\\cdot\\right\\rVert})\\)\n\nConvergentie van reeksen: als rij van partieelsommen convergeert\n\\(\\sum_{n=1}^{+\\infty} {v}_n ={v}\\iff \\lim_{n\\to\\infty} \\sum_{k=1}^{n} {v}_k = {v}\\iff \\lim_{n\\to \\infty} {\\left\\lVert\\sum_{k=1}^{n} {v}_k - {v}\\right\\rVert} = 0\\)\nEen reeks \\(\\sum_{n=1}^{+\\infty} {v}_n\\) is absoluut convergent als de reeks \\(\\sum_{n=1}^{+\\infty} {\\left\\lVert{v}_n\\right\\rVert}\\) convergeert\n(absolute convergentie is zeker geen nodige voorwaarde voor convergentie van een reeks)\nStelling: Een genormeerde vectorruimte is metrisch compleet (Banachruimte) als en slechts als absolute convergentie een voldoende voorwaarde is voor convergentie van een reeks (elke absoluut convergente reeks convergeert)."
+  },
+  {
+    "objectID": "slides/H4.html#banachruimten-en-basis",
+    "href": "slides/H4.html#banachruimten-en-basis",
+    "title": "Hoofdstuk 4 - Normen en afstanden",
+    "section": "Banachruimten en basis",
+    "text": "Banachruimten en basis\nConvergentie van rijen en reeksen laat een nieuw concept van basis toe in Banachruimten \\((V,{\\left\\lVert\\cdot\\right\\rVert})\\)\n\nEen Schauder basis is een rij \\(({e}_n \\in V)_{n \\in {\\mathbb{N}}_0}\\) zodat voor elke vector \\({v}\\in V\\) een rij van coefficiënten \\((a^n \\in {\\mathbb{F}})_{n \\in {\\mathbb{N}}_0}\\) bestaat, zodat de reeks \\(\\sum_{n =1}^{+\\infty} a^n {e}_n\\) convergeert naar \\({v}\\)\nDe rij \\((x^n)_{n \\in {\\mathbb{N}}}\\) is geen (!!) Schauder basis voor \\((C^0([a,b],{\\mathbb{F}}), {\\left\\lVert\\cdot\\right\\rVert}_{\\infty})\\):\n\neen reeks \\(\\sum_{n=0}^{+\\infty} a_n x^n\\) die convergeert met betrekking tot \\({\\left\\lVert\\cdot\\right\\rVert}_{\\infty}\\) (uniforme convergentie) geeft sowieso aanleiding tot een analytische functie\neen continue functie zoals \\({\\left\\lvert x\\right\\rvert}\\) heeft geen convergente Taylorreeks\n\n\n\\(\\Rightarrow\\) allerlei technische subtiliteiten die verdwijnen in het geval van Hilbertruimten (zie volgend hoofdstuk)"
+  },
+  {
+    "objectID": "slides/H4.html#footnotes",
+    "href": "slides/H4.html#footnotes",
+    "title": "Hoofdstuk 4 - Normen en afstanden",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nHiervoor hebben we het volgende nodig: de productverzameling \\(X \\times Y\\) van twee metrische ruimten \\((X, d_X)\\) en \\((Y, d_Y)\\) is metrische ruimte, bevoorbeeld met metriek \\(d_{X,Y}((x,y), (x',y')) = d_X(x,x') + d_Y(y,y')\\)}↩︎\nExtremumstelling van Weierstrass: \\(\\sup\\) wordt \\(\\max\\) voor continue \\(f\\) begrensd interval \\([a,b]\\)↩︎"
   },
   {
     "objectID": "slides/H2.html",
