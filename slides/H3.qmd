@@ -544,13 +544,13 @@ $p(z) = (z-1)(z+1)^2 = z^3 + z^2 - z - 1 \Rightarrow \mat{C}_p = \begin{bmatrix}
 
 * Jordan normaalvorm / canonische vorm: er bestaat een basis $B$ zodat
 
-  $$\mat{J}_{\map{A}}= \Phi_B(\map{A}) = \bigoplus_{\lambda \in \sigma_{\map{A}}} \bigoplus_{k=1}^{s_\lambda} \bigoplus_{i=1}^{p^{(\lambda)}_{k}} \mat{J}_k(\lambda)$$
+  $$\mat{J}_{\map{A}}= \Phi_B(\map{A}) = \bigoplus_{\lambda \in \sigma_{\map{A}}} \bigoplus_{k=1}^{s_\lambda} \bigoplus_{i=1}^{p_{\lambda,k}} \mat{J}_k(\lambda)$$
   
   met $J_k(\lambda) = \lambda \idmat_{k} + \mat{N}_k$ (Jordan-blokken)
   
-  en $p^{(\lambda)}_k \geq 0$ voor $k=1,\ldots,s_\lambda-1$ en $p^{(\lambda)}_{s_\lambda} > 0$
+  en $p_{\lambda,k} \geq 0$ voor $k=1,\ldots,s_\lambda-1$ en $p_{\lambda,s_\lambda} > 0$
 
-* Per Jordan-blok is er 1 eigenvector: $r_\lambda = \sum_{k=1}^{s_\lambda} p_k^{(\lambda)}$ en $q_\lambda = \sum_{k=1}^{s_\lambda} k p_k^{(\lambda)}$
+* Per Jordan-blok is er 1 eigenvector: $r_\lambda = \sum_{k=1}^{s_\lambda} p_{\lambda,k}$ en $q_\lambda = \sum_{k=1}^{s_\lambda} k p_{\lambda,k}$
 
 * Jordan decompositie: er bestaat een basistransformatie $\mat{V} \in \GL(n,\bbC)$ zodat
 
@@ -805,6 +805,8 @@ $\Rightarrow$ typisch niet uniek (meerdere $\map{B}$ voldoen aan $\map{A}=\exp(\
 
 # Toepassing: lineaire dynamische systemen
 
+(enkel voor oefeningen/project)
+
 ## Dynamische systemen
 
 Een **dynamisch systeem** is een algemene naam voor de wiskundige modellering van een tijdsafhankelijk fenomeen of process van natuurlijke of menselijke origine (fysisch, chemisch, biologisch, ecologisch, economisch, sociaal, …). 
@@ -851,7 +853,7 @@ Beschouw nu $S = \bbR^m$: $\vec{x}$, $\vec{\phi}$, \ldots
 
   $\vec{\phi}(\vec{x}_\ast + \vec{y}_n) \approx \underbrace{\vec{\phi}(\vec{x}^\ast)}_{= \vec{x}^\ast} + \underbrace{\sum_{j=1}^{n}\frac{\partial \vec{\phi}}{\partial x^j}(\vec{x}^\ast) (\vec{y}_n)^j}_{=\mat{J}_{\vec{\phi}}(\vec{x}^\ast) \vec{y}_n}+ \order(\vec{y}^2)$
 
-  $\Rightarrow$ eigenschappen van $\mat{J}_{\varphi}(\vec{x}^ast)$ bepalen gedrag rond en stabiliteit van $\vec{x}^\ast$
+  $\Rightarrow$ eigenschappen van $\mat{J}_{\varphi}(\vec{x}^\ast)$ bepalen gedrag rond en stabiliteit van $\vec{x}^\ast$
 
 ## Discreet dynamisch systeem
 

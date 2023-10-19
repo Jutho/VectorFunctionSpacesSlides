@@ -170,11 +170,18 @@ Gegeven een vectorruimte $V$. Een norm is een afbeelding $V \to \bbR : \vv \maps
   $\Rightarrow \norm{\zerovec} = 0$ , 
 * subadditiviteit / driehoeksongelijkheid: $\norm{\vv + \vw } \leq \norm{\vv} + \norm{\vw}$
 
-  $\Rightarrow \norm{\zerovec} = 0 \leq \norm{\vv} + \norm{-\vv} = 2 \norm{vv}$ 
+  $\Rightarrow \norm{\zerovec} = 0 \leq \norm{\vv} + \norm{-\vv} = 2 \norm{\vv}$ 
 
 * positief definiet: $\norm{\vv} = 0 \Leftrightarrow \vv = 0$
 
 Voor de eerste eigenschap hebben we op het veld van scalairen $\bbF$ een **absolute waarde** $\abs{\scalara}$ nodig. Voor $\bbR$ en $\bbC$ komt dit overeen met de gekende definitie. 
+
+## Nuttige eigenschap
+
+$\norm{\vv} \leq \norm{\vw} + \norm{\vv - \vw}$ (uit driehoeksongelijkheid)
+
+$\implies \norm{\vv} - \norm{\vw} \leq \norm{\vv - \vw}$
+$\implies \abs{\norm{\vv} - \norm{\vw}} \leq \norm{\vv - \vw}$ (uit $\vv \leftrightarrow \vw$)
 
 ## Voorbeelden:
 
@@ -188,9 +195,13 @@ Voor $V = \bbF^n$ hebben we een familie van normen
 
 $$\norm{\vv}_p = \left[\sum_{i=1}^{n} \abs{v^i}^p\right]^{1/p}$$
 
-inclusief de limiet $p\to \infty$:
+Speciale gevallen:
 
-$$\norm{\vv}_\infty = \max \{\abs{\vv^i}, i=1,\ldots,n\}$$
+* $p=1$: Manhattan norm
+* $p=2$: Euclidische norm $\rightarrow$ zie volgend hoofdstuk
+* limiet $p\to \infty$:
+  $$\norm{\vv}_\infty = \max \{\abs{\vv^i}, i=1,\ldots,n\}$$
+
 
 ## Hölder $p$-norm
 
@@ -255,7 +266,7 @@ Belang van metrische ruimten is dat we concepten uit analyse van functies $\bbR 
 * Continuïteit van $\Phi:X \to Y$ tussen metrische ruimten $(X,d_X)$ en $(Y,d_Y)$:
 
   * $\Phi$ is continu in $x \in X$: $\lim_{n \to \infty} \Phi(x_n) = \Phi(x)$ voor alle rijen $(x_n)_{n \in\bbN_0}$ met $\lim_{n\to\infty} x_n = x$
-  * $\Phi$ is continu in $x \in X$: $\forall \epsilon > 0$, $\exists \delta_{\epsilon} > 0$ zodat $d_X(x',x) < \delta_\epsilon \implies d_Y(\Phi(x'),\Phi(x))$
+  * $\Phi$ is continu in $x \in X$: $\forall \epsilon > 0$, $\exists \delta_{\epsilon} > 0$ zodat $d_X(x',x) < \delta_\epsilon \implies d_Y(\Phi(x'),\Phi(x))<\epsilon$
   * $\Phi$ continu in volledig $X$: $\lim_{n\to\infty}\Phi(x_n) = \Phi(\lim_{n\to\infty} x_n)$ voor alle convergerende rijen 
 
 ::: aside
@@ -273,13 +284,13 @@ Voor een continue afbeelding $\Phi$ kan $\delta_\epsilon$ in de tweede definitie
 
 Topologische concepten in een metrische ruimte $(X,d)$:
 
-* Open bol: $B_r(x) = \{x'\in X| d(x,x') \leq r\}$
-* Open (deel)verzameling $S$: $\forall x \in S, \exists \epsilon>0$ zodat $B_r(x) \subseteq S$
+* Open bol: $B_r(x) = \{x'\in X| d(x,x') < r\}$
+* Open (deel)verzameling $S$: $\forall x \in S, \exists r>0$ zodat $B_r(x) \subseteq S$
 * Gesloten deelverzameling $S$ als $S^\text{c} = X \setminus S$ open is
   * $\Rightarrow$ een convergerende rij $(x_n \in S)$ voldoet aan $\lim_{n\to\infty x_n} \in S$
   * $X$ and $\{\}$ zijn zowel open als gesloten
 * Sluiting $\overline{S}$: kleinste gesloten verzameling die $S$ bevat = $S$ en al zijn limietpunten
-* Dichte deelverzameling $S$: als $\overline{S} = X$
+* Dichte deelverzameling $S$: als $\overline{S} = X$ (bvb: $\overline{Q}=\bbR$)
 * Begrensde verzameling $S$: $\exists M \in \bbR_{\geq 0}$ zodat $d(x,y)<M, \forall x,y \in S$
 * Compacte verzameling: zie verderop
 * $X$ is **separabel** (scheidbaar?) als $X$ een aftelbare dichte deelverzameling heeft
@@ -290,7 +301,7 @@ We beschouwen nu een genormeerde vectorruimte $(V,\norm{\cdot})$ als metrische r
 
 * De norm $\norm{\cdot}:V\to \bbR$ is zelf een continue afbeelding (bewijs aan bord)
 
-  $\Rightarrow$ voor een convergente rij $(v_n \in V)_{n\in\bbN_0}$ is de geassocieerde rij $(\norm{\vv_n})_{n\in\bbN_0}$ convergent
+  $\Rightarrow$ voor een convergente rij $(v_n \in V)_{n\in\bbN_0}$ is de geassocieerde rij $(\norm{\vv_n})_{n\in\bbN_0}$ convergent (en dus begrensd)
 * Vector optelling $+:V \times V \to V$ en scalaire vermenigvuldiging $\bbF \times V \to V$ zijn continue afbeeldingen^[Hiervoor hebben we het volgende nodig: de productverzameling $X \times Y$ van twee metrische ruimten $(X, d_X)$ en $(Y, d_Y)$ is metrische ruimte, bevoorbeeld met metriek $d_{X,Y}((x,y), (x',y')) = d_X(x,x') + d_Y(y,y')$}]
 
 ## Convergentie in functieruimten {.smaller}
@@ -437,3 +448,4 @@ Convergentie van rijen en reeksen laat een nieuw concept van basis toe in Banach
   * een continue functie zoals $\abs{x}$ heeft geen convergente Taylorreeks
 
 $\Rightarrow$ allerlei technische subtiliteiten die verdwijnen in het geval van Hilbertruimten (zie volgend hoofdstuk)
+
