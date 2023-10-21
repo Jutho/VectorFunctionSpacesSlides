@@ -150,6 +150,28 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#banachruimten-2" id="toc-banachruimten-2" class="nav-link" data-scroll-target="#banachruimten-2">Banachruimten</a></li>
   <li><a href="#banachruimten-en-basis" id="toc-banachruimten-en-basis" class="nav-link" data-scroll-target="#banachruimten-en-basis">Banachruimten en basis</a></li>
   </ul></li>
+  <li><a href="#normen-voor-lineaire-afbeeldingen" id="toc-normen-voor-lineaire-afbeeldingen" class="nav-link" data-scroll-target="#normen-voor-lineaire-afbeeldingen">Normen voor lineaire afbeeldingen</a>
+  <ul class="collapse">
+  <li><a href="#normen-voor-matrices" id="toc-normen-voor-matrices" class="nav-link" data-scroll-target="#normen-voor-matrices">Normen voor matrices</a></li>
+  <li><a href="#continuïteit-van-lineaire-afbeeldingen" id="toc-continuïteit-van-lineaire-afbeeldingen" class="nav-link" data-scroll-target="#continuïteit-van-lineaire-afbeeldingen">Continuïteit van lineaire afbeeldingen</a></li>
+  <li><a href="#begrensde-lineaire-afbeeldingen" id="toc-begrensde-lineaire-afbeeldingen" class="nav-link" data-scroll-target="#begrensde-lineaire-afbeeldingen">Begrensde lineaire afbeeldingen</a></li>
+  <li><a href="#geïnduceerde-norm" id="toc-geïnduceerde-norm" class="nav-link" data-scroll-target="#geïnduceerde-norm">Geïnduceerde norm</a></li>
+  <li><a href="#geïnduceerde-norm-1" id="toc-geïnduceerde-norm-1" class="nav-link" data-scroll-target="#geïnduceerde-norm-1">Geïnduceerde norm</a></li>
+  <li><a href="#normen-voor-lineaire-operatoren" id="toc-normen-voor-lineaire-operatoren" class="nav-link" data-scroll-target="#normen-voor-lineaire-operatoren">Normen voor lineaire operatoren</a></li>
+  <li><a href="#normen-voor-matrices-1" id="toc-normen-voor-matrices-1" class="nav-link" data-scroll-target="#normen-voor-matrices-1">Normen voor matrices</a></li>
+  <li><a href="#consistente-matrixnormen" id="toc-consistente-matrixnormen" class="nav-link" data-scroll-target="#consistente-matrixnormen">Consistente matrixnormen</a></li>
+  <li><a href="#consistente-matrixnormen-1" id="toc-consistente-matrixnormen-1" class="nav-link" data-scroll-target="#consistente-matrixnormen-1">Consistente matrixnormen</a></li>
+  <li><a href="#spectraalstraal" id="toc-spectraalstraal" class="nav-link" data-scroll-target="#spectraalstraal">Spectraalstraal</a></li>
+  <li><a href="#duale-normen" id="toc-duale-normen" class="nav-link" data-scroll-target="#duale-normen">Duale normen</a></li>
+  </ul></li>
+  <li><a href="#toepassingen" id="toc-toepassingen" class="nav-link" data-scroll-target="#toepassingen">Toepassingen</a>
+  <ul class="collapse">
+  <li><a href="#functies-van-matrices-en-operatoren" id="toc-functies-van-matrices-en-operatoren" class="nav-link" data-scroll-target="#functies-van-matrices-en-operatoren">Functies van matrices en operatoren</a></li>
+  <li><a href="#functies-van-matrices-en-operatoren-1" id="toc-functies-van-matrices-en-operatoren-1" class="nav-link" data-scroll-target="#functies-van-matrices-en-operatoren-1">Functies van matrices en operatoren</a></li>
+  <li><a href="#sensitiviteit-van-lineaire-systemen" id="toc-sensitiviteit-van-lineaire-systemen" class="nav-link" data-scroll-target="#sensitiviteit-van-lineaire-systemen">Sensitiviteit van lineaire systemen</a></li>
+  <li><a href="#sensitiviteit-van-lineaire-systemen-1" id="toc-sensitiviteit-van-lineaire-systemen-1" class="nav-link" data-scroll-target="#sensitiviteit-van-lineaire-systemen-1">Sensitiviteit van lineaire systemen</a></li>
+  <li><a href="#markovketens-en-stochastische-matrices" id="toc-markovketens-en-stochastische-matrices" class="nav-link" data-scroll-target="#markovketens-en-stochastische-matrices">Markovketens en stochastische matrices</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -379,8 +401,8 @@ ul.task-list li input[type="checkbox"] {
 <p>(bewijs aan bord)</p></li>
 <li><p>Voorbeelden voor <span class="math inline">\(\boldsymbol{v} \in {\mathbb{F}}^n\)</span>:</p>
 <ul>
-<li><span class="math inline">\(\frac{{\left\lVert{v}\right\rVert}_1}{\sqrt{n}} \leq {\left\lVert\boldsymbol{v}\right\rVert}_2 \leq {\left\lVert{v}\right\rVert}_1\)</span></li>
-<li><span class="math inline">\(\frac{{\left\lVert{v}\right\rVert}_1}{n} \leq {\left\lVert\boldsymbol{v}\right\rVert}_\infty \leq {\left\lVert{v}\right\rVert}_1\)</span></li>
+<li><span class="math inline">\(\frac{{\left\lVert\boldsymbol{v}\right\rVert}_1}{\sqrt{n}} \leq {\left\lVert\boldsymbol{v}\right\rVert}_2 \leq {\left\lVert\boldsymbol{v}\right\rVert}_1\)</span></li>
+<li><span class="math inline">\(\frac{{\left\lVert\boldsymbol{v}\right\rVert}_1}{n} \leq {\left\lVert\boldsymbol{v}\right\rVert}_\infty \leq {\left\lVert\boldsymbol{v}\right\rVert}_1\)</span></li>
 </ul></li>
 </ul>
 </section>
@@ -491,6 +513,177 @@ ul.task-list li input[type="checkbox"] {
 </ul></li>
 </ul>
 <p><span class="math inline">\(\Rightarrow\)</span> allerlei technische subtiliteiten die verdwijnen in het geval van Hilbertruimten (zie volgend hoofdstuk)</p>
+</section>
+</section>
+<section id="normen-voor-lineaire-afbeeldingen" class="level1">
+<h1>Normen voor lineaire afbeeldingen</h1>
+<section id="normen-voor-matrices" class="level2">
+<h2 class="anchored" data-anchor-id="normen-voor-matrices">Normen voor matrices</h2>
+<p>Gegeven <span class="math inline">\({\mathsf{A}} \in {\mathbb{F}}^{m \times n}\)</span>:</p>
+<ul>
+<li><p>‘vectoriseer’ <span class="math inline">\({\mathsf{A}}\)</span> (vergeet de matrixstructuur) via <span class="math inline">\({\mathbb{F}}^{m \times n} \cong {\mathbb{F}}^{m n}\)</span> (vectorruimte-isomorphisme) en gebruik een vectornorm</p></li>
+<li><p>voorbeeld: Frobenius norm (ook wel Hilbert-Schmidt norm):</p>
+<p><span class="math inline">\({\left\lVert{\mathsf{A}}\right\rVert}_\text{F} = \left(\sum_{i=1}^{m}\sum_{j=1}^{n} {\left\lvert A^i_{\ j}\right\rvert}^2\right)^{1/2} = \sqrt{\mathop{\mathrm{tr}}({\mathsf{A}}^{\mathsf{H}}{\mathsf{A}})}\)</span></p></li>
+<li><p>kunnen we normen met extra nuttige eigenschappen bedenken voor lineaire afbeeldingen?</p></li>
+</ul>
+</section>
+<section id="continuïteit-van-lineaire-afbeeldingen" class="level2">
+<h2 class="anchored" data-anchor-id="continuïteit-van-lineaire-afbeeldingen">Continuïteit van lineaire afbeeldingen</h2>
+<p>Beschouw genormeerde vectorruimten <span class="math inline">\((V,{\left\lVert\cdot\right\rVert}_V)\)</span> en <span class="math inline">\((W,{\left\lVert\cdot\right\rVert}_W)\)</span>.</p>
+<ul>
+<li>Een lineaire afbeelding <span class="math inline">\({\hat{A}}\in \mathop{\mathrm{Hom}}(V,W)\)</span> wordt begrends genoemd als er een constante <span class="math inline">\(C \in {\mathbb{R}}_{\geq 0}\)</span> bestaat zodat <span class="math display">\[{\left\lVert{\hat{A}}{v}\right\rVert}_W\leq C {\left\lVert{v}\right\rVert}_V,\quad\forall {v}\in V\]</span></li>
+<li>Stelling: Voor een lineaire afbeelding <span class="math inline">\({\hat{A}}\in \mathop{\mathrm{Hom}}(V,W)\)</span> zijn volgende eigenschappen equivalent (bewijs aan bord)
+<ul>
+<li><span class="math inline">\({\hat{A}}\)</span> is begrensd</li>
+<li><span class="math inline">\({\hat{A}}\)</span> is continu in de oorsprong</li>
+<li><span class="math inline">\({\hat{A}}\)</span> is overal continu (en zelfs uniform continu)</li>
+</ul></li>
+</ul>
+</section>
+<section id="begrensde-lineaire-afbeeldingen" class="level2">
+<h2 class="anchored" data-anchor-id="begrensde-lineaire-afbeeldingen">Begrensde lineaire afbeeldingen</h2>
+<p>We definiëren <span class="math inline">\(\mathcal{B}(V,W) {\preccurlyeq}\mathop{\mathrm{Hom}}(V,W)\)</span> als de ruimte van begrensde lineaire afbeeldingen tussen genormeerde vectorruimten <span class="math inline">\((V,{\left\lVert\cdot\right\rVert}_V)\)</span> en <span class="math inline">\((W,{\left\lVert\cdot\right\rVert}_W)\)</span>.</p>
+<ul>
+<li><p><span class="math inline">\(\mathcal{B}(V,W)\)</span> vormt inderdaad een vectorruimte (een deelruimte van <span class="math inline">\(\mathop{\mathrm{Hom}}(V,W)\)</span>): tracht dit zelf aan te tonen!</p></li>
+<li><p>Als het domein <span class="math inline">\(V\)</span> een eindig-dimensionale ruimte is, geldt <span class="math inline">\(\mathcal{B}(V,W)=\mathop{\mathrm{Hom}}(V,W)\)</span></p></li>
+<li><p>Een norm <span class="math inline">\({\left\lVert{\hat{A}}\right\rVert}\)</span> voor lineaire afbeeldingen <span class="math inline">\({\hat{A}}\in \mathcal{B}(V,W)\)</span> heet <strong>ondergeschikt</strong> (subordinate) aan de vectornormen in <span class="math inline">\(V\)</span> en <span class="math inline">\(W\)</span> als <span class="math display">\[{\left\lVert{\hat{A}}{v}\right\rVert}_W \leq {\left\lVert{\hat{A}}\right\rVert} {\left\lVert{v}\right\rVert}_V,\quad\forall {v}\in V\]</span></p></li>
+</ul>
+</section>
+<section id="geïnduceerde-norm" class="level2">
+<h2 class="anchored" data-anchor-id="geïnduceerde-norm">Geïnduceerde norm</h2>
+<p>Beschouw genormeerde vectorruimten <span class="math inline">\((V,{\left\lVert\cdot\right\rVert}_V)\)</span> en <span class="math inline">\((W,{\left\lVert\cdot\right\rVert}_W)\)</span>. We kunnen een norm voor afbeeldingen <span class="math inline">\({\hat{A}}\in \mathcal{B}(V,W)\)</span> definiëren via</p>
+<p><span class="math display">\[\begin{align}
+{\left\lVert{\hat{A}}\right\rVert}_{V \to W} &amp;= \inf\{ C |  {\left\lVert{\hat{A}} {v}\right\rVert}_W \leq C {\left\lVert{v}\right\rVert}_V, \forall {v}\in V\}\nonumber\\
+&amp;= \sup\left\{\frac{{\left\lVert{\hat{A}}{v}\right\rVert}_W}{{\left\lVert{v}\right\rVert}_V}\ \text{with}\ {v}\neq {o}_V\right\}\nonumber\\
+&amp;= \sup\{ {\left\lVert{\hat{A}}{v}\right\rVert}_W \text{with}\ {\left\lVert{v}\right\rVert}_V = 1\}
+\end{align}\]</span></p>
+<p>Deze norm staat gekend als de <strong>geïnduceerde norm</strong> of soms ook <strong>operator norm</strong> (ook al geldt hij voor algemene lineaire afbeeldingen). Soms wordt ook met de “subordinate norm” specifiek naar deze definitie verwezen.</p>
+</section>
+<section id="geïnduceerde-norm-1" class="level2">
+<h2 class="anchored" data-anchor-id="geïnduceerde-norm-1">Geïnduceerde norm</h2>
+<ul>
+<li>Voor <span class="math inline">\((V, {\left\lVert\cdot\right\rVert}_V)\)</span> een genormeerde ruimte en <span class="math inline">\((W,{\left\lVert\cdot\right\rVert}_W)\)</span> een Banachruimte geldt dat de ruimte <span class="math inline">\(\mathcal{B}(V,W)\)</span> van begrensde lineaire afbeeldingen in combinatie met de geïnduceerde norm <span class="math inline">\({\left\lVert\cdot\right\rVert}_{V\to W}\)</span> zelf een Banachruimte is (geen bewijs)</li>
+</ul>
+</section>
+<section id="normen-voor-lineaire-operatoren" class="level2">
+<h2 class="anchored" data-anchor-id="normen-voor-lineaire-operatoren">Normen voor lineaire operatoren</h2>
+<p>Beschouw nu specifiek <span class="math inline">\({\hat{A}}\in \mathop{\mathrm{End}}(V)\)</span> voor een Banachruimte <span class="math inline">\((V,{\left\lVert\cdot\right\rVert}_V)\)</span>. De begrensde lineaire operatoren worden genoteerd als <span class="math inline">\(\mathcal{B}(V) = \mathcal{B}(V,V) {\preccurlyeq}\mathop{\mathrm{End}}(V)\)</span>.</p>
+<ul>
+<li><p>Een norm <span class="math inline">\({\left\lVert\cdot\right\rVert}\)</span> voor lineaire operatoren wordt <strong>submultiplicatief</strong> genoemd als <span class="math display">\[{\left\lVert{\hat{A}}\cdot{\hat{B}}\right\rVert} \leq {\left\lVert{\hat{A}}\right\rVert} {\left\lVert{\hat{B}}\right\rVert}, \quad \forall {\hat{A}},{\hat{B}} \in \mathcal{B}(V)\]</span></p></li>
+<li><p>De geinduceerde norm <span class="math inline">\({\left\lVert{\hat{A}}\right\rVert}_{V\to V}\)</span> is submultiplicatief (bewijs aan bord)</p></li>
+<li><p>Voor elke submultiplicatieve of ondergeschikte norm geldt <span class="math inline">\({\left\lVert{\hat{1}}\right\rVert} \geq 1\)</span>. Voor de geinduceerde norm is <span class="math inline">\({\left\lVert{\hat{1}}\right\rVert}=1\)</span>.</p></li>
+</ul>
+</section>
+<section id="normen-voor-matrices-1" class="level2">
+<h2 class="anchored" data-anchor-id="normen-voor-matrices-1">Normen voor matrices</h2>
+<ul>
+<li><p>voor gegeven <span class="math inline">\(p\)</span>, <span class="math inline">\(p\)</span>-norm vormt een familie van normen voor vectoren in <span class="math inline">\({\mathbb{F}}^n\)</span> voor arbitraire <span class="math inline">\(n\)</span></p></li>
+<li><p>voor een matrix <span class="math inline">\({\mathsf{A}}\in{\mathbb{F}}^{m \times n}\)</span> kunnen we in principe de geïnduceerde norm berekenen voor <span class="math inline">\(p\)</span>-norm op <span class="math inline">\({\mathbb{F}}^m\)</span> en <span class="math inline">\(q\)</span>-norm op <span class="math inline">\({\mathbb{F}}^n\)</span>; typisch willen we <span class="math inline">\(p=q\)</span>.</p>
+<ul>
+<li><span class="math inline">\({\left\lVert{\mathsf{A}}\right\rVert}_{\text{col}} = {\left\lVert{\mathsf{A}}\right\rVert}_{1 \to 1} = \max_{j=1,\ldots,n} \sum_{i=1}^{m} {\left\lvert A^i_{\ j}\right\rvert}\)</span></li>
+<li><span class="math inline">\({\left\lVert{\mathsf{A}}\right\rVert}_{\text{row}} = {\left\lVert{\mathsf{A}}\right\rVert}_{\infty \to \infty} = \max_{i=1,\ldots,m} \sum_{j=1}^{n} {\left\lvert A^i_{\ j}\right\rvert}\)</span></li>
+</ul>
+<p>(oefeningen, zelf proberen)</p>
+<ul>
+<li>(<span class="math inline">\({\left\lVert{\mathsf{A}}\right\rVert}_{2 \to 2}\)</span> is moeilijker te berekenen, en is gegeven door de grootste “singuliere waarde” (zie H6))</li>
+</ul></li>
+</ul>
+</section>
+<section id="consistente-matrixnormen" class="level2">
+<h2 class="anchored" data-anchor-id="consistente-matrixnormen">Consistente matrixnormen</h2>
+<p>Gegeven een familie van normen <span class="math inline">\(\{{\left\lVert\cdot\right\rVert}^{(m \times n)}: {\mathbb{F}}^{m\times n} \to {\mathbb{R}}_{\geq 0}; \forall m, n \in {\mathbb{N}}\}\)</span> voor matrices van alle groottes:</p>
+<ul>
+<li><p>deze worden <strong>consistent</strong> genoemd als <span class="math display">\[{\left\lVert{\mathsf{A}}{\mathsf{B}}\right\rVert}^{(m \times n)} \leq {\left\lVert{\mathsf{A}}\right\rVert}^{(m \times k)} {\left\lVert{\mathsf{B}}\right\rVert}^{(k \times n)}\]</span> voor alle <span class="math inline">\({\mathsf{A}}\in{\mathbb{F}}^{m\times k}\)</span> en <span class="math inline">\({\mathsf{B}}\in{\mathbb{F}}^{k\times n}\)</span></p></li>
+<li><p>de normen <span class="math inline">\({\left\lVert{\mathsf{A}}\right\rVert}_{p\times p}\)</span> is consistent (bewijs aan bord)</p></li>
+<li><p>de norm <span class="math inline">\({\left\lVert{\mathsf{A}}\right\rVert}_{\text{F}}={\left\lVert\text{vectorize}({\mathsf{A}})\right\rVert}_2\)</span> is consistent (bewijs aan bord)</p></li>
+<li><p>de norm <span class="math inline">\({\left\lVert\text{vectorize}({\mathsf{A}})\right\rVert}_\infty\)</span> is niet consistent</p></li>
+</ul>
+</section>
+<section id="consistente-matrixnormen-1" class="level2">
+<h2 class="anchored" data-anchor-id="consistente-matrixnormen-1">Consistente matrixnormen</h2>
+<ul>
+<li><p>Het concept “matrixnorm” wordt vaak gedefinieerd als een norm die aan de drie voorwaarden van een vectornorm voldoet, en bovendien aan de consistentievoorwaarde.</p></li>
+<li><p>De consistentievoorwaarde is een veralgemening van submultiplicativiteit, en beide termen worden soms door elkaar gebruikt.</p></li>
+<li><p>Er is geen gestandardiseerde terminologie en “subordinate”, “submultiplicative” en “consistent” of ook “compatible” wordt door elkaar gebruikt in gerelateerde betekenissen</p></li>
+<li><p>(in vragen hieromtrent zal ook steeds de expliciete voorwaarde als wiskundige ongelijkheid vermeld staan)</p></li>
+</ul>
+</section>
+<section id="spectraalstraal" class="level2">
+<h2 class="anchored" data-anchor-id="spectraalstraal">Spectraalstraal</h2>
+<ul>
+<li><p>De spectraalstraal van een operator <span class="math inline">\({\hat{A}}\in\mathop{\mathrm{End}}(V)\)</span> is gedefinieerd als <span class="math display">\[\rho_{{\hat{A}}} = \sup\{{\left\lvert\lambda\right\rvert};\lambda \in \sigma_{{\hat{A}}}\}\]</span></p></li>
+<li><p>Voor een submultiplicatieve norm en <span class="math inline">\(V\)</span> eindig-dimensionaal geldt <span class="math inline">\({\left\lVert{\hat{A}}\right\rVert} \geq \rho_{{\hat{A}}}\)</span> (bewijs aan bord)</p>
+<ul>
+<li>ook <span class="math inline">\(\rho_{{\hat{A}}}^n \leq {\left\lVert{\hat{A}}^n\right\rVert}\)</span></li>
+<li>als <span class="math inline">\({\hat{A}}\)</span> inverteerbaar: <span class="math inline">\({\left\lVert{\hat{A}}\right\rVert}^{-1}\leq \rho_{{\hat{A}}}^{-1}\)</span></li>
+</ul></li>
+<li><p>Gelfand formule: <span class="math inline">\(\rho_{\hat{A}} =\lim_{n\to\infty}{\left\lVert{\hat{A}}^n\right\rVert}^{\frac{1}{n}}\)</span></p>
+<p>(bewijs aan bord)</p></li>
+</ul>
+</section>
+<section id="duale-normen" class="level2">
+<h2 class="anchored" data-anchor-id="duale-normen">Duale normen</h2>
+<p>Gegeven een genormeerde vectorruimte <span class="math inline">\((V,{\left\lVert\cdot\right\rVert})\)</span>:</p>
+<ul>
+<li><p>geïnduceerde norm op <span class="math inline">\(\mathcal{B}(V,{\mathbb{F}}){\preccurlyeq}V^\ast\)</span> wordt genoteerd als de duale norm <span class="math inline">\({\left\lVert\cdot\right\rVert}^\ast\)</span>: <span class="math display">\[{\left\lVert\xi\right\rVert}^\ast = \sup\left\{\frac{{\left\lvert\xi[v]\right\rvert}}{{\left\lVert v\right\rVert}} ; \forall v \in V, v \neq {o}\right\}, \quad \forall \xi \in V^\ast\]</span></p></li>
+<li><p>voor <span class="math inline">\(V = {\mathbb{F}}\)</span> met Hölder norm <span class="math inline">\({\left\lVert\cdot\right\rVert}_p\)</span> wordt de duale norm gegeven door <span class="math inline">\({\left\lVert\xi\right\rVert}_p^\ast = {\left\lVert\boldsymbol{\xi}\right\rVert}_q\)</span> waarbij <span class="math inline">\(1/p+1/q=1\)</span>, en <span class="math inline">\(\boldsymbol{\xi}\)</span> de componenten van <span class="math inline">\(\xi\)</span>, i.e.&nbsp;zodat <span class="math inline">\(\xi[\boldsymbol{v}]=\boldsymbol{\xi}^{\mathsf{T}}\boldsymbol{v}\)</span></p>
+<p>(bewijs aan bord)</p></li>
+</ul>
+</section>
+</section>
+<section id="toepassingen" class="level1">
+<h1>Toepassingen</h1>
+<section id="functies-van-matrices-en-operatoren" class="level2">
+<h2 class="anchored" data-anchor-id="functies-van-matrices-en-operatoren">Functies van matrices en operatoren</h2>
+<ul>
+<li><p>Functie met convergente Taylorreeks rond <span class="math inline">\(z=0\)</span>: <span class="math display">\[f(z) = \sum_{n=0}^{+\infty} f_n z^n, \quad \forall {\left\lvert z\right\rvert}&lt;R\]</span></p>
+<ul>
+<li><p><span class="math inline">\({\hat{A}}\in\mathcal{B}(V)\)</span> met submultiplicatieve operatornorm:</p>
+<p><span class="math inline">\({\left\lVert\sum_{n=0}^{+\infty} f_n {\hat{A}}^n\right\rVert} \leq \sum_{n=0}^{+\infty} {\left\lvert f_n\right\rvert} {\left\lVert{\hat{A}}^n\right\rVert} \leq \sum_{n=0}^{+\infty} {\left\lvert f_n\right\rvert} {\left\lVert{\hat{A}}\right\rVert}^n\)</span></p>
+<p><span class="math inline">\(\Rightarrow\)</span> <span class="math inline">\(\sum_{n=0}^{+\infty} f_n {\hat{A}}^n\)</span> convergeert voor alle <span class="math inline">\({\hat{A}}\)</span> met <span class="math inline">\({\left\lVert{\hat{A}}\right\rVert}&lt;R\)</span> als <span class="math inline">\(V\)</span> een Banachruimte is</p></li>
+</ul></li>
+</ul>
+</section>
+<section id="functies-van-matrices-en-operatoren-1" class="level2">
+<h2 class="anchored" data-anchor-id="functies-van-matrices-en-operatoren-1">Functies van matrices en operatoren</h2>
+<ul>
+<li>Functies met convergente Taylorreeks rond <span class="math inline">\(z=\lambda\)</span> voor elke eigenwaarde <span class="math inline">\(\lambda\)</span>
+<ul>
+<li><p>Beschouw <span class="math inline">\({\hat{N}}\)</span> met <span class="math inline">\({\hat{N}}^s = 0\)</span> en definieer <span class="math display">\[{\left\lVert{v}\right\rVert}_{R,s} = {\left\lVert{v}\right\rVert} + \frac{{\left\lVert{\hat{N}}{v}\right\rVert}}{R} + \dots + \frac{{\left\lVert{\hat{N}}^{s-1}{v}\right\rVert}}{R^{s-1}}\]</span></p>
+<p><span class="math inline">\(\Rightarrow {\left\lVert{\hat{N}}{v}\right\rVert}_{{\hat{N}},R} = R({\left\lVert v\right\rVert}_{{\hat{N}},R} - {\left\lVert{v}\right\rVert}) \leq R {\left\lVert v\right\rVert}_{{\hat{N}},R}\)</span></p>
+<p><span class="math inline">\(\Rightarrow \sup_{{v}\neq 0} \frac{{\left\lVert{\hat{N}}{v}\right\rVert}_{{\hat{N}},R}}{{\left\lVert{v}\right\rVert}_{{\hat{N}},R}} \leq R\)</span></p></li>
+</ul></li>
+</ul>
+</section>
+<section id="sensitiviteit-van-lineaire-systemen" class="level2">
+<h2 class="anchored" data-anchor-id="sensitiviteit-van-lineaire-systemen">Sensitiviteit van lineaire systemen</h2>
+<p>Lineair system <span class="math inline">\({\hat{A}}{x}= {y}\)</span> met <span class="math inline">\({x},{y}\in V\)</span> en <span class="math inline">\({\hat{A}} \in \mathop{\mathrm{End}}(V)\)</span> met <span class="math inline">\(V\)</span> een genormeerde vectorruimte met norm <span class="math inline">\({\left\lVert\cdot\right\rVert}\)</span></p>
+<ul>
+<li><p>Stel kleine variatie <span class="math inline">\({y}\to {y}+ \Delta{y}\Rightarrow {x}\to {x}+ \Delta {x}\)</span></p></li>
+<li><p><span class="math inline">\(\frac{{\left\lVert\Delta {x}\right\rVert}}{{\left\lVert{x}\right\rVert}} \leq \kappa({\hat{A}}) \frac{{\left\lVert\Delta{y}\right\rVert}}{{\left\lVert{y}\right\rVert}}\)</span></p>
+<p>met het <strong>condititiegetal <span class="math inline">\(\kappa({\hat{A}})\)</span></strong> gegeven door</p>
+<p><span class="math display">\[\kappa({\hat{A}}) = \begin{cases}
+{\left\lVert{\hat{A}}\right\rVert}{\left\lVert{\hat{A}}^{-1}\right\rVert},&amp;\text{if ${\hat{A}}$ is invertible}\\
++\infty,&amp;\text{otherwise}
+\end{cases}\]</span></p>
+<p>met hierin <span class="math inline">\({\left\lVert{\hat{A}}\right\rVert}\)</span> de geïnduceerde norm geassocieerd aan de vectornorm (bewijs: eenvoudig, zie ook Py4Sci)</p></li>
+</ul>
+</section>
+<section id="sensitiviteit-van-lineaire-systemen-1" class="level2">
+<h2 class="anchored" data-anchor-id="sensitiviteit-van-lineaire-systemen-1">Sensitiviteit van lineaire systemen</h2>
+<ul>
+<li><p>Uitbreiding: ook variatie <span class="math inline">\({\hat{A}}\to {\hat{A}}+\Delta{\hat{A}}\)</span> met <span class="math inline">\({\left\lVert{\hat{A}}^{-1}\Delta{\hat{A}}\right\rVert} &lt; 1\)</span></p>
+<ul>
+<li><span class="math inline">\({\left\lVert({\hat{A}} + \Delta{\hat{A}})^{-1}\right\rVert} \leq \frac{{\left\lVert{\hat{A}}^{-1}\right\rVert}}{1 - {\left\lVert{\hat{A}}^{-1} \Delta{\hat{A}}\right\rVert}}\)</span></li>
+<li><span class="math inline">\(\frac{{\left\lVert\Delta {x}\right\rVert}}{{\left\lVert{x}\right\rVert}} \leq \frac{\kappa({\hat{A}})}{1 - {\left\lVert{\hat{A}}^{-1} \Delta{\hat{A}}\right\rVert}} \left( \frac{{\left\lVert\Delta {y}\right\rVert}}{{\left\lVert{y}\right\rVert}} + \frac{{\left\lVert\Delta{\hat{A}}\right\rVert}}{{\left\lVert{\hat{A}}\right\rVert}}\right)\)</span></li>
+</ul></li>
+<li><p>A postiori error: het residu <span class="math inline">\(r = {\hat{{y}}} - {\hat{A}}\tilde{{x}}\)</span> voor een benaderde oplossing <span class="math inline">\(\tilde{{x}}\)</span>:</p>
+<p><span class="math inline">\(\Rightarrow \frac{{\left\lVert{x}- \tilde{{x}}\right\rVert}}{{\left\lVert{x}\right\rVert}} \leq \kappa({\hat{A}}) \frac{{\left\lVert{r}\right\rVert}}{{\left\lVert{y}\right\rVert}}\)</span> met <span class="math inline">\({x}\)</span> de echte oplossing</p></li>
+</ul>
+</section>
+<section id="markovketens-en-stochastische-matrices" class="level2">
+<h2 class="anchored" data-anchor-id="markovketens-en-stochastische-matrices">Markovketens en stochastische matrices</h2>
+<p>Misschien later?</p>
 
 
 </section>

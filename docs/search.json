@@ -837,7 +837,7 @@
     "href": "slides/H4.html#equivalentie-van-normen",
     "title": "Hoofdstuk 4 - Normen en afstanden",
     "section": "Equivalentie van normen",
-    "text": "Equivalentie van normen\n\nTwee normen voor een vectorruimte \\(V\\) zijn equivalent als ze aanleiding geven tot dezelfde definitie van convergerende rijen (met dan dezelfde limietpunten)\nStelling: twee normen \\({\\left\\lVert\\cdot\\right\\rVert}_a\\) en \\({\\left\\lVert\\cdot\\right\\rVert}_b\\) zijn equivalent als en slechts als er constanten \\(C \\geq c &gt; 0\\) bestaan zodat \\(c {\\left\\lVert{v}\\right\\rVert}_a \\leq {\\left\\lVert{v}\\right\\rVert}_b \\leq C{\\left\\lVert{v}\\right\\rVert}_a\\) voor alle \\({v}\\in V\\)\n(bewijs aan bord)\nStelling: voor een eindig-dimensionale vectorruimte \\(V\\) zijn alle normen equivalent\n(bewijs aan bord)\nVoorbeelden voor \\(\\boldsymbol{v} \\in {\\mathbb{F}}^n\\):\n\n\\(\\frac{{\\left\\lVert{v}\\right\\rVert}_1}{\\sqrt{n}} \\leq {\\left\\lVert\\boldsymbol{v}\\right\\rVert}_2 \\leq {\\left\\lVert{v}\\right\\rVert}_1\\)\n\\(\\frac{{\\left\\lVert{v}\\right\\rVert}_1}{n} \\leq {\\left\\lVert\\boldsymbol{v}\\right\\rVert}_\\infty \\leq {\\left\\lVert{v}\\right\\rVert}_1\\)"
+    "text": "Equivalentie van normen\n\nTwee normen voor een vectorruimte \\(V\\) zijn equivalent als ze aanleiding geven tot dezelfde definitie van convergerende rijen (met dan dezelfde limietpunten)\nStelling: twee normen \\({\\left\\lVert\\cdot\\right\\rVert}_a\\) en \\({\\left\\lVert\\cdot\\right\\rVert}_b\\) zijn equivalent als en slechts als er constanten \\(C \\geq c &gt; 0\\) bestaan zodat \\(c {\\left\\lVert{v}\\right\\rVert}_a \\leq {\\left\\lVert{v}\\right\\rVert}_b \\leq C{\\left\\lVert{v}\\right\\rVert}_a\\) voor alle \\({v}\\in V\\)\n(bewijs aan bord)\nStelling: voor een eindig-dimensionale vectorruimte \\(V\\) zijn alle normen equivalent\n(bewijs aan bord)\nVoorbeelden voor \\(\\boldsymbol{v} \\in {\\mathbb{F}}^n\\):\n\n\\(\\frac{{\\left\\lVert\\boldsymbol{v}\\right\\rVert}_1}{\\sqrt{n}} \\leq {\\left\\lVert\\boldsymbol{v}\\right\\rVert}_2 \\leq {\\left\\lVert\\boldsymbol{v}\\right\\rVert}_1\\)\n\\(\\frac{{\\left\\lVert\\boldsymbol{v}\\right\\rVert}_1}{n} \\leq {\\left\\lVert\\boldsymbol{v}\\right\\rVert}_\\infty \\leq {\\left\\lVert\\boldsymbol{v}\\right\\rVert}_1\\)"
   },
   {
     "objectID": "slides/H4.html#compacte-verzameling-geen-bewijzen",
@@ -901,6 +901,118 @@
     "title": "Hoofdstuk 4 - Normen en afstanden",
     "section": "Banachruimten en basis",
     "text": "Banachruimten en basis\nConvergentie van rijen en reeksen laat een nieuw concept van basis toe in Banachruimten \\((V,{\\left\\lVert\\cdot\\right\\rVert})\\)\n\nEen Schauder basis is een rij \\(({e}_n \\in V)_{n \\in {\\mathbb{N}}_0}\\) zodat voor elke vector \\({v}\\in V\\) een rij van coefficiënten \\((a^n \\in {\\mathbb{F}})_{n \\in {\\mathbb{N}}_0}\\) bestaat, zodat de reeks \\(\\sum_{n =1}^{+\\infty} a^n {e}_n\\) convergeert naar \\({v}\\)\nDe rij \\((x^n)_{n \\in {\\mathbb{N}}}\\) is geen (!!) Schauder basis voor \\((C^0([a,b],{\\mathbb{F}}), {\\left\\lVert\\cdot\\right\\rVert}_{\\infty})\\):\n\neen reeks \\(\\sum_{n=0}^{+\\infty} a_n x^n\\) die convergeert met betrekking tot \\({\\left\\lVert\\cdot\\right\\rVert}_{\\infty}\\) (uniforme convergentie) geeft sowieso aanleiding tot een analytische functie\neen continue functie zoals \\({\\left\\lvert x\\right\\rvert}\\) heeft geen convergente Taylorreeks\n\n\n\\(\\Rightarrow\\) allerlei technische subtiliteiten die verdwijnen in het geval van Hilbertruimten (zie volgend hoofdstuk)"
+  },
+  {
+    "objectID": "slides/H4.html#normen-voor-matrices",
+    "href": "slides/H4.html#normen-voor-matrices",
+    "title": "Hoofdstuk 4 - Normen en afstanden",
+    "section": "Normen voor matrices",
+    "text": "Normen voor matrices\nGegeven \\({\\mathsf{A}} \\in {\\mathbb{F}}^{m \\times n}\\):\n\n‘vectoriseer’ \\({\\mathsf{A}}\\) (vergeet de matrixstructuur) via \\({\\mathbb{F}}^{m \\times n} \\cong {\\mathbb{F}}^{m n}\\) (vectorruimte-isomorphisme) en gebruik een vectornorm\nvoorbeeld: Frobenius norm (ook wel Hilbert-Schmidt norm):\n\\({\\left\\lVert{\\mathsf{A}}\\right\\rVert}_\\text{F} = \\left(\\sum_{i=1}^{m}\\sum_{j=1}^{n} {\\left\\lvert A^i_{\\ j}\\right\\rvert}^2\\right)^{1/2} = \\sqrt{\\mathop{\\mathrm{tr}}({\\mathsf{A}}^{\\mathsf{H}}{\\mathsf{A}})}\\)\nkunnen we normen met extra nuttige eigenschappen bedenken voor lineaire afbeeldingen?"
+  },
+  {
+    "objectID": "slides/H4.html#continuïteit-van-lineaire-afbeeldingen",
+    "href": "slides/H4.html#continuïteit-van-lineaire-afbeeldingen",
+    "title": "Hoofdstuk 4 - Normen en afstanden",
+    "section": "Continuïteit van lineaire afbeeldingen",
+    "text": "Continuïteit van lineaire afbeeldingen\nBeschouw genormeerde vectorruimten \\((V,{\\left\\lVert\\cdot\\right\\rVert}_V)\\) en \\((W,{\\left\\lVert\\cdot\\right\\rVert}_W)\\).\n\nEen lineaire afbeelding \\({\\hat{A}}\\in \\mathop{\\mathrm{Hom}}(V,W)\\) wordt begrends genoemd als er een constante \\(C \\in {\\mathbb{R}}_{\\geq 0}\\) bestaat zodat \\[{\\left\\lVert{\\hat{A}}{v}\\right\\rVert}_W\\leq C {\\left\\lVert{v}\\right\\rVert}_V,\\quad\\forall {v}\\in V\\]\nStelling: Voor een lineaire afbeelding \\({\\hat{A}}\\in \\mathop{\\mathrm{Hom}}(V,W)\\) zijn volgende eigenschappen equivalent (bewijs aan bord)\n\n\\({\\hat{A}}\\) is begrensd\n\\({\\hat{A}}\\) is continu in de oorsprong\n\\({\\hat{A}}\\) is overal continu (en zelfs uniform continu)"
+  },
+  {
+    "objectID": "slides/H4.html#begrensde-lineaire-afbeeldingen",
+    "href": "slides/H4.html#begrensde-lineaire-afbeeldingen",
+    "title": "Hoofdstuk 4 - Normen en afstanden",
+    "section": "Begrensde lineaire afbeeldingen",
+    "text": "Begrensde lineaire afbeeldingen\nWe definiëren \\(\\mathcal{B}(V,W) {\\preccurlyeq}\\mathop{\\mathrm{Hom}}(V,W)\\) als de ruimte van begrensde lineaire afbeeldingen tussen genormeerde vectorruimten \\((V,{\\left\\lVert\\cdot\\right\\rVert}_V)\\) en \\((W,{\\left\\lVert\\cdot\\right\\rVert}_W)\\).\n\n\\(\\mathcal{B}(V,W)\\) vormt inderdaad een vectorruimte (een deelruimte van \\(\\mathop{\\mathrm{Hom}}(V,W)\\)): tracht dit zelf aan te tonen!\nAls het domein \\(V\\) een eindig-dimensionale ruimte is, geldt \\(\\mathcal{B}(V,W)=\\mathop{\\mathrm{Hom}}(V,W)\\)\nEen norm \\({\\left\\lVert{\\hat{A}}\\right\\rVert}\\) voor lineaire afbeeldingen \\({\\hat{A}}\\in \\mathcal{B}(V,W)\\) heet ondergeschikt (subordinate) aan de vectornormen in \\(V\\) en \\(W\\) als \\[{\\left\\lVert{\\hat{A}}{v}\\right\\rVert}_W \\leq {\\left\\lVert{\\hat{A}}\\right\\rVert} {\\left\\lVert{v}\\right\\rVert}_V,\\quad\\forall {v}\\in V\\]"
+  },
+  {
+    "objectID": "slides/H4.html#geïnduceerde-norm",
+    "href": "slides/H4.html#geïnduceerde-norm",
+    "title": "Hoofdstuk 4 - Normen en afstanden",
+    "section": "Geïnduceerde norm",
+    "text": "Geïnduceerde norm\nBeschouw genormeerde vectorruimten \\((V,{\\left\\lVert\\cdot\\right\\rVert}_V)\\) en \\((W,{\\left\\lVert\\cdot\\right\\rVert}_W)\\). We kunnen een norm voor afbeeldingen \\({\\hat{A}}\\in \\mathcal{B}(V,W)\\) definiëren via\n\\[\\begin{align}\n{\\left\\lVert{\\hat{A}}\\right\\rVert}_{V \\to W} &= \\inf\\{ C |  {\\left\\lVert{\\hat{A}} {v}\\right\\rVert}_W \\leq C {\\left\\lVert{v}\\right\\rVert}_V, \\forall {v}\\in V\\}\\nonumber\\\\\n&= \\sup\\left\\{\\frac{{\\left\\lVert{\\hat{A}}{v}\\right\\rVert}_W}{{\\left\\lVert{v}\\right\\rVert}_V}\\ \\text{with}\\ {v}\\neq {o}_V\\right\\}\\nonumber\\\\\n&= \\sup\\{ {\\left\\lVert{\\hat{A}}{v}\\right\\rVert}_W \\text{with}\\ {\\left\\lVert{v}\\right\\rVert}_V = 1\\}\n\\end{align}\\]\nDeze norm staat gekend als de geïnduceerde norm of soms ook operator norm (ook al geldt hij voor algemene lineaire afbeeldingen). Soms wordt ook met de “subordinate norm” specifiek naar deze definitie verwezen."
+  },
+  {
+    "objectID": "slides/H4.html#geïnduceerde-norm-1",
+    "href": "slides/H4.html#geïnduceerde-norm-1",
+    "title": "Hoofdstuk 4 - Normen en afstanden",
+    "section": "Geïnduceerde norm",
+    "text": "Geïnduceerde norm\n\nVoor \\((V, {\\left\\lVert\\cdot\\right\\rVert}_V)\\) een genormeerde ruimte en \\((W,{\\left\\lVert\\cdot\\right\\rVert}_W)\\) een Banachruimte geldt dat de ruimte \\(\\mathcal{B}(V,W)\\) van begrensde lineaire afbeeldingen in combinatie met de geïnduceerde norm \\({\\left\\lVert\\cdot\\right\\rVert}_{V\\to W}\\) zelf een Banachruimte is (geen bewijs)"
+  },
+  {
+    "objectID": "slides/H4.html#normen-voor-lineaire-operatoren",
+    "href": "slides/H4.html#normen-voor-lineaire-operatoren",
+    "title": "Hoofdstuk 4 - Normen en afstanden",
+    "section": "Normen voor lineaire operatoren",
+    "text": "Normen voor lineaire operatoren\nBeschouw nu specifiek \\({\\hat{A}}\\in \\mathop{\\mathrm{End}}(V)\\) voor een Banachruimte \\((V,{\\left\\lVert\\cdot\\right\\rVert}_V)\\). De begrensde lineaire operatoren worden genoteerd als \\(\\mathcal{B}(V) = \\mathcal{B}(V,V) {\\preccurlyeq}\\mathop{\\mathrm{End}}(V)\\).\n\nEen norm \\({\\left\\lVert\\cdot\\right\\rVert}\\) voor lineaire operatoren wordt submultiplicatief genoemd als \\[{\\left\\lVert{\\hat{A}}\\cdot{\\hat{B}}\\right\\rVert} \\leq {\\left\\lVert{\\hat{A}}\\right\\rVert} {\\left\\lVert{\\hat{B}}\\right\\rVert}, \\quad \\forall {\\hat{A}},{\\hat{B}} \\in \\mathcal{B}(V)\\]\nDe geinduceerde norm \\({\\left\\lVert{\\hat{A}}\\right\\rVert}_{V\\to V}\\) is submultiplicatief (bewijs aan bord)\nVoor elke submultiplicatieve of ondergeschikte norm geldt \\({\\left\\lVert{\\hat{1}}\\right\\rVert} \\geq 1\\). Voor de geinduceerde norm is \\({\\left\\lVert{\\hat{1}}\\right\\rVert}=1\\)."
+  },
+  {
+    "objectID": "slides/H4.html#normen-voor-matrices-1",
+    "href": "slides/H4.html#normen-voor-matrices-1",
+    "title": "Hoofdstuk 4 - Normen en afstanden",
+    "section": "Normen voor matrices",
+    "text": "Normen voor matrices\n\nvoor gegeven \\(p\\), \\(p\\)-norm vormt een familie van normen voor vectoren in \\({\\mathbb{F}}^n\\) voor arbitraire \\(n\\)\nvoor een matrix \\({\\mathsf{A}}\\in{\\mathbb{F}}^{m \\times n}\\) kunnen we in principe de geïnduceerde norm berekenen voor \\(p\\)-norm op \\({\\mathbb{F}}^m\\) en \\(q\\)-norm op \\({\\mathbb{F}}^n\\); typisch willen we \\(p=q\\).\n\n\\({\\left\\lVert{\\mathsf{A}}\\right\\rVert}_{\\text{col}} = {\\left\\lVert{\\mathsf{A}}\\right\\rVert}_{1 \\to 1} = \\max_{j=1,\\ldots,n} \\sum_{i=1}^{m} {\\left\\lvert A^i_{\\ j}\\right\\rvert}\\)\n\\({\\left\\lVert{\\mathsf{A}}\\right\\rVert}_{\\text{row}} = {\\left\\lVert{\\mathsf{A}}\\right\\rVert}_{\\infty \\to \\infty} = \\max_{i=1,\\ldots,m} \\sum_{j=1}^{n} {\\left\\lvert A^i_{\\ j}\\right\\rvert}\\)\n\n(oefeningen, zelf proberen)\n\n(\\({\\left\\lVert{\\mathsf{A}}\\right\\rVert}_{2 \\to 2}\\) is moeilijker te berekenen, en is gegeven door de grootste “singuliere waarde” (zie H6))"
+  },
+  {
+    "objectID": "slides/H4.html#consistente-matrixnormen",
+    "href": "slides/H4.html#consistente-matrixnormen",
+    "title": "Hoofdstuk 4 - Normen en afstanden",
+    "section": "Consistente matrixnormen",
+    "text": "Consistente matrixnormen\nGegeven een familie van normen \\(\\{{\\left\\lVert\\cdot\\right\\rVert}^{(m \\times n)}: {\\mathbb{F}}^{m\\times n} \\to {\\mathbb{R}}_{\\geq 0}; \\forall m, n \\in {\\mathbb{N}}\\}\\) voor matrices van alle groottes:\n\ndeze worden consistent genoemd als \\[{\\left\\lVert{\\mathsf{A}}{\\mathsf{B}}\\right\\rVert}^{(m \\times n)} \\leq {\\left\\lVert{\\mathsf{A}}\\right\\rVert}^{(m \\times k)} {\\left\\lVert{\\mathsf{B}}\\right\\rVert}^{(k \\times n)}\\] voor alle \\({\\mathsf{A}}\\in{\\mathbb{F}}^{m\\times k}\\) en \\({\\mathsf{B}}\\in{\\mathbb{F}}^{k\\times n}\\)\nde normen \\({\\left\\lVert{\\mathsf{A}}\\right\\rVert}_{p\\times p}\\) is consistent (bewijs aan bord)\nde norm \\({\\left\\lVert{\\mathsf{A}}\\right\\rVert}_{\\text{F}}={\\left\\lVert\\text{vectorize}({\\mathsf{A}})\\right\\rVert}_2\\) is consistent (bewijs aan bord)\nde norm \\({\\left\\lVert\\text{vectorize}({\\mathsf{A}})\\right\\rVert}_\\infty\\) is niet consistent"
+  },
+  {
+    "objectID": "slides/H4.html#consistente-matrixnormen-1",
+    "href": "slides/H4.html#consistente-matrixnormen-1",
+    "title": "Hoofdstuk 4 - Normen en afstanden",
+    "section": "Consistente matrixnormen",
+    "text": "Consistente matrixnormen\n\nHet concept “matrixnorm” wordt vaak gedefinieerd als een norm die aan de drie voorwaarden van een vectornorm voldoet, en bovendien aan de consistentievoorwaarde.\nDe consistentievoorwaarde is een veralgemening van submultiplicativiteit, en beide termen worden soms door elkaar gebruikt.\nEr is geen gestandardiseerde terminologie en “subordinate”, “submultiplicative” en “consistent” of ook “compatible” wordt door elkaar gebruikt in gerelateerde betekenissen\n(in vragen hieromtrent zal ook steeds de expliciete voorwaarde als wiskundige ongelijkheid vermeld staan)"
+  },
+  {
+    "objectID": "slides/H4.html#spectraalstraal",
+    "href": "slides/H4.html#spectraalstraal",
+    "title": "Hoofdstuk 4 - Normen en afstanden",
+    "section": "Spectraalstraal",
+    "text": "Spectraalstraal\n\nDe spectraalstraal van een operator \\({\\hat{A}}\\in\\mathop{\\mathrm{End}}(V)\\) is gedefinieerd als \\[\\rho_{{\\hat{A}}} = \\sup\\{{\\left\\lvert\\lambda\\right\\rvert};\\lambda \\in \\sigma_{{\\hat{A}}}\\}\\]\nVoor een submultiplicatieve norm en \\(V\\) eindig-dimensionaal geldt \\({\\left\\lVert{\\hat{A}}\\right\\rVert} \\geq \\rho_{{\\hat{A}}}\\) (bewijs aan bord)\n\nook \\(\\rho_{{\\hat{A}}}^n \\leq {\\left\\lVert{\\hat{A}}^n\\right\\rVert}\\)\nals \\({\\hat{A}}\\) inverteerbaar: \\({\\left\\lVert{\\hat{A}}\\right\\rVert}^{-1}\\leq \\rho_{{\\hat{A}}}^{-1}\\)\n\nGelfand formule: \\(\\rho_{\\hat{A}} =\\lim_{n\\to\\infty}{\\left\\lVert{\\hat{A}}^n\\right\\rVert}^{\\frac{1}{n}}\\)\n(bewijs aan bord)"
+  },
+  {
+    "objectID": "slides/H4.html#duale-normen",
+    "href": "slides/H4.html#duale-normen",
+    "title": "Hoofdstuk 4 - Normen en afstanden",
+    "section": "Duale normen",
+    "text": "Duale normen\nGegeven een genormeerde vectorruimte \\((V,{\\left\\lVert\\cdot\\right\\rVert})\\):\n\ngeïnduceerde norm op \\(\\mathcal{B}(V,{\\mathbb{F}}){\\preccurlyeq}V^\\ast\\) wordt genoteerd als de duale norm \\({\\left\\lVert\\cdot\\right\\rVert}^\\ast\\): \\[{\\left\\lVert\\xi\\right\\rVert}^\\ast = \\sup\\left\\{\\frac{{\\left\\lvert\\xi[v]\\right\\rvert}}{{\\left\\lVert v\\right\\rVert}} ; \\forall v \\in V, v \\neq {o}\\right\\}, \\quad \\forall \\xi \\in V^\\ast\\]\nvoor \\(V = {\\mathbb{F}}\\) met Hölder norm \\({\\left\\lVert\\cdot\\right\\rVert}_p\\) wordt de duale norm gegeven door \\({\\left\\lVert\\xi\\right\\rVert}_p^\\ast = {\\left\\lVert\\boldsymbol{\\xi}\\right\\rVert}_q\\) waarbij \\(1/p+1/q=1\\), en \\(\\boldsymbol{\\xi}\\) de componenten van \\(\\xi\\), i.e. zodat \\(\\xi[\\boldsymbol{v}]=\\boldsymbol{\\xi}^{\\mathsf{T}}\\boldsymbol{v}\\)\n(bewijs aan bord)"
+  },
+  {
+    "objectID": "slides/H4.html#functies-van-matrices-en-operatoren",
+    "href": "slides/H4.html#functies-van-matrices-en-operatoren",
+    "title": "Hoofdstuk 4 - Normen en afstanden",
+    "section": "Functies van matrices en operatoren",
+    "text": "Functies van matrices en operatoren\n\nFunctie met convergente Taylorreeks rond \\(z=0\\): \\[f(z) = \\sum_{n=0}^{+\\infty} f_n z^n, \\quad \\forall {\\left\\lvert z\\right\\rvert}&lt;R\\]\n\n\\({\\hat{A}}\\in\\mathcal{B}(V)\\) met submultiplicatieve operatornorm:\n\\({\\left\\lVert\\sum_{n=0}^{+\\infty} f_n {\\hat{A}}^n\\right\\rVert} \\leq \\sum_{n=0}^{+\\infty} {\\left\\lvert f_n\\right\\rvert} {\\left\\lVert{\\hat{A}}^n\\right\\rVert} \\leq \\sum_{n=0}^{+\\infty} {\\left\\lvert f_n\\right\\rvert} {\\left\\lVert{\\hat{A}}\\right\\rVert}^n\\)\n\\(\\Rightarrow\\) \\(\\sum_{n=0}^{+\\infty} f_n {\\hat{A}}^n\\) convergeert voor alle \\({\\hat{A}}\\) met \\({\\left\\lVert{\\hat{A}}\\right\\rVert}&lt;R\\) als \\(V\\) een Banachruimte is"
+  },
+  {
+    "objectID": "slides/H4.html#functies-van-matrices-en-operatoren-1",
+    "href": "slides/H4.html#functies-van-matrices-en-operatoren-1",
+    "title": "Hoofdstuk 4 - Normen en afstanden",
+    "section": "Functies van matrices en operatoren",
+    "text": "Functies van matrices en operatoren\n\nFuncties met convergente Taylorreeks rond \\(z=\\lambda\\) voor elke eigenwaarde \\(\\lambda\\)\n\nBeschouw \\({\\hat{N}}\\) met \\({\\hat{N}}^s = 0\\) en definieer \\[{\\left\\lVert{v}\\right\\rVert}_{R,s} = {\\left\\lVert{v}\\right\\rVert} + \\frac{{\\left\\lVert{\\hat{N}}{v}\\right\\rVert}}{R} + \\dots + \\frac{{\\left\\lVert{\\hat{N}}^{s-1}{v}\\right\\rVert}}{R^{s-1}}\\]\n\\(\\Rightarrow {\\left\\lVert{\\hat{N}}{v}\\right\\rVert}_{{\\hat{N}},R} = R({\\left\\lVert v\\right\\rVert}_{{\\hat{N}},R} - {\\left\\lVert{v}\\right\\rVert}) \\leq R {\\left\\lVert v\\right\\rVert}_{{\\hat{N}},R}\\)\n\\(\\Rightarrow \\sup_{{v}\\neq 0} \\frac{{\\left\\lVert{\\hat{N}}{v}\\right\\rVert}_{{\\hat{N}},R}}{{\\left\\lVert{v}\\right\\rVert}_{{\\hat{N}},R}} \\leq R\\)"
+  },
+  {
+    "objectID": "slides/H4.html#sensitiviteit-van-lineaire-systemen",
+    "href": "slides/H4.html#sensitiviteit-van-lineaire-systemen",
+    "title": "Hoofdstuk 4 - Normen en afstanden",
+    "section": "Sensitiviteit van lineaire systemen",
+    "text": "Sensitiviteit van lineaire systemen\nLineair system \\({\\hat{A}}{x}= {y}\\) met \\({x},{y}\\in V\\) en \\({\\hat{A}} \\in \\mathop{\\mathrm{End}}(V)\\) met \\(V\\) een genormeerde vectorruimte met norm \\({\\left\\lVert\\cdot\\right\\rVert}\\)\n\nStel kleine variatie \\({y}\\to {y}+ \\Delta{y}\\Rightarrow {x}\\to {x}+ \\Delta {x}\\)\n\\(\\frac{{\\left\\lVert\\Delta {x}\\right\\rVert}}{{\\left\\lVert{x}\\right\\rVert}} \\leq \\kappa({\\hat{A}}) \\frac{{\\left\\lVert\\Delta{y}\\right\\rVert}}{{\\left\\lVert{y}\\right\\rVert}}\\)\nmet het condititiegetal \\(\\kappa({\\hat{A}})\\) gegeven door\n\\[\\kappa({\\hat{A}}) = \\begin{cases}\n{\\left\\lVert{\\hat{A}}\\right\\rVert}{\\left\\lVert{\\hat{A}}^{-1}\\right\\rVert},&\\text{if ${\\hat{A}}$ is invertible}\\\\\n+\\infty,&\\text{otherwise}\n\\end{cases}\\]\nmet hierin \\({\\left\\lVert{\\hat{A}}\\right\\rVert}\\) de geïnduceerde norm geassocieerd aan de vectornorm (bewijs: eenvoudig, zie ook Py4Sci)"
+  },
+  {
+    "objectID": "slides/H4.html#sensitiviteit-van-lineaire-systemen-1",
+    "href": "slides/H4.html#sensitiviteit-van-lineaire-systemen-1",
+    "title": "Hoofdstuk 4 - Normen en afstanden",
+    "section": "Sensitiviteit van lineaire systemen",
+    "text": "Sensitiviteit van lineaire systemen\n\nUitbreiding: ook variatie \\({\\hat{A}}\\to {\\hat{A}}+\\Delta{\\hat{A}}\\) met \\({\\left\\lVert{\\hat{A}}^{-1}\\Delta{\\hat{A}}\\right\\rVert} &lt; 1\\)\n\n\\({\\left\\lVert({\\hat{A}} + \\Delta{\\hat{A}})^{-1}\\right\\rVert} \\leq \\frac{{\\left\\lVert{\\hat{A}}^{-1}\\right\\rVert}}{1 - {\\left\\lVert{\\hat{A}}^{-1} \\Delta{\\hat{A}}\\right\\rVert}}\\)\n\\(\\frac{{\\left\\lVert\\Delta {x}\\right\\rVert}}{{\\left\\lVert{x}\\right\\rVert}} \\leq \\frac{\\kappa({\\hat{A}})}{1 - {\\left\\lVert{\\hat{A}}^{-1} \\Delta{\\hat{A}}\\right\\rVert}} \\left( \\frac{{\\left\\lVert\\Delta {y}\\right\\rVert}}{{\\left\\lVert{y}\\right\\rVert}} + \\frac{{\\left\\lVert\\Delta{\\hat{A}}\\right\\rVert}}{{\\left\\lVert{\\hat{A}}\\right\\rVert}}\\right)\\)\n\nA postiori error: het residu \\(r = {\\hat{{y}}} - {\\hat{A}}\\tilde{{x}}\\) voor een benaderde oplossing \\(\\tilde{{x}}\\):\n\\(\\Rightarrow \\frac{{\\left\\lVert{x}- \\tilde{{x}}\\right\\rVert}}{{\\left\\lVert{x}\\right\\rVert}} \\leq \\kappa({\\hat{A}}) \\frac{{\\left\\lVert{r}\\right\\rVert}}{{\\left\\lVert{y}\\right\\rVert}}\\) met \\({x}\\) de echte oplossing"
+  },
+  {
+    "objectID": "slides/H4.html#markovketens-en-stochastische-matrices",
+    "href": "slides/H4.html#markovketens-en-stochastische-matrices",
+    "title": "Hoofdstuk 4 - Normen en afstanden",
+    "section": "Markovketens en stochastische matrices",
+    "text": "Markovketens en stochastische matrices\nMisschien later?"
   },
   {
     "objectID": "slides/H4.html#footnotes",

@@ -338,8 +338,8 @@ Convergentie: $\lim_{n\to \infty} f_n = f$ als
   (bewijs aan bord)
 
 * Voorbeelden voor $\vec{v} \in \bbF^n$:
-  * $\frac{\norm{\vv}_1}{\sqrt{n}} \leq \norm{\vec{v}}_2 \leq \norm{\vv}_1$
-  * $\frac{\norm{\vv}_1}{n} \leq \norm{\vec{v}}_\infty \leq \norm{\vv}_1$
+  * $\frac{\norm{\vec{v}}_1}{\sqrt{n}} \leq \norm{\vec{v}}_2 \leq \norm{\vec{v}}_1$
+  * $\frac{\norm{\vec{v}}_1}{n} \leq \norm{\vec{v}}_\infty \leq \norm{\vec{v}}_1$
 
 ## Compacte verzameling (geen bewijzen)
 
@@ -449,3 +449,176 @@ Convergentie van rijen en reeksen laat een nieuw concept van basis toe in Banach
 
 $\Rightarrow$ allerlei technische subtiliteiten die verdwijnen in het geval van Hilbertruimten (zie volgend hoofdstuk)
 
+# Normen voor lineaire afbeeldingen
+
+## Normen voor matrices
+
+Gegeven $\mat{A} \in \bbF^{m \times n}$: 
+
+* 'vectoriseer' $\mat{A}$ (vergeet de matrixstructuur) via $\bbF^{m \times n} \cong \bbF^{m n}$ (vectorruimte-isomorphisme) en gebruik een vectornorm
+
+* voorbeeld: Frobenius norm (ook wel Hilbert-Schmidt norm):
+
+  $\norm{\mat{A}}_\text{F} = \left(\sum_{i=1}^{m}\sum_{j=1}^{n} \abs{A^i_{\ j}}^2\right)^{1/2} = \sqrt{\tr(\mat{A}^\hermitian \mat{A})}$
+
+* kunnen we normen met extra nuttige eigenschappen bedenken voor lineaire afbeeldingen?
+
+## Continuïteit van lineaire afbeeldingen
+
+Beschouw genormeerde vectorruimten $(V,\norm{\cdot}_V)$ en $(W,\norm{\cdot}_W)$.
+
+* Een lineaire afbeelding $\map{A}\in \Hom(V,W)$ wordt begrends genoemd als er een constante $C \in \bbR_{\geq 0}$ bestaat zodat
+  $$\norm{\map{A}\vv}_W\leq C \norm{\vv}_V,\quad\forall \vv\in V$$
+* Stelling: Voor een lineaire afbeelding $\map{A}\in \Hom(V,W)$ zijn volgende eigenschappen equivalent (bewijs aan bord)
+  * $\map{A}$ is begrensd
+  * $\map{A}$ is continu in de oorsprong
+  * $\map{A}$ is overal continu (en zelfs uniform continu)
+
+## Begrensde lineaire afbeeldingen
+
+We definiëren $\mathcal{B}(V,W) \subspace \Hom(V,W)$ als de ruimte van begrensde lineaire afbeeldingen tussen genormeerde vectorruimten $(V,\norm{\cdot}_V)$ en $(W,\norm{\cdot}_W)$.
+
+* $\mathcal{B}(V,W)$ vormt inderdaad een vectorruimte (een deelruimte van $\Hom(V,W)$): tracht dit zelf aan te tonen!
+
+* Als het domein $V$ een eindig-dimensionale ruimte is, geldt $\mathcal{B}(V,W)=\Hom(V,W)$
+
+* Een norm $\norm{\map{A}}$ voor lineaire afbeeldingen $\map{A}\in \mathcal{B}(V,W)$ heet **ondergeschikt** (subordinate) aan de vectornormen in $V$ en $W$ als
+  $$\norm{\map{A}\vv}_W \leq \norm{\map{A}} \norm{\vv}_V,\quad\forall \vv \in V$$
+
+## Geïnduceerde norm
+
+Beschouw genormeerde vectorruimten $(V,\norm{\cdot}_V)$ en $(W,\norm{\cdot}_W)$. We kunnen een norm voor afbeeldingen $\map{A}\in \mathcal{B}(V,W)$ definiëren via
+
+\begin{align}
+\norm{\map{A}}_{V \to W} &= \inf\{ C | 	\norm{\map{A} \vv}_W \leq C \norm{\vv}_V, \forall \vv \in V\}\nonumber\\
+&= \sup\left\{\frac{\norm{\map{A}\vv}_W}{\norm{\vv}_V}\ \text{with}\ \vv \neq \zerovec_V\right\}\nonumber\\
+&= \sup\{ \norm{\map{A}\vv}_W \text{with}\ \norm{\vv}_V = 1\}
+\end{align}
+
+Deze norm staat gekend als de **geïnduceerde norm** of soms ook **operator norm** (ook al geldt hij voor algemene lineaire afbeeldingen). Soms wordt ook met de "subordinate norm" specifiek naar deze definitie verwezen.
+
+## Geïnduceerde norm
+
+* Voor $(V, \norm{\cdot}_V)$ een genormeerde ruimte en $(W,\norm{\cdot}_W)$ een Banachruimte geldt dat de ruimte $\mathcal{B}(V,W)$ van begrensde lineaire afbeeldingen in combinatie met de geïnduceerde norm $\norm{\cdot}_{V\to W}$ zelf een Banachruimte is (geen bewijs)
+
+## Normen voor lineaire operatoren
+
+Beschouw nu specifiek $\map{A}\in \End(V)$ voor een Banachruimte $(V,\norm{\cdot}_V)$. De begrensde lineaire operatoren worden genoteerd als $\mathcal{B}(V) = \mathcal{B}(V,V) \subspace \End(V)$.
+
+* Een norm $\norm{\cdot}$ voor lineaire operatoren wordt **submultiplicatief** genoemd als
+  $$\norm{\map{A}\cdot\map{B}} \leq \norm{\map{A}} \norm{\map{B}}, \quad \forall \map{A},\map{B} \in \mathcal{B}(V)$$
+
+* De geinduceerde norm $\norm{\map{A}}_{V\to V}$ is submultiplicatief (bewijs aan bord)
+
+* Voor elke submultiplicatieve of ondergeschikte norm geldt $\norm{\idmap} \geq 1$. Voor de geinduceerde norm is $\norm{\idmap}=1$.
+
+## Normen voor matrices
+
+* voor gegeven $p$, $p$-norm vormt een familie van normen voor vectoren in $\bbF^n$ voor arbitraire $n$
+
+* voor een matrix $\mat{A}\in\bbF^{m \times n}$ kunnen we in principe de geïnduceerde norm berekenen voor $p$-norm op $\bbF^m$ en $q$-norm op $\bbF^n$; typisch willen we $p=q$.
+
+  * $\norm{\mat{A}}_{\text{col}} = \norm{\mat{A}}_{1 \to 1} = \max_{j=1,\ldots,n} \sum_{i=1}^{m} \abs{A^i_{\ j}}$
+  * $\norm{\mat{A}}_{\text{row}} = \norm{\mat{A}}_{\infty \to \infty} = \max_{i=1,\ldots,m} \sum_{j=1}^{n} \abs{A^i_{\ j}}$
+
+  (oefeningen, zelf proberen)
+
+  * ($\norm{\mat{A}}_{2 \to 2}$ is moeilijker te berekenen, en is gegeven door de grootste "singuliere waarde" (zie H6))
+
+## Consistente matrixnormen
+
+Gegeven een familie van normen $\{\norm{\cdot}^{(m \times n)}: \bbF^{m\times n} \to \bbR_{\geq 0}; \forall m, n \in \bbN\}$ voor matrices van alle groottes:
+
+* deze worden **consistent** genoemd als 
+$$\norm{\mat{A}\mat{B}}^{(m \times n)} \leq \norm{\mat{A}}^{(m \times k)} \norm{\mat{B}}^{(k \times n)}$$
+voor alle $\mat{A}\in\bbF^{m\times k}$ en $\mat{B}\in\bbF^{k\times n}$
+
+* de normen $\norm{\mat{A}}_{p\times p}$ is consistent (bewijs aan bord)
+* de norm $\norm{\mat{A}}_{\text{F}}=\norm{\text{vectorize}(\mat{A})}_2$ is consistent (bewijs aan bord)
+* de norm $\norm{\text{vectorize}(\mat{A})}_\infty$ is niet consistent
+
+## Consistente matrixnormen
+
+* Het concept "matrixnorm" wordt vaak gedefinieerd als een norm die aan de drie voorwaarden van een vectornorm voldoet, en bovendien aan de consistentievoorwaarde.
+* De consistentievoorwaarde is een veralgemening van submultiplicativiteit, en beide termen worden soms door elkaar gebruikt.
+* Er is geen gestandardiseerde terminologie en "subordinate", "submultiplicative" en "consistent" of ook "compatible" wordt door elkaar gebruikt in gerelateerde betekenissen
+
+* (in vragen hieromtrent zal ook steeds de expliciete voorwaarde als wiskundige ongelijkheid vermeld staan)
+
+## Spectraalstraal
+
+* De spectraalstraal van een operator $\map{A}\in\End(V)$ is gedefinieerd als
+  $$\rho_{\map{A}} = \sup\{\abs{\lambda};\lambda \in \sigma_{\map{A}}\}$$
+
+* Voor een submultiplicatieve norm en $V$ eindig-dimensionaal geldt $\norm{\map{A}} \geq \rho_{\map{A}}$ (bewijs aan bord)
+  * ook $\rho_{\map{A}}^n \leq \norm{\map{A}^n}$
+  * als $\map{A}$ inverteerbaar: $\norm{\map{A}}^{-1}\leq \rho_{\map{A}}^{-1}$
+
+* Gelfand formule: $\rho_\map{A} =\lim_{n\to\infty}\norm{\map{A}^n}^{\frac{1}{n}}$
+
+  (bewijs aan bord)
+
+## Duale normen
+
+Gegeven een genormeerde vectorruimte $(V,\norm{\cdot})$:
+
+* geïnduceerde norm op $\mathcal{B}(V,\bbF)\subspace V^\ast$ wordt genoteerd als de duale norm $\norm{\cdot}^\ast$:
+  $$\norm{\xi}^\ast = \sup\left\{\frac{\abs{\xi[v]}}{\norm{v}} ; \forall v \in V, v \neq \zerovec\right\}, \quad \forall \xi \in V^\ast$$
+
+* voor $V = \bbF$ met Hölder norm $\norm{\cdot}_p$ wordt de duale norm gegeven door $\norm{\xi}_p^\ast = \norm{\vec{\xi}}_q$ waarbij $1/p+1/q=1$, en $\vec{\xi}$ de componenten van $\xi$, i.e. zodat $\xi[\vec{v}]=\vec{\xi}^\transpose \vec{v}$
+
+  (bewijs aan bord)
+
+# Toepassingen
+
+## Functies van matrices en operatoren
+
+* Functie met convergente Taylorreeks rond $z=0$:
+  $$f(z) = \sum_{n=0}^{+\infty} f_n z^n, \quad \forall \abs{z}<R$$
+
+  * $\map{A}\in\mathcal{B}(V)$ met submultiplicatieve operatornorm:
+
+    $\norm{\sum_{n=0}^{+\infty} f_n \map{A}^n} \leq 	\sum_{n=0}^{+\infty} \abs{f_n} \norm{\map{A}^n} \leq  \sum_{n=0}^{+\infty} \abs{f_n} \norm{\map{A}}^n$
+
+    $\Rightarrow$ $\sum_{n=0}^{+\infty} f_n \map{A}^n$ convergeert voor alle $\map{A}$ met $\norm{\map{A}}<R$ als $V$ een Banachruimte is
+
+## Functies van matrices en operatoren
+
+* Functies met convergente Taylorreeks rond $z=\lambda$ voor elke eigenwaarde $\lambda$
+  * Beschouw $\map{N}$ met $\map{N}^s = 0$ en definieer
+    $$\norm{\vv}_{R,s} = \norm{\vv} + \frac{\norm{\map{N}\vv}}{R} + \dots + \frac{\norm{\map{N}^{s-1}\vv}}{R^{s-1}}$$
+
+    $\Rightarrow \norm{\map{N}\vv}_{\map{N},R} = R(\norm{v}_{\map{N},R} - \norm{\vv}) \leq R \norm{v}_{\map{N},R}$
+
+    $\Rightarrow \sup_{\vv \neq 0} \frac{\norm{\map{N}\vv}_{\map{N},R}}{\norm{\vv}_{\map{N},R}} \leq R$
+
+## Sensitiviteit van lineaire systemen
+
+Lineair system $\map{A}\vx = \vy$ met $\vx,\vy \in V$ en $\map{A} \in \End(V)$ met $V$ een genormeerde vectorruimte met norm $\norm{\cdot}$
+
+* Stel kleine variatie $\vy \to \vy + \Delta\vy \Rightarrow \vx \to \vx + \Delta \vx$
+* $\frac{\norm{\Delta \vx}}{\norm{\vx}} \leq \kappa(\map{A}) \frac{\norm{\Delta\vy}}{\norm{\vy}}$
+
+  met het **condititiegetal $\kappa(\map{A})$** gegeven door
+
+  $$\kappa(\map{A}) = \begin{cases}
+ \norm{\map{A}}\norm{\map{A}^{-1}},&\text{if $\map{A}$ is invertible}\\
+ +\infty,&\text{otherwise}
+ \end{cases}$$
+
+  met hierin $\norm{\map{A}}$ de geïnduceerde norm geassocieerd aan de vectornorm (bewijs: eenvoudig, zie ook Py4Sci)
+
+## Sensitiviteit van lineaire systemen
+
+* Uitbreiding: ook variatie $\map{A}\to \map{A}+\Delta\map{A}$ met $\norm{\map{A}^{-1}\Delta\map{A}} < 1$
+
+  * $\norm{(\map{A} + \Delta\map{A})^{-1}} \leq  \frac{\norm{\map{A}^{-1}}}{1 - \norm{\map{A}^{-1} \Delta\map{A}}}$
+  * $\frac{\norm{\Delta \vx}}{\norm{\vx}} \leq  \frac{\kappa(\map{A})}{1 - \norm{\map{A}^{-1} \Delta\map{A}}}  \left( \frac{\norm{\Delta \vy}}{\norm{\vy}} + \frac{\norm{\Delta\map{A}}}{\norm{\map{A}}}\right)$
+
+* A postiori error: het residu $r = \map{\vy} - \map{A}\tilde{\vx}$ voor een benaderde oplossing $\tilde{\vx}$:
+
+  $\Rightarrow 	\frac{\norm{\vx - \tilde{\vx}}}{\norm{\vx}} \leq \kappa(\map{A}) \frac{\norm{\vect{r}}}{\norm{\vy}}$ met $\vx$ de echte oplossing
+
+## Markovketens en stochastische matrices
+
+Misschien later?
