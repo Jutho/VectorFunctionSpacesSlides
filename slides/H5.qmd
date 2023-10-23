@@ -1,0 +1,274 @@
+---
+title: "Hoofdstuk 5 - Inwendig product en orthogonaliteit"
+author: "Jutho Haegeman"
+date: "10/24/2023"
+format:
+  revealjs:
+    theme: solarized
+    chalkboard: true
+---
+
+## Doel van dit hoofdstuk
+
+
+::: {.hidden}
+$$
+% Math operators
+\DeclareMathOperator{\Aut}{Aut}
+\DeclareMathOperator{\End}{End}
+\DeclareMathOperator{\Hom}{Hom}
+\DeclareMathOperator{\GL}{GL}
+\DeclareMathOperator{\SL}{SL}
+\DeclareMathOperator{\Unitary}{U}
+\DeclareMathOperator{\Orthogonal}{O}
+\DeclareMathOperator{\SU}{SU}
+\DeclareMathOperator{\SO}{SO}
+\DeclareMathOperator{\Aff}{Aff}
+\DeclareMathOperator{\dom}{dom}
+\DeclareMathOperator{\cod}{codom}
+\DeclareMathOperator{\D}{\mathcal{D}}
+\DeclareMathOperator{\E}{\mathcal{E}}
+\DeclareMathOperator{\R}{\mathcal{R}}
+\DeclareMathOperator{\Schw}{\mathcal{S}}
+\DeclareMathOperator{\im}{im}
+%\DeclareMathOperator{\ker}{ker}
+%\DeclareMathOperator{\dim}{dim}
+\DeclareMathOperator{\codim}{codim}
+\DeclareMathOperator{\convhull}{co}
+
+\newcommand{\opgreek}[1]{\begingroup\mathgroup-1 #1\endgroup}
+\DeclareMathOperator{\rank}{rank}
+\DeclareMathOperator{\nullity}{nullity}
+
+\DeclareMathOperator{\Pv}{Pv}
+
+\DeclareMathOperator{\tr}{tr}
+\DeclareMathOperator{\sgn}{sgn}
+\DeclareMathOperator{\id}{id}
+\DeclareMathOperator{\adj}{adj}
+
+\DeclareMathOperator*{\varmin}{min}
+\DeclareMathOperator*{\varmax}{max}
+\DeclareMathOperator*{\argmin}{arg\ min}
+\DeclareMathOperator*{\argmax}{arg\ max}
+\DeclareMathOperator{\order}{\mathscr{O}}
+\DeclareMathOperator{\sign}{sgn}
+\DeclareMathOperator{\spanop}{span}
+\DeclareMathOperator{\arctanh}{arctanh}
+\DeclareMathOperator{\arccosh}{arccosh}
+\DeclareMathOperator{\arcsinh}{arcsinh}
+\DeclareMathOperator{\arccot}{arccot}
+\DeclareMathOperator{\sinc}{sinc}
+
+
+\newcommand{\commutator}[2]{{\left[#1,#2\right]}}
+\newcommand{\anticommutator}[2]{{\left\{#1,#2\right\}}}
+
+\DeclareMathOperator{\real}{Re}
+\DeclareMathOperator{\imag}{Im}
+\newcommand{\conj}[1]{{\overline{#1}}}
+\newcommand{\abs}[1]{{\left\lvert#1\right\rvert}}
+\newcommand{\norm}[1]{{\left\lVert#1\right\rVert}}
+\newcommand{\inner}[2]{{\left\langle#1,#2\right\rangle}}
+
+\newcommand{\drm}{{\mathrm{d}}}
+\newcommand{\erm}{{\mathrm{e}}}
+\newcommand{\irm}{{\mathrm{i}}}
+
+
+% VECTORS
+\newcommand{\vect}[1]{{#1}}
+\renewcommand{\vec}[1]{\boldsymbol{#1}} % specifically for vectors in F^n
+\newcommand{\zerovec}{{o}}
+\newcommand{\vu}{\vect{u}}
+\newcommand{\vv}{\vect{v}}
+\newcommand{\vw}{\vect{w}}
+\newcommand{\ve}{\vect{e}}
+\newcommand{\vf}{\vect{f}}
+\newcommand{\vx}{\vect{x}}
+\newcommand{\vy}{\vect{y}}
+
+% MATRICES
+\newcommand{\mat}[1]{{\mathsf{#1}}}
+\newcommand{\zeromat}{\mat{O}}
+\newcommand{\idmat}{\mat{I}}
+
+% SCALARS
+\newcommand{\scalara}{{a}}
+\newcommand{\scalarb}{{b}}
+\newcommand{\scalarc}{{c}}
+
+% LINEAR MAPS
+\DeclareMathAlphabet{\mymathbb}{U}{BOONDOX-ds}{m}{n}
+\newcommand{\map}[1]{{\hat{#1}}}
+\newcommand{\idmap}{\map{1}}
+\newcommand{\zeromap}{\map{0}}
+
+\newcommand{\transpose}{{\mathsf{T}}}
+\newcommand{\hermitian}{{\mathsf{H}}}
+
+\renewcommand{\d}{{\mathrm{d}}}
+
+% FIELDS
+\newcommand{\bbF}{{\mathbb{F}}}
+\newcommand{\bbN}{{\mathbb{N}}}
+\newcommand{\bbZ}{{\mathbb{Z}}}
+\newcommand{\bbQ}{{\mathbb{Q}}}
+\newcommand{\bbR}{{\mathbb{R}}}
+\newcommand{\bbC}{{\mathbb{C}}}
+\newcommand{\bbH}{{\mathbb{H}}}
+\newcommand{\bbT}{{\mathbb{T}}}
+
+% RELATIONS
+\newcommand{\subspace}{{\preccurlyeq}}
+\newcommand{\supspace}{{\succcurlyeq}}
+
+%\newcommand{\vz}{{\bm{z}}}
+%\newcommand{\ovz}{{\overline{\bm{z}}}}
+%\newcommand{\oz}{{\overline{z}}}
+%\newcommand{\vu}{{\bm{u}}}
+%\newcommand{\ovu}{{\overline{\bm{u}}}}
+%\newcommand{\ou}{{\overline{u}}}
+%\newcommand{\vr}{{\bm{r}}}
+%\newcommand{\ovr}{{\overline{\bm{r}}}}
+%\newcommand{\orr}{{\overline{r}}}
+
+\newcommand{\eps}{{\varepsilon}}
+\newcommand{\levicivita}{{\epsilon}}
+
+\newcommand{\sx}{{\sigma^x}}
+\newcommand{\sy}{{\sigma^y}}
+\newcommand{\sz}{{\sigma^z}}
+\renewcommand{\sp}{{\sigma^+}}
+\newcommand{\sm}{{\sigma^-}}
+%
+
+\DeclareMathOperator*{\sumint}{%
+\mathchoice%
+  {\ooalign{$\displaystyle\sum$\cr\hidewidth$\displaystyle\int$\hidewidth\cr}}
+  {\ooalign{\raisebox{.14\height}{\scalebox{.7}{$\textstyle\sum$}}\cr\hidewidth$\textstyle\int$\hidewidth\cr}}
+  {\ooalign{\raisebox{.2\height}{\scalebox{.6}{$\scriptstyle\sum$}}\cr$\scriptstyle\int$\cr}}
+  {\ooalign{\raisebox{.2\height}{\scalebox{.6}{$\scriptstyle\sum$}}\cr$\scriptstyle\int$\cr}}
+}
+$$
+:::
+
+* Concept van inwendig product:
+  
+  * geeft aanleiding tot lengte, oriëntatie, geometrie (bvb Pythogoras)
+  * geeft ook aanleiding tot (antilinear) isomorfisme tussen vector ruimte en zijn duale
+
+* Concept van orthogonaliteit: orthogonale projectie, orthogonale basis:
+  enorm belangrijk voor zowel theorie als praktijk (numerieke algoritmen)
+
+## Doel van dit hoofdstuk
+
+* Lineaire afbeeldingen tussen inwendig product ruimten, toegevoegde afbeelding, zelftoegevoegde en normale operatoren, orthogonale en unitaire afbeeldingen
+
+* Gerelateerde concepten: bilineare en sesquilineare vormen
+
+* Toepassing: kleinste kwadratenoplossing voor overgedetermineerde systemen
+
+# Proloog: Bilineaire en sesquilineaire vormen
+
+## Bilineaire vormen
+* herhaling: bilineaire afbeelding $B:V_1 \times V_2 \to V_3$ 
+  * $B(a \vv_1 + b \vw_1, \vv_2) = a B(\vv_1,\vv_2) + b B(\vw_1,\vv_2)$
+  * $B(\vv_1, a \vv_2 + b \vw_2) = a B(\vv_1,\vv_2) + b B(\vv_1,\vw_2)$
+* bilineaire vorm = bilineaire afbeelding $V \times V \to \bbF$
+  * speciale gevallen:
+    * symmetrisch $B(\vv,\vw)=B(\vv,\vw)$
+    * anti-/scheef-symmetrisch $B(\vv,\vw) = -B(\vv,\vw)$
+
+## Bilineaire vormen en matrices
+
+* basisrepresentatie: $B_V=\{\ve_1,\ldots,\ve_n\}$
+  
+  $\Rightarrow B(\vv,\vw) = \vv^i \underbrace{B(\ve_i,\ve_j)}_{B_{ij}\Rightarrow \mat{B}\in\bbF^{n\times n}} w^j = \vec{v}^\transpose \mat{B} \vec{w}$
+
+  * (anti)symmetrisch : $\mat{B} = \pm \mat{B}^{\transpose} \Leftrightarrow B_{ij} = \pm B_{ji}$
+
+  * basistransformatie:
+    * vector: $\tilde{v}^i = [\mat{T}]^i_{\ j} v^j$
+    * duale vector: $\tilde{\xi}_i = [\mat{T}^{-\transpose}]_i^{\ j}\xi_j$
+    * bilineaire vorm: $\tilde{B}_{ij} = [\mat{T}^{-\transpose}]_i^{\ k}[\mat{T}^{-\transpose}]_j^{\ l}B_{kl}$
+
+    $\Rightarrow$ behoudt (anti)symmetrie
+
+## Bilineaire en kwadratische vormen
+
+* elke bilineaire vorm kan ontbonden worden als:
+  $B(\vv,\vw) = \underbrace{\frac{1}{2}\left(B(\vv,\vw)+B(\vw,\vv)\right)}_{B_{\text{S}}(\vv,\vw)} + \underbrace{\frac{1}{2}\left(B(\vv,\vw)-B(\vw,\vv)\right)}_{B_{\text{A}}(\vv,\vw)}$
+
+* kwadratische vorm = afbeelding $q:V \to \bbR$ zodat
+
+  $$B(\vv,\vw) = \left(q(\vv+\vw)-q(\vv) - q(\vw)\right)/2$$
+
+  een bilineaire vorm is (er geldt dan $q(\vv)=B(\vv,\vv)$)
+
+  * kwadratische vorm equivalent met symmetrische bilineaire vorm
+  
+    (antisymmetrisch stuk geeft geen bijdrage in $B(\vv,\vv)$)
+
+## Kwadratische vormen: toepassingen
+
+* kwadratische Hamiltoniaan/Lagrangiaan(harmonische oscillator):
+  $$H(x,p) = \frac{1}{2m} p^2 + \frac{1}{2}m \omega^2 x^2$$
+
+* kegelsneden: $x^2 + y^2 - z^2 = 1$
+
+* tweede-orde Taylorexpansie $\rightarrow$ Hessiaan:
+
+  $$f(\vec{x}) = f(\vec{x}_0) + (x-x_0)^i \partial_i f(\vec{x}_0) +\\
+  \quad\quad\qquad \frac{1}{2} (x-x_0)^i(x-x_0)^j \frac{\partial^2 f}{\partial x^i \partial x^j}(\vec{x}_0)$$
+
+## Sesquilineaire vormen
+
+Complexe vectorruimte $V$: 
+
+* Sesquilinaire vorm is afbeelding $C:V \times V \to \bbF$ met
+  
+  * $C(\scalara \vu + \scalarb \vv,\vw) = \conj{\scalara} C(\vu,\vw) + \conj{\scalarb} C(\vv,\vw)$
+  * $C(\vu,\scalara \vv + \scalarb \vw) = \scalara C(\vu,\vv) + \scalarb C(\vu,\vw)$
+
+* Speciale gevallen:
+  * $C(\vv,\vw) = \overline{C(\vw,\vv)}$: hermitisch
+  * $C(\vv,\vw) = -\overline{C(\vv,\vw)}$: anti- of scheefhermitisch
+
+Herleidt zich tot (symmetrische of antisymmetrische) bilineaire vormen voor $\bbF = \bbR$
+
+## Sesquilineaire vormen en matrices
+
+* basisrepresentatie: $B_V=\{\ve_1,\ldots,\ve_n\}$
+  
+  $C(\vv,\vw) = \overline{v^i} C(\ve_i,\ve_j) w^j = \vec{v}^\transpose \mat{C} \vec{w}$ met $C_{ij} = C(\ve_i,\ve_j) \Rightarrow \mat{C} \in \bbF^{n \times n}$
+
+  * (anti)hermitisch : $\mat{C} = \pm \mat{C}^{\hermitian} \Leftrightarrow C_{ij} = \pm \overline{C_{ji}}$
+
+  * basistransformatie:
+    * vector: $\tilde{v}^i = [\mat{T}]^i_{\ j} v^j$
+    * duale vector: $\tilde{\xi}_i = [\mat{T}^{-\transpose}]_i^{\ j}\xi_j$
+    * bilineaire vorm: $\tilde{C}_{ij} = [\mat{T}^{-\hermitian}]_i^{\ k}[\mat{T}^{-\transpose}]_j^{\ l}C_{kl}$
+
+      (eenduidiger: $\tilde{C}_{\bar{\imath}j} = [\mat{T}^{-\hermitian}]_\bar{\imath}^{\ \bar{k}}[\mat{T}^{-\transpose}]_j^{\ l}C_{\bar{k}l}$)
+
+## Bilineaire en sesquilineaire vormen {.smaller}
+
+Bijkomende begrippen:
+
+* **ontaard**: als een $\vv \in V$ bestaat zodat $C(\vw,\vv)=0$ voor alle $\vw \in V$  $\Rightarrow \rank(\mat{C}) < \dim(V)$ of $\det(\mat{C})=0$
+* **positief definiet of semidefiniet**: $C(\vv,\vv) > 0$ of $C(\vv,\vv) \geq 0$ voor alle $\vv \neq \zerovec$
+* **indefiniet**: $C(\vv,\vv)$ neemt positieve en negatieve waarden aan voor verschillende $\vv$
+
+* $\mat{B} = \mat{T}^\transpose \tilde{\mat{B}} \mat{T}$ of $\mat{C} = \mat{T}^\hermitian \tilde{\mat{C}} \mat{T}$: **matrix congruentie** $\rightarrow$ equivalentierelatie
+
+  * behoudt geen eigenwaarden, niet compatibel met matrixvermenigvuldiging, machten, functies, …
+  * behoudt (anti)symmetrisch of (anti)hermitisch
+  * behoudt eigenwaarden $0$ en dus het ontaard zijn
+  * behoudt positief definiet / semidefiniet , indefinieit, …
+
+* stelling: als $C$ positief semidefiniet is maar niet positief definiet, dan is $C$ ontaard
+
+# Inwendig productruimten
+
+## Inwendig product

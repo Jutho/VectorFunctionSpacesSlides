@@ -721,25 +721,11 @@
     "text": "Footnotes\n\n\nInvers beeld gedraagt vereist geen injectiviteit, en gedraagt zich beter dan beeld onder unie en doorsnede: \\(\\varphi^{-1}(D_1 \\cup D_2) = \\varphi^{-1}(D_1) \\cup \\varphi^{-1}(D_2)\\) en analoog voor \\(\\cap\\)↩︎\n\\(S\\) zelf kan eindig of oneindig veel elementen bevatten, maar we hebben geen manier om op dit moment betekenis te geven aan een oneindige som (=reeks)↩︎"
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Vector and Function Spaces – Slides",
-    "section": "",
-    "text": "Order By\n       Default\n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Title\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\nDate\n\n\nTitle\n\n\nAuthor\n\n\n\n\n\n\nSep 25, 2023\n\n\nHoofdstuk 1 - Elementaire wiskundige structuren\n\n\nJutho Haegeman\n\n\n\n\nSep 26, 2023\n\n\nHoofdstuk 2 - Lineaire afbeeldingen\n\n\nJutho Haegeman\n\n\n\n\nOct 10, 2023\n\n\nHoofdstuk 3 - Lineaire operatoren en eigenwaarden\n\n\nJutho Haegeman\n\n\n\n\nOct 17, 2023\n\n\nHoofdstuk 4 - Normen en afstanden\n\n\nJutho Haegeman\n\n\n\n\n\n\nNo matching items"
-  },
-  {
-    "objectID": "slides/H4.html",
-    "href": "slides/H4.html",
-    "title": "Hoofdstuk 4 - Normen en afstanden",
-    "section": "",
-    "text": "$$ % Math operators % % \n% VECTORS\n% specifically for vectors in F^n \n% MATRICES\n% SCALARS \n% LINEAR MAPS\n% FIELDS \n% RELATIONS \n% % % % % % % % %\n%\n$$\n\n\nConcept van norm = lengte van een vector\nNorm geeft aanleiding tot een afstand tussen vectoren\nVormt de basis om concepten uit analyse te importeren\n(rijen, reeksen, continuïteit, …)"
-  },
-  {
     "objectID": "slides/H4.html#doel-van-dit-hoofdstuk",
     "href": "slides/H4.html#doel-van-dit-hoofdstuk",
     "title": "Hoofdstuk 4 - Normen en afstanden",
-    "section": "",
-    "text": "$$ % Math operators % % \n% VECTORS\n% specifically for vectors in F^n \n% MATRICES\n% SCALARS \n% LINEAR MAPS\n% FIELDS \n% RELATIONS \n% % % % % % % % %\n%\n$$\n\n\nConcept van norm = lengte van een vector\nNorm geeft aanleiding tot een afstand tussen vectoren\nVormt de basis om concepten uit analyse te importeren\n(rijen, reeksen, continuïteit, …)"
+    "section": "Doel van dit hoofdstuk",
+    "text": "Doel van dit hoofdstuk\n\n$$ % Math operators % % \n% VECTORS\n% specifically for vectors in F^n \n% MATRICES\n% SCALARS \n% LINEAR MAPS\n% FIELDS \n% RELATIONS \n% % % % % % % % %\n%\n$$\n\n\nConcept van norm = lengte van een vector\nNorm geeft aanleiding tot een afstand tussen vectoren\nVormt de basis om concepten uit analyse te importeren\n(rijen, reeksen, continuïteit, …)"
   },
   {
     "objectID": "slides/H4.html#norm",
@@ -823,14 +809,14 @@
     "href": "slides/H4.html#continuïteit-in-genormeerde-vectorruimte",
     "title": "Hoofdstuk 4 - Normen en afstanden",
     "section": "Continuïteit in genormeerde vectorruimte",
-    "text": "Continuïteit in genormeerde vectorruimte\nWe beschouwen nu een genormeerde vectorruimte \\((V,{\\left\\lVert\\cdot\\right\\rVert})\\) als metrische ruimte met metriek \\(d({v},{w}) = {\\left\\lVert{v}-{w}\\right\\rVert}\\)\n\nDe norm \\({\\left\\lVert\\cdot\\right\\rVert}:V\\to {\\mathbb{R}}\\) is zelf een continue afbeelding (bewijs aan bord)\n\\(\\Rightarrow\\) voor een convergente rij \\((v_n \\in V)_{n\\in{\\mathbb{N}}_0}\\) is de geassocieerde rij \\(({\\left\\lVert{v}_n\\right\\rVert})_{n\\in{\\mathbb{N}}_0}\\) convergent (en dus begrensd)\nVector optelling \\(+:V \\times V \\to V\\) en scalaire vermenigvuldiging \\({\\mathbb{F}}\\times V \\to V\\) zijn continue afbeeldingen1"
+    "text": "Continuïteit in genormeerde vectorruimte\nWe beschouwen nu een genormeerde vectorruimte \\((V,{\\left\\lVert\\cdot\\right\\rVert})\\) als metrische ruimte met metriek \\(d({v},{w}) = {\\left\\lVert{v}-{w}\\right\\rVert}\\)\n\nDe norm \\({\\left\\lVert\\cdot\\right\\rVert}:V\\to {\\mathbb{R}}\\) is zelf een continue afbeelding (bewijs aan bord)\n\\(\\Rightarrow\\) voor een convergente rij \\((v_n \\in V)_{n\\in{\\mathbb{N}}_0}\\) is de geassocieerde rij \\(({\\left\\lVert{v}_n\\right\\rVert})_{n\\in{\\mathbb{N}}_0}\\) convergent (en dus begrensd)\nVector optelling \\(+:V \\times V \\to V\\) en scalaire vermenigvuldiging \\({\\mathbb{F}}\\times V \\to V\\) zijn continue afbeeldingen1\n\nHiervoor hebben we het volgende nodig: de productverzameling \\(X \\times Y\\) van twee metrische ruimten \\((X, d_X)\\) en \\((Y, d_Y)\\) is metrische ruimte, bevoorbeeld met metriek \\(d_{X,Y}((x,y), (x',y')) = d_X(x,x') + d_Y(y,y')\\)}"
   },
   {
     "objectID": "slides/H4.html#convergentie-in-functieruimten",
     "href": "slides/H4.html#convergentie-in-functieruimten",
     "title": "Hoofdstuk 4 - Normen en afstanden",
     "section": "Convergentie in functieruimten",
-    "text": "Convergentie in functieruimten\nBeschouw opnieuw \\(C^0([a,b],{\\mathbb{F}})\\) met nu de \\(p=\\infty\\)-norm, welke zich herleidt tot:2\n\\[{\\left\\lVert f\\right\\rVert}_p = \\sup_{x\\in [a,b]}{\\left\\lvert f(x)\\right\\rvert} = \\max_{x\\in[a,b]}{\\left\\lvert f(x)\\right\\rvert}\\]\nConvergentie: \\(\\lim_{n\\to \\infty} f_n = f\\) als\n\n\\(\\max_{x\\in [a,b]} {\\left\\lvert f_n(x)-f(x)\\right\\rvert} &lt; \\epsilon\\) voor alle \\(n &gt; N_\\epsilon\\)\n\\({\\left\\lvert f_n(x)-f(x)\\right\\rvert} &lt; \\epsilon\\) voor alle \\(x \\in [a,b]\\) voor alle \\(n &gt; N_\\epsilon\\)\n\\(\\Rightarrow\\) uniforme convergentie van een reeks\n\\(\\Rightarrow\\) \\({\\left\\lVert f\\right\\rVert}_{\\infty}\\) voor continue functies wordt de uniform-norm genoemd\ncontrast met puntsgewijze convergentie:\n\\({\\left\\lvert f_n(x)-f(x)\\right\\rvert} &lt; \\epsilon\\) voor alle \\(n &gt; N_{\\epsilon,x}\\) voor alle \\(x \\in [a,b]\\)\nkan niet worden bekomen met behulp van norm (tegenvoorbeeld aan bord)"
+    "text": "Convergentie in functieruimten\nBeschouw opnieuw \\(C^0([a,b],{\\mathbb{F}})\\) met nu de \\(p=\\infty\\)-norm, welke zich herleidt tot:1\n\\[{\\left\\lVert f\\right\\rVert}_p = \\sup_{x\\in [a,b]}{\\left\\lvert f(x)\\right\\rvert} = \\max_{x\\in[a,b]}{\\left\\lvert f(x)\\right\\rvert}\\]\nConvergentie: \\(\\lim_{n\\to \\infty} f_n = f\\) als\n\n\\(\\max_{x\\in [a,b]} {\\left\\lvert f_n(x)-f(x)\\right\\rvert} &lt; \\epsilon\\) voor alle \\(n &gt; N_\\epsilon\\)\n\\({\\left\\lvert f_n(x)-f(x)\\right\\rvert} &lt; \\epsilon\\) voor alle \\(x \\in [a,b]\\) voor alle \\(n &gt; N_\\epsilon\\)\n\\(\\Rightarrow\\) uniforme convergentie van een reeks\n\\(\\Rightarrow\\) \\({\\left\\lVert f\\right\\rVert}_{\\infty}\\) voor continue functies wordt de uniform-norm genoemd\ncontrast met puntsgewijze convergentie:\n\\({\\left\\lvert f_n(x)-f(x)\\right\\rvert} &lt; \\epsilon\\) voor alle \\(n &gt; N_{\\epsilon,x}\\) voor alle \\(x \\in [a,b]\\)\nkan niet worden bekomen met behulp van norm (tegenvoorbeeld aan bord)\n\nExtremumstelling van Weierstrass: \\(\\sup\\) wordt \\(\\max\\) voor continue \\(f\\) begrensd interval \\([a,b]\\)"
   },
   {
     "objectID": "slides/H4.html#equivalentie-van-normen",
@@ -914,7 +900,7 @@
     "href": "slides/H4.html#continuïteit-van-lineaire-afbeeldingen",
     "title": "Hoofdstuk 4 - Normen en afstanden",
     "section": "Continuïteit van lineaire afbeeldingen",
-    "text": "Continuïteit van lineaire afbeeldingen\nBeschouw genormeerde vectorruimten \\((V,{\\left\\lVert\\cdot\\right\\rVert}_V)\\) en \\((W,{\\left\\lVert\\cdot\\right\\rVert}_W)\\).\n\nEen lineaire afbeelding \\({\\hat{A}}\\in \\mathop{\\mathrm{Hom}}(V,W)\\) wordt begrends genoemd als er een constante \\(C \\in {\\mathbb{R}}_{\\geq 0}\\) bestaat zodat \\[{\\left\\lVert{\\hat{A}}{v}\\right\\rVert}_W\\leq C {\\left\\lVert{v}\\right\\rVert}_V,\\quad\\forall {v}\\in V\\]\nStelling: Voor een lineaire afbeelding \\({\\hat{A}}\\in \\mathop{\\mathrm{Hom}}(V,W)\\) zijn volgende eigenschappen equivalent (bewijs aan bord)\n\n\\({\\hat{A}}\\) is begrensd\n\\({\\hat{A}}\\) is continu in de oorsprong\n\\({\\hat{A}}\\) is overal continu (en zelfs uniform continu)"
+    "text": "Continuïteit van lineaire afbeeldingen\nBeschouw genormeerde vectorruimten \\((V,{\\left\\lVert\\cdot\\right\\rVert}_V)\\) en \\((W,{\\left\\lVert\\cdot\\right\\rVert}_W)\\).\n\nEen lineaire afbeelding \\({\\hat{A}}\\in \\mathop{\\mathrm{Hom}}(V,W)\\) wordt begrensd genoemd als er een constante \\(C \\in {\\mathbb{R}}_{\\geq 0}\\) bestaat zodat \\[{\\left\\lVert{\\hat{A}}{v}\\right\\rVert}_W\\leq C {\\left\\lVert{v}\\right\\rVert}_V,\\quad\\forall {v}\\in V\\]\nStelling: Voor een lineaire afbeelding \\({\\hat{A}}\\in \\mathop{\\mathrm{Hom}}(V,W)\\) zijn volgende eigenschappen equivalent (bewijs aan bord)\n\n\\({\\hat{A}}\\) is begrensd\n\\({\\hat{A}}\\) is continu in de oorsprong\n\\({\\hat{A}}\\) is overal continu (en zelfs uniform continu)"
   },
   {
     "objectID": "slides/H4.html#begrensde-lineaire-afbeeldingen",
@@ -949,21 +935,21 @@
     "href": "slides/H4.html#normen-voor-matrices-1",
     "title": "Hoofdstuk 4 - Normen en afstanden",
     "section": "Normen voor matrices",
-    "text": "Normen voor matrices\n\nvoor gegeven \\(p\\), \\(p\\)-norm vormt een familie van normen voor vectoren in \\({\\mathbb{F}}^n\\) voor arbitraire \\(n\\)\nvoor een matrix \\({\\mathsf{A}}\\in{\\mathbb{F}}^{m \\times n}\\) kunnen we in principe de geïnduceerde norm berekenen voor \\(p\\)-norm op \\({\\mathbb{F}}^m\\) en \\(q\\)-norm op \\({\\mathbb{F}}^n\\); typisch willen we \\(p=q\\).\n\n\\({\\left\\lVert{\\mathsf{A}}\\right\\rVert}_{\\text{col}} = {\\left\\lVert{\\mathsf{A}}\\right\\rVert}_{1 \\to 1} = \\max_{j=1,\\ldots,n} \\sum_{i=1}^{m} {\\left\\lvert A^i_{\\ j}\\right\\rvert}\\)\n\\({\\left\\lVert{\\mathsf{A}}\\right\\rVert}_{\\text{row}} = {\\left\\lVert{\\mathsf{A}}\\right\\rVert}_{\\infty \\to \\infty} = \\max_{i=1,\\ldots,m} \\sum_{j=1}^{n} {\\left\\lvert A^i_{\\ j}\\right\\rvert}\\)\n\n(oefeningen, zelf proberen)\n\n(\\({\\left\\lVert{\\mathsf{A}}\\right\\rVert}_{2 \\to 2}\\) is moeilijker te berekenen, en is gegeven door de grootste “singuliere waarde” (zie H6))"
+    "text": "Normen voor matrices\n\nvoor gegeven \\(p\\): \\(p\\)-norm vormt een familie van normen voor vectoren in \\({\\mathbb{F}}^n\\) voor arbitraire \\(n\\)\nvoor een matrix \\({\\mathsf{A}}\\in{\\mathbb{F}}^{m \\times n}\\) kunnen we in principe de geïnduceerde norm \\({\\left\\lVert{\\hat{A}}\\right\\rVert}_{p\\to q}\\) berekenen voor \\(p\\)-norm op \\({\\mathbb{F}}^m\\) en \\(q\\)-norm op \\({\\mathbb{F}}^n\\); typisch willen we \\(p=q\\).\n\n\\({\\left\\lVert{\\mathsf{A}}\\right\\rVert}_{\\text{col}} = {\\left\\lVert{\\mathsf{A}}\\right\\rVert}_{1 \\to 1} = \\max_{j=1,\\ldots,n} \\sum_{i=1}^{m} {\\left\\lvert A^i_{\\ j}\\right\\rvert}\\)\n\\({\\left\\lVert{\\mathsf{A}}\\right\\rVert}_{\\text{row}} = {\\left\\lVert{\\mathsf{A}}\\right\\rVert}_{\\infty \\to \\infty} = \\max_{i=1,\\ldots,m} \\sum_{j=1}^{n} {\\left\\lvert A^i_{\\ j}\\right\\rvert}\\)\n\n(oefeningen, zelf proberen)\n\n(\\({\\left\\lVert{\\mathsf{A}}\\right\\rVert}_{2 \\to 2}\\) is moeilijker te berekenen, en is gegeven door de grootste “singuliere waarde” (zie H6))"
   },
   {
     "objectID": "slides/H4.html#consistente-matrixnormen",
     "href": "slides/H4.html#consistente-matrixnormen",
     "title": "Hoofdstuk 4 - Normen en afstanden",
     "section": "Consistente matrixnormen",
-    "text": "Consistente matrixnormen\nGegeven een familie van normen \\(\\{{\\left\\lVert\\cdot\\right\\rVert}^{(m \\times n)}: {\\mathbb{F}}^{m\\times n} \\to {\\mathbb{R}}_{\\geq 0}; \\forall m, n \\in {\\mathbb{N}}\\}\\) voor matrices van alle groottes:\n\ndeze worden consistent genoemd als \\[{\\left\\lVert{\\mathsf{A}}{\\mathsf{B}}\\right\\rVert}^{(m \\times n)} \\leq {\\left\\lVert{\\mathsf{A}}\\right\\rVert}^{(m \\times k)} {\\left\\lVert{\\mathsf{B}}\\right\\rVert}^{(k \\times n)}\\] voor alle \\({\\mathsf{A}}\\in{\\mathbb{F}}^{m\\times k}\\) en \\({\\mathsf{B}}\\in{\\mathbb{F}}^{k\\times n}\\)\nde normen \\({\\left\\lVert{\\mathsf{A}}\\right\\rVert}_{p\\times p}\\) is consistent (bewijs aan bord)\nde norm \\({\\left\\lVert{\\mathsf{A}}\\right\\rVert}_{\\text{F}}={\\left\\lVert\\text{vectorize}({\\mathsf{A}})\\right\\rVert}_2\\) is consistent (bewijs aan bord)\nde norm \\({\\left\\lVert\\text{vectorize}({\\mathsf{A}})\\right\\rVert}_\\infty\\) is niet consistent"
+    "text": "Consistente matrixnormen\nGegeven een familie van normen \\(\\{{\\left\\lVert\\cdot\\right\\rVert}^{(m \\times n)}: {\\mathbb{F}}^{m\\times n} \\to {\\mathbb{R}}_{\\geq 0}; \\forall m, n \\in {\\mathbb{N}}\\}\\) voor matrices van alle groottes:\n\ndeze worden consistent genoemd als \\[{\\left\\lVert{\\mathsf{A}}{\\mathsf{B}}\\right\\rVert}^{(m \\times n)} \\leq {\\left\\lVert{\\mathsf{A}}\\right\\rVert}^{(m \\times k)} {\\left\\lVert{\\mathsf{B}}\\right\\rVert}^{(k \\times n)}\\] voor alle \\({\\mathsf{A}}\\in{\\mathbb{F}}^{m\\times k}\\) en \\({\\mathsf{B}}\\in{\\mathbb{F}}^{k\\times n}\\)\nde normen \\({\\left\\lVert{\\mathsf{A}}\\right\\rVert}_{p\\times p}\\) zijn consistent (bewijs aan bord)\nde normen \\({\\left\\lVert{\\mathsf{A}}\\right\\rVert}_{\\text{F}}={\\left\\lVert\\text{vectorize}({\\mathsf{A}})\\right\\rVert}_2\\) zijn consistent (bewijs aan bord)\nde norm \\({\\left\\lVert\\text{vectorize}({\\mathsf{A}})\\right\\rVert}_\\infty\\) is niet consistent"
   },
   {
-    "objectID": "slides/H4.html#consistente-matrixnormen-1",
-    "href": "slides/H4.html#consistente-matrixnormen-1",
+    "objectID": "slides/H4.html#matrixnormen-terminilogie",
+    "href": "slides/H4.html#matrixnormen-terminilogie",
     "title": "Hoofdstuk 4 - Normen en afstanden",
-    "section": "Consistente matrixnormen",
-    "text": "Consistente matrixnormen\n\nHet concept “matrixnorm” wordt vaak gedefinieerd als een norm die aan de drie voorwaarden van een vectornorm voldoet, en bovendien aan de consistentievoorwaarde.\nDe consistentievoorwaarde is een veralgemening van submultiplicativiteit, en beide termen worden soms door elkaar gebruikt.\nEr is geen gestandardiseerde terminologie en “subordinate”, “submultiplicative” en “consistent” of ook “compatible” wordt door elkaar gebruikt in gerelateerde betekenissen\n(in vragen hieromtrent zal ook steeds de expliciete voorwaarde als wiskundige ongelijkheid vermeld staan)"
+    "section": "Matrixnormen: terminilogie",
+    "text": "Matrixnormen: terminilogie\n\nHet concept “matrixnorm” wordt vaak gedefinieerd als een norm die aan de drie voorwaarden van een vectornorm voldoet, en bovendien aan de consistentievoorwaarde.\nDe consistentievoorwaarde is een veralgemening van submultiplicativiteit van operatoren, en beide termen worden soms door elkaar gebruikt.\nEr is geen gestandardiseerde terminologie en “subordinate”, “submultiplicative” en “consistent” of ook “compatible” wordt door elkaar gebruikt in gerelateerde betekenissen\n(in vragen hieromtrent zal ook steeds de expliciete voorwaarde als wiskundige ongelijkheid vermeld staan)"
   },
   {
     "objectID": "slides/H4.html#spectraalstraal",
@@ -1015,11 +1001,81 @@
     "text": "Markovketens en stochastische matrices\nMisschien later?"
   },
   {
-    "objectID": "slides/H4.html#footnotes",
-    "href": "slides/H4.html#footnotes",
-    "title": "Hoofdstuk 4 - Normen en afstanden",
-    "section": "Footnotes",
-    "text": "Footnotes\n\n\nHiervoor hebben we het volgende nodig: de productverzameling \\(X \\times Y\\) van twee metrische ruimten \\((X, d_X)\\) en \\((Y, d_Y)\\) is metrische ruimte, bevoorbeeld met metriek \\(d_{X,Y}((x,y), (x',y')) = d_X(x,x') + d_Y(y,y')\\)}↩︎\nExtremumstelling van Weierstrass: \\(\\sup\\) wordt \\(\\max\\) voor continue \\(f\\) begrensd interval \\([a,b]\\)↩︎"
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Vector and Function Spaces – Slides",
+    "section": "",
+    "text": "Order By\n       Default\n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Title\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\nDate\n\n\nTitle\n\n\nAuthor\n\n\n\n\n\n\nSep 25, 2023\n\n\nHoofdstuk 1 - Elementaire wiskundige structuren\n\n\nJutho Haegeman\n\n\n\n\nSep 26, 2023\n\n\nHoofdstuk 2 - Lineaire afbeeldingen\n\n\nJutho Haegeman\n\n\n\n\nOct 10, 2023\n\n\nHoofdstuk 3 - Lineaire operatoren en eigenwaarden\n\n\nJutho Haegeman\n\n\n\n\nOct 17, 2023\n\n\nHoofdstuk 4 - Normen en afstanden\n\n\nJutho Haegeman\n\n\n\n\nOct 24, 2023\n\n\nHoofdstuk 5 - Inwendig product en orthogonaliteit\n\n\nJutho Haegeman\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "slides/H5.html#doel-van-dit-hoofdstuk",
+    "href": "slides/H5.html#doel-van-dit-hoofdstuk",
+    "title": "Hoofdstuk 5 - Inwendig product en orthogonaliteit",
+    "section": "Doel van dit hoofdstuk",
+    "text": "Doel van dit hoofdstuk\n\n$$ % Math operators % % \n% VECTORS\n% specifically for vectors in F^n \n% MATRICES\n% SCALARS \n% LINEAR MAPS\n% FIELDS \n% RELATIONS \n% % % % % % % % %\n%\n$$\n\n\nConcept van inwendig product:\n\ngeeft aanleiding tot lengte, oriëntatie, geometrie (bvb Pythogoras)\ngeeft ook aanleiding tot (antilinear) isomorfisme tussen vector ruimte en zijn duale\n\nConcept van orthogonaliteit: orthogonale projectie, orthogonale basis: enorm belangrijk voor zowel theorie als praktijk (numerieke algoritmen)"
+  },
+  {
+    "objectID": "slides/H5.html#doel-van-dit-hoofdstuk-1",
+    "href": "slides/H5.html#doel-van-dit-hoofdstuk-1",
+    "title": "Hoofdstuk 5 - Inwendig product en orthogonaliteit",
+    "section": "Doel van dit hoofdstuk",
+    "text": "Doel van dit hoofdstuk\n\nLineaire afbeeldingen tussen inwendig product ruimten, toegevoegde afbeelding, zelftoegevoegde en normale operatoren, orthogonale en unitaire afbeeldingen\nGerelateerde concepten: bilineare en sesquilineare vormen\nToepassing: kleinste kwadratenoplossing voor overgedetermineerde systemen"
+  },
+  {
+    "objectID": "slides/H5.html#bilineaire-vormen",
+    "href": "slides/H5.html#bilineaire-vormen",
+    "title": "Hoofdstuk 5 - Inwendig product en orthogonaliteit",
+    "section": "Bilineaire vormen",
+    "text": "Bilineaire vormen\n\nherhaling: bilineaire afbeelding \\(B:V_1 \\times V_2 \\to V_3\\)\n\n\\(B(a {v}_1 + b {w}_1, {v}_2) = a B({v}_1,{v}_2) + b B({w}_1,{v}_2)\\)\n\\(B({v}_1, a {v}_2 + b {w}_2) = a B({v}_1,{v}_2) + b B({v}_1,{w}_2)\\)\n\nbilineaire vorm = bilineaire afbeelding \\(V \\times V \\to {\\mathbb{F}}\\)\n\nspeciale gevallen:\n\nsymmetrisch \\(B({v},{w})=B({v},{w})\\)\nanti-/scheef-symmetrisch \\(B({v},{w}) = -B({v},{w})\\)"
+  },
+  {
+    "objectID": "slides/H5.html#bilineaire-vormen-en-matrices",
+    "href": "slides/H5.html#bilineaire-vormen-en-matrices",
+    "title": "Hoofdstuk 5 - Inwendig product en orthogonaliteit",
+    "section": "Bilineaire vormen en matrices",
+    "text": "Bilineaire vormen en matrices\n\nbasisrepresentatie: \\(B_V=\\{{e}_1,\\ldots,{e}_n\\}\\)\n\\(\\Rightarrow B({v},{w}) = {v}^i \\underbrace{B({e}_i,{e}_j)}_{B_{ij}\\Rightarrow {\\mathsf{B}}\\in{\\mathbb{F}}^{n\\times n}} w^j = \\boldsymbol{v}^{\\mathsf{T}}{\\mathsf{B}} \\boldsymbol{w}\\)\n\n(anti)symmetrisch : \\({\\mathsf{B}} = \\pm {\\mathsf{B}}^{{\\mathsf{T}}} \\Leftrightarrow B_{ij} = \\pm B_{ji}\\)\nbasistransformatie:\n\nvector: \\(\\tilde{v}^i = [{\\mathsf{T}}]^i_{\\ j} v^j\\)\nduale vector: \\(\\tilde{\\xi}_i = [{\\mathsf{T}}^{-{\\mathsf{T}}}]_i^{\\ j}\\xi_j\\)\nbilineaire vorm: \\(\\tilde{B}_{ij} = [{\\mathsf{T}}^{-{\\mathsf{T}}}]_i^{\\ k}[{\\mathsf{T}}^{-{\\mathsf{T}}}]_j^{\\ l}B_{kl}\\)\n\n\\(\\Rightarrow\\) behoudt (anti)symmetrie"
+  },
+  {
+    "objectID": "slides/H5.html#bilineaire-en-kwadratische-vormen",
+    "href": "slides/H5.html#bilineaire-en-kwadratische-vormen",
+    "title": "Hoofdstuk 5 - Inwendig product en orthogonaliteit",
+    "section": "Bilineaire en kwadratische vormen",
+    "text": "Bilineaire en kwadratische vormen\n\nelke bilineaire vorm kan ontbonden worden als: \\(B({v},{w}) = \\underbrace{\\frac{1}{2}\\left(B({v},{w})+B({w},{v})\\right)}_{B_{\\text{S}}({v},{w})} + \\underbrace{\\frac{1}{2}\\left(B({v},{w})-B({w},{v})\\right)}_{B_{\\text{A}}({v},{w})}\\)\nkwadratische vorm = afbeelding \\(q:V \\to {\\mathbb{R}}\\) zodat\n\\[B({v},{w}) = \\left(q({v}+{w})-q({v}) - q({w})\\right)/2\\]\neen bilineaire vorm is (er geldt dan \\(q({v})=B({v},{v})\\))\n\nkwadratische vorm equivalent met symmetrische bilineaire vorm\n(antisymmetrisch stuk geeft geen bijdrage in \\(B({v},{v})\\))"
+  },
+  {
+    "objectID": "slides/H5.html#kwadratische-vormen-toepassingen",
+    "href": "slides/H5.html#kwadratische-vormen-toepassingen",
+    "title": "Hoofdstuk 5 - Inwendig product en orthogonaliteit",
+    "section": "Kwadratische vormen: toepassingen",
+    "text": "Kwadratische vormen: toepassingen\n\nkwadratische Hamiltoniaan/Lagrangiaan(harmonische oscillator): \\[H(x,p) = \\frac{1}{2m} p^2 + \\frac{1}{2}m \\omega^2 x^2\\]\nkegelsneden: \\(x^2 + y^2 - z^2 = 1\\)\ntweede-orde Taylorexpansie \\(\\rightarrow\\) Hessiaan:\n\\[f(\\boldsymbol{x}) = f(\\boldsymbol{x}_0) + (x-x_0)^i \\partial_i f(\\boldsymbol{x}_0) +\\\\\n\\quad\\quad\\qquad \\frac{1}{2} (x-x_0)^i(x-x_0)^j \\frac{\\partial^2 f}{\\partial x^i \\partial x^j}(\\boldsymbol{x}_0)\\]"
+  },
+  {
+    "objectID": "slides/H5.html#sesquilineaire-vormen",
+    "href": "slides/H5.html#sesquilineaire-vormen",
+    "title": "Hoofdstuk 5 - Inwendig product en orthogonaliteit",
+    "section": "Sesquilineaire vormen",
+    "text": "Sesquilineaire vormen\nComplexe vectorruimte \\(V\\):\n\nSesquilinaire vorm is afbeelding \\(C:V \\times V \\to {\\mathbb{F}}\\) met\n\n\\(C({a}{u}+ {b}{v},{w}) = {\\overline{{a}}} C({u},{w}) + {\\overline{{b}}} C({v},{w})\\)\n\\(C({u},{a}{v}+ {b}{w}) = {a}C({u},{v}) + {b}C({u},{w})\\)\n\nSpeciale gevallen:\n\n\\(C({v},{w}) = \\overline{C({w},{v})}\\): hermitisch\n\\(C({v},{w}) = -\\overline{C({v},{w})}\\): anti- of scheefhermitisch\n\n\nHerleidt zich tot (symmetrische of antisymmetrische) bilineaire vormen voor \\({\\mathbb{F}}= {\\mathbb{R}}\\)"
+  },
+  {
+    "objectID": "slides/H5.html#sesquilineaire-vormen-en-matrices",
+    "href": "slides/H5.html#sesquilineaire-vormen-en-matrices",
+    "title": "Hoofdstuk 5 - Inwendig product en orthogonaliteit",
+    "section": "Sesquilineaire vormen en matrices",
+    "text": "Sesquilineaire vormen en matrices\n\nbasisrepresentatie: \\(B_V=\\{{e}_1,\\ldots,{e}_n\\}\\)\n\\(C({v},{w}) = \\overline{v^i} C({e}_i,{e}_j) w^j = \\boldsymbol{v}^{\\mathsf{T}}{\\mathsf{C}} \\boldsymbol{w}\\) met \\(C_{ij} = C({e}_i,{e}_j) \\Rightarrow {\\mathsf{C}} \\in {\\mathbb{F}}^{n \\times n}\\)\n\n(anti)hermitisch : \\({\\mathsf{C}} = \\pm {\\mathsf{C}}^{{\\mathsf{H}}} \\Leftrightarrow C_{ij} = \\pm \\overline{C_{ji}}\\)\nbasistransformatie:\n\nvector: \\(\\tilde{v}^i = [{\\mathsf{T}}]^i_{\\ j} v^j\\)\nduale vector: \\(\\tilde{\\xi}_i = [{\\mathsf{T}}^{-{\\mathsf{T}}}]_i^{\\ j}\\xi_j\\)\nbilineaire vorm: \\(\\tilde{C}_{ij} = [{\\mathsf{T}}^{-{\\mathsf{H}}}]_i^{\\ k}[{\\mathsf{T}}^{-{\\mathsf{T}}}]_j^{\\ l}C_{kl}\\)\n(eenduidiger: \\(\\tilde{C}_{\\bar{\\imath}j} = [{\\mathsf{T}}^{-{\\mathsf{H}}}]_\\bar{\\imath}^{\\ \\bar{k}}[{\\mathsf{T}}^{-{\\mathsf{T}}}]_j^{\\ l}C_{\\bar{k}l}\\))"
+  },
+  {
+    "objectID": "slides/H5.html#bilineaire-en-sesquilineaire-vormen",
+    "href": "slides/H5.html#bilineaire-en-sesquilineaire-vormen",
+    "title": "Hoofdstuk 5 - Inwendig product en orthogonaliteit",
+    "section": "Bilineaire en sesquilineaire vormen",
+    "text": "Bilineaire en sesquilineaire vormen\nBijkomende begrippen:\n\nontaard: als een \\({v}\\in V\\) bestaat zodat \\(C({w},{v})=0\\) voor alle \\({w}\\in V\\) \\(\\Rightarrow \\mathop{\\mathrm{rank}}({\\mathsf{C}}) &lt; \\mathop{\\mathrm{dim}}(V)\\) of \\(\\det({\\mathsf{C}})=0\\)\npositief definiet of semidefiniet: \\(C({v},{v}) &gt; 0\\) of \\(C({v},{v}) \\geq 0\\) voor alle \\({v}\\neq {o}\\)\nindefiniet: \\(C({v},{v})\\) neemt positieve en negatieve waarden aan voor verschillende \\({v}\\)\n\\({\\mathsf{B}} = {\\mathsf{T}}^{\\mathsf{T}}\\tilde{{\\mathsf{B}}} {\\mathsf{T}}\\) of \\({\\mathsf{C}} = {\\mathsf{T}}^{\\mathsf{H}}\\tilde{{\\mathsf{C}}} {\\mathsf{T}}\\): matrix congruentie \\(\\rightarrow\\) equivalentierelatie\n\nbehoudt geen eigenwaarden, niet compatibel met matrixvermenigvuldiging, machten, functies, …\nbehoudt (anti)symmetrisch of (anti)hermitisch\nbehoudt eigenwaarden \\(0\\) en dus het ontaard zijn\nbehoudt positief definiet / semidefiniet , indefinieit, …\n\nstelling: als \\(C\\) positief semidefiniet is maar niet positief definiet, dan is \\(C\\) ontaard"
+  },
+  {
+    "objectID": "slides/H5.html#inwendig-product",
+    "href": "slides/H5.html#inwendig-product",
+    "title": "Hoofdstuk 5 - Inwendig product en orthogonaliteit",
+    "section": "Inwendig product",
+    "text": "Inwendig product"
   },
   {
     "objectID": "slides/H2.html",

@@ -2,10 +2,10 @@
 title: "Hoofdstuk 4 - Normen en afstanden"
 author: "Jutho Haegeman"
 date: "10/17/2023"
-# format:
-#   revealjs:
-#     theme: solarized
-#     chalkboard: true
+format:
+  revealjs:
+    theme: solarized
+    chalkboard: true
 ---
 
 ## Doel van dit hoofdstuk
@@ -467,7 +467,7 @@ Gegeven $\mat{A} \in \bbF^{m \times n}$:
 
 Beschouw genormeerde vectorruimten $(V,\norm{\cdot}_V)$ en $(W,\norm{\cdot}_W)$.
 
-* Een lineaire afbeelding $\map{A}\in \Hom(V,W)$ wordt begrends genoemd als er een constante $C \in \bbR_{\geq 0}$ bestaat zodat
+* Een lineaire afbeelding $\map{A}\in \Hom(V,W)$ wordt begrensd genoemd als er een constante $C \in \bbR_{\geq 0}$ bestaat zodat
   $$\norm{\map{A}\vv}_W\leq C \norm{\vv}_V,\quad\forall \vv\in V$$
 * Stelling: Voor een lineaire afbeelding $\map{A}\in \Hom(V,W)$ zijn volgende eigenschappen equivalent (bewijs aan bord)
   * $\map{A}$ is begrensd
@@ -514,9 +514,9 @@ Beschouw nu specifiek $\map{A}\in \End(V)$ voor een Banachruimte $(V,\norm{\cdot
 
 ## Normen voor matrices
 
-* voor gegeven $p$, $p$-norm vormt een familie van normen voor vectoren in $\bbF^n$ voor arbitraire $n$
+* voor gegeven $p$: $p$-norm vormt een familie van normen voor vectoren in $\bbF^n$ voor arbitraire $n$
 
-* voor een matrix $\mat{A}\in\bbF^{m \times n}$ kunnen we in principe de geïnduceerde norm berekenen voor $p$-norm op $\bbF^m$ en $q$-norm op $\bbF^n$; typisch willen we $p=q$.
+* voor een matrix $\mat{A}\in\bbF^{m \times n}$ kunnen we in principe de geïnduceerde norm $\norm{\map{A}}_{p\to q}$ berekenen voor $p$-norm op $\bbF^m$ en $q$-norm op $\bbF^n$; typisch willen we $p=q$.
 
   * $\norm{\mat{A}}_{\text{col}} = \norm{\mat{A}}_{1 \to 1} = \max_{j=1,\ldots,n} \sum_{i=1}^{m} \abs{A^i_{\ j}}$
   * $\norm{\mat{A}}_{\text{row}} = \norm{\mat{A}}_{\infty \to \infty} = \max_{i=1,\ldots,m} \sum_{j=1}^{n} \abs{A^i_{\ j}}$
@@ -533,14 +533,14 @@ Gegeven een familie van normen $\{\norm{\cdot}^{(m \times n)}: \bbF^{m\times n} 
 $$\norm{\mat{A}\mat{B}}^{(m \times n)} \leq \norm{\mat{A}}^{(m \times k)} \norm{\mat{B}}^{(k \times n)}$$
 voor alle $\mat{A}\in\bbF^{m\times k}$ en $\mat{B}\in\bbF^{k\times n}$
 
-* de normen $\norm{\mat{A}}_{p\times p}$ is consistent (bewijs aan bord)
-* de norm $\norm{\mat{A}}_{\text{F}}=\norm{\text{vectorize}(\mat{A})}_2$ is consistent (bewijs aan bord)
+* de normen $\norm{\mat{A}}_{p\times p}$ zijn consistent (bewijs aan bord)
+* de normen $\norm{\mat{A}}_{\text{F}}=\norm{\text{vectorize}(\mat{A})}_2$ zijn consistent (bewijs aan bord)
 * de norm $\norm{\text{vectorize}(\mat{A})}_\infty$ is niet consistent
 
-## Consistente matrixnormen
+## Matrixnormen: terminilogie
 
 * Het concept "matrixnorm" wordt vaak gedefinieerd als een norm die aan de drie voorwaarden van een vectornorm voldoet, en bovendien aan de consistentievoorwaarde.
-* De consistentievoorwaarde is een veralgemening van submultiplicativiteit, en beide termen worden soms door elkaar gebruikt.
+* De consistentievoorwaarde is een veralgemening van submultiplicativiteit van operatoren, en beide termen worden soms door elkaar gebruikt.
 * Er is geen gestandardiseerde terminologie en "subordinate", "submultiplicative" en "consistent" of ook "compatible" wordt door elkaar gebruikt in gerelateerde betekenissen
 
 * (in vragen hieromtrent zal ook steeds de expliciete voorwaarde als wiskundige ongelijkheid vermeld staan)
