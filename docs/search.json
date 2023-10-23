@@ -721,11 +721,18 @@
     "text": "Footnotes\n\n\nInvers beeld gedraagt vereist geen injectiviteit, en gedraagt zich beter dan beeld onder unie en doorsnede: \\(\\varphi^{-1}(D_1 \\cup D_2) = \\varphi^{-1}(D_1) \\cup \\varphi^{-1}(D_2)\\) en analoog voor \\(\\cap\\)↩︎\n\\(S\\) zelf kan eindig of oneindig veel elementen bevatten, maar we hebben geen manier om op dit moment betekenis te geven aan een oneindige som (=reeks)↩︎"
   },
   {
+    "objectID": "slides/H4.html",
+    "href": "slides/H4.html",
+    "title": "Hoofdstuk 4 - Normen en afstanden",
+    "section": "",
+    "text": "$$ % Math operators % % \n% VECTORS\n% specifically for vectors in F^n \n% MATRICES\n% SCALARS \n% LINEAR MAPS\n% FIELDS \n% RELATIONS \n% % % % % % % % %\n%\n$$\n\n\nConcept van norm = lengte van een vector\nNorm geeft aanleiding tot een afstand tussen vectoren\nVormt de basis om concepten uit analyse te importeren\n(rijen, reeksen, continuïteit, …)"
+  },
+  {
     "objectID": "slides/H4.html#doel-van-dit-hoofdstuk",
     "href": "slides/H4.html#doel-van-dit-hoofdstuk",
     "title": "Hoofdstuk 4 - Normen en afstanden",
-    "section": "Doel van dit hoofdstuk",
-    "text": "Doel van dit hoofdstuk\n\n$$ % Math operators % % \n% VECTORS\n% specifically for vectors in F^n \n% MATRICES\n% SCALARS \n% LINEAR MAPS\n% FIELDS \n% RELATIONS \n% % % % % % % % %\n%\n$$\n\n\nConcept van norm = lengte van een vector\nNorm geeft aanleiding tot een afstand tussen vectoren\nVormt de basis om concepten uit analyse te importeren\n(rijen, reeksen, continuïteit, …)"
+    "section": "",
+    "text": "$$ % Math operators % % \n% VECTORS\n% specifically for vectors in F^n \n% MATRICES\n% SCALARS \n% LINEAR MAPS\n% FIELDS \n% RELATIONS \n% % % % % % % % %\n%\n$$\n\n\nConcept van norm = lengte van een vector\nNorm geeft aanleiding tot een afstand tussen vectoren\nVormt de basis om concepten uit analyse te importeren\n(rijen, reeksen, continuïteit, …)"
   },
   {
     "objectID": "slides/H4.html#norm",
@@ -809,14 +816,14 @@
     "href": "slides/H4.html#continuïteit-in-genormeerde-vectorruimte",
     "title": "Hoofdstuk 4 - Normen en afstanden",
     "section": "Continuïteit in genormeerde vectorruimte",
-    "text": "Continuïteit in genormeerde vectorruimte\nWe beschouwen nu een genormeerde vectorruimte \\((V,{\\left\\lVert\\cdot\\right\\rVert})\\) als metrische ruimte met metriek \\(d({v},{w}) = {\\left\\lVert{v}-{w}\\right\\rVert}\\)\n\nDe norm \\({\\left\\lVert\\cdot\\right\\rVert}:V\\to {\\mathbb{R}}\\) is zelf een continue afbeelding (bewijs aan bord)\n\\(\\Rightarrow\\) voor een convergente rij \\((v_n \\in V)_{n\\in{\\mathbb{N}}_0}\\) is de geassocieerde rij \\(({\\left\\lVert{v}_n\\right\\rVert})_{n\\in{\\mathbb{N}}_0}\\) convergent (en dus begrensd)\nVector optelling \\(+:V \\times V \\to V\\) en scalaire vermenigvuldiging \\({\\mathbb{F}}\\times V \\to V\\) zijn continue afbeeldingen1\n\nHiervoor hebben we het volgende nodig: de productverzameling \\(X \\times Y\\) van twee metrische ruimten \\((X, d_X)\\) en \\((Y, d_Y)\\) is metrische ruimte, bevoorbeeld met metriek \\(d_{X,Y}((x,y), (x',y')) = d_X(x,x') + d_Y(y,y')\\)}"
+    "text": "Continuïteit in genormeerde vectorruimte\nWe beschouwen nu een genormeerde vectorruimte \\((V,{\\left\\lVert\\cdot\\right\\rVert})\\) als metrische ruimte met metriek \\(d({v},{w}) = {\\left\\lVert{v}-{w}\\right\\rVert}\\)\n\nDe norm \\({\\left\\lVert\\cdot\\right\\rVert}:V\\to {\\mathbb{R}}\\) is zelf een continue afbeelding (bewijs aan bord)\n\\(\\Rightarrow\\) voor een convergente rij \\((v_n \\in V)_{n\\in{\\mathbb{N}}_0}\\) is de geassocieerde rij \\(({\\left\\lVert{v}_n\\right\\rVert})_{n\\in{\\mathbb{N}}_0}\\) convergent (en dus begrensd)\nVector optelling \\(+:V \\times V \\to V\\) en scalaire vermenigvuldiging \\({\\mathbb{F}}\\times V \\to V\\) zijn continue afbeeldingen1"
   },
   {
     "objectID": "slides/H4.html#convergentie-in-functieruimten",
     "href": "slides/H4.html#convergentie-in-functieruimten",
     "title": "Hoofdstuk 4 - Normen en afstanden",
     "section": "Convergentie in functieruimten",
-    "text": "Convergentie in functieruimten\nBeschouw opnieuw \\(C^0([a,b],{\\mathbb{F}})\\) met nu de \\(p=\\infty\\)-norm, welke zich herleidt tot:1\n\\[{\\left\\lVert f\\right\\rVert}_p = \\sup_{x\\in [a,b]}{\\left\\lvert f(x)\\right\\rvert} = \\max_{x\\in[a,b]}{\\left\\lvert f(x)\\right\\rvert}\\]\nConvergentie: \\(\\lim_{n\\to \\infty} f_n = f\\) als\n\n\\(\\max_{x\\in [a,b]} {\\left\\lvert f_n(x)-f(x)\\right\\rvert} &lt; \\epsilon\\) voor alle \\(n &gt; N_\\epsilon\\)\n\\({\\left\\lvert f_n(x)-f(x)\\right\\rvert} &lt; \\epsilon\\) voor alle \\(x \\in [a,b]\\) voor alle \\(n &gt; N_\\epsilon\\)\n\\(\\Rightarrow\\) uniforme convergentie van een reeks\n\\(\\Rightarrow\\) \\({\\left\\lVert f\\right\\rVert}_{\\infty}\\) voor continue functies wordt de uniform-norm genoemd\ncontrast met puntsgewijze convergentie:\n\\({\\left\\lvert f_n(x)-f(x)\\right\\rvert} &lt; \\epsilon\\) voor alle \\(n &gt; N_{\\epsilon,x}\\) voor alle \\(x \\in [a,b]\\)\nkan niet worden bekomen met behulp van norm (tegenvoorbeeld aan bord)\n\nExtremumstelling van Weierstrass: \\(\\sup\\) wordt \\(\\max\\) voor continue \\(f\\) begrensd interval \\([a,b]\\)"
+    "text": "Convergentie in functieruimten\nBeschouw opnieuw \\(C^0([a,b],{\\mathbb{F}})\\) met nu de \\(p=\\infty\\)-norm, welke zich herleidt tot:2\n\\[{\\left\\lVert f\\right\\rVert}_p = \\sup_{x\\in [a,b]}{\\left\\lvert f(x)\\right\\rvert} = \\max_{x\\in[a,b]}{\\left\\lvert f(x)\\right\\rvert}\\]\nConvergentie: \\(\\lim_{n\\to \\infty} f_n = f\\) als\n\n\\(\\max_{x\\in [a,b]} {\\left\\lvert f_n(x)-f(x)\\right\\rvert} &lt; \\epsilon\\) voor alle \\(n &gt; N_\\epsilon\\)\n\\({\\left\\lvert f_n(x)-f(x)\\right\\rvert} &lt; \\epsilon\\) voor alle \\(x \\in [a,b]\\) voor alle \\(n &gt; N_\\epsilon\\)\n\\(\\Rightarrow\\) uniforme convergentie van een reeks\n\\(\\Rightarrow\\) \\({\\left\\lVert f\\right\\rVert}_{\\infty}\\) voor continue functies wordt de uniform-norm genoemd\ncontrast met puntsgewijze convergentie:\n\\({\\left\\lvert f_n(x)-f(x)\\right\\rvert} &lt; \\epsilon\\) voor alle \\(n &gt; N_{\\epsilon,x}\\) voor alle \\(x \\in [a,b]\\)\nkan niet worden bekomen met behulp van norm (tegenvoorbeeld aan bord)"
   },
   {
     "objectID": "slides/H4.html#equivalentie-van-normen",
@@ -945,11 +952,11 @@
     "text": "Consistente matrixnormen\nGegeven een familie van normen \\(\\{{\\left\\lVert\\cdot\\right\\rVert}^{(m \\times n)}: {\\mathbb{F}}^{m\\times n} \\to {\\mathbb{R}}_{\\geq 0}; \\forall m, n \\in {\\mathbb{N}}\\}\\) voor matrices van alle groottes:\n\ndeze worden consistent genoemd als \\[{\\left\\lVert{\\mathsf{A}}{\\mathsf{B}}\\right\\rVert}^{(m \\times n)} \\leq {\\left\\lVert{\\mathsf{A}}\\right\\rVert}^{(m \\times k)} {\\left\\lVert{\\mathsf{B}}\\right\\rVert}^{(k \\times n)}\\] voor alle \\({\\mathsf{A}}\\in{\\mathbb{F}}^{m\\times k}\\) en \\({\\mathsf{B}}\\in{\\mathbb{F}}^{k\\times n}\\)\nde normen \\({\\left\\lVert{\\mathsf{A}}\\right\\rVert}_{p\\times p}\\) zijn consistent (bewijs aan bord)\nde normen \\({\\left\\lVert{\\mathsf{A}}\\right\\rVert}_{\\text{F}}={\\left\\lVert\\text{vectorize}({\\mathsf{A}})\\right\\rVert}_2\\) zijn consistent (bewijs aan bord)\nde norm \\({\\left\\lVert\\text{vectorize}({\\mathsf{A}})\\right\\rVert}_\\infty\\) is niet consistent"
   },
   {
-    "objectID": "slides/H4.html#matrixnormen-terminilogie",
-    "href": "slides/H4.html#matrixnormen-terminilogie",
+    "objectID": "slides/H4.html#matrixnormen-terminologie",
+    "href": "slides/H4.html#matrixnormen-terminologie",
     "title": "Hoofdstuk 4 - Normen en afstanden",
-    "section": "Matrixnormen: terminilogie",
-    "text": "Matrixnormen: terminilogie\n\nHet concept “matrixnorm” wordt vaak gedefinieerd als een norm die aan de drie voorwaarden van een vectornorm voldoet, en bovendien aan de consistentievoorwaarde.\nDe consistentievoorwaarde is een veralgemening van submultiplicativiteit van operatoren, en beide termen worden soms door elkaar gebruikt.\nEr is geen gestandardiseerde terminologie en “subordinate”, “submultiplicative” en “consistent” of ook “compatible” wordt door elkaar gebruikt in gerelateerde betekenissen\n(in vragen hieromtrent zal ook steeds de expliciete voorwaarde als wiskundige ongelijkheid vermeld staan)"
+    "section": "Matrixnormen: terminologie",
+    "text": "Matrixnormen: terminologie\n\nHet concept “matrixnorm” wordt vaak gedefinieerd als een norm die aan de drie voorwaarden van een vectornorm voldoet, en bovendien aan de consistentievoorwaarde.\nDe consistentievoorwaarde is een veralgemening van submultiplicativiteit van operatoren, en beide termen worden soms door elkaar gebruikt.\nEr is geen gestandardiseerde terminologie en “subordinate”, “submultiplicative” en “consistent” of ook “compatible” wordt door elkaar gebruikt in gerelateerde betekenissen\n(in vragen hieromtrent zal ook steeds de expliciete voorwaarde als wiskundige ongelijkheid vermeld staan)"
   },
   {
     "objectID": "slides/H4.html#spectraalstraal",
@@ -1001,6 +1008,13 @@
     "text": "Markovketens en stochastische matrices\nMisschien later?"
   },
   {
+    "objectID": "slides/H4.html#footnotes",
+    "href": "slides/H4.html#footnotes",
+    "title": "Hoofdstuk 4 - Normen en afstanden",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nHiervoor hebben we het volgende nodig: de productverzameling \\(X \\times Y\\) van twee metrische ruimten \\((X, d_X)\\) en \\((Y, d_Y)\\) is metrische ruimte, bevoorbeeld met metriek \\(d_{X,Y}((x,y), (x',y')) = d_X(x,x') + d_Y(y,y')\\)}↩︎\nExtremumstelling van Weierstrass: \\(\\sup\\) wordt \\(\\max\\) voor continue \\(f\\) begrensd interval \\([a,b]\\)↩︎"
+  },
+  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Vector and Function Spaces – Slides",
@@ -1008,11 +1022,18 @@
     "text": "Order By\n       Default\n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Title\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\nDate\n\n\nTitle\n\n\nAuthor\n\n\n\n\n\n\nSep 25, 2023\n\n\nHoofdstuk 1 - Elementaire wiskundige structuren\n\n\nJutho Haegeman\n\n\n\n\nSep 26, 2023\n\n\nHoofdstuk 2 - Lineaire afbeeldingen\n\n\nJutho Haegeman\n\n\n\n\nOct 10, 2023\n\n\nHoofdstuk 3 - Lineaire operatoren en eigenwaarden\n\n\nJutho Haegeman\n\n\n\n\nOct 17, 2023\n\n\nHoofdstuk 4 - Normen en afstanden\n\n\nJutho Haegeman\n\n\n\n\nOct 24, 2023\n\n\nHoofdstuk 5 - Inwendig product en orthogonaliteit\n\n\nJutho Haegeman\n\n\n\n\n\n\nNo matching items"
   },
   {
+    "objectID": "slides/H5.html",
+    "href": "slides/H5.html",
+    "title": "Hoofdstuk 5 - Inwendig product en orthogonaliteit",
+    "section": "",
+    "text": "$$ % Math operators % % \n% VECTORS\n% specifically for vectors in F^n \n% MATRICES\n% SCALARS \n% LINEAR MAPS\n% FIELDS \n% RELATIONS \n% % % % % % % % %\n%\n$$\n\n\nConcept van inwendig product:\n\ngeeft aanleiding tot lengte, oriëntatie, geometrie (bvb Pythogoras)\ngeeft ook aanleiding tot (antilinear) isomorfisme tussen vector ruimte en zijn duale\n\nConcept van orthogonaliteit: orthogonale projectie, orthogonale basis: enorm belangrijk voor zowel theorie als praktijk (numerieke algoritmen)"
+  },
+  {
     "objectID": "slides/H5.html#doel-van-dit-hoofdstuk",
     "href": "slides/H5.html#doel-van-dit-hoofdstuk",
     "title": "Hoofdstuk 5 - Inwendig product en orthogonaliteit",
-    "section": "Doel van dit hoofdstuk",
-    "text": "Doel van dit hoofdstuk\n\n$$ % Math operators % % \n% VECTORS\n% specifically for vectors in F^n \n% MATRICES\n% SCALARS \n% LINEAR MAPS\n% FIELDS \n% RELATIONS \n% % % % % % % % %\n%\n$$\n\n\nConcept van inwendig product:\n\ngeeft aanleiding tot lengte, oriëntatie, geometrie (bvb Pythogoras)\ngeeft ook aanleiding tot (antilinear) isomorfisme tussen vector ruimte en zijn duale\n\nConcept van orthogonaliteit: orthogonale projectie, orthogonale basis: enorm belangrijk voor zowel theorie als praktijk (numerieke algoritmen)"
+    "section": "",
+    "text": "$$ % Math operators % % \n% VECTORS\n% specifically for vectors in F^n \n% MATRICES\n% SCALARS \n% LINEAR MAPS\n% FIELDS \n% RELATIONS \n% % % % % % % % %\n%\n$$\n\n\nConcept van inwendig product:\n\ngeeft aanleiding tot lengte, oriëntatie, geometrie (bvb Pythogoras)\ngeeft ook aanleiding tot (antilinear) isomorfisme tussen vector ruimte en zijn duale\n\nConcept van orthogonaliteit: orthogonale projectie, orthogonale basis: enorm belangrijk voor zowel theorie als praktijk (numerieke algoritmen)"
   },
   {
     "objectID": "slides/H5.html#doel-van-dit-hoofdstuk-1",
@@ -1068,14 +1089,126 @@
     "href": "slides/H5.html#bilineaire-en-sesquilineaire-vormen",
     "title": "Hoofdstuk 5 - Inwendig product en orthogonaliteit",
     "section": "Bilineaire en sesquilineaire vormen",
-    "text": "Bilineaire en sesquilineaire vormen\nBijkomende begrippen:\n\nontaard: als een \\({v}\\in V\\) bestaat zodat \\(C({w},{v})=0\\) voor alle \\({w}\\in V\\) \\(\\Rightarrow \\mathop{\\mathrm{rank}}({\\mathsf{C}}) &lt; \\mathop{\\mathrm{dim}}(V)\\) of \\(\\det({\\mathsf{C}})=0\\)\npositief definiet of semidefiniet: \\(C({v},{v}) &gt; 0\\) of \\(C({v},{v}) \\geq 0\\) voor alle \\({v}\\neq {o}\\)\nindefiniet: \\(C({v},{v})\\) neemt positieve en negatieve waarden aan voor verschillende \\({v}\\)\n\\({\\mathsf{B}} = {\\mathsf{T}}^{\\mathsf{T}}\\tilde{{\\mathsf{B}}} {\\mathsf{T}}\\) of \\({\\mathsf{C}} = {\\mathsf{T}}^{\\mathsf{H}}\\tilde{{\\mathsf{C}}} {\\mathsf{T}}\\): matrix congruentie \\(\\rightarrow\\) equivalentierelatie\n\nbehoudt geen eigenwaarden, niet compatibel met matrixvermenigvuldiging, machten, functies, …\nbehoudt (anti)symmetrisch of (anti)hermitisch\nbehoudt eigenwaarden \\(0\\) en dus het ontaard zijn\nbehoudt positief definiet / semidefiniet , indefinieit, …\n\nstelling: als \\(C\\) positief semidefiniet is maar niet positief definiet, dan is \\(C\\) ontaard"
+    "text": "Bilineaire en sesquilineaire vormen\nBijkomende begrippen:\n\nontaard: als een \\({v}\\in V\\) bestaat zodat \\(C({w},{v})=0\\) voor alle \\({w}\\in V\\) \\(\\Rightarrow \\mathop{\\mathrm{rank}}({\\mathsf{C}}) &lt; \\mathop{\\mathrm{dim}}(V)\\) of \\(\\det({\\mathsf{C}})=0\\)\npositief definiet of semidefiniet: \\(C({v},{v}) &gt; 0\\) of \\(C({v},{v}) \\geq 0\\) voor alle \\({v}\\neq {o}\\)\nindefiniet: \\(C({v},{v})\\) neemt positieve en negatieve waarden aan voor verschillende \\({v}\\)\n\\({\\mathsf{B}} = {\\mathsf{T}}^{\\mathsf{T}}\\tilde{{\\mathsf{B}}} {\\mathsf{T}}\\) of \\({\\mathsf{C}} = {\\mathsf{T}}^{\\mathsf{H}}\\tilde{{\\mathsf{C}}} {\\mathsf{T}}\\): matrix congruentie \\(\\rightarrow\\) equivalentierelatie\n\nbehoudt geen eigenwaarden, niet compatibel met matrixvermenigvuldiging, machten, functies, …\nbehoudt (anti)symmetrisch of (anti)hermitisch\nbehoudt eigenwaarden \\(0\\) en dus het ontaard zijn\nbehoudt positief definiet / semidefiniet , indefiniet, …\n\nstelling: als \\(C\\) positief semidefiniet is maar niet positief definiet, dan is \\(C\\) ontaard"
   },
   {
     "objectID": "slides/H5.html#inwendig-product",
     "href": "slides/H5.html#inwendig-product",
     "title": "Hoofdstuk 5 - Inwendig product en orthogonaliteit",
     "section": "Inwendig product",
-    "text": "Inwendig product"
+    "text": "Inwendig product\nInwendig product op vectorruimte \\(V\\) = hermitische, positief definiete sesquilineaire vorm.\n\nnotatie: \\(V \\times V \\to {\\mathbb{F}}: ({v},{w}) \\mapsto {\\left\\langle{v},{w}\\right\\rangle}\\)\neigenschappen:\n\nlineair in tweede argument: \\({\\left\\langle{v},a_1 {w}_1 + a_2 {w}_2\\right\\rangle} = a_1 {\\left\\langle{v},{w}_1\\right\\rangle} + a_2 {\\left\\langle{v},{w}_2\\right\\rangle}\\)\nhermitisch: \\({\\left\\langle{v},{w}\\right\\rangle} = \\overline{{\\left\\langle{w},{v}\\right\\rangle}}\\)\n\\(\\Rightarrow {\\left\\langle a_1 {v}_1 + a_2{v}_2,{w}\\right\\rangle} = \\overline{a_1}{\\left\\langle{v}_1,{v}\\right\\rangle} + \\overline{a_2} {\\left\\langle{v}_2,{w}\\right\\rangle}\\)\npositief definiet: \\({v}\\neq {o}\\Rightarrow {\\left\\langle{v},{v}\\right\\rangle} &gt; 0\\)\n\nmatrixrepresentatie t.o.v. basis \\(B_V=\\{{e}_1,\\ldots,{e}_n\\}\\):\n\\({\\left\\langle{v},{w}\\right\\rangle} = \\overline{v^i} g_{ij} w^j\\) met \\(g_{ij} = {\\left\\langle{e}_i,{e}_j\\right\\rangle}\\) (metriek of Gram matrix)\nfysica (bvb relativiteit): metriek die indefiniet (maar niet-ontaard) is\n(= pseudo-inner product)\n\\(\\rightarrow\\) gaan we hier niet gebruiken"
+  },
+  {
+    "objectID": "slides/H5.html#cauchy-schwarz-ongelijkheid",
+    "href": "slides/H5.html#cauchy-schwarz-ongelijkheid",
+    "title": "Hoofdstuk 5 - Inwendig product en orthogonaliteit",
+    "section": "Cauchy-Schwarz ongelijkheid",
+    "text": "Cauchy-Schwarz ongelijkheid\n\nCauchy-Schwarz-Bunjakowski: \\({\\left\\lvert{\\left\\langle{v},{w}\\right\\rangle}\\right\\rvert}^2 \\leq {\\left\\langle{v},{v}\\right\\rangle}{\\left\\langle{w},{w}\\right\\rangle}\\)\n(bewijs aan bord)\ngevolg: \\({\\left\\lVert{v}\\right\\rVert} = \\sqrt{{\\left\\langle{v},{v}\\right\\rangle}}\\) is een valabele norm\n\\(\\Rightarrow\\) Cauchy-Schwarz ongelijkheid: \\({\\left\\lvert{\\left\\langle{v},{w}\\right\\rangle}\\right\\rvert} \\leq {\\left\\lVert{v}\\right\\rVert}{\\left\\lVert{w}\\right\\rVert}\\)\n\\(\\Rightarrow\\) als \\({\\mathbb{F}}={\\mathbb{R}}\\):\n\n\\(-1 \\leq \\frac{{\\left\\langle{v},{w}\\right\\rangle}}{{\\left\\lVert{v}\\right\\rVert}{\\left\\lVert{w}\\right\\rVert}} \\leq +1\\)\n\\({\\left\\langle{v},{w}\\right\\rangle} = {\\left\\lVert{v}\\right\\rVert}{\\left\\lVert{w}\\right\\rVert}\\cos(\\theta)\\) definieert \\(\\theta\\)\n\ninwendig product is continu t.o.v. de geassocieerde norm\n(bewijs aan bord)\nHilbertruimte: inwendig productruimte die metrisch compleet is"
+  },
+  {
+    "objectID": "slides/H5.html#inwendig-product-voorbeelden-eindig-dimensionaal",
+    "href": "slides/H5.html#inwendig-product-voorbeelden-eindig-dimensionaal",
+    "title": "Hoofdstuk 5 - Inwendig product en orthogonaliteit",
+    "section": "Inwendig product: voorbeelden (eindig-dimensionaal)",
+    "text": "Inwendig product: voorbeelden (eindig-dimensionaal)\n\n\\(V={\\mathbb{R}}^n\\): euclidisch inwendig product \\[{\\left\\langle\\boldsymbol{v},\\boldsymbol{w}\\right\\rangle}= \\boldsymbol{v}^{\\mathsf{T}}\\boldsymbol{w} = v^i \\delta_{ij} w^j = \\sum_{i=1}^n v^i w^i\\]\n\\(V={\\mathbb{C}}^n\\): natuurlijke veralgemening \\[{\\left\\langle\\boldsymbol{v},\\boldsymbol{w}\\right\\rangle}= \\boldsymbol{v}^{\\mathsf{H}}\\boldsymbol{w} = \\overline{v^i} \\delta_{ij} w^j = \\sum_{i=1}^n \\overline{v^i} w^i\\]\n\\(\\Rightarrow {\\left\\lVert{v}\\right\\rVert} = {\\left\\lVert{v}\\right\\rVert}_2 = \\sqrt{\\sum_{i=1}^n {\\left\\lvert v^i\\right\\rvert}^2}\\)\n\\(\\Rightarrow\\) Cauchy-Schwarz ongelijkheid = specifiek geval van Hölder (\\(p=q=2\\))\n\\(V = {\\mathbb{F}}^{m \\times n}\\): Frobenius inwendig product\n\\[{\\left\\langle{\\mathsf{A}},{\\mathsf{B}}\\right\\rangle}= \\mathop{\\mathrm{tr}}({\\mathsf{A}}^{\\mathsf{H}}{\\mathsf{B}}) = \\sum_{i=1}^m\\sum_{j=1}^m \\overline{A^i_{\\ j}} B^i_{\\ j}\\]"
+  },
+  {
+    "objectID": "slides/H5.html#inwendig-product-voorbeelden-oneindig-dimensionaal",
+    "href": "slides/H5.html#inwendig-product-voorbeelden-oneindig-dimensionaal",
+    "title": "Hoofdstuk 5 - Inwendig product en orthogonaliteit",
+    "section": "Inwendig product: voorbeelden (oneindig-dimensionaal)",
+    "text": "Inwendig product: voorbeelden (oneindig-dimensionaal)\n\n\\(V=\\ell^2({\\mathbb{N}}_0, {\\mathbb{F}})\\): rijen \\(\\boldsymbol{v} = (v^i \\in {\\mathbb{F}})_{i\\in {\\mathbb{N}}_0}\\) waarvoor \\(\\sum_{i=1}^{+\\infty} {\\left\\lvert v^i\\right\\rvert}^2 &lt; \\infty\\)\n\\[\\Rightarrow {\\left\\langle\\boldsymbol{v},\\boldsymbol{w}\\right\\rangle} = \\sum_{i=1}^{+\\infty} \\overline{v^i} w^i\\]\n(eindig, want \\({\\left\\lvert\\sum_{i=1}^{+\\infty} \\overline{v^i} w^i\\right\\rvert} \\leq \\sum_{i=1}^{+\\infty} {\\left\\lvert\\overline{v}^i w^i\\right\\rvert} \\leq \\frac{1}{2} \\sum_{i=1}^{+\\infty} \\left({\\left\\lvert v^i\\right\\rvert}^2 + {\\left\\lvert w^i\\right\\rvert}^2\\right)\\))\n\\(V = C^0([a,b],{\\mathbb{F}})\\): continue functies op \\([a,b]\\) \\[\\Rightarrow {\\left\\langle f,g\\right\\rangle} = \\int_a^b\\,\\overline{f(x)}g(x)\\,{\\mathrm{d}}x\\]\n\nniet metrisch compleet: Cauchy rijen t.o.v. \\({\\left\\lVert\\cdot \\right\\rVert}_2\\) die niet convergeren naar continue functies\n\n\\(V = L^2([a,b],{\\mathbb{F}})\\): kwadratisch integreerbare functies (zie H7)"
+  },
+  {
+    "objectID": "slides/H5.html#inwendig-product-bijkomende-eigenschappen",
+    "href": "slides/H5.html#inwendig-product-bijkomende-eigenschappen",
+    "title": "Hoofdstuk 5 - Inwendig product en orthogonaliteit",
+    "section": "Inwendig product: bijkomende eigenschappen",
+    "text": "Inwendig product: bijkomende eigenschappen\n\nParallellogram wet: voor de norm \\({\\left\\lVert{v}\\right\\rVert} = \\sqrt{{\\left\\langle{v},{v}\\right\\rangle}}\\) geassocieerd aan een inwendig product geldt\n\\[{\\left\\lVert{v}+ {w}\\right\\rVert}^2 + {\\left\\lVert{v}- {w}\\right\\rVert}^2 = 2({\\left\\lVert{v}\\right\\rVert}^2 + {\\left\\lVert{w}\\right\\rVert}^2)\\]\n(bewijs volgt uit rechtstreeks invullen van definitie)\nGegeven een genormeerde vectorruimte \\((V,{\\left\\lVert\\cdot\\right\\rVert})\\) waarbij de norm voldoet aan de parallellogramwet. Dan kan uit die norm een inwendig product worden gedefinieerd via de zogenaamde polarisatie-identiteit:\n\\[\\begin{align}\n  {\\left\\langle{v},{w}\\right\\rangle} = \\begin{cases}\n\\frac{1}{4}{\\left\\lVert{v}+ {w}\\right\\rVert}^2 - \\frac{1}{4}{\\left\\lVert{v}- {w}\\right\\rVert}^2,&\\text{$V$ real}\\\\\n\\frac{1}{4}{\\left\\lVert{v}+ {w}\\right\\rVert}^2 - \\frac{1}{4}{\\left\\lVert{v}- {w}\\right\\rVert}^2 + \\frac{{\\mathrm{i}}}{4}{\\left\\lVert{v}- {\\mathrm{i}}{w}\\right\\rVert}^2 - \\frac{{\\mathrm{i}}}{4}{\\left\\lVert{v}+ {\\mathrm{i}}{w}\\right\\rVert}^2,&\\text{$V$ complex}\n\\end{cases}\\label{eq:inner:polarisation}\n\\end{align}\\]\n(bewijs niet actief te kennen)"
+  },
+  {
+    "objectID": "slides/H5.html#orthogonaliteit",
+    "href": "slides/H5.html#orthogonaliteit",
+    "title": "Hoofdstuk 5 - Inwendig product en orthogonaliteit",
+    "section": "Orthogonaliteit",
+    "text": "Orthogonaliteit\nGegeven een inwendig productruimte \\((V,{\\left\\langle\\ ,\\ \\right\\rangle})\\)\n\northogonaliteit: \\({v}\\perp {w}\\iff {\\left\\langle{v},{w}\\right\\rangle}=0\\)\nuitbreiding voor \\(A,B \\subseteq V\\): \\(A \\perp B \\iff {\\left\\langle{v},{w}\\right\\rangle}=0, \\forall {v}\\in A, {w}\\in B\\)\ngenormaliseerde vector \\({v}\\iff {\\left\\lVert{v}\\right\\rVert} = 1\\)\nelke vector \\({v}\\neq {o}\\) is proportioneel met eenheidsvector \\({u}= {v}/ {\\left\\lVert{v}\\right\\rVert}\\)\northogonale verzameling: \\(\\{{v}_i; i \\in I\\} \\iff {v}_i \\perp {v}_j, \\forall i\\neq j\\)\northonormale familie / systeem: \\(\\{{v}_i; i \\in I\\}\\) met \\({\\left\\langle{v}_i,{v}_j\\right\\rangle} = \\delta_{i,j}\\)\northonormale rij: \\(\\{{v}_n; n \\in {\\mathbb{N}}\\}\\) met \\({\\left\\langle{v}_n,{v}_m\\right\\rangle} = \\delta_{n,m}\\)\neigenschappen:\n\northogonale verzameling is lineair onafhankelijk\nals \\(\\mathop{\\mathrm{dim}}(V)=n\\) eindig: ten hoogste \\(n\\) orthogonale vectoren\nPythagoras: orthogonale verzameling \\(\\{{v}_i; i=1,\\ldots,n\\}\\) \\[{\\left\\lVert\\sum_{i=1}^n {v}_i\\right\\rVert}^2 = \\sum_{i=1}^n {\\left\\lVert{v}_i\\right\\rVert}^2\\]"
+  },
+  {
+    "objectID": "slides/H5.html#orthogonaal-complement",
+    "href": "slides/H5.html#orthogonaal-complement",
+    "title": "Hoofdstuk 5 - Inwendig product en orthogonaliteit",
+    "section": "Orthogonaal complement",
+    "text": "Orthogonaal complement\n\nverzameling \\(S \\subseteq V\\):\n\\[S^\\perp = \\{{v}\\in V | {\\left\\langle{w},{v}\\right\\rangle} = 0\\ \\text{voor alle}\\ {w}\\in S\\}\\]\neigenschappen:\n\n\\(S^\\perp\\) is gesloten deelruimte (bewijs aan bord)\n\\(S^\\perp = ({\\mathbb{F}}S)^\\perp = (\\overline{{\\mathbb{F}}S})^\\perp\\)\n\\(S \\cap S^\\perp = \\{{o}\\}\\) of \\(\\{\\}\\) (afhankelijk van \\({o}\\in S\\))"
+  },
+  {
+    "objectID": "slides/H5.html#orthogonale-projectie",
+    "href": "slides/H5.html#orthogonale-projectie",
+    "title": "Hoofdstuk 5 - Inwendig product en orthogonaliteit",
+    "section": "Orthogonale projectie",
+    "text": "Orthogonale projectie\nGegeven een gesloten (!) deelruimte \\(W {\\preccurlyeq}V\\)\n\nstelling: orthogonale projectie van een vector \\({v}\\in V\\) is de vector \\({w}\\in W\\) die voldoet aan\n\n\\({\\left\\lVert{v}-{w}\\right\\rVert} = \\inf_{{w}' \\in W}{\\left\\lVert{v}-{w}'\\right\\rVert}\\)\nof: \\({v}- {w}\\in W^\\perp\\)\n\nbeide karakterisaties zijn equivalent en leiden tot een unieke oplossing (bewijs aan bord)\nGevolg: orthogonale directe som decompositie \\(V = W \\oplus W^\\perp\\)"
+  },
+  {
+    "objectID": "slides/H5.html#orthogonale-projector",
+    "href": "slides/H5.html#orthogonale-projector",
+    "title": "Hoofdstuk 5 - Inwendig product en orthogonaliteit",
+    "section": "Orthogonale projector",
+    "text": "Orthogonale projector\n\northogonale projector \\({\\hat{P}}\\in\\mathop{\\mathrm{End}}(V)\\):\n\\({\\hat{P}}^2 = {\\hat{P}}\\) en \\({\\left\\langle{\\hat{P}}{v},{w}\\right\\rangle} = {\\left\\langle{v},{\\hat{P}}{w}\\right\\rangle}, \\forall {v},{w}\\in V\\)\n\\(\\Rightarrow\\) operator norm \\({\\left\\lVert{\\hat{P}}\\right\\rVert} = 1\\) (bewijs aan bord)\nstelling:\n\nde projector \\({\\hat{P}}_W\\) op gesloten deelruimte \\(W\\) langsheen \\(W^\\perp\\) is een orthogonale projector\nelke orthogonale projector leidt tot een orthogonale directe som decompositie: \\(\\mathop{\\mathrm{ker}}({\\hat{P}}) = \\mathop{\\mathrm{im}}({\\hat{P}})^\\perp\\) en beide zijn gesloten deelruimten van \\(V\\)\n\n(bewijs aan bord)"
+  },
+  {
+    "objectID": "slides/H5.html#orthogonaal-complement-en-directe-som",
+    "href": "slides/H5.html#orthogonaal-complement-en-directe-som",
+    "title": "Hoofdstuk 5 - Inwendig product en orthogonaliteit",
+    "section": "Orthogonaal complement en directe som",
+    "text": "Orthogonaal complement en directe som\nBijkomende eigenschappen van orthogonaal complement en orthogonale directe som:\n\nvoor elke deelverzameling \\(S\\): \\(V = S^\\perp \\oplus S^{\\perp\\perp}\\)\n(aangezien \\(S^\\perp\\) gesloten deelruimte is)\nvoor elke gesloten deelruimte \\(W\\): \\(W^{\\perp\\perp} = W\\)\n(aangezien orthogonaal complement van \\(W^\\perp\\) uniek is)\nvoor elke deelverzameling \\(S\\): \\(S^{\\perp\\perp} = \\overline{{\\mathbb{F}}S}\\)\n(aangezien \\(S^\\perp = (\\overline{{\\mathbb{F}}S})^\\perp\\) en voorgaande)\nvoor elke complete set \\(S\\): \\(S^\\perp = \\{0\\}\\)\n(aangezien \\(S^\\perp = (\\overline{{\\mathbb{F}}S})^\\perp = V^\\perp\\))"
+  },
+  {
+    "objectID": "slides/H5.html#orthonormale-basis",
+    "href": "slides/H5.html#orthonormale-basis",
+    "title": "Hoofdstuk 5 - Inwendig product en orthogonaliteit",
+    "section": "Orthonormale basis",
+    "text": "Orthonormale basis\n\n\\(\\mathop{\\mathrm{dim}}(V)=n\\) eindig: elke verzameling van \\(n\\) orthogonale vectoren zijn lineair onafhankelijk en vormen basis\northogonale basis maken uit gegeven basis: zie straks\n\\(V\\) oneindig-dimensionale Hilbertruimte (metrisch compleet): elke complete rij van orthogonale vectoren vormt een (Schauder) basis\n\\(\\rightarrow\\) bewijs in stappen op volgende slides"
+  },
+  {
+    "objectID": "slides/H5.html#orthonormale-basis-1",
+    "href": "slides/H5.html#orthonormale-basis-1",
+    "title": "Hoofdstuk 5 - Inwendig product en orthogonaliteit",
+    "section": "Orthonormale basis",
+    "text": "Orthonormale basis\nBeschouw rij \\(({e}_n, n \\in {\\mathbb{N}}_0)\\) van orthonormale vectoren:\n\nOrthogonale projector op deelruimte \\(W_n = {\\mathbb{F}}\\{{e}_i,i=1,\\ldots,n\\}\\) wordt gedefinieerd door \\({\\hat{P}}_n {v}= \\sum_{i=1}^n {e}_i {\\left\\langle{e}_i,{v}\\right\\rangle}\\)\n(bewijs aan bord)\nalternatief bewijs: toon aan dat voor alle \\({v},{w}\\in V\\) geldt\n\n\\({\\hat{P}}_n {v}\\in W_n\\)\n\\({\\hat{P}}_n {v}= {\\hat{P}}_n^2 {v}\\)\n\\({\\left\\langle{v},{\\hat{P}}_n{w}\\right\\rangle} = {\\left\\langle{\\hat{P}}_n{v},{w}\\right\\rangle}\\)\n\n\\(\\rightarrow\\) karakteriseert uniek orthogonale projector op \\(W_n\\)"
+  },
+  {
+    "objectID": "slides/H5.html#orthonormale-basis-2",
+    "href": "slides/H5.html#orthonormale-basis-2",
+    "title": "Hoofdstuk 5 - Inwendig product en orthogonaliteit",
+    "section": "Orthonormale basis",
+    "text": "Orthonormale basis\n\nBessel’s ongelijkheid: \\(\\sum_{i=1}^n {\\left\\lvert{\\left\\langle{e}_i,{v}\\right\\rangle}\\right\\rvert}^2 \\leq {\\left\\lVert{v}\\right\\rVert}^2\\)\n(bewijs volgt onmiddellijk uit voorgaand bewijs)\n\\(\\Rightarrow\\) de rij \\((\\sum_{i=1}^n{\\left\\lvert{\\left\\langle{e}_i,{v}\\right\\rangle}\\right\\rvert}^2)_{n \\in {\\mathbb{N}}_0}\\) is een monotoon stijgende rij met een bovengrens, en convergeert dus naar een eindige limiet \\(\\leq {\\left\\lVert{v}\\right\\rVert}^2\\)\nexpansiestelling: compleet orthonormale rij vormt Schauder basis en elke vector \\({v}\\in V\\) kan worden geëxpandeerd als de convergente reeks \\[{v}= \\sum_{i=1}^{+\\infty} {e}_i {\\left\\langle{e}_i,{v}\\right\\rangle}\\]"
+  },
+  {
+    "objectID": "slides/H5.html#expansiestelling-gevolgen",
+    "href": "slides/H5.html#expansiestelling-gevolgen",
+    "title": "Hoofdstuk 5 - Inwendig product en orthogonaliteit",
+    "section": "Expansiestelling: gevolgen",
+    "text": "Expansiestelling: gevolgen\n\nexpansiecoefficiënten: \\(({\\left\\langle{e}_i,{v}\\right\\rangle})_{i\\in {\\mathbb{N}}_0}\\)\nook wel: veralgemeende Fourier-coefficiënten (zie volgende slide)\nBessel’s ongelijkheid \\(\\rightarrow\\) Plancherel’s identiteit\n\\[{\\left\\lVert{v}\\right\\rVert}^2 = \\sum_{i=1}^{+\\infty} {\\left\\lvert{\\left\\langle{e}_i,{v}\\right\\rangle}\\right\\rvert}^2\\]\nmeer algemeen: Parseval’s identiteit\n\\[{\\left\\langle{v},{w}\\right\\rangle} = \\sum_{i=1}^{+\\infty} {\\left\\langle{v},{e}_i\\right\\rangle}{\\left\\langle{e}_i,{w}\\right\\rangle}\\]\nde lineaire afbeelding \\({v}\\mapsto \\sum_{i=1}^{+\\infty} {e}_i {\\left\\langle{e}_i,{v}\\right\\rangle}\\) gedraagt zich als \\(\\mathop{\\mathrm{id}}_V\\):\nresolutie van de identiteit\nuit dit alles:\nrelatie \\({v}\\leftrightarrow ({\\left\\langle{e}_i,{v}\\right\\rangle})_{i\\in {\\mathbb{N}}_0}\\) is een Hilbertruimte-isomorfisme tussen \\(V\\) en \\(\\ell^2({\\mathbb{N}}_0; {\\mathbb{F}})\\)"
+  },
+  {
+    "objectID": "slides/H5.html#expansiestelling-voorbeeld",
+    "href": "slides/H5.html#expansiestelling-voorbeeld",
+    "title": "Hoofdstuk 5 - Inwendig product en orthogonaliteit",
+    "section": "Expansiestelling: voorbeeld",
+    "text": "Expansiestelling: voorbeeld\n\n\\(V = L^2([0,L], {\\mathbb{C}})\\): rij \\((f_k)_{k\\in {\\mathbb{Z}}}\\) met\n\\[f_k(x) = \\frac{1}{\\sqrt{L}}\\exp\\left(+{\\mathrm{i}}\\frac{2\\pi}{L} k x\\right)\\]\nis orthonormaal (controleer!) en compleet (geen bewijs).\nBasisexpansie is de Fourierreeks:\n\\[f(x) = \\frac{1}{\\sqrt{L}}\\sum_{k=-\\infty}^{+\\infty} F^k \\exp\\left(+{\\mathrm{i}}\\frac{2\\pi}{L} k x\\right)\\]\nmet de (dubbelzijdige) rij Fouriercoëfficiënten \\((F_k)_{k \\in{\\mathbb{Z}}} \\in \\ell^2({\\mathbb{Z}},{\\mathbb{C}})\\), gegeven door\n\\[F^k = {\\left\\langle f_k,f\\right\\rangle} = \\frac{1}{\\sqrt{L}} \\int_{0}^{L} f(x) \\exp\\left(-{\\mathrm{i}}\\frac{2\\pi}{L} k x\\right)\\,{\\mathrm{d}}x\\]\nzie hoofdstuk 7 voor meer details"
+  },
+  {
+    "objectID": "slides/H5.html#gram-schmidt",
+    "href": "slides/H5.html#gram-schmidt",
+    "title": "Hoofdstuk 5 - Inwendig product en orthogonaliteit",
+    "section": "Gram-Schmidt",
+    "text": "Gram-Schmidt\nlineair onafhankelijke vectoren: \\(S=\\{{v}_1,{v}_2,\\ldots\\}\\)\n\\(\\rightarrow\\) orthonormale rij \\((q_1,q_2,\\ldots)\\) die zelfde (deel)ruimte opspant\n\\(\\rightarrow\\) meer specifiek: \\({\\mathbb{F}}\\{{v}_i, i=1,\\ldots,n\\} = {\\mathbb{F}}\\{q_i; i=1,\\ldots,n\\}\\) voor alle \\(n\\)\nGram-Schmidt proces / algoritme:\n\\[\\begin{align*}\n    {w}_1 &= {v}_1& {q}_1 = {w}_1/{\\left\\lVert{w}_1\\right\\rVert}\\\\\n    {w}_2 &= {v}_2 - {\\left\\langle{q}_1,{v}_2\\right\\rangle} {q}_1 & {q}_2 = {w}_2 / {\\left\\lVert{w}_2\\right\\rVert}\\\\\n    &\\ldots\\\\\n    {w}_k &= {v}_k - \\sum_{j=1}^{k-1}{\\left\\langle{q}_j,{v}_k\\right\\rangle} {q}_j & {q}_k = {w}_k / {\\left\\lVert{w}_k\\right\\rVert}\\\\\n    &\\ldots\n\\end{align*}\\] \\(\\Rightarrow {v}_k = \\sum_{j=1}^{k} R^{j}_{\\ k} {q}_{j}\\) met \\(R^j_{\\ k} = {\\left\\langle q_j,{v}_k\\right\\rangle}\\) en \\(R^k_{\\ k} = {\\left\\lVert{v}_k - \\sum_{j=1}^{k-1}{v}_j\\right\\rVert}^2\\)\nOpmerking: \\({w}_n\\) kan enkel nul worden als \\({v}_n\\) lineair afhankelijk is van \\(\\{{v}_1,\\ldots,{v}_{n-1}\\}\\)"
+  },
+  {
+    "objectID": "slides/H5.html#gram-schmidt-en-qr-decompositie",
+    "href": "slides/H5.html#gram-schmidt-en-qr-decompositie",
+    "title": "Hoofdstuk 5 - Inwendig product en orthogonaliteit",
+    "section": "Gram-Schmidt en QR decompositie",
+    "text": "Gram-Schmidt en QR decompositie\nMatrixversie: \\({\\mathbb{F}}^n\\) met Euclidisch inwendig product\n\n\\(m\\) lineair onafhankelijke vectoren: \\({\\mathsf{V}} = \\begin{bmatrix} \\boldsymbol{v}_1 | \\boldsymbol{v}_2 | \\dots | \\boldsymbol{v}_m \\end{bmatrix} \\in {\\mathbb{F}}^{n \\times m}\\)\nGram-Schmidt leidt tot \\({\\mathsf{V}} = {\\mathsf{Q}} {\\mathsf{R}}\\) met\n\nbovendriekhoeksmatrix \\({\\mathsf{R}}\\)\n\\({\\mathsf{Q}} = \\begin{bmatrix} \\boldsymbol{q}_1 | \\boldsymbol{q}_2 | \\dots | \\boldsymbol{q}_m \\end{bmatrix}\\)\n\\(\\Rightarrow {\\left\\langle\\boldsymbol{q}_i,\\boldsymbol{q}_j\\right\\rangle} = \\boldsymbol{q}_i^{\\mathsf{H}}\\boldsymbol{q}_j = \\delta_{i,j} \\Rightarrow {\\mathsf{Q}}^{\\mathsf{H}}{\\mathsf{Q}} = {\\mathsf{I}}_m\\)\n\nQR-decompositie van een matrix\nnumeriek: keuze algoritme van belang voor stabiliteit\n(classical vs modified Gram-Schmidt, Householder)"
   },
   {
     "objectID": "slides/H2.html",

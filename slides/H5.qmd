@@ -2,10 +2,10 @@
 title: "Hoofdstuk 5 - Inwendig product en orthogonaliteit"
 author: "Jutho Haegeman"
 date: "10/24/2023"
-format:
-  revealjs:
-    theme: solarized
-    chalkboard: true
+# format:
+#   revealjs:
+#     theme: solarized
+#     chalkboard: true
 ---
 
 ## Doel van dit hoofdstuk
@@ -265,10 +265,297 @@ Bijkomende begrippen:
   * behoudt geen eigenwaarden, niet compatibel met matrixvermenigvuldiging, machten, functies, …
   * behoudt (anti)symmetrisch of (anti)hermitisch
   * behoudt eigenwaarden $0$ en dus het ontaard zijn
-  * behoudt positief definiet / semidefiniet , indefinieit, …
+  * behoudt positief definiet / semidefiniet , indefiniet, …
 
 * stelling: als $C$ positief semidefiniet is maar niet positief definiet, dan is $C$ ontaard
 
 # Inwendig productruimten
 
-## Inwendig product
+## Inwendig product {.smaller}
+
+Inwendig product op vectorruimte $V$ = hermitische, positief definiete sesquilineaire vorm.
+
+* notatie: $V \times V \to \bbF: (\vv,\vw) \mapsto \inner{\vv}{\vw}$
+* eigenschappen:
+  * lineair in tweede argument: $\inner{\vv}{a_1 \vw_1 + a_2 \vw_2} = a_1 \inner{\vv}{\vw_1} + a_2 \inner{\vv}{\vw_2}$
+  * hermitisch: $\inner{\vv}{\vw} = \overline{\inner{\vw}{\vv}}$
+  
+    $\Rightarrow \inner{a_1 \vv_1 + a_2\vv_2}{\vw} = \overline{a_1}\inner{\vv_1}{\vv} + \overline{a_2} \inner{\vv_2}{\vw}$
+  * positief definiet: $\vv \neq \zerovec \Rightarrow \inner{\vv}{\vv} > 0$
+
+* matrixrepresentatie t.o.v. basis $B_V=\{\ve_1,\ldots,\ve_n\}$:
+  
+  $\inner{\vv}{\vw} = \overline{v^i} g_{ij} w^j$ met $g_{ij} = \inner{\ve_i}{\ve_j}$ (**metriek** of **Gram matrix**)
+
+* fysica (bvb relativiteit): metriek die indefiniet (maar niet-ontaard) is 
+
+  (= pseudo-inner product)
+
+  $\rightarrow$ gaan we hier niet gebruiken
+
+## Cauchy-Schwarz ongelijkheid
+
+* Cauchy-Schwarz-Bunjakowski: $\abs{\inner{\vv}{\vw}}^2 \leq \inner{\vv}{\vv}\inner{\vw}{\vw}$
+  
+  (bewijs aan bord)
+
+* gevolg: $\norm{\vv} = \sqrt{\inner{\vv}{\vv}}$ is een valabele norm
+
+  $\Rightarrow$ Cauchy-Schwarz ongelijkheid: $\abs{\inner{\vv}{\vw}} \leq \norm{\vv}\norm{\vw}$
+  
+  $\Rightarrow$ als $\bbF=\bbR$:
+  * $-1 \leq \frac{\inner{\vv}{\vw}}{\norm{\vv}\norm{\vw}} \leq +1$
+  * $\inner{\vv}{\vw} = \norm{\vv}\norm{\vw}\cos(\theta)$ definieert $\theta$
+
+* inwendig product is continu t.o.v. de geassocieerde norm
+
+  (bewijs aan bord)
+* **Hilbertruimte**: inwendig productruimte die metrisch compleet is
+
+## Inwendig product: voorbeelden (eindig-dimensionaal) {.smaller}
+
+* $V=\bbR^n$: euclidisch inwendig product
+  $$\inner{\vec{v}}{\vec{w}}= \vec{v}^\transpose \vec{w} = v^i \delta_{ij} w^j = \sum_{i=1}^n v^i w^i$$
+
+* $V=\bbC^n$: natuurlijke veralgemening
+  $$\inner{\vec{v}}{\vec{w}}= \vec{v}^\hermitian \vec{w} = \overline{v^i} \delta_{ij} w^j = \sum_{i=1}^n \overline{v^i} w^i$$
+
+  $\Rightarrow \norm{\vv} = \norm{\vv}_2 = \sqrt{\sum_{i=1}^n \abs{v^i}^2}$
+
+  $\Rightarrow$ Cauchy-Schwarz ongelijkheid = specifiek geval van Hölder ($p=q=2$)
+
+* $V = \bbF^{m \times n}$: Frobenius inwendig product
+
+  $$\inner{\mat{A}}{\mat{B}}= \tr(\mat{A}^\hermitian \mat{B}) = \sum_{i=1}^m\sum_{j=1}^m \overline{A^i_{\ j}} B^i_{\ j}$$
+
+## Inwendig product: voorbeelden (oneindig-dimensionaal) {.smaller}
+
+* $V=\ell^2(\bbN_0, \bbF)$: rijen $\vec{v} = (v^i \in \bbF)_{i\in \bbN_0}$ waarvoor $\sum_{i=1}^{+\infty} \abs{v^i}^2 < \infty$
+
+  $$\Rightarrow \inner{\vec{v}}{\vec{w}} = \sum_{i=1}^{+\infty} \overline{v^i} w^i$$
+
+  (eindig, want $\abs{\sum_{i=1}^{+\infty} \overline{v^i} w^i} \leq \sum_{i=1}^{+\infty} \abs{\overline{v}^i w^i} \leq \frac{1}{2} \sum_{i=1}^{+\infty} \left(\abs{v^i}^2 + \abs{w^i}^2\right)$)
+
+* $V = C^0([a,b],\bbF)$: continue functies op $[a,b]$
+  $$\Rightarrow \inner{f}{g} = \int_a^b\,\overline{f(x)}g(x)\,\drm x$$
+
+  * niet metrisch compleet: Cauchy rijen t.o.v. $\norm{\cdot }_2$ die niet convergeren naar continue functies
+
+* $V = L^2([a,b],\bbF)$: kwadratisch integreerbare functies (zie H7)
+
+## Inwendig product: bijkomende eigenschappen {.smaller}
+
+* Parallellogram wet: voor de norm $\norm{\vv} = \sqrt{\inner{\vv}{\vv}}$ geassocieerd aan een inwendig product geldt
+
+  $$\norm{\vv + \vw}^2 + \norm{\vv - \vw}^2 = 2(\norm{\vv}^2 + \norm{\vw}^2)$$
+
+  (bewijs volgt uit rechtstreeks invullen van definitie)
+
+* Gegeven een genormeerde vectorruimte $(V,\norm{\cdot})$ waarbij de norm voldoet aan de parallellogramwet. Dan kan uit die norm een inwendig product worden gedefinieerd via de zogenaamde **polarisatie-identiteit**:
+
+
+  \begin{align}
+	\inner{\vv}{\vw} = \begin{cases}
+  \frac{1}{4}\norm{\vv + \vw}^2 - \frac{1}{4}\norm{\vv - \vw}^2,&\text{$V$ real}\\
+  \frac{1}{4}\norm{\vv + \vw}^2 - \frac{1}{4}\norm{\vv - \vw}^2 + \frac{\irm}{4}\norm{\vv - \irm \vw}^2 - \frac{\irm}{4}\norm{\vv + \irm \vw}^2,&\text{$V$ complex}
+  \end{cases}\label{eq:inner:polarisation}
+  \end{align}
+
+  (bewijs niet actief te kennen)
+
+# Orthogonaliteit en unitariteit
+
+## Orthogonaliteit {.smaller}
+
+Gegeven een inwendig productruimte $(V,\inner{\ }{\ })$
+
+* orthogonaliteit: $\vv \perp \vw \iff \inner{\vv}{\vw}=0$
+
+  uitbreiding voor $A,B \subseteq V$: $A \perp B \iff \inner{\vv}{\vw}=0, \forall \vv \in A, \vw \in B$
+
+* genormaliseerde vector $\vv \iff \norm{\vv} = 1$
+  
+  elke vector $\vv \neq \zerovec$ is proportioneel met eenheidsvector $\vu = \vv / \norm{\vv}$
+
+* orthogonale verzameling: $\{\vv_i; i \in I\} \iff \vv_i \perp \vv_j, \forall i\neq j$
+
+* orthonormale familie / systeem: $\{\vv_i; i \in I\}$ met $\inner{\vv_i}{\vv_j} = \delta_{i,j}$
+
+  orthonormale rij: $\{\vv_n; n \in \bbN\}$ met $\inner{\vv_n}{\vv_m} = \delta_{n,m}$
+
+* eigenschappen:
+  * orthogonale verzameling is lineair onafhankelijk
+  * als $\dim(V)=n$ eindig: ten hoogste $n$ orthogonale vectoren
+  * Pythagoras: orthogonale verzameling $\{\vv_i; i=1,\ldots,n\}$
+    $$\norm{\sum_{i=1}^n \vv_i}^2 = \sum_{i=1}^n \norm{\vv_i}^2$$
+
+## Orthogonaal complement
+
+* verzameling $S \subseteq V$:
+
+  $$S^\perp = \{\vv \in V | \inner{\vw}{\vv} = 0\ \text{voor alle}\ \vw \in S\}$$
+
+  eigenschappen:
+  * $S^\perp$ is gesloten deelruimte (bewijs aan bord)
+  * $S^\perp = (\bbF S)^\perp = (\overline{\bbF S})^\perp$
+  * $S \cap S^\perp = \{\zerovec\}$ of $\{\}$ (afhankelijk van $\zerovec \in S$)
+
+## Orthogonale projectie
+
+Gegeven een **gesloten (!)** deelruimte $W \subspace V$
+
+* stelling: orthogonale projectie van een vector $\vv \in V$ is de vector $\vw \in W$ die voldoet aan
+  * $\norm{\vv-\vw} = \inf_{\vw' \in W}\norm{\vv-\vw'}$
+  * of: $\vv - \vw \in W^\perp$
+
+  beide karakterisaties zijn equivalent en leiden tot een unieke oplossing (bewijs aan bord)
+
+* Gevolg: **orthogonale directe som decompositie**
+  $V = W \oplus W^\perp$
+
+## Orthogonale projector
+
+* **orthogonale projector** $\map{P}\in\End(V)$:
+
+	$\map{P}^2 = \map{P}$ en $\inner{\map{P}\vv}{\vw} = \inner{\vv}{\map{P}\vw}, \forall \vv,\vw \in V$
+
+  $\Rightarrow$ operator norm $\norm{\map{P}} = 1$ (bewijs aan bord)
+
+* stelling:
+  * de projector $\map{P}_W$ op gesloten deelruimte $W$ langsheen $W^\perp$ is een orthogonale projector
+  * elke orthogonale projector leidt tot een orthogonale directe som decompositie: $\ker(\map{P}) = \im(\map{P})^\perp$ en beide zijn gesloten deelruimten van $V$
+
+  (bewijs aan bord)
+
+## Orthogonaal complement en directe som
+
+Bijkomende eigenschappen van orthogonaal complement en orthogonale directe som:
+
+* voor elke deelverzameling $S$: $V = S^\perp \oplus S^{\perp\perp}$
+
+  (aangezien $S^\perp$ gesloten deelruimte is)
+* voor elke gesloten deelruimte $W$: $W^{\perp\perp} = W$
+
+  (aangezien orthogonaal complement van $W^\perp$ uniek is)
+* voor elke deelverzameling $S$: $S^{\perp\perp} = \overline{\bbF S}$
+
+  (aangezien $S^\perp = (\overline{\bbF S})^\perp$ en voorgaande)
+
+* voor elke complete set $S$: $S^\perp = \{0\}$
+
+  (aangezien $S^\perp = (\overline{\bbF S})^\perp = V^\perp$)
+
+## Orthonormale basis
+
+* $\dim(V)=n$ eindig: elke verzameling van $n$ orthogonale vectoren zijn lineair onafhankelijk en vormen basis
+
+  orthogonale basis maken uit gegeven basis: zie straks
+
+* $V$ oneindig-dimensionale Hilbertruimte (metrisch compleet): elke complete rij van orthogonale vectoren vormt een (Schauder) basis
+
+  $\rightarrow$ bewijs in stappen op volgende slides
+
+## Orthonormale basis
+
+Beschouw rij $(\ve_n, n \in \bbN_0)$ van orthonormale vectoren:
+
+* Orthogonale projector op deelruimte $W_n = \bbF\{\ve_i,i=1,\ldots,n\}$ wordt gedefinieerd door $\map{P}_n \vv = \sum_{i=1}^n \ve_i \inner{\ve_i}{\vv}$
+
+  (bewijs aan bord)
+
+  alternatief bewijs: toon aan dat voor alle $\vv,\vw \in V$ geldt
+  * $\map{P}_n \vv \in W_n$
+  * $\map{P}_n \vv = \map{P}_n^2 \vv$
+  * $\inner{\vv}{\map{P}_n\vw} = \inner{\map{P}_n\vv}{\vw}$
+
+  $\rightarrow$ karakteriseert uniek orthogonale projector op $W_n$
+
+## Orthonormale basis
+
+* Bessel's ongelijkheid: $\sum_{i=1}^n \abs{\inner{\ve_i}{\vv}}^2 \leq \norm{\vv}^2$
+
+  (bewijs volgt onmiddellijk uit voorgaand bewijs)
+
+  $\Rightarrow$ de rij $(\sum_{i=1}^n\abs{\inner{\ve_i}{\vv}}^2)_{n \in \bbN_0}$ is een monotoon stijgende rij met een bovengrens, en convergeert dus naar een eindige limiet $\leq \norm{\vv}^2$
+
+* **expansiestelling**: compleet orthonormale rij vormt Schauder basis en elke vector $\vv \in V$ kan worden geëxpandeerd als de convergente reeks
+  $$\vv = \sum_{i=1}^{+\infty} \ve_i \inner{\ve_i}{\vv}$$
+
+## Expansiestelling: gevolgen {.smaller}
+
+* expansiecoefficiënten: $(\inner{\ve_i}{\vv})_{i\in \bbN_0}$
+
+  ook wel: *veralgemeende Fourier-coefficiënten* (zie volgende slide)
+
+* Bessel's ongelijkheid $\rightarrow$ **Plancherel's identiteit**
+
+  $$\norm{\vv}^2 = \sum_{i=1}^{+\infty} \abs{\inner{\ve_i}{\vv}}^2$$
+
+* meer algemeen: **Parseval's identiteit**
+
+  $$\inner{\vv}{\vw} = \sum_{i=1}^{+\infty} \inner{\vv}{\ve_i}\inner{\ve_i}{\vw}$$
+
+* de lineaire afbeelding $\vv \mapsto \sum_{i=1}^{+\infty} \ve_i \inner{\ve_i}{\vv}$ gedraagt zich als $\id_V$:
+
+  **resolutie van de identiteit**
+
+* uit dit alles:
+
+  relatie $\vv\leftrightarrow (\inner{\ve_i}{\vv})_{i\in \bbN_0}$ is een Hilbertruimte-isomorfisme tussen $V$ en $\ell^2(\bbN_0; \bbF)$
+
+## Expansiestelling: voorbeeld {.smaller}
+
+* $V = L^2([0,L], \bbC)$: rij $(f_k)_{k\in \bbZ}$ met
+
+  $$f_k(x) = \frac{1}{\sqrt{L}}\exp\left(+\irm \frac{2\pi}{L} k x\right)$$
+
+  is orthonormaal (controleer!) en compleet (geen bewijs). 
+  
+* Basisexpansie is de Fourierreeks: 
+
+  $$f(x) = \frac{1}{\sqrt{L}}\sum_{k=-\infty}^{+\infty} F^k \exp\left(+\irm \frac{2\pi}{L} k x\right)$$
+
+  met de (dubbelzijdige) rij Fouriercoëfficiënten $(F_k)_{k \in\bbZ} \in \ell^2(\bbZ,\bbC)$, gegeven door
+
+  $$F^k = \inner{f_k}{f} = \frac{1}{\sqrt{L}} \int_{0}^{L} f(x) \exp\left(-\irm \frac{2\pi}{L} k x\right)\,\drm x$$
+
+* zie hoofdstuk 7 voor meer details
+
+## Gram-Schmidt {.smaller}
+
+lineair onafhankelijke vectoren: $S=\{\vv_1,\vv_2,\ldots\}$ 
+
+$\rightarrow$ orthonormale rij $(q_1,q_2,\ldots)$ die zelfde (deel)ruimte opspant
+
+$\rightarrow$ meer specifiek: $\bbF\{\vv_i, i=1,\ldots,n\} = \bbF\{q_i; i=1,\ldots,n\}$ voor alle $n$
+
+Gram-Schmidt proces / algoritme:
+
+\begin{align*}
+	\vw_1 &= \vv_1& \vect{q}_1 = \vw_1/\norm{\vw_1}\\
+	\vw_2 &= \vv_2 - \inner{\vect{q}_1}{\vv_2} \vect{q}_1 & \vect{q}_2 = \vw_2 / \norm{\vw_2}\\
+	&\ldots\\
+	\vw_k &= \vv_k - \sum_{j=1}^{k-1}\inner{\vect{q}_j}{\vv_k} \vect{q}_j & \vect{q}_k = \vw_k / \norm{\vw_k}\\
+	&\ldots
+\end{align*}
+$\Rightarrow \vv_k = \sum_{j=1}^{k} R^{j}_{\ k} \vect{q}_{j}$ met $R^j_{\ k} = \inner{q_j}{\vv_k}$ en $R^k_{\ k} = \norm{\vv_k - \sum_{j=1}^{k-1}\vv_j}^2$
+
+Opmerking: $\vw_n$ kan enkel nul worden als $\vv_n$ lineair afhankelijk is van $\{\vv_1,\ldots,\vv_{n-1}\}$
+
+## Gram-Schmidt en QR decompositie
+
+Matrixversie: $\bbF^n$ met Euclidisch inwendig product
+
+* $m$ lineair onafhankelijke vectoren: $\mat{V} = \begin{bmatrix} \vec{v}_1 | \vec{v}_2 | \dots | \vec{v}_m \end{bmatrix} \in \bbF^{n \times m}$
+
+* Gram-Schmidt leidt tot $\mat{V} = \mat{Q} \mat{R}$ met
+  * bovendriekhoeksmatrix $\mat{R}$
+  * $\mat{Q} = \begin{bmatrix} \vec{q}_1 | \vec{q}_2 | \dots | \vec{q}_m \end{bmatrix}$
+
+    $\Rightarrow \inner{\vec{q}_i}{\vec{q}_j} = \vec{q}_i^\hermitian \vec{q}_j = \delta_{i,j} \Rightarrow \mat{Q}^\hermitian \mat{Q} = \idmat_m$
+
+  **QR-decompositie** van een matrix
+
+* numeriek: keuze algoritme van belang voor stabiliteit
+
+  (classical vs modified Gram-Schmidt, Householder)
