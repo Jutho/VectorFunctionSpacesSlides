@@ -177,8 +177,8 @@ $$
   * $B(\vv_1, a \vv_2 + b \vw_2) = a B(\vv_1,\vv_2) + b B(\vv_1,\vw_2)$
 * bilineaire vorm = bilineaire afbeelding $V \times V \to \bbF$
   * speciale gevallen:
-    * symmetrisch $B(\vv,\vw)=B(\vv,\vw)$
-    * anti-/scheef-symmetrisch $B(\vv,\vw) = -B(\vv,\vw)$
+    * symmetrisch $B(\vv,\vw)=B(\vw,\vv)$
+    * anti-/scheef-symmetrisch $B(\vv,\vw) = -B(\vw,\vv)$
 
 ## Bilineaire vormen en matrices
 
@@ -248,7 +248,7 @@ Herleidt zich tot (symmetrische of antisymmetrische) bilineaire vormen voor $\bb
   * basistransformatie:
     * vector: $\tilde{v}^i = [\mat{T}]^i_{\ j} v^j$
     * duale vector: $\tilde{\xi}_i = [\mat{T}^{-\transpose}]_i^{\ j}\xi_j$
-    * bilineaire vorm: $\tilde{C}_{ij} = [\mat{T}^{-\hermitian}]_i^{\ k}[\mat{T}^{-\transpose}]_j^{\ l}C_{kl}$
+    * sesquilineaire vorm: $\tilde{C}_{ij} = [\mat{T}^{-\hermitian}]_i^{\ k}[\mat{T}^{-\transpose}]_j^{\ l}C_{kl}$
 
       (eenduidiger: $\tilde{C}_{\bar{\imath}j} = [\mat{T}^{-\hermitian}]_\bar{\imath}^{\ \bar{k}}[\mat{T}^{-\transpose}]_j^{\ l}C_{\bar{k}l}$)
 
@@ -280,7 +280,7 @@ Inwendig product op vectorruimte $V$ = hermitische, positief definiete sesquilin
   * lineair in tweede argument: $\inner{\vv}{a_1 \vw_1 + a_2 \vw_2} = a_1 \inner{\vv}{\vw_1} + a_2 \inner{\vv}{\vw_2}$
   * hermitisch: $\inner{\vv}{\vw} = \overline{\inner{\vw}{\vv}}$
   
-    $\Rightarrow \inner{a_1 \vv_1 + a_2\vv_2}{\vw} = \overline{a_1}\inner{\vv_1}{\vv} + \overline{a_2} \inner{\vv_2}{\vw}$
+    $\Rightarrow \inner{a_1 \vv_1 + a_2\vv_2}{\vw} = \overline{a_1}\inner{\vv_1}{\vw} + \overline{a_2} \inner{\vv_2}{\vw}$
   * positief definiet: $\vv \neq \zerovec \Rightarrow \inner{\vv}{\vv} > 0$
 
 * matrixrepresentatie t.o.v. basis $B_V=\{\ve_1,\ldots,\ve_n\}$:
