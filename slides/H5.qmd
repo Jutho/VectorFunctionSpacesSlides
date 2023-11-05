@@ -559,3 +559,383 @@ Matrixversie: $\bbF^n$ met Euclidisch inwendig product
 * numeriek: keuze algoritme van belang voor stabiliteit
 
   (classical vs modified Gram-Schmidt, Householder)
+
+
+# Lineaire functionalen en dualiteit van Hilbertruimten
+
+## Lineaire functionalen
+Gegeven een Hilbertruimte $V$. 
+
+* Aan elke $\vv\in V$ associeren we een $\chi_\vv \in V^\ast$
+  $$\chi_\vv: V \to \bbF : w \mapsto \chi_v[w] = \inner{\vv}{\vw}$$
+
+  * Afbeelding $\vv \to \chi_{\vv}$ is antilineair (triviaal)
+  * Afbeelding $\vv \to \chi_{\vv}$ is injectief (bewijs aan bord)
+  * Lineaire functionaal $\chi_\vv$ is continue en dus ook begrensd
+  * Inderdaad: $\abs{\chi_\vv[w]} \leq \norm{\vv} \norm{ww}$ (Cauchy-Schwarz)
+
+$\Rightarrow$ kunnen we elke (begrensde) functionaal zo bekomen?
+
+## Lineaire functionalen 
+
+Als $V$ eindig-dimensionaal met $B_V=\{\ve_1,\ldots,\ve_n\}$:
+
+* Duale basis $B^\ast_V=\{\varepsilon^1,\ldots,\varepsilon^n\}$: $\varepsilon^i[\ve_j] =\delta^i_{\ j}$
+* $\chi_\vv[w] = \inner{\vv}{\vw} = \overline{v^i} g_{ij} w^j = (\chi_\vv)_j w^j$
+
+  $\Rightarrow \chi_\vv = \overline{v^i} g_{ij} \epsilon^j$
+
+* Inverse metriek: $\mat{g}^{-1} \mat{g} = \idmat \iff g^{ij} g_{jk} = \delta^i_{\ k}$
+
+* $\xi[\vw] = \xi_j \vw^j \rightarrow \xi[\vw] = \inner{\vv_\xi}{\vw}$
+
+  $\Rightarrow (\vv_\xi)^j = \overline{\xi_i g^{ij}}$
+
+## Lineaire functionalen en vectoren {.smaller}
+
+Voor $V$ eindig-dimensionaal kunnen we elke lineaire functionaal $\xi$ voorstellen als inwendig product met een geassocieerde vector $\vv_\xi$
+
+Interpretatie en gevolgen:
+
+* $\ker(\xi)$ heeft codimensie $1$ (tenzij $\xi=0$): 
+
+  $\ker(\xi) = (\vv_\xi)^\perp$ (elkaars orthogonaal complement)
+
+* Met elke $\vv \in V$ is exact één $\chi \in V^\ast$ geassocieerd en vice versa ($\vv \to \chi_\vv$ en $\xi \to \vv_{\xi}$ zijn elkaars inverse)
+* $V^\ast$ is zelf een Hilbertruimte met inwendig product
+
+  $$\inner{\xi}{\chi}_{V^\ast} = \inner{\vv_{\chi}}{\vv_{\xi}}_V = \overline{\xi_i} g^{ij} \chi_j$$ 
+
+* $V$ en $V^\ast$ zijn (anti)isomorf als Hilbertruimten:
+
+  de bijectieve afbeelding $\vv \to \chi_\vv$ behoudt inwendig product en lineaire combinaties (meer met complexe toevoeging van scalaire factoren)
+
+## Representatiestelling van Riesz {.smaller}
+
+Geldt dit ook voor oneindig-dimensionale Hilbertruimten $V$?
+
+* Vanaf nu: $V^\ast = \mathcal{B}(V,\bbF)$ (begrensde lineaire functionalen)
+* Representatiestelling van Riesz:
+
+  voor elke $\xi \in V^\ast$ bestaat er $\vv_\xi \in V$ zodat $\xi[\vw] = \inner{\vv_\xi}{\vw}$ voor alle $\vw \in V$
+
+  Bewijs: (meer uitleg aan bord)
+  * $\ker(\xi)$ is gesloten wegens continuïteit
+  * orthogonaal complement is één-dimensionaal
+  * we kunnen een element uit $\ker(\xi)^\perp$ kiezen zodat gelijkheid geldt
+
+* Gevolg: voor Hilbertruimten geldt $V \cong V^\ast$
+
+# Begrensde lineaire afbeeldingen tussen Hilbertruimten
+
+## Begrensde lineaire afbeeldingen {.smaller}
+
+Hilbertruimten $(V, \inner{\ }{\ }_V)$ en $(W, \inner{\ }{\ }_W)$; lineaire afbeelding $\map{A} \in \mathcal{B}(V,W)$
+
+* Geinduceerde norm:
+
+  \begin{align*}
+    \norm{\map{A}} &= \sup_{\substack{ \vv \in V\\ \vv \neq \zerovec}} \frac{\norm{\map{A}\vv}_W}{\norm{\vv}_V} = \sup_{\substack{\vv \in V\\ \norm{\vv}_V = 1}} \norm{\map{A}\vv}_W\\
+    &= \sup_{\substack{\vv \in V, \vw \in W \\ \vv \neq \zerovec, \vw \neq \zerovec}} \frac{\abs{\inner{\vw}{\map{A}\vv}_W}}{\norm{\vw}_W \norm{\vv}_V} = \sup_{\substack{\vv \in V, \vw \in V \\ \norm{\vv}_V = 1, \norm{\vw}_W=1}} \abs{\inner{\vw}{\map{A}\vv}_W}.
+  \end{align*}
+
+* $\ker(\map{A})$ is altijd gesloten deelruimte
+
+* $\im(\map{A})$ is niet noodzakelijk gesloten:
+
+  * beschouw $(\vw_n \in \im(\map{A}))$ met $\lim_{n\to\infty} \vw_n =\vw$
+  * voor elke $\vw_n$ bestaat er (niet noodzakelijk uniek) $\vv_n \in V$ met $\vw_n = \map{A}\vv_n$
+  * geen garantie dat $(\vv_n \in V)$ Cauchy rij is, en dus dat limiet bestaat
+
+## Eindig-dimensionaal en basisrepresentatie
+
+* Basis voor $V$: $B_V = \{\ve_1,\ldots,\ve_n\}$
+
+* Basis voor $W$: $B_W = \{\vf_1,\ldots,\vf_m\}$
+
+  $\Rightarrow$ Duale basis voor $W^\ast$: $B_W^\ast = \{\varphi^m1,\ldots,\varphi^m\}$
+
+* Matrixrepresentatie $\map{A}\ve_j = A^i_{\ j} \vf_i \Rightarrow A^i_{\ j} = \varphi^i[\map{A}\ve_j]$
+
+* Als $B_W$ een orthonormale basis is: $A^i_{\ j}= \inner{\vf_i}{\map{A}\ve_j}$
+
+  * Inderdaad: $\varphi^i[\vf_j] = \delta^i_{\ j} = \inner{\vf_i}{\vf_j}$
+
+    $\Rightarrow$ $\vf_i$ is de vector geassocieerd aan de lineaire basisfunctionaal $\varphi^i$
+
+## Toegevoegde van een afbeelding
+
+Voor elke $\map{A}\in \mathcal{B}(V,W)$ bestaat er een afbeelding in $\mathcal{B}(W,V)$ die we noteren als $\map{A}^\dagger$ en die voldoet aan
+
+$$\inner{\vw}{\map{A}\vv} = \inner{\map{A}^\dagger\vw}{\vv},\quad \forall \vw \in W, \forall\vv \in V$$
+
+Eigenschappen:
+
+* begrensd: $\norm{\map{A}^\dagger}=\norm{\map{A}}$
+* antilineair: $(a\map{A} + b \map{B})^\dagger = \conj{a} \map{A}^\dagger + \conj{b} \map{B}^\dagger$
+* anti-homomorphisme voor compositie: $(\map{A}\map{B})^\dagger = \map{B}^\dagger \map{A}^\dagger$
+* involutief: $\map{A}^{\dagger\dagger} = (\map{A}^\dagger)^\dagger = \map{A}$
+
+## Toegevoegde afbeelding: matrixrepresentatie
+
+Voor $V$ en $W$ eindig-dimensionaal:
+
+$\inner{\vw}{\map{A}\vv} = \inner{\map{A}^\dagger\vw}{\vv}$
+$\quad\iff \conj{w}^i (\mat{g}_W)_{ij} A^j_{\ k} v^k = \overline{(A^\dagger)^l_{\ i} w^i} (\mat{g}_V)_{lk} v^k$
+
+$\Rightarrow 	(A^\dagger)^l_{\ i} = \overline{(\mat{g}_W)_{ij} A^j_{\ k} (\mat{g}_V^{-1})^{k l}}$
+
+Als $B_V$ en $B_W$ orthonormaal: 
+
+* $(A^\dagger)^l_{\ i} = \overline{A^i_{\ l}} = (\mat{A}^\hermitian)^l_{\ i}$
+* toegevoegde afbeelding voorgesteld door Hermitisch toegevoegde matrixrepresentatie
+
+## Toegevoegde afbeelding: eigenschappen
+
+Beschouw $\map{A}\in\mathcal{B}(V,W)$
+
+* $\norm{\map{A}^\dagger\map{A}} = \norm{\map{A}\map{A}^\dagger} = \norm{\map{A}}^2$ (bewijs aan bord)
+
+* $\ker(\map{A}^\dagger) = \im(\map{A})^\perp$ (bewijs aan bord)
+
+  Gevolgen:
+  * $W = \ker(\map{A}^\dagger) \oplus \overline{\im(\map{A})}$
+  * $V = \ker(\map{A})\oplus \overline{\im(\map{A}^\dagger)}$
+
+## Toegevoegde afbeelding: voorbeeld
+
+Oneindig-dimensionaal voorbeeld:
+
+* $V = W = \ell^2(\bbN_0,\bbF)$ (kwadratisch sommeerbare rijen)
+  * $\inner{\vv}{vw} = \conj{w^1}v^1+\conj{w^2}v^2+\conj{w^3}v^3+\ldots$
+* $\map{S}$ en $\map{T}$ zijn de rechtse en linkse "verschuif"-operatoren:
+  * $\map{S}(v^1,v^2,v^3,\dots)= (0, v^1,v^2, \dots)$
+  * $\map{T}(v^1,v^2,v^3,\dots)= (v^2,v^3,v^4,\dots)$
+* $\inner{\vec{w}}{\map{S}\vec{v}} = \conj{w^2} v^1 + \conj{w^3} v^2 + \conj{w^4} v^3 + \dots = \inner{\map{T}\vec{w}}{\vec{v}}$
+* $\Rightarrow \map{T} = \map{S}^\dagger$
+
+## Zelf-toegevoegde operatoren {.smaller}
+
+Hilbertruimte $V=W$: operatoren
+
+* een operator is **zelftoegevoegd** als $\map{A}=\map{A}^\dagger$
+
+  $\Rightarrow$ matrixvoorstelling ten opzichte van orthonormale basis: $\mat{A} = \mat{A}^\hermitian$
+
+* met elke operator $\map{A}\in \End(V)$ kunnen we een sesquilineaire vorm associëren:
+
+  $$A(\vv,\vw) = \inner{\vv}{\map{A}\vw}$$
+
+  $\Rightarrow$ eigenschappen van sesquilineaire vormen kunnen worden geassocieerd aan operatoren:
+
+  * (anti)Hermitisch: $A(\vv,\vw) = \pm \overline{A(\vw,\vv)} \iff \inner{\vv}{\map{A}\vw} = \pm \inner{\map{A}\vv}{\vw}$
+
+    $\Rightarrow$ zelftoegevoegd impliceert Hermitisch
+    
+    (en vice versa, voor begrensde operatoren, zie later voor onbegrensde)
+    
+    (terminologie "zelftoegevoegd" en "Hermitisch" vaak door elkaar gebruikt)
+
+  * positief (semi)definiet: $\inner{\vv}{\map{A}\vv} > 0$ of $\geq 0$ voor alle $\vv \in V$
+
+## Zelf-toegevoegde operatoren: eigenschappen {.smaller}
+
+* $\map{A}\in\End(V)$ zelftoegevoegd en $\map{A}\vv = \lambda \vv$:
+
+  $\inner{\vv}{\map{A}\vv} = \inner{\map{A}\vv}{\vv} \implies \lambda = \conj{\lambda}$ of dus $\lambda \in \bbR$
+
+* $\map{A}\in\End(V)$ zelftoegevoegd:
+
+  $p(\map{A})$ zelftoegevoegd voor $p$ een polynoom met reële coefficiënten
+
+* $\map{A},\map{B}\in\End(V)$ zelftoegevoegd:
+
+  $\map{A}\map{B}$ zelftoegevoegd $\iff$ $\commutator{\map{A}}{\map{B}} = \zeromap$
+
+* orthogonale projector $\equiv$ zelftoegevoegde projector
+
+* voorbeeld op $V =L^2([a,b])$: $\map{M}_x: f(x) \mapsto x f(x)$
+
+  $\inner{g}{\map{M}_x f} = \int_a^b \overline{g(x)} (x f(x)) \,\drm x 
+  = \int_{a}^b \overline{x g(x)} f(x)\,\drm x = \inner{\map{M}_x g}{f}$
+
+  $\Rightarrow \map{M}_x$ is zelftoegevoegd / Hermitisch
+
+  ($\map{M}_x$ is begrensd voor $L^2([a,b])$ met compact interval $[a,b]$; zie H7)
+
+## Isometrische en unitaire afbeeldingen {.smaller}
+
+Beschouw $\map{Q}\in \mathcal{B}(V,W)$:
+
+* isometrisch $\iff \map{Q}^\dagger\map{Q}=\idmap_V$
+
+  Bewijs:
+  $\forall \vv,\vv' \in V$: $d_W(\map{Q}\vv,\map{Q}\vv') = \norm{\map{Q}\vv - \map{Q}\vv'} = d_V(\vv,\vv') = \norm{\vv-\vv'}$
+
+  $\iff \norm{\map{Q}\vv} = \norm{\vv}$ voor alle $\vv \in V$
+
+  $\iff \inner{\vv}{\map{Q}^\dagger \map{Q}\vv} = \inner{\vv}{\vv}$ of dus $\inner{\vv}{(\map{Q}^\dagger\map{Q}-\idmap_V)\vv}=0$ voor alle $\vv \in V$
+
+  $\iff \inner{\vv}{\map{Q}^\dagger \map{Q}\vw} = \inner{\vv}{\vw}$ voor alle $\vv,\vw \in V$
+  
+  ($\Leftarrow$ triviaal, $\Rightarrow$ via $\inner{\vv+a\vw}{(\map{Q}^\dagger \map{Q}-\idmap_V)(\vv+a\vw)}=0$ en $a$ juist kiezen)
+
+* uit H4: isometrisch $\implies$ injectief
+
+  als ook surjectief (en dus bijectief): **unitaire** transformatie ( **orthogonaal** als $\bbF=\bbR$) 
+  
+  als $\map{U}^{-1}$ bestaat en $\map{U}^\dagger \map{U}=\idmap_V$ $\implies$ $\map{U}^{-1}=\map{U}^\dagger$ en dus $\map{U}\map{U}^\dagger = \idmap_W$
+
+## Isometrische en unitaire afbeeldingen {.smaller}
+
+* (zoals steeds) $V, W$ met $\dim(V) = \dim(W)$ eindig: isometrisch $\iff$ unitair
+
+  * tegenvoorbeeld als oneindig-dimensionaal: $V=W = \ell^2(\bbN_0)$
+  
+    $\map{T}\map{S}=\map{S}^\dagger\map{S} = \idmap$ en $\map{S}\map{S}^\dagger = \map{P}$ met $\map{P}(v^1,v^2,v^3,\ldots) = (0, v^2, v^3,\ldots)$
+
+* als unitaire afbeelding $V \to W$ bestaat: $V \cong W$ isomorf als Hilbertruimten
+
+  * elke $n$-dimensionale Hilbertruimteruimte is isomorf met $\bbC^n$ met Euclidisch inwendig product (via keuze van orthonormale basis)
+
+  * elke (separabele) oneindig-dimensionale Hilbertruimte is isomorf met $\ell^2(\bbN_0)$ via keuze van een complete orthonormale rij = orthonormale basis
+
+* voor $\map{S}\in\End(V)$ met $\map{S} = -\map{S}^\dagger$:
+
+  $\map{U} = \exp(\map{S})$ is unitaire transformatie van $V$ naar zichzelf
+
+  * $\exp(\map{S})^{-1} = \exp(-\map{S}) = \exp(\map{S}^\dagger)=\exp(\map{S})^\dagger$
+  * vaak geschreven als $\map{U}=\exp(\irm \map{H})$ met $\map{H}=\map{H}^\dagger$
+
+* $\map{Q}$ isometrisch maar niet unitair: $\map{Q}\map{Q}^\dagger$ is orthogonale projector
+
+## Isometrische en unitaire matrices {.smaller}
+
+* unitaire matrices $\mat{U} \in \bbC^{n\times n}$: basistransformatie tussen orthonormale basissen
+
+  * $B_V = \{\ve_1,\ve_2,\ldots,\ve_n\}$ en $\tilde{B}_V = \{\tilde{\ve}_1,\tilde{\ve}_2,\ldots,\tilde{\ve}_n\}$
+  
+  * $\tilde{\ve}_i = U^j_{\ i} \ve_{j}$
+
+  * $\delta_{ij} = \inner{\tilde{\ve}_i}{\tilde{\ve}_j} = \overline{U^k_{\ i}} U^l_{\ j} \inner{\ve_k}{\ve_l} = \overline{U^k_{\ i}} U^l_{\ j} \delta_{kl}$ of dus $\mat{U}^\hermitian \mat{U} = \idmat$
+
+* isometrische matrix $\mat{Q} \in \bbC^{m \times n}$ met $m \geq n$:
+
+  * isometrische afbeelding van $\bbC^n$ naar $\bbC^m$
+
+    (of: matrixrepresentatie van isometrische afbeelding $V \to W$ ten opzichte van orthonormale basissen in $V$ en $W$)
+  
+  * kolommen van $\map{Q}$ definiëren orthonormale basis $\{\vec{q}_1,\ldots,\vec{q}_n\}$ voor $n$-dimensionale deelruimte $W \subspace \bbC^m$.
+    
+    $\mat{P}_W = \sum_{i=1}^n \vec{q}_i \vec{q}_i^\hermitian = \mat{Q}\mat{Q}^\hermitian$ en $\mat{P}_{W^\perp} = \idmat - \mat{Q}\mat{Q}^\hermitian$
+
+    $\rightarrow$ andere orthonormale basis voor $W$: $\mat{\tilde{Q}} =\mat{Q} \mat{U}$ met $\mat{U}\in\bbC^{n\times n}$ unitair $\Rightarrow$ $\mat{P}_W = \mat{\tilde{Q}}\mat{\tilde{Q}}^\dagger = \mat{Q}\mat{Q}^\dagger$
+
+## Anti-unitaire transformatie {.smaller}
+
+$\map{A}$ een antilineaire operator tussen complexe Hilbertruimten $V$ en $W$
+
+* Definitie van toegevoegde:
+
+  $$\inner{\vw}{\map{A}\vv} = \overline{\inner{\map{A}^\dagger\vw}{\vv}} = \inner{\vv}{\map{A}^\dagger \vw}, \qquad \forall \vv \in V, \vw \in W$$
+
+* Antilineair en isometrisch: $\map{A}^\dagger \map{A} = \idmap_V$ of dus $\inner{\map{A} \vv_1}{\map{A} \vv_2} = \inner{\vv_2}{\vv_1}$, $\forall \vv_1,\vv_2 \in V$
+
+* Antilineair en isometrisch en bijectief: **anti-unitair**
+
+  * belangrijke rol in kwantummechanica:
+  
+    alle geldige transformaties zijn unitair of anti-unitair (Wigner)
+
+  * voorbeeld van anti-unitair: tijdsomkeringssymmetrie
+
+## Normale operatoren
+
+* $\map{A} \in \End(V)$ voldoet aan $\map{A}\map{A}^\dagger = \map{A}^\dagger\map{A}$: **normale operator**
+
+* speciale gevallen van normaal:
+  * zelftoegevoegde operator: $\map{A} = \map{A}^\dagger$
+  * unitaire operator: $\map{A}\map{A}^\dagger = \map{A}^\dagger\map{A} = \idmap_V$
+
+* Voor alle $\map{A} \in \End(V)$: 	$\map{A} = \underbrace{\frac{\map{A}+\map{A}^\dagger}{2}}_{\map{A}_{\text{r}}} + \irm \underbrace{\frac{\map{A} - \map{A}^\dagger}{2\irm}}_{\map{A}_{\text{i}}}$
+
+  normaal $\iff \commutator{\map{A}_{\text{r}}}{\map{A}_{\text{i}}}=\zeromap$
+
+  $\Rightarrow$ $\map{A}_{\text{r}}$ en $\map{A}_{\text{i}}$ gelijktijdig diagonaliseerbaar?
+
+## Normale operatoren: eigenschappen {.smaller}
+
+* $\map{A}\in \End(V)$: normaal $\iff$ $\forall \vv \in V: \norm{\map{A}\vv} = \norm{\map{A}^\dagger\vv}$
+
+* $\map{A} \in \End(V)$ en normaal en $\map{A}\vv = \lambda \vv$:
+
+  * $\map{A}^\dagger \vv = \conj{\lambda} \vv$ (uit voorgaande)
+  
+  * $\map{A}_{\text{r}}\vv = \real(\lambda) \vv,\quad\map{A}_{\text{i}}\vv = \imag(\lambda) \vv$ (triviaal uit voorgaande)
+
+  * $\map{A}\vw = \mu \vw$ met $\mu \neq \lambda \implies \inner{\vv}{\vw}=0$ (bewijs aan bord)
+
+* $\map{A} \in \End(V)$ en normaal: $\norm{\map{A}^n} = \norm{\map{A}}^n$ (bewijs aan bord)
+
+  * $\norm{\map{A}} = \rho_{\map{A}}$ (spectraalstraal, volgt direct uit Gelfand's formule)
+  * $\map{A}$ kan niet nilpotent zijn (bewijs aan bord)
+  * $V$ eindig-dimensionaal:
+
+    $\map{A}$ is diagonaliseerbaar en eigenvectoren kunnen als orthonormale basis gekozen worden (zie H6)
+
+## Hilbert-Schmidt inwendig product {.smaller}
+
+Inwendig product voor lineaire afbeeldingen $\map{A} \in \mathcal{B}(V,W)$?
+
+* geïnduceerde norm is niet afkomstig van inwendig product
+
+* nieuwe definitie: *Hilbert-Schmidt inwendig product*
+
+  $\inner{\map{A}}{\map{B}}_{\text{HS}} = \left.\tr\right._V(\map{A}^\dagger \map{B})= \sum_{n} \inner{\ve_n}{\map{A}^\dagger \map{B} \ve_n}_V = \sum_{n} \inner{\map{A} \ve_n}{\map{B} \ve_n}_W$
+  $= \sum_{m,n} \inner{\map{A}\ve_n}{\vf_m}_W \inner{\vf_m}{\map{B}\ve_n}_W = \sum_{m,n} \inner{\ve_n}{\map{A}^\dagger\vf_m}_V \inner{\map{B}^\dagger \vf_m}{\ve_n}_W$
+  $= \sum_{m} \inner{\map{B}^\dagger \vf_m}{\map{A}^\dagger \vf_m} = \left.\tr\right._W(\map{B}\map{A}^\dagger)$
+
+  met dan ook Hilbert-Schmidt norm $\norm{\map{A}}_{\text{HS}} = \tr(\map{A}^\dagger \map{A})^{1/2}$
+
+  * eindig-dimensionaal / matrices: $\norm{\mat{A}}_{\text{HS}} = \norm{\mat{A}}_{\text{F}}$ (Frobenius)
+  * oneindig-dimensionaal: $\norm{\map{A}}_{\text{HS}}$ kan divergeren voor begrensde operatoren
+
+    $\rightarrow$ voorbeeld: $\norm{\idmap}_{\text{HS}} = \sqrt{\dim(V)}$
+  * Hilbert-Schmidt operatoren = operatoren $\map{A}$ met $\norm{\map{A}}_{\text{HS}}$ eindig
+
+    (spelen belangrijke theoretische rol in H7 en H8: Greense functies)
+
+# Toepassing: kleinste-kwadratenoplossing
+
+## Overgedetermineerd stelsel {.smaller}
+
+$\mat{A} \vec{x} = \vec{y}$ met $m$ vergelijkingen voor $n < m$ onbekenden:
+
+* $\mat{A} \in \bbF^{m \times n}$, $\vec{x} \in \bbF^n$ en $\vec{y} \in \bbF^m$
+* $\dim(\im(\mat{A})) = \rank(\mat{A}) < m$:
+
+  niet voor alle $\vec{y} \in \bbF^m$ bestaat er een exacte oplossing
+
+* aanname: $\mat{A}$ heeft "volle rang" / maximale rang: $\rank(\mat{A})=n$
+
+* **kleinste-kwadratenoplossing**:
+  
+  $$\vec{x}^\ast = \argmin_{\vec{x} \in \bbF^n} \norm{\mat{A}\vec{x} - \vec{y}}_2$$
+
+  orthogonale-projectietheorema: $\mat{A}\vec{x}^\ast = \mat{P}_{\im(\mat{A})} \vec{y}$
+
+* met behulp van $\mat{A}=\mat{Q}\mat{R}$: $\mat{P}_{\im(\mat{A})} = \mat{Q}\mat{Q}^\hermitian$
+
+  * $\mat{Q}\mat{R}\vec{x}^\ast = \mat{Q}\mat{Q}^\hermitian \vec{y} \implies \vec{x}^\ast = \mat{R}^{-1}\mat{Q}^\hermitian \vec{y}$
+
+  * $\mat{R}^{-1}\mat{Q}^\hermitian = (\mat{A}^\hermitian \mat{A})^{-1} \mat{A}^\hermitian = \mat{A}^+$ (**Moore-Penrose pseudo-inverse**)
+
+    (meer details in volgend hoofdstuk)
+
+
+
+
+    
+
+
+

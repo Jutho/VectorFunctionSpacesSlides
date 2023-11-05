@@ -1211,6 +1211,146 @@
     "text": "Gram-Schmidt en QR decompositie\nMatrixversie: \\({\\mathbb{F}}^n\\) met Euclidisch inwendig product\n\n\\(m\\) lineair onafhankelijke vectoren: \\({\\mathsf{V}} = \\begin{bmatrix} \\boldsymbol{v}_1 | \\boldsymbol{v}_2 | \\dots | \\boldsymbol{v}_m \\end{bmatrix} \\in {\\mathbb{F}}^{n \\times m}\\)\nGram-Schmidt leidt tot \\({\\mathsf{V}} = {\\mathsf{Q}} {\\mathsf{R}}\\) met\n\nbovendriekhoeksmatrix \\({\\mathsf{R}}\\)\n\\({\\mathsf{Q}} = \\begin{bmatrix} \\boldsymbol{q}_1 | \\boldsymbol{q}_2 | \\dots | \\boldsymbol{q}_m \\end{bmatrix}\\)\n\\(\\Rightarrow {\\left\\langle\\boldsymbol{q}_i,\\boldsymbol{q}_j\\right\\rangle} = \\boldsymbol{q}_i^{\\mathsf{H}}\\boldsymbol{q}_j = \\delta_{i,j} \\Rightarrow {\\mathsf{Q}}^{\\mathsf{H}}{\\mathsf{Q}} = {\\mathsf{I}}_m\\)\n\nQR-decompositie van een matrix\nnumeriek: keuze algoritme van belang voor stabiliteit\n(classical vs modified Gram-Schmidt, Householder)"
   },
   {
+    "objectID": "slides/H5.html#lineaire-functionalen",
+    "href": "slides/H5.html#lineaire-functionalen",
+    "title": "Hoofdstuk 5 - Inwendig product en orthogonaliteit",
+    "section": "Lineaire functionalen",
+    "text": "Lineaire functionalen\nGegeven een Hilbertruimte \\(V\\).\n\nAan elke \\({v}\\in V\\) associeren we een \\(\\chi_{v}\\in V^\\ast\\) \\[\\chi_{v}: V \\to {\\mathbb{F}}: w \\mapsto \\chi_v[w] = {\\left\\langle{v},{w}\\right\\rangle}\\]\n\nAfbeelding \\({v}\\to \\chi_{{v}}\\) is antilineair (triviaal)\nAfbeelding \\({v}\\to \\chi_{{v}}\\) is injectief (bewijs aan bord)\nLineaire functionaal \\(\\chi_{v}\\) is continue en dus ook begrensd\nInderdaad: \\({\\left\\lvert\\chi_{v}[w]\\right\\rvert} \\leq {\\left\\lVert{v}\\right\\rVert} {\\left\\lVert ww\\right\\rVert}\\) (Cauchy-Schwarz)\n\n\n\\(\\Rightarrow\\) kunnen we elke (begrensde) functionaal zo bekomen?"
+  },
+  {
+    "objectID": "slides/H5.html#lineaire-functionalen-1",
+    "href": "slides/H5.html#lineaire-functionalen-1",
+    "title": "Hoofdstuk 5 - Inwendig product en orthogonaliteit",
+    "section": "Lineaire functionalen",
+    "text": "Lineaire functionalen\nAls \\(V\\) eindig-dimensionaal met \\(B_V=\\{{e}_1,\\ldots,{e}_n\\}\\):\n\nDuale basis \\(B^\\ast_V=\\{\\varepsilon^1,\\ldots,\\varepsilon^n\\}\\): \\(\\varepsilon^i[{e}_j] =\\delta^i_{\\ j}\\)\n\\(\\chi_{v}[w] = {\\left\\langle{v},{w}\\right\\rangle} = \\overline{v^i} g_{ij} w^j = (\\chi_{v})_j w^j\\)\n\\(\\Rightarrow \\chi_{v}= \\overline{v^i} g_{ij} \\epsilon^j\\)\nInverse metriek: \\({\\mathsf{g}}^{-1} {\\mathsf{g}} = {\\mathsf{I}}\\iff g^{ij} g_{jk} = \\delta^i_{\\ k}\\)\n\\(\\xi[{w}] = \\xi_j {w}^j \\rightarrow \\xi[{w}] = {\\left\\langle{v}_\\xi,{w}\\right\\rangle}\\)\n\\(\\Rightarrow ({v}_\\xi)^j = \\overline{\\xi_i g^{ij}}\\)"
+  },
+  {
+    "objectID": "slides/H5.html#lineaire-functionalen-en-vectoren",
+    "href": "slides/H5.html#lineaire-functionalen-en-vectoren",
+    "title": "Hoofdstuk 5 - Inwendig product en orthogonaliteit",
+    "section": "Lineaire functionalen en vectoren",
+    "text": "Lineaire functionalen en vectoren\nVoor \\(V\\) eindig-dimensionaal kunnen we elke lineaire functionaal \\(\\xi\\) voorstellen als inwendig product met een geassocieerde vector \\({v}_\\xi\\)\nInterpretatie en gevolgen:\n\n\\(\\mathop{\\mathrm{ker}}(\\xi)\\) heeft codimensie \\(1\\) (tenzij \\(\\xi=0\\)):\n\\(\\mathop{\\mathrm{ker}}(\\xi) = ({v}_\\xi)^\\perp\\) (elkaars orthogonaal complement)\nMet elke \\({v}\\in V\\) is exact één \\(\\chi \\in V^\\ast\\) geassocieerd en vice versa (\\({v}\\to \\chi_{v}\\) en \\(\\xi \\to {v}_{\\xi}\\) zijn elkaars inverse)\n\\(V^\\ast\\) is zelf een Hilbertruimte met inwendig product\n\\[{\\left\\langle\\xi,\\chi\\right\\rangle}_{V^\\ast} = {\\left\\langle{v}_{\\chi},{v}_{\\xi}\\right\\rangle}_V = \\overline{\\xi_i} g^{ij} \\chi_j\\]\n\\(V\\) en \\(V^\\ast\\) zijn (anti)isomorf als Hilbertruimten:\nde bijectieve afbeelding \\({v}\\to \\chi_{v}\\) behoudt inwendig product en lineaire combinaties (meer met complexe toevoeging van scalaire factoren)"
+  },
+  {
+    "objectID": "slides/H5.html#representatiestelling-van-riesz",
+    "href": "slides/H5.html#representatiestelling-van-riesz",
+    "title": "Hoofdstuk 5 - Inwendig product en orthogonaliteit",
+    "section": "Representatiestelling van Riesz",
+    "text": "Representatiestelling van Riesz\nGeldt dit ook voor oneindig-dimensionale Hilbertruimten \\(V\\)?\n\nVanaf nu: \\(V^\\ast = \\mathcal{B}(V,{\\mathbb{F}})\\) (begrensde lineaire functionalen)\nRepresentatiestelling van Riesz:\nvoor elke \\(\\xi \\in V^\\ast\\) bestaat er \\({v}_\\xi \\in V\\) zodat \\(\\xi[{w}] = {\\left\\langle{v}_\\xi,{w}\\right\\rangle}\\) voor alle \\({w}\\in V\\)\nBewijs: (meer uitleg aan bord)\n\n\\(\\mathop{\\mathrm{ker}}(\\xi)\\) is gesloten wegens continuïteit\northogonaal complement is één-dimensionaal\nwe kunnen een element uit \\(\\mathop{\\mathrm{ker}}(\\xi)^\\perp\\) kiezen zodat gelijkheid geldt\n\nGevolg: voor Hilbertruimten geldt \\(V \\cong V^\\ast\\)"
+  },
+  {
+    "objectID": "slides/H5.html#begrensde-lineaire-afbeeldingen",
+    "href": "slides/H5.html#begrensde-lineaire-afbeeldingen",
+    "title": "Hoofdstuk 5 - Inwendig product en orthogonaliteit",
+    "section": "Begrensde lineaire afbeeldingen",
+    "text": "Begrensde lineaire afbeeldingen\nHilbertruimten \\((V, {\\left\\langle\\ ,\\ \\right\\rangle}_V)\\) en \\((W, {\\left\\langle\\ ,\\ \\right\\rangle}_W)\\); lineaire afbeelding \\({\\hat{A}} \\in \\mathcal{B}(V,W)\\)\n\nGeinduceerde norm:\n\\[\\begin{align*}\n  {\\left\\lVert{\\hat{A}}\\right\\rVert} &= \\sup_{\\substack{ {v}\\in V\\\\ {v}\\neq {o}}} \\frac{{\\left\\lVert{\\hat{A}}{v}\\right\\rVert}_W}{{\\left\\lVert{v}\\right\\rVert}_V} = \\sup_{\\substack{{v}\\in V\\\\ {\\left\\lVert{v}\\right\\rVert}_V = 1}} {\\left\\lVert{\\hat{A}}{v}\\right\\rVert}_W\\\\\n  &= \\sup_{\\substack{{v}\\in V, {w}\\in W \\\\ {v}\\neq {o}, {w}\\neq {o}}} \\frac{{\\left\\lvert{\\left\\langle{w},{\\hat{A}}{v}\\right\\rangle}_W\\right\\rvert}}{{\\left\\lVert{w}\\right\\rVert}_W {\\left\\lVert{v}\\right\\rVert}_V} = \\sup_{\\substack{{v}\\in V, {w}\\in V \\\\ {\\left\\lVert{v}\\right\\rVert}_V = 1, {\\left\\lVert{w}\\right\\rVert}_W=1}} {\\left\\lvert{\\left\\langle{w},{\\hat{A}}{v}\\right\\rangle}_W\\right\\rvert}.\n\\end{align*}\\]\n\\(\\mathop{\\mathrm{ker}}({\\hat{A}})\\) is altijd gesloten deelruimte\n\\(\\mathop{\\mathrm{im}}({\\hat{A}})\\) is niet noodzakelijk gesloten:\n\nbeschouw \\(({w}_n \\in \\mathop{\\mathrm{im}}({\\hat{A}}))\\) met \\(\\lim_{n\\to\\infty} {w}_n ={w}\\)\nvoor elke \\({w}_n\\) bestaat er (niet noodzakelijk uniek) \\({v}_n \\in V\\) met \\({w}_n = {\\hat{A}}{v}_n\\)\ngeen garantie dat \\(({v}_n \\in V)\\) Cauchy rij is, en dus dat limiet bestaat"
+  },
+  {
+    "objectID": "slides/H5.html#eindig-dimensionaal-en-basisrepresentatie",
+    "href": "slides/H5.html#eindig-dimensionaal-en-basisrepresentatie",
+    "title": "Hoofdstuk 5 - Inwendig product en orthogonaliteit",
+    "section": "Eindig-dimensionaal en basisrepresentatie",
+    "text": "Eindig-dimensionaal en basisrepresentatie\n\nBasis voor \\(V\\): \\(B_V = \\{{e}_1,\\ldots,{e}_n\\}\\)\nBasis voor \\(W\\): \\(B_W = \\{{f}_1,\\ldots,{f}_m\\}\\)\n\\(\\Rightarrow\\) Duale basis voor \\(W^\\ast\\): \\(B_W^\\ast = \\{\\varphi^m1,\\ldots,\\varphi^m\\}\\)\nMatrixrepresentatie \\({\\hat{A}}{e}_j = A^i_{\\ j} {f}_i \\Rightarrow A^i_{\\ j} = \\varphi^i[{\\hat{A}}{e}_j]\\)\nAls \\(B_W\\) een orthonormale basis is: \\(A^i_{\\ j}= {\\left\\langle{f}_i,{\\hat{A}}{e}_j\\right\\rangle}\\)\n\nInderdaad: \\(\\varphi^i[{f}_j] = \\delta^i_{\\ j} = {\\left\\langle{f}_i,{f}_j\\right\\rangle}\\)\n\\(\\Rightarrow\\) \\({f}_i\\) is de vector geassocieerd aan de lineaire basisfunctionaal \\(\\varphi^i\\)"
+  },
+  {
+    "objectID": "slides/H5.html#toegevoegde-van-een-afbeelding",
+    "href": "slides/H5.html#toegevoegde-van-een-afbeelding",
+    "title": "Hoofdstuk 5 - Inwendig product en orthogonaliteit",
+    "section": "Toegevoegde van een afbeelding",
+    "text": "Toegevoegde van een afbeelding\nVoor elke \\({\\hat{A}}\\in \\mathcal{B}(V,W)\\) bestaat er een afbeelding in \\(\\mathcal{B}(W,V)\\) die we noteren als \\({\\hat{A}}^\\dagger\\) en die voldoet aan\n\\[{\\left\\langle{w},{\\hat{A}}{v}\\right\\rangle} = {\\left\\langle{\\hat{A}}^\\dagger{w},{v}\\right\\rangle},\\quad \\forall {w}\\in W, \\forall{v}\\in V\\]\nEigenschappen:\n\nbegrensd: \\({\\left\\lVert{\\hat{A}}^\\dagger\\right\\rVert}={\\left\\lVert{\\hat{A}}\\right\\rVert}\\)\nantilineair: \\((a{\\hat{A}} + b {\\hat{B}})^\\dagger = {\\overline{a}} {\\hat{A}}^\\dagger + {\\overline{b}} {\\hat{B}}^\\dagger\\)\nanti-homomorphisme voor compositie: \\(({\\hat{A}}{\\hat{B}})^\\dagger = {\\hat{B}}^\\dagger {\\hat{A}}^\\dagger\\)\ninvolutief: \\({\\hat{A}}^{\\dagger\\dagger} = ({\\hat{A}}^\\dagger)^\\dagger = {\\hat{A}}\\)"
+  },
+  {
+    "objectID": "slides/H5.html#toegevoegde-afbeelding-matrixrepresentatie",
+    "href": "slides/H5.html#toegevoegde-afbeelding-matrixrepresentatie",
+    "title": "Hoofdstuk 5 - Inwendig product en orthogonaliteit",
+    "section": "Toegevoegde afbeelding: matrixrepresentatie",
+    "text": "Toegevoegde afbeelding: matrixrepresentatie\nVoor \\(V\\) en \\(W\\) eindig-dimensionaal:\n\\({\\left\\langle{w},{\\hat{A}}{v}\\right\\rangle} = {\\left\\langle{\\hat{A}}^\\dagger{w},{v}\\right\\rangle}\\) \\(\\quad\\iff {\\overline{w}}^i ({\\mathsf{g}}_W)_{ij} A^j_{\\ k} v^k = \\overline{(A^\\dagger)^l_{\\ i} w^i} ({\\mathsf{g}}_V)_{lk} v^k\\)\n\\(\\Rightarrow (A^\\dagger)^l_{\\ i} = \\overline{({\\mathsf{g}}_W)_{ij} A^j_{\\ k} ({\\mathsf{g}}_V^{-1})^{k l}}\\)\nAls \\(B_V\\) en \\(B_W\\) orthonormaal:\n\n\\((A^\\dagger)^l_{\\ i} = \\overline{A^i_{\\ l}} = ({\\mathsf{A}}^{\\mathsf{H}})^l_{\\ i}\\)\ntoegevoegde afbeelding voorgesteld door Hermitisch toegevoegde matrixrepresentatie"
+  },
+  {
+    "objectID": "slides/H5.html#toegevoegde-afbeelding-eigenschappen",
+    "href": "slides/H5.html#toegevoegde-afbeelding-eigenschappen",
+    "title": "Hoofdstuk 5 - Inwendig product en orthogonaliteit",
+    "section": "Toegevoegde afbeelding: eigenschappen",
+    "text": "Toegevoegde afbeelding: eigenschappen\nBeschouw \\({\\hat{A}}\\in\\mathcal{B}(V,W)\\)\n\n\\({\\left\\lVert{\\hat{A}}^\\dagger{\\hat{A}}\\right\\rVert} = {\\left\\lVert{\\hat{A}}{\\hat{A}}^\\dagger\\right\\rVert} = {\\left\\lVert{\\hat{A}}\\right\\rVert}^2\\) (bewijs aan bord)\n\\(\\mathop{\\mathrm{ker}}({\\hat{A}}^\\dagger) = \\mathop{\\mathrm{im}}({\\hat{A}})^\\perp\\) (bewijs aan bord)\nGevolgen:\n\n\\(W = \\mathop{\\mathrm{ker}}({\\hat{A}}^\\dagger) \\oplus \\overline{\\mathop{\\mathrm{im}}({\\hat{A}})}\\)\n\\(V = \\mathop{\\mathrm{ker}}({\\hat{A}})\\oplus \\overline{\\mathop{\\mathrm{im}}({\\hat{A}}^\\dagger)}\\)"
+  },
+  {
+    "objectID": "slides/H5.html#toegevoegde-afbeelding-voorbeeld",
+    "href": "slides/H5.html#toegevoegde-afbeelding-voorbeeld",
+    "title": "Hoofdstuk 5 - Inwendig product en orthogonaliteit",
+    "section": "Toegevoegde afbeelding: voorbeeld",
+    "text": "Toegevoegde afbeelding: voorbeeld\nOneindig-dimensionaal voorbeeld:\n\n\\(V = W = \\ell^2({\\mathbb{N}}_0,{\\mathbb{F}})\\) (kwadratisch sommeerbare rijen)\n\n\\({\\left\\langle{v},vw\\right\\rangle} = {\\overline{w^1}}v^1+{\\overline{w^2}}v^2+{\\overline{w^3}}v^3+\\ldots\\)\n\n\\({\\hat{S}}\\) en \\({\\hat{T}}\\) zijn de rechtse en linkse “verschuif”-operatoren:\n\n\\({\\hat{S}}(v^1,v^2,v^3,\\dots)= (0, v^1,v^2, \\dots)\\)\n\\({\\hat{T}}(v^1,v^2,v^3,\\dots)= (v^2,v^3,v^4,\\dots)\\)\n\n\\({\\left\\langle\\boldsymbol{w},{\\hat{S}}\\boldsymbol{v}\\right\\rangle} = {\\overline{w^2}} v^1 + {\\overline{w^3}} v^2 + {\\overline{w^4}} v^3 + \\dots = {\\left\\langle{\\hat{T}}\\boldsymbol{w},\\boldsymbol{v}\\right\\rangle}\\)\n\\(\\Rightarrow {\\hat{T}} = {\\hat{S}}^\\dagger\\)"
+  },
+  {
+    "objectID": "slides/H5.html#zelf-toegevoegde-operatoren",
+    "href": "slides/H5.html#zelf-toegevoegde-operatoren",
+    "title": "Hoofdstuk 5 - Inwendig product en orthogonaliteit",
+    "section": "Zelf-toegevoegde operatoren",
+    "text": "Zelf-toegevoegde operatoren\nHilbertruimte \\(V=W\\): operatoren\n\neen operator is zelftoegevoegd als \\({\\hat{A}}={\\hat{A}}^\\dagger\\)\n\\(\\Rightarrow\\) matrixvoorstelling ten opzichte van orthonormale basis: \\({\\mathsf{A}} = {\\mathsf{A}}^{\\mathsf{H}}\\)\nmet elke operator \\({\\hat{A}}\\in \\mathop{\\mathrm{End}}(V)\\) kunnen we een sesquilineaire vorm associëren:\n\\[A({v},{w}) = {\\left\\langle{v},{\\hat{A}}{w}\\right\\rangle}\\]\n\\(\\Rightarrow\\) eigenschappen van sesquilineaire vormen kunnen worden geassocieerd aan operatoren:\n\n(anti)Hermitisch: \\(A({v},{w}) = \\pm \\overline{A({w},{v})} \\iff {\\left\\langle{v},{\\hat{A}}{w}\\right\\rangle} = \\pm {\\left\\langle{\\hat{A}}{v},{w}\\right\\rangle}\\)\n\\(\\Rightarrow\\) zelftoegevoegd impliceert Hermitisch\n(en vice versa, voor begrensde operatoren, zie later voor onbegrensde)\n(terminologie “zelftoegevoegd” en “Hermitisch” vaak door elkaar gebruikt)\npositief (semi)definiet: \\({\\left\\langle{v},{\\hat{A}}{v}\\right\\rangle} &gt; 0\\) of \\(\\geq 0\\) voor alle \\({v}\\in V\\)"
+  },
+  {
+    "objectID": "slides/H5.html#zelf-toegevoegde-operatoren-eigenschappen",
+    "href": "slides/H5.html#zelf-toegevoegde-operatoren-eigenschappen",
+    "title": "Hoofdstuk 5 - Inwendig product en orthogonaliteit",
+    "section": "Zelf-toegevoegde operatoren: eigenschappen",
+    "text": "Zelf-toegevoegde operatoren: eigenschappen\n\n\\({\\hat{A}}\\in\\mathop{\\mathrm{End}}(V)\\) zelftoegevoegd en \\({\\hat{A}}{v}= \\lambda {v}\\):\n\\({\\left\\langle{v},{\\hat{A}}{v}\\right\\rangle} = {\\left\\langle{\\hat{A}}{v},{v}\\right\\rangle} \\implies \\lambda = {\\overline{\\lambda}}\\) of dus \\(\\lambda \\in {\\mathbb{R}}\\)\n\\({\\hat{A}}\\in\\mathop{\\mathrm{End}}(V)\\) zelftoegevoegd:\n\\(p({\\hat{A}})\\) zelftoegevoegd voor \\(p\\) een polynoom met reële coefficiënten\n\\({\\hat{A}},{\\hat{B}}\\in\\mathop{\\mathrm{End}}(V)\\) zelftoegevoegd:\n\\({\\hat{A}}{\\hat{B}}\\) zelftoegevoegd \\(\\iff\\) \\({\\left[{\\hat{A}},{\\hat{B}}\\right]} = {\\hat{0}}\\)\northogonale projector \\(\\equiv\\) zelftoegevoegde projector\nvoorbeeld op \\(V =L^2([a,b])\\): \\({\\hat{M}}_x: f(x) \\mapsto x f(x)\\)\n\\({\\left\\langle g,{\\hat{M}}_x f\\right\\rangle} = \\int_a^b \\overline{g(x)} (x f(x)) \\,{\\mathrm{d}}x = \\int_{a}^b \\overline{x g(x)} f(x)\\,{\\mathrm{d}}x = {\\left\\langle{\\hat{M}}_x g,f\\right\\rangle}\\)\n\\(\\Rightarrow {\\hat{M}}_x\\) is zelftoegevoegd / Hermitisch\n(\\({\\hat{M}}_x\\) is begrensd voor \\(L^2([a,b])\\) met compact interval \\([a,b]\\); zie H7)"
+  },
+  {
+    "objectID": "slides/H5.html#isometrische-en-unitaire-afbeeldingen",
+    "href": "slides/H5.html#isometrische-en-unitaire-afbeeldingen",
+    "title": "Hoofdstuk 5 - Inwendig product en orthogonaliteit",
+    "section": "Isometrische en unitaire afbeeldingen",
+    "text": "Isometrische en unitaire afbeeldingen\nBeschouw \\({\\hat{Q}}\\in \\mathcal{B}(V,W)\\):\n\nisometrisch \\(\\iff {\\hat{Q}}^\\dagger{\\hat{Q}}={\\hat{1}}_V\\)\nBewijs: \\(\\forall {v},{v}' \\in V\\): \\(d_W({\\hat{Q}}{v},{\\hat{Q}}{v}') = {\\left\\lVert{\\hat{Q}}{v}- {\\hat{Q}}{v}'\\right\\rVert} = d_V({v},{v}') = {\\left\\lVert{v}-{v}'\\right\\rVert}\\)\n\\(\\iff {\\left\\lVert{\\hat{Q}}{v}\\right\\rVert} = {\\left\\lVert{v}\\right\\rVert}\\) voor alle \\({v}\\in V\\)\n\\(\\iff {\\left\\langle{v},{\\hat{Q}}^\\dagger {\\hat{Q}}{v}\\right\\rangle} = {\\left\\langle{v},{v}\\right\\rangle}\\) of dus \\({\\left\\langle{v},({\\hat{Q}}^\\dagger{\\hat{Q}}-{\\hat{1}}_V){v}\\right\\rangle}=0\\) voor alle \\({v}\\in V\\)\n\\(\\iff {\\left\\langle{v},{\\hat{Q}}^\\dagger {\\hat{Q}}{w}\\right\\rangle} = {\\left\\langle{v},{w}\\right\\rangle}\\) voor alle \\({v},{w}\\in V\\)\n(\\(\\Leftarrow\\) triviaal, \\(\\Rightarrow\\) via \\({\\left\\langle{v}+a{w},({\\hat{Q}}^\\dagger {\\hat{Q}}-{\\hat{1}}_V)({v}+a{w})\\right\\rangle}=0\\) en \\(a\\) juist kiezen)\nuit H4: isometrisch \\(\\implies\\) injectief\nals ook surjectief (en dus bijectief): unitaire transformatie ( orthogonaal als \\({\\mathbb{F}}={\\mathbb{R}}\\))\nals \\({\\hat{U}}^{-1}\\) bestaat en \\({\\hat{U}}^\\dagger {\\hat{U}}={\\hat{1}}_V\\) \\(\\implies\\) \\({\\hat{U}}^{-1}={\\hat{U}}^\\dagger\\) en dus \\({\\hat{U}}{\\hat{U}}^\\dagger = {\\hat{1}}_W\\)"
+  },
+  {
+    "objectID": "slides/H5.html#isometrische-en-unitaire-afbeeldingen-1",
+    "href": "slides/H5.html#isometrische-en-unitaire-afbeeldingen-1",
+    "title": "Hoofdstuk 5 - Inwendig product en orthogonaliteit",
+    "section": "Isometrische en unitaire afbeeldingen",
+    "text": "Isometrische en unitaire afbeeldingen\n\n(zoals steeds) \\(V, W\\) met \\(\\mathop{\\mathrm{dim}}(V) = \\mathop{\\mathrm{dim}}(W)\\) eindig: isometrisch \\(\\iff\\) unitair\n\ntegenvoorbeeld als oneindig-dimensionaal: \\(V=W = \\ell^2({\\mathbb{N}}_0)\\)\n\\({\\hat{T}}{\\hat{S}}={\\hat{S}}^\\dagger{\\hat{S}} = {\\hat{1}}\\) en \\({\\hat{S}}{\\hat{S}}^\\dagger = {\\hat{P}}\\) met \\({\\hat{P}}(v^1,v^2,v^3,\\ldots) = (0, v^2, v^3,\\ldots)\\)\n\nals unitaire afbeelding \\(V \\to W\\) bestaat: \\(V \\cong W\\) isomorf als Hilbertruimten\n\nelke \\(n\\)-dimensionale Hilbertruimteruimte is isomorf met \\({\\mathbb{C}}^n\\) met Euclidisch inwendig product (via keuze van orthonormale basis)\nelke (separabele) oneindig-dimensionale Hilbertruimte is isomorf met \\(\\ell^2({\\mathbb{N}}_0)\\) via keuze van een complete orthonormale rij = orthonormale basis\n\nvoor \\({\\hat{S}}\\in\\mathop{\\mathrm{End}}(V)\\) met \\({\\hat{S}} = -{\\hat{S}}^\\dagger\\):\n\\({\\hat{U}} = \\exp({\\hat{S}})\\) is unitaire transformatie van \\(V\\) naar zichzelf\n\n\\(\\exp({\\hat{S}})^{-1} = \\exp(-{\\hat{S}}) = \\exp({\\hat{S}}^\\dagger)=\\exp({\\hat{S}})^\\dagger\\)\nvaak geschreven als \\({\\hat{U}}=\\exp({\\mathrm{i}}{\\hat{H}})\\) met \\({\\hat{H}}={\\hat{H}}^\\dagger\\)\n\n\\({\\hat{Q}}\\) isometrisch maar niet unitair: \\({\\hat{Q}}{\\hat{Q}}^\\dagger\\) is orthogonale projector"
+  },
+  {
+    "objectID": "slides/H5.html#isometrische-en-unitaire-matrices",
+    "href": "slides/H5.html#isometrische-en-unitaire-matrices",
+    "title": "Hoofdstuk 5 - Inwendig product en orthogonaliteit",
+    "section": "Isometrische en unitaire matrices",
+    "text": "Isometrische en unitaire matrices\n\nunitaire matrices \\({\\mathsf{U}} \\in {\\mathbb{C}}^{n\\times n}\\): basistransformatie tussen orthonormale basissen\n\n\\(B_V = \\{{e}_1,{e}_2,\\ldots,{e}_n\\}\\) en \\(\\tilde{B}_V = \\{\\tilde{{e}}_1,\\tilde{{e}}_2,\\ldots,\\tilde{{e}}_n\\}\\)\n\\(\\tilde{{e}}_i = U^j_{\\ i} {e}_{j}\\)\n\\(\\delta_{ij} = {\\left\\langle\\tilde{{e}}_i,\\tilde{{e}}_j\\right\\rangle} = \\overline{U^k_{\\ i}} U^l_{\\ j} {\\left\\langle{e}_k,{e}_l\\right\\rangle} = \\overline{U^k_{\\ i}} U^l_{\\ j} \\delta_{kl}\\) of dus \\({\\mathsf{U}}^{\\mathsf{H}}{\\mathsf{U}} = {\\mathsf{I}}\\)\n\nisometrische matrix \\({\\mathsf{Q}} \\in {\\mathbb{C}}^{m \\times n}\\) met \\(m \\geq n\\):\n\nisometrische afbeelding van \\({\\mathbb{C}}^n\\) naar \\({\\mathbb{C}}^m\\)\n(of: matrixrepresentatie van isometrische afbeelding \\(V \\to W\\) ten opzichte van orthonormale basissen in \\(V\\) en \\(W\\))\nkolommen van \\({\\hat{Q}}\\) definiëren orthonormale basis \\(\\{\\boldsymbol{q}_1,\\ldots,\\boldsymbol{q}_n\\}\\) voor \\(n\\)-dimensionale deelruimte \\(W {\\preccurlyeq}{\\mathbb{C}}^m\\).\n\\({\\mathsf{P}}_W = \\sum_{i=1}^n \\boldsymbol{q}_i \\boldsymbol{q}_i^{\\mathsf{H}}= {\\mathsf{Q}}{\\mathsf{Q}}^{\\mathsf{H}}\\) en \\({\\mathsf{P}}_{W^\\perp} = {\\mathsf{I}}- {\\mathsf{Q}}{\\mathsf{Q}}^{\\mathsf{H}}\\)\n\\(\\rightarrow\\) andere orthonormale basis voor \\(W\\): \\({\\mathsf{\\tilde{Q}}} ={\\mathsf{Q}} {\\mathsf{U}}\\) met \\({\\mathsf{U}}\\in{\\mathbb{C}}^{n\\times n}\\) unitair \\(\\Rightarrow\\) \\({\\mathsf{P}}_W = {\\mathsf{\\tilde{Q}}}{\\mathsf{\\tilde{Q}}}^\\dagger = {\\mathsf{Q}}{\\mathsf{Q}}^\\dagger\\)"
+  },
+  {
+    "objectID": "slides/H5.html#anti-unitaire-transformatie",
+    "href": "slides/H5.html#anti-unitaire-transformatie",
+    "title": "Hoofdstuk 5 - Inwendig product en orthogonaliteit",
+    "section": "Anti-unitaire transformatie",
+    "text": "Anti-unitaire transformatie\n\\({\\hat{A}}\\) een antilineaire operator tussen complexe Hilbertruimten \\(V\\) en \\(W\\)\n\nDefinitie van toegevoegde:\n\\[{\\left\\langle{w},{\\hat{A}}{v}\\right\\rangle} = \\overline{{\\left\\langle{\\hat{A}}^\\dagger{w},{v}\\right\\rangle}} = {\\left\\langle{v},{\\hat{A}}^\\dagger {w}\\right\\rangle}, \\qquad \\forall {v}\\in V, {w}\\in W\\]\nAntilineair en isometrisch: \\({\\hat{A}}^\\dagger {\\hat{A}} = {\\hat{1}}_V\\) of dus \\({\\left\\langle{\\hat{A}} {v}_1,{\\hat{A}} {v}_2\\right\\rangle} = {\\left\\langle{v}_2,{v}_1\\right\\rangle}\\), \\(\\forall {v}_1,{v}_2 \\in V\\)\nAntilineair en isometrisch en bijectief: anti-unitair\n\nbelangrijke rol in kwantummechanica:\nalle geldige transformaties zijn unitair of anti-unitair (Wigner)\nvoorbeeld van anti-unitair: tijdsomkeringssymmetrie"
+  },
+  {
+    "objectID": "slides/H5.html#normale-operatoren",
+    "href": "slides/H5.html#normale-operatoren",
+    "title": "Hoofdstuk 5 - Inwendig product en orthogonaliteit",
+    "section": "Normale operatoren",
+    "text": "Normale operatoren\n\n\\({\\hat{A}} \\in \\mathop{\\mathrm{End}}(V)\\) voldoet aan \\({\\hat{A}}{\\hat{A}}^\\dagger = {\\hat{A}}^\\dagger{\\hat{A}}\\): normale operator\nspeciale gevallen van normaal:\n\nzelftoegevoegde operator: \\({\\hat{A}} = {\\hat{A}}^\\dagger\\)\nunitaire operator: \\({\\hat{A}}{\\hat{A}}^\\dagger = {\\hat{A}}^\\dagger{\\hat{A}} = {\\hat{1}}_V\\)\n\nVoor alle \\({\\hat{A}} \\in \\mathop{\\mathrm{End}}(V)\\): \\({\\hat{A}} = \\underbrace{\\frac{{\\hat{A}}+{\\hat{A}}^\\dagger}{2}}_{{\\hat{A}}_{\\text{r}}} + {\\mathrm{i}}\\underbrace{\\frac{{\\hat{A}} - {\\hat{A}}^\\dagger}{2{\\mathrm{i}}}}_{{\\hat{A}}_{\\text{i}}}\\)\nnormaal \\(\\iff {\\left[{\\hat{A}}_{\\text{r}},{\\hat{A}}_{\\text{i}}\\right]}={\\hat{0}}\\)\n\\(\\Rightarrow\\) \\({\\hat{A}}_{\\text{r}}\\) en \\({\\hat{A}}_{\\text{i}}\\) gelijktijdig diagonaliseerbaar?"
+  },
+  {
+    "objectID": "slides/H5.html#normale-operatoren-eigenschappen",
+    "href": "slides/H5.html#normale-operatoren-eigenschappen",
+    "title": "Hoofdstuk 5 - Inwendig product en orthogonaliteit",
+    "section": "Normale operatoren: eigenschappen",
+    "text": "Normale operatoren: eigenschappen\n\n\\({\\hat{A}}\\in \\mathop{\\mathrm{End}}(V)\\): normaal \\(\\iff\\) \\(\\forall {v}\\in V: {\\left\\lVert{\\hat{A}}{v}\\right\\rVert} = {\\left\\lVert{\\hat{A}}^\\dagger{v}\\right\\rVert}\\)\n\\({\\hat{A}} \\in \\mathop{\\mathrm{End}}(V)\\) en normaal en \\({\\hat{A}}{v}= \\lambda {v}\\):\n\n\\({\\hat{A}}^\\dagger {v}= {\\overline{\\lambda}} {v}\\) (uit voorgaande)\n\\({\\hat{A}}_{\\text{r}}{v}= \\mathop{\\mathrm{Re}}(\\lambda) {v},\\quad{\\hat{A}}_{\\text{i}}{v}= \\mathop{\\mathrm{Im}}(\\lambda) {v}\\) (triviaal uit voorgaande)\n\\({\\hat{A}}{w}= \\mu {w}\\) met \\(\\mu \\neq \\lambda \\implies {\\left\\langle{v},{w}\\right\\rangle}=0\\) (bewijs aan bord)\n\n\\({\\hat{A}} \\in \\mathop{\\mathrm{End}}(V)\\) en normaal: \\({\\left\\lVert{\\hat{A}}^n\\right\\rVert} = {\\left\\lVert{\\hat{A}}\\right\\rVert}^n\\) (bewijs aan bord)\n\n\\({\\left\\lVert{\\hat{A}}\\right\\rVert} = \\rho_{{\\hat{A}}}\\) (spectraalstraal, volgt direct uit Gelfand’s formule)\n\\({\\hat{A}}\\) kan niet nilpotent zijn (bewijs aan bord)\n\\(V\\) eindig-dimensionaal:\n\\({\\hat{A}}\\) is diagonaliseerbaar en eigenvectoren kunnen als orthonormale basis gekozen worden (zie H6)"
+  },
+  {
+    "objectID": "slides/H5.html#hilbert-schmidt-inwendig-product",
+    "href": "slides/H5.html#hilbert-schmidt-inwendig-product",
+    "title": "Hoofdstuk 5 - Inwendig product en orthogonaliteit",
+    "section": "Hilbert-Schmidt inwendig product",
+    "text": "Hilbert-Schmidt inwendig product\nInwendig product voor lineaire afbeeldingen \\({\\hat{A}} \\in \\mathcal{B}(V,W)\\)?\n\ngeïnduceerde norm is niet afkomstig van inwendig product\nnieuwe definitie: Hilbert-Schmidt inwendig product\n\\({\\left\\langle{\\hat{A}},{\\hat{B}}\\right\\rangle}_{\\text{HS}} = \\left.\\mathop{\\mathrm{tr}}\\right._V({\\hat{A}}^\\dagger {\\hat{B}})= \\sum_{n} {\\left\\langle{e}_n,{\\hat{A}}^\\dagger {\\hat{B}} {e}_n\\right\\rangle}_V = \\sum_{n} {\\left\\langle{\\hat{A}} {e}_n,{\\hat{B}} {e}_n\\right\\rangle}_W\\) \\(= \\sum_{m,n} {\\left\\langle{\\hat{A}}{e}_n,{f}_m\\right\\rangle}_W {\\left\\langle{f}_m,{\\hat{B}}{e}_n\\right\\rangle}_W = \\sum_{m,n} {\\left\\langle{e}_n,{\\hat{A}}^\\dagger{f}_m\\right\\rangle}_V {\\left\\langle{\\hat{B}}^\\dagger {f}_m,{e}_n\\right\\rangle}_W\\) \\(= \\sum_{m} {\\left\\langle{\\hat{B}}^\\dagger {f}_m,{\\hat{A}}^\\dagger {f}_m\\right\\rangle} = \\left.\\mathop{\\mathrm{tr}}\\right._W({\\hat{B}}{\\hat{A}}^\\dagger)\\)\nmet dan ook Hilbert-Schmidt norm \\({\\left\\lVert{\\hat{A}}\\right\\rVert}_{\\text{HS}} = \\mathop{\\mathrm{tr}}({\\hat{A}}^\\dagger {\\hat{A}})^{1/2}\\)\n\neindig-dimensionaal / matrices: \\({\\left\\lVert{\\mathsf{A}}\\right\\rVert}_{\\text{HS}} = {\\left\\lVert{\\mathsf{A}}\\right\\rVert}_{\\text{F}}\\) (Frobenius)\noneindig-dimensionaal: \\({\\left\\lVert{\\hat{A}}\\right\\rVert}_{\\text{HS}}\\) kan divergeren voor begrensde operatoren\n\\(\\rightarrow\\) voorbeeld: \\({\\left\\lVert{\\hat{1}}\\right\\rVert}_{\\text{HS}} = \\sqrt{\\mathop{\\mathrm{dim}}(V)}\\)\nHilbert-Schmidt operatoren = operatoren \\({\\hat{A}}\\) met \\({\\left\\lVert{\\hat{A}}\\right\\rVert}_{\\text{HS}}\\) eindig\n(spelen belangrijke theoretische rol in H7 en H8: Greense functies)"
+  },
+  {
+    "objectID": "slides/H5.html#overgedetermineerd-stelsel",
+    "href": "slides/H5.html#overgedetermineerd-stelsel",
+    "title": "Hoofdstuk 5 - Inwendig product en orthogonaliteit",
+    "section": "Overgedetermineerd stelsel",
+    "text": "Overgedetermineerd stelsel\n\\({\\mathsf{A}} \\boldsymbol{x} = \\boldsymbol{y}\\) met \\(m\\) vergelijkingen voor \\(n &lt; m\\) onbekenden:\n\n\\({\\mathsf{A}} \\in {\\mathbb{F}}^{m \\times n}\\), \\(\\boldsymbol{x} \\in {\\mathbb{F}}^n\\) en \\(\\boldsymbol{y} \\in {\\mathbb{F}}^m\\)\n\\(\\mathop{\\mathrm{dim}}(\\mathop{\\mathrm{im}}({\\mathsf{A}})) = \\mathop{\\mathrm{rank}}({\\mathsf{A}}) &lt; m\\):\nniet voor alle \\(\\boldsymbol{y} \\in {\\mathbb{F}}^m\\) bestaat er een exacte oplossing\naanname: \\({\\mathsf{A}}\\) heeft “volle rang” / maximale rang: \\(\\mathop{\\mathrm{rank}}({\\mathsf{A}})=n\\)\nkleinste-kwadratenoplossing:\n\\[\\boldsymbol{x}^\\ast = \\mathop{\\mathrm{arg\\ min}}_{\\boldsymbol{x} \\in {\\mathbb{F}}^n} {\\left\\lVert{\\mathsf{A}}\\boldsymbol{x} - \\boldsymbol{y}\\right\\rVert}_2\\]\northogonale-projectietheorema: \\({\\mathsf{A}}\\boldsymbol{x}^\\ast = {\\mathsf{P}}_{\\mathop{\\mathrm{im}}({\\mathsf{A}})} \\boldsymbol{y}\\)\nmet behulp van \\({\\mathsf{A}}={\\mathsf{Q}}{\\mathsf{R}}\\): \\({\\mathsf{P}}_{\\mathop{\\mathrm{im}}({\\mathsf{A}})} = {\\mathsf{Q}}{\\mathsf{Q}}^{\\mathsf{H}}\\)\n\n\\({\\mathsf{Q}}{\\mathsf{R}}\\boldsymbol{x}^\\ast = {\\mathsf{Q}}{\\mathsf{Q}}^{\\mathsf{H}}\\boldsymbol{y} \\implies \\boldsymbol{x}^\\ast = {\\mathsf{R}}^{-1}{\\mathsf{Q}}^{\\mathsf{H}}\\boldsymbol{y}\\)\n\\({\\mathsf{R}}^{-1}{\\mathsf{Q}}^{\\mathsf{H}}= ({\\mathsf{A}}^{\\mathsf{H}}{\\mathsf{A}})^{-1} {\\mathsf{A}}^{\\mathsf{H}}= {\\mathsf{A}}^+\\) (Moore-Penrose pseudo-inverse)\n(meer details in volgend hoofdstuk)"
+  },
+  {
     "objectID": "slides/H2.html",
     "href": "slides/H2.html",
     "title": "Hoofdstuk 2 - Lineaire afbeeldingen",
