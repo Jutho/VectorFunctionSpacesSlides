@@ -2,10 +2,10 @@
 title: "Hoofdstuk 5 - Inwendig product en orthogonaliteit"
 author: "Jutho Haegeman"
 date: "10/24/2023"
-# format:
-#   revealjs:
-#     theme: solarized
-#     chalkboard: true
+format:
+  revealjs:
+    theme: solarized
+    chalkboard: true
 ---
 
 ## Doel van dit hoofdstuk
@@ -493,7 +493,7 @@ Beschouw rij $(\ve_n, n \in \bbN_0)$ van orthonormale vectoren:
 
 * meer algemeen: **Parseval's identiteit**
 
-  $$\inner{\vv}{\vw} = \sum_{i=1}^{+\infty} \inner{\vv}{\ve_i}\inner{\ve_i}{\vw}$$
+  $$\inner{\vv}{\vw} = \sum_{i=1}^{+\infty} \inner{\vv}{\ve_i}\inner{\ve_i}{\vw} = \sum_{i=1}^{+\infty}\conj{\inner{\ve_i}{\vv}}\inner{\ve_i}{\vw} $$
 
 * de lineaire afbeelding $\vv \mapsto \sum_{i=1}^{+\infty} \ve_i \inner{\ve_i}{\vv}$ gedraagt zich als $\id_V$:
 
@@ -538,7 +538,7 @@ Gram-Schmidt proces / algoritme:
 	\vw_k &= \vv_k - \sum_{j=1}^{k-1}\inner{\vect{q}_j}{\vv_k} \vect{q}_j & \vect{q}_k = \vw_k / \norm{\vw_k}\\
 	&\ldots
 \end{align*}
-$\Rightarrow \vv_k = \sum_{j=1}^{k} R^{j}_{\ k} \vect{q}_{j}$ met $R^j_{\ k} = \inner{q_j}{\vv_k}$ en $R^k_{\ k} = \norm{\vv_k - \sum_{j=1}^{k-1}\vv_j}^2$
+$\Rightarrow \vv_k = \sum_{j=1}^{k} R^{j}_{\ k} \vect{q}_{j}$ met $R^j_{\ k} = \inner{q_j}{\vv_k}$ en $R^k_{\ k} = \norm{\vv_k - \sum_{j=1}^{k-1}R^j_{\ k} \vect{q}_j} = \norm{\vw_k}$
 
 Opmerking: $\vw_n$ kan enkel nul worden als $\vv_n$ lineair afhankelijk is van $\{\vv_1,\ldots,\vv_{n-1}\}$
 
@@ -564,15 +564,15 @@ Matrixversie: $\bbF^n$ met Euclidisch inwendig product
 # Lineaire functionalen en dualiteit van Hilbertruimten
 
 ## Lineaire functionalen
-Gegeven een Hilbertruimte $V$. 
+Gegeven een Hilbertruimte $V$:
 
 * Aan elke $\vv\in V$ associeren we een $\chi_\vv \in V^\ast$
   $$\chi_\vv: V \to \bbF : w \mapsto \chi_v[w] = \inner{\vv}{\vw}$$
 
   * Afbeelding $\vv \to \chi_{\vv}$ is antilineair (triviaal)
   * Afbeelding $\vv \to \chi_{\vv}$ is injectief (bewijs aan bord)
-  * Lineaire functionaal $\chi_\vv$ is continue en dus ook begrensd
-  * Inderdaad: $\abs{\chi_\vv[w]} \leq \norm{\vv} \norm{ww}$ (Cauchy-Schwarz)
+  * Lineaire functionaal $\chi_\vv$ is continu en dus ook begrensd
+  * Inderdaad: $\abs{\chi_\vv[w]} \leq \norm{\vv} \norm{\vw}$ (Cauchy-Schwarz)
 
 $\Rightarrow$ kunnen we elke (begrensde) functionaal zo bekomen?
 
@@ -583,9 +583,9 @@ Als $V$ eindig-dimensionaal met $B_V=\{\ve_1,\ldots,\ve_n\}$:
 * Duale basis $B^\ast_V=\{\varepsilon^1,\ldots,\varepsilon^n\}$: $\varepsilon^i[\ve_j] =\delta^i_{\ j}$
 * $\chi_\vv[w] = \inner{\vv}{\vw} = \overline{v^i} g_{ij} w^j = (\chi_\vv)_j w^j$
 
-  $\Rightarrow \chi_\vv = \overline{v^i} g_{ij} \epsilon^j$
+  $\Rightarrow \chi_\vv = \overline{v^i} g_{ij} \varepsilon^j$
 
-* Inverse metriek: $\mat{g}^{-1} \mat{g} = \idmat \iff g^{ij} g_{jk} = \delta^i_{\ k}$
+* Inverse metriek: $\mat{g}^{-1} \mat{g} = \idmat \iff \underbrace{g^{ij}}_{= (\mat{g}^{-1})^{ij}} g_{jk} = \delta^i_{\ k}$
 
 * $\xi[\vw] = \xi_j \vw^j \rightarrow \xi[\vw] = \inner{\vv_\xi}{\vw}$
 
@@ -608,7 +608,7 @@ Interpretatie en gevolgen:
 
 * $V$ en $V^\ast$ zijn (anti)isomorf als Hilbertruimten:
 
-  de bijectieve afbeelding $\vv \to \chi_\vv$ behoudt inwendig product en lineaire combinaties (meer met complexe toevoeging van scalaire factoren)
+  de bijectieve afbeelding $\vv \to \chi_\vv$ behoudt inwendig product en lineaire combinaties (maar met complexe toevoeging van scalaire factoren)
 
 ## Representatiestelling van Riesz {.smaller}
 
@@ -639,7 +639,7 @@ Hilbertruimten $(V, \inner{\ }{\ }_V)$ en $(W, \inner{\ }{\ }_W)$; lineaire afbe
     &= \sup_{\substack{\vv \in V, \vw \in W \\ \vv \neq \zerovec, \vw \neq \zerovec}} \frac{\abs{\inner{\vw}{\map{A}\vv}_W}}{\norm{\vw}_W \norm{\vv}_V} = \sup_{\substack{\vv \in V, \vw \in V \\ \norm{\vv}_V = 1, \norm{\vw}_W=1}} \abs{\inner{\vw}{\map{A}\vv}_W}.
   \end{align*}
 
-* $\ker(\map{A})$ is altijd gesloten deelruimte
+* $\ker(\map{A})$ van begrensde lineaire afbeelding is altijd gesloten deelruimte
 
 * $\im(\map{A})$ is niet noodzakelijk gesloten:
 
@@ -653,7 +653,7 @@ Hilbertruimten $(V, \inner{\ }{\ }_V)$ en $(W, \inner{\ }{\ }_W)$; lineaire afbe
 
 * Basis voor $W$: $B_W = \{\vf_1,\ldots,\vf_m\}$
 
-  $\Rightarrow$ Duale basis voor $W^\ast$: $B_W^\ast = \{\varphi^m1,\ldots,\varphi^m\}$
+  $\Rightarrow$ Duale basis voor $W^\ast$: $B_W^\ast = \{\varphi^1,\ldots,\varphi^m\}$
 
 * Matrixrepresentatie $\map{A}\ve_j = A^i_{\ j} \vf_i \Rightarrow A^i_{\ j} = \varphi^i[\map{A}\ve_j]$
 
@@ -661,7 +661,7 @@ Hilbertruimten $(V, \inner{\ }{\ }_V)$ en $(W, \inner{\ }{\ }_W)$; lineaire afbe
 
   * Inderdaad: $\varphi^i[\vf_j] = \delta^i_{\ j} = \inner{\vf_i}{\vf_j}$
 
-    $\Rightarrow$ $\vf_i$ is de vector geassocieerd aan de lineaire basisfunctionaal $\varphi^i$
+    $\Rightarrow$ $\vf_i$ is de vector die door de representatiestelling van Riesz wordt geassocieerd aan de lineaire basisfunctionaal $\varphi^i$
 
 ## Toegevoegde van een afbeelding
 
@@ -669,9 +669,11 @@ Voor elke $\map{A}\in \mathcal{B}(V,W)$ bestaat er een afbeelding in $\mathcal{B
 
 $$\inner{\vw}{\map{A}\vv} = \inner{\map{A}^\dagger\vw}{\vv},\quad \forall \vw \in W, \forall\vv \in V$$
 
-Eigenschappen:
+en $\norm{\map{A}^\dagger}=\norm{\map{A}}$
 
-* begrensd: $\norm{\map{A}^\dagger}=\norm{\map{A}}$
+
+Eigenschappen van $\dagger$ ('dagger'):
+
 * antilineair: $(a\map{A} + b \map{B})^\dagger = \conj{a} \map{A}^\dagger + \conj{b} \map{B}^\dagger$
 * anti-homomorphisme voor compositie: $(\map{A}\map{B})^\dagger = \map{B}^\dagger \map{A}^\dagger$
 * involutief: $\map{A}^{\dagger\dagger} = (\map{A}^\dagger)^\dagger = \map{A}$
