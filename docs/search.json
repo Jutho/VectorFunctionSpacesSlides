@@ -1022,11 +1022,18 @@
     "text": "Order By\n       Default\n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Title\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\nDate\n\n\nTitle\n\n\nAuthor\n\n\n\n\n\n\nSep 25, 2023\n\n\nHoofdstuk 1 - Elementaire wiskundige structuren\n\n\nJutho Haegeman\n\n\n\n\nSep 26, 2023\n\n\nHoofdstuk 2 - Lineaire afbeeldingen\n\n\nJutho Haegeman\n\n\n\n\nOct 10, 2023\n\n\nHoofdstuk 3 - Lineaire operatoren en eigenwaarden\n\n\nJutho Haegeman\n\n\n\n\nOct 17, 2023\n\n\nHoofdstuk 4 - Normen en afstanden\n\n\nJutho Haegeman\n\n\n\n\nOct 24, 2023\n\n\nHoofdstuk 5 - Inwendig product en orthogonaliteit\n\n\nJutho Haegeman\n\n\n\n\n\n\nNo matching items"
   },
   {
+    "objectID": "slides/H5.html",
+    "href": "slides/H5.html",
+    "title": "Hoofdstuk 5 - Inwendig product en orthogonaliteit",
+    "section": "",
+    "text": "$$ % Math operators % % \n% VECTORS\n% specifically for vectors in F^n \n% MATRICES\n% SCALARS \n% LINEAR MAPS\n% FIELDS \n% RELATIONS \n% % % % % % % % %\n%\n$$\n\n\nConcept van inwendig product:\n\ngeeft aanleiding tot lengte, oriëntatie, geometrie (bvb Pythogoras)\ngeeft ook aanleiding tot (antilinear) isomorfisme tussen vector ruimte en zijn duale\n\nConcept van orthogonaliteit: orthogonale projectie, orthogonale basis: enorm belangrijk voor zowel theorie als praktijk (numerieke algoritmen)"
+  },
+  {
     "objectID": "slides/H5.html#doel-van-dit-hoofdstuk",
     "href": "slides/H5.html#doel-van-dit-hoofdstuk",
     "title": "Hoofdstuk 5 - Inwendig product en orthogonaliteit",
-    "section": "Doel van dit hoofdstuk",
-    "text": "Doel van dit hoofdstuk\n\n$$ % Math operators % % \n% VECTORS\n% specifically for vectors in F^n \n% MATRICES\n% SCALARS \n% LINEAR MAPS\n% FIELDS \n% RELATIONS \n% % % % % % % % %\n%\n$$\n\n\nConcept van inwendig product:\n\ngeeft aanleiding tot lengte, oriëntatie, geometrie (bvb Pythogoras)\ngeeft ook aanleiding tot (antilinear) isomorfisme tussen vector ruimte en zijn duale\n\nConcept van orthogonaliteit: orthogonale projectie, orthogonale basis: enorm belangrijk voor zowel theorie als praktijk (numerieke algoritmen)"
+    "section": "",
+    "text": "$$ % Math operators % % \n% VECTORS\n% specifically for vectors in F^n \n% MATRICES\n% SCALARS \n% LINEAR MAPS\n% FIELDS \n% RELATIONS \n% % % % % % % % %\n%\n$$\n\n\nConcept van inwendig product:\n\ngeeft aanleiding tot lengte, oriëntatie, geometrie (bvb Pythogoras)\ngeeft ook aanleiding tot (antilinear) isomorfisme tussen vector ruimte en zijn duale\n\nConcept van orthogonaliteit: orthogonale projectie, orthogonale basis: enorm belangrijk voor zowel theorie als praktijk (numerieke algoritmen)"
   },
   {
     "objectID": "slides/H5.html#doel-van-dit-hoofdstuk-1",
