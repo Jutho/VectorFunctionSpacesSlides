@@ -18,6 +18,8 @@ website:
         text: H4
       - href: slides/H5.qmd
         text: H5
+      - href: slides/H6.qmd
+        text: H6
 
 format:
   html:
