@@ -1015,11 +1015,424 @@
     "text": "Footnotes\n\n\nHiervoor hebben we het volgende nodig: de productverzameling \\(X \\times Y\\) van twee metrische ruimten \\((X, d_X)\\) en \\((Y, d_Y)\\) is metrische ruimte, bevoorbeeld met metriek \\(d_{X,Y}((x,y), (x',y')) = d_X(x,x') + d_Y(y,y')\\)}↩︎\nExtremumstelling van Weierstrass: \\(\\sup\\) wordt \\(\\max\\) voor continue \\(f\\) begrensd interval \\([a,b]\\)↩︎"
   },
   {
+    "objectID": "slides/H7.html",
+    "href": "slides/H7.html",
+    "title": "Hoofdstuk 7 - Functieruimten",
+    "section": "",
+    "text": "$$ % Math operators % % \n% VECTORS\n% specifically for vectors in F^n \n% MATRICES\n% SCALARS \n% LINEAR MAPS\n% FIELDS \n% RELATIONS \n% % % % % % % % %\n%\n$$\n\n\nInzicht krijgen in de complicaties van het werken met functieruimten\nOrthonormale basissen voor functieruimten:\n\northogonale veeltermen:\n\nbelangrijkste eigenschappen\nvoornaamste families die relevant zijn in de fysica\n\nFourierreeks:\n\neigenschappen\nconvergentiesnelheid\nverband met discrete Fouriertransformatie"
+  },
+  {
+    "objectID": "slides/H7.html#doel-van-dit-hoofdstuk",
+    "href": "slides/H7.html#doel-van-dit-hoofdstuk",
+    "title": "Hoofdstuk 7 - Functieruimten",
+    "section": "",
+    "text": "$$ % Math operators % % \n% VECTORS\n% specifically for vectors in F^n \n% MATRICES\n% SCALARS \n% LINEAR MAPS\n% FIELDS \n% RELATIONS \n% % % % % % % % %\n%\n$$\n\n\nInzicht krijgen in de complicaties van het werken met functieruimten\nOrthonormale basissen voor functieruimten:\n\northogonale veeltermen:\n\nbelangrijkste eigenschappen\nvoornaamste families die relevant zijn in de fysica\n\nFourierreeks:\n\neigenschappen\nconvergentiesnelheid\nverband met discrete Fouriertransformatie"
+  },
+  {
+    "objectID": "slides/H7.html#doel-van-dit-hoofdstuk-1",
+    "href": "slides/H7.html#doel-van-dit-hoofdstuk-1",
+    "title": "Hoofdstuk 7 - Functieruimten",
+    "section": "Doel van dit hoofdstuk",
+    "text": "Doel van dit hoofdstuk\n\nBelangrijkste operatoren op functieruimten:\nintegraaloperatoren, multiplicatie-operatoren, differentiaaloperatoren\nEigenschappen van onbegrensde operatoren\n\nToegevoegde van onbegrensde operator\nVerschil tussen symmetrisch en zelftoegevoegd\nBelang hiervan in de context van differentiaaloperatoren en randvoorwaarden\n\nIntuitie krijgen voor de spectraaltheorie van begrensde en onbegrensde operatoren op oneindig-dimensionale Hilbertruimten aan de hand van relevante voorbeelden"
+  },
+  {
+    "objectID": "slides/H7.html#functieruimten",
+    "href": "slides/H7.html#functieruimten",
+    "title": "Hoofdstuk 7 - Functieruimten",
+    "section": "Functieruimten",
+    "text": "Functieruimten\nGegeven een vectorruimte \\(Y\\) over \\({\\mathbb{F}}\\) en een willekeurige verzameling \\(X\\):\nverzameling \\(X^Y\\) van functies \\(f:Y \\to X\\) vormt een vectorruimte over \\({\\mathbb{F}}\\), waarbij de lineaire structuur gewoon puntsgewijs wordt gedefinieerd m.b.v. deze van \\(Y\\):\n\\[(a f + b g)(x) = a f(x) + b g(x), \\forall x \\in X\\]\nVoorbeelden:\n\n\\(Y = {\\mathbb{F}}\\), \\(X = \\{1,\\ldots,n\\}\\): \\(Y^X \\cong {\\mathbb{F}}^n\\)\n\\(Y = {\\mathbb{F}}\\), \\(X = {\\mathbb{N}}_0\\): vectorruimte van oneindig lange rijen\n\n\\(\\rightarrow\\) functieruimte wordt typisch gebruikt in de context waar \\(X\\) onaftelbaar is:\n\n\\(X = [a,b]\\), \\(X = {\\mathbb{R}}\\), \\(X = \\Omega \\subseteq {\\mathbb{R}}^d\\)\n\n\\(\\rightarrow\\) bijkomende eigenschappen: continuïteit, kwadratische integreerbaarheid, … \n\nbelangrijk dat deze compatibel zijn met (behouden blijven onder) lineaire combinaties"
+  },
+  {
+    "objectID": "slides/H7.html#lebesgue-ruimten",
+    "href": "slides/H7.html#lebesgue-ruimten",
+    "title": "Hoofdstuk 7 - Functieruimten",
+    "section": "Lebesgue-ruimten",
+    "text": "Lebesgue-ruimten\nWe willen ook graag minstens een norm (vanaf sectie 7.2: inwendig product):\n\\[f:X \\to Y \\quad \\rightarrow \\quad{\\left\\lVert f\\right\\rVert}_p = \\left(\\int_{X} {\\left\\lVert f(x)\\right\\rVert}_Y^p \\,{\\mathrm{d}}x\\right)^{1/p} \\quad ?\\]\n\n\\(Y\\) moet zelf reeds een norm hebben:\nvanaf nu \\(Y = {\\mathbb{F}}\\): \\({\\left\\lVert f(x)\\right\\rVert}_Y = {\\left\\lvert f(x)\\right\\rvert}\\) (voor de eenvoud, veralgemening triviaal)\nWe hebben een concept van integreren over \\(X\\) nodig \\(\\Rightarrow\\) bijkomende complicaties\n\n\\(X\\) voldoende regulier: vanaf nu \\(X = [a,b]\\subseteq {\\mathbb{R}}\\) of \\(X = {\\mathbb{R}}\\) (voor de eenvoud)\nde functie \\(f\\) moet “integreerbaar” zijn binnen het gebruikte integraalconcept\nde integraal mag niet divergeren\nde integraal moet voldoen aan driehoeksongelijkheid\nde integraal kan nul worden voor functies die niet de nul-functie zijn\n\n\n\\(\\rightarrow\\) beperken tot deelverzameling van functies: moet deelruimte zijn!"
+  },
+  {
+    "objectID": "slides/H7.html#lebesgue-ruimten-1",
+    "href": "slides/H7.html#lebesgue-ruimten-1",
+    "title": "Hoofdstuk 7 - Functieruimten",
+    "section": "Lebesgue-ruimten",
+    "text": "Lebesgue-ruimten\n\\(\\mathcal{L}^p(I,{\\mathbb{F}})\\) is de verzameling van functies \\(f:I\\to {\\mathbb{F}}\\) (met dus \\(I=[a,b]\\) of \\(I = {\\mathbb{R}}\\)) die integreerbaar zijn en waarvoor \\(\\int_I {\\left\\lvert f(x)\\right\\rvert}^p \\,{\\mathrm{d}}x\\) eindig is\n\npreciese definitie hangt af van integraalconcept\nals \\(f\\) integreerbaar is, is \\({\\left\\lvert f\\right\\rvert}^p\\) integreerbaar\nhet geval \\(p=\\infty\\) laten we voorlopig buiten beschouwing\n\\(\\mathcal{L}^p(I,{\\mathbb{F}})\\) vormt een vectorruimte (lineaire combinaties van twee integreerbare functies is integreerbaar, integraal van \\({\\left\\lvert a f(x) + b g(x)\\right\\rvert}^p\\) can begrensd worden met behulp van convexiteit van \\({\\left\\lvert\\cdot\\right\\rvert}^p\\)\nresulterende definitie \\({\\left\\lVert f\\right\\rVert}_p = \\left(\\int_I {\\left\\lvert f(x)\\right\\rvert}^p \\,{\\mathrm{d}}x\\right)^{1/p}\\) voldoet aan driehoeksongelijkheid (Minkowski)\n\\({\\left\\lVert f\\right\\rVert}_p\\) is niet positief definiet, er zijn niet-triviale functies waarvoor \\({\\left\\lVert f\\right\\rVert}_p = 0\\)\n\\(\\Rightarrow\\) seminorm"
+  },
+  {
+    "objectID": "slides/H7.html#van-seminorm-naar-norm",
+    "href": "slides/H7.html#van-seminorm-naar-norm",
+    "title": "Hoofdstuk 7 - Functieruimten",
+    "section": "Van seminorm naar norm",
+    "text": "Van seminorm naar norm\nObservatie 1:voor \\(f,g \\in \\mathcal{L}^p(I,{\\mathbb{F}})\\)\n\n\\({\\left\\lVert f\\right\\rVert}_p = 0\\) en \\({\\left\\lVert g\\right\\rVert}_p = 0\\) \\(\\Rightarrow {\\left\\lVert a f + b g\\right\\rVert}_p = 0\\)\n(wegens driehoeksongelijkheid en absolute homogeniteit)\n\\(\\Rightarrow\\) verzameling \\(U = \\{f | {\\left\\lVert f\\right\\rVert}_p = 0\\}\\) vormt deelruimte van \\(\\mathcal{L}^p(I,{\\mathbb{F}})\\)\nfuncties waarvoor \\({\\left\\lVert f - g\\right\\rVert}_{p} = 0 \\Leftrightarrow f-g \\in U\\) noemen we “bijna overal” gelijk zijn; dit is een equivalentierelatie\n\n\\(\\rightarrow\\) \\(L^p(I,{\\mathbb{F}}) = \\mathcal{L}^p(I,{\\mathbb{F}})/U\\): de vectorruimte van equivalentieklassen van functies die bijna overal gelijk zijn\n\n(in de praktijk werken we nog steeds gewoon met functies, die dan representatief zijn voor alle andere functies binnen die equivalentieklasse)"
+  },
+  {
+    "objectID": "slides/H7.html#van-seminorm-naar-norm-1",
+    "href": "slides/H7.html#van-seminorm-naar-norm-1",
+    "title": "Hoofdstuk 7 - Functieruimten",
+    "section": "Van seminorm naar norm",
+    "text": "Van seminorm naar norm\nObservatie 2: voor \\(f,g \\in \\mathcal{L}^p(I,{\\mathbb{F}})\\)\n\n\\({\\left\\lVert f - g\\right\\rVert}_{p} = 0\\) \\(\\Rightarrow {\\left\\lVert f\\right\\rVert}_p = {\\left\\lVert g\\right\\rVert}_p\\)\n(wegens \\({\\left\\lvert{\\left\\lVert f\\right\\rVert}-{\\left\\lVert g\\right\\rVert}\\right\\rvert} \\leq {\\left\\lVert f - g\\right\\rVert}\\), eveneens uit driehoeksongelijkheid)\n\\({\\left\\lVert f\\right\\rVert}_p\\) neemt voor alle functies binnen een equivalentieklasse dezelfde waarde aan\nmet elk element uit \\(L^p(I,{\\mathbb{F}})\\) kan een eenduidige waarde \\({\\left\\lVert f\\right\\rVert}_p\\) worden geassocieerd (onafhankelijk van de keuze \\(f\\) binnen de klasse)\nOp \\(L^p(I,{\\mathbb{F}})\\) is \\({\\left\\lVert\\cdot\\right\\rVert}_p\\) een norm\nIs \\(L^p(I,{\\mathbb{F}})\\) metrisch compleet (Banachruimte) ?\n\ndeze vraag ereist dat we integralen en limieten kunnen omdraaien, e.g.:\n\\[\\lim_{n\\to \\infty} \\int_I {\\left\\lvert f_n(x)\\right\\rvert}^p\\,{\\mathrm{d}}x = \\int_I {\\left\\lvert\\lim_{n\\to\\infty} f_n(x)\\right\\rvert}^p\\,{\\mathrm{d}}x = \\int_I \\lim_{n\\to\\infty} {\\left\\lvert f_n(x)\\right\\rvert}^p\\,{\\mathrm{d}}x \\quad ?\\]\ntegenvoorbeeld: \\(f_n(x) = 2n^2 \\exp(-n^2 x^2)\\)\n\\(\\Rightarrow\\): \\(f_n \\to 0\\) terwijl \\(\\int_0^1 f_n(x)\\,{\\mathrm{d}}x = 1 - \\exp(-n^2) \\to 1\\)"
+  },
+  {
+    "objectID": "slides/H7.html#lebesgue-integraal",
+    "href": "slides/H7.html#lebesgue-integraal",
+    "title": "Hoofdstuk 7 - Functieruimten",
+    "section": "Lebesgue-integraal",
+    "text": "Lebesgue-integraal\n\nRiemann-integraal \\(\\int_a^b f(x)\\,{\\mathrm{d}}x\\):\n\npartitie \\(P\\) van \\([a,b]\\): \\(\\Delta_k = [x_{k-1},x_k]\\) met \\(a = x_0 &lt; x_1 &lt; \\ldots &lt; x_{n_1} &lt; x_n=b\\)\n\\(m_k = \\inf_{x \\in \\Delta_k} f(x)\\) en \\(M_k = \\sup_{x \\in \\Delta_k} f(x)\\):\n\\(s_{f,P} = \\sum_{k=1}^{n} m_k (x_k - x_{k-1})\\) en \\(S_{f,P} = \\sum_{k=1}^{n} M_k (x_k - x_{k-1})\\)\nintegraal bestaat als \\(s_f = \\sup_{P} s_{f,P} = \\inf_{P} S_{f,P} = S_f\\)\n(functies met “niet te veel” discontinuïteiten)\n\nwerkt niet voor bvb \\(\\chi_{\\mathbb{Q}}(x) = \\begin{cases} 1,& x \\in {\\mathbb{Q}}\\\\ 0,& x \\in {\\mathbb{R}}\\setminus {\\mathbb{Q}}\\end{cases}\\) (Dirichlet functie)\n\nVoorwaarden voor het omdraaien van limieten en integralen met Riemann-integraal zijn heel streng\nEr zijn rijen van integraarbare functies waarvoor de limiet bestaat maar niet (Riemann)-integreerbaar is"
+  },
+  {
+    "objectID": "slides/H7.html#lebesgue-integraal-1",
+    "href": "slides/H7.html#lebesgue-integraal-1",
+    "title": "Hoofdstuk 7 - Functieruimten",
+    "section": "Lebesgue-integraal",
+    "text": "Lebesgue-integraal\n\nLebesgue-integraal \\(\\int_a^b f(x)\\,{\\mathrm{d}}x\\): eerst voor \\(0 \\leq f(x) \\leq M\\)\n\npartitie van \\([0,M]\\): \\(0 = y_0 &lt; y_1 &lt; \\ldots &lt; y_{n-1} &lt; y_n = M\\)\ninvers beeld (pre-image) \\(E_k = f^{-1}([y_{k-1},y_k))\\)\n\\(l_{f,P} = \\sum_{k=1}^{n} y_{k-1} \\mu(E_k)\\) en \\(L_{f,P} = \\sum_{k=1}^{n} y_k \\mu(E_k)\\)\nmet \\(\\mu(E_k)\\) de “grootte” (maat) van \\(E_k\\)"
+  },
+  {
+    "objectID": "slides/H7.html#lebesgue-integraal-2",
+    "href": "slides/H7.html#lebesgue-integraal-2",
+    "title": "Hoofdstuk 7 - Functieruimten",
+    "section": "Lebesgue-integraal",
+    "text": "Lebesgue-integraal\n\nProbleem zit verdoken in de maat \\(\\mu(E_k)\\):\n\\(E_k\\) is niet noodzakelijk een interval; meer algemene deelverzameling van \\({\\mathbb{R}}\\)\nWe willen graag:\n\n\\(\\mu([a,b]) = \\mu([a,b)) = \\mu((a,b]) = \\mu((a,b)) = b - a\\) (\\(\\forall a &lt; b \\in {\\mathbb{R}}\\))\n\\(\\mu\\left(\\bigcup\\{A_i, i= 1,2,\\ldots\\}\\right) = \\sum_{i} \\mu(A_i)\\) voor disjuncte verzamelingen \\(A_i\\) (countable additivity)\n\n\\(\\Rightarrow\\) een \\(\\mu\\) met deze eigenschappen kan niet worden gedefinieerd voor de collectie \\(\\mathcal{P}({\\mathbb{R}})\\) van alle mogelijke deelverzamelingen van \\({\\mathbb{R}}\\) (of van een interval binnen \\({\\mathbb{R}}\\))\n\\(\\Rightarrow\\) de definitie van \\(\\mu\\) wordt beperkt tot een subcollectie van toegelaten deelverzamelingen van \\({\\mathbb{R}}\\)\n\\(\\Rightarrow\\) een functie is Lebesgue-integreerbaar als alle inverse beelden \\(E_k = f^{-1}([y_{k-1},y_k))\\) van dit toegelaten type zijn\n\\(\\Rightarrow\\) een functie die Riemann-integreerbaar is, is Lebesgue-integreerbaar en de integralen hebben dezelfde waarde\n“Lebesgue integralen verhouden zich tot Riemann integralen zoals \\({\\mathbb{R}}\\) tot \\({\\mathbb{Q}}\\)”"
+  },
+  {
+    "objectID": "slides/H7.html#bijna-overal-en-maat-nul-nulverzamelingen",
+    "href": "slides/H7.html#bijna-overal-en-maat-nul-nulverzamelingen",
+    "title": "Hoofdstuk 7 - Functieruimten",
+    "section": "“Bijna overal” en “maat nul” (nulverzamelingen)",
+    "text": "“Bijna overal” en “maat nul” (nulverzamelingen)\n\nEen positieve functie \\(f\\) heeft \\(\\int_I f(x)\\,{\\mathrm{d}}x = 0\\) enkel als de verzameling \\(N=\\{x | f(x)&gt;0\\}\\) maat nul heeft: \\(\\mu(N) = 0\\)\nNulverzamelingen: verzamelingen \\(N\\) met \\(\\mu(N)=0\\)\n\nIndividueel punt\nAftelbaar eindig aantal punten\nOok onaftelbare verzamelingen kunnen maat nul hebben\n\nAndere “bijna overal” definities:\n\nfuncties \\(f\\) en \\(g\\) zijn bijna overal gelijk, als er een verzameling \\(N\\) bestaat met \\(\\mu(N)=0\\) zodat \\(f(x)=g(x)\\) voor alle \\(x \\in I \\setminus N\\)\n\\(\\lim_{n \\to \\infty} f_n\\) convergeert “bijna overal” puntsgewijs naar \\(f\\), als er een verzameling \\(N\\) bestaat met \\(\\mu(N)=0\\) zodat \\(\\lim_{n \\to \\infty} f_n(x) = f(x)\\) voor alle \\(x \\in I \\setminus N\\)"
+  },
+  {
+    "objectID": "slides/H7.html#compleetheid-van-lpimathbbf",
+    "href": "slides/H7.html#compleetheid-van-lpimathbbf",
+    "title": "Hoofdstuk 7 - Functieruimten",
+    "section": "Compleetheid van \\(L^p(I;{\\mathbb{F}})\\)",
+    "text": "Compleetheid van \\(L^p(I;{\\mathbb{F}})\\)\nTen opzichte van de Lebesgue-integraal zijn er stellingen die garanderen dat, voor een rij \\((f_n)\\) die “bijna overal” puntsgewijs convergeert naar \\(f\\),\n\n\\(\\lim_{n\\to \\infty} \\int_I f_n(x)\\),x = I {n} f_n(x),x$ als\n\\(\\forall n \\in {\\mathbb{N}}_0\\): \\(f_n(x) \\leq f_{n+1}(x)\\) “bijna overal”\nof\n\\(\\forall n \\in {\\mathbb{N}}_0\\): \\({\\left\\lvert f_n(x)\\right\\rvert} \\leq g(x)\\) “bijna overal” voor een integreerbare functie \\(g\\)\ndeze resultaten kunnen worden gebruikt om aan te tonen dat\n\\(L^p(I,{\\mathbb{F}})\\) is Banachruimte (stelling van Riesz-Fischer)\nuitbreidingen:\n\nvoor \\(p=\\infty\\): \\(L^\\infty(I,{\\mathbb{F}})\\) gedefinieerd via \\({\\left\\lVert f\\right\\rVert}_\\infty = \\mathrm{ess}\\ \\sup_{x\\in I} {\\left\\lvert f\\right\\rvert} = \\inf\\big\\{M \\geq 0 |\\ \\mu\\left(\\{x \\in I | {\\left\\lvert f(x)\\right\\rvert}&gt; M\\right\\}) = 0\\big\\}\\)\n\\(L^p_w(I,{\\mathbb{F}})\\) met norm \\({\\left\\lVert f\\right\\rVert}_{p,w} = \\left(\\int_{I} w(x) {\\left\\lvert f(x)\\right\\rvert}^p \\,{\\mathrm{d}}x\\right)^{1/p}\\) voor integreerbare functie \\(w\\) met \\(w(x)&gt;0\\) voor alle \\(x \\in I\\)"
+  },
+  {
+    "objectID": "slides/H7.html#bijkomende-opmeringen",
+    "href": "slides/H7.html#bijkomende-opmeringen",
+    "title": "Hoofdstuk 7 - Functieruimten",
+    "section": "Bijkomende opmeringen",
+    "text": "Bijkomende opmeringen\n\n\\(I = [a,b]\\) (compact): \\(L^p(I,{\\mathbb{F}}) {\\preccurlyeq}L^q(I,{\\mathbb{F}})\\) als \\(p &gt; q\\)\n\\(I = {\\mathbb{R}}\\): \\(L^p(I,{\\mathbb{F}})\\) en \\(L^q(I,{\\mathbb{F}})\\) hebben elk elementen die de andere niet bevat\nInteressante dichte deelruimtes als \\(I\\) compact:\n\npolynomen\ncontinue functies \\(C^0(I,{\\mathbb{F}})\\), gladde functies \\(C^\\infty(I,{\\mathbb{F}})\\), elke \\(C^k(I,{\\mathbb{F}})\\) voor \\(k \\in {\\mathbb{N}}\\)\n\n\\(\\Rightarrow \\overline{C^k(I,{\\mathbb{F}})} = L^p(I,{\\mathbb{F}})\\): sluiting hangt af van definitie limiet en dus van \\({\\left\\lVert\\cdot\\right\\rVert}_p\\)\nInteressante dichte deelruimtes als \\(I = {\\mathbb{R}}\\):\n\n\\(C_c^k(I,{\\mathbb{F}})\\): continu (afleidbare) functies met compacte “drager” (support)\n\\(\\rightarrow\\) \\(\\mathrm{supp}(f) = \\overline{\\{ x \\in I |\\ f(x) \\neq 0\\}} \\subseteq I\\)\n\n\\(L^p(I,{\\mathbb{F}})\\) is “separabel”: laat aftelbare fundamentele verzameling \\(S\\) toe\n(verzameling waarvoor geldt dat \\(\\overline{{\\mathbb{F}}S} = L^p(I,{\\mathbb{F}})\\), niet noodzakelijk een basis)\n\n\\(I\\) compact: \\(S=\\{x^k,k\\in{\\mathbb{N}}\\}\\), \\(S=\\{\\exp({\\mathrm{i}}\\frac{2\\pi}{L} x), k \\in{\\mathbb{Z}}\\}\\), \n\\(I = {\\mathbb{R}}\\): \\(S=\\{x^n \\chi_{[-N,N]}, n \\in {\\mathbb{N}}, N \\in {\\mathbb{N}}\\}\\)"
+  },
+  {
+    "objectID": "slides/H7.html#hilbertruimten-en-inwendig-product-1",
+    "href": "slides/H7.html#hilbertruimten-en-inwendig-product-1",
+    "title": "Hoofdstuk 7 - Functieruimten",
+    "section": "Hilbertruimten en inwendig product",
+    "text": "Hilbertruimten en inwendig product\n\n\\(L^2(I,{\\mathbb{F}})\\) is een Hilbertruimte: \\({\\left\\lVert\\cdot\\right\\rVert}_2\\) voldoet aan parallellogramregel en is afkomstig van het inwendig product\n\\[{\\left\\langle f,g\\right\\rangle} = \\int_I \\overline{f(x)}g(x)\\,{\\mathrm{d}}x\\]\n\\(L_w^2(I,{\\mathbb{F}})\\) is een Hilbertruimte: \\({\\left\\lVert\\cdot\\right\\rVert}_{2,w}\\) voldoet aan parallellogramregel en is afkomstig van het inwendig product\n\\[{\\left\\langle f,g\\right\\rangle}_w = \\int_I w(x) \\overline{f(x)}g(x)\\,{\\mathrm{d}}x\\]\nmet dus \\(w(x) &gt; 0\\) voor \\(x \\in I\\) (op nulverzameling na)\nnog algemener: \\({\\left\\langle f,g\\right\\rangle} = \\iint_I w(x,y) \\overline{f(x)}g(y)\\,{\\mathrm{d}}x{\\mathrm{d}}y\\) ?\n\\(\\rightarrow\\) weinig gebruikt, precieze voorwaarden op \\(w(x,y)\\) niet duidelijk"
+  },
+  {
+    "objectID": "slides/H7.html#orthogonale-veeltermen-1",
+    "href": "slides/H7.html#orthogonale-veeltermen-1",
+    "title": "Hoofdstuk 7 - Functieruimten",
+    "section": "Orthogonale veeltermen",
+    "text": "Orthogonale veeltermen\n\n\\(\\{x^n, n\\in{\\mathbb{N}}_0\\}\\) is een fundamentele verzameling voor:\n\n\\(L^2([a,b], {\\mathbb{F}})\\)\n\\(L^2_w(I, {\\mathbb{F}})\\) voor \\(I = {\\mathbb{R}}\\) of \\(I = {\\mathbb{R}}_{\\geq 0}\\) in combinatie met goed gekozen \\(w\\)\n\n\\(\\{x^n, n\\in{\\mathbb{N}}_0\\}\\) kan omgevormd worden tot een basis door de equivalente orthogonale/orthonormale rij te vormen via het Gram-Schmidt algoritme (en dan het expansietheoriem toe te passen)\nVerschillende families van orthogonale polynomen (door keuzes van \\(I\\) en \\(w\\))"
+  },
+  {
+    "objectID": "slides/H7.html#orthogonale-veeltermen-2",
+    "href": "slides/H7.html#orthogonale-veeltermen-2",
+    "title": "Hoofdstuk 7 - Functieruimten",
+    "section": "Orthogonale veeltermen",
+    "text": "Orthogonale veeltermen\nGram-Schmidt algoritme toegepast op \\(\\{x^n, n\\in{\\mathbb{N}}_0\\}\\) \\(\\Rightarrow\\) \\(\\{p_n(x), n \\in {\\mathbb{N}}_0\\}\\) met\n\n\\(p_n(x)\\) is een polynoom van graad \\(n\\) met reële coëfficiënten\n\nvolgt uit structuur Gram-Schmidt\n\\(p_n(x)\\) is orthogonaal op alle met polynomen van graad \\(&lt;n\\)\nniet steeds genormaliseerd: \\({\\left\\langle p_n,p_m\\right\\rangle}_w \\sim C_n \\delta_{n,m}\\)\nvoor symmetrisch interval en \\(w(x)=w(-x)\\):\n\\(p_n\\) bevat enkel even (oneven) machten van \\(x\\) voor \\(n\\) even (oneven)\n\n\\(x p_n(x) = a_{n} p_{n+1}(x) + b_n p_{n}(x) + c_{n} p_{n-1}(x)\\) (bewijs aan bord)\nmet \\(c_0 = 0\\) en \\(c_{n} {\\left\\langle p_{n-1},p_{n-1}\\right\\rangle}_w = a_{n-1} {\\left\\langle p_n,p_n\\right\\rangle}_w\\) \\(\\Rightarrow c_n = a_{n-1}\\)\n\nvermenigvuldigen met \\(x\\) heeft tridiagonale “matrixrepresentatie” t.o.v. basis \\(p_n\\)\nals normalisatie van basis \\(n\\)-onafhankelijk:\n\\(c_n = a_{n-1} \\Leftrightarrow\\) symmetrische matrixrepresentatie"
+  },
+  {
+    "objectID": "slides/H7.html#orthogonale-veeltermen-3",
+    "href": "slides/H7.html#orthogonale-veeltermen-3",
+    "title": "Hoofdstuk 7 - Functieruimten",
+    "section": "Orthogonale veeltermen",
+    "text": "Orthogonale veeltermen\n\nOrthogonale projector op deelruimte van polynomen van graad \\(n\\):\n\\[({\\hat{P}}_n f)(x) = \\int_I w(y) K_n(x,y) f(y)\\,{\\mathrm{d}}y = \\int_I w(y) \\left[\\sum_{k=0}^{n} \\frac{p_k(x) p_k(y)}{{\\left\\langle p_k,p_k\\right\\rangle}_w} \\right] f(y)\\,{\\mathrm{d}}y\\]\nmet hierin (Christoffel-Darboux formule): \\[\\sum_{k=0}^{n} \\frac{p_k(x) p_k(y)}{{\\left\\langle p_k,p_k\\right\\rangle}_w} = \\begin{cases} \\frac{a_n}{{\\left\\langle p_n,p_n\\right\\rangle}_w} \\frac{ p_{n+1}(x) p_n(y) - p_{n}(x) p_{n+1}(y)}{x-y},& x \\neq y\\\\\n  \\frac{a_n}{{\\left\\langle p_n,p_n\\right\\rangle}_w} ( p_{n+1}'(x) p_n(y) - p_{n}'(x) p_{n+1}(y)),& x = y\n\\end{cases}\\]\n(bewijs aan bord)\n\\(p_n\\) heeft \\(n\\) verschillende nulpunten in \\(I\\);\nde nulpunten van \\(p_n\\) liggen tussen deze van \\(p_{n+1}\\) in (alternerend)\n(bewijs aan bord)"
+  },
+  {
+    "objectID": "slides/H7.html#orthogonale-veeltermen-legendre",
+    "href": "slides/H7.html#orthogonale-veeltermen-legendre",
+    "title": "Hoofdstuk 7 - Functieruimten",
+    "section": "Orthogonale veeltermen: Legendre",
+    "text": "Orthogonale veeltermen: Legendre\n\n\\(I = [-1,+1]\\), \\(w(x)=1\\):\n\\[\\begin{equation}\n\\begin{split}\n  &P_0(x) = 1,\\quad P_1(x) = x,\\quad P_2(x) = \\frac{1}{2}(3 x^2 - 1),\\\\\n  &P_3(x) = \\frac{1}{2}(5x^3-3x),\\quad P_4(x) = \\frac{1}{8}(35 x^4 - 30x^2 + 3), \\quad \\ldots\n\\end{split}\n\\end{equation}\\]\nGenererende functie (Legendre 1782): \\(\\frac{1}{\\sqrt{1 - 2x t + t^2}} = \\sum_{n=0}^{+\\infty} P_n(x) t^n\\)\n\\(\\rightarrow\\) nuttig om eigenschappen aan te tonen:\n\nuit \\(\\int_{-1}^{+1} \\frac{1}{\\sqrt{1 - 2x t + t^2}} \\frac{1}{\\sqrt{1 - 2x s + s^2}} \\,{\\mathrm{d}}x = \\sum_{n,m=0}^{+\\infty} {\\left\\langle P_n,P_m\\right\\rangle} t^n s^m = \\frac{1}{\\sqrt{ts}} \\log \\frac{1 + \\sqrt{ts}}{1 - \\sqrt{ts}}\\)\n\\(\\Rightarrow {\\left\\langle P_n,P_m\\right\\rangle} = \\int_{-1}^{+1} P_n(x) P_m(x) \\,{\\mathrm{d}}x = \\frac{2}{2n +1} \\delta_{n,m}\\)\nuit afgeleide naar \\(t\\) \\(\\rightarrow\\) Bonnet recursieformule:\n\\((n+1) P_{n+1}(x) + n P_{n-1}(x) = (2n+1) x P_n(x)\\)\nRodrigues formule: \\(P_n(x) = \\frac{1}{2^n n!} \\frac{{\\mathrm{d}}^n\\ }{{\\mathrm{d}}x^n} (x^2 -1)^n\\)"
+  },
+  {
+    "objectID": "slides/H7.html#orthogonale-veeltermen-hermite",
+    "href": "slides/H7.html#orthogonale-veeltermen-hermite",
+    "title": "Hoofdstuk 7 - Functieruimten",
+    "section": "Orthogonale veeltermen: Hermite",
+    "text": "Orthogonale veeltermen: Hermite\n\n\\(I = {\\mathbb{R}}\\), \\(w(x)=\\exp(-x^2)\\): (polynomen worden kwadratisch integreerbaar)\n\\[\\begin{equation}\n\\begin{split}\n  &H_0(x) = 1,\\quad H_1(x) = 2x,\\quad H_2(x) = 4 x^2 - 2,\\\\\n  &H_3(x) = 8x^3-12x,\\quad H_4(x) = 16 x^4 - 48x^2 + 12, \\quad \\ldots\n\\end{split}\n\\end{equation}\\]\nGenererende functie: \\(\\exp( 2 x t - t^2) = \\sum_{n=0}^{+\\infty} \\frac{1}{n!} H_n(x) t^n\\)\n\\(\\rightarrow\\) nuttig om eigenschappen aan te tonen:\n\nuit \\(\\int_{-\\infty}^{+\\infty} {\\mathrm{e}}^{-x^2} {\\mathrm{e}}^{2x s - s^2} {\\mathrm{e}}^{2x s - s^2}\\,{\\mathrm{d}}x = \\sum_{m,n=0}^{+\\infty} \\frac{{\\left\\langle H_m,H_n\\right\\rangle}_w}{m! n!} s^m t^n = \\sqrt{\\pi} {\\mathrm{e}}^{2 s t}\\)\n\\(\\Rightarrow {\\left\\langle H_m,H_n\\right\\rangle}_w = \\int_{-\\infty}^{+\\infty} {\\mathrm{e}}^{-x^2} H_m(x) H_n(x)\\,{\\mathrm{d}}x = 2^n n! \\sqrt{\\pi} \\delta_{m,n}\\)\nuit afgeleide naar \\(t\\) \\(\\rightarrow\\) Bonnet recursieformule:\n\\(H_{n+1}(x) + 2n H_{n-1}(x) = 2 x H_{n}(x)\\)\nRodrigues formule: \\(H_n(x) = (-1)^n {\\mathrm{e}}^{x^2} \\frac{{\\mathrm{d}}^n}{{\\mathrm{d}}x^n} {\\mathrm{e}}^{-x^2}\\)\n\n\\(\\{\\phi_n(x) \\sim H_n(x) {\\mathrm{e}}^{-\\frac{x^2}{2}},n \\in {\\mathbb{N}}\\}\\)\nis orthogonale fundamentele verzameling (basis) voor \\(L^2({\\mathbb{R}},{\\mathbb{F}})\\)"
+  },
+  {
+    "objectID": "slides/H7.html#orthogonale-veeltermen-laguerre",
+    "href": "slides/H7.html#orthogonale-veeltermen-laguerre",
+    "title": "Hoofdstuk 7 - Functieruimten",
+    "section": "Orthogonale veeltermen: Laguerre",
+    "text": "Orthogonale veeltermen: Laguerre\n\n\\(I = [0,+\\infty)\\), \\(w(x)=\\exp(-x)\\):\n\\[\\begin{equation}\n\\begin{split}\n  &L_0(x) = 1,\\quad L_1(x) = 1-x,\\quad L_2(x) = \\frac{1}{2}(x^2 - 4x + 2),\\\\\n  &L_3(x) = \\frac{1}{6}(-x^3 + 9x^2 - 18 x +6)\\quad \\ldots\n\\end{split}\n\\end{equation}\\]\nGenererende functie: \\(\\frac{1}{1-t} \\exp\\left(-x\\frac{ t}{1 - t}\\right) = \\sum_{n=0}^{+\\infty} L_n(x) t^n\\)\n\\(\\rightarrow\\) nuttig om eigenschappen aan te tonen:\n\nuit \\(\\int_{0}^{+\\infty} {\\mathrm{e}}^{-x} \\frac{1}{1-s} \\exp\\left(\\frac{-x s}{1 - s}\\right)\\frac{1}{1-t} \\exp\\left(\\frac{-x t}{1 - t}\\right)\\,{\\mathrm{d}}x = \\sum_{m,n=0}^{+\\infty} {\\left\\langle L_m,L_n\\right\\rangle}_w s^mt^n = \\frac{1}{1-ts}\\)\n\\(\\Rightarrow {\\left\\langle L_m,L_n\\right\\rangle}_w = \\int_0^{+\\infty} {\\mathrm{e}}^{-x} L_m(x) L_n(x) \\,{\\mathrm{d}}x = \\delta_{m,n}\\)\nuit afgeleide naar \\(t\\) \\(\\rightarrow\\) Bonnet recursieformule:\n\\((n+1) L_{n+1}(x) + n L_{n-1}(x) = (2n + 1 - x) L_n(x)\\)\nRodrigues formule: \\(L_n(x) = \\frac{{\\mathrm{e}}^x}{n!} \\frac{{\\mathrm{d}}^n\\ }{{\\mathrm{d}}x^n} (x^n {\\mathrm{e}}^{-x})\\)"
+  },
+  {
+    "objectID": "slides/H7.html#orthogonale-veeltermen-chebyshev",
+    "href": "slides/H7.html#orthogonale-veeltermen-chebyshev",
+    "title": "Hoofdstuk 7 - Functieruimten",
+    "section": "Orthogonale veeltermen: Chebyshev",
+    "text": "Orthogonale veeltermen: Chebyshev\n\n\\(I = [-1,1]\\), \\(w(x) = (1-x^2)^{-1/2}\\):\n\\[\\begin{equation}\n\\begin{split}\n  &T_0(x) = 1,\\quad T_1(x) = x,\\quad T_2(x) = 2x^2-1,\\quad T_3(x) = 4x^3 - 3x,\\quad \\ldots\n\\end{split}\n\\end{equation}\\]\nGenererende functie: \\(\\frac{1- x t}{1 - 2x t+ t^2} = \\sum_{n=0}^{+\\infty} T_n(x) t^n\\)\nIn dit geval: \\({\\left\\langle f,g\\right\\rangle}_w = \\int_{-1}^{+1} \\frac{1}{\\sqrt{1-x^2}} f(x) g(x)\\,{\\mathrm{d}}x = \\int_{0}^{+\\pi} f(\\cos \\theta) g(\\cos \\theta) \\,{\\mathrm{d}}\\theta\\)\n\n\\(T_n(x) = T_n(\\cos \\theta) = \\cos(n \\theta) = \\cos(n \\arccos x)\\)\n\\[\\begin{align*}\n{\\left\\langle T_m,T_n\\right\\rangle}_w = \\int_{-1}^{+1} \\frac{T_m(x) T_n(x)}{\\sqrt{1-x^2}} \\,{\\mathrm{d}}x\n= \\int_0^{+\\pi} \\cos(m\\theta)\\cos(n\\theta)\\,{\\mathrm{d}}\\theta\n= \\begin{cases} \\pi, & m = n = 0\\\\ \\frac{\\pi}{2}    \\delta_{n,m}, &\\text{otherwise}\\end{cases}\n\\end{align*}\\]\n\\(T_{n\\pm 1}(\\cos \\theta) = \\cos(\\theta) \\cos(n \\theta) \\mp \\sin(\\theta) \\sin(n\\theta)\\):\nrecursierelatie \\(T_{n+1}(x) = 2x T_n(x) - T_{n-1}(x)\\)\n\n\n\\(\\rightarrow\\) vooral in numerieke analyse, statistiek, minder in fysica"
+  },
+  {
+    "objectID": "slides/H7.html#toepassing-gaussische-kwadratuur",
+    "href": "slides/H7.html#toepassing-gaussische-kwadratuur",
+    "title": "Hoofdstuk 7 - Functieruimten",
+    "section": "Toepassing: Gaussische kwadratuur",
+    "text": "Toepassing: Gaussische kwadratuur\n\nNumerieke benadering van integraal op basis van functiewaarden op een discrete, eindige verzameling \\(\\{x_i \\in I; i=1,\\ldots,n\\}\\):\n\\[\\int_I w(x) f(x)\\,{\\mathrm{d}}x \\approx \\sum_{i=1}^{n} a^i f(x_i)\\]\n\\(\\rightarrow\\) moet lineaire functionaal zijn van de functiewaarden \\(\\{f(x_i)\\}\\)\nmet \\(n\\) punten: benadering exact voor veeltermen van graad \\(\\leq n-1\\)\n\\[\\begin{equation}\n  \\begin{bmatrix}\n    1 & 1 & 1 & \\dots & 1\\\\\n    x_1 & x_2 & x_3 & \\dots & x_n\\\\\n    (x_1)^2 & (x_2)^2 & (x_3)^2 & \\dots & (x_n)^2\\\\\n    \\vdots & & & \\ddots & \\vdots\\\\\n    (x_1)^{n-1} & (x_2)^{n-1} & (x_3)^{n-1} & \\dots & (x_n)^{n-1}\n  \\end{bmatrix}\n  \\begin{bmatrix}\n    a^1 \\\\ a_2 \\\\ a_3 \\\\ \\vdots \\\\ a_{n}\n  \\end{bmatrix}\n  = \\begin{bmatrix}\n    b^0\\\\ b^1 \\\\ b^2 \\\\ \\vdots \\\\ b^{n-1}\n  \\end{bmatrix}\n\\end{equation}\\]\nmet \\(b^k = \\int_I w(x) x^k\\,{\\mathrm{d}}x\\): lineair systeem met Vandermonde matrix"
+  },
+  {
+    "objectID": "slides/H7.html#toepassing-gaussische-kwadratuur-1",
+    "href": "slides/H7.html#toepassing-gaussische-kwadratuur-1",
+    "title": "Hoofdstuk 7 - Functieruimten",
+    "section": "Toepassing: Gaussische kwadratuur",
+    "text": "Toepassing: Gaussische kwadratuur\n\nKunnen we beter doen als we de \\(\\{x_i\\}\\) slim kiezen?\nKunnnen we de benadering exact maken voor veeltermen tot graad \\(\\leq 2n-1\\) ?\nMoeilijk niet-lineair probleem?\nGauss: kies \\(\\{x_i; i=1,\\ldots,n\\}\\) als nulpunten van de orthogonale veelterm \\(p_n\\) geassocieerd aan \\(I\\) en \\(w\\)\n\nwe kiezen \\(a^i\\) zodat exact voor veeltermen tot graad \\(n-1\\)\n\\(\\int w(x) p_n(x) q(x)\\,{\\mathrm{d}}x = 0\\) voor elke \\(q\\) van graad \\(\\leq n-1\\)\n\\(\\rightarrow\\) benaderingsformule correct als \\(p_n(x_i) =0\\) voor elke \\(x_i\\)\nwillekeurige polynoom van graad \\(\\leq 2n-1\\):\n\\(f(x) = p_n(x) q(x) + r(x)\\) met \\(r(x)\\) veelterm met graad \\(\\leq n-1\\)\n\\(\\Rightarrow \\int w(x) f(x)\\,{\\mathrm{d}}x = \\int w(x) r(x)\\,{\\mathrm{d}}x = \\sum a^i r(x_i) = \\sum a^i f(x_i)\\)\n\nVandermonde-matrix inverteren is numeriek instabiel: eigenschappen van orthogonale veeltermen kunnen ook helpen om \\(a^i\\) te vinden\n\\(\\rightarrow\\): niet te kennen"
+  },
+  {
+    "objectID": "slides/H7.html#periodieke-functies",
+    "href": "slides/H7.html#periodieke-functies",
+    "title": "Hoofdstuk 7 - Functieruimten",
+    "section": "Periodieke functies",
+    "text": "Periodieke functies\n\nperiodieke functies \\(f:{\\mathbb{R}}\\to {\\mathbb{C}}\\) met \\(f(x+L) = f(x)\\)\n\nfunctiewaarden \\(x \\in [0,L)\\) \\(\\to\\) periodiek uitbreiden\nfunctie op circel \\(\\cong\\) 1-dimensionale torus \\({\\mathbb{T}}^1 = {\\mathbb{R}}/(L{\\mathbb{Z}})\\).\n\ntrigonometische veelterm van graad \\(n\\):\n\\[\\begin{align}\nf(x) &= \\frac{a_0}{2} + \\sum_{k=1}^{n} a_k \\cos\\left(\\frac{2\\pi}{L} k x\\right) + \\sum_{k=1}^n b_k \\sin\\left(\\frac{2\\pi}{L} k x\\right)= \\sum_{k=-n}^{+n} c_k \\exp\\left({\\mathrm{i}}\\frac{2\\pi}{L} k x\\right)\n\\end{align}\\]\n\n\\(a_k = c_k + c_{-k}\\) voor \\(k \\in {\\mathbb{N}}\\) en \\(b_k = {\\mathrm{i}}(c_k - c_{-k})\\) voor \\(k\\in {\\mathbb{N}}_0\\)\northonormale basis: \\(S=\\left\\{ \\varphi_k(x) = \\frac{1}{\\sqrt{L}} {\\mathrm{e}}^{+{\\mathrm{i}}\\frac{2\\pi}{L} k x};\\ k =-n,-n+1,\\dots,0,\\dots, n-1, n\\right\\}\\)\n\nmeerdimensionale Fourier-basis (\\(\\boldsymbol{x} \\in \\mathbb{T}^d = L_1 \\times L_2 \\times \\cdots \\times L_d\\)):\n\\[\\left\\{\\varphi_{\\boldsymbol{k}}(\\boldsymbol{x}) = \\frac{1}{(L_1 L_2 \\dots L_d)^{1/2}} {\\mathrm{e}}^{+{\\mathrm{i}}(\\frac{2\\pi}{L_1} k_1 x_1 + \\dots + \\frac{2\\pi}{L_d} k_d x_d)}; \\boldsymbol{k} \\in {\\mathbb{Z}}^d\\right\\}\\]"
+  },
+  {
+    "objectID": "slides/H7.html#trigonometrische-veeltermen-en-fouriercoefficiënten",
+    "href": "slides/H7.html#trigonometrische-veeltermen-en-fouriercoefficiënten",
+    "title": "Hoofdstuk 7 - Functieruimten",
+    "section": "Trigonometrische veeltermen en Fouriercoefficiënten",
+    "text": "Trigonometrische veeltermen en Fouriercoefficiënten\n\nFouriercoefficiënten: \\(\\widehat{f}_k = {\\left\\langle\\varphi_k,f\\right\\rangle} = \\frac{1}{\\sqrt{L}} \\int_{0}^{L} f(x) {\\mathrm{e}}^{-{\\mathrm{i}}\\frac{2\\pi}{L} x}\\,{\\mathrm{d}}x\\) (\\(\\forall k \\in {\\mathbb{Z}}\\))\nOrthogonale projector op trigonometrische veeltermen van graad \\(n\\):\n\\[\\begin{align}\n  f_n(x) =  ({\\hat{P}}_n f)(x) &= \\sum_{k=-n}^{+n} {\\left\\langle\\varphi_k,f\\right\\rangle} \\varphi_k(x)= \\sum_{k=-n}^{+n} \\widehat{f}_k \\varphi_k(x) = \\frac{1}{\\sqrt{L}} \\sum_{k=-n}^{+n} \\widehat{f}_k {\\mathrm{e}}^{+{\\mathrm{i}}\\frac{2\\pi}{L} k x} \\\\\n  &= \\sum_{k=-n}^{+n} \\frac{1}{L} \\int_0^L f(t) {\\mathrm{e}}^{+ {\\mathrm{i}}\\frac{2\\pi}{L} k (x - t)}\\,{\\mathrm{d}}t = \\int_0^L D_n(x-t) f(t)\\,{\\mathrm{d}}t\\label{eq:function:fourierapproximationn}\n\\end{align}\\]\nmet \\(D_n(x) = \\frac{1}{L} \\sum_{k=-n}^{+n} {\\mathrm{e}}^{+ {\\mathrm{i}}\\frac{2\\pi}{L} k x} = \\frac{\\sin\\left(\\frac{(2n+1)\\pi}{L}x\\right)}{L \\sin\\left(\\frac{\\pi}{L}x\\right)}\\) (Dirichlet kernel)\nFourierreeks: \\[\\lim_{n \\to \\infty} \\frac{1}{\\sqrt{L}} \\sum_{k=-n}^{+n} \\widehat{f}_k {\\mathrm{e}}^{+{\\mathrm{i}}\\frac{2\\pi}{L} k x}\\]"
+  },
+  {
+    "objectID": "slides/H7.html#fouriercoefficiënten-eigenschappen",
+    "href": "slides/H7.html#fouriercoefficiënten-eigenschappen",
+    "title": "Hoofdstuk 7 - Functieruimten",
+    "section": "Fouriercoefficiënten: eigenschappen",
+    "text": "Fouriercoefficiënten: eigenschappen\n\\[\\widehat{f}_k = {\\left\\langle\\varphi_k,f\\right\\rangle} = \\frac{1}{\\sqrt{L}} \\int_{0}^{L} f(x) {\\mathrm{e}}^{-{\\mathrm{i}}\\frac{2\\pi}{L} x}\\,{\\mathrm{d}}x\\]\n\nBestaan (\\(\\forall k \\in {\\mathbb{Z}}\\)) voor elke \\(f \\in L^1([0,L];{\\mathbb{C}})\\) met \\({\\left\\lvert\\widehat{f}_k\\right\\rvert} \\leq \\frac{1}{\\sqrt{L}} {\\left\\lVert f\\right\\rVert}_1 \\Rightarrow {\\left\\lVert\\widehat{f}\\right\\rVert}_{\\infty} = \\sup_{k \\in {\\mathbb{Z}}} {\\left\\lvert\\widehat{f}\\right\\rvert}_{\\infty} \\leq \\frac{1}{\\sqrt{L}}{\\left\\lVert f\\right\\rVert}_1\\)\nLineariteit: \\(h(x) = a f(x) + b g(x) \\implies \\widehat{h}_k = a \\widehat{f}_k + b \\widehat{g}_k\\)\nTranslatie (in ruimte/tijd): \\(h(x) = f(x-x_0) \\implies \\widehat{h}_k = {\\mathrm{e}}^{-{\\mathrm{i}}\\frac{2\\pi}{L}k x_0} \\widehat{f}_k\\)\nModulatie (verschuiging in frequentie): \\(h(x) = f(x) {\\mathrm{e}}^{{\\mathrm{i}}\\frac{2\\pi}{L} k_0 x} \\implies \\widehat{h}_k = \\widehat{f}_{k-k_0}\\)\nConjugatie: \\(h(x) = \\overline{f(x)} \\implies \\widehat{h}_k = \\overline{\\widehat{f}_{-k}}\\)\nTijd-/frequentie-omkering: \\(h(x) = f(-x) \\implies \\widehat{h}_k = \\widehat{f}_{-k}\\)\n(Discrete) herschaling: \\(h(x) = f(s x) \\implies \\widehat{h}_{k} = \\begin{cases} \\frac{1}{s}\\widehat{f}_{k/s} ,&\\text{$k$ is veelvoud van $s$}\\\\ 0,&\\text{anders}\\end{cases},\\quad\\forall s \\in {\\mathbb{N}}_0\\)"
+  },
+  {
+    "objectID": "slides/H7.html#convoluties",
+    "href": "slides/H7.html#convoluties",
+    "title": "Hoofdstuk 7 - Functieruimten",
+    "section": "Convoluties",
+    "text": "Convoluties\n\nConvolutie van periodieke functies:\n\\[\\begin{align}(f \\ast g)(x) &= \\int_0^L f(x-y \\mod L) g(y)\\,{\\mathrm{d}}y \\\\\n&= \\int_0^L f(y) g(x-y \\mod L)\\,{\\mathrm{d}}y = (g \\ast f)(x)\n\\end{align}\\]\n\nopnieuw periodieke functie\nvoor \\(f,g \\in L^1([0,L])\\) is \\(f\\ast g \\in L^1([0,L])\\) (aan bord)\n\nFouriercoefficiënten:\n\\(h(x) = (f \\ast g)(x) = \\int_0^L f(x-y \\mod L) g(y)\\,{\\mathrm{d}}y \\implies \\widehat{h}_k = \\sqrt{L} \\widehat{f}_k \\widehat{g}_k\\)"
+  },
+  {
+    "objectID": "slides/H7.html#convergentie-geen-stellingenbewijzen",
+    "href": "slides/H7.html#convergentie-geen-stellingenbewijzen",
+    "title": "Hoofdstuk 7 - Functieruimten",
+    "section": "Convergentie (geen stellingen/bewijzen)",
+    "text": "Convergentie (geen stellingen/bewijzen)\n\nBeschouw \\(f_n = \\frac{1}{\\sqrt{L}} \\sum_{k=-n}^{+n} \\widehat{f}_k {\\mathrm{e}}^{+{\\mathrm{i}}\\frac{2\\pi}{L} k x}\\)\nDe Fourierbasis is een fundamentele verzameling in \\(L^1([0,L],{\\mathbb{F}})\\):\ner bestaat een rij \\((\\tilde{f}_n)\\) van trigonometrische veeltermen zodat\n\\[\\lim_{n\\to \\infty} {\\left\\lVert\\tilde{f}_n - f\\right\\rVert}_1 = 0\\]\nvoor alle \\(f \\in L^1([0,L],{\\mathbb{F}})\\) (concreet: \\(\\tilde{f}_n = \\frac{f_0 + f_1+f_2+\\ldots+f_n}{n+1}\\)).\nWat zegt dit over \\(\\lim_{n\\to \\infty} {\\left\\lVert f_n - f\\right\\rVert}_2\\) ?\n\nbemerk dat \\(L^2([0,L],{\\mathbb{F}}) {\\preccurlyeq}L^1([0,L],{\\mathbb{F}})\\)\nmaar \\({\\left\\lVert\\cdot \\right\\rVert}_2\\) is strengere maat van convergentie\n\\(L^2([0,L],{\\mathbb{F}})\\) kan geen niet-triviale functies bevatten die loodrecht staan op alle Fourier/trigonometrische polynomen\n\n\\(\\rightarrow\\) expansiestelling: \\(\\lim_{n\\to \\infty} {\\left\\lVert f_n - f\\right\\rVert}_2=0\\)\n\\(\\implies \\sum_{k \\in {\\mathbb{Z}}} {\\left\\lvert\\widehat{f}_k\\right\\rvert}^2 = {\\left\\lVert\\widehat{f}\\right\\rVert}_2^2\\) en dus voor grote \\(k\\): \\({\\left\\lvert\\widehat{f}_k\\right\\rvert}\\) daalt sneller dan \\({\\left\\lvert k\\right\\rvert}^{-1/2}\\)"
+  },
+  {
+    "objectID": "slides/H7.html#gladheid-en-convergentiesnelheid",
+    "href": "slides/H7.html#gladheid-en-convergentiesnelheid",
+    "title": "Hoofdstuk 7 - Functieruimten",
+    "section": "Gladheid en convergentiesnelheid",
+    "text": "Gladheid en convergentiesnelheid\n\nEen periodieke functie is continu, i.e. \\(f \\in C^({\\mathbb{T}}^1_L)\\), als \\[\\begin{align*}\n      f(x) &= \\lim_{y \\to x} f(y), \\forall x \\in (0,L),&\\text{and}&&\\lim_{y \\stackrel{&gt;}{\\to} 0} f(y) &= \\lim_{y \\stackrel{&lt;}{\\to} L} f(y).\n  \\end{align*}\\]\n\\(f \\in C^p({\\mathbb{T}}^1_L)\\): \\(h(x) = f^{(p)}(x)\\implies \\widehat{h}_k = \\left({\\mathrm{i}}\\frac{2\\pi}{L} k\\right)^p \\widehat{f}_k\\) (bewijs via partiële integratie)\nConvergentiesnelheid voor uniforme convergentie: \\({\\left\\lVert f_n - f\\right\\rVert}_\\infty \\leq \\sqrt{\\frac{2}{L(2p-1)}} \\frac{1}{n^{p-1/2}} \\left[\\sum_{k \\in {\\mathbb{Z}}} {\\left\\lvert k\\right\\rvert}^{2p} {\\left\\lvert\\widehat{f}_k\\right\\rvert}^2\\right]^{1/2}\\) (zonder bewijs)\nvoor willekeurige \\(p &gt; 1/2\\)\n\nals Fourierreeks uniform convergeert, is limiet continu\nenkel mogelijk als \\(f\\) continu is: noodzakelijk maar niet voldoende\nals \\(f' \\in L^2([0,L],{\\mathbb{F}}) \\implies \\sum_{k\\in {\\mathbb{Z}}} {\\left\\lvert k\\right\\rvert}^2{\\left\\lvert\\widehat{f}_k\\right\\rvert}^2 = \\left(\\frac{L}{2\\pi}\\right)^2 {\\left\\lVert f'\\right\\rVert}_2^2 &lt; \\infty\\)\n\\(\\implies\\) Fourierreeks voor \\(f\\) convergeert uniform"
+  },
+  {
+    "objectID": "slides/H7.html#convoluties-herbekeken",
+    "href": "slides/H7.html#convoluties-herbekeken",
+    "title": "Hoofdstuk 7 - Functieruimten",
+    "section": "Convoluties herbekeken",
+    "text": "Convoluties herbekeken\n\nconvolutie \\(h = f \\ast g \\leftrightarrow \\widehat{h}_k = \\sqrt{L} \\widehat{f}_k \\ast \\widehat{g}_k\\)\n\n\\(f, g \\in L^2([0,L],{\\mathbb{F}}) \\implies {\\left\\lvert\\widehat{f}_k\\right\\rvert}\\), \\({\\left\\lvert\\widehat{g}_k\\right\\rvert} &lt; {\\left\\lvert k\\right\\rvert}^{-1/2}\\) \\(\\implies {\\left\\lvert\\widehat{h}_k\\right\\rvert} &lt; {\\left\\lvert k\\right\\rvert}^{-1}\\)\n\\(\\Rightarrow\\) \\(h=f \\ast g\\) heeft uniform convergerende Fourierreeks (en is dus continu)\n\nomgekeerde resultaat?\n\ndiscrete convolutie: \\(\\widehat{h}_k = (\\widehat{f}\\ast \\widehat{g})_k=\\sum_{l\\in {\\mathbb{Z}}} \\widehat{f}_{k-l} \\widehat{g}_l = \\sum_{l\\in {\\mathbb{Z}}} \\widehat{f}_{l} \\widehat{g}_{k-l} = (\\widehat{g}\\ast \\widehat{f})_k\\)\n\\(h(x) = f(x) g(x)\\implies \\widehat{h}_k =\\frac{1}{\\sqrt{L}} (\\widehat{f} \\ast \\widehat{g})_k = \\frac{1}{\\sqrt{L}} \\sum_{\\ell \\in {\\mathbb{Z}}} \\widehat{f}_{k-l} \\widehat{g}_l\\)\nonder welke voorwaarden? niet te kennen\n\nabsoluut sommeerbare rijen: \\(\\widehat{f} \\in \\ell^1({\\mathbb{Z}},{\\mathbb{C}})\\): \\(\\sum_{k\\in{\\mathbb{Z}}} {\\left\\lvert\\widehat{f}_k\\right\\rvert} &lt; \\infty\\)\n\n\\(\\widehat{f}\\in \\ell^1({\\mathbb{Z}})\\) \\(\\implies\\) Fourierreeks convergeert absoluut \\(\\implies\\) Fourierreeks convergeert uniform \\(\\implies f\\) continu\n\\(\\widehat{f},\\widehat{g} \\in \\ell^1({\\mathbb{Z}}) \\implies \\widehat{f}\\ast \\widehat{g} \\in \\ell^1({\\mathbb{Z}})\\)\ncontinuïteit van \\(f\\) en \\(g\\) noodzakelijk maar niet voldoende"
+  },
+  {
+    "objectID": "slides/H7.html#stuksgewijze-continuïteit-en-gibbsfenoneem",
+    "href": "slides/H7.html#stuksgewijze-continuïteit-en-gibbsfenoneem",
+    "title": "Hoofdstuk 7 - Functieruimten",
+    "section": "Stuksgewijze continuïteit en Gibbsfenoneem",
+    "text": "Stuksgewijze continuïteit en Gibbsfenoneem\n\n\\(f(x) = H(x) = \\frac{1}{2}(1 + \\mathop{\\mathrm{sgn}}(x))\\) op interval \\([-L/2,+L/2]\\)\n\\[\\begin{align*}\n\\widehat{f}_k =\\begin{cases}\n  \\frac{\\sqrt{L}}{2},&k=0\\\\\\frac{{\\mathrm{i}}\\sqrt{L}}{2\\pi} \\frac{\\cos\\left(\\pi k\\right)-1}{k},&k \\neq 0\n\\end{cases} = \\begin{cases} \\frac{\\sqrt{L}}{2}\\delta_{k,0},&\\text{$k$ even}\\\\ \\frac{-{\\mathrm{i}}\\sqrt{L}}{\\pi} \\frac{1}{k},&\\text{$k$ odd} \\end{cases}\n\\end{align*}\\]\n\\({\\left\\lvert\\widehat{f}_k\\right\\rvert} \\sim {\\left\\lvert k\\right\\rvert}^{-1}\\): geen absolute of uniforme convergentie \\(\\Leftrightarrow\\) niet continu\n\\(f_{2m+1}(x) = \\frac{1}{\\sqrt{L}}\\sum_{{\\left\\lvert k\\right\\rvert}\\leq 2m+1} \\widehat{f}_k {\\mathrm{e}}^{+{\\mathrm{i}}\\frac{2\\pi}{L} k x}\\) \\(= \\frac{1}{2}+\\frac{2}{\\pi} \\left[ \\sin\\left(\\frac{2\\pi}{L} x\\right) + \\frac{1}{3} \\sin\\left(\\frac{6\\pi}{L} x\\right) + \\frac{1}{5} \\sin\\left(\\frac{10\\pi}{L} x\\right) + \\dots \\right]\\)\n\n\\(f_{2m+1}(0) = 1/2 \\Rightarrow \\lim_{n\\to \\infty} f_n(0) = 1/2 = (f(0^-)+f(0^+))/2\\)\n\\(f_{2m}\\left(\\frac{L}{4m}\\right) = \\frac{1}{2} + \\frac{2}{\\pi} \\sum_{l=0}^{m-1} \\frac{\\sin\\left(\\pi \\frac{2l+1}{2m}\\right)}{(2l+1)} = \\frac{1}{2} + \\frac{1}{\\pi}\\left(\\frac{\\pi}{m}\\right) \\sum_{l=0}^{m-1} \\frac{\\sin\\left(\\pi \\frac{2l+1}{2m}\\right)}{\\pi \\frac{2l+1}{2m}}\\)\n\\(\\qquad \\stackrel{m\\to\\infty}{\\longrightarrow} \\frac{1}{2} + \\frac{1}{\\pi} \\int_0^\\pi \\frac{\\sin(x)}{x}\\,{\\mathrm{d}}x\\)"
+  },
+  {
+    "objectID": "slides/H7.html#stuksgewijze-continuïteit-en-gibbsfenoneem-1",
+    "href": "slides/H7.html#stuksgewijze-continuïteit-en-gibbsfenoneem-1",
+    "title": "Hoofdstuk 7 - Functieruimten",
+    "section": "Stuksgewijze continuïteit en Gibbsfenoneem",
+    "text": "Stuksgewijze continuïteit en Gibbsfenoneem\n\nGibbsfenomeen: functie met discontinuïteit \\(f(x_0^{\\pm}) = f_0 \\pm \\frac{1}{2} a\\)\n\n\\(\\lim_{n\\to\\infty} f_n(x_0) = f_0\\)\n\\(\\lim_{n \\to \\infty} f_n\\left(x_0 \\pm \\frac{L}{2n} \\right) = f_0 \\pm \\frac{a}{\\pi} \\int_0^{\\pi} \\frac{\\sin(x)}{x}\\,{\\mathrm{d}}x = f(x_0)^\\pm \\pm a \\left[\\frac{1}{\\pi} \\int_0^{\\pi} \\frac{\\sin(x)}{x}\\,{\\mathrm{d}}x - \\frac{1}{2}\\right]\\) \\(\\qquad= f(x_0)^\\pm \\pm a \\cdot (0.089489872236\\dots)\\)"
+  },
+  {
+    "objectID": "slides/H7.html#relatie-met-discrete-fouriertransformatie",
+    "href": "slides/H7.html#relatie-met-discrete-fouriertransformatie",
+    "title": "Hoofdstuk 7 - Functieruimten",
+    "section": "Relatie met discrete Fouriertransformatie",
+    "text": "Relatie met discrete Fouriertransformatie\n\n\\(f(x) = \\frac{1}{\\sqrt{L}} \\sum_{k \\in {\\mathbb{Z}}}\\widehat{f}_k {\\mathrm{e}}^{+{\\mathrm{i}}\\frac{2\\pi}{L} k x}.\\)\n‘Bemonster’ (sample) \\(f\\):\n\\(f_j = f(x_j)\\) met \\(x_j = j \\epsilon\\); \\(j=0,1,\\dots, N-1\\) en \\(N=L/\\epsilon\\)\nDiscrete Fouriertransformatie van ‘samples’ \\[\\begin{align}\n  F^k &= \\frac{1}{\\sqrt{N}} \\sum_{j = 0}^{N-1} f_j {\\mathrm{e}}^{-{\\mathrm{i}}\\frac{2\\pi}{N} k j} =\\frac{1}{\\sqrt{N}} \\frac{1}{\\sqrt{L}} \\sum_{j=0}^{N-1} \\left(\\sum_{l \\in {\\mathbb{Z}}} \\widehat{f}_l {\\mathrm{e}}^{+{\\mathrm{i}}\\frac{2\\pi}{L} l j \\epsilon}\\right) {\\mathrm{e}}^{-{\\mathrm{i}}\\frac{2\\pi}{N} k j}\\nonumber \\\\\n  & = \\frac{\\sqrt{\\epsilon}}{N} \\sum_{l \\in {\\mathbb{Z}}} \\widehat{f}_l \\sum_{j=0}^{N-1} {\\mathrm{e}}^{{\\mathrm{i}}\\frac{2\\pi}{N} j (l-k)} = \\sqrt{\\epsilon} \\sum_{p \\in {\\mathbb{Z}}} \\widehat{f}_{k + p N}.\n\\end{align}\\]\nSnel dalende Fouriercoefficiënten: \\(F^k = \\widehat{f}_{\\min(k, k-N)} + \\dots\\)\nFouriercoefficiënten exact begrensd: \\(\\widehat{f}_k = 0\\) voor \\(k&gt;n\\) \\(\\Leftrightarrow\\) \\(f\\) is trigonometrische veelterm van graad \\(n\\)\n\\(\\Rightarrow\\) exacte reconstructie mogelijk uit samples als \\(\\epsilon \\leq L/(2n+1)\\)"
+  },
+  {
+    "objectID": "slides/H7.html#veelvoorkomende-operatoren-op-functieruimten",
+    "href": "slides/H7.html#veelvoorkomende-operatoren-op-functieruimten",
+    "title": "Hoofdstuk 7 - Functieruimten",
+    "section": "Veelvoorkomende operatoren op functieruimten",
+    "text": "Veelvoorkomende operatoren op functieruimten\nHilbertuimte \\(H = L^2(I,{\\mathbb{C}})\\): lineaire afbeeldingen \\(f \\mapsto g\\) met \\(f,g \\in H\\)\n\nIntegraaloperatoren: \\[g(x) =  ({\\hat{A}}f)(x) = \\int_I A(x,y) f(y) \\,{\\mathrm{d}}y\\]\n\n\\(A:I \\times I \\to {\\mathbb{C}}\\): (integraal)kern van de ‘integraaltransformatie’\nmeest directe veralgemening van een matrix \\({\\mathsf{A}}\\) en \\(w^i = A^i_{\\ j} v^j\\)\n\nVermenigvuldigingsoperatoren: \\[g(x) = ({\\hat{M}}_h f)(x) = h(x) f(x)\\]\n\nbelangrijkste voorbeeld: “positie-operator” \\({\\hat{X}}\\)\n\\(\\rightarrow\\) \\({\\hat{M}}_h = h({\\hat{X}})\\)\nvergelijkbaar met diagonaalmatrices\n\\(\\rightarrow\\) \\({\\hat{M}}_h\\) als integraaloperator met \\(A(x,y) = h(x)\\delta(x-y)\\) ? (zie later)"
+  },
+  {
+    "objectID": "slides/H7.html#veelvoorkomende-operatoren-op-functieruimten-1",
+    "href": "slides/H7.html#veelvoorkomende-operatoren-op-functieruimten-1",
+    "title": "Hoofdstuk 7 - Functieruimten",
+    "section": "Veelvoorkomende operatoren op functieruimten",
+    "text": "Veelvoorkomende operatoren op functieruimten\n\nDifferentiaaloperatoren:\n\nbekendste voorbeeld: \\(g(x) = ({\\hat{D}}f)(x) = f'(x)\\)\nvaak geschreven als \\({\\hat{P}} = -{\\mathrm{i}}{\\hat{D}}\\) (momentum-operator)\nandere differentiaaloperatoren: \\(p({\\hat{D}})\\) met \\(p\\) een veelterm\n\nIdentiteitsoperator: \\(g(x) = ({\\hat{1}}f)(x) = f(x)\\)\n\nresolutie van de identiteit t.o.v. orthonormale basis:\n\\[f(x) = \\sum_{n =0}^{+\\infty} {\\left\\langle\\varphi_n,f\\right\\rangle} \\varphi_n(x) = \\int_I \\sum_{n=0}^{+\\infty} \\varphi_n(x) \\overline{\\varphi_n(y)} f(y)\\,{\\mathrm{d}}y\\]\n\\(\\rightarrow\\) neemt de vorm aan van integraaloperator met kern\n\\[A(x,y) = \\sum_{n=0}^{+\\infty} \\varphi_n(x) \\overline{\\varphi_n(y)}\\]\n\\(\\Rightarrow A(x,y) = \\delta(x-y)\\) ? (zie later)"
+  },
+  {
+    "objectID": "slides/H7.html#domein-van-een-operator",
+    "href": "slides/H7.html#domein-van-een-operator",
+    "title": "Hoofdstuk 7 - Functieruimten",
+    "section": "Domein van een operator",
+    "text": "Domein van een operator\n\nSommige operatoren hebben niet de volledige Hilbertruimte als domein:\n\n\\({\\hat{D}}\\) kan enkel op afleidbare functies werken\n\\({\\hat{M}}_h f\\) kan niet meer kwadratisch integreerbaar zijn\n\n\\(\\rightarrow\\) domein is deelverzamelingruimte van \\(H\\)\nbeschouw operator \\({\\hat{A}}\\) met domein \\(\\mathop{\\mathrm{\\mathcal{D}}}_{{\\hat{A}}} {\\preccurlyeq}H\\):\n\nals \\({\\hat{A}}\\) begrensd \\(\\Rightarrow\\) continu \\(\\Rightarrow\\) actie van \\({\\hat{A}}\\) ook gedefinieerd op \\(\\overline{\\mathop{\\mathrm{\\mathcal{D}}}_{{\\hat{A}}}}\\)\nals \\(\\overline{\\mathop{\\mathrm{\\mathcal{D}}}_{{\\hat{A}}}} \\neq H\\), definieer actie op \\({v}\\in \\overline{\\mathop{\\mathrm{\\mathcal{D}}}_{{\\hat{A}}}}^\\perp\\) als \\({\\hat{A}}({v}) = {o}\\)\n\n\\(\\Rightarrow\\) voor begrensde operatoren: \\(\\mathop{\\mathrm{\\mathcal{D}}}_{{\\hat{A}}}\\) kan altijd gelijk worden gekozen aan \\(H\\)\n\\(\\Rightarrow\\) voor onbegrensde operatoren: operatoren waarvan het domein \\(\\mathop{\\mathrm{\\mathcal{D}}}_{{\\hat{A}}}\\) dicht is in \\(V\\), maar geen uitbreiding naar randpunten mogelijk wegens gebrek aan continuïteit\n\nbijvoorbeeld: (continu) afleidbare functies zijn dicht in \\(L^2(I)\\)\n\\(\\rightarrow\\) kies \\(\\mathop{\\mathrm{\\mathcal{D}}}_{{\\hat{D}}} = C^1(I,{\\mathbb{F}})\\)"
+  },
+  {
+    "objectID": "slides/H7.html#domein-van-een-operator-1",
+    "href": "slides/H7.html#domein-van-een-operator-1",
+    "title": "Hoofdstuk 7 - Functieruimten",
+    "section": "Domein van een operator",
+    "text": "Domein van een operator\n\nVanaf nu: \\(\\mathop{\\mathrm{End}}(H)\\) = verzameling van alle lineaire afbeeldingen van een dichte deelruimte van \\(H\\) naar \\(H\\) (“densily defined”)\n\\({\\hat{A}},{\\hat{B}} \\in \\mathop{\\mathrm{End}}(V)\\) met domein \\(\\mathop{\\mathrm{\\mathcal{D}}}_{{\\hat{A}}}, \\mathop{\\mathrm{\\mathcal{D}}}_{{\\hat{B}}}\\):\n\nbeeld/bereik \\(\\mathcal{R}_{{\\hat{A}}} = \\mathop{\\mathrm{im}}({\\hat{A}}) = \\{ {\\hat{A}}{v}| {v}\\in \\mathop{\\mathrm{\\mathcal{D}}}_{{\\hat{A}}}\\}\\)\ngelijkheid: \\({\\hat{A}} = {\\hat{B}} \\iff \\mathop{\\mathrm{\\mathcal{D}}}_{{\\hat{A}}} = \\mathop{\\mathrm{\\mathcal{D}}}_{{\\hat{B}}}\\) en \\({\\hat{A}}{v}= {\\hat{B}} {v}\\) voor alle \\({v}\\in \\mathop{\\mathrm{\\mathcal{D}}}_{{\\hat{A}}}\\)\nrestrictie/extensie: \\({\\hat{A}} \\subset {\\hat{B}} \\iff \\mathop{\\mathrm{\\mathcal{D}}}_{{\\hat{A}}} {\\preccurlyeq}\\mathop{\\mathrm{\\mathcal{D}}}_{{\\hat{B}}}\\) en \\({\\hat{A}}{v}= {\\hat{B}} {v}\\) voor alle \\({v}\\in \\mathop{\\mathrm{\\mathcal{D}}}_{{\\hat{A}}}\\)\n\\(\\rightarrow\\) \\({\\hat{B}}\\) is een extensie van \\({\\hat{A}}\\), \\({\\hat{A}}\\) is een restrictie van \\({\\hat{B}}\\)\n\n\\(\\Rightarrow\\) een (onbegrensde) operator is gedefinieerd door zijn actie EN zijn domein!\n\nals fysici denken we meestal niet na over domein\nbehalve voor afleidingsoperatoren: randvoorwaarden (zie later)"
+  },
+  {
+    "objectID": "slides/H7.html#begrensde-en-onbegrensde-operatoren",
+    "href": "slides/H7.html#begrensde-en-onbegrensde-operatoren",
+    "title": "Hoofdstuk 7 - Functieruimten",
+    "section": "Begrensde en onbegrensde operatoren",
+    "text": "Begrensde en onbegrensde operatoren\n\nIntegraaloperator:\n\\({\\left\\lVert{\\hat{A}}f\\right\\rVert}^2 = \\int_I \\underbrace{{\\left\\lvert\\int_I A(x,y) f(y)\\,{\\mathrm{d}}y\\right\\rvert}^2}_{\\Downarrow\\ \\text{Cauchy-Schwarz}} \\,{\\mathrm{d}}x\\) \\(\\quad\\leq \\int_I \\left(\\int_I {\\left\\lvert A(x,y)\\right\\rvert}^2\\,{\\mathrm{d}}y\\right)^2 \\left(\\int_I f(y),{\\mathrm{d}}y\\right)^2\\,{\\mathrm{d}}x = \\left(\\int_I\\int_I {\\left\\lvert A(x,y)\\right\\rvert}^2 \\,{\\mathrm{d}}y{\\mathrm{d}}x\\right) {\\left\\lVert f\\right\\rVert}^2\\)\n\\(\\Rightarrow\\) begrensd als \\(\\left(\\int_I\\int_I {\\left\\lvert A(x,y)\\right\\rvert}^2 \\,{\\mathrm{d}}y{\\mathrm{d}}x\\right) &lt; \\infty\\)\nVermenigvuldigingsoperator:\n\\[{\\left\\lVert{\\hat{M}}_h f\\right\\rVert}^2 = \\int_I {\\left\\lvert h(x) f(x)\\right\\rvert}^2,{\\mathrm{d}}x \\leq \\left(\\mathrm{ess}\\ \\sup_{x \\in I} {\\left\\lvert h(x)\\right\\rvert}^2\\right) {\\left\\lVert f\\right\\rVert}^2\\]\n\\(\\Rightarrow\\) positie-operator \\({\\hat{X}}\\) op \\(L^2(I,{\\mathbb{F}})\\) is begrensd als \\(I\\) begrensd domein is, maar is onbegrensd op \\(L^2({\\mathbb{R}},{\\mathbb{F}})\\)"
+  },
+  {
+    "objectID": "slides/H7.html#begrensde-en-onbegrensde-operatoren-1",
+    "href": "slides/H7.html#begrensde-en-onbegrensde-operatoren-1",
+    "title": "Hoofdstuk 7 - Functieruimten",
+    "section": "Begrensde en onbegrensde operatoren",
+    "text": "Begrensde en onbegrensde operatoren\n\nAfleidingsoperator: altijd onbegrensd\n\nop \\(L^2([0,L],{\\mathbb{C}})\\): \\(f_k = \\frac{1}{\\sqrt{L}} \\exp({\\mathrm{i}}\\frac{2\\pi}{k} x)\\)\n\\(\\rightarrow\\) \\({\\left\\lVert f_k\\right\\rVert}_2 = 1\\) en \\({\\left\\lVert{\\hat{D}}f_k\\right\\rVert}_2 = \\frac{2\\pi}{L} {\\left\\lvert k\\right\\rvert}\\) voor arbitraire \\(k \\in {\\mathbb{Z}}\\)\nop \\(L^2({\\mathbb{R}},{\\mathbb{C}})\\):\n\n\\(f_n(x) = \\begin{cases} \\sin(\\frac{2\\pi}{L}n x),&x \\in [0,L]\\\\ 0,& x \\not\\in [0,L] \\end{cases}\\)\n\\(\\rightarrow ({\\hat{D}}f_n)(x) = f'_n(x) = \\begin{cases} \\frac{2\\pi}{L} n \\cos(\\frac{2\\pi}{L}n x),&x \\in [0,L]\\\\ 0,& x \\not\\in [0,L]\\end{cases}\\)\n\\(\\rightarrow {\\left\\lVert f_n\\right\\rVert}_2 = \\frac{L}{2}\\) en \\({\\left\\lVert f'_n\\right\\rVert}_2 = \\pi n\\) voor arbitraire \\(n \\in {\\mathbb{N}}_0\\)"
+  },
+  {
+    "objectID": "slides/H7.html#begrensde-en-onbegrensde-operatoren-2",
+    "href": "slides/H7.html#begrensde-en-onbegrensde-operatoren-2",
+    "title": "Hoofdstuk 7 - Functieruimten",
+    "section": "Begrensde en onbegrensde operatoren",
+    "text": "Begrensde en onbegrensde operatoren\n\n\\([{\\hat{A}},{\\hat{B}}] = {\\hat{1}}\\) (of technisch: restrictie \\(\\subset {\\hat{1}}\\)):\n\\(\\Rightarrow\\) minstens 1 van beide operatoren is onbegrensd (bewijs aan bord)\nVoorbeeld 1: \\((({\\hat{D}}{\\hat{X}} - {\\hat{X}} {\\hat{D}}) f)(x) = \\frac{{\\mathrm{d}}\\ }{{\\mathrm{d}}x} \\big(x f(x)\\big) - x \\frac{{\\mathrm{d}}\\ }{{\\mathrm{d}}x} f(x) = f(x)\\)\n\\(\\rightarrow\\) \\({\\hat{D}}\\) altijd onbegrensd, \\({\\hat{X}}\\) afhankelijk van \\(I\\) in \\(L^2(I,{\\mathbb{F}})\\)\nVoorbeeld 2: \\(H = \\ell^2({\\mathbb{N}})\\): rijen \\({v}=(v_0,v_1,v_2,\\ldots)\\) met \\(\\sum_{n \\in {\\mathbb{N}}} {\\left\\lvert{v}_n\\right\\rvert}^2 &lt; \\infty\\)\n\ndichte deelruimten:\n\nrijen waarvoor \\(\\sum_{n \\in {\\mathbb{N}}} n^p {\\left\\lvert{v}_n\\right\\rvert}^2 &lt; \\infty\\)\nrijen met een eindig aantal niet-nulelementen\n\n\\[\\begin{align}\n{\\hat{A}}^- {e}_n &= \\begin{cases} {o}, & n=0\\\\\n\\sqrt{n} {e}_{n-1},&n &gt; 0\n\\end{cases}, &{\\hat{A}}^+{e}_{n} = \\sqrt{n+1} {e}_{n+1}.\\label{eq:function:annihilationcreation}\n\\end{align}\\]\n\\({\\left[{\\hat{A}}^-,{\\hat{A}}^+\\right]} {e}_n = {e}_n\\)\n(beide onbegrensd; domein \\(\\mathop{\\mathrm{\\mathcal{D}}}_{{\\hat{A}}^\\pm} = \\{{v}\\in \\ell^2({\\mathbb{N}}) | \\sum_{n \\in {\\mathbb{N}}} n {\\left\\lvert{v}_n\\right\\rvert}^2 &lt; \\infty\\}\\))"
+  },
+  {
+    "objectID": "slides/H7.html#toegevoegde-van-een-onbegrensde-operator",
+    "href": "slides/H7.html#toegevoegde-van-een-onbegrensde-operator",
+    "title": "Hoofdstuk 7 - Functieruimten",
+    "section": "Toegevoegde van een onbegrensde operator",
+    "text": "Toegevoegde van een onbegrensde operator\n\nDefinitie van toegevoegde operator: mogelijke problemen\n\n\\({v}\\mapsto {\\left\\langle{w},{\\hat{A}}{v}\\right\\rangle}\\) is niet langer een continue lineaire functionaal op \\(H\\)\n\\({\\hat{A}}^\\dagger\\) waarschijnlijk onbegrensd: welk domein?\n\nConstructie van de toegevoegde van een onbegrensde operator\n\ndefinieer domein: \\(\\mathop{\\mathrm{\\mathcal{D}}}_{{\\hat{A}}^\\dagger}\\) bevat alle \\({w}\\in H\\) zodat \\({v}\\mapsto {\\left\\langle{w},{\\hat{A}}{v}\\right\\rangle}\\) een begrensde \\(\\leftrightarrow\\) continue lineaire functionaal is voor alle \\({v}\\in \\mathop{\\mathrm{\\mathcal{D}}}_{{\\hat{A}}}\\)\naangezien \\(\\mathop{\\mathrm{\\mathcal{D}}}_{{\\hat{A}}}\\) een dichte deelruimte is van \\(H\\), kan de actie van \\({v}\\mapsto {\\left\\langle{w},{\\hat{A}}{v}\\right\\rangle}\\) nu uitgebreid worden naar volledig \\(H\\) (maar niet de actie van \\({\\hat{A}}\\) zelf)\nnu kunnen we Riesz representatie-theorema toepassen om aan \\({w}\\) een nieuwe vector \\({\\hat{A}}^\\dagger({w})\\) te associeren zodat\n\n\\[{\\left\\langle{w},{\\hat{A}}{v}\\right\\rangle} = {\\left\\langle{\\hat{A}}^\\dagger{w},{v}\\right\\rangle},\\forall {v}\\in \\mathop{\\mathrm{\\mathcal{D}}}\\,\\!_{{\\hat{A}}}, {w}\\in \\mathop{\\mathrm{\\mathcal{D}}}\\,\\!_{{\\hat{A}}^\\dagger}\\]\n\nuniciteit, lineairiteit van \\({\\hat{A}}^\\dagger\\) en andere eigenschappen volgen zoals gewoonlijk"
+  },
+  {
+    "objectID": "slides/H7.html#toegevoegde-eigenschappen-en-voorbeelden",
+    "href": "slides/H7.html#toegevoegde-eigenschappen-en-voorbeelden",
+    "title": "Hoofdstuk 7 - Functieruimten",
+    "section": "Toegevoegde: eigenschappen en voorbeelden",
+    "text": "Toegevoegde: eigenschappen en voorbeelden\n\nVoorbeeld 1: \\({\\left\\langle{w},{\\hat{A}}^-{v}\\right\\rangle} = \\sum_{n \\in {\\mathbb{N}}} \\sqrt{n+1} \\overline{w^n} v^{n+1} = {\\left\\langle{\\hat{A}}^+{w},{v}\\right\\rangle}\\) voor alle \\({v},{w}\\) met \\(\\sum_{n \\in {\\mathbb{N}}} n {\\left\\lvert v_n\\right\\rvert}^2 &lt; \\infty\\) \\(\\Rightarrow {\\hat{A}}^+ = ({\\hat{A}}^-)^\\dagger\\): domein van deze operatoren is reeds maximaal\nVoorbeeld 2: op \\(L^2([a,b],{\\mathbb{F}})\\), beschouw \\({\\hat{D}}\\) met als domein alle afleidbare functies met \\(f' \\in L^2([a,b],{\\mathbb{F}})\\) en \\(f(a)=f(b)=0\\)\n\\[\\int_a^b \\overline{g(x)} f'(x)\\,{\\mathrm{d}}x = g(b)f(b) - g(a)f(a) - \\int_a^b \\overline{g'(x)}f(x)\\,{\\mathrm{d}}x\\]\n\\(\\Rightarrow\\) \\(({\\hat{D}}^\\dagger g)(x) = -g'(x)\\) met als domein alle afleidbare functies \\(g\\) met \\(f' \\in L^2([a,b],{\\mathbb{F}})\\), zonder bijkomende randvoorwaarden\n\\({\\hat{A}} \\subset {\\hat{B}} \\Rightarrow {\\hat{B}}^\\dagger \\subset {\\hat{A}}^\\dagger\\) (minder \\({v}\\in \\mathop{\\mathrm{\\mathcal{D}}}_{{\\hat{A}}}\\) dan in \\(\\mathop{\\mathrm{\\mathcal{D}}}_{{\\hat{B}}} \\implies\\) meer \\({w}\\in \\mathop{\\mathrm{\\mathcal{D}}}_{{\\hat{A}}^\\dagger}\\) mogelijk)\nAls \\({\\hat{A}}^\\dagger\\) zelf ook dicht gedefineerd is, dan kunnen we \\({\\hat{A}}^{\\dagger\\dagger}\\) definiëren:\n\\(\\rightarrow\\) \\({\\hat{A}} \\subset {\\hat{A}}^{\\dagger\\dagger}\\) (\\(\\mathop{\\mathrm{\\mathcal{D}}}_{{\\hat{A}}^{\\dagger\\dagger}}\\) bevat alle \\({v}\\) zodat \\({w}\\mapsto {\\left\\langle{v},{\\hat{A}}^\\dagger{w}\\right\\rangle} = {\\overline{{\\left\\langle{\\hat{A}}^\\dagger {w},{v}\\right\\rangle}}}\\) continu is: zeker voldaan \\({v}\\in \\mathop{\\mathrm{\\mathcal{D}}}_{{\\hat{A}}}\\))"
+  },
+  {
+    "objectID": "slides/H7.html#symmetrische-en-zelftoegevoegde-operatoren",
+    "href": "slides/H7.html#symmetrische-en-zelftoegevoegde-operatoren",
+    "title": "Hoofdstuk 7 - Functieruimten",
+    "section": "Symmetrische en zelftoegevoegde operatoren",
+    "text": "Symmetrische en zelftoegevoegde operatoren\n\nsymmetrische / hermitische / hermitisch symmetrische operator: \\[{\\left\\langle{v},{\\hat{A}}{v}\\right\\rangle} = {\\left\\langle{\\hat{A}}{v},{w}\\right\\rangle}, \\forall {v},{w}\\in \\mathop{\\mathrm{\\mathcal{D}}}\\,\\!_{{\\hat{A}}}\\]\n(symmetrisch wordt ook gebruikt in complexe geval)\nzelftoegevoegde operatoren:\n\\[{\\hat{A}}^\\dagger = {\\hat{A}} \\Leftrightarrow \\mathop{\\mathrm{\\mathcal{D}}}\\,\\!_{{\\hat{A}}^\\dagger}=\\mathop{\\mathrm{\\mathcal{D}}}\\,\\!_{{\\hat{A}}}\\ \\text{en}\\ {\\hat{A}}{v}= {\\hat{A}}^\\dagger{v},\\forall {v}\\in \\mathop{\\mathrm{\\mathcal{D}}}\\,\\!_{{\\hat{A}}}\\]\n(zelftoegevoegd \\(\\Rightarrow\\) symmetrisch)\nsymmetrische operator:\n\\(\\mathop{\\mathrm{\\mathcal{D}}}_{{\\hat{A}}}{\\preccurlyeq}\\mathop{\\mathrm{\\mathcal{D}}}_{{\\hat{A}}^\\dagger}\\) en \\({\\hat{A}}^\\dagger {v}= {\\hat{A}}{v}\\) voor alle \\({v}\\in \\mathop{\\mathrm{\\mathcal{D}}}_{{\\hat{A}}}\\)\n\\[\\Rightarrow {\\hat{A}} \\subset {\\hat{A}}^\\dagger \\Rightarrow {\\hat{A}}^{\\dagger\\dagger} \\subset {\\hat{A}}^\\dagger\\] \\[\\Rightarrow {\\hat{A}} \\subset {\\hat{A}}^{\\dagger\\dagger} \\subset {\\hat{A}}^\\dagger\\]"
+  },
+  {
+    "objectID": "slides/H7.html#uitgebreid-voorbeeld",
+    "href": "slides/H7.html#uitgebreid-voorbeeld",
+    "title": "Hoofdstuk 7 - Functieruimten",
+    "section": "Uitgebreid voorbeeld",
+    "text": "Uitgebreid voorbeeld\nBeschouw de operator \\({\\hat{P}}\\) met actie \\(({\\hat{P}}f)(x)=-{\\mathrm{i}}f'(x)\\) en de identiteit \\[\\begin{align*}\n{\\left\\langle g,{\\hat{P}} f\\right\\rangle} &= \\int_{a}^{b} \\overline{g(x)}   (-{\\mathrm{i}}) f'(x)\\,{\\mathrm{d}}x\n= -{\\mathrm{i}}\\left[\\overline{g(b)}f(b) - \\overline{g(a)} f(a)\\right] + \\int_{a}^{b} \\overline{(-{\\mathrm{i}}) g'(x)}f(x)\\,{\\mathrm{d}}x\\nonumber\\\\\n&= -{\\mathrm{i}}\\left[\\overline{g(b)}f(b) - \\overline{g(a)} f(a)\\right] + {\\left\\langle{\\hat{P}} g,f\\right\\rangle}\n\\end{align*}\\]\nWe moeten het domein nog specifiëren:\n\n\\({\\hat{P}}_1\\) met domein \\(\\mathop{\\mathrm{\\mathcal{D}}}_1 = \\{f \\in L^2([a,b]) | \\text{$f'$ bestaat en $f' \\in L^2([a,b])$}\\}\\)\n\nniet symmetrisch\n\\(\\mathop{\\mathrm{\\mathcal{D}}}_{{\\hat{P}}_1^\\dagger} = \\{f \\in \\mathop{\\mathrm{\\mathcal{D}}}_1 | f(a) = f(b) = 0\\}\\)\n\n\\({\\hat{P}}_2\\) met domein \\(\\mathop{\\mathrm{\\mathcal{D}}}_2 = \\{f \\in \\mathop{\\mathrm{\\mathcal{D}}}_1 | f(a) = f(b) = 0\\}\\)\n\nsymmetrisch\n\\({\\hat{P}}_2^\\dagger = {\\hat{P}}_1\\): \\({\\hat{P}}_2 \\subset {\\hat{P}}_1\\)\n\\({\\hat{P}}_2^{\\dagger\\dagger} = {\\hat{P}}_1^\\dagger = {\\hat{P}}_2\\)"
+  },
+  {
+    "objectID": "slides/H7.html#uitgebreid-voorbeeld-1",
+    "href": "slides/H7.html#uitgebreid-voorbeeld-1",
+    "title": "Hoofdstuk 7 - Functieruimten",
+    "section": "Uitgebreid voorbeeld",
+    "text": "Uitgebreid voorbeeld\nBeschouw de operator \\({\\hat{P}}\\) met actie \\(({\\hat{P}}f)(x)=-{\\mathrm{i}}f'(x)\\) en de identiteit \\[\\begin{align*}\n{\\left\\langle g,{\\hat{P}} f\\right\\rangle} &= \\int_{a}^{b} \\overline{g(x)}   (-{\\mathrm{i}}) f'(x)\\,{\\mathrm{d}}x\n= -{\\mathrm{i}}\\left[\\overline{g(b)}f(b) - \\overline{g(a)} f(a)\\right] + \\int_{a}^{b} \\overline{(-{\\mathrm{i}}) g'(x)}f(x)\\,{\\mathrm{d}}x\\nonumber\\\\\n&= -{\\mathrm{i}}\\left[\\overline{g(b)}f(b) - \\overline{g(a)} f(a)\\right] + {\\left\\langle{\\hat{P}} g,f\\right\\rangle}\n\\end{align*}\\]\nWe moeten het domein nog specifiëren:\n\n\\({\\hat{P}}_1\\) met domein \\(\\mathop{\\mathrm{\\mathcal{D}}}_1 = \\{f \\in L^2([a,b]) | \\text{$f'$ bestaat en $f' \\in L^2([a,b])$}\\}\\)\n\nniet symmetrisch\n\\(\\mathop{\\mathrm{\\mathcal{D}}}_{{\\hat{P}}_1^\\dagger} = \\{f \\in \\mathop{\\mathrm{\\mathcal{D}}}_1 | f(a) = f(b) = 0\\}\\)\n\nStel bijvoorbeeld \\({\\hat{P}}_4\\) met \\(\\mathop{\\mathrm{\\mathcal{D}}}_4 = \\{f \\in C^1([a,b]) | f(a) = f(b) = 0\\}\\)\n\nnog steeds symmetrisch\nnog steeds \\({\\hat{P}}_4^\\dagger = {\\hat{P}}_1\\)\n\\({\\hat{P}}_4^{\\dagger\\dagger} = {\\hat{P}}_2\\) \\(\\Rightarrow\\) \\({\\hat{P}}_4 \\subset {\\hat{P}}_4^{\\dagger\\dagger} \\subset {\\hat{P}}_4^\\dagger\\)"
+  },
+  {
+    "objectID": "slides/H7.html#uitgebreid-voorbeeld-2",
+    "href": "slides/H7.html#uitgebreid-voorbeeld-2",
+    "title": "Hoofdstuk 7 - Functieruimten",
+    "section": "Uitgebreid voorbeeld",
+    "text": "Uitgebreid voorbeeld\nKunnen we een extensie vinden van \\({\\hat{P}}_2\\) waarvoor \\({\\hat{P}}_3 = {\\hat{P}}_3^\\dagger\\) ?\n\nStel \\({\\hat{P}}_3\\) met \\(\\mathop{\\mathrm{\\mathcal{D}}}_3 =\\{f \\in \\mathop{\\mathrm{\\mathcal{D}}}_1 | f(b) = {\\mathrm{e}}^s f(a)\\}\\) voor een \\(s \\in {\\mathbb{C}}\\)\n\ner geldt inderdaad \\(\\mathop{\\mathrm{\\mathcal{D}}}_2 {\\preccurlyeq}\\mathop{\\mathrm{\\mathcal{D}}}_3 {\\preccurlyeq}\\mathop{\\mathrm{\\mathcal{D}}}_1\\)\nsymmetrisch? als \\(-{\\mathrm{i}}[{\\mathrm{e}}^{\\overline{s}+s} - 1] \\overline{g(a)}f(a) = 0 \\Rightarrow\\) \\(s\\) zuiver imaginair\ntoegevoegde operator? \\(\\mathop{\\mathrm{\\mathcal{D}}}_{{\\hat{P}}_3^\\dagger} = \\{g \\in \\mathop{\\mathrm{\\mathcal{D}}}_1 | g(b) = {\\mathrm{e}}^{-{\\overline{s}}} g(a)\\}\\)\n\n\\(\\Rightarrow\\) voor \\({\\mathrm{e}}^s = {\\mathrm{e}}^{{\\mathrm{i}}\\theta}\\) (voor een \\(\\theta \\in [0,2\\pi)\\)): zelf-toegevoegd (en dus symmetrisch)\n\n“verdraaide (twisted) randvoorwaarden”\nomvat periodiek (\\(\\theta=0\\), \\(f(a)=f(b)\\)) en antiperiodiek (\\(\\theta=\\pi\\), \\(f(b)=-f(a)\\))\n\nBelang: eigenwaarden en eigenvectoren\n\n\\({\\hat{P}}_1\\): \\({\\mathrm{e}}^{i \\lambda x}\\) is een eigenvector met eigenwaarde \\(\\lambda\\) voor alle \\(\\lambda \\in {\\mathbb{C}}\\)\n\\({\\hat{P}}_2\\): geen eigenvectoren of eigenwaarden\n\\({\\hat{P}}_3\\): eigenvectoren \\(\\varphi_k(x) = \\frac{1}{\\sqrt{L}} {\\mathrm{e}}^{{\\mathrm{i}}\\frac{2\\pi}{L} \\left(k + \\frac{\\theta}{2\\pi}\\right) x}\\) met eigenwaarden \\(\\lambda_k = \\frac{2\\pi}{L} \\left(k + \\frac{\\theta}{2\\pi}\\right)\\) voor alle \\(k \\in {\\mathbb{Z}}\\)"
+  },
+  {
+    "objectID": "slides/H7.html#positie--en-momentumoperator-op-l2mathbbr",
+    "href": "slides/H7.html#positie--en-momentumoperator-op-l2mathbbr",
+    "title": "Hoofdstuk 7 - Functieruimten",
+    "section": "Positie- en momentumoperator op \\(L^2({\\mathbb{R}})\\)",
+    "text": "Positie- en momentumoperator op \\(L^2({\\mathbb{R}})\\)\n\nZonder bewijs: op \\(H=L^2({\\mathbb{R}})\\) zijn \\({\\hat{X}}\\) en \\({\\hat{P}}\\) automatisch zelf-toegevoegd wanneer ze worden gedefinieerd op hun maximaal toegelaten domein\n\\[\\mathop{\\mathrm{\\mathcal{D}}}\\,\\!_{{\\hat{X}}} = \\{f \\in H | \\int_{-\\infty}^{+\\infty} {\\left\\lvert x f(x)\\right\\rvert}^2\\,{\\mathrm{d}}x &lt; \\infty\\}\\]\n\\[\\mathop{\\mathrm{\\mathcal{D}}}_{{\\hat{P}}} = \\{f \\in H | f'\\ \\text{bestaat en}\\ \\int_{-\\infty}^{+\\infty} {\\left\\lvert f'(x)\\right\\rvert}^2\\,{\\mathrm{d}}x &lt; \\infty\\}\\]\n(\\(f \\in \\mathop{\\mathrm{\\mathcal{D}}}_{{\\hat{P}}}\\) impliceert \\(\\lim_{x\\to \\pm \\infty} f(x) = 0\\))"
+  },
+  {
+    "objectID": "slides/H7.html#eigenwaarden-en-eigenvectoren",
+    "href": "slides/H7.html#eigenwaarden-en-eigenvectoren",
+    "title": "Hoofdstuk 7 - Functieruimten",
+    "section": "Eigenwaarden en eigenvectoren",
+    "text": "Eigenwaarden en eigenvectoren\nEigenwaarden van operatoren op oneindig-dimensionale Hilbertruimten:\n\nVoorbeeld met momentumoperator: soms geen eigenwaarden, soms volledig \\({\\mathbb{C}}\\) als eigenwaarde\nAnder voorbeeld op \\(\\ell^2({\\mathbb{N}})\\):\n\\[\\begin{align}\n  {\\hat{A}}^- {e}_n &= \\begin{cases} {o}, & n=0\\\\\n  \\sqrt{n} {e}_{n-1},&n &gt; 0\n  \\end{cases}, &{\\hat{A}}^+{e}_{n} = \\sqrt{n+1} {e}_{n+1}.\n\\end{align}\\]\n\n\\({v}= \\sum_{n=0}^{+\\infty} \\frac{\\lambda^n}{\\sqrt{n!}} {\\mathrm{e}}^{-{\\left\\lvert\\lambda\\right\\rvert}^2/2} {e}_n\\): \\({\\left\\lVert{v}\\right\\rVert}_2 = 1\\) en \\({\\hat{A}}^-{v}= \\lambda {v}\\) voor alle \\(\\lambda \\in {\\mathbb{C}}\\)\n\\({\\hat{A}}^+ = ({\\hat{A}}^{-})^\\dagger\\): geen eigenwaarden en eigenvectoren\n\nPositie-operator \\({\\hat{X}}\\) op \\(L^2([a,b])\\): (begrensde operator!)\n\ngeen exacte eigenvectoren (normaliseerbare functies in \\(L^2([a,b])\\))\n\\(f_{\\lambda,\\epsilon}(x) = \\begin{cases} \\frac{1}{\\sqrt{2\\epsilon}},&{\\left\\lvert x-\\lambda\\right\\rvert} &lt; \\epsilon\\\\  0,&\\text{elsewhere}  \\end{cases}\\) voldoet aan \\({\\left\\lVert x f(x) - \\lambda f(x)\\right\\rVert}^2 = \\int_{\\lambda-\\epsilon}^{\\lambda+\\epsilon} \\frac{(x-\\lambda)^2}{2\\epsilon}\\,{\\mathrm{d}}x = \\frac{\\epsilon^2}{3}\\) voor alle \\(\\lambda \\in [a,b]\\)"
+  },
+  {
+    "objectID": "slides/H7.html#compacte-operatoren-geen-stellingenbewijzen",
+    "href": "slides/H7.html#compacte-operatoren-geen-stellingenbewijzen",
+    "title": "Hoofdstuk 7 - Functieruimten",
+    "section": "Compacte operatoren (geen stellingen/bewijzen)",
+    "text": "Compacte operatoren (geen stellingen/bewijzen)\n\ncompacte operatoren (deelverzameling van begrende operatoren)\n\nklasse van operatoren die zich meer als een “matrix” gedragen\nvan belang voor de (theoretische) ontwikkeling van Greense functies etc\ntechnische definitie: \\({\\hat{A}}\\) is compact als, voor elke begrensde rij \\(({v}_n \\in H)_{n \\in {\\mathbb{N}}_0}\\), \\((w_n ={\\hat{A}}{v}_n)_{n \\in {\\mathbb{N}}_0}\\) een convergerende deelrij bevat\n(m.a.w.: begrensde deelverzameling \\(\\stackrel{{\\hat{A}}}{\\longrightarrow}\\) compacte deelverzameling)\nbevat de klasse van Hilbert-Schmidt operatoren:\n\\[{\\left\\lVert{\\hat{A}}\\right\\rVert}_{\\text{HS}}^2 = \\sum_{n =1}^{+\\infty} {\\left\\lVert{\\hat{A}}{e}_n\\right\\rVert}^2 &lt; \\infty\\]\nof voor een integraaloperator\n\\[{\\left\\lVert{\\hat{A}}\\right\\rVert}_{\\text{HS}}^2 = \\int_I \\int_I {\\left\\lvert A(x,y)\\right\\rvert}^2 \\,{\\mathrm{d}}x {\\mathrm{d}}y &lt; \\infty\\]"
+  },
+  {
+    "objectID": "slides/H7.html#compacte-operatoren-geen-stellingenbewijzen-1",
+    "href": "slides/H7.html#compacte-operatoren-geen-stellingenbewijzen-1",
+    "title": "Hoofdstuk 7 - Functieruimten",
+    "section": "Compacte operatoren (geen stellingen/bewijzen)",
+    "text": "Compacte operatoren (geen stellingen/bewijzen)\n\nzelftoegevoegde compacte operator \\({\\hat{A}}\\) beschikt over een spectrale decompositie\n\\[{\\hat{A}} = \\sum_{n} \\lambda_n {\\hat{P}}_{\\lambda_n}\\quad \\implies H = V_0 \\bigoplus_{n} V_{\\lambda_n}\\]\n\n\\(\\lambda_n \\in {\\mathbb{R}}\\)\naantal eigenwaarden \\(\\lambda_n \\neq 0\\) eindig of aftelbaar oneindig\nelke \\(V_{\\lambda_n \\neq 0}\\) is eindig-dimensionaal, \\(V_0\\) kan oneindig-dimensionaal zijn\n\\((\\lambda_n)\\) kan gesorteerd worden zodat \\({\\left\\lvert\\lambda_n\\right\\rvert}\\) niet-stijgend is (\\({\\left\\lvert\\lambda_{n+1}\\right\\rvert} \\leq {\\left\\lvert\\lambda_n\\right\\rvert}\\))\n\\({\\left\\lvert\\lambda_1\\right\\rvert} = {\\left\\lVert{\\hat{A}}\\right\\rVert}\\) (operatornorm)\n\\(\\lim_{n\\to \\infty} \\lambda_n =0\\), of dus, aantal eigenwaarden met \\({\\left\\lvert\\lambda_n\\right\\rvert} &gt; \\epsilon\\) is eindig"
+  },
+  {
+    "objectID": "slides/H7.html#compacte-operatoren-geen-stellingenbewijzen-2",
+    "href": "slides/H7.html#compacte-operatoren-geen-stellingenbewijzen-2",
+    "title": "Hoofdstuk 7 - Functieruimten",
+    "section": "Compacte operatoren (geen stellingen/bewijzen)",
+    "text": "Compacte operatoren (geen stellingen/bewijzen)\n\nalgemene compacte operator \\({\\hat{A}}\\) beschikt over Schmidt-decompositie:\nniet-stijgende rij positieve getallen \\((\\sigma_n \\in {\\mathbb{R}}_{\\geq 0})_{n \\in {\\mathbb{N}}_0}\\) en verzamelingen orthonormale vectoren \\((u_n \\in H)_{n \\in {\\mathbb{N}}_0}\\) en \\((v_n \\in H)_{n \\in {\\mathbb{N}}_0}\\) met \\({\\hat{A}}u_n = \\sigma_n v_n\\) en \\({\\hat{A}}^\\dagger v_n = \\sigma_n u_n\\) zodat\n\\[{\\hat{A}} {w}= \\sum_{n} \\sigma_n {u}_n {\\left\\langle{v}_n,{w}\\right\\rangle}, \\forall {w}\\in H\\]\n\nveralgemening van singuliere waardendecompositie\nvan belang voor definitie van kwantumverstrengeling (“entanglement”)"
+  },
+  {
+    "objectID": "slides/H7.html#spectrum-van-algemene-operatoren",
+    "href": "slides/H7.html#spectrum-van-algemene-operatoren",
+    "title": "Hoofdstuk 7 - Functieruimten",
+    "section": "Spectrum van algemene operatoren",
+    "text": "Spectrum van algemene operatoren\n\nOperator \\({\\hat{A}}\\) met dicht domein \\(\\mathop{\\mathrm{\\mathcal{D}}}_{{\\hat{A}}}\\) en bereik \\(\\mathcal{R}_{{\\hat{A}}}\\) is injectieef indien \\(\\mathop{\\mathrm{ker}}({\\hat{A}})=\\{{o}\\}\\)\n\\(\\Rightarrow\\) we kunnen de inverse \\({\\hat{A}}^{-1}\\) definiëren als operator met domein \\(\\mathcal{R}_{{\\hat{A}}}\\)\n\\(\\Rightarrow\\) deze inverse is enkel “dicht gedefinieerd” als \\(\\overline{\\mathcal{R}_{{\\hat{A}}}} = H\\)\nVoor \\({\\hat{A}}\\in \\mathop{\\mathrm{End}}(H)\\) definiëren we de resolvente verzameling als de verzameling van complexe getallen \\(\\lambda\\) waarvoor\n\nde inverse van \\({\\hat{A}}-\\lambda {\\hat{1}}\\) kan worden gedefinieerd: \\(\\mathop{\\mathrm{ker}}({\\hat{A}}-\\lambda {\\hat{1}}) = \\{{o}\\}\\)\nEN deze inverse \\(({\\hat{A}}-\\lambda{\\hat{1}})^{-1}\\) dicht gedefinieerd is\nEN deze inverse \\(({\\hat{A}}-\\lambda{\\hat{1}})^{-1}\\) begrensd is (zodat de definitie ervan kan worden uitgebreid tot volledig \\(H\\))\n\n\nDe resolvente verzameling is een open deelverzameling van \\({\\mathbb{C}}\\)\nHet complement in \\({\\mathbb{C}}\\) is het spectrum \\(\\sigma_{{\\hat{A}}}\\) van \\({\\hat{A}}\\), en is dus een gesloten deelverzameling van \\({\\mathbb{C}}\\)"
+  },
+  {
+    "objectID": "slides/H7.html#spectrum-van-algemene-operatoren-1",
+    "href": "slides/H7.html#spectrum-van-algemene-operatoren-1",
+    "title": "Hoofdstuk 7 - Functieruimten",
+    "section": "Spectrum van algemene operatoren",
+    "text": "Spectrum van algemene operatoren\n\nspectrum \\(\\sigma_{{\\hat{A}}}\\) bevat verschillende bijdragen:\n\npuntspectrum \\(\\sigma^{(\\text{p})}_{{\\hat{A}}}\\): \\(\\lambda \\in {\\mathbb{C}}\\) waarvoor \\(\\mathop{\\mathrm{nullity}}({\\hat{A}}-\\lambda {\\hat{1}}) &gt; 0\\) (de inverse kan niet worden gedefinieerd); dit zijn de echte eigenwaarden en eigenvectoren\ncontinu spectrum \\(\\sigma^{(\\text{c})}_{{\\hat{A}}}\\): \\(\\lambda \\in {\\mathbb{C}}\\) waarvoor \\(({\\hat{A}}-\\lambda {\\hat{1}})^{-1}\\) onbegrensd is; bij deze waarden \\(\\lambda\\) kan een “benaderende” eigenvector gevonden waarden zodat \\({\\left\\lVert{\\hat{A}}{v}-\\lambda{v}\\right\\rVert} &lt; \\epsilon\\), \\(\\forall \\epsilon &gt; 0\\)\nresidueel spectrum \\(\\sigma^{(\\text{r})}_{{\\hat{A}}}\\): \\(\\lambda \\in {\\mathbb{C}}\\) waarvoor \\(({\\hat{A}}-\\lambda {\\hat{1}})^{-1}\\) niet dicht gedefinieerd is \\(\\rightarrow\\) zie verder\n\nhet gehele spectrum is nooit leeg, maar sommige van de afzonderlijke types spectrum kunnen leeg zijn\nbegrensde operatoren \\({\\hat{A}}\\): \\({\\left\\lvert\\lambda\\right\\rvert} &gt; {\\left\\lVert{\\hat{A}}\\right\\rVert} \\implies \\lambda \\not \\in \\sigma_{{\\hat{A}}}\\)\nvoor willekeurige operatoren: (maar zie verderop voor zelftoegevoegd)\n\npuntspectrum is niet noodzakelijk discreet (eindig of aftelbaar)\ncontinu spectrum is niet noodzakelijk onaftelbaar"
+  },
+  {
+    "objectID": "slides/H7.html#spectrum-van-algemene-operatoren-voorbeelden",
+    "href": "slides/H7.html#spectrum-van-algemene-operatoren-voorbeelden",
+    "title": "Hoofdstuk 7 - Functieruimten",
+    "section": "Spectrum van algemene operatoren: voorbeelden",
+    "text": "Spectrum van algemene operatoren: voorbeelden\n\n\\({\\hat{A}}^-\\) op \\(\\ell^2({\\mathbb{N}})\\): \\(\\sigma^{(\\text{p})}= {\\mathbb{C}}\\)\n\\({\\hat{X}}\\) op \\(L^2([a,b])\\):\n\n\\(\\mathop{\\mathrm{ker}}({\\hat{X}}-\\lambda{\\hat{1}}) = \\{0\\}\\) voor alle \\(\\lambda \\in {\\mathbb{C}}\\) \\(\\Rightarrow \\sigma^{(\\text{p})} = \\emptyset\\)\n\\(\\mathcal{R}_{{\\hat{X}}-\\lambda{\\hat{1}}}\\): steeds dichte deelruimte van \\(H\\)\n\nkwadratisch integreerbare functies met \\(f(\\lambda) = 0\\) als \\(\\lambda \\in [a,b]\\))\nvolledig \\(H\\) als \\(\\lambda \\not\\in[a,b]\\)\n\n\\(\\Rightarrow \\sigma^{(\\text{p})} = \\emptyset\\)\n\\(({\\hat{X}}-\\lambda)^{-1}\\) werkt op \\(\\mathcal{R}_{{\\hat{X}}-\\lambda{\\hat{1}}}\\): \\(f(x) \\mapsto g(x) = (x-\\lambda)^{-1} f(x)\\)\n\n\\({\\left\\lVert g\\right\\rVert} \\leq (\\max_{x}{\\left\\lvert x-\\lambda\\right\\rvert}^{-1}) {\\left\\lVert f\\right\\rVert}\\) als \\(\\lambda \\not \\in [a,b]\\)\n\\({\\left\\lVert g\\right\\rVert}\\) niet te begrensen door \\({\\left\\lVert f\\right\\rVert}\\) als \\(\\lambda \\in [a,b]\\) \\(\\Rightarrow\\) \\(\\sigma^{(\\text{c})} = [a,b]\\)"
+  },
+  {
+    "objectID": "slides/H7.html#spectrum-van-algemene-operatoren-voorbeelden-1",
+    "href": "slides/H7.html#spectrum-van-algemene-operatoren-voorbeelden-1",
+    "title": "Hoofdstuk 7 - Functieruimten",
+    "section": "Spectrum van algemene operatoren: voorbeelden",
+    "text": "Spectrum van algemene operatoren: voorbeelden\n\nOp \\(H = \\ell^2({\\mathbb{N}}_0)\\): operator \\({\\hat{A}}:e_n \\mapsto \\frac{1}{n}e_n\\) voor alle \\(n \\in {\\mathbb{N}}_0\\)\n\nElke \\(e_n\\) is een eigenvector met eigenwaarde \\(\\frac{1}{n}\\): \\(\\sigma^{(\\text{p})} = \\{n^{-1}; n \\in {\\mathbb{N}}_0\\}\\)\n\\(({\\hat{A}}-\\lambda {\\hat{1}})^{-1} \\sum_{n\\in{\\mathbb{N}}_0} v^n {e}_n = \\sum_{n\\in{\\mathbb{N}}_0} \\frac{1}{n^{-1} - \\lambda} v^n {e}_n\\)\n\n\\(\\lambda \\not \\in {\\mathbb{N}}\\): goed gedefinieerd en begrensd voor alle \\({v}\\in H\\)\n\\(\\lambda = 0\\): gedefinieerd op \\(\\{ {v}\\in \\ell^2({\\mathbb{N}}_0) | \\sum_{n\\in{\\mathbb{N}}_0} n^2 {\\left\\lvert v^n\\right\\rvert}^2 &lt; \\infty\\}\\) maar onbegrend: \\({\\left\\lVert{\\hat{A}}^{-1}{e}_n\\right\\rVert} = n {\\left\\lVert{e}_n\\right\\rVert} = n\\)\n\n\\(\\Rightarrow \\sigma^{(\\text{c})} = \\{0\\}\\)"
+  },
+  {
+    "objectID": "slides/H7.html#spectrum-van-algemene-operatoren-voorbeelden-2",
+    "href": "slides/H7.html#spectrum-van-algemene-operatoren-voorbeelden-2",
+    "title": "Hoofdstuk 7 - Functieruimten",
+    "section": "Spectrum van algemene operatoren: voorbeelden",
+    "text": "Spectrum van algemene operatoren: voorbeelden\n\nOp \\(H = \\ell^2({\\mathbb{N}}_0)\\): verschuivingsoperatoren\n\\[{\\hat{L}} (v^0, v^1, v^2, \\ldots) = (v^1, v^2, v^3, \\ldots),\\quad{\\hat{R}} (v^0, v^1, v^2,\\ldots) = (0, v^0, v^1, \\ldots)\\]\n\n\\({\\hat{L}}^\\dagger = {\\hat{R}}\\) en vice versa, \\({\\left\\lVert{\\hat{L}}\\right\\rVert} = {\\left\\lVert{\\hat{R}}\\right\\rVert}=1 \\implies {\\left\\lvert\\lambda\\right\\rvert} &gt; 1\\) niet in spectrum\n\\(\\mathop{\\mathrm{ker}}({\\hat{R}} - \\lambda {\\hat{1}}) =\\{0\\}\\) voor alle \\(\\lambda\\): \\(\\sigma^{(\\text{p})}_{{\\hat{R}}} = \\emptyset\\)\n\\({v}_\\lambda = \\sum_{n=0}^{+\\infty} \\lambda^n {e}_n\\) is eigenvector van \\({\\hat{L}}\\) met eigenwaarde \\(\\lambda\\): \\({v}_\\lambda\\) is normaliseerbaar voor \\({\\left\\lvert\\lambda\\right\\rvert}&lt;1\\) \\(\\Rightarrow\\) \\(\\sigma^{(\\text{p})}_{{\\hat{L}}} = \\{\\lambda \\in {\\mathbb{C}}| {\\left\\lvert\\lambda\\right\\rvert}&lt; 1\\}\\)\nm.b.v. \\(\\mathop{\\mathrm{im}}({\\hat{R}}-\\lambda {\\hat{1}})^\\perp = \\mathop{\\mathrm{ker}}(({\\hat{R}}-\\lambda {\\hat{1}})^\\dagger) = \\mathop{\\mathrm{ker}}({\\hat{L}}-{\\overline{\\lambda}}{\\hat{1}})\\)\n\\(\\implies \\mathop{\\mathrm{im}}({\\hat{R}}-\\lambda {\\hat{1}})^{\\perp\\perp} = \\overline{\\mathop{\\mathrm{im}}({\\hat{R}}-\\lambda {\\hat{1}})} = \\mathop{\\mathrm{ker}}({\\hat{L}} - \\overline{\\lambda}{\\hat{1}})^\\perp\\)\n\\(\\implies ({\\hat{R}}-\\lambda {\\hat{1}})^{-1}\\) niet dicht gedefinieerd als \\({\\overline{\\lambda}}\\) eigenwaarde is van \\({\\hat{R}}^\\dagger = {\\hat{L}}\\) \\(\\implies \\sigma_{{\\hat{R}}}^{(\\text{r})} = \\{\\lambda \\in {\\mathbb{C}}| {\\left\\lvert\\lambda\\right\\rvert}&lt; 1\\}\\)"
+  },
+  {
+    "objectID": "slides/H7.html#spectrum-van-algemene-operatoren-voorbeelden-3",
+    "href": "slides/H7.html#spectrum-van-algemene-operatoren-voorbeelden-3",
+    "title": "Hoofdstuk 7 - Functieruimten",
+    "section": "Spectrum van algemene operatoren: voorbeelden",
+    "text": "Spectrum van algemene operatoren: voorbeelden\n\nOp \\(H = \\ell^2({\\mathbb{N}}_0)\\): verschuivingsoperatoren\n\\[{\\hat{L}} (v^0, v^1, v^2, \\ldots) = (v^1, v^2, v^3, \\ldots),\\quad{\\hat{R}} (v^0, v^1, v^2,\\ldots) = (0, v^0, v^1, \\ldots)\\]\n\n\\(\\sigma_{{\\hat{L}}}^{(\\text{c})} = \\sigma_{{\\hat{R}}}^{(\\text{c})} = \\{\\lambda \\in {\\mathbb{C}}| {\\left\\lvert\\lambda\\right\\rvert}= 1\\}\\): benaderende eigenvectoren\n\n\\({v}_{\\lambda,n} = \\frac{1}{\\sqrt{n}} \\sum_{k=0}^{n-1} {\\mathrm{e}}^{{\\mathrm{i}}k\\phi} {e}_k\\) met \\(\\lambda = {\\mathrm{e}}^{{\\mathrm{i}}\\phi}\\):\n\\({\\left\\lVert{\\hat{L}} {v}_{\\lambda,n} - \\lambda {v}_{\\lambda,n}\\right\\rVert} = {\\left\\lVert\\frac{1}{\\sqrt{n}} {\\mathrm{e}}^{{\\mathrm{i}}\\phi n} {e}_{n-1}\\right\\rVert} = \\frac{1}{\\sqrt{n}}\\)\n\\({v}'_{\\lambda,n} = \\frac{1}{\\sqrt{n}} \\sum_{k=0}^{n-1} {\\mathrm{e}}^{-{\\mathrm{i}}k\\phi} {e}_k\\) met \\(\\lambda = {\\mathrm{e}}^{{\\mathrm{i}}\\phi}\\)\n\\({\\left\\lVert{\\hat{R}} {v}'_{\\lambda,n} - \\lambda {v}'_{\\lambda,n}\\right\\rVert} = {\\left\\lVert\\frac{1}{\\sqrt{n}} {\\mathrm{e}}^{-{\\mathrm{i}}\\phi (n-1)}{e}_{n} - \\frac{1}{\\sqrt{n}} {\\mathrm{e}}^{{\\mathrm{i}}\\phi } {e}_{0}\\right\\rVert} = \\sqrt{\\frac{2}{n}}\\)"
+  },
+  {
+    "objectID": "slides/H7.html#spectrum-van-zelftoegevoegde-operatoren",
+    "href": "slides/H7.html#spectrum-van-zelftoegevoegde-operatoren",
+    "title": "Hoofdstuk 7 - Functieruimten",
+    "section": "Spectrum van zelftoegevoegde operatoren",
+    "text": "Spectrum van zelftoegevoegde operatoren\n\nVoor een zelftoegevoegde operator \\({\\hat{A}}={\\hat{A}}^\\dagger\\) geldt:\n\n\\(\\sigma \\subseteq {\\mathbb{R}}\\)\n\\(\\sigma^{(\\text{r})} = \\emptyset\\)\n\\(\\sigma^{(\\text{p})}\\) is discreet: eindig of aftelbaar (want bijbehorende eigenvectoren vormen orthonormale rij: moet aftelbaar zijn)\n\n\\(\\Rightarrow\\) er kan een soort spectrale decompositie worden opgeschreven die zowel het puntspectrum als het continue spectrum omvat\n\\(\\Rightarrow\\) in de fysica schrijven we dit met “eigenvectoren” met een “Dirac-delta normalisering”"
+  },
+  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Vector and Function Spaces – Slides",
     "section": "",
-    "text": "Order By\n       Default\n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Title\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\nDate\n\n\nTitle\n\n\nAuthor\n\n\n\n\n\n\nSep 25, 2023\n\n\nHoofdstuk 1 - Elementaire wiskundige structuren\n\n\nJutho Haegeman\n\n\n\n\nSep 26, 2023\n\n\nHoofdstuk 2 - Lineaire afbeeldingen\n\n\nJutho Haegeman\n\n\n\n\nOct 10, 2023\n\n\nHoofdstuk 3 - Lineaire operatoren en eigenwaarden\n\n\nJutho Haegeman\n\n\n\n\nOct 17, 2023\n\n\nHoofdstuk 4 - Normen en afstanden\n\n\nJutho Haegeman\n\n\n\n\nOct 24, 2023\n\n\nHoofdstuk 5 - Inwendig product en orthogonaliteit\n\n\nJutho Haegeman\n\n\n\n\nNov 7, 2023\n\n\nHoofdstuk 6 - Unitaire gelijkvormigheid en unitaire equivalentie\n\n\nJutho Haegeman\n\n\n\n\n\n\nNo matching items"
+    "text": "Order By\n       Default\n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Title\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\nDate\n\n\nTitle\n\n\nAuthor\n\n\n\n\n\n\nSep 25, 2023\n\n\nHoofdstuk 1 - Elementaire wiskundige structuren\n\n\nJutho Haegeman\n\n\n\n\nSep 26, 2023\n\n\nHoofdstuk 2 - Lineaire afbeeldingen\n\n\nJutho Haegeman\n\n\n\n\nOct 10, 2023\n\n\nHoofdstuk 3 - Lineaire operatoren en eigenwaarden\n\n\nJutho Haegeman\n\n\n\n\nOct 17, 2023\n\n\nHoofdstuk 4 - Normen en afstanden\n\n\nJutho Haegeman\n\n\n\n\nOct 24, 2023\n\n\nHoofdstuk 5 - Inwendig product en orthogonaliteit\n\n\nJutho Haegeman\n\n\n\n\nNov 7, 2023\n\n\nHoofdstuk 6 - Unitaire gelijkvormigheid en unitaire equivalentie\n\n\nJutho Haegeman\n\n\n\n\nNov 21, 2023\n\n\nHoofdstuk 7 - Functieruimten\n\n\nJutho Haegeman\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "slides/H6.html",
