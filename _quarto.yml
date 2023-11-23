@@ -20,6 +20,10 @@ website:
         text: H5
       - href: slides/H6.qmd
         text: H6
+      - href: slides/H7.qmd
+        text: H7
+      - href: slides/H8.qmd
+        text: H8
 
 format:
   html:
