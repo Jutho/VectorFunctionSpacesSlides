@@ -223,7 +223,7 @@ $\rightarrow$ beperken tot deelverzameling van functies: moet deelruimte zijn!
 
 $\mathcal{L}^p(I,\bbF)$ is de verzameling van functies $f:I\to \bbF$ (met dus $I=[a,b]$ of $I = \bbR$) die integreerbaar zijn en waarvoor $\int_I \abs{f(x)}^p \,\drm x$ eindig is
 
-* preciese definitie hangt af van integraalconcept
+* preciese definitie hangt af van integraalconcept (zie verder)
 * als $f$ integreerbaar is, is $\abs{f}^p$ integreerbaar
 * het geval $p=\infty$ laten we voorlopig buiten beschouwing
 * $\mathcal{L}^p(I,\bbF)$ vormt een vectorruimte (lineaire combinaties van twee integreerbare functies is integreerbaar, integraal van $\abs{a f(x) + b g(x)}^p$ can begrensd worden met behulp van convexiteit van $\abs{\cdot}^p$
@@ -242,7 +242,7 @@ Observatie 1:voor $f,g \in \mathcal{L}^p(I,\bbF)$
   
   $\Rightarrow$ verzameling $U = \{f | \norm{f}_p = 0\}$ vormt deelruimte van $\mathcal{L}^p(I,\bbF)$
 
-* functies waarvoor $\norm{f - g}_{p} = 0 \Leftrightarrow f-g \in U$ noemen we "bijna overal" gelijk zijn; dit is een equivalentierelatie
+* functies waarvoor $\norm{f - g}_{p} = 0 \Leftrightarrow f-g \in U$ noemen we "bijna overal" gelijk; dit is een equivalentierelatie
 
 $\rightarrow$ $L^p(I,\bbF) = \mathcal{L}^p(I,\bbF)/U$: de vectorruimte van equivalentieklassen van functies die bijna overal gelijk zijn
 
@@ -381,7 +381,7 @@ Ten opzichte van de Lebesgue-integraal zijn er stellingen die garanderen dat, vo
   
   (verzameling waarvoor geldt dat $\overline{\bbF S} = L^p(I,\bbF)$, niet noodzakelijk een basis) 
   
-  * $I$ compact: $S=\{x^k,k\in\bbN\}$, $S=\{\exp(\irm \frac{2\pi}{L} x), k \in\bbZ\}$, \dots
+  * $I$ compact: $S=\{x^k,k\in\bbN\}$, $S=\{\exp(\irm \frac{2\pi}{L} k x), k \in\bbZ\}$, \dots
   * $I = \bbR$: $S=\{x^n \chi_{[-N,N]}, n \in \bbN, N \in \bbN\}$
 
 # Hilbertruimten en inwendig product
@@ -635,7 +635,7 @@ $\rightarrow$ vooral in numerieke analyse, statistiek, minder in fysica
 
 ## Trigonometrische veeltermen en Fouriercoefficiënten {.smaller}
 
-* **Fouriercoefficiënten**: $\widehat{f}_k = \inner{\varphi_k}{f} = \frac{1}{\sqrt{L}} \int_{0}^{L} f(x) \erm^{-\irm \frac{2\pi}{L} x}\,\drm x$ ($\forall k \in \bbZ$)
+* **Fouriercoefficiënten**: $\widehat{f}_k = \inner{\varphi_k}{f} = \frac{1}{\sqrt{L}} \int_{0}^{L} f(x) \erm^{-\irm \frac{2\pi}{L} k x}\,\drm x$ ($\forall k \in \bbZ$)
 
 * Orthogonale projector op trigonometrische veeltermen van graad $n$:
 
@@ -651,7 +651,7 @@ $\rightarrow$ vooral in numerieke analyse, statistiek, minder in fysica
 
 ## Fouriercoefficiënten: eigenschappen {.smaller}
 
-$$\widehat{f}_k = \inner{\varphi_k}{f} = \frac{1}{\sqrt{L}} \int_{0}^{L} f(x) \erm^{-\irm \frac{2\pi}{L} x}\,\drm x$$
+$$\widehat{f}_k = \inner{\varphi_k}{f} = \frac{1}{\sqrt{L}} \int_{0}^{L} f(x) \erm^{-\irm \frac{2\pi}{L}k x}\,\drm x$$
 
  * Bestaan ($\forall k \in \bbZ$) voor elke $f \in L^1([0,L];\bbC)$ met $\abs{\widehat{f}_k} \leq \frac{1}{\sqrt{L}} \norm{f}_1 \Rightarrow \norm{\widehat{f}}_{\infty} =  \sup_{k \in \bbZ} \abs{\widehat{f}}_{\infty} \leq \frac{1}{\sqrt{L}}\norm{f}_1$
 
@@ -785,7 +785,7 @@ $$\widehat{f}_k = \inner{\varphi_k}{f} = \frac{1}{\sqrt{L}} \int_{0}^{L} f(x) \e
 
 * Snel dalende Fouriercoefficiënten: $F^k = \widehat{f}_{\min(k, k-N)} + \dots$
 
-* Fouriercoefficiënten exact begrensd: $\widehat{f}_k = 0$ voor $k>n$ $\Leftrightarrow$ $f$ is trigonometrische veelterm van graad $n$
+* Fouriercoefficiënten exact begrensd: $\widehat{f}_k = 0$ voor $\abs{k}>n$ $\Leftrightarrow$ $f$ is trigonometrische veelterm van graad $n$
 
   $\Rightarrow$ exacte reconstructie mogelijk uit samples als $\epsilon \leq L/(2n+1)$
 
@@ -877,7 +877,7 @@ Hilbertuimte $H = L^2(I,\bbC)$: lineaire afbeeldingen $f \mapsto g$ met $f,g \in
 
 * Vermenigvuldigingsoperator:
 
-  $$\norm{\map{M}_h f}^2 = \int_I \abs{ h(x) f(x)}^2,\drm x \leq \left(\mathrm{ess}\ \sup_{x \in I} \abs{h(x)}^2\right) \norm{f}^2$$
+  $$\norm{\map{M}_h f}^2 = \int_I \abs{ h(x) f(x)}^2\,\drm x \leq \left(\mathrm{ess}\ \sup_{x \in I} \abs{h(x)}^2\right) \norm{f}^2$$
 
   $\Rightarrow$ positie-operator $\map{X}$ op $L^2(I,\bbF)$ is begrensd als $I$ begrensd domein is, maar is onbegrensd op $L^2(\bbR,\bbF)$
 
@@ -885,7 +885,7 @@ Hilbertuimte $H = L^2(I,\bbC)$: lineaire afbeeldingen $f \mapsto g$ met $f,g \in
 
 * Afleidingsoperator: altijd onbegrensd
 
-  * op $L^2([0,L],\bbC)$: $f_k = \frac{1}{\sqrt{L}} \exp(\irm \frac{2\pi}{k} x)$
+  * op $L^2([0,L],\bbC)$: $f_k = \frac{1}{\sqrt{L}} \exp(\irm \frac{2\pi}{L}k x)$
 
     $\rightarrow$ $\norm{f_k}_2 = 1$ en $\norm{\map{D}f_k}_2 = \frac{2\pi}{L} \abs{k}$ voor arbitraire $k \in \bbZ$
 
@@ -956,12 +956,12 @@ Hilbertuimte $H = L^2(I,\bbC)$: lineaire afbeeldingen $f \mapsto g$ met $f,g \in
 
 * Als $\map{A}^\dagger$ zelf ook dicht gedefineerd is, dan kunnen we $\map{A}^{\dagger\dagger}$ definiëren:
 
-  $\rightarrow$ $\map{A} \subset \map{A}^{\dagger\dagger}$ ($\D_{\map{A}^{\dagger\dagger}}$ bevat alle $\vv$ zodat $\vw \mapsto \inner{\vv}{\map{A}^\dagger\vw} = \conj{\inner{\map{A}^\dagger \vw}{\vv}}$ continu is: zeker voldaan $\vv \in \D_{\map{A}}$)
+  $\rightarrow$ $\map{A} \subset \map{A}^{\dagger\dagger}$ ($\D_{\map{A}^{\dagger\dagger}}$ bevat alle $\vv$ zodat $\vw \mapsto \inner{\vv}{\map{A}^\dagger\vw} = \conj{\inner{\map{A}^\dagger \vw}{\vv}}$ continu is voor alle $\vw \in \D_{\map{A}^\dagger}$: zeker voldaan $\vv \in \D_{\map{A}}$)
 
 ## Symmetrische en zelftoegevoegde operatoren {.smaller}
 
 * **symmetrische / hermitische / hermitisch symmetrische operator**:
-  $$\inner{\vv}{\map{A}\vv} = \inner{\map{A}\vv}{\vw}, \forall \vv,\vw \in \D\,\!_{\map{A}}$$
+  $$\inner{\vw}{\map{A}\vv} = \inner{\map{A}\vw}{\vv}, \forall \vv,\vw \in \D\,\!_{\map{A}}$$
 
   (symmetrisch wordt ook gebruikt in complexe geval)
 

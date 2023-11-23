@@ -536,7 +536,7 @@ We beperken ons nu tot reële bilineaire vormen $B:V \times V \to \bbR$ (met $V$
   * De basistransformatie $\mat{V}$ is verre van uniek (arbitraire orthogonale transformaties binnen de kolommen geassocieerd aan $+1$, deze geassocieerd aan $-1$ en deze geassocieerd aan $0$ zijn mogelijk)
   * De traagheidsindices zijn uniek en bepalen dus de canonische vorm van alle matrices gerelateerd via congruentie, via onderstaande stelling:
 
-* **Traagheidswet van Sylvester**: Twee symmetrische matrices $\mat{B},\mat{\tilde{B}} \in \bbR^{n \times n}$ zijn congruent als en slachts als hetzelfde aantal positieve, negatieve en nul eigenwaarden hebben.
+* **Traagheidswet van Sylvester**: Twee symmetrische matrices $\mat{B},\mat{\tilde{B}} \in \bbR^{n \times n}$ zijn congruent als en slechts als hetzelfde aantal positieve, negatieve en nul eigenwaarden hebben.
 
   (bewijs aan bord)
 
@@ -559,7 +559,7 @@ We beperken ons nu tot reële bilineaire vormen $B:V \times V \to \bbR$ (met $V$
 
 # Singulaire waardendecompositie en polaire decompositie
 
-## Unitaire equivalentie
+## Unitaire equivalentie {.smaller}
 
 * Matrixnormen gebaseerd op Euclidische norm:
   * Geinduceerde 2-norm voor matrix $\mat{A} \in \bbF^{m \times n}$:
@@ -574,7 +574,9 @@ We beperken ons nu tot reële bilineaire vormen $B:V \times V \to \bbR$ (met $V$
   * $\norm{\mat{A}}_{2\to 2} = \norm{\tilde{\mat{A}}}_{2 \to 2}$
   * $\norm{\mat{A}}_{\text{F}} = \norm{\tilde{\mat{A}}}_{\text{F}}$
 
-## Singuliere waardendecompositie
+  $\rightarrow$ canonisch vorm?
+
+## Singuliere waardendecompositie {.smaller}
 
 Singuliere waardendecompositie van een matrix $\mat{A}\in\bbF^{m \times n}$:
 $$\mat{A} = \mat{U} \mat{S} \mat{V}^\hermitian$$
@@ -665,7 +667,7 @@ Voor matrix $\mat{A} = \mat{U} \mat{S}\mat{V}^\hermitian\in \bbF^{m \times n}$:
 
 * geïnduceerde norm $\norm{\mat{A}}_2 = \sigma_1$ (bewijs aan bord)
 * Frobenius norm $\norm{\mat{A}}_{\text{F}} = \sqrt{\sum_{i=1}^p \sigma_i^2}$
-* voor inverteerbare (en dus vierkante) $\mat{A}\in\bbF^{n \times n}$: $\mat{A}^{-1} = \mat{V} \mat{S}^{-1} \mat{U}^\hermitian$
+* voor inverteerbare (en dus vierkante volle-rang) $\mat{A}\in\bbF^{n \times n}$: $\mat{A}^{-1} = \mat{V} \mat{S}^{-1} \mat{U}^\hermitian$
 
   $\Rightarrow$ conditiegetal (geassocieerd aan geïnduceerde $2$-norm): $\kappa(\mat{A}) = \sigma_1/\sigma_n$
 
@@ -716,7 +718,7 @@ Beschouw een lineair stelsel $\mat{A}\mat{x} = \mat{y}$ met $\mat{A}\in\bbF^{m \
 
   $\Rightarrow$ veralgemeent $z = \erm^{\irm \arg(z)} \abs{z}$
 
-* vind isometrische matrix $\mat{B}$ waarvoor $\norm{\mat{A}-\mat{B}} minimaal is
+* vind isometrische matrix $\mat{B}$ waarvoor $\norm{\mat{A}-\mat{B}}$ minimaal is
 
   $\Rightarrow \mat{B}= \mat{U}_n\mat{V}_n^{\hermitian}$ (als $m\geq n$ en voor $\norm{\mat{A}-\mat{B}}_{\text{F}}$)
 

@@ -1,0 +1,466 @@
+---
+title: "Hoofdstuk 8 - Lineaire differentiaaloperatoren"
+author: "Jutho Haegeman"
+date: "11/22/2023"
+# format:
+#   revealjs:
+#     theme: solarized
+#     chalkboard: true
+---
+
+## Doel van dit hoofdstuk {.smaller}
+
+
+::: {.hidden}
+$$
+% Math operators
+\DeclareMathOperator{\Aut}{Aut}
+\DeclareMathOperator{\End}{End}
+\DeclareMathOperator{\Hom}{Hom}
+\DeclareMathOperator{\GL}{GL}
+\DeclareMathOperator{\SL}{SL}
+\DeclareMathOperator{\Unitary}{U}
+\DeclareMathOperator{\Orthogonal}{O}
+\DeclareMathOperator{\SU}{SU}
+\DeclareMathOperator{\SO}{SO}
+\DeclareMathOperator{\Aff}{Aff}
+\DeclareMathOperator{\dom}{dom}
+\DeclareMathOperator{\cod}{codom}
+\DeclareMathOperator{\D}{\mathcal{D}}
+\DeclareMathOperator{\E}{\mathcal{E}}
+\DeclareMathOperator{\R}{\mathcal{R}}
+\DeclareMathOperator{\Schw}{\mathcal{S}}
+\DeclareMathOperator{\im}{im}
+%\DeclareMathOperator{\ker}{ker}
+%\DeclareMathOperator{\dim}{dim}
+\DeclareMathOperator{\codim}{codim}
+\DeclareMathOperator{\convhull}{co}
+
+\newcommand{\opgreek}[1]{\begingroup\mathgroup-1 #1\endgroup}
+\DeclareMathOperator{\rank}{rank}
+\DeclareMathOperator{\nullity}{nullity}
+
+\DeclareMathOperator{\Pv}{Pv}
+
+\DeclareMathOperator{\tr}{tr}
+\DeclareMathOperator{\sgn}{sgn}
+\DeclareMathOperator{\id}{id}
+\DeclareMathOperator{\adj}{adj}
+
+\DeclareMathOperator*{\varmin}{min}
+\DeclareMathOperator*{\varmax}{max}
+\DeclareMathOperator*{\argmin}{arg\ min}
+\DeclareMathOperator*{\argmax}{arg\ max}
+\DeclareMathOperator{\order}{\mathscr{O}}
+\DeclareMathOperator{\sign}{sgn}
+\DeclareMathOperator{\spanop}{span}
+\DeclareMathOperator{\arctanh}{arctanh}
+\DeclareMathOperator{\arccosh}{arccosh}
+\DeclareMathOperator{\arcsinh}{arcsinh}
+\DeclareMathOperator{\arccot}{arccot}
+\DeclareMathOperator{\sinc}{sinc}
+
+
+\newcommand{\commutator}[2]{{\left[#1,#2\right]}}
+\newcommand{\anticommutator}[2]{{\left\{#1,#2\right\}}}
+
+\DeclareMathOperator{\real}{Re}
+\DeclareMathOperator{\imag}{Im}
+\newcommand{\conj}[1]{{\overline{#1}}}
+\newcommand{\abs}[1]{{\left\lvert#1\right\rvert}}
+\newcommand{\norm}[1]{{\left\lVert#1\right\rVert}}
+\newcommand{\inner}[2]{{\left\langle#1,#2\right\rangle}}
+
+\newcommand{\drm}{{\mathrm{d}}}
+\newcommand{\erm}{{\mathrm{e}}}
+\newcommand{\irm}{{\mathrm{i}}}
+
+
+% VECTORS
+\newcommand{\vect}[1]{{#1}}
+\renewcommand{\vec}[1]{\boldsymbol{#1}} % specifically for vectors in F^n
+\newcommand{\zerovec}{{o}}
+\newcommand{\vu}{\vect{u}}
+\newcommand{\vv}{\vect{v}}
+\newcommand{\vw}{\vect{w}}
+\newcommand{\ve}{\vect{e}}
+\newcommand{\vf}{\vect{f}}
+\newcommand{\vx}{\vect{x}}
+\newcommand{\vy}{\vect{y}}
+
+% MATRICES
+\newcommand{\mat}[1]{{\mathsf{#1}}}
+\newcommand{\zeromat}{\mat{O}}
+\newcommand{\idmat}{\mat{I}}
+
+% SCALARS
+\newcommand{\scalara}{{a}}
+\newcommand{\scalarb}{{b}}
+\newcommand{\scalarc}{{c}}
+
+% LINEAR MAPS
+\DeclareMathAlphabet{\mymathbb}{U}{BOONDOX-ds}{m}{n}
+\newcommand{\map}[1]{{\hat{#1}}}
+\newcommand{\idmap}{\map{1}}
+\newcommand{\zeromap}{\map{0}}
+
+\newcommand{\transpose}{{\mathsf{T}}}
+\newcommand{\hermitian}{{\mathsf{H}}}
+
+\renewcommand{\d}{{\mathrm{d}}}
+
+% FIELDS
+\newcommand{\bbF}{{\mathbb{F}}}
+\newcommand{\bbN}{{\mathbb{N}}}
+\newcommand{\bbZ}{{\mathbb{Z}}}
+\newcommand{\bbQ}{{\mathbb{Q}}}
+\newcommand{\bbR}{{\mathbb{R}}}
+\newcommand{\bbC}{{\mathbb{C}}}
+\newcommand{\bbH}{{\mathbb{H}}}
+\newcommand{\bbT}{{\mathbb{T}}}
+
+% RELATIONS
+\newcommand{\subspace}{{\preccurlyeq}}
+\newcommand{\supspace}{{\succcurlyeq}}
+
+%\newcommand{\vz}{{\bm{z}}}
+%\newcommand{\ovz}{{\overline{\bm{z}}}}
+%\newcommand{\oz}{{\overline{z}}}
+%\newcommand{\vu}{{\bm{u}}}
+%\newcommand{\ovu}{{\overline{\bm{u}}}}
+%\newcommand{\ou}{{\overline{u}}}
+%\newcommand{\vr}{{\bm{r}}}
+%\newcommand{\ovr}{{\overline{\bm{r}}}}
+%\newcommand{\orr}{{\overline{r}}}
+
+\newcommand{\eps}{{\varepsilon}}
+\newcommand{\levicivita}{{\epsilon}}
+
+\newcommand{\sx}{{\sigma^x}}
+\newcommand{\sy}{{\sigma^y}}
+\newcommand{\sz}{{\sigma^z}}
+\renewcommand{\sp}{{\sigma^+}}
+\newcommand{\sm}{{\sigma^-}}
+%
+
+\DeclareMathOperator*{\sumint}{%
+\mathchoice%
+  {\ooalign{$\displaystyle\sum$\cr\hidewidth$\displaystyle\int$\hidewidth\cr}}
+  {\ooalign{\raisebox{.14\height}{\scalebox{.7}{$\textstyle\sum$}}\cr\hidewidth$\textstyle\int$\hidewidth\cr}}
+  {\ooalign{\raisebox{.2\height}{\scalebox{.6}{$\scriptstyle\sum$}}\cr$\scriptstyle\int$\cr}}
+  {\ooalign{\raisebox{.2\height}{\scalebox{.6}{$\scriptstyle\sum$}}\cr$\scriptstyle\int$\cr}}
+}
+$$
+:::
+
+* Lineaire differentiaalvergelijkingen + randvoorwaarden
+  * Beginvoorwaardeproblemen
+  * Randvoorwaardeproblemen 
+* Algemene eigenschappen van differentiaaloperatoren en randvoorwaarden
+* Algemene structuur en eigenschappen van de oplossingen
+* Algemene oplossingsstrategieën
+* Eigenwaardeproblemen met differentiaaloperatoren
+
+# Differentiaaloperatoren en hun toegevoegde
+
+## Lineaire differentiaalvergelijkingen {.smaller}
+
+* Lineaire differentiaalvergelijking:
+
+  $$(\map{L} u)(x) = f(x),\quad a < x < b$$
+
+  met (lineaire) differentiaaloperator
+
+  $$(\map{L}u)(x) = a_p(x) \frac{\drm^p u}{\drm x^p}(x) + a_{p-1}(x) \frac{\drm^{p-1} u}{\drm x^{p-1}}(x) + \ldots + a_1(x) \frac{\drm u}{\drm x}(x)+ a_0(x) u(x)$$
+
+* Randvoorwaarden: $B_i[u] = \gamma_i, i=1,\ldots,m$ met hierin
+
+  $$B_i[u] = \sum_{j=1}^{p} \alpha_{i,j} \frac{\drm^{j-1} u}{\drm x^{j-1}}(a) + \sum_{j=1}^{p} \alpha_{i,j+p} \frac{\drm^{j-1} u}{\drm x^{j-1}}(b)$$
+
+  * randvoorwaarden onafhankelijk als $\mat{B} = \begin{bmatrix} \alpha_{1,1} &\dots &\alpha_{1,2p}\\
+ \vdots & & \vdots\\
+ \alpha_{m,1} &\dots &\alpha_{m,2p}
+ \end{bmatrix}$ rang $m$ heeft
+
+## (Terugkerend) voorbeeld {.smaller}
+
+$$	-u''(x) = x$$
+
+* zonder randvoorwaarden: $u(x) = c_1 + c_2 x -\frac{1}{2} x^2$
+* één randvoorwaarde:
+  * $u(0)=0 \Rightarrow u(x) = c_2 x - \frac{1}{2} x^2$
+  * $u'(0) = 0 \Rightarrow u(x) = c_1 - \frac{1}{2} x^2$
+* twee randvoorwaarden:
+  * $u(0) = u(1) = 0 \Rightarrow u(x) = -\frac{1}{2}x^2 +\frac{1}{2} x$ (unieke oplossing)
+  * $u'(0) = u'(1) = 0 \Rightarrow$ geen oplossingen
+
+$\rightarrow$ hoe kunnen we het bestaan en de uniciteit van de oplossingen karakteriseren?
+
+## Bijkomende bemerkingen {.smaller}
+
+1.  Met behulp van de positie en afleidingsoperator kunnen we $\map{L}$ schrijven als
+
+    $$\map{L} = \sum_{j=0}^{p} a_j(\map{X}) \map{D}^j$$
+
+
+2.  In de fysica: bijna steeds tweede-orde differentiaalvergelijkingen:
+
+    $$(\map{L}u)(x) = a_2(x) \frac{\drm^2 u}{\drm x^2}(x) + a_{1}(x) \frac{\drm u}{\drm x}(x) +  a_0(x) u(x)$$
+
+    * Voor meerdere bewijzen wordt enkel het $p=2$ geval aan bord gebracht, zelfs al doet de cursus algemene orde $p$. Ook voor het examen is $p=2$ voldoende.
+
+## Bijkomende bemerkingen {.smaller}
+
+3.  Waarde en regulariteit van de coefficiënten $a_k(x)$?
+
+    * worden meestal reëel verondersteld $\Rightarrow$ ook oplossing $u(x)$ reëel
+
+      * zeker in wiskunde-literatuur
+      * in kwantummechanica soms complexe coefficiënten nodig
+    * worden voldoende glad verondersteld:
+      * voor het definiëren van de toegevoegde operator (zie later) is $a_k(x) \in C^k([a,b],\bbR)$ noodzakelijk
+    * $a_p(x) \neq 0$ voor $x\in [a,b]$ of minstens $x\in(a,b)$
+
+## Bijkomende bemerkingen {.smaller}
+
+4.  Domein van oplossingen = domein van $\map{L}$
+    
+    * hoogste afgeleide $u^{(p)}(x)$ moet bestaan en kwadratisch integreerbaar zijn
+
+      $\Rightarrow u^{(p-1)}(x)$ moet continu zijn
+    
+      $\Rightarrow$ minstens $u(x) \in C^{(p-1)}([a,b])$
+
+    * technisch: $p$de afgeleide kan in zwakke zin bestaan (zie H9)
+  
+      $\rightarrow u \in H^p([a,b])$ = Sobolevruimte
+
+    * soms willen we ook de (homogene) randvoorwaarden opnemen in het domein van $\map{L}$
+
+## Superpositie {.smaller}
+
+* **superpositie** = belangrijkste eigenschap/gevolg van lineariteit
+
+  \begin{align*}
+    \map{L} u_1 &= f_1 &\text{met}&&B_i[ u_1 ] = \gamma_{1,i}, \forall i =1,\ldots,m\\
+    \map{L} u_2 &= f_2 &\text{met}&&B_i[ u_2 ] = \gamma_{2,i} \forall i =1,\ldots,m	
+  \end{align*}
+
+  $\Rightarrow$ $u =a^1 u_1 + a^2 u_2$ is de oplossing van
+  \begin{align*}
+    \map{L} u&= a^1 f_1 + a^2 f_2 &\text{met}&&B_i[ u ] = a^1 \gamma_{1,i} + a^2 \gamma_{2,i}, \forall i =1,\ldots,m
+  \end{align*}
+
+* Vergelijk met $\mat{A}\vec{x} = \vec{y}$
+  * Rechterlid $\vec{y}$ correspondeert met zowel het rechterlid $f$ van de differentiaalvergelijking, als het rechterlid $\gamma$ van de randvoorwaarden
+  * Uniciteit hangt samen met het bestaan van niet-triviale oplossingen van de homogene vergelijking
+
+  $\Rightarrow$ (volledig) homogeen probleem = homogene differentiaalvergelijking met homogene randvoorwaarden
+
+  $$(\map{L} u)(x) = 0, \quad \forall a < x < b\qquad \text{with}\ B_i[u] = 0, \forall i=1,\ldots,m$$
+
+## Superpositie: structuur van de oplossingen {.smaller}
+
+* We ontbinden de oplossing van het algemene probleem als $u = u_0 + u_f + u_\gamma$:
+
+  * een oplossing $u_0$ van het volledig homogene probleem:
+
+    $$(\map{L} u_0)(x) = 0, \quad \forall a < x < b\qquad \text{with}\ B_i[u_0] = 0, \forall i=1,\ldots,m$$
+
+    $\Rightarrow$ $u_0(x)=0$ is steeds oplossing; indien andere oplossingen $u_0$ bestaan is de finale oplossing $u$ niet uniek
+
+  * een particuliere oplossing $u_f$ van de inhomogene differentiaalvergelijking met homogene randvoorwaarden
+
+    $$(\map{L} u_f)(x) = f(x), \quad \forall a < x < b\qquad \text{with}\ B_i[u_f] = 0, \forall i=1,\ldots,m$$
+
+  * een particuliere oplossing $u_\gamma$ van de homogene differentiaalvergelijknig met inhomogene randvoorwaarden
+
+    $$(\map{L} u_\gamma)(x) = 0, \quad \forall a < x < b\qquad \text{with}\ B_i[u_\gamma] = \gamma_i, \forall i=1,\ldots,m$$
+
+  $\rightarrow$ wanneer is het bestaan van $u_f$ en $u_\gamma$ gegarandeerd?
+
+## Existentie en uniciteit {.smaller}
+
+* Existentie van $u_\gamma$ is voor later
+* Voor $u_0$ en $u_f$ definiëren we de nu het domein van de differentiaaloperator als:
+
+  $$\D\,\!_{\map{L}} = \{ u \in L^2([a,b]) | u^{(p)}\ \text{bestaat en}\ u^{(p)} \in L^2([a,b])\ \text{en}\ B_i[u] = 0, \forall i=1,\ldots,m\}$$
+
+  * voor uniciteit: $u_0 \in \ker(\map{L}) \Rightarrow \ker(\map{L}) = \{\zerovec\}$?
+  * voor bestaan van $u_f$: $f \in \mathcal{R}_{\map{L}} = \{\map{L}u,\forall u \in \D_{\map{L}}\}$?
+    $\rightarrow$ niet echt praktisch
+
+* Voor begrensde operator $\map{A}$: $\mathcal{R}_{\map{A}} = \im(\map{A})$ voldoet aan $\overline{\im(\map{A})} = \ker(\map{A}^\dagger)^\perp$
+
+  * $f \in \overline{\im(\map{A})} \iff \forall w \in \ker(\map{A}^\dagger): \inner{w}{f}=0$
+
+  * $\map{L}$ is geen begrensde operator: 
+    
+    $\forall v \in \ker(\map{A}^\dagger): \inner{v}{f}=\inner{v}{\map{L}u}=\inner{L^\dagger v}{u} = 0$: noodzakelijk!
+
+  * zonder bewijs: ook voldoende voorwaarde (gekend als "Fredholm alternative theorem") voor zogenaamde Fredholm operatoren: omvat bepaalde klassen van differentiaaloperatoren 
+
+## Toegevoegde operator {.smaller}
+
+* We zijn geïnteresseerd in de kernel van de toegevoegde operator, i.e.
+
+  \begin{align}
+	(\map{L}^\dagger v)(x) = 0, \quad \forall a < x < b\qquad \text{met}\ v\in\D\,\!_{\map{L}^\dagger}\rightarrow\text{randvoorwaarden?}
+  \end{align}
+
+* **formeel toegevoegde operator**:
+
+  $$\map{L}^\dagger = \sum_{j=0}^{p} (-1)^{j} \map{D}^j \overline{a_j}(\map{X})\implies 	(\map{L}^\dagger v)(x) = \sum_{j=0}^{p} (-1)^j \frac{\drm^j\ }{\drm x^j} (\overline{a_j(x)} v(x))$$
+
+  (met behulp van $\map{D}^\dagger = -\map{D}$)
+
+  * als $\map{L}=\map{L}^\dagger$: **formeel zelf-toegevoegd**
+
+* identiteit van Lagrange: (bewijs aan bord)
+  
+  $$\overline{v(x)} (\map{L}u)(x) - \overline{(\map{L}^\dagger v)(x)}u(x) = \frac{\drm\ }{\drm x} J(u(x),v(x))$$
+
+  met hierin $J(u(x),v(x)) = \sum_{j=0}^{p} \sum_{k=0}^{j-1} (-1)^k \left(\frac{\drm^k\ }{\drm x^k}[ a_j(x) \overline{v(x)}]\right)\left(\frac{\drm^{j-1-k}\ }{\drm x^{j-1-k}}u(x)\right)$  
+  (bilineaire concomitant)
+
+## Toegevoegde operator: randvoorwaarden {.smaller}
+
+* De identiteit van Lagrange geïntegreerd over $[a,b]$ = identiteit van Green:
+  
+  $$\inner{v}{\map{L}u} - \inner{\map{L}^\dagger v}{u} =\left. J(u(x),v(x))\right|^b_a = \left. J(u(x),v(x))\right|_{x=b} - \left. J(u(x),v(x))\right|_{x=a}$$
+
+* Met behulp van
+  \begin{align}
+	\vec{x} = \begin{bmatrix}u(a) & u'(a) & \dots & u^{(p-1)}(a) & u(b) & u'(b) & \dots & u^{(p-1)}(b)\end{bmatrix}^\transpose \nonumber\\
+	\vec{y} = \begin{bmatrix}v(a) & v'(a) & \dots & v^{(p-1)}(a) & v(b) & v'(b) & \dots & v^{(p-1)}(b)\end{bmatrix}^\transpose
+  \end{align}
+
+  $\Rightarrow \left. J(u(x),v(x))\right|^b_a = \vec{y}^\hermitian \mat{P} \vec{x}$ met $\mat{P}$ een $2p \times 2p$ matrix
+
+* Randvoorwaarden voor $\map{L}$: $\mat{B} \vec{x} = \vec{0}$ met $\mat{B}$ een $m \times 2p$ matrix met volle rang ($=m$)
+
+  * stel: $\mat{K}$ een $2p \times (2p-m)$ matrix met kolommen een basis voor $\ker(\mat{B})$
+
+
+    $\Rightarrow$ $(2p-m)$ randvoorwaarden voor toegevoegde operator:
+    
+    $$\vec{y}^\hermitian \mat{P}\mat{K} = \vec{0}^\hermitian \Leftrightarrow (\mat{P}\mat{K})^\hermitian \vec{y} = \vec{0}$$
+
+## Toegevoegde operator: voorbeeld {.smaller}
+
+* $\map{L}=-\map{D}^2$ op het interval $[0,1]$:
+  * formeel toegevoegde: $\map{L}^\dagger = -\map{D}^2$ (formeel zelftoegevoegd)
+  * identiteit van Green:
+    \begin{align*}
+	  &\int_0^1 \overline{v(x)} (-u''(x))\,\drm x - \int_0^1 (-\overline{v''(x)}) u(x)\,\drm x\\
+	  &\quad= [-v(1) u'(1) + v(0) u'(0)] + [v'(1) u(1) - v'(0) u(0)].
+    \end{align*}
+  * randvoorwaarden voor $\map{L}$ $\rightarrow$ randvoorwaarden voor $\map{L}^\dagger$
+    * $m=0$ $\rightarrow$ $v(0)=v(1)=v'(0)=v'(1)=0$ ($2p-m = 4$)
+    * $m=1$: $u(0)=0$ $\rightarrow$ $v(0)=v(1)=v'(1)=0$ ($2p-m=3$)
+    * $m=2$: $u'(0)=u'(1)=0$ $\rightarrow$ $v'(0)=v'(1)=0$ ($2p-m=2$)
+
+      $\rightarrow$ $\map{L}$ is zelftoegevoegd
+    * $m=3$: $u(0)=u'(0)=u'(1)$ $\rightarrow$ $v'(1)=0$ ($2p-m=1$)
+
+      $\rightarrow$ $\map{L}$ is symmetrisch maar niet zelftoegevoegd
+
+## Toegevoegde operator en existentie: voorbeeld {.smaller}
+
+$$-u''(x) = f(x)$$
+
+* zonder randvoorwaarden: $u(x) = c_1 + c_2 x + \int_0^x\,\drm y\left[\int_0^y \,\drm z f(z)\right]$
+  * $\ker(\map{L})$: $-u''(x)=0 \rightarrow \{u_0(x)=1, u_0(x)=x\}$ $\implies$ 2 vrije paramaters
+  * $\map{L}^\dagger$ heeft vier randvoorwaarden: $\ker{\map{L}^\dagger} =\{\zerovec\}$ $\implies$ existentie voor elke $f$
+
+* $u(0) = u(1)=0$: $c_1=0$, $c_2 = -\int_0^1\,\drm y\left[\int_0^y \,\drm z f(z)\right]$
+  * $\ker(\map{L}) = \{\zerovec\}$ $\implies$ uniciteit
+  * $\map{L}^\dagger$ heeft randvoorwaarden $v(0)=v(1)=0$ (zelf-toegevoegd)
+    $\Rightarrow \ker(\map{L}^\dagger)=\{\zerovec\}$ $\implies$ existentie voor elke $f$
+
+* $u'(0) = u'(1)=0$: $u'(0)=c_2 = 0$ en $u'(1) = c_2 + \int_0^1 \,\drm z f(z)=0$
+  * $\ker(\map{L}) = \{u_0(x)=1\}$ $\implies$ 1 vrije parameter ($c_1$)
+  * $\map{L}^\dagger$ heeft randvoorwaarden $v'(0)=v'(1)=0$ (zelf-toegevoegd)
+    $\Rightarrow \ker(\map{L}^\dagger)=\{v_0(x)=1\}$ $\implies$ existentie enkel als $\inner{v_0}{f}=0 = \int_0^1\,\drm z f(z)$
+
+## Toegevoegde operator en existentie: voorbeeld {.smaller}
+
+$$-u''(x) = f(x)$$
+
+* $u(0) = u'(0) =u'(1) = 0$: $c_0=0$, $c_2=0$, $c_2 + \int_0^1 \,\drm z f(z)=0$
+  * $\ker(\map{L}) = \{\zerovec\}$ $\implies$ uniciteit
+  * $\map{L}^\dagger$ heeft randvoorwaarden $v'(1)=0$ (zelf-toegevoegd)
+    $\Rightarrow \ker(\map{L}^\dagger)=\{v_0(x)=1\}$ $\implies$ existentie enkel als $\inner{v_0}{f}=0 = \int_0^1\,\drm z f(z)$
+
+
+Algemene conclusies: voor een fysisch probleem willen graag dat de oplossing:
+
+* bestaat voor een willekeurige bronterm: $\ker(\map{L}^\dagger) = \{\zerovec\}$
+* de oplossing uniek is: $\ker(\map{L}) = \{\zerovec\}$
+
+$\Rightarrow$ dit zullen we enkel kunnen bereiken met $m = 2p-m = p$ randvoorwaarden
+
+## Zelftoegevoegde differentiaaloperatoren {.smaller}
+
+* Zelftoegevoegde operatoren hebben nuttige eigenschappen (vb spectrum)
+* Eindig-dimensionaal:
+  * $\map{A} = \map{A}^\dagger \implies \mat{A} = \mat{A}^\hermitian$ als orthonormale basis
+  * meer algemeen: $\mat{A}^\dagger = \mat{g}^{-1} \mat{A}^\hermitian \mat{g}$ met $\mat{g}$ inwendig product van de basisvectoren
+
+* Voor een differentiaaloperator op $[a,b]$:
+  * misschien niet (formeel) zelf-toegevoegd t.o.v. standaard inwendig product
+  * maar wel ten opzichte van $\inner{v}{u}_w$, dus voor functies $u \in L^2_w([a,b])$
+    * voor positie-operator: $\inner{v}{\map{X}u}_w = \inner{\map{X}^\dagger v}{u}_w$ $\rightarrow$ $(\map{X}^\dagger v)(x) = x v(x) = (\map{X} v)(x)$
+
+      (altijd zelftoegevoegd)
+    * $\inner{v}{\map{D}u}_w = \inner{\map{D}^\dagger v}{u}_w$ $\rightarrow$ $(\map{D}^\dagger v)(x) = -\frac{1}{w(x)} \frac{\drm\ }{\drm x} \left[w(x)v(x)\right]$ 
+
+## Zelftoegevoegde differentiaaloperatoren {.smaller}
+
+* Veralgemeende Lagrange-identiteit:
+  $$w(x) \overline{v(x)} (\map{L}u)(x) - w(x) \overline{(\map{L}^\dagger v)(x)} u(x) = \frac{\drm\ }{\drm x} J(u(x),v(x))$$
+  met $J(u(x),v(x)) = \sum_{j=0}^{p} \sum_{k=0}^{j-1} (-1)^k \left(\frac{\drm^k\ }{\drm x^k}[ w(x) a_j(x) \overline{v(x)}]\right)\left(\frac{\drm^{j-1-k}\ }{\drm x^{j-1-k}}u(x)\right)$
+
+* Een reële 2de-orde differentiaaloperator is formeel zelf-toegevoegd t.o.v. $\inner{\ }{\ }_w$ als en slechts als hij kan geschreven worden in de vorm van een **Sturm-Liouville operator**: (bewijs aan bord)
+  $$(\map{L}u)(x) = -\frac{1}{w(x)} \frac{\drm\ }{\drm x} \left( p(x) \frac{\drm\ }{\drm x} u (x)\right) + \frac{q(x)}{w(x)} u(x)$$
+
+* Er bestaat een keuze van $w$ die elke reële 2de-orde differentiaaloperator met $a_2(x)\neq 0$ voor $x \in [a,b]$ formeel zelf-toegevoegd maakt (bewijs aan bord)
+
+## Sturm-Liouville operator: randvoorwaarden {.smaller}
+
+* voor Sturm-Liouville operator $\map{L}$: $J(u(x),v(x)) = -p(x) \left[\overline{v(x)}  u'(x) - \overline{v'(x)} u(x)\right]$
+
+  \begin{align}
+    \left[J(u(x),v(x))\right]_a^b &= \vec{y}^\hermitian \mat{P}\vec{x} =\begin{bmatrix}v(a)\\v'(a)\\v(b)\\v'(b)\end{bmatrix}^\hermitian \begin{bmatrix} 0 & +p(a) & 0 & 0 \\ -p(a) & 0 & 0 & 0 \\ 0 & 0 & 0 & -p(b) \\ 0 & 0 & +p(b) & 0\end{bmatrix} \begin{bmatrix}u(a)\\u'(a)\\u(b)\\u'(b)\end{bmatrix}\label{eq:diff:boundarygeneralsturmliouville}\\
+    &= p(b) \det\left(\begin{bmatrix}
+      u(b) & \overline{v(b)} \\ u'(b) & \overline{v'(b)}
+    \end{bmatrix}\right) - p(a) \det\left(\begin{bmatrix}
+      u(a) & \overline{v(a)} \\ u'(a) & \overline{v'(a)}
+    \end{bmatrix}\right).
+  \end{align}
+
+* reguliere Sturm-Liouville operator: $p(a)\neq 0$, $p(b)\neq 0$
+
+## Sturm-Liouville operator: randvoorwaarden {.smaller}
+
+Reguliere Sturm-Liouville operator is zelftoegevoegd voor:
+
+* gescheiden randvoorwaarden: 
+  \begin{align}
+    \mat{B} \vec{x} = \begin{bmatrix}
+      \alpha_{1} & \alpha_{2} & 0 & 0\\
+      0 & 0 & \beta_{1} & \beta_{2}
+    \end{bmatrix}\begin{bmatrix}u(a)\\u'(a)\\u(b)\\u'(b)\end{bmatrix} = \vec{0} \quad \iff\quad \begin{cases} \alpha_{1} u(a) + \alpha_{2} u'(a) = 0\\
+    \beta_{1} u(b) + \beta_{2} u'(b) = 0\end{cases}.\label{eq:diff:seperatedbc}
+  \end{align}
+
+* $p(a) = p(b)$ en periodieke randvoorwaarden:
+  \begin{align}
+    \mat{B} \vec{x} = \begin{bmatrix}
+      1 & 0 & -1 & 0\\
+      0 & 1 & 0 & -1
+    \end{bmatrix}\begin{bmatrix}u(a)\\u'(a)\\u(b)\\u'(b)\end{bmatrix} = \vec{0} \quad \iff\quad \begin{cases}  u(a) = u(b)\\
+    u'(a) = u'(b)\end{cases}
+  \end{align}
+
+* andere oplossingen voor de randvoorwaarden, maar dit zijn de twee fysisch meest relevante gevallen

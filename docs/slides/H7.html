@@ -330,7 +330,7 @@ ul.task-list li input[type="checkbox"] {
 <h2 class="smaller anchored" data-anchor-id="lebesgue-ruimten-1">Lebesgue-ruimten</h2>
 <p><span class="math inline">\(\mathcal{L}^p(I,{\mathbb{F}})\)</span> is de verzameling van functies <span class="math inline">\(f:I\to {\mathbb{F}}\)</span> (met dus <span class="math inline">\(I=[a,b]\)</span> of <span class="math inline">\(I = {\mathbb{R}}\)</span>) die integreerbaar zijn en waarvoor <span class="math inline">\(\int_I {\left\lvert f(x)\right\rvert}^p \,{\mathrm{d}}x\)</span> eindig is</p>
 <ul>
-<li><p>preciese definitie hangt af van integraalconcept</p></li>
+<li><p>preciese definitie hangt af van integraalconcept (zie verder)</p></li>
 <li><p>als <span class="math inline">\(f\)</span> integreerbaar is, is <span class="math inline">\({\left\lvert f\right\rvert}^p\)</span> integreerbaar</p></li>
 <li><p>het geval <span class="math inline">\(p=\infty\)</span> laten we voorlopig buiten beschouwing</p></li>
 <li><p><span class="math inline">\(\mathcal{L}^p(I,{\mathbb{F}})\)</span> vormt een vectorruimte (lineaire combinaties van twee integreerbare functies is integreerbaar, integraal van <span class="math inline">\({\left\lvert a f(x) + b g(x)\right\rvert}^p\)</span> can begrensd worden met behulp van convexiteit van <span class="math inline">\({\left\lvert\cdot\right\rvert}^p\)</span></p></li>
@@ -346,7 +346,7 @@ ul.task-list li input[type="checkbox"] {
 <li><p><span class="math inline">\({\left\lVert f\right\rVert}_p = 0\)</span> en <span class="math inline">\({\left\lVert g\right\rVert}_p = 0\)</span> <span class="math inline">\(\Rightarrow {\left\lVert a f + b g\right\rVert}_p = 0\)</span></p>
 <p>(wegens driehoeksongelijkheid en absolute homogeniteit)</p>
 <p><span class="math inline">\(\Rightarrow\)</span> verzameling <span class="math inline">\(U = \{f | {\left\lVert f\right\rVert}_p = 0\}\)</span> vormt deelruimte van <span class="math inline">\(\mathcal{L}^p(I,{\mathbb{F}})\)</span></p></li>
-<li><p>functies waarvoor <span class="math inline">\({\left\lVert f - g\right\rVert}_{p} = 0 \Leftrightarrow f-g \in U\)</span> noemen we “bijna overal” gelijk zijn; dit is een equivalentierelatie</p></li>
+<li><p>functies waarvoor <span class="math inline">\({\left\lVert f - g\right\rVert}_{p} = 0 \Leftrightarrow f-g \in U\)</span> noemen we “bijna overal” gelijk; dit is een equivalentierelatie</p></li>
 </ul>
 <p><span class="math inline">\(\rightarrow\)</span> <span class="math inline">\(L^p(I,{\mathbb{F}}) = \mathcal{L}^p(I,{\mathbb{F}})/U\)</span>: de vectorruimte van equivalentieklassen van functies die bijna overal gelijk zijn</p>
 <ul>
@@ -472,7 +472,7 @@ ul.task-list li input[type="checkbox"] {
 <li><p><span class="math inline">\(L^p(I,{\mathbb{F}})\)</span> is “separabel”: laat aftelbare fundamentele verzameling <span class="math inline">\(S\)</span> toe</p>
 <p>(verzameling waarvoor geldt dat <span class="math inline">\(\overline{{\mathbb{F}}S} = L^p(I,{\mathbb{F}})\)</span>, niet noodzakelijk een basis)</p>
 <ul>
-<li><span class="math inline">\(I\)</span> compact: <span class="math inline">\(S=\{x^k,k\in{\mathbb{N}}\}\)</span>, <span class="math inline">\(S=\{\exp({\mathrm{i}}\frac{2\pi}{L} x), k \in{\mathbb{Z}}\}\)</span>, </li>
+<li><span class="math inline">\(I\)</span> compact: <span class="math inline">\(S=\{x^k,k\in{\mathbb{N}}\}\)</span>, <span class="math inline">\(S=\{\exp({\mathrm{i}}\frac{2\pi}{L} k x), k \in{\mathbb{Z}}\}\)</span>, </li>
 <li><span class="math inline">\(I = {\mathbb{R}}\)</span>: <span class="math inline">\(S=\{x^n \chi_{[-N,N]}, n \in {\mathbb{N}}, N \in {\mathbb{N}}\}\)</span></li>
 </ul></li>
 </ul>
@@ -701,7 +701,7 @@ f(x) &amp;= \frac{a_0}{2} + \sum_{k=1}^{n} a_k \cos\left(\frac{2\pi}{L} k x\righ
 <section id="trigonometrische-veeltermen-en-fouriercoefficiënten" class="level2 smaller">
 <h2 class="smaller anchored" data-anchor-id="trigonometrische-veeltermen-en-fouriercoefficiënten">Trigonometrische veeltermen en Fouriercoefficiënten</h2>
 <ul>
-<li><p><strong>Fouriercoefficiënten</strong>: <span class="math inline">\(\widehat{f}_k = {\left\langle\varphi_k,f\right\rangle} = \frac{1}{\sqrt{L}} \int_{0}^{L} f(x) {\mathrm{e}}^{-{\mathrm{i}}\frac{2\pi}{L} x}\,{\mathrm{d}}x\)</span> (<span class="math inline">\(\forall k \in {\mathbb{Z}}\)</span>)</p></li>
+<li><p><strong>Fouriercoefficiënten</strong>: <span class="math inline">\(\widehat{f}_k = {\left\langle\varphi_k,f\right\rangle} = \frac{1}{\sqrt{L}} \int_{0}^{L} f(x) {\mathrm{e}}^{-{\mathrm{i}}\frac{2\pi}{L} k x}\,{\mathrm{d}}x\)</span> (<span class="math inline">\(\forall k \in {\mathbb{Z}}\)</span>)</p></li>
 <li><p>Orthogonale projector op trigonometrische veeltermen van graad <span class="math inline">\(n\)</span>:</p>
 <p><span class="math display">\[\begin{align}
   f_n(x) =  ({\hat{P}}_n f)(x) &amp;= \sum_{k=-n}^{+n} {\left\langle\varphi_k,f\right\rangle} \varphi_k(x)= \sum_{k=-n}^{+n} \widehat{f}_k \varphi_k(x) = \frac{1}{\sqrt{L}} \sum_{k=-n}^{+n} \widehat{f}_k {\mathrm{e}}^{+{\mathrm{i}}\frac{2\pi}{L} k x} \\
@@ -713,7 +713,7 @@ f(x) &amp;= \frac{a_0}{2} + \sum_{k=1}^{n} a_k \cos\left(\frac{2\pi}{L} k x\righ
 </section>
 <section id="fouriercoefficiënten-eigenschappen" class="level2 smaller">
 <h2 class="smaller anchored" data-anchor-id="fouriercoefficiënten-eigenschappen">Fouriercoefficiënten: eigenschappen</h2>
-<p><span class="math display">\[\widehat{f}_k = {\left\langle\varphi_k,f\right\rangle} = \frac{1}{\sqrt{L}} \int_{0}^{L} f(x) {\mathrm{e}}^{-{\mathrm{i}}\frac{2\pi}{L} x}\,{\mathrm{d}}x\]</span></p>
+<p><span class="math display">\[\widehat{f}_k = {\left\langle\varphi_k,f\right\rangle} = \frac{1}{\sqrt{L}} \int_{0}^{L} f(x) {\mathrm{e}}^{-{\mathrm{i}}\frac{2\pi}{L}k x}\,{\mathrm{d}}x\]</span></p>
 <ul>
 <li><p>Bestaan (<span class="math inline">\(\forall k \in {\mathbb{Z}}\)</span>) voor elke <span class="math inline">\(f \in L^1([0,L];{\mathbb{C}})\)</span> met <span class="math inline">\({\left\lvert\widehat{f}_k\right\rvert} \leq \frac{1}{\sqrt{L}} {\left\lVert f\right\rVert}_1 \Rightarrow {\left\lVert\widehat{f}\right\rVert}_{\infty} = \sup_{k \in {\mathbb{Z}}} {\left\lvert\widehat{f}\right\rvert}_{\infty} \leq \frac{1}{\sqrt{L}}{\left\lVert f\right\rVert}_1\)</span></p></li>
 <li><p>Lineariteit: <span class="math inline">\(h(x) = a f(x) + b g(x) \implies \widehat{h}_k = a \widehat{f}_k + b \widehat{g}_k\)</span></p></li>
@@ -836,7 +836,7 @@ f(x) &amp;= \frac{a_0}{2} + \sum_{k=1}^{n} a_k \cos\left(\frac{2\pi}{L} k x\righ
   &amp; = \frac{\sqrt{\epsilon}}{N} \sum_{l \in {\mathbb{Z}}} \widehat{f}_l \sum_{j=0}^{N-1} {\mathrm{e}}^{{\mathrm{i}}\frac{2\pi}{N} j (l-k)} = \sqrt{\epsilon} \sum_{p \in {\mathbb{Z}}} \widehat{f}_{k + p N}.
 \end{align}\]</span></p></li>
 <li><p>Snel dalende Fouriercoefficiënten: <span class="math inline">\(F^k = \widehat{f}_{\min(k, k-N)} + \dots\)</span></p></li>
-<li><p>Fouriercoefficiënten exact begrensd: <span class="math inline">\(\widehat{f}_k = 0\)</span> voor <span class="math inline">\(k&gt;n\)</span> <span class="math inline">\(\Leftrightarrow\)</span> <span class="math inline">\(f\)</span> is trigonometrische veelterm van graad <span class="math inline">\(n\)</span></p>
+<li><p>Fouriercoefficiënten exact begrensd: <span class="math inline">\(\widehat{f}_k = 0\)</span> voor <span class="math inline">\({\left\lvert k\right\rvert}&gt;n\)</span> <span class="math inline">\(\Leftrightarrow\)</span> <span class="math inline">\(f\)</span> is trigonometrische veelterm van graad <span class="math inline">\(n\)</span></p>
 <p><span class="math inline">\(\Rightarrow\)</span> exacte reconstructie mogelijk uit samples als <span class="math inline">\(\epsilon \leq L/(2n+1)\)</span></p></li>
 </ul>
 </section>
@@ -927,7 +927,7 @@ f(x) &amp;= \frac{a_0}{2} + \sum_{k=1}^{n} a_k \cos\left(\frac{2\pi}{L} k x\righ
 <p><span class="math inline">\({\left\lVert{\hat{A}}f\right\rVert}^2 = \int_I \underbrace{{\left\lvert\int_I A(x,y) f(y)\,{\mathrm{d}}y\right\rvert}^2}_{\Downarrow\ \text{Cauchy-Schwarz}} \,{\mathrm{d}}x\)</span> <span class="math inline">\(\quad\leq \int_I \left(\int_I {\left\lvert A(x,y)\right\rvert}^2\,{\mathrm{d}}y\right)^2 \left(\int_I f(y),{\mathrm{d}}y\right)^2\,{\mathrm{d}}x = \left(\int_I\int_I {\left\lvert A(x,y)\right\rvert}^2 \,{\mathrm{d}}y{\mathrm{d}}x\right) {\left\lVert f\right\rVert}^2\)</span></p>
 <p><span class="math inline">\(\Rightarrow\)</span> begrensd als <span class="math inline">\(\left(\int_I\int_I {\left\lvert A(x,y)\right\rvert}^2 \,{\mathrm{d}}y{\mathrm{d}}x\right) &lt; \infty\)</span></p></li>
 <li><p>Vermenigvuldigingsoperator:</p>
-<p><span class="math display">\[{\left\lVert{\hat{M}}_h f\right\rVert}^2 = \int_I {\left\lvert h(x) f(x)\right\rvert}^2,{\mathrm{d}}x \leq \left(\mathrm{ess}\ \sup_{x \in I} {\left\lvert h(x)\right\rvert}^2\right) {\left\lVert f\right\rVert}^2\]</span></p>
+<p><span class="math display">\[{\left\lVert{\hat{M}}_h f\right\rVert}^2 = \int_I {\left\lvert h(x) f(x)\right\rvert}^2\,{\mathrm{d}}x \leq \left(\mathrm{ess}\ \sup_{x \in I} {\left\lvert h(x)\right\rvert}^2\right) {\left\lVert f\right\rVert}^2\]</span></p>
 <p><span class="math inline">\(\Rightarrow\)</span> positie-operator <span class="math inline">\({\hat{X}}\)</span> op <span class="math inline">\(L^2(I,{\mathbb{F}})\)</span> is begrensd als <span class="math inline">\(I\)</span> begrensd domein is, maar is onbegrensd op <span class="math inline">\(L^2({\mathbb{R}},{\mathbb{F}})\)</span></p></li>
 </ul>
 </section>
@@ -936,7 +936,7 @@ f(x) &amp;= \frac{a_0}{2} + \sum_{k=1}^{n} a_k \cos\left(\frac{2\pi}{L} k x\righ
 <ul>
 <li><p>Afleidingsoperator: altijd onbegrensd</p>
 <ul>
-<li><p>op <span class="math inline">\(L^2([0,L],{\mathbb{C}})\)</span>: <span class="math inline">\(f_k = \frac{1}{\sqrt{L}} \exp({\mathrm{i}}\frac{2\pi}{k} x)\)</span></p>
+<li><p>op <span class="math inline">\(L^2([0,L],{\mathbb{C}})\)</span>: <span class="math inline">\(f_k = \frac{1}{\sqrt{L}} \exp({\mathrm{i}}\frac{2\pi}{L}k x)\)</span></p>
 <p><span class="math inline">\(\rightarrow\)</span> <span class="math inline">\({\left\lVert f_k\right\rVert}_2 = 1\)</span> en <span class="math inline">\({\left\lVert{\hat{D}}f_k\right\rVert}_2 = \frac{2\pi}{L} {\left\lvert k\right\rvert}\)</span> voor arbitraire <span class="math inline">\(k \in {\mathbb{Z}}\)</span></p></li>
 <li><p>op <span class="math inline">\(L^2({\mathbb{R}},{\mathbb{C}})\)</span>:</p></li>
 </ul>
@@ -998,13 +998,13 @@ f(x) &amp;= \frac{a_0}{2} + \sum_{k=1}^{n} a_k \cos\left(\frac{2\pi}{L} k x\righ
 <p><span class="math inline">\(\Rightarrow\)</span> <span class="math inline">\(({\hat{D}}^\dagger g)(x) = -g'(x)\)</span> met als domein alle afleidbare functies <span class="math inline">\(g\)</span> met <span class="math inline">\(f' \in L^2([a,b],{\mathbb{F}})\)</span>, zonder bijkomende randvoorwaarden</p></li>
 <li><p><span class="math inline">\({\hat{A}} \subset {\hat{B}} \Rightarrow {\hat{B}}^\dagger \subset {\hat{A}}^\dagger\)</span> (minder <span class="math inline">\({v}\in \mathop{\mathrm{\mathcal{D}}}_{{\hat{A}}}\)</span> dan in <span class="math inline">\(\mathop{\mathrm{\mathcal{D}}}_{{\hat{B}}} \implies\)</span> meer <span class="math inline">\({w}\in \mathop{\mathrm{\mathcal{D}}}_{{\hat{A}}^\dagger}\)</span> mogelijk)</p></li>
 <li><p>Als <span class="math inline">\({\hat{A}}^\dagger\)</span> zelf ook dicht gedefineerd is, dan kunnen we <span class="math inline">\({\hat{A}}^{\dagger\dagger}\)</span> definiëren:</p>
-<p><span class="math inline">\(\rightarrow\)</span> <span class="math inline">\({\hat{A}} \subset {\hat{A}}^{\dagger\dagger}\)</span> (<span class="math inline">\(\mathop{\mathrm{\mathcal{D}}}_{{\hat{A}}^{\dagger\dagger}}\)</span> bevat alle <span class="math inline">\({v}\)</span> zodat <span class="math inline">\({w}\mapsto {\left\langle{v},{\hat{A}}^\dagger{w}\right\rangle} = {\overline{{\left\langle{\hat{A}}^\dagger {w},{v}\right\rangle}}}\)</span> continu is: zeker voldaan <span class="math inline">\({v}\in \mathop{\mathrm{\mathcal{D}}}_{{\hat{A}}}\)</span>)</p></li>
+<p><span class="math inline">\(\rightarrow\)</span> <span class="math inline">\({\hat{A}} \subset {\hat{A}}^{\dagger\dagger}\)</span> (<span class="math inline">\(\mathop{\mathrm{\mathcal{D}}}_{{\hat{A}}^{\dagger\dagger}}\)</span> bevat alle <span class="math inline">\({v}\)</span> zodat <span class="math inline">\({w}\mapsto {\left\langle{v},{\hat{A}}^\dagger{w}\right\rangle} = {\overline{{\left\langle{\hat{A}}^\dagger {w},{v}\right\rangle}}}\)</span> continu is voor alle <span class="math inline">\({w}\in \mathop{\mathrm{\mathcal{D}}}_{{\hat{A}}^\dagger}\)</span>: zeker voldaan <span class="math inline">\({v}\in \mathop{\mathrm{\mathcal{D}}}_{{\hat{A}}}\)</span>)</p></li>
 </ul>
 </section>
 <section id="symmetrische-en-zelftoegevoegde-operatoren" class="level2 smaller">
 <h2 class="smaller anchored" data-anchor-id="symmetrische-en-zelftoegevoegde-operatoren">Symmetrische en zelftoegevoegde operatoren</h2>
 <ul>
-<li><p><strong>symmetrische / hermitische / hermitisch symmetrische operator</strong>: <span class="math display">\[{\left\langle{v},{\hat{A}}{v}\right\rangle} = {\left\langle{\hat{A}}{v},{w}\right\rangle}, \forall {v},{w}\in \mathop{\mathrm{\mathcal{D}}}\,\!_{{\hat{A}}}\]</span></p>
+<li><p><strong>symmetrische / hermitische / hermitisch symmetrische operator</strong>: <span class="math display">\[{\left\langle{w},{\hat{A}}{v}\right\rangle} = {\left\langle{\hat{A}}{w},{v}\right\rangle}, \forall {v},{w}\in \mathop{\mathrm{\mathcal{D}}}\,\!_{{\hat{A}}}\]</span></p>
 <p>(symmetrisch wordt ook gebruikt in complexe geval)</p></li>
 <li><p><strong>zelftoegevoegde operatoren</strong>:</p>
 <p><span class="math display">\[{\hat{A}}^\dagger = {\hat{A}} \Leftrightarrow \mathop{\mathrm{\mathcal{D}}}\,\!_{{\hat{A}}^\dagger}=\mathop{\mathrm{\mathcal{D}}}\,\!_{{\hat{A}}}\ \text{en}\ {\hat{A}}{v}= {\hat{A}}^\dagger{v},\forall {v}\in \mathop{\mathrm{\mathcal{D}}}\,\!_{{\hat{A}}}\]</span></p>

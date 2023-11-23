@@ -577,7 +577,7 @@ c &amp;= \frac{{\left\lvert a\right\rvert}}{\sqrt{{\left\lvert a\right\rvert}^2+
 <li>De basistransformatie <span class="math inline">\({\mathsf{V}}\)</span> is verre van uniek (arbitraire orthogonale transformaties binnen de kolommen geassocieerd aan <span class="math inline">\(+1\)</span>, deze geassocieerd aan <span class="math inline">\(-1\)</span> en deze geassocieerd aan <span class="math inline">\(0\)</span> zijn mogelijk)</li>
 <li>De traagheidsindices zijn uniek en bepalen dus de canonische vorm van alle matrices gerelateerd via congruentie, via onderstaande stelling:</li>
 </ul></li>
-<li><p><strong>Traagheidswet van Sylvester</strong>: Twee symmetrische matrices <span class="math inline">\({\mathsf{B}},{\mathsf{\tilde{B}}} \in {\mathbb{R}}^{n \times n}\)</span> zijn congruent als en slachts als hetzelfde aantal positieve, negatieve en nul eigenwaarden hebben.</p>
+<li><p><strong>Traagheidswet van Sylvester</strong>: Twee symmetrische matrices <span class="math inline">\({\mathsf{B}},{\mathsf{\tilde{B}}} \in {\mathbb{R}}^{n \times n}\)</span> zijn congruent als en slechts als hetzelfde aantal positieve, negatieve en nul eigenwaarden hebben.</p>
 <p>(bewijs aan bord)</p></li>
 </ul>
 </section>
@@ -603,8 +603,8 @@ c &amp;= \frac{{\left\lvert a\right\rvert}}{\sqrt{{\left\lvert a\right\rvert}^2+
 </section>
 <section id="singulaire-waardendecompositie-en-polaire-decompositie" class="level1">
 <h1>Singulaire waardendecompositie en polaire decompositie</h1>
-<section id="unitaire-equivalentie" class="level2">
-<h2 class="anchored" data-anchor-id="unitaire-equivalentie">Unitaire equivalentie</h2>
+<section id="unitaire-equivalentie" class="level2 smaller">
+<h2 class="smaller anchored" data-anchor-id="unitaire-equivalentie">Unitaire equivalentie</h2>
 <ul>
 <li><p>Matrixnormen gebaseerd op Euclidische norm:</p>
 <ul>
@@ -616,11 +616,12 @@ c &amp;= \frac{{\left\lvert a\right\rvert}}{\sqrt{{\left\lvert a\right\rvert}^2+
 <ul>
 <li><span class="math inline">\({\left\lVert{\mathsf{A}}\right\rVert}_{2\to 2} = {\left\lVert\tilde{{\mathsf{A}}}\right\rVert}_{2 \to 2}\)</span></li>
 <li><span class="math inline">\({\left\lVert{\mathsf{A}}\right\rVert}_{\text{F}} = {\left\lVert\tilde{{\mathsf{A}}}\right\rVert}_{\text{F}}\)</span></li>
-</ul></li>
+</ul>
+<p><span class="math inline">\(\rightarrow\)</span> canonisch vorm?</p></li>
 </ul>
 </section>
-<section id="singuliere-waardendecompositie" class="level2">
-<h2 class="anchored" data-anchor-id="singuliere-waardendecompositie">Singuliere waardendecompositie</h2>
+<section id="singuliere-waardendecompositie" class="level2 smaller">
+<h2 class="smaller anchored" data-anchor-id="singuliere-waardendecompositie">Singuliere waardendecompositie</h2>
 <p>Singuliere waardendecompositie van een matrix <span class="math inline">\({\mathsf{A}}\in{\mathbb{F}}^{m \times n}\)</span>: <span class="math display">\[{\mathsf{A}} = {\mathsf{U}} {\mathsf{S}} {\mathsf{V}}^{\mathsf{H}}\]</span></p>
 <p>met hierin</p>
 <ul>
@@ -705,7 +706,7 @@ c &amp;= \frac{{\left\lvert a\right\rvert}}{\sqrt{{\left\lvert a\right\rvert}^2+
 <p><span class="math inline">\(\Rightarrow\)</span> deze kolommen vormen orthonormale basis voor <span class="math inline">\(\mathop{\mathrm{ker}}({\mathsf{A}})\)</span></p></li>
 <li><p>geïnduceerde norm <span class="math inline">\({\left\lVert{\mathsf{A}}\right\rVert}_2 = \sigma_1\)</span> (bewijs aan bord)</p></li>
 <li><p>Frobenius norm <span class="math inline">\({\left\lVert{\mathsf{A}}\right\rVert}_{\text{F}} = \sqrt{\sum_{i=1}^p \sigma_i^2}\)</span></p></li>
-<li><p>voor inverteerbare (en dus vierkante) <span class="math inline">\({\mathsf{A}}\in{\mathbb{F}}^{n \times n}\)</span>: <span class="math inline">\({\mathsf{A}}^{-1} = {\mathsf{V}} {\mathsf{S}}^{-1} {\mathsf{U}}^{\mathsf{H}}\)</span></p>
+<li><p>voor inverteerbare (en dus vierkante volle-rang) <span class="math inline">\({\mathsf{A}}\in{\mathbb{F}}^{n \times n}\)</span>: <span class="math inline">\({\mathsf{A}}^{-1} = {\mathsf{V}} {\mathsf{S}}^{-1} {\mathsf{U}}^{\mathsf{H}}\)</span></p>
 <p><span class="math inline">\(\Rightarrow\)</span> conditiegetal (geassocieerd aan geïnduceerde <span class="math inline">\(2\)</span>-norm): <span class="math inline">\(\kappa({\mathsf{A}}) = \sigma_1/\sigma_n\)</span></p></li>
 </ul>
 </section>
@@ -751,7 +752,7 @@ c &amp;= \frac{{\left\lvert a\right\rvert}}{\sqrt{{\left\lvert a\right\rvert}^2+
 <p><span class="math inline">\({\mathsf{A}} = {\mathsf{U}} {\mathsf{P}} = ({\mathsf{U}}_n {\mathsf{V}}_n^{\mathsf{H}}) ({\mathsf{V}}_n {\mathsf{S}}_n {\mathsf{V}}_n^{\mathsf{H}})\)</span></p>
 <p>met dus <span class="math inline">\({\mathsf{U}}^{\mathsf{H}}{\mathsf{U}} = {\mathsf{I}}_n\)</span> en <span class="math inline">\({\mathsf{P}}\)</span> positief (semi)definiet</p>
 <p><span class="math inline">\(\Rightarrow\)</span> veralgemeent <span class="math inline">\(z = {\mathrm{e}}^{{\mathrm{i}}\arg(z)} {\left\lvert z\right\rvert}\)</span></p></li>
-<li><p>vind isometrische matrix <span class="math inline">\({\mathsf{B}}\)</span> waarvoor $ minimaal is</p>
+<li><p>vind isometrische matrix <span class="math inline">\({\mathsf{B}}\)</span> waarvoor <span class="math inline">\({\left\lVert{\mathsf{A}}-{\mathsf{B}}\right\rVert}\)</span> minimaal is</p>
 <p><span class="math inline">\(\Rightarrow {\mathsf{B}}= {\mathsf{U}}_n{\mathsf{V}}_n^{{\mathsf{H}}}\)</span> (als <span class="math inline">\(m\geq n\)</span> en voor <span class="math inline">\({\left\lVert{\mathsf{A}}-{\mathsf{B}}\right\rVert}_{\text{F}}\)</span>)</p>
 <p>(bewijs niet te kennen)</p></li>
 </ul>
