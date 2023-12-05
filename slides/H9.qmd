@@ -354,7 +354,7 @@ Eigenschappen (wegens continuïteit van norm/inwendig product)
 
   beter via logaritme: 	$\kappa_X(\xi) = \log \varphi_X(\xi) = \log \langle{\erm^{-\irm 2\pi \xi x}}\rangle$
   * genereert cumulanten
-  * $\kappa_{\mu,\sigma}(\xi) = -\irm 2\pi \xi \mu - 2\pi^2\sigma^2 \xi^2$
+  * $\kappa_{\mu,\sigma}(\xi) = -\irm 2\pi \mu \xi - 2\pi^2\sigma^2 \xi^2$
 
     $\Rightarrow$ Gaussische distributie: unieke distributie waarvoor alle cumulanten hoger dan 2de orde verdwijnen
 
@@ -367,7 +367,7 @@ Stel $n$ stochastische variabelen $X_1$,\ldots, $X_n$, en hun gemiddelde $\vec{X
 	& = \varphi_{X_1}(\xi/n) \varphi_{X_2}(\xi/n) \ldots \varphi_{X_n}(\xi/n) .
 \end{align}
 
-Als alle $\varphi_{X_i}(x)$ gelijk, met $\varphi_{X_i}(x) = \varphi(x) =  \erm^{\kappa(\xi)} = \erm^{-2\pi \irm \xi - 2\pi^2 \sigma^2 \xi^2 + \mathcal{O}(\xi^3)}$:
+Als alle $\varphi_{X_i}(x)$ gelijk, met $\varphi_{X_i}(x) = \varphi(x) =  \erm^{\kappa(\xi)} = \erm^{-2\pi \irm \mu \xi - 2\pi^2 \sigma^2 \xi^2 + \mathcal{O}(\xi^3)}$:
 
 \begin{align}
 \kappa_X(\xi) = n \log(\varphi(\xi/n)) = n \kappa(\xi/n) = -2\pi \irm \mu \xi - 2\pi^2 \left(\frac{\sigma}{\sqrt{n}}\right)^2  \xi^2 + \mathcal{O}(\xi^3/n^2).
@@ -985,4 +985,112 @@ We kunnen ook een Fouriertransformatie definiëren voor functies $f$ met domein
     
     daarvoor zorgt de som over $n$ (Dirac's kamdistributie)
 
-## Sampling en Shannon-Nyquisttheorema
+## Sampling en Shannon-Nyquisttheorema {.smaller}
+
+Beschouw functie $f(x)$ voor $x \in \bbR$, en zijn samples $F_j = f(j \epsilon)$ voor $j \in \bbZ$
+
+* DTFT van samples $F_j$ kunnen gerelateerd worden aan FT van $f(x)$:
+
+  \begin{align*}
+  \widehat{F}(\chi) &= \sum_{j\in \bbZ} F_j \erm^{-\irm 2\pi \chi j} = \sum_{j\in \bbZ} \left(\int_{\bbR} \widehat{f}(\xi) \erm^{+\irm 2\pi \xi x_j}\,\drm \xi\right) \erm^{-\irm 2\pi \chi j} \\
+  &= \int_{\bbR} \widehat{f}(\xi) \left[\sum_{j\in \bbZ} \erm^{\irm 2\pi (\xi \epsilon-\chi)j}\right]\,\drm \xi = \int_{\bbR} \widehat{f}(\xi) \left[\sum_{n \in \bbZ} \delta(\xi \epsilon - \chi -n )\right]\,\drm \xi \\
+  &= \sum_{n \in \bbZ} \frac{1}{\epsilon} \widehat{f}\left(\frac{\chi}{\epsilon} - \frac{n}{\epsilon}\right)
+  \end{align*}
+
+## Sampling en Shannon-Nyquisttheorema {.smaller}
+
+* $f$ heeft een gelimiteerde brandbreedte heeft met maximale frequentie $\Xi$ als $\mathrm{supp}(f) \subseteq [-\Xi,+\Xi]$
+
+* als $f$ een gelimiteerde bandbreedte heeft met maximale frequentie $\Xi$, en gesampled wordt met een samplefrequentie $1/\epsilon > 2 \Xi$ (**Nyquistfrequentie**), dan kan $\widehat{f}$ exact gereconstrueerd worden uit de DTFT $\widehat{F}$ van de samples $F_j=f(j\epsilon)$ via
+  \begin{equation}
+    \widehat{f}(\xi) = \begin{cases}
+      \epsilon \widehat{F}(\epsilon\xi),&\abs{\xi} \leq \frac{1}{2\epsilon}\\
+      0,&\abs{\xi} > \frac{1}{2\epsilon}
+    \end{cases}.\label{eq:fourier:reconstructftlimited}
+  \end{equation}
+
+* als we een functie $f$ op $\bbR$ uit zijn samples $F_j = f(j \epsilon)$ reconstrueren via de **Whittaker–Shannon interpolatieformule**:
+
+  $f^{\text{(rec)}}(x) = \sum_{j \in \bbZ} F_j \sinc\left(\pi \frac{x - j\epsilon}{\epsilon}\right)$ (met $\sinc(x) = \sin(x)/x$)
+
+  dan geldt $\widehat{f}^{\text{(rec)}}(\xi) = H\left(\frac{1}{2\epsilon}-\abs{\xi}\right) \sum_{n \in \bbZ} \widehat{f}\left(\xi - \frac{n}{\epsilon}\right)$
+
+  $\rightarrow$ de reconstructie is exact als $f$ bandgelimiteerd is met frequentie $\Xi < \frac{1}{2\epsilon}$
+
+  $\rightarrow$ indien $f$ niet bandgelimiteerd: aliasing / moirépatronen
+
+## Translaties {.smaller}
+
+* voor functies op $\bbR$ of $\bbZ$:
+  * $(\map{\tau}_a f)(x) = f(x-a)$ of $(\map{\tau}_m f)_j = f_{j-m}$
+  * translaties vormen een Abelse groep: $(\bbR,+)$ of $(\bbZ,+)$
+  
+    $\map{\tau}_0 = \idmap$, $\map{\tau}_a \map{\tau}_b = \map{\tau}_b \map{\tau}_a = \map{\tau}_{a+b}$, $\map{\tau}_a \map{\tau}_{-a} = \idmap$
+
+  * voor functies op $\bbR/(L\bbZ)$ of $\bbZ/(N\bbZ)\cong \bbZ_N$: bijkomende voorwaarde:
+
+    $\map{\tau}_L = \idmap$ of $\map{\tau}_N = \idmap$
+
+* translatie-invariante operatoren: $\map{A}\map{\tau} = \map{\tau}\map{A}$
+  * op functies op $\{0,\ldots,N-1\} \cong \bbZ_N$: circulante matrices
+  * op functies op $\bbR$ of $[0,L] \cong \bbR/(L\bbZ)$:
+    * afgeleide operator $\map{D}$: $(\map{D}\map{\tau}_a f)(x) = \frac{\drm\ }{\drm x} f(x-a) = f'(x-a) = (\map{\tau}_a f')(x)= (\map{\tau}_a \map{D} f)(x)$
+    * integraaloperator $\map{A}$: als integraalkern van de vorm $A(x,y) = a(x-y)$ is
+      $(\map{A}f)(x) = \int A(x,y)f(y)\,\drm y = \int a(x-y) f(y)\,\drm y = (a \ast f)(x)$
+      
+## Eigenfuncties van translaties {.smaller}
+
+* $\commutator{\map{A}}{\map{\tau}_a}=\zeromap$ en alle $\commutator{\map{\tau}_a}{\map{\tau}_b} = \zeromap$ (abelse groep)
+
+  $\rightarrow$ hebben $\tau_a$ voor alle $a$ en $\map{A}$ gezamelijke eigenfuncties? zijn ze gelijktijdig "diagonaliseerbaar"?
+
+* $(\map{\tau}_a f)(x) = f(x-a) = \lambda_a f(x)$:
+  * zonder voorwaarde op de functieruimte: $f(x) = \exp(s x)$ en $\lambda_a = \exp(s a)$ voor alle $s \in \bbC$ (startpunt voor Laplace transformatie: zie cursus Complexe Analyse)
+
+  * voor functies op $[0,L] \cong \bbR/(L\bbZ)$:
+  
+    $\map{\tau}_L = \idmap \implies \exp(s L) = 1 \implies s = \irm \frac{2\pi}{L}k$ voor $k \in \bbZ$
+    * eigenfuncties $\exp(\irm \frac{2\pi}{L} k x)$ vormen basis als we ons beperken tot $L^2([0,L])$
+
+  * voor $L^2(\bbR)$:
+    * de functies $\psi_s(x) = \exp(s x)$ zijn nooit normaliseerbaar en dus niet in $L^2(\bbR)$
+    * de functies $\exp(\irm 2\pi \xi x - \epsilon \abs{x})$ zitten  (voor $\epsilon>0$) in $L^2(\bbR)$ en vormen benaderende eigenvectoren (continue spectrum)
+
+## Eigenfuncties van translaties {.smaller}
+
+* $(\map{\tau}_n f)_j = f_{j-n} = \lambda_n f_j$:
+  * zonder voorwaarde op de rijruimte: $f_j = \exp(s j)$ en $\lambda_n = \exp(s n)$
+  * keuzes $s$ en $s + \irm 2\pi k$ voor $k \in \bbZ$ leiden tot zelfde $\lambda_n$ voor alle $n$
+    
+    $\Rightarrow \imag(s) \in (-\pi,+\pi]$
+    
+     vaak geschreven als $f_j = z^j$ met $z = \erm^s$: startpunt voor Z-transformatie
+
+  * voor functies op $\bbZ_n$: $\map{\tau}_N = \idmap \implies s = \irm \frac{2\pi}{N} k$ met $k \in \bbZ_N$
+  * voor kwadratisch integreerbare functies:
+  
+    $s = \irm 2\pi \xi$ met $\xi \in [0,1)$ (continu spectrum)
+
+* Pontryagin dualiteit:
+  * Discreet versus continu in origineel domein: onbegrensd versus begrensd (compact) in Fourier domein
+  * Onbegrensd versus compact in origineel domein: continu versus discreet in Fourier domein
+
+## Fouriertransformaties en translatie-invariante operatoren {.smaller}
+
+* we weten al: DFT diagonaliseert circulante matrices
+
+* voor afgeleide-operator:
+  $\map{F}(\map{D}f)(\xi) = \map{F}(f')(\xi)= 2\pi \irm \xi \widehat{f}(\xi) = \map{M}_{2\pi \irm \xi} (\map{F}f)(\xi)$
+
+  $\Rightarrow$ $\map{F}\map{D}\map{F}^\dagger = \map{M}_{2\pi \irm \xi}$ (multiplicatie-operator op Fourierbeeld)
+
+* voor translatie-invariante integraaloperator:
+
+  $\map{F}(\map{A} f)(\xi) = \map{F}(a \ast f)(\xi) = \widehat{a}(\xi) \widehat{f}(\xi) = \map{M}_{\widehat{a}(\xi)} (\map{F}f)(\xi)$
+
+    $\Rightarrow$ $\map{F}\map{A}\map{F}^\dagger = \map{M}_{\widehat{a}(\xi)}$ (multiplicatie-operator op Fourierbeeld)
+
+* Translatie-invariante differentiaaloperatoren EN integraaloperatoren worden door Fouriertransformatie omgezet in multiplicatie-operatoren ($\approx$ diagonaal):
+  * eenvoudig te inverteren
+  * Fouriertransformatie om Greense functie te bereken
+
