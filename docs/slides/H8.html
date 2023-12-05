@@ -120,6 +120,10 @@ ul.task-list li input[type="checkbox"] {
     <a class="nav-link active" href="../slides/H8.html" rel="" target="" aria-current="page">
  <span class="menu-text">H8</span></a>
   </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../slides/H9.html" rel="" target="">
+ <span class="menu-text">H9</span></a>
+  </li>  
 </ul>
             <div class="quarto-navbar-tools ms-auto">
 </div>
@@ -203,6 +207,17 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#regulier-sturm-liouville-probleem-3" id="toc-regulier-sturm-liouville-probleem-3" class="nav-link" data-scroll-target="#regulier-sturm-liouville-probleem-3">Regulier Sturm-Liouville probleem</a></li>
   <li><a href="#regulier-sturm-liouville-probleem-voorbeeld" id="toc-regulier-sturm-liouville-probleem-voorbeeld" class="nav-link" data-scroll-target="#regulier-sturm-liouville-probleem-voorbeeld">Regulier Sturm-Liouville probleem: voorbeeld</a></li>
   <li><a href="#rayleigh-ritz-methode" id="toc-rayleigh-ritz-methode" class="nav-link" data-scroll-target="#rayleigh-ritz-methode">Rayleigh-Ritz methode</a></li>
+  <li><a href="#rayleigh-ritz-methode-1" id="toc-rayleigh-ritz-methode-1" class="nav-link" data-scroll-target="#rayleigh-ritz-methode-1">Rayleigh-Ritz methode</a></li>
+  <li><a href="#uitbreidingen-op-sturm-liouville-theorie" id="toc-uitbreidingen-op-sturm-liouville-theorie" class="nav-link" data-scroll-target="#uitbreidingen-op-sturm-liouville-theorie">Uitbreidingen op Sturm-Liouville theorie</a></li>
+  <li><a href="#uitbreidingen-op-sturm-liouville-theorie-1" id="toc-uitbreidingen-op-sturm-liouville-theorie-1" class="nav-link" data-scroll-target="#uitbreidingen-op-sturm-liouville-theorie-1">Uitbreidingen op Sturm-Liouville theorie</a></li>
+  <li><a href="#uitbreidingen-op-sturm-liouville-theorie-2" id="toc-uitbreidingen-op-sturm-liouville-theorie-2" class="nav-link" data-scroll-target="#uitbreidingen-op-sturm-liouville-theorie-2">Uitbreidingen op Sturm-Liouville theorie</a></li>
+  </ul></li>
+  <li><a href="#partiële-differentiaalvergelijkingen" id="toc-partiële-differentiaalvergelijkingen" class="nav-link" data-scroll-target="#partiële-differentiaalvergelijkingen">Partiële differentiaalvergelijkingen</a>
+  <ul class="collapse">
+  <li><a href="#beginvoorwaardeproblemen-1" id="toc-beginvoorwaardeproblemen-1" class="nav-link" data-scroll-target="#beginvoorwaardeproblemen-1">Beginvoorwaardeproblemen</a></li>
+  <li><a href="#meerdimensionale-sturm-liouville-operator" id="toc-meerdimensionale-sturm-liouville-operator" class="nav-link" data-scroll-target="#meerdimensionale-sturm-liouville-operator">Meerdimensionale Sturm-Liouville operator</a></li>
+  <li><a href="#meerdimensionale-sturm-liouville-operator-1" id="toc-meerdimensionale-sturm-liouville-operator-1" class="nav-link" data-scroll-target="#meerdimensionale-sturm-liouville-operator-1">Meerdimensionale Sturm-Liouville operator</a></li>
+  <li><a href="#meerdimensionale-sturm-liouville-operator-2" id="toc-meerdimensionale-sturm-liouville-operator-2" class="nav-link" data-scroll-target="#meerdimensionale-sturm-liouville-operator-2">Meerdimensionale Sturm-Liouville operator</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -948,7 +963,7 @@ u_q(t) &amp;= t^\lambda \left(\frac{1}{(q-1)!} x_1(t) (\log t)^{q-1} + \frac{1}{
 <p><span class="math display">\[u_p(x,\xi)|_{x = \xi} = u'_p(x,\xi)|_{x=\xi} = \ldots = u^{(p-2)}_p(x,\xi)|_{x=\xi} = 0,\qquad u^{(p-1)}_p(x,\xi)|_{x = \xi} = 1\]</span></p></li>
 <li><p>Veralgemening:</p>
 <p><span class="math display">\[u_f(x) = \int_{a}^b g_\xi(x) f(\xi)\,{\mathrm{d}}\xi\]</span></p>
-<p>met <span class="math inline">\(g_\xi(x)\)</span>$ de <strong>Greense functie</strong>, gedefinieerd door voorwaarden op volgende slide.</p></li>
+<p>met <span class="math inline">\(g_\xi(x)\)</span> de <strong>Greense functie</strong>, gedefinieerd door voorwaarden op volgende slide.</p></li>
 </ul>
 </section>
 <section id="greense-functie" class="level2 smaller">
@@ -980,7 +995,7 @@ u_q(t) &amp;= t^\lambda \left(\frac{1}{(q-1)!} x_1(t) (\log t)^{q-1} + \frac{1}{
 <ul>
 <li>kies <span class="math inline">\(u_1\)</span> zodat <span class="math inline">\(B_1[u_1] = \alpha_1 u_1(a) + \alpha_2 u_1'(a) = 0\)</span>: <span class="math inline">\(u_1(a) = \alpha_2\)</span> en <span class="math inline">\(u_1'(a) = -\alpha_1\)</span></li>
 <li>kiew <span class="math inline">\(u_2\)</span> zodat <span class="math inline">\(B_2[u_2] = \beta_1 u_2(b) + \beta_2 u_2'(b) = 0\)</span>: <span class="math inline">\(u_2(b) = \beta_2\)</span> en <span class="math inline">\(u_2'(b) = -\beta_1\)</span></li>
-<li><span class="math inline">\(u_1\)</span> en <span class="math inline">\(u_2\)</span> lineair onafhankelijk voor goed gedefinieerd randvoorwaardeprobleem (<span class="math inline">\(\det({\mathsf{M}})=0\)</span>)</li>
+<li><span class="math inline">\(u_1\)</span> en <span class="math inline">\(u_2\)</span> lineair onafhankelijk voor goed gedefinieerd randvoorwaardeprobleem (<span class="math inline">\(\det({\mathsf{M}}\neq 0\)</span>)</li>
 </ul>
 <p><span class="math display">\[\Rightarrow     g(x,\xi) = \begin{cases}
       \frac{u_1(x) u_2(\xi)}{a_2(\xi) W(\xi)},&amp;a&lt; x &lt; \xi\\
@@ -1147,15 +1162,176 @@ u_q(t) &amp;= t^\lambda \left(\frac{1}{(q-1)!} x_1(t) (\log t)^{q-1} + \frac{1}{
 <ul>
 <li><p>Voor alle functies <span class="math inline">\(u \in \mathop{\mathrm{\mathcal{D}}}_{{\hat{L}}}\)</span> (inclusief randvoorwaarden) geldt</p>
 <p><span class="math display">\[\mathcal{R}[u] = \frac{{\left\langle u,{\hat{L}}u\right\rangle}_w}{{\left\langle u,u\right\rangle}_w} \geq \lambda_0\]</span></p>
-<p>en de gelijkheid geldt enkel als <span class="math inline">\(u \sim u_0\)</span> (bewijs eenvoudig via spectrale decompositie).</p>
+<p>en de gelijkheid geldt enkel als <span class="math inline">\(u \sim u_0\)</span> (bewijs via spectrale decompositie).</p>
 <p><span class="math inline">\(\rightarrow\)</span> <span class="math inline">\(\mathcal{R}[u]\)</span>: <strong>Rayleigh quotient</strong></p></li>
 <li><p>Indien we benadering voor <span class="math inline">\(u_0\)</span> zoeken binnen een bepaalde deelruimte, opgespannen door een aantal vectoren <span class="math inline">\(\{{e}_k, k=1,\ldots,m\}\)</span>: <span class="math inline">\(u = \sum_{k=1}^m c^k e_k\)</span></p>
 <ul>
-<li><p>Beste benadering: <span class="math inline">\(\min_{\{c^k\}}{\left\lVert u - u_0\right\rVert} \Leftrightarrow\)</span> orthogonale projectie</p>
-<p><span class="math inline">\(\Rightarrow\)</span> vereist dat <span class="math inline">\(u_0\)</span> reeds gekend is</p></li>
-<li><p><strong>Rayleigh-Ritz methode = variationeel principe</strong>: <span class="math inline">\(\min_{\{c^k\}} \mathcal{R}[u]\)</span></p>
-<p><span class="math inline">\({\mathsf{A}}\boldsymbol{c} = \lambda {\mathsf{B}}\boldsymbol{c}\)</span> met <span class="math inline">\(A_{kl} = {\left\langle{e}_k,{\hat{L}}{e}_l\right\rangle}\)</span> en <span class="math inline">\(B_{kl} = {\left\langle{e}_k,{e}_l\right\rangle}\)</span></p>
-<p>(veralgemeend eigenwaardeprobleem; gewoon eigenwaardeprobleem als <span class="math inline">\({\left\langle{e}_k,{e}_l\right\rangle}=\delta_{kl}\)</span>)</p></li>
+<li>Beste benadering:
+<ul>
+<li><span class="math inline">\(\min_{\{c^k\}}{\left\lVert u - u_0\right\rVert} \Leftrightarrow\)</span> orthogonale projectie</li>
+<li><span class="math inline">\(\Rightarrow\)</span> vereist dat <span class="math inline">\(u_0\)</span> reeds gekend is</li>
+</ul></li>
+<li><strong>Rayleigh-Ritz methode = variationeel principe</strong>:
+<ul>
+<li><span class="math inline">\(\min_{\{c^k\}} \mathcal{R}[u]\)</span></li>
+</ul></li>
+</ul></li>
+</ul>
+</section>
+<section id="rayleigh-ritz-methode-1" class="level2 smaller">
+<h2 class="smaller anchored" data-anchor-id="rayleigh-ritz-methode-1">Rayleigh-Ritz methode</h2>
+<p>Algemeen: zoek beste benadering <span class="math inline">\(u^\ast\)</span> binnen een bepaalde deelverzameling <span class="math inline">\(U \subseteq \mathop{\mathrm{\mathcal{D}}}_{{\hat{L}}}\)</span>:</p>
+<p><strong>Rayleigh-Ritz methode = variationeel principe</strong>:</p>
+<p>$<span class="math inline">\(u^\ast = \mathop{\mathrm{arg\ min}}_{u \in U} \mathcal{R}[u]\)</span></p>
+<ul>
+<li><p>voor <span class="math inline">\(U = {\mathbb{F}}\{{e}_1,\ldots,{e}_m\}\)</span>: <span class="math inline">\(u = \sum_{k=1}^m c^k e_k\)</span></p>
+<ul>
+<li><span class="math inline">\(\boldsymbol{c}^\ast = \mathop{\mathrm{arg\ min}}_{\boldsymbol{c}} \frac{\boldsymbol{c}^{\mathsf{H}}{\mathsf{A}}\boldsymbol{c}}{\boldsymbol{c}^{\mathsf{H}}{\mathsf{B}}\boldsymbol{c}}\)</span> met <span class="math inline">\(A_{kl} = {\left\langle{e}_k,{\hat{L}}{e}_l\right\rangle}\)</span> en <span class="math inline">\(B_{kl} = {\left\langle{e}_k,{e}_l\right\rangle}\)</span></li>
+<li><span class="math inline">\({\mathsf{A}}\boldsymbol{c}^\ast = \lambda {\mathsf{B}}\boldsymbol{c}^\ast\)</span> met <span class="math inline">\(\lambda = \mathcal{R}[u^\ast]\)</span> (veralgemeend eigenwaardeprobleem: op te lossen als <span class="math inline">\({\mathsf{B}}^{-1}{\mathsf{A}} \boldsymbol{c} = \lambda \boldsymbol{c})\)</span></li>
+<li>voor <span class="math inline">\({\left\langle{e}_k,{e}_l\right\rangle}=\delta_{kl}\)</span>: gewoon eigenwaardeprobleem</li>
+</ul></li>
+</ul>
+</section>
+<section id="uitbreidingen-op-sturm-liouville-theorie" class="level2 smaller">
+<h2 class="smaller anchored" data-anchor-id="uitbreidingen-op-sturm-liouville-theorie">Uitbreidingen op Sturm-Liouville theorie</h2>
+<ul>
+<li><p><span class="math inline">\(p(a) = p(b)\)</span> en <span class="math inline">\(p(x)\)</span>, <span class="math inline">\(p'(x)\)</span>, <span class="math inline">\(w(x)\)</span> en <span class="math inline">\(s(x)\)</span> continue in <span class="math inline">\((a,b]\)</span>:</p>
+<ul>
+<li>periodieke randvoorwaarden: <span class="math inline">\(B_1[u] = u(a)-u(b) = 0\)</span> en <span class="math inline">\(B_2[u] = u'(a)-u'(b)=0\)</span></li>
+<li>antiperiodieke randvoorwaarden: <span class="math inline">\(\tilde{B}_1[u] = u(a) + u(b)=0\)</span> en <span class="math inline">\(\tilde{B}_2[u] = u'(a) + u'(b) = 0\)</span></li>
+</ul>
+<p><span class="math inline">\(\Rightarrow\)</span> Periodiek Sturm-Liouville probleem</p></li>
+<li><p>Voorbeeld: <span class="math inline">\({\hat{L}} = - {\hat{D}}^2\)</span></p>
+<p><span class="math display">\[\begin{align*}
+  \lambda_0 &amp;= 0,&amp;u_0(x) &amp;= 1\\
+  \tilde{\lambda}_{2n+1} =\tilde{\lambda}_{2n+2} &amp;= (\pi (2n+1))^2,&amp; \tilde{u}_{2n+1}(x) &amp;= \sqrt{2} \sin(\pi (2n+1) x),\\
+  &amp; &amp; \tilde{u}_{2n+2}(x) &amp;= \sqrt{2} \cos(\pi (2n+1) x),\\
+  \lambda_{2n+1} =\lambda_{2n+2} &amp;= (\pi  (2n+2))^2,&amp; u_{2n+1}(x) &amp;= \sqrt{2} \sin(\pi (2n+2) x),\\
+  &amp; &amp; u_{2n+2}(x) &amp;= \sqrt{2} \cos(\pi (2n+2) x).
+\end{align*}\]</span></p></li>
+<li><p>Algemeen: <span class="math inline">\(M &lt; \lambda_0 &lt; \tilde{\lambda}_1 \leq \tilde{\lambda}_2 &lt; \lambda_1 \leq \lambda_2 &lt; \tilde{\lambda}_3 \leq \tilde{\lambda}_4 &lt; \ldots\)</span></p></li>
+</ul>
+</section>
+<section id="uitbreidingen-op-sturm-liouville-theorie-1" class="level2 smaller">
+<h2 class="smaller anchored" data-anchor-id="uitbreidingen-op-sturm-liouville-theorie-1">Uitbreidingen op Sturm-Liouville theorie</h2>
+<ul>
+<li><p><strong>singulier Sturm-Liouville probleem</strong>:</p>
+<ul>
+<li><span class="math inline">\(p(a)\)</span> en/of <span class="math inline">\(p(b) = 0\)</span>: randvoorwaarden niet meer nodig/mogelijk</li>
+</ul>
+<p>en/of</p>
+<ul>
+<li><span class="math inline">\(a\)</span> en/of <span class="math inline">\(b \to \pm\infty\)</span></li>
+</ul>
+<p><span class="math inline">\(\rightarrow\)</span> geen eenvoudige algemene theorie</p></li>
+<li><p>Voorbeeld 1: <span class="math inline">\(({\hat{L}}u)(r) = -\frac{1}{r} \frac{{\mathrm{d}}\ }{{\mathrm{d}}r} \left(r \frac{{\mathrm{d}}u}{{\mathrm{d}}r}(r)\right) + \frac{n^2}{r^2} u(r)\)</span> op <span class="math inline">\(r \in [0,1]\)</span></p>
+<ul>
+<li><p><span class="math inline">\(r = 0\)</span> is regulier singulier punt: <span class="math inline">\(w(r)=p(r)=r\)</span> en <span class="math inline">\(q(r) = \nu^2/r\)</span></p></li>
+<li><p>eigenwaardevergelijking <span class="math inline">\(-r^2 u''(r) - r u'(r) + n^2 u(r) = \lambda r^2 u(r)\)</span></p></li>
+<li><p>met <span class="math inline">\(u(r) = U(\sqrt{\lambda} r)\)</span>: <span class="math inline">\(x^2 U''(x) + x U'(x) + (x^2 - n^2) U(x) = 0\)</span> (Besselvergelijking)</p></li>
+<li><p>oplossingen <span class="math inline">\(J_n(x)\)</span> en <span class="math inline">\(K_n(x)\)</span>: <span class="math inline">\(J_n(x) \sim 1\)</span> en <span class="math inline">\(K_n(x)\)</span> met <span class="math inline">\(K_n(x) \sim \log(x)\)</span> voor <span class="math inline">\(x \to 0\)</span></p></li>
+<li><p>randvoorwaarde <span class="math inline">\(u(r)\)</span> blijft eindig bij <span class="math inline">\(r=0\)</span>:</p>
+<p><span class="math inline">\(u_k(r) = J_n(\sqrt{\lambda_k} r)\)</span> met <span class="math inline">\(\lambda_k^2\)</span> het <span class="math inline">\(k\)</span>de nulpunt van <span class="math inline">\(J_n(x)\)</span> voor <span class="math inline">\(x&gt;0\)</span></p></li>
+</ul></li>
+</ul>
+</section>
+<section id="uitbreidingen-op-sturm-liouville-theorie-2" class="level2 smaller">
+<h2 class="smaller anchored" data-anchor-id="uitbreidingen-op-sturm-liouville-theorie-2">Uitbreidingen op Sturm-Liouville theorie</h2>
+<ul>
+<li><p>Voorbeelden op oneindig interval <span class="math inline">\(x \in (-\infty,+\infty)\)</span>:</p>
+<ul>
+<li><p><span class="math inline">\({\hat{L}} = -{\hat{D}}^2\)</span>: <span class="math inline">\(-u''(x) = \lambda u(x)\)</span></p>
+<ul>
+<li><p>geen eigenwaarden / eigenvectoren</p></li>
+<li><p>continu spectrum = <span class="math inline">\({\mathbb{R}}_{\geq 0}\)</span></p></li>
+<li><p>spectrale decompositie <span class="math inline">\(\sim\)</span> Fouriertransformatie (zie volgend hoofdstuk)</p></li>
+</ul></li>
+<li><p><span class="math inline">\({\hat{L}} = -{\hat{D}}^2 + {\hat{X}}^2\)</span>: <span class="math inline">\(-u''(x) + x^2 u(x) = \lambda u(x)\)</span></p>
+<ul>
+<li><p>eigenwaarden <span class="math inline">\(\lambda_n = 2 (n+1/2)\)</span> met eigenvectoren <span class="math inline">\(u_n(x) = H_n(x) \exp(-x^2/2)\)</span> met <span class="math inline">\(H_n(x)\)</span> de Hermite-polynoom van <span class="math inline">\(n\)</span>de graad</p></li>
+<li><p>spectrale decompositie blijft gelden:</p>
+<p><span class="math inline">\(({\hat{L}} f)(x) = \sum_{n \in {\mathbb{N}}} \lambda_n u_n(x) {\left\langle u_n,f\right\rangle}\)</span></p></li>
+</ul></li>
+</ul></li>
+</ul>
+</section>
+</section>
+<section id="partiële-differentiaalvergelijkingen" class="level1">
+<h1>Partiële differentiaalvergelijkingen</h1>
+<section id="beginvoorwaardeproblemen-1" class="level2 smaller">
+<h2 class="smaller anchored" data-anchor-id="beginvoorwaardeproblemen-1">Beginvoorwaardeproblemen</h2>
+<ul>
+<li><p>Beschouw:</p>
+<ul>
+<li><span class="math inline">\(u_t(x) = u(x,t)\)</span> zodat <span class="math inline">\(u_t \in L^2(I)\)</span> voor elk tijdstip <span class="math inline">\(t\)</span></li>
+<li><span class="math inline">\({\hat{L}}\)</span> Sturm-Liouville operator op <span class="math inline">\(L^2(I)\)</span> met randvoorwaarden <span class="math inline">\(B_i[u]\)</span></li>
+</ul></li>
+<li><p>Beginvoorwaardeprobleem:</p>
+<p><span class="math display">\[\frac{\partial\ }{\partial t} u_t(x) = ({\hat{L}}u_t)(x) + f(x,t),\quad B_i[u_t] = \gamma_i,\ i=1,\ldots,p,\qquad \forall t &gt; t_0, x \in I\]</span></p>
+<p>met <span class="math inline">\(u_{t_0}(x) = v(x)\)</span> met <span class="math inline">\(v \in L^2(I)\)</span> en <span class="math inline">\(B_i[v]=\gamma_i\)</span>.</p></li>
+<li><p>We stellen <span class="math inline">\(u_t(x) = u_0(x) + u_\gamma(x) + \breve{u}_t(x) + u_f(x,t)\)</span> en willen</p>
+<ul>
+<li><p><span class="math inline">\({\hat{L}}u_0 =0\)</span> en <span class="math inline">\(B_i[u_0] =0\)</span> enkel voor triviale oplossing <span class="math inline">\(u_0(x)=0\)</span></p></li>
+<li><p><span class="math inline">\({\hat{L}} u_\gamma=0\)</span> en <span class="math inline">\(B_i[u_\gamma] = \gamma_i\)</span>: unieke oplossing (tijdsonafhankelijk)</p></li>
+<li><p><span class="math inline">\(\frac{\partial\ }{\partial t} \breve{u}_t(x) = ({\hat{L}}\breve{u}_t)(x)\)</span> met <span class="math inline">\(B_i[\breve{u}_t]=0\)</span> en <span class="math inline">\(\breve{u}_{t_0}(x) = v(x) - u_\gamma(x)\)</span></p>
+<p><span class="math inline">\(\Rightarrow \breve{u}_t = \exp({\hat{L}}(t-t_0)) \breve{u}_{t_0}(x) = \sum_{n\in {\mathbb{N}}} {\mathrm{e}}^{\lambda_n (t-t_0)} u_n(x) {\left\langle u_n,\breve{u}_{t_0}\right\rangle}\)</span></p></li>
+<li><p><span class="math inline">\(u_f(x,t) = \int_{t_0}^{t} {\mathrm{d}}\tau \sum_{n=0}^{+\infty} {\mathrm{e}}^{(t-\tau) \lambda_n} u_n(x) {\left\langle u_n,f_\tau\right\rangle} =\int_{t_0}^{t} {\mathrm{d}}\tau \sum_{n=0}^{+\infty} {\mathrm{e}}^{(t-\tau) \lambda_n} u_n(x) \int_I u_n(y)f(y,\tau)\,{\mathrm{d}}y\)</span></p></li>
+</ul></li>
+</ul>
+</section>
+<section id="meerdimensionale-sturm-liouville-operator" class="level2 smaller">
+<h2 class="smaller anchored" data-anchor-id="meerdimensionale-sturm-liouville-operator">Meerdimensionale Sturm-Liouville operator</h2>
+<ul>
+<li><p>Functies <span class="math inline">\(u(\boldsymbol{x})\)</span> met <span class="math inline">\(\boldsymbol{x} \in \Omega \subseteq {\mathbb{R}}^d\)</span></p></li>
+<li><p>Afgeleide-operatoren $(_i u)() = ()</p>
+<p>Positie-operaotren <span class="math inline">\(({\hat{X}}_i u)(\boldsymbol{x}) = x_i u(\boldsymbol{x})\)</span></p></li>
+<li><p>Meerdimensionale Sturm-Liouville operator:</p>
+<p><span class="math display">\[({\hat{L}}u)(\boldsymbol{x}) = \frac{1}{w(\boldsymbol{x})}\left\{ - \sum_{i,j=1}^d \frac{\partial\ }{\partial x^i}\left[p_{ij}(\boldsymbol{x}) \frac{\partial u}{\partial x^j}(\boldsymbol{x})\right] + q(\boldsymbol{x}) u(\boldsymbol{x})\right\}\]</span></p>
+<p>met <span class="math inline">\(w(\boldsymbol{x})\)</span> positief en continu, <span class="math inline">\(q(\boldsymbol{x})\)</span> reëel en continu en $<span class="math inline">\(p_{ij}(\boldsymbol{x}) = p_{ji}(\boldsymbol{x})\)</span> reëel en continu afleidbaar</p>
+<ul>
+<li><p>Formeel zelf-toegevoegd ten opzichte van <span class="math inline">\({\left\langle v,u\right\rangle}_w = \int_{\Omega} w(\boldsymbol{x})\overline{v(\boldsymbol{x})} u(\boldsymbol{x}) \,{\mathrm{d}}\boldsymbol{x}\)</span></p></li>
+<li><p>Zelftoegevoegd voor bvb Robin-randvoorwaarden:</p>
+<p><span class="math inline">\(\left[ \alpha u(\boldsymbol{x}) + \beta \sum_{i,j=1}^{d} n^i p_{ij}(\boldsymbol{x}) \frac{\partial u}{\partial x^j}(\boldsymbol{x}) \right]_{\boldsymbol{x}\in \partial \Omega} = 0\)</span> met <span class="math inline">\(n_i\)</span> de normaal op de rand van <span class="math inline">\(\Omega\)</span></p></li>
+</ul></li>
+</ul>
+</section>
+<section id="meerdimensionale-sturm-liouville-operator-1" class="level2 smaller">
+<h2 class="smaller anchored" data-anchor-id="meerdimensionale-sturm-liouville-operator-1">Meerdimensionale Sturm-Liouville operator</h2>
+<p>Sturm-Liouville probleem: <span class="math inline">\({\hat{L}} u_n(\boldsymbol{x}) = \lambda_n u_n(\boldsymbol{x})\)</span> waarbij <span class="math inline">\(u_n(\boldsymbol{x})\)</span> voldoet aan de randvoorwaarden</p>
+<ul>
+<li><p>Praktische oplossing: scheiding der veranderlijken (na overgang naar aangepaste coördinaten: cartesisch, cylindrisch, sferisch, …)</p></li>
+<li><p>Voorbeeld: <span class="math inline">\({\hat{L}} = - \boldsymbol{\nabla}^2 = - \Delta = - {\hat{D}}_x^2 - {\hat{D}}_y^2 - {\hat{D}}_z^2\)</span></p>
+<ul>
+<li><p>randvoorwaarden:</p>
+<p><span class="math display">\[\begin{align*}
+  u(0,y,z) &amp;= 0 &amp; u(a,y,z) &amp;= 0&amp;\forall (y,z) \in [0,b] \times [0,c]\\
+  u(x,0,z) &amp;= 0 &amp; \frac{\partial u}{\partial y}(0,b,z) &amp;= 0&amp;\forall (x,z) \in [0,a] \times [0,c]\\
+  \frac{\partial u}{\partial x}(x,y,0) &amp;= 0 &amp; \frac{\partial u}{\partial x}(x,y,c) &amp;= 0&amp;\forall (x,y) \in [0,a] \times [0,b]
+\end{align*}\]</span></p></li>
+<li><p>met <span class="math inline">\(u(\boldsymbol{x})=X(x)Y(y)Z(z)\)</span>: <span class="math inline">\(-\frac{X''(x)}{X(x)} -\frac{Y''(y)}{Y(y)} -\frac{Z''(z)}{Z(z)} = \lambda\)</span></p></li>
+</ul></li>
+</ul>
+</section>
+<section id="meerdimensionale-sturm-liouville-operator-2" class="level2 smaller">
+<h2 class="smaller anchored" data-anchor-id="meerdimensionale-sturm-liouville-operator-2">Meerdimensionale Sturm-Liouville operator</h2>
+<ul>
+<li><p>Voorbeeld: <span class="math inline">\({\hat{L}} = - \boldsymbol{\nabla}^2 = - \Delta = - {\hat{D}}_x^2 - {\hat{D}}_y^2 - {\hat{D}}_z^2\)</span></p>
+<ul>
+<li><p>oplossingen:</p>
+<p><span class="math display">\[\begin{align*}
+  \lambda_{k,m,n} = \left(k\frac{\pi}{a}\right)^2 + \left(\left(m+\frac{1}{2}\right) \frac{\pi}{b}\right)^2 + \left(n \frac{\pi}{c}\right)^2,\qquad u_{k,m,n}(\boldsymbol{x}) = X_k(x) Y_m(y) Z_n(z)
+\end{align*}\]</span> met <span class="math inline">\(k\in{\mathbb{N}}_0\)</span>, <span class="math inline">\(m,n\in{\mathbb{N}}\)</span> en <span class="math display">\[\begin{align*}
+  X_k(x) &amp;= \sqrt{\frac{2}{a}} \sin\frac{k\pi x}{a},&amp;
+  Y_m(x) &amp;= \sqrt{\frac{2}{b}} \sin\frac{(m+\frac{1}{2})\pi x}{b},&amp;
+  Z_n(x) &amp;= \begin{cases}
+    \sqrt{\frac{1}{c}},&amp;n = 0\\
+    \sqrt{\frac{2}{c}} \cos \frac{n\pi z}{c},&amp;n \geq 1
+  \end{cases}.
+\end{align*}\]</span></p></li>
+<li><p><span class="math inline">\({G}={\mathsf{L}}^{-1}\)</span>: integraaloperator met kern = Greense functie</p>
+<p><span class="math inline">\(g(\boldsymbol{x},\boldsymbol{y}) = \sum_{k=1}^{+\infty}\sum_{m,n=0}^{+\infty} \frac{u_{k,m,n} (\boldsymbol{x}) u_{k,m,n}(\boldsymbol{y})}{\lambda_{k,m,n}}\)</span></p></li>
+<li><p>Propagator: <span class="math inline">\(Z(t,t') = \exp\big({\hat{L}}(t-t')\big)\)</span></p>
+<p><span class="math inline">\(z(\boldsymbol{x}, t,\boldsymbol{x}',t') = \sum_{k=1}^{+\infty}\sum_{m,n=0}^{+\infty} {\mathrm{e}}^{\lambda_{k,m,n}(t-t')} u_{k,m,n} (\boldsymbol{x}) u_{k,m,n}(\boldsymbol{x}')\)</span></p></li>
 </ul></li>
 </ul>
 

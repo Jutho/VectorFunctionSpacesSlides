@@ -929,7 +929,7 @@ Oplossing van $(\map{L} u_f)(x) = f(x)$ met $B_i[u_f] = 0$ voor $i=1,\ldots,p$
 
   $$u_f(x) = \int_{a}^b g_\xi(x) f(\xi)\,\drm \xi$$
 
-  met $g_\xi(x)$$ de **Greense functie**, gedefinieerd door voorwaarden op volgende slide.
+  met $g_\xi(x)$ de **Greense functie**, gedefinieerd door voorwaarden op volgende slide.
 
 ## Greense functie {.smaller}
 
@@ -961,7 +961,7 @@ $$u_f(x) = \int_{a}^b g_\xi(x) f(\xi)\,\drm \xi$$
 * voor $p=2$:
   * kies $u_1$ zodat $B_1[u_1] = \alpha_1 u_1(a) + \alpha_2 u_1'(a) = 0$: $u_1(a) = \alpha_2$ en $u_1'(a) = -\alpha_1$
   * kiew $u_2$ zodat $B_2[u_2] = \beta_1 u_2(b) + \beta_2 u_2'(b) = 0$: $u_2(b) = \beta_2$ en $u_2'(b) = -\beta_1$
-  * $u_1$ en $u_2$ lineair onafhankelijk voor goed gedefinieerd randvoorwaardeprobleem ($\det(\mat{M})=0$)
+  * $u_1$ en $u_2$ lineair onafhankelijk voor goed gedefinieerd randvoorwaardeprobleem ($\det(\mat{M}\neq 0$)
 
   $$\Rightarrow 	g(x,\xi) = \begin{cases}
 		\frac{u_1(x) u_2(\xi)}{a_2(\xi) W(\xi)},&a< x < \xi\\
@@ -1145,20 +1145,178 @@ Bijkomende gevolgen en eigenschappen
 
   $$\mathcal{R}[u] = \frac{\inner{u}{\map{L}u}_w}{\inner{u}{u}_w} \geq \lambda_0$$
 
-  en de gelijkheid geldt enkel als $u \sim u_0$ (bewijs eenvoudig via spectrale decompositie).
+  en de gelijkheid geldt enkel als $u \sim u_0$ (bewijs via spectrale decompositie).
 
   $\rightarrow$ $\mathcal{R}[u]$: **Rayleigh quotient**
 
 * Indien we benadering voor $u_0$ zoeken binnen een bepaalde deelruimte, opgespannen door een aantal vectoren $\{\ve_k, k=1,\ldots,m\}$: $u = \sum_{k=1}^m c^k e_k$
 
-  * Beste benadering: $\min_{\{c^k\}}\norm{u - u_0} \Leftrightarrow$ orthogonale projectie
+  * Beste benadering:
+    * $\min_{\{c^k\}}\norm{u - u_0} \Leftrightarrow$ orthogonale projectie
+    * $\Rightarrow$ vereist dat $u_0$ reeds gekend is
 
-    $\Rightarrow$ vereist dat $u_0$ reeds gekend is
-
-  * **Rayleigh-Ritz methode = variationeel principe**: $\min_{\{c^k\}} \mathcal{R}[u]$
-
-    $\mat{A}\vec{c} = \lambda \mat{B}\vec{c}$ met $A_{kl} = \inner{\ve_k}{\map{L}\ve_l}$ en $B_{kl} = \inner{\ve_k}{\ve_l}$
-
-    (veralgemeend eigenwaardeprobleem; gewoon eigenwaardeprobleem als $\inner{\ve_k}{\ve_l}=\delta_{kl}$)
+  * **Rayleigh-Ritz methode = variationeel principe**:
+    * $\min_{\{c^k\}} \mathcal{R}[u]$
     
+## Rayleigh-Ritz methode {.smaller}
+
+Algemeen: zoek beste benadering $u^\ast$ binnen een bepaalde deelverzameling $U \subseteq \D_{\map{L}}$:
+
+**Rayleigh-Ritz methode = variationeel principe**: 
+
+$$u^\ast = \argmin_{u \in U} \mathcal{R}[u]$
+
+* voor $U = \bbF\{\ve_1,\ldots,\ve_m\}$: $u = \sum_{k=1}^m c^k e_k$
+
+  * $\vec{c}^\ast = \argmin_{\vec{c}} \frac{\vec{c}^\hermitian \mat{A}\vec{c}}{\vec{c}^\hermitian \mat{B}\vec{c}}$ met $A_{kl} = \inner{\ve_k}{\map{L}\ve_l}$ en $B_{kl} = \inner{\ve_k}{\ve_l}$
+  * $\mat{A}\vec{c}^\ast = \lambda \mat{B}\vec{c}^\ast$ met $\lambda = \mathcal{R}[u^\ast]$
+    (veralgemeend eigenwaardeprobleem: op te lossen als $\mat{B}^{-1}\mat{A} \vec{c} = \lambda \vec{c})$
+  * voor $\inner{\ve_k}{\ve_l}=\delta_{kl}$: gewoon eigenwaardeprobleem
+    
+## Uitbreidingen op Sturm-Liouville theorie {.smaller}
+
+* $p(a) = p(b)$ en $p(x)$, $p'(x)$, $w(x)$ en $s(x)$ continue in $(a,b]$:
+  * periodieke randvoorwaarden: $B_1[u] = u(a)-u(b) = 0$ en $B_2[u] = u'(a)-u'(b)=0$
+  * antiperiodieke randvoorwaarden: $\tilde{B}_1[u] = u(a) + u(b)=0$ en $\tilde{B}_2[u] = u'(a) + u'(b) = 0$
+
+  $\Rightarrow$ Periodiek Sturm-Liouville probleem
+
+* Voorbeeld: $\map{L} = - \map{D}^2$
+
+  \begin{align*}
+    \lambda_0 &= 0,&u_0(x) &= 1\\
+    \tilde{\lambda}_{2n+1} =\tilde{\lambda}_{2n+2} &= (\pi (2n+1))^2,& \tilde{u}_{2n+1}(x) &= \sqrt{2} \sin(\pi (2n+1) x),\\
+    & & \tilde{u}_{2n+2}(x) &= \sqrt{2} \cos(\pi (2n+1) x),\\
+    \lambda_{2n+1} =\lambda_{2n+2} &= (\pi  (2n+2))^2,& u_{2n+1}(x) &= \sqrt{2} \sin(\pi (2n+2) x),\\
+    & & u_{2n+2}(x) &= \sqrt{2} \cos(\pi (2n+2) x).
+  \end{align*}
+
+* Algemeen: $M < \lambda_0 < \tilde{\lambda}_1 \leq \tilde{\lambda}_2 < \lambda_1 \leq \lambda_2 < \tilde{\lambda}_3 \leq \tilde{\lambda}_4 < \ldots$
+
+## Uitbreidingen op Sturm-Liouville theorie {.smaller}
+
+* **singulier Sturm-Liouville probleem**:
+
+  * $p(a)$ en/of $p(b) = 0$: randvoorwaarden niet meer nodig/mogelijk
+
+  en/of
+
+  * $a$ en/of $b \to \pm\infty$
+
+  $\rightarrow$ geen eenvoudige algemene theorie
+
+* Voorbeeld 1: $(\map{L}u)(r) = -\frac{1}{r} \frac{\drm\ }{\drm r} \left(r \frac{\drm u}{\drm r}(r)\right) + \frac{n^2}{r^2} u(r)$ op $r \in [0,1]$
+  * $r = 0$ is regulier singulier punt: $w(r)=p(r)=r$ en $q(r) = \nu^2/r$
+  * eigenwaardevergelijking $-r^2 u''(r) - r u'(r) + n^2 u(r) = \lambda r^2 u(r)$
+  * met $u(r) = U(\sqrt{\lambda} r)$: $x^2 U''(x) + x U'(x) + (x^2 - n^2) U(x) = 0$ (Besselvergelijking)
+  * oplossingen $J_n(x)$ en $K_n(x)$: $J_n(x) \sim 1$ en $K_n(x)$ met $K_n(x) \sim \log(x)$ voor $x \to 0$
+  * randvoorwaarde $u(r)$ blijft eindig bij $r=0$:
+  
+    $u_k(r) = J_n(\sqrt{\lambda_k} r)$ met $\lambda_k^2$ het $k$de nulpunt van $J_n(x)$ voor $x>0$
+
+## Uitbreidingen op Sturm-Liouville theorie {.smaller}
+
+* Voorbeelden op oneindig interval $x \in (-\infty,+\infty)$:
+
+  * $\map{L} = -\map{D}^2$: $-u''(x) = \lambda u(x)$
+
+    * geen eigenwaarden / eigenvectoren
+
+    * continu spectrum = $\bbR_{\geq 0}$
+
+    * spectrale decompositie $\sim$ Fouriertransformatie (zie volgend hoofdstuk)
+
+  * $\map{L} = -\map{D}^2 + \map{X}^2$: $-u''(x) + x^2 u(x) = \lambda u(x)$
+
+    * eigenwaarden $\lambda_n = 2 (n+1/2)$ met eigenvectoren $u_n(x) = H_n(x) \exp(-x^2/2)$ met $H_n(x)$ de Hermite-polynoom van $n$de graad
+
+    * spectrale decompositie blijft gelden:
+
+      $(\map{L} f)(x) = \sum_{n \in \bbN} \lambda_n u_n(x) \inner{u_n}{f}$
+
+# Partiële differentiaalvergelijkingen
+
+## Beginvoorwaardeproblemen {.smaller}
+
+* Beschouw:
+  * $u_t(x) = u(x,t)$ zodat $u_t \in L^2(I)$ voor elk tijdstip $t$
+  * $\map{L}$ Sturm-Liouville operator op $L^2(I)$ met randvoorwaarden $B_i[u]$
+
+* Beginvoorwaardeprobleem: 
+
+	$$\frac{\partial\ }{\partial t} u_t(x) = (\map{L}u_t)(x) + f(x,t),\quad B_i[u_t] = \gamma_i,\ i=1,\ldots,p,\qquad \forall t > t_0, x \in I$$
+
+  met $u_{t_0}(x) = v(x)$ met $v \in L^2(I)$  en $B_i[v]=\gamma_i$.
+
+* We stellen $u_t(x) = u_0(x) + u_\gamma(x) + \breve{u}_t(x) + u_f(x,t)$ en willen
+  * $\map{L}u_0 =0$ en $B_i[u_0] =0$ enkel voor triviale oplossing $u_0(x)=0$
+  * $\map{L} u_\gamma=0$ en $B_i[u_\gamma] = \gamma_i$: unieke oplossing (tijdsonafhankelijk)
+  * $\frac{\partial\ }{\partial t} \breve{u}_t(x) = (\map{L}\breve{u}_t)(x)$ met $B_i[\breve{u}_t]=0$ en $\breve{u}_{t_0}(x) = v(x) - u_\gamma(x)$
+
+    $\Rightarrow \breve{u}_t = \exp(\map{L}(t-t_0)) \breve{u}_{t_0}(x) = \sum_{n\in \bbN} \erm^{\lambda_n (t-t_0)} u_n(x) \inner{u_n}{\breve{u}_{t_0}}$
+
+  * $u_f(x,t) = \int_{t_0}^{t} \drm \tau \sum_{n=0}^{+\infty} \erm^{(t-\tau) \lambda_n} u_n(x) \inner{u_n}{f_\tau} =\int_{t_0}^{t} \drm \tau \sum_{n=0}^{+\infty} \erm^{(t-\tau) \lambda_n} u_n(x) \int_I u_n(y)f(y,\tau)\,\drm y$
+
+## Meerdimensionale Sturm-Liouville operator {.smaller}
+
+* Functies $u(\vec{x})$ met $\vec{x} \in \Omega \subseteq \bbR^d$
+* Afgeleide-operatoren $(\map{D}_i u)(\vec{x}) = \frac{\partial u}{\partial x^i}(\vec{x})
+
+  Positie-operaotren $(\map{X}_i u)(\vec{x}) = x_i u(\vec{x})$
+* Meerdimensionale Sturm-Liouville operator:
+
+  $$(\map{L}u)(\vec{x}) = \frac{1}{w(\vec{x})}\left\{ - \sum_{i,j=1}^d \frac{\partial\ }{\partial x^i}\left[p_{ij}(\vec{x}) \frac{\partial u}{\partial x^j}(\vec{x})\right] + q(\vec{x}) u(\vec{x})\right\}$$
+
+  met $w(\vec{x})$ positief en continu, $q(\vec{x})$ reëel en continu en $$p_{ij}(\vec{x}) = p_{ji}(\vec{x})$ reëel en continu afleidbaar
+
+  * Formeel zelf-toegevoegd ten opzichte van $\inner{v}{u}_w = \int_{\Omega} w(\vec{x})\overline{v(\vec{x})} u(\vec{x}) \,\drm \vec{x}$
+
+  * Zelftoegevoegd voor bvb Robin-randvoorwaarden:
+
+    $\left[	\alpha u(\vec{x}) + \beta \sum_{i,j=1}^{d} n^i p_{ij}(\vec{x}) \frac{\partial u}{\partial x^j}(\vec{x}) \right]_{\vec{x}\in \partial \Omega} = 0$ met $n_i$ de normaal op de rand van $\Omega$
+
+## Meerdimensionale Sturm-Liouville operator {.smaller}
+
+Sturm-Liouville probleem: $\map{L} u_n(\vec{x}) = \lambda_n u_n(\vec{x})$ waarbij $u_n(\vec{x})$ voldoet aan de randvoorwaarden
+
+* Praktische oplossing: scheiding der veranderlijken (na overgang naar aangepaste coördinaten: cartesisch, cylindrisch, sferisch, …)
+
+* Voorbeeld: $\map{L} = - \vec{\nabla}^2 = - \Delta = - \map{D}_x^2 - \map{D}_y^2 - \map{D}_z^2$
+
+  * randvoorwaarden:
+
+    \begin{align*}
+      u(0,y,z) &= 0 & u(a,y,z) &= 0&\forall (y,z) \in [0,b] \times [0,c]\\
+      u(x,0,z) &= 0 & \frac{\partial u}{\partial y}(0,b,z) &= 0&\forall (x,z) \in [0,a] \times [0,c]\\
+      \frac{\partial u}{\partial x}(x,y,0) &= 0 & \frac{\partial u}{\partial x}(x,y,c) &= 0&\forall (x,y) \in [0,a] \times [0,b]
+    \end{align*}
+
+  * met $u(\vec{x})=X(x)Y(y)Z(z)$: $-\frac{X''(x)}{X(x)}	-\frac{Y''(y)}{Y(y)}	-\frac{Z''(z)}{Z(z)} = \lambda$
+
+## Meerdimensionale Sturm-Liouville operator {.smaller}
+
+* Voorbeeld: $\map{L} = - \vec{\nabla}^2 = - \Delta = - \map{D}_x^2 - \map{D}_y^2 - \map{D}_z^2$
+
+  * oplossingen:
+
+    \begin{align*}
+      \lambda_{k,m,n} = \left(k\frac{\pi}{a}\right)^2 + \left(\left(m+\frac{1}{2}\right) \frac{\pi}{b}\right)^2 + \left(n \frac{\pi}{c}\right)^2,\qquad u_{k,m,n}(\vec{x}) = X_k(x) Y_m(y) Z_n(z)
+    \end{align*}
+    met $k\in\bbN_0$, $m,n\in\bbN$ en
+    \begin{align*}
+      X_k(x) &= \sqrt{\frac{2}{a}} \sin\frac{k\pi x}{a},&
+      Y_m(x) &= \sqrt{\frac{2}{b}} \sin\frac{(m+\frac{1}{2})\pi x}{b},&
+      Z_n(x) &= \begin{cases}
+        \sqrt{\frac{1}{c}},&n = 0\\
+        \sqrt{\frac{2}{c}} \cos \frac{n\pi z}{c},&n \geq 1
+      \end{cases}.
+    \end{align*}
+
+  * ${G}=\mat{L}^{-1}$: integraaloperator met kern = Greense functie
+
+    $g(\vec{x},\vec{y}) = \sum_{k=1}^{+\infty}\sum_{m,n=0}^{+\infty} \frac{u_{k,m,n}	(\vec{x}) u_{k,m,n}(\vec{y})}{\lambda_{k,m,n}}$
+
+  * Propagator: $Z(t,t') = \exp\big(\map{L}(t-t')\big)$
+
+    $z(\vec{x}, t,\vec{x}',t') = \sum_{k=1}^{+\infty}\sum_{m,n=0}^{+\infty} \erm^{\lambda_{k,m,n}(t-t')} u_{k,m,n}	(\vec{x}) u_{k,m,n}(\vec{x}')$
 

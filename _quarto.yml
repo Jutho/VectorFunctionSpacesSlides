@@ -24,6 +24,8 @@ website:
         text: H7
       - href: slides/H8.qmd
         text: H8
+      - href: slides/H9.qmd
+        text: H9
 
 format:
   html:
