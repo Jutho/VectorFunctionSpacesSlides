@@ -1,7 +1,7 @@
 ---
 title: "Hoofdstuk 2 - Lineaire afbeeldingen"
 author: "Jutho Haegeman"
-date: "09/26/2023"
+date: "10/01/2024"
 # format:
 #   revealjs:
 #     theme: solarized
@@ -250,7 +250,7 @@ Gegeven een afbeelding $\map{A}:V \to W$
 
   $\dim(\im(\map{A})) = \dim(V/\ker(\map{A})) = \dim(V) - \dim(\ker(\map{A}))$
  
-  $\Rightarrow\rank(\map{A}) + \nullity(\map{A}) = \dim(\map{V})$
+  $\Rightarrow\rank(\map{A}) + \nullity(\map{A}) = \dim(V)$
 
 ## Rang-nulliteitsstelling
 
@@ -563,7 +563,7 @@ Voor $V = W$ en dus een lineaire operator $\map{A}$ op V
 * Voorbeeld: pad $q(t)$ van een deeltje gedurende een tijdsinterval $I$:
 
   * $q:I \to \bbR^3: t \mapsto q(t)$; $q \in C(I, \bbR^3)$
-  * Actie $S: C(I,\bbR^3) \mapsto \bbR: q \mapsto S[q] = \int_I L(q,\dot{q},t)\,\drm t$
+  * Actie $S: C(I,\bbR^3) \mapsto \bbR: q \mapsto S[q] = \int_I L(q(t),\dot{q}(t),t)\,\drm t$
 
 * **Lineaire functionalen**: $\Hom(V, \bbF)$
 
@@ -621,6 +621,9 @@ Vectorruimte $V$ met twee basissen $B$ en $\tilde{B}$
   $\tilde{\xi}_j = (\mat{T}^{-1})^i_{\ j} \xi_i = (\mat{T}^{-\transpose})^{\ i}_j \xi_i$
 
 * $\mat{T}^{-\transpose} = (\mat{T}^{-1})^\transpose = (\mat{T}^\transpose)^{-1}$
+  (duale of contragradiente representatie van $T \in \GL(n;\bbF)$)
+
+  $(\mat{T}_1 \mat{T}_2)^{-\transpose} = \mat{T}_1^{-\transpose} \mat{T}_2^{-\transpose}$
 
 ## Duale lineaire afbeeldingen en de getransponeerde
 
@@ -895,7 +898,7 @@ $f_{\vec{X}}(\vec{x}) = Z \erm^{-\frac{1}{2} (\vec{x}-\vec{\mu})^\transpose \mat
 
 * normering
   * $\mat{A} = \mat{A}^T \Rightarrow \mat{A} = \mat{L} \mat{D} \mat{L}^\transpose$
-  * substitutie: $\vec{y} = \mat{L}^\transpose(\vec{x}-\vec{\mu}) \Leftrightarrow \vec{x}=\vec{\mu} + \vec{L}^{-\transpose}\vec{x}$
+  * substitutie: $\vec{y} = \mat{L}^\transpose(\vec{x}-\vec{\mu}) \Leftrightarrow \vec{x}=\vec{\mu} + \vec{L}^{-\transpose}\vec{y}$
 
     $\Rightarrow \mat{J} = \mat{L}^{-\transpose}, \det(\mat{J}) = 1$
   
@@ -910,7 +913,7 @@ $f_{\vec{X}}(\vec{x}) = Z \erm^{-\frac{1}{2} (\vec{x}-\vec{\mu})^\transpose \mat
 
 * gemiddelde en covariantie
   * momentgenererende functie $M_{\vec{X}}(\vec{t}) = \langle \erm^{\sum_{i=1}^n t_i X^i} \rangle = \int_{\bbR^n} \erm^{\sum_{i=1}^n t_i x^i} f_{\vec{X}}(\vec{x})\,\drm^n \vec{x}\\
-  \erm^{\frac{1}{2} \vec{t}^\transpose \mat{A}^{-1} \vec{t} + \vec{t}^\transpose \vec{\mu}}$
+  =\erm^{\frac{1}{2} \vec{t}^\transpose \mat{A}^{-1} \vec{t} + \vec{t}^\transpose \vec{\mu}}$
 
   * $\langle X^i\rangle = \left.\frac{\partial M_{\vec{X}}}{\partial t_i}\right|_{\vec{t}=\vec{0}} = \mu^i$
   * $\langle X^i X^j\rangle = \left.\frac{\partial^2 M_{\vec{X}}}{\partial t_i \partial t_j}\right|_{\vec{t}=\vec{0}} = (\mat{A}^{-1})^{ij} + \mu^i \mu^j$

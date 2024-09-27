@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Jutho Haegeman">
-<meta name="dcterms.date" content="2023-09-25">
+<meta name="dcterms.date" content="2024-09-24">
 
 <title>Vector- en functieruimten – Slides - Hoofdstuk 1 - Elementaire wiskundige structuren</title>
 <style>
@@ -217,7 +217,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">September 25, 2023</p>
+      <p class="date">September 24, 2024</p>
     </div>
   </div>
   
@@ -670,9 +670,10 @@ ul.task-list li input[type="checkbox"] {
 </ul></li>
 <li>als <span class="math inline">\(W_1 \cap W_2 = \{{o}\}\)</span>: <strong>(interne) directe som</strong> <span class="math inline">\(W_1 \oplus W_2\)</span>
 <ul>
-<li>ontbinding <span class="math inline">\({v}= {w}_1 + {w}_2\)</span> is uniek</li>
+<li>ontbinding <span class="math inline">\({v}= {w}_1 + {w}_2\)</span> met <span class="math inline">\({w}_i \in W_i\)</span> (<span class="math inline">\(i=1,2\)</span>) is uniek</li>
 <li><span class="math inline">\(\mathop{\mathrm{dim}}(W_1 \oplus W_2) = \mathop{\mathrm{dim}}(W_1) + \mathop{\mathrm{dim}}(W_2)\)</span></li>
 </ul></li>
+<li><span class="math inline">\(\bigoplus_{i=1}^n W_i\)</span>: vereist dat <span class="math inline">\(W_{k+1} \cap \left(\bigoplus_{i=1}^{k} W_i\right) = \{{o}\}\)</span> voor <span class="math inline">\(k=1,2,\ldots,n-1\)</span></li>
 </ul>
 </section>
 <section id="bewerkingen-met-deelruimten-2" class="level2">
@@ -681,11 +682,11 @@ ul.task-list li input[type="checkbox"] {
 <ul>
 <li>Vectorstructuur:
 <ul>
-<li><span class="math inline">\(({v}_1,{v}_2) + ({w}_1, {w}_2) = ({w}_1,{w}_2)\)</span></li>
+<li><span class="math inline">\(({v}_1,{v}_2) + ({w}_1, {w}_2) = ({v}_1+{w}_1,{v}_2+{w}_2)\)</span></li>
 <li><span class="math inline">\(a ({v}_1, {v}_2)= (a {v}_1, a {v}_2)\)</span></li>
 </ul></li>
 <li>notatie: <span class="math inline">\(V_1 \oplus V_2\)</span>, naam: <strong>(externe) directe som</strong></li>
-<li><span class="math inline">\({v}_1 \mapsto ({v}_1,{o}_{V_2})\)</span> en <span class="math inline">\({v}_2 \mapsto ({o}_{V_1},{v}_2)\)</span> definiëren natuurlijke inbedding van <span class="math inline">\(V_1\)</span> en <span class="math inline">\(V_2\)</span> als subruimtes van <span class="math inline">\(V_1 \oplus V_2\)</span></li>
+<li><span class="math inline">\({v}_1 \mapsto ({v}_1,{o}_{V_2})\)</span> en <span class="math inline">\({v}_2 \mapsto ({o}_{V_1},{v}_2)\)</span> definiëren natuurlijke inbedding van <span class="math inline">\(V_1\)</span> en <span class="math inline">\(V_2\)</span> als deelruimten van <span class="math inline">\(V_1 \oplus V_2\)</span></li>
 </ul>
 <p><span class="math inline">\(\Rightarrow\)</span> geen onderscheid tussen interne en externe directe som</p>
 </section>
@@ -702,7 +703,7 @@ ul.task-list li input[type="checkbox"] {
 <ul>
 <li>equivalentierelatie <span class="math inline">\({v}_1 \sim {v}_2 \Leftrightarrow ({v}_2-{v}_1) \in W\)</span></li>
 <li><span class="math inline">\((W,+)\)</span> is normale subgroup van <span class="math inline">\((V,+)\)</span></li>
-<li>equivalentieklassen: <span class="math inline">\({v}+ W = \{{v}+ {w}; {w}{w}\in W\}\)</span></li>
+<li>equivalentieklassen: <span class="math inline">\({v}+ W = \{{v}+ {w}; {w}\in W\}\)</span></li>
 <li><span class="math inline">\(\mathop{\mathrm{dim}}(V/W) = \mathop{\mathrm{dim}}(V) - \mathop{\mathrm{dim}}(W)\)</span></li>
 </ul></li>
 </ul>
@@ -729,7 +730,7 @@ ul.task-list li input[type="checkbox"] {
 <h1>Algebras</h1>
 <section id="algebra" class="level2">
 <h2 class="anchored" data-anchor-id="algebra">Algebra</h2>
-<p>Een vectorruimte <span class="math inline">\(V\)</span> met een binaire operatie <span class="math inline">\(\odot: V \times V \mapsto V\)</span> dat lineair is beide argumenten afzonderlijk (= bilineair)</p>
+<p>Een vectorruimte <span class="math inline">\(V\)</span> met een binaire operatie <span class="math inline">\(\odot: V \times V \mapsto V\)</span> die lineair is beide argumenten afzonderlijk (= bilineair)</p>
 <ul>
 <li><span class="math inline">\((a_1 {v}_1 + a_2 {v}_2) \odot {w}= a_1 ({v}_1 \odot {w}) + a_2 ({v}_2 \odot {w})\)</span></li>
 <li><span class="math inline">\({v}\odot (b_1 {w}_1 + b_2 {w}_2) = b_1 ({v}\odot {w}_1) + b_2 ({v}\odot {w}_2)\)</span></li>
@@ -747,10 +748,13 @@ ul.task-list li input[type="checkbox"] {
 <li>belangrijkste voorbeeld: vierkante matrices <span class="math inline">\({\mathbb{F}}^{n \times n}\)</span></li>
 <li><strong>commutator</strong>: <span class="math inline">\([{v},{w}] = {v}\cdot {w}- {w}\cdot {v}\)</span></li>
 </ul></li>
-<li><p>Alternerend product: <span class="math inline">\({v}\odot {v}= 0 \Rightarrow {v}\odot {w}= -{w}\odot {v}\)</span></p></li>
+<li><p>Alternerend product: <span class="math inline">\({v}\odot {v}= 0 \Rightarrow {v}\odot {w}= -{w}\odot {v}\)</span></p>
+<ul>
+<li>voorbeeld: vectorproduct <span class="math inline">\(\times\)</span> op <span class="math inline">\({\mathbb{R}}^3\)</span></li>
+</ul></li>
 <li><p>Lie-algebra: algebra met alternered product, genoteerd als <span class="math inline">\([{v}, {w}] = -[{w},{v}]\)</span> dat voldoet aan Jacobi-identiteit</p>
 <p><span class="math inline">\([{u},[{v},{w}]] + [{v},[{w},{u}]] + [{w},[{u},{v}]] = 0\)</span></p>
-<p><span class="math inline">\(\rightarrow\)</span> kan gemaakt worden uit associatieve algebra m.b.v. commutator</p></li>
+<p><span class="math inline">\(\rightarrow\)</span> kan gemaakt worden uit associatieve algebra m.b.v. commutator (controleer!)</p></li>
 </ul>
 
 
@@ -761,7 +765,7 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
 
 <ol>
-<li id="fn1"><p>Invers beeld gedraagt vereist geen injectiviteit, en gedraagt zich beter dan beeld onder unie en doorsnede: <span class="math inline">\(\varphi^{-1}(D_1 \cup D_2) = \varphi^{-1}(D_1) \cup \varphi^{-1}(D_2)\)</span> en analoog voor <span class="math inline">\(\cap\)</span><a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn1"><p>Invers beeld vereist geen injectiviteit, en gedraagt zich beter dan beeld onder unie en doorsnede: <span class="math inline">\(\varphi^{-1}(D_1 \cup D_2) = \varphi^{-1}(D_1) \cup \varphi^{-1}(D_2)\)</span> en analoog voor <span class="math inline">\(\cap\)</span><a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 <li id="fn2"><p><span class="math inline">\(S\)</span> zelf kan eindig of oneindig veel elementen bevatten, maar we hebben geen manier om op dit moment betekenis te geven aan een oneindige som (=reeks)<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 </ol>
 </section></div></main> <!-- /main -->

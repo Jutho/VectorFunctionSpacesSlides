@@ -1,7 +1,7 @@
 ---
 title: "Hoofdstuk 1 - Elementaire wiskundige structuren"
 author: "Jutho Haegeman"
-date: "09/25/2023"
+date: "09/24/2024"
 # format:
 #   revealjs:
 #     theme: solarized
@@ -191,7 +191,7 @@ $$
   - afbeelding $\varphi$, domein $A$, codomein $B$
   - argument $a$, waarde of beeld $\varphi(a)$
   - beeld van $C \subseteq A$: $\varphi(C) = \{\varphi(a) | a \in C\}$
-  - invers beeld (preimage) van $D \subseteq B$:^[Invers beeld gedraagt vereist geen injectiviteit, en gedraagt zich beter dan beeld onder unie en doorsnede: $\varphi^{-1}(D_1 \cup D_2) = \varphi^{-1}(D_1) \cup \varphi^{-1}(D_2)$ en analoog voor $\cap$]
+  - invers beeld (preimage) van $D \subseteq B$:^[Invers beeld vereist geen injectiviteit, en gedraagt zich beter dan beeld onder unie en doorsnede: $\varphi^{-1}(D_1 \cup D_2) = \varphi^{-1}(D_1) \cup \varphi^{-1}(D_2)$ en analoog voor $\cap$]
    $\varphi^{-1}(D) = \{a \in A | \varphi(a) \in D\}$
 
 * compositie $\varphi \circ \psi$, identiteitsafbeelding $\id_A$
@@ -559,18 +559,20 @@ Voor deelruimten $W_1,W_2 \subspace V$:
   * $\dim(W_1+W_2) = \dim(W_1) + \dim(W_2) - \dim(W_1 \cap W_2)$
 
 * als $W_1 \cap W_2 = \{\zerovec\}$: **(interne) directe som** $W_1 \oplus W_2$
-  * ontbinding $\vv = \vw_1 + \vw_2$ is uniek
+  * ontbinding $\vv = \vw_1 + \vw_2$ met $\vw_i \in W_i$ ($i=1,2$) is uniek
   * $\dim(W_1 \oplus W_2) = \dim(W_1) + \dim(W_2)$
+
+* $\bigoplus_{i=1}^n W_i$: vereist dat $W_{k+1} \cap \left(\bigoplus_{i=1}^{k} W_i\right) = \{\zerovec\}$ voor $k=1,2,\ldots,n-1$
   
 ## Bewerkingen met deelruimten 
 
 Voor vectorruimten $V_1$ en $V_2$: $V_1 \times V_2$ is vectorruimte
 
 * Vectorstructuur:
-  * $(\vv_1,\vv_2) + (\vw_1, \vw_2) = (\vw_1,\vw_2)$
+  * $(\vv_1,\vv_2) + (\vw_1, \vw_2) = (\vv_1+\vw_1,\vv_2+\vw_2)$
   * $a (\vv_1, \vv_2)= (a \vv_1, a \vv_2)$
 * notatie: $V_1 \oplus V_2$, naam: **(externe) directe som**
-* $\vv_1 \mapsto (\vv_1,\zerovec_{V_2})$ en $\vv_2 \mapsto (\zerovec_{V_1},\vv_2)$ definiëren natuurlijke inbedding van $V_1$ en $V_2$ als subruimtes van $V_1 \oplus V_2$
+* $\vv_1 \mapsto (\vv_1,\zerovec_{V_2})$ en $\vv_2 \mapsto (\zerovec_{V_1},\vv_2)$ definiëren natuurlijke inbedding van $V_1$ en $V_2$ als deelruimten van $V_1 \oplus V_2$
 
 $\Rightarrow$ geen onderscheid tussen interne en externe directe som
 
@@ -585,7 +587,7 @@ Gegeven een deelruimte $W \subseteq V$:
 * **quotientruimte** $V/W$:
   * equivalentierelatie $\vv_1 \sim \vv_2 \Leftrightarrow (\vv_2-\vv_1) \in W$
   * $(W,+)$ is normale subgroup van $(V,+)$
-  * equivalentieklassen: $\vv+ W = \{\vv + \vw; \vw \vw \in W\}$
+  * equivalentieklassen: $\vv+ W = \{\vv + \vw; \vw \in W\}$
   * $\dim(V/W) = \dim(V) - \dim(W)$
 
 ## Affiene ruimte
@@ -608,7 +610,7 @@ $A$ is zoals de vectorruimte $V$ die zijn oorsprong is vergeten
 ## Algebra
 
 Een vectorruimte $V$ met een binaire operatie $\odot: V \times V \mapsto V$
-dat lineair is beide argumenten afzonderlijk (= bilineair)
+die lineair is beide argumenten afzonderlijk (= bilineair)
 
 * $(a_1 \vv_1 + a_2 \vv_2) \odot \vw = a_1 (\vv_1 \odot \vw) + a_2 (\vv_2 \odot \vw)$
 * $\vv \odot (b_1 \vw_1 + b_2 \vw_2) = b_1 (\vv \odot \vw_1) + b_2 (\vv \odot \vw_2)$
@@ -626,9 +628,10 @@ $(v^i \ve_i) \odot (w^j \ve_j) = v^i w^j (\ve_i \odot \ve_j) = v^i v^j \underbra
   * **commutator**: $[\vv,\vw] = \vv \cdot \vw - \vw \cdot \vv$
 
 * Alternerend product: $\vv \odot \vv = 0 \Rightarrow \vv \odot \vw = -\vw \odot \vv$
+  * voorbeeld: vectorproduct $\times$ op $\bbR^3$
 
 * Lie-algebra: algebra met alternered product, genoteerd als $[\vv, \vw] = -[\vw,\vv]$ dat voldoet aan Jacobi-identiteit
 
   $[\vu,[\vv,\vw]] + [\vv,[\vw,\vu]] + [\vw,[\vu,\vv]] = 0$
   
-  $\rightarrow$ kan gemaakt worden uit associatieve algebra m.b.v. commutator
+  $\rightarrow$ kan gemaakt worden uit associatieve algebra m.b.v. commutator (controleer!)

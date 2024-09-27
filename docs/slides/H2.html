@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Jutho Haegeman">
-<meta name="dcterms.date" content="2023-09-26">
+<meta name="dcterms.date" content="2024-10-01">
 
 <title>Vector- en functieruimten – Slides - Hoofdstuk 2 - Lineaire afbeeldingen</title>
 <style>
@@ -256,7 +256,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">September 26, 2023</p>
+      <p class="date">October 1, 2024</p>
     </div>
   </div>
   
@@ -377,7 +377,7 @@ ul.task-list li input[type="checkbox"] {
 <li><p>We kunnen een bijectieve afbeelding definiëren van de quotiëntruimte <span class="math inline">\(V /\mathop{\mathrm{ker}}({\hat{A}})\)</span> naar <span class="math inline">\(\mathop{\mathrm{im}}({\hat{A}})\)</span></p></li>
 <li><p>Voor <span class="math inline">\(V\)</span> eindig-dimensionaal:</p>
 <p><span class="math inline">\(\mathop{\mathrm{dim}}(\mathop{\mathrm{im}}({\hat{A}})) = \mathop{\mathrm{dim}}(V/\mathop{\mathrm{ker}}({\hat{A}})) = \mathop{\mathrm{dim}}(V) - \mathop{\mathrm{dim}}(\mathop{\mathrm{ker}}({\hat{A}}))\)</span></p>
-<p><span class="math inline">\(\Rightarrow\mathop{\mathrm{rank}}({\hat{A}}) + \mathop{\mathrm{nullity}}({\hat{A}}) = \mathop{\mathrm{dim}}({\hat{V}})\)</span></p></li>
+<p><span class="math inline">\(\Rightarrow\mathop{\mathrm{rank}}({\hat{A}}) + \mathop{\mathrm{nullity}}({\hat{A}}) = \mathop{\mathrm{dim}}(V)\)</span></p></li>
 </ul>
 </section>
 <section id="rang-nulliteitsstelling-1" class="level2">
@@ -675,7 +675,7 @@ x^i &amp;= f^i(\boldsymbol{y}) = f^i(\boldsymbol{y}_k + (\boldsymbol{y}-\boldsym
 <li><p>Voorbeeld: pad <span class="math inline">\(q(t)\)</span> van een deeltje gedurende een tijdsinterval <span class="math inline">\(I\)</span>:</p>
 <ul>
 <li><span class="math inline">\(q:I \to {\mathbb{R}}^3: t \mapsto q(t)\)</span>; <span class="math inline">\(q \in C(I, {\mathbb{R}}^3)\)</span></li>
-<li>Actie <span class="math inline">\(S: C(I,{\mathbb{R}}^3) \mapsto {\mathbb{R}}: q \mapsto S[q] = \int_I L(q,\dot{q},t)\,{\mathrm{d}}t\)</span></li>
+<li>Actie <span class="math inline">\(S: C(I,{\mathbb{R}}^3) \mapsto {\mathbb{R}}: q \mapsto S[q] = \int_I L(q(t),\dot{q}(t),t)\,{\mathrm{d}}t\)</span></li>
 </ul></li>
 <li><p><strong>Lineaire functionalen</strong>: <span class="math inline">\(\mathop{\mathrm{Hom}}(V, {\mathbb{F}})\)</span></p></li>
 <li><p>Voorbeeld: linearisatie van een functie <span class="math inline">\(f:{\mathbb{R}}^n \to {\mathbb{R}}\)</span></p>
@@ -729,7 +729,8 @@ x^i &amp;= f^i(\boldsymbol{y}) = f^i(\boldsymbol{y}_k + (\boldsymbol{y}-\boldsym
 <p><span class="math inline">\(\xi[v] = \underbrace{(\xi \circ \phi_B^{-1})}_{\text{rijvector $\xi_i$}} (\boldsymbol{v}) = (\xi \circ \phi_{\tilde{B}}^{-1})\circ (\phi_{\tilde{B}} \circ \phi_B^{-1}) (\boldsymbol{v})\)</span></p></li>
 <li><p><span class="math inline">\(\xi_i = \tilde{\xi}_i T^i_{\ j}\)</span> of dus</p>
 <p><span class="math inline">\(\tilde{\xi}_j = ({\mathsf{T}}^{-1})^i_{\ j} \xi_i = ({\mathsf{T}}^{-{\mathsf{T}}})^{\ i}_j \xi_i\)</span></p></li>
-<li><p><span class="math inline">\({\mathsf{T}}^{-{\mathsf{T}}} = ({\mathsf{T}}^{-1})^{\mathsf{T}}= ({\mathsf{T}}^{\mathsf{T}})^{-1}\)</span></p></li>
+<li><p><span class="math inline">\({\mathsf{T}}^{-{\mathsf{T}}} = ({\mathsf{T}}^{-1})^{\mathsf{T}}= ({\mathsf{T}}^{\mathsf{T}})^{-1}\)</span> (duale of contragradiente representatie van <span class="math inline">\(T \in \mathop{\mathrm{GL}}(n;{\mathbb{F}})\)</span>)</p>
+<p><span class="math inline">\(({\mathsf{T}}_1 {\mathsf{T}}_2)^{-{\mathsf{T}}} = {\mathsf{T}}_1^{-{\mathsf{T}}} {\mathsf{T}}_2^{-{\mathsf{T}}}\)</span></p></li>
 </ul>
 </section>
 <section id="duale-lineaire-afbeeldingen-en-de-getransponeerde" class="level2">
@@ -1004,7 +1005,7 @@ x^i &amp;= f^i(\boldsymbol{y}) = f^i(\boldsymbol{y}_k + (\boldsymbol{y}-\boldsym
 <li>normering
 <ul>
 <li><p><span class="math inline">\({\mathsf{A}} = {\mathsf{A}}^T \Rightarrow {\mathsf{A}} = {\mathsf{L}} {\mathsf{D}} {\mathsf{L}}^{\mathsf{T}}\)</span></p></li>
-<li><p>substitutie: <span class="math inline">\(\boldsymbol{y} = {\mathsf{L}}^{\mathsf{T}}(\boldsymbol{x}-\boldsymbol{\mu}) \Leftrightarrow \boldsymbol{x}=\boldsymbol{\mu} + \boldsymbol{L}^{-{\mathsf{T}}}\boldsymbol{x}\)</span></p>
+<li><p>substitutie: <span class="math inline">\(\boldsymbol{y} = {\mathsf{L}}^{\mathsf{T}}(\boldsymbol{x}-\boldsymbol{\mu}) \Leftrightarrow \boldsymbol{x}=\boldsymbol{\mu} + \boldsymbol{L}^{-{\mathsf{T}}}\boldsymbol{y}\)</span></p>
 <p><span class="math inline">\(\Rightarrow {\mathsf{J}} = {\mathsf{L}}^{-{\mathsf{T}}}, \det({\mathsf{J}}) = 1\)</span></p></li>
 <li><p><span class="math inline">\(\int f_{\boldsymbol{X}}(\boldsymbol{x})\,{\mathrm{d}}^n \boldsymbol{x} = \int_{{\mathbb{R}}^n} Z \exp\left[-\frac{1}{2}\boldsymbol{y}^{\mathsf{T}}{\mathsf{D}} \boldsymbol{y} \right] \,{\mathrm{d}}^n \boldsymbol{y} \\ = Z \prod_{i=1}^n\left( \int_{-\infty}^{+\infty} {\mathrm{e}}^{-\frac{1}{2} d_i (y^i)^2}\,{\mathrm{d}}y^i\right)\\  = Z \prod_{i=1}^n \sqrt{\frac{2\pi}{d_i}} = Z \frac{(2\pi)^{n/2}}{\sqrt{\det({\mathsf{D}})}} =Z \frac{(2\pi)^{n/2}}{\sqrt{\det({\mathsf{A}})}}\)</span></p></li>
 <li><p><span class="math inline">\(\Rightarrow Z = \sqrt{\frac{\det({\mathsf{A}})}{(2\pi)^n}}\)</span></p></li>
@@ -1017,7 +1018,7 @@ x^i &amp;= f^i(\boldsymbol{y}) = f^i(\boldsymbol{y}_k + (\boldsymbol{y}-\boldsym
 <ul>
 <li>gemiddelde en covariantie
 <ul>
-<li><p>momentgenererende functie <span class="math inline">\(M_{\boldsymbol{X}}(\boldsymbol{t}) = \langle {\mathrm{e}}^{\sum_{i=1}^n t_i X^i} \rangle = \int_{{\mathbb{R}}^n} {\mathrm{e}}^{\sum_{i=1}^n t_i x^i} f_{\boldsymbol{X}}(\boldsymbol{x})\,{\mathrm{d}}^n \boldsymbol{x}\\ {\mathrm{e}}^{\frac{1}{2} \boldsymbol{t}^{\mathsf{T}}{\mathsf{A}}^{-1} \boldsymbol{t} + \boldsymbol{t}^{\mathsf{T}}\boldsymbol{\mu}}\)</span></p></li>
+<li><p>momentgenererende functie <span class="math inline">\(M_{\boldsymbol{X}}(\boldsymbol{t}) = \langle {\mathrm{e}}^{\sum_{i=1}^n t_i X^i} \rangle = \int_{{\mathbb{R}}^n} {\mathrm{e}}^{\sum_{i=1}^n t_i x^i} f_{\boldsymbol{X}}(\boldsymbol{x})\,{\mathrm{d}}^n \boldsymbol{x}\\ ={\mathrm{e}}^{\frac{1}{2} \boldsymbol{t}^{\mathsf{T}}{\mathsf{A}}^{-1} \boldsymbol{t} + \boldsymbol{t}^{\mathsf{T}}\boldsymbol{\mu}}\)</span></p></li>
 <li><p><span class="math inline">\(\langle X^i\rangle = \left.\frac{\partial M_{\boldsymbol{X}}}{\partial t_i}\right|_{\boldsymbol{t}=\boldsymbol{0}} = \mu^i\)</span></p></li>
 <li><p><span class="math inline">\(\langle X^i X^j\rangle = \left.\frac{\partial^2 M_{\boldsymbol{X}}}{\partial t_i \partial t_j}\right|_{\boldsymbol{t}=\boldsymbol{0}} = ({\mathsf{A}}^{-1})^{ij} + \mu^i \mu^j\)</span></p></li>
 <li><p>covariantiematrix <span class="math inline">\(\Sigma^{ij} = \langle (X^i-\langle X^i \rangle)(X^j-\langle X^j \rangle)\rangle = \\ \langle X^i X^j \rangle - \langle X^i \rangle \langle X^j \rangle = ({\mathsf{A}}^{-1})^{ij}\)</span></p></li>
