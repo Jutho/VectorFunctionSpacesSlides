@@ -2,15 +2,15 @@
   {
     "listing": "/index.html",
     "items": [
+      "/slides/H1.html",
+      "/slides/H2.html",
       "/slides/H3.html",
       "/slides/H4.html",
       "/slides/H5.html",
       "/slides/H6.html",
       "/slides/H7.html",
       "/slides/H8.html",
-      "/slides/H9.html",
-      "/slides/H1.html",
-      "/slides/H2.html"
+      "/slides/H9.html"
     ]
   }
 ]

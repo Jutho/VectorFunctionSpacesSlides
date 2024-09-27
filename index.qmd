@@ -2,7 +2,7 @@
 title: "Vector and Function Spaces -- Slides"
 listing:
   contents: "slides"
-  sort: "date asc"
+  sort: "title asc"
   type: table
 ---
 
