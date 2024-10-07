@@ -1,7 +1,7 @@
 ---
 title: "Hoofdstuk 3 - Lineaire operatoren en eigenwaarden"
 author: "Jutho Haegeman"
-date: "10/10/2023"
+date: "10/08/2024"
 # format:
 #   revealjs:
 #     theme: solarized
@@ -228,7 +228,7 @@ $$\underbrace{p(\map{T} \map{A} \map{T}^{-1})}_{\in \End(W)} = \map{T} \underbra
 
   $p(x) = m_{\map{A}}(x) q(x)$ (bewijs aan bord)
 
-# Eigenwaarden en (veralgemeende) eigenruimten
+# Eigenwaarden, eigenruimten en diagonalisatie
 
 ## Eigenwaarden en eigenvectoren
 
@@ -373,6 +373,14 @@ $$
 
   $\Rightarrow$ niet diagonaliseerbaar: $\sigma_{\mat{A}} = \{1\}$ met $r_1 = 1 < q_1=2$
 
+## Diagonalisatie en minimaalveelterm
+
+* Stelling: $\map{A} \in \End(V)$ is **diagonaliseerbaar** als en slechts als $s_{\lambda} =1$ voor alle eigenwaarden $\lambda \in \sigma_{\map{A}}$, of dus
+
+  $$m_{\map{A}}(z) = \prod_{\lambda \in \sigma_{\map{A}}} (z-\lambda)$$
+
+  Bewijs: aan bord
+
 ## Spectrale decompositie
 
 $\map{A}$ diagonaliseerbaar: $\bigoplus_{\lambda \in \sigma_{\map{A}}} V_\lambda = V$
@@ -398,7 +406,7 @@ Expliciete uitdrukkingen voor de spectrale projector:
 
 * Terzijde: $\map{P}_{\lambda}=\lim_{z \to \lambda} (z - \lambda) R_{\map{A}}(z)$
 
-## Spectrale decompositie
+## Spectrale decompositie van commuterende operatoren
 
 Diagonaliseerbare operatoren $\map{A},\map{B} \in \End(V)$ die bovendien commuteren, d.w.z.
 
@@ -413,6 +421,7 @@ hebben een gezamelijke spectrale decompositie
 
 (bewijs aan bord)
 
+# Veralgemeende eigenruimten en de Jordan normaalvorm
 ## Invariante deelruimten
 
 Voor $\map{A}\in \End(V)$, een invariante deelruimte is een deelruimte $U \subspace V$ waarvoor $\map{A} U = \{ \map{A} \vu | \vu \in U\} \subspace U$.

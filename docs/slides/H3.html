@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Jutho Haegeman">
-<meta name="dcterms.date" content="2023-10-10">
+<meta name="dcterms.date" content="2024-10-08">
 
 <title>Vector- en functieruimten – Slides - Hoofdstuk 3 - Lineaire operatoren en eigenwaarden</title>
 <style>
@@ -150,7 +150,7 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#projectie-operator" id="toc-projectie-operator" class="nav-link" data-scroll-target="#projectie-operator">Projectie-operator</a></li>
   <li><a href="#annihilerende-veeltermen" id="toc-annihilerende-veeltermen" class="nav-link" data-scroll-target="#annihilerende-veeltermen">Annihilerende veeltermen</a></li>
   </ul></li>
-  <li><a href="#eigenwaarden-en-veralgemeende-eigenruimten" id="toc-eigenwaarden-en-veralgemeende-eigenruimten" class="nav-link" data-scroll-target="#eigenwaarden-en-veralgemeende-eigenruimten">Eigenwaarden en (veralgemeende) eigenruimten</a>
+  <li><a href="#eigenwaarden-eigenruimten-en-diagonalisatie" id="toc-eigenwaarden-eigenruimten-en-diagonalisatie" class="nav-link" data-scroll-target="#eigenwaarden-eigenruimten-en-diagonalisatie">Eigenwaarden, eigenruimten en diagonalisatie</a>
   <ul class="collapse">
   <li><a href="#eigenwaarden-en-eigenvectoren" id="toc-eigenwaarden-en-eigenvectoren" class="nav-link" data-scroll-target="#eigenwaarden-en-eigenvectoren">Eigenwaarden en eigenvectoren</a></li>
   <li><a href="#eigenwaarden-en-eigenvectoren-1" id="toc-eigenwaarden-en-eigenvectoren-1" class="nav-link" data-scroll-target="#eigenwaarden-en-eigenvectoren-1">Eigenwaarden en eigenvectoren</a></li>
@@ -164,9 +164,13 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#voorbeelden-van-karakteristieke-en-minimaalveelterm" id="toc-voorbeelden-van-karakteristieke-en-minimaalveelterm" class="nav-link" data-scroll-target="#voorbeelden-van-karakteristieke-en-minimaalveelterm">Voorbeelden van karakteristieke en minimaalveelterm</a></li>
   <li><a href="#diagonalisatie" id="toc-diagonalisatie" class="nav-link" data-scroll-target="#diagonalisatie">Diagonalisatie</a></li>
   <li><a href="#diagonalisatie-voorbeelden" id="toc-diagonalisatie-voorbeelden" class="nav-link" data-scroll-target="#diagonalisatie-voorbeelden">Diagonalisatie: voorbeelden</a></li>
+  <li><a href="#diagonalisatie-en-minimaalveelterm" id="toc-diagonalisatie-en-minimaalveelterm" class="nav-link" data-scroll-target="#diagonalisatie-en-minimaalveelterm">Diagonalisatie en minimaalveelterm</a></li>
   <li><a href="#spectrale-decompositie" id="toc-spectrale-decompositie" class="nav-link" data-scroll-target="#spectrale-decompositie">Spectrale decompositie</a></li>
   <li><a href="#spectrale-decompositie-1" id="toc-spectrale-decompositie-1" class="nav-link" data-scroll-target="#spectrale-decompositie-1">Spectrale decompositie</a></li>
-  <li><a href="#spectrale-decompositie-2" id="toc-spectrale-decompositie-2" class="nav-link" data-scroll-target="#spectrale-decompositie-2">Spectrale decompositie</a></li>
+  <li><a href="#spectrale-decompositie-van-commuterende-operatoren" id="toc-spectrale-decompositie-van-commuterende-operatoren" class="nav-link" data-scroll-target="#spectrale-decompositie-van-commuterende-operatoren">Spectrale decompositie van commuterende operatoren</a></li>
+  </ul></li>
+  <li><a href="#veralgemeende-eigenruimten-en-de-jordan-normaalvorm" id="toc-veralgemeende-eigenruimten-en-de-jordan-normaalvorm" class="nav-link" data-scroll-target="#veralgemeende-eigenruimten-en-de-jordan-normaalvorm">Veralgemeende eigenruimten en de Jordan normaalvorm</a>
+  <ul class="collapse">
   <li><a href="#invariante-deelruimten" id="toc-invariante-deelruimten" class="nav-link" data-scroll-target="#invariante-deelruimten">Invariante deelruimten</a></li>
   <li><a href="#invariante-deelruimten-1" id="toc-invariante-deelruimten-1" class="nav-link" data-scroll-target="#invariante-deelruimten-1">Invariante deelruimten</a></li>
   <li><a href="#invariante-deelruimten-voorbeelden-en-eigenschappen" id="toc-invariante-deelruimten-voorbeelden-en-eigenschappen" class="nav-link" data-scroll-target="#invariante-deelruimten-voorbeelden-en-eigenschappen">Invariante deelruimten: voorbeelden en eigenschappen</a></li>
@@ -237,7 +241,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">October 10, 2023</p>
+      <p class="date">October 8, 2024</p>
     </div>
   </div>
   
@@ -340,8 +344,8 @@ ul.task-list li input[type="checkbox"] {
 </ul>
 </section>
 </section>
-<section id="eigenwaarden-en-veralgemeende-eigenruimten" class="level1">
-<h1>Eigenwaarden en (veralgemeende) eigenruimten</h1>
+<section id="eigenwaarden-eigenruimten-en-diagonalisatie" class="level1">
+<h1>Eigenwaarden, eigenruimten en diagonalisatie</h1>
 <section id="eigenwaarden-en-eigenvectoren" class="level2">
 <h2 class="anchored" data-anchor-id="eigenwaarden-en-eigenvectoren">Eigenwaarden en eigenvectoren</h2>
 <ul>
@@ -479,6 +483,14 @@ ul.task-list li input[type="checkbox"] {
 <p><span class="math inline">\(\Rightarrow\)</span> niet diagonaliseerbaar: <span class="math inline">\(\sigma_{{\mathsf{A}}} = \{1\}\)</span> met <span class="math inline">\(r_1 = 1 &lt; q_1=2\)</span></p></li>
 </ul>
 </section>
+<section id="diagonalisatie-en-minimaalveelterm" class="level2">
+<h2 class="anchored" data-anchor-id="diagonalisatie-en-minimaalveelterm">Diagonalisatie en minimaalveelterm</h2>
+<ul>
+<li><p>Stelling: <span class="math inline">\({\hat{A}} \in \mathop{\mathrm{End}}(V)\)</span> is <strong>diagonaliseerbaar</strong> als en slechts als <span class="math inline">\(s_{\lambda} =1\)</span> voor alle eigenwaarden <span class="math inline">\(\lambda \in \sigma_{{\hat{A}}}\)</span>, of dus</p>
+<p><span class="math display">\[m_{{\hat{A}}}(z) = \prod_{\lambda \in \sigma_{{\hat{A}}}} (z-\lambda)\]</span></p>
+<p>Bewijs: aan bord</p></li>
+</ul>
+</section>
 <section id="spectrale-decompositie" class="level2">
 <h2 class="anchored" data-anchor-id="spectrale-decompositie">Spectrale decompositie</h2>
 <p><span class="math inline">\({\hat{A}}\)</span> diagonaliseerbaar: <span class="math inline">\(\bigoplus_{\lambda \in \sigma_{{\hat{A}}}} V_\lambda = V\)</span></p>
@@ -503,8 +515,8 @@ ul.task-list li input[type="checkbox"] {
 <li><p>Terzijde: <span class="math inline">\({\hat{P}}_{\lambda}=\lim_{z \to \lambda} (z - \lambda) R_{{\hat{A}}}(z)\)</span></p></li>
 </ul>
 </section>
-<section id="spectrale-decompositie-2" class="level2">
-<h2 class="anchored" data-anchor-id="spectrale-decompositie-2">Spectrale decompositie</h2>
+<section id="spectrale-decompositie-van-commuterende-operatoren" class="level2">
+<h2 class="anchored" data-anchor-id="spectrale-decompositie-van-commuterende-operatoren">Spectrale decompositie van commuterende operatoren</h2>
 <p>Diagonaliseerbare operatoren <span class="math inline">\({\hat{A}},{\hat{B}} \in \mathop{\mathrm{End}}(V)\)</span> die bovendien commuteren, d.w.z.</p>
 <p><span class="math inline">\({\left[{\hat{A}},{\hat{B}}\right]}={\hat{A}}{\hat{B}} - {\hat{B}}{\hat{A}}={\hat{0}}\)</span></p>
 <p>hebben een gezamelijke spectrale decompositie</p>
@@ -514,6 +526,9 @@ ul.task-list li input[type="checkbox"] {
 \end{align}\]</span></p>
 <p>(bewijs aan bord)</p>
 </section>
+</section>
+<section id="veralgemeende-eigenruimten-en-de-jordan-normaalvorm" class="level1">
+<h1>Veralgemeende eigenruimten en de Jordan normaalvorm</h1>
 <section id="invariante-deelruimten" class="level2">
 <h2 class="anchored" data-anchor-id="invariante-deelruimten">Invariante deelruimten</h2>
 <p>Voor <span class="math inline">\({\hat{A}}\in \mathop{\mathrm{End}}(V)\)</span>, een invariante deelruimte is een deelruimte <span class="math inline">\(U {\preccurlyeq}V\)</span> waarvoor <span class="math inline">\({\hat{A}} U = \{ {\hat{A}} {u}| {u}\in U\} {\preccurlyeq}U\)</span>.</p>

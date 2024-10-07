@@ -140,6 +140,13 @@
     "text": "Diagonalisatie: voorbeelden\n\n\\(\\underbrace{\\begin{bmatrix} 0 & -1 \\\\ 1 & 0 \\end{bmatrix}}_{{\\mathsf{A}}}\\underbrace{\\begin{bmatrix} 1 & 1 \\\\ -{\\mathrm{i}}& + {\\mathrm{i}}\\end{bmatrix}}_{{\\mathsf{V}}} = \\underbrace{\\begin{bmatrix} 1 & 1 \\\\ -{\\mathrm{i}}& +{\\mathrm{i}}\\end{bmatrix}}_{{\\mathsf{V}}} \\underbrace{\\begin{bmatrix} {\\mathrm{i}}& 0 \\\\ 0 & -{\\mathrm{i}}\\end{bmatrix}}_{{\\mathsf{D}}}\\)\n\\({\\mathsf{A}} = \\begin{bmatrix} 1 & c \\\\ 0 & 1 \\end{bmatrix}\\): \\(m_{{\\mathsf{A}}}(z)=(z-1)^2\\)\n\\(\\Rightarrow\\) niet diagonaliseerbaar: \\(\\sigma_{{\\mathsf{A}}} = \\{1\\}\\) met \\(r_1 = 1 &lt; q_1=2\\)"
   },
   {
+    "objectID": "slides/H3.html#diagonalisatie-en-minimaalveelterm",
+    "href": "slides/H3.html#diagonalisatie-en-minimaalveelterm",
+    "title": "Hoofdstuk 3 - Lineaire operatoren en eigenwaarden",
+    "section": "Diagonalisatie en minimaalveelterm",
+    "text": "Diagonalisatie en minimaalveelterm\n\nStelling: \\({\\hat{A}} \\in \\mathop{\\mathrm{End}}(V)\\) is diagonaliseerbaar als en slechts als \\(s_{\\lambda} =1\\) voor alle eigenwaarden \\(\\lambda \\in \\sigma_{{\\hat{A}}}\\), of dus\n\\[m_{{\\hat{A}}}(z) = \\prod_{\\lambda \\in \\sigma_{{\\hat{A}}}} (z-\\lambda)\\]\nBewijs: aan bord"
+  },
+  {
     "objectID": "slides/H3.html#spectrale-decompositie",
     "href": "slides/H3.html#spectrale-decompositie",
     "title": "Hoofdstuk 3 - Lineaire operatoren en eigenwaarden",
@@ -154,11 +161,11 @@
     "text": "Spectrale decompositie\nExpliciete uitdrukkingen voor de spectrale projector:\n\n\\({\\hat{P}}_\\lambda = \\prod_{\\substack{\\lambda'\\in\\sigma_{{\\hat{A}}}\\\\\\lambda\\neq \\lambda'}} \\frac{({\\hat{A}} - \\lambda')}{(\\lambda - \\lambda')}\\)\nTerzijde: \\({\\hat{P}}_{\\lambda}=\\lim_{z \\to \\lambda} (z - \\lambda) R_{{\\hat{A}}}(z)\\)"
   },
   {
-    "objectID": "slides/H3.html#spectrale-decompositie-2",
-    "href": "slides/H3.html#spectrale-decompositie-2",
+    "objectID": "slides/H3.html#spectrale-decompositie-van-commuterende-operatoren",
+    "href": "slides/H3.html#spectrale-decompositie-van-commuterende-operatoren",
     "title": "Hoofdstuk 3 - Lineaire operatoren en eigenwaarden",
-    "section": "Spectrale decompositie",
-    "text": "Spectrale decompositie\nDiagonaliseerbare operatoren \\({\\hat{A}},{\\hat{B}} \\in \\mathop{\\mathrm{End}}(V)\\) die bovendien commuteren, d.w.z.\n\\({\\left[{\\hat{A}},{\\hat{B}}\\right]}={\\hat{A}}{\\hat{B}} - {\\hat{B}}{\\hat{A}}={\\hat{0}}\\)\nhebben een gezamelijke spectrale decompositie\n\\[\\begin{align}\n    {\\hat{P}}_{i} {\\hat{P}}_j &= \\delta_{i,j} {\\hat{P}}_i,&\\sum_{i\\in I} {\\hat{P}}_i = {\\hat{1}}_V\\\\\n    {\\hat{A}} &= \\sum_{i\\in I} \\lambda_{i} {\\hat{P}}_i&{\\hat{B}} = \\sum_{i\\in I} \\mu_{i} {\\hat{P}}_i\n\\end{align}\\]\n(bewijs aan bord)"
+    "section": "Spectrale decompositie van commuterende operatoren",
+    "text": "Spectrale decompositie van commuterende operatoren\nDiagonaliseerbare operatoren \\({\\hat{A}},{\\hat{B}} \\in \\mathop{\\mathrm{End}}(V)\\) die bovendien commuteren, d.w.z.\n\\({\\left[{\\hat{A}},{\\hat{B}}\\right]}={\\hat{A}}{\\hat{B}} - {\\hat{B}}{\\hat{A}}={\\hat{0}}\\)\nhebben een gezamelijke spectrale decompositie\n\\[\\begin{align}\n    {\\hat{P}}_{i} {\\hat{P}}_j &= \\delta_{i,j} {\\hat{P}}_i,&\\sum_{i\\in I} {\\hat{P}}_i = {\\hat{1}}_V\\\\\n    {\\hat{A}} &= \\sum_{i\\in I} \\lambda_{i} {\\hat{P}}_i&{\\hat{B}} = \\sum_{i\\in I} \\mu_{i} {\\hat{P}}_i\n\\end{align}\\]\n(bewijs aan bord)"
   },
   {
     "objectID": "slides/H3.html#invariante-deelruimten",
@@ -1887,7 +1894,7 @@
     "href": "index.html",
     "title": "Vector and Function Spaces – Slides",
     "section": "",
-    "text": "Order By\n       Default\n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Title\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\nDate\n\n\nTitle\n\n\nAuthor\n\n\n\n\n\n\nSep 24, 2024\n\n\nHoofdstuk 1 - Elementaire wiskundige structuren\n\n\nJutho Haegeman\n\n\n\n\nOct 1, 2024\n\n\nHoofdstuk 2 - Lineaire afbeeldingen\n\n\nJutho Haegeman\n\n\n\n\nOct 10, 2023\n\n\nHoofdstuk 3 - Lineaire operatoren en eigenwaarden\n\n\nJutho Haegeman\n\n\n\n\nOct 17, 2023\n\n\nHoofdstuk 4 - Normen en afstanden\n\n\nJutho Haegeman\n\n\n\n\nOct 24, 2023\n\n\nHoofdstuk 5 - Inwendig product en orthogonaliteit\n\n\nJutho Haegeman\n\n\n\n\nNov 7, 2023\n\n\nHoofdstuk 6 - Unitaire gelijkvormigheid en unitaire equivalentie\n\n\nJutho Haegeman\n\n\n\n\nNov 21, 2023\n\n\nHoofdstuk 7 - Functieruimten\n\n\nJutho Haegeman\n\n\n\n\nNov 22, 2023\n\n\nHoofdstuk 8 - Lineaire differentiaaloperatoren\n\n\nJutho Haegeman\n\n\n\n\nDec 5, 2023\n\n\nHoofdstuk 9 - Fourieranalyse en distributies\n\n\nJutho Haegeman\n\n\n\n\n\n\nNo matching items"
+    "text": "Order By\n       Default\n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Title\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\nDate\n\n\nTitle\n\n\nAuthor\n\n\n\n\n\n\nSep 24, 2024\n\n\nHoofdstuk 1 - Elementaire wiskundige structuren\n\n\nJutho Haegeman\n\n\n\n\nOct 1, 2024\n\n\nHoofdstuk 2 - Lineaire afbeeldingen\n\n\nJutho Haegeman\n\n\n\n\nOct 8, 2024\n\n\nHoofdstuk 3 - Lineaire operatoren en eigenwaarden\n\n\nJutho Haegeman\n\n\n\n\nOct 17, 2023\n\n\nHoofdstuk 4 - Normen en afstanden\n\n\nJutho Haegeman\n\n\n\n\nOct 24, 2023\n\n\nHoofdstuk 5 - Inwendig product en orthogonaliteit\n\n\nJutho Haegeman\n\n\n\n\nNov 7, 2023\n\n\nHoofdstuk 6 - Unitaire gelijkvormigheid en unitaire equivalentie\n\n\nJutho Haegeman\n\n\n\n\nNov 21, 2023\n\n\nHoofdstuk 7 - Functieruimten\n\n\nJutho Haegeman\n\n\n\n\nNov 22, 2023\n\n\nHoofdstuk 8 - Lineaire differentiaaloperatoren\n\n\nJutho Haegeman\n\n\n\n\nDec 5, 2023\n\n\nHoofdstuk 9 - Fourieranalyse en distributies\n\n\nJutho Haegeman\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "slides/H9.html#doel-van-dit-hoofdstuk",
