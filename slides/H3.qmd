@@ -275,7 +275,7 @@ $$\underbrace{p(\map{T} \map{A} \map{T}^{-1})}_{\in \End(W)} = \map{T} \underbra
 ## Eigenschappen van eigenwaarden en eigenruimten
 
 * $\map{A}\vv = \lambda \vv \Rightarrow p(\map{A})\vv = p(\lambda) \vv$
-* $p(x)$ is een annihilerende veelterm van $\map{A$}$: $\lambda$ is een nulpunt van $p$
+* $p(x)$ is een annihilerende veelterm van $\map{A}$: $\lambda$ is een nulpunt van $p$
 * verzameling van eigenvectoren $\{\vv_1,\ldots,\vv_k\}$ horende bij onderling verschillende eigenwaarden $\{\lambda_1,\ldots,\lambda_k\}$ met $\lambda_i\neq \lambda_j$ zijn linear onafhankelijk (bewijs aan bord).
 * $\Rightarrow$ Som van eigenruimten $\sum_{k} V_{\lambda_k}$ wordt directe som $\bigoplus_{k} V_{\lambda_k}$
 * $\Rightarrow \sum_{\lambda \in \sigma_{\map{A}}} r_\lambda \leq \dim(V)$
@@ -285,7 +285,7 @@ $$\underbrace{p(\map{T} \map{A} \map{T}^{-1})}_{\in \End(W)} = \map{T} \underbra
 Beschouw $\map{A} \in \Hom(V,W)$ en $\map{B} \in \Hom(W,V)$, dan is $\map{A}\map{B} \in \Hom(W,W)$ en $\map{B}\map{A} \in \Hom(V,V)$.
 
 * Elke eigenwaarde $\lambda\neq 0$ van $\map{B}\map{A}$ is ook een eigenwaarde van $\map{A}\map{B}$ (en vice versa)
-* Eigenruimte $W_\lambda$ van $\map{A}\map{B}$ is komt overeen met $\map{A} V_\lambda$, en $\dim(W_\lambda) = \dim(V_\lambda)$, i.e. de restrictie van $\map{A}$ tot $V_\lambda$ is injectief
+* Eigenruimte $W_\lambda$ van $\map{A}\map{B}$ komt overeen met $\map{A} V_\lambda$, en $\dim(W_\lambda) = \dim(V_\lambda)$, i.e. de restrictie van $\map{A}$ tot $V_\lambda$ is injectief
   * $((\lambda^{-1}\map{B})\circ \map{A})\vv = \vv,\qquad \forall \vv \in V_\lambda$
   * $(\map{A} \circ (\lambda^{-1}\map{B}))\vw = \vw,\qquad \forall \vw \in W_\lambda$
 
@@ -488,7 +488,7 @@ met $U_\lambda$ en $U_\lambda^{\text{c}}$ beide invariante deelruimten van $\map
   $\Rightarrow$ $m_{\map{A}|_{U_\lambda}}(z) = (z-\lambda)^s$ en $k_{\map{A}|_{U_\lambda}}(z) = (z-\lambda)^{\dim(U_\lambda)}$
 * Per constructie is $\map{A}|_{U_{\lambda}^{\text{c}}}-\lambda \idmap_{U_\lambda}^{\text{c}}$ injectief/inverteerbaar, zodat $\map{A}|_{U_{\lambda}^{\text{c}}}$ geen eigenwaarden $\lambda$ kan hebben.
 
-  $\Rightarrow$ $m_{\map{A}}(z) = m_{\map{A}|_{U_\lambda}}(z) m_{\map{A}|_{U_\lambda^{\text{c}}}}(z)$ en $k_{\map{A}}(z) = k_{\map{A}|_{U_\lambda}}(z) \underbrace{k_{\map{A}|_{U_\lambda^{\text{c}}}}(z)}_{\text{geen polen $\lambda$}}$
+  $\Rightarrow$ $m_{\map{A}}(z) = m_{\map{A}|_{U_\lambda}}(z) m_{\map{A}|_{U_\lambda^{\text{c}}}}(z)$ en $k_{\map{A}}(z) = k_{\map{A}|_{U_\lambda}}(z) \underbrace{k_{\map{A}|_{U_\lambda^{\text{c}}}}(z)}_{\text{geen nulpunten $\lambda$}}$
 
 $\Rightarrow$ $\dim(U_\lambda) = q_\lambda$ en $s = s_\lambda$ (macht van $(z-\lambda)$ in $m_{\map{A}}(z)$)
 

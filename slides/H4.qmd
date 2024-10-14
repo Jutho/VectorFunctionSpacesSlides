@@ -1,7 +1,7 @@
 ---
 title: "Hoofdstuk 4 - Normen en afstanden"
 author: "Jutho Haegeman"
-date: "10/17/2023"
+date: "10/15/2023"
 # format:
 #   revealjs:
 #     theme: solarized
@@ -219,7 +219,9 @@ Uitbreiding naar oneindig-dimensionale ruimten:
 
 * $\ell^p(\bbN_0,\bbF) \subspace \bbF^{\bbN_0}$: de ruimte van alle rijen $(v^1,v^2,v^3,\ldots)$ waarvoor $\sum_{i=1}^{+\infty} \abs{v^i}^p$ convergeert naar een eindige waarde
 
-    * norm $\norm{\vv}_\infty = \left[\sum_{i=1}^{+\infty} \abs{v^i}^p\right]^{1/p}$ is eindig
+    * Minkowski's ongelijkheid is noodzakelijk om aan te tonen dat $\ell^p(\bbN_0,\bbF)$ een vectorruimte is
+
+    * norm $\norm{\vv}_p = \left[\sum_{i=1}^{+\infty} \abs{v^i}^p\right]^{1/p}$ is eindig
 
     * speciaal geval $p=\infty$:
     
@@ -287,7 +289,7 @@ Topologische concepten in een metrische ruimte $(X,d)$:
 * Open bol: $B_r(x) = \{x'\in X| d(x,x') < r\}$
 * Open (deel)verzameling $S$: $\forall x \in S, \exists r>0$ zodat $B_r(x) \subseteq S$
 * Gesloten deelverzameling $S$ als $S^\text{c} = X \setminus S$ open is
-  * $\Rightarrow$ een convergerende rij $(x_n \in S)$ voldoet aan $\lim_{n\to\infty x_n} \in S$
+  * $\Rightarrow$ een convergerende rij $(x_n \in S)$ voldoet aan $\lim_{n\to\infty} x_n \in S$
   * $X$ and $\{\}$ zijn zowel open als gesloten
 * Sluiting $\overline{S}$: kleinste gesloten verzameling die $S$ bevat = $S$ en al zijn limietpunten
 * Dichte deelverzameling $S$: als $\overline{S} = X$ (bvb: $\overline{Q}=\bbR$)

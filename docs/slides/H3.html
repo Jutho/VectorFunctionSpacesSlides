@@ -397,7 +397,7 @@ ul.task-list li input[type="checkbox"] {
 <h2 class="anchored" data-anchor-id="eigenschappen-van-eigenwaarden-en-eigenruimten">Eigenschappen van eigenwaarden en eigenruimten</h2>
 <ul>
 <li><span class="math inline">\({\hat{A}}{v}= \lambda {v}\Rightarrow p({\hat{A}}){v}= p(\lambda) {v}\)</span></li>
-<li><span class="math inline">\(p(x)\)</span> is een annihilerende veelterm van <span class="math inline">\(\map{A\)</span>}$: <span class="math inline">\(\lambda\)</span> is een nulpunt van <span class="math inline">\(p\)</span></li>
+<li><span class="math inline">\(p(x)\)</span> is een annihilerende veelterm van <span class="math inline">\({\hat{A}}\)</span>: <span class="math inline">\(\lambda\)</span> is een nulpunt van <span class="math inline">\(p\)</span></li>
 <li>verzameling van eigenvectoren <span class="math inline">\(\{{v}_1,\ldots,{v}_k\}\)</span> horende bij onderling verschillende eigenwaarden <span class="math inline">\(\{\lambda_1,\ldots,\lambda_k\}\)</span> met <span class="math inline">\(\lambda_i\neq \lambda_j\)</span> zijn linear onafhankelijk (bewijs aan bord).</li>
 <li><span class="math inline">\(\Rightarrow\)</span> Som van eigenruimten <span class="math inline">\(\sum_{k} V_{\lambda_k}\)</span> wordt directe som <span class="math inline">\(\bigoplus_{k} V_{\lambda_k}\)</span></li>
 <li><span class="math inline">\(\Rightarrow \sum_{\lambda \in \sigma_{{\hat{A}}}} r_\lambda \leq \mathop{\mathrm{dim}}(V)\)</span></li>
@@ -408,7 +408,7 @@ ul.task-list li input[type="checkbox"] {
 <p>Beschouw <span class="math inline">\({\hat{A}} \in \mathop{\mathrm{Hom}}(V,W)\)</span> en <span class="math inline">\({\hat{B}} \in \mathop{\mathrm{Hom}}(W,V)\)</span>, dan is <span class="math inline">\({\hat{A}}{\hat{B}} \in \mathop{\mathrm{Hom}}(W,W)\)</span> en <span class="math inline">\({\hat{B}}{\hat{A}} \in \mathop{\mathrm{Hom}}(V,V)\)</span>.</p>
 <ul>
 <li>Elke eigenwaarde <span class="math inline">\(\lambda\neq 0\)</span> van <span class="math inline">\({\hat{B}}{\hat{A}}\)</span> is ook een eigenwaarde van <span class="math inline">\({\hat{A}}{\hat{B}}\)</span> (en vice versa)</li>
-<li>Eigenruimte <span class="math inline">\(W_\lambda\)</span> van <span class="math inline">\({\hat{A}}{\hat{B}}\)</span> is komt overeen met <span class="math inline">\({\hat{A}} V_\lambda\)</span>, en <span class="math inline">\(\mathop{\mathrm{dim}}(W_\lambda) = \mathop{\mathrm{dim}}(V_\lambda)\)</span>, i.e.&nbsp;de restrictie van <span class="math inline">\({\hat{A}}\)</span> tot <span class="math inline">\(V_\lambda\)</span> is injectief
+<li>Eigenruimte <span class="math inline">\(W_\lambda\)</span> van <span class="math inline">\({\hat{A}}{\hat{B}}\)</span> komt overeen met <span class="math inline">\({\hat{A}} V_\lambda\)</span>, en <span class="math inline">\(\mathop{\mathrm{dim}}(W_\lambda) = \mathop{\mathrm{dim}}(V_\lambda)\)</span>, i.e.&nbsp;de restrictie van <span class="math inline">\({\hat{A}}\)</span> tot <span class="math inline">\(V_\lambda\)</span> is injectief
 <ul>
 <li><span class="math inline">\(((\lambda^{-1}{\hat{B}})\circ {\hat{A}}){v}= {v},\qquad \forall {v}\in V_\lambda\)</span></li>
 <li><span class="math inline">\(({\hat{A}} \circ (\lambda^{-1}{\hat{B}})){w}= {w},\qquad \forall {w}\in W_\lambda\)</span></li>
@@ -585,7 +585,7 @@ ul.task-list li input[type="checkbox"] {
 <li><p>Per constructie is <span class="math inline">\({\hat{A}}|_{U_\lambda} = \lambda {\hat{1}}_{U_\lambda} + {\hat{N}}\)</span> voor een nilpotente operator <span class="math inline">\({\hat{N}}\)</span> met index <span class="math inline">\(s\)</span></p>
 <p><span class="math inline">\(\Rightarrow\)</span> <span class="math inline">\(m_{{\hat{A}}|_{U_\lambda}}(z) = (z-\lambda)^s\)</span> en <span class="math inline">\(k_{{\hat{A}}|_{U_\lambda}}(z) = (z-\lambda)^{\mathop{\mathrm{dim}}(U_\lambda)}\)</span></p></li>
 <li><p>Per constructie is <span class="math inline">\({\hat{A}}|_{U_{\lambda}^{\text{c}}}-\lambda {\hat{1}}_{U_\lambda}^{\text{c}}\)</span> injectief/inverteerbaar, zodat <span class="math inline">\({\hat{A}}|_{U_{\lambda}^{\text{c}}}\)</span> geen eigenwaarden <span class="math inline">\(\lambda\)</span> kan hebben.</p>
-<p><span class="math inline">\(\Rightarrow\)</span> <span class="math inline">\(m_{{\hat{A}}}(z) = m_{{\hat{A}}|_{U_\lambda}}(z) m_{{\hat{A}}|_{U_\lambda^{\text{c}}}}(z)\)</span> en <span class="math inline">\(k_{{\hat{A}}}(z) = k_{{\hat{A}}|_{U_\lambda}}(z) \underbrace{k_{{\hat{A}}|_{U_\lambda^{\text{c}}}}(z)}_{\text{geen polen $\lambda$}}\)</span></p></li>
+<p><span class="math inline">\(\Rightarrow\)</span> <span class="math inline">\(m_{{\hat{A}}}(z) = m_{{\hat{A}}|_{U_\lambda}}(z) m_{{\hat{A}}|_{U_\lambda^{\text{c}}}}(z)\)</span> en <span class="math inline">\(k_{{\hat{A}}}(z) = k_{{\hat{A}}|_{U_\lambda}}(z) \underbrace{k_{{\hat{A}}|_{U_\lambda^{\text{c}}}}(z)}_{\text{geen nulpunten $\lambda$}}\)</span></p></li>
 </ul>
 <p><span class="math inline">\(\Rightarrow\)</span> <span class="math inline">\(\mathop{\mathrm{dim}}(U_\lambda) = q_\lambda\)</span> en <span class="math inline">\(s = s_\lambda\)</span> (macht van <span class="math inline">\((z-\lambda)\)</span> in <span class="math inline">\(m_{{\hat{A}}}(z)\)</span>)</p>
 </section>

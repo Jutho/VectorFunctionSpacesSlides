@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Jutho Haegeman">
-<meta name="dcterms.date" content="2023-10-17">
+<meta name="dcterms.date" content="2023-10-15">
 
 <title>Vector- en functieruimten – Slides - Hoofdstuk 4 - Normen en afstanden</title>
 <style>
@@ -217,7 +217,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">October 17, 2023</p>
+      <p class="date">October 15, 2023</p>
     </div>
   </div>
   
@@ -305,7 +305,8 @@ ul.task-list li input[type="checkbox"] {
 <ul>
 <li><p><span class="math inline">\(\ell^p({\mathbb{N}}_0,{\mathbb{F}}) {\preccurlyeq}{\mathbb{F}}^{{\mathbb{N}}_0}\)</span>: de ruimte van alle rijen <span class="math inline">\((v^1,v^2,v^3,\ldots)\)</span> waarvoor <span class="math inline">\(\sum_{i=1}^{+\infty} {\left\lvert v^i\right\rvert}^p\)</span> convergeert naar een eindige waarde</p>
 <ul>
-<li><p>norm <span class="math inline">\({\left\lVert{v}\right\rVert}_\infty = \left[\sum_{i=1}^{+\infty} {\left\lvert v^i\right\rvert}^p\right]^{1/p}\)</span> is eindig</p></li>
+<li><p>Minkowski’s ongelijkheid is noodzakelijk om aan te tonen dat <span class="math inline">\(\ell^p({\mathbb{N}}_0,{\mathbb{F}})\)</span> een vectorruimte is</p></li>
+<li><p>norm <span class="math inline">\({\left\lVert{v}\right\rVert}_p = \left[\sum_{i=1}^{+\infty} {\left\lvert v^i\right\rvert}^p\right]^{1/p}\)</span> is eindig</p></li>
 <li><p>speciaal geval <span class="math inline">\(p=\infty\)</span>:</p>
 <p><span class="math inline">\({\left\lVert{v}\right\rVert}_\infty = \sup\{{\left\lvert v^i\right\rvert}, i\in {\mathbb{N}}_0\}\)</span> (supremum norm)</p>
 <p><span class="math inline">\(\ell^\infty({\mathbb{N}}_0,{\mathbb{F}})\)</span>: ruimte van begrensde rijen</p></li>
@@ -377,7 +378,7 @@ ul.task-list li input[type="checkbox"] {
 <li>Open (deel)verzameling <span class="math inline">\(S\)</span>: <span class="math inline">\(\forall x \in S, \exists r&gt;0\)</span> zodat <span class="math inline">\(B_r(x) \subseteq S\)</span></li>
 <li>Gesloten deelverzameling <span class="math inline">\(S\)</span> als <span class="math inline">\(S^\text{c} = X \setminus S\)</span> open is
 <ul>
-<li><span class="math inline">\(\Rightarrow\)</span> een convergerende rij <span class="math inline">\((x_n \in S)\)</span> voldoet aan <span class="math inline">\(\lim_{n\to\infty x_n} \in S\)</span></li>
+<li><span class="math inline">\(\Rightarrow\)</span> een convergerende rij <span class="math inline">\((x_n \in S)\)</span> voldoet aan <span class="math inline">\(\lim_{n\to\infty} x_n \in S\)</span></li>
 <li><span class="math inline">\(X\)</span> and <span class="math inline">\(\{\}\)</span> zijn zowel open als gesloten</li>
 </ul></li>
 <li>Sluiting <span class="math inline">\(\overline{S}\)</span>: kleinste gesloten verzameling die <span class="math inline">\(S\)</span> bevat = <span class="math inline">\(S\)</span> en al zijn limietpunten</li>
