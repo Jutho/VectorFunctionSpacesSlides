@@ -1,7 +1,7 @@
 ---
 title: "Hoofdstuk 5 - Inwendig product en orthogonaliteit"
 author: "Jutho Haegeman"
-date: "10/24/2023"
+date: "11/12/2024"
 # format:
 #   revealjs:
 #     theme: solarized
@@ -241,7 +241,7 @@ Herleidt zich tot (symmetrische of antisymmetrische) bilineaire vormen voor $\bb
 
 * basisrepresentatie: $B_V=\{\ve_1,\ldots,\ve_n\}$
   
-  $C(\vv,\vw) = \overline{v^i} C(\ve_i,\ve_j) w^j = \vec{v}^\transpose \mat{C} \vec{w}$ met $C_{ij} = C(\ve_i,\ve_j) \Rightarrow \mat{C} \in \bbF^{n \times n}$
+  $C(\vv,\vw) = \overline{v^i} C(\ve_i,\ve_j) w^j = \vec{v}^\hermitian \mat{C} \vec{w}$ met $C_{ij} = C(\ve_i,\ve_j) \Rightarrow \mat{C} \in \bbF^{n \times n}$
 
   * (anti)hermitisch : $\mat{C} = \pm \mat{C}^{\hermitian} \Leftrightarrow C_{ij} = \pm \overline{C_{ji}}$
 
@@ -361,7 +361,7 @@ Inwendig product op vectorruimte $V$ = hermitische, positief definiete sesquilin
   \end{cases}\label{eq:inner:polarisation}
   \end{align}
 
-  (bewijs niet actief te kennen)
+  (bewijs niet te kennen)
 
 # Orthogonaliteit en unitariteit
 

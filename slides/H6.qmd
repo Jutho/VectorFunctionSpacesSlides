@@ -1,7 +1,7 @@
 ---
 title: "Hoofdstuk 6 - Unitaire gelijkvormigheid en unitaire equivalentie"
 author: "Jutho Haegeman"
-date: "11/07/2023"
+date: "11/12/2024"
 # format:
 #   revealjs:
 #     theme: solarized
