@@ -1,7 +1,7 @@
 ---
 title: "Hoofdstuk 7 - Functieruimten"
 author: "Jutho Haegeman"
-date: "11/12/2024"
+date: "12/06/2024"
 # format:
 #   revealjs:
 #     theme: solarized
@@ -338,7 +338,7 @@ Observatie 2: voor $f,g \in \mathcal{L}^p(I,\bbF)$
 
 Ten opzichte van de Lebesgue-integraal zijn er stellingen die garanderen dat, voor een rij $(f_n)$ die "bijna overal" puntsgewijs convergeert naar $f$, 
 
-* $\lim_{n\to \infty} \int_I f_n(x)$\,\drm x = \int_I \lim_{n\to\infty} f_n(x)\,\drm x$ als
+* $\lim_{n\to \infty} \int_I f_n(x)\,\drm x = \int_I \lim_{n\to\infty} f_n(x)\,\drm x$ als
 
   $\forall n \in \bbN_0$: $f_n(x) \leq f_{n+1}(x)$ "bijna overal"
 
@@ -834,8 +834,8 @@ Hilbertuimte $H = L^2(I,\bbC)$: lineaire afbeeldingen $f \mapsto g$ met $f,g \in
 
 * Sommige operatoren hebben niet de volledige Hilbertruimte als domein:
   * $\map{D}$ kan enkel op afleidbare functies werken
-  * $\map{M}_h f$ kan niet meer kwadratisch integreerbaar zijn
-  
+  * $\map{M}_h f$ is mogelijks niet meer kwadratisch integreerbaar
+ 
   $\rightarrow$ domein is deel~~verzameling~~ruimte van $H$
 
 * beschouw operator $\map{A}$ met domein $\D_{\map{A}} \subspace H$:
@@ -950,7 +950,7 @@ Hilbertuimte $H = L^2(I,\bbC)$: lineaire afbeeldingen $f \mapsto g$ met $f,g \in
 
   $$\int_a^b \overline{g(x)} f'(x)\,\drm x = g(b)f(b) - g(a)f(a) - \int_a^b \overline{g'(x)}f(x)\,\drm x$$
 
-  $\Rightarrow$ $(\map{D}^\dagger g)(x) = -g'(x)$ met als domein alle afleidbare functies $g$ met $f' \in L^2([a,b],\bbF)$, zonder bijkomende randvoorwaarden
+  $\Rightarrow$ $(\map{D}^\dagger g)(x) = -g'(x)$ met als domein alle afleidbare functies $g$ met $g' \in L^2([a,b],\bbF)$, zonder bijkomende randvoorwaarden
 
 * $\map{A} \subset \map{B} \Rightarrow \map{B}^\dagger \subset \map{A}^\dagger$ (minder $\vv \in \D_{\map{A}}$ dan in $\D_{\map{B}} \implies$ meer $\vw \in \D_{\map{A}^\dagger}$ mogelijk)
 
@@ -1078,7 +1078,7 @@ Eigenwaarden van operatoren op oneindig-dimensionale Hilbertruimten:
  	0,&\text{elsewhere}
  	\end{cases}$ voldoet aan $\norm{x f(x) - \lambda f(x)}^2 = \int_{\lambda-\epsilon}^{\lambda+\epsilon} \frac{(x-\lambda)^2}{2\epsilon}\,\drm x = \frac{\epsilon^2}{3}$ voor alle $\lambda \in [a,b]$
 
-## Compacte operatoren (geen stellingen/bewijzen){.smaller}
+## Compacte operatoren{.smaller}
 
 * compacte operatoren (deelverzameling van begrende operatoren)
   * klasse van operatoren die zich meer als een "matrix" gedragen
@@ -1094,7 +1094,7 @@ Eigenwaarden van operatoren op oneindig-dimensionale Hilbertruimten:
 
     $$\norm{\map{A}}_{\text{HS}}^2 = \int_I \int_I \abs{A(x,y)}^2 \,\drm x \drm y < \infty$$
 
-## Compacte operatoren (geen stellingen/bewijzen){.smaller}
+## Compacte operatoren{.smaller}
 
 * zelftoegevoegde compacte operator $\map{A}$ beschikt over een spectrale decompositie
 
@@ -1107,7 +1107,7 @@ Eigenwaarden van operatoren op oneindig-dimensionale Hilbertruimten:
   * $\abs{\lambda_1} = \norm{\map{A}}$ (operatornorm)
   * $\lim_{n\to \infty} \lambda_n =0$, of dus, aantal eigenwaarden met $\abs{\lambda_n} > \epsilon$ is eindig
 
-## Compacte operatoren (geen stellingen/bewijzen){.smaller}
+## Compacte operatoren{.smaller}
 
 * algemene compacte operator $\map{A}$ beschikt over **Schmidt-decompositie**:
   
@@ -1120,7 +1120,7 @@ Eigenwaarden van operatoren op oneindig-dimensionale Hilbertruimten:
 
 ## Spectrum van algemene operatoren {.smaller}
 
-* Operator $\map{A}$ met dicht domein $\D_{\map{A}}$ en bereik $\mathcal{R}_{\map{A}}$ is injectieef indien $\ker(\map{A})=\{\zerovec\}$
+* Operator $\map{A}$ met dicht domein $\D_{\map{A}}$ en bereik $\mathcal{R}_{\map{A}}$ is injectief indien $\ker(\map{A})=\{\zerovec\}$
   
   $\Rightarrow$ we kunnen de inverse $\map{A}^{-1}$ definiëren als operator met domein $\mathcal{R}_{\map{A}}$
 

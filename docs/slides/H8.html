@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Jutho Haegeman">
-<meta name="dcterms.date" content="2023-11-22">
+<meta name="dcterms.date" content="2024-12-06">
 
 <title>Vector- en functieruimten – Slides - Hoofdstuk 8 - Lineaire differentiaaloperatoren</title>
 <style>
@@ -244,7 +244,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">November 22, 2023</p>
+      <p class="date">December 6, 2024</p>
     </div>
   </div>
   
@@ -389,7 +389,7 @@ ul.task-list li input[type="checkbox"] {
 <p><span class="math inline">\(\Rightarrow\)</span> <span class="math inline">\(u_0(x)=0\)</span> is steeds oplossing; indien andere oplossingen <span class="math inline">\(u_0\)</span> bestaan is de finale oplossing <span class="math inline">\(u\)</span> niet uniek</p></li>
 <li><p>een particuliere oplossing <span class="math inline">\(u_f\)</span> van de inhomogene differentiaalvergelijking met homogene randvoorwaarden</p>
 <p><span class="math display">\[({\hat{L}} u_f)(x) = f(x), \quad \forall a &lt; x &lt; b\qquad \text{with}\ B_i[u_f] = 0, \forall i=1,\ldots,m\]</span></p></li>
-<li><p>een particuliere oplossing <span class="math inline">\(u_\gamma\)</span> van de homogene differentiaalvergelijknig met inhomogene randvoorwaarden</p>
+<li><p>een particuliere oplossing <span class="math inline">\(u_\gamma\)</span> van de homogene differentiaalvergelijking met inhomogene randvoorwaarden</p>
 <p><span class="math display">\[({\hat{L}} u_\gamma)(x) = 0, \quad \forall a &lt; x &lt; b\qquad \text{with}\ B_i[u_\gamma] = \gamma_i, \forall i=1,\ldots,m\]</span></p></li>
 </ul>
 <p><span class="math inline">\(\rightarrow\)</span> wanneer is het bestaan van <span class="math inline">\(u_f\)</span> en <span class="math inline">\(u_\gamma\)</span> gegarandeerd?</p></li>
@@ -502,7 +502,7 @@ ul.task-list li input[type="checkbox"] {
 <li><span class="math inline">\(u(0) = u'(0) =u'(1) = 0\)</span>: <span class="math inline">\(c_0=0\)</span>, <span class="math inline">\(c_2=0\)</span>, <span class="math inline">\(c_2 + \int_0^1 \,{\mathrm{d}}z f(z)=0\)</span>
 <ul>
 <li><span class="math inline">\(\mathop{\mathrm{ker}}({\hat{L}}) = \{{o}\}\)</span> <span class="math inline">\(\implies\)</span> uniciteit</li>
-<li><span class="math inline">\({\hat{L}}^\dagger\)</span> heeft randvoorwaarden <span class="math inline">\(v'(1)=0\)</span> (zelf-toegevoegd) <span class="math inline">\(\Rightarrow \mathop{\mathrm{ker}}({\hat{L}}^\dagger)=\{v_0(x)=1\}\)</span> <span class="math inline">\(\implies\)</span> existentie enkel als <span class="math inline">\({\left\langle v_0,f\right\rangle}=0 = \int_0^1\,{\mathrm{d}}z f(z)\)</span></li>
+<li><span class="math inline">\({\hat{L}}^\dagger\)</span> heeft randvoorwaarden <span class="math inline">\(v'(1)=0\)</span> <span class="math inline">\(\Rightarrow \mathop{\mathrm{ker}}({\hat{L}}^\dagger)=\{v_0(x)=1\}\)</span> <span class="math inline">\(\implies\)</span> existentie enkel als <span class="math inline">\({\left\langle v_0,f\right\rangle}=0 = \int_0^1\,{\mathrm{d}}z f(z)\)</span></li>
 </ul></li>
 </ul>
 <p>Algemene conclusies: voor een fysisch probleem willen graag dat de oplossing:</p>
@@ -919,8 +919,8 @@ u_q(t) &amp;= t^\lambda \left(\frac{1}{(q-1)!} x_1(t) (\log t)^{q-1} + \frac{1}{
 <li><p>randvoorwaarden <span class="math inline">\(B_i[u]=\gamma_i\)</span> voor <span class="math inline">\(i=1,\ldots,m\)</span>: <span class="math inline">\({\mathsf{B}} {\mathsf{X}} \boldsymbol{c} = \boldsymbol{\gamma}\)</span> met</p>
 <ul>
 <li><p><span class="math inline">\({\mathsf{B}}\)</span> de matrix zodat <span class="math inline">\(B_i[u] = \sum_{j=0}^{p-1} B_{i,j} u^{(j)}(a) + B_{i,j+p} u^{(j)}(b)\)</span></p></li>
-<li><p><span class="math inline">\({\mathsf{X}} = {\mathsf{X}} = \begin{bmatrix}  {\mathsf{Z}}(a)\\  {\mathsf{Z}}(b) \end{bmatrix}\)</span> de matrix met als <span class="math inline">\(j\)</span>de kolom <span class="math inline">\(\boldsymbol{x}_j = \begin{bmatrix} u_j(a) &amp; u_j'(a) &amp; \ldots &amp; u^{(p-1)}_j(a) &amp; u_j(b) &amp; u_j'(b) &amp; \dots &amp; u_j^{(p-1)}(b) \end{bmatrix}^{\mathsf{T}}\)</span></p></li>
-<li><p>unieke oplossing voor elke <span class="math inline">\(\gamma\)</span> vereist <span class="math inline">\(m=p\)</span> zodat <span class="math inline">\({\mathsf{B}}{\mathsf{X}} = {\mathsf{M}}\)</span> een vierkante matrix is <span class="math inline">\(\rightarrow\)</span> noodzkaleijk maar niet voldoende</p></li>
+<li><p><span class="math inline">\({\mathsf{X}} = \begin{bmatrix}  {\mathsf{Z}}(a)\\  {\mathsf{Z}}(b) \end{bmatrix}\)</span> de matrix met als <span class="math inline">\(j\)</span>de kolom <span class="math inline">\(\boldsymbol{x}_j = \begin{bmatrix} u_j(a) &amp; u_j'(a) &amp; \ldots &amp; u^{(p-1)}_j(a) &amp; u_j(b) &amp; u_j'(b) &amp; \dots &amp; u_j^{(p-1)}(b) \end{bmatrix}^{\mathsf{T}}\)</span></p></li>
+<li><p>unieke oplossing voor elke <span class="math inline">\(\gamma\)</span> vereist <span class="math inline">\(m=p\)</span> zodat <span class="math inline">\({\mathsf{B}}{\mathsf{X}} = {\mathsf{M}}\)</span> een vierkante matrix is <span class="math inline">\(\rightarrow\)</span> noodzakelijk maar niet voldoende</p></li>
 </ul></li>
 </ul>
 </section>

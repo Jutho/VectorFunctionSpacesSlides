@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Jutho Haegeman">
-<meta name="dcterms.date" content="2024-11-12">
+<meta name="dcterms.date" content="2024-12-06">
 
 <title>Vector- en functieruimten – Slides - Hoofdstuk 7 - Functieruimten</title>
 <style>
@@ -205,9 +205,9 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#spectraaltheorie" id="toc-spectraaltheorie" class="nav-link" data-scroll-target="#spectraaltheorie">Spectraaltheorie</a>
   <ul class="collapse">
   <li><a href="#eigenwaarden-en-eigenvectoren" id="toc-eigenwaarden-en-eigenvectoren" class="nav-link" data-scroll-target="#eigenwaarden-en-eigenvectoren">Eigenwaarden en eigenvectoren</a></li>
-  <li><a href="#compacte-operatoren-geen-stellingenbewijzen" id="toc-compacte-operatoren-geen-stellingenbewijzen" class="nav-link" data-scroll-target="#compacte-operatoren-geen-stellingenbewijzen">Compacte operatoren (geen stellingen/bewijzen)</a></li>
-  <li><a href="#compacte-operatoren-geen-stellingenbewijzen-1" id="toc-compacte-operatoren-geen-stellingenbewijzen-1" class="nav-link" data-scroll-target="#compacte-operatoren-geen-stellingenbewijzen-1">Compacte operatoren (geen stellingen/bewijzen)</a></li>
-  <li><a href="#compacte-operatoren-geen-stellingenbewijzen-2" id="toc-compacte-operatoren-geen-stellingenbewijzen-2" class="nav-link" data-scroll-target="#compacte-operatoren-geen-stellingenbewijzen-2">Compacte operatoren (geen stellingen/bewijzen)</a></li>
+  <li><a href="#compacte-operatoren" id="toc-compacte-operatoren" class="nav-link" data-scroll-target="#compacte-operatoren">Compacte operatoren</a></li>
+  <li><a href="#compacte-operatoren-1" id="toc-compacte-operatoren-1" class="nav-link" data-scroll-target="#compacte-operatoren-1">Compacte operatoren</a></li>
+  <li><a href="#compacte-operatoren-2" id="toc-compacte-operatoren-2" class="nav-link" data-scroll-target="#compacte-operatoren-2">Compacte operatoren</a></li>
   <li><a href="#spectrum-van-algemene-operatoren" id="toc-spectrum-van-algemene-operatoren" class="nav-link" data-scroll-target="#spectrum-van-algemene-operatoren">Spectrum van algemene operatoren</a></li>
   <li><a href="#spectrum-van-algemene-operatoren-1" id="toc-spectrum-van-algemene-operatoren-1" class="nav-link" data-scroll-target="#spectrum-van-algemene-operatoren-1">Spectrum van algemene operatoren</a></li>
   <li><a href="#spectrum-van-algemene-operatoren-voorbeelden" id="toc-spectrum-van-algemene-operatoren-voorbeelden" class="nav-link" data-scroll-target="#spectrum-van-algemene-operatoren-voorbeelden">Spectrum van algemene operatoren: voorbeelden</a></li>
@@ -241,7 +241,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">November 12, 2024</p>
+      <p class="date">December 6, 2024</p>
     </div>
   </div>
   
@@ -452,7 +452,7 @@ ul.task-list li input[type="checkbox"] {
 <h2 class="smaller anchored" data-anchor-id="compleetheid-van-lpimathbbf">Compleetheid van <span class="math inline">\(L^p(I;{\mathbb{F}})\)</span></h2>
 <p>Ten opzichte van de Lebesgue-integraal zijn er stellingen die garanderen dat, voor een rij <span class="math inline">\((f_n)\)</span> die “bijna overal” puntsgewijs convergeert naar <span class="math inline">\(f\)</span>,</p>
 <ul>
-<li><p><span class="math inline">\(\lim_{n\to \infty} \int_I f_n(x)\)</span>,x = <em>I </em>{n} f_n(x),x$ als</p>
+<li><p><span class="math inline">\(\lim_{n\to \infty} \int_I f_n(x)\,{\mathrm{d}}x = \int_I \lim_{n\to\infty} f_n(x)\,{\mathrm{d}}x\)</span> als</p>
 <p><span class="math inline">\(\forall n \in {\mathbb{N}}_0\)</span>: <span class="math inline">\(f_n(x) \leq f_{n+1}(x)\)</span> “bijna overal”</p>
 <p>of</p>
 <p><span class="math inline">\(\forall n \in {\mathbb{N}}_0\)</span>: <span class="math inline">\({\left\lvert f_n(x)\right\rvert} \leq g(x)\)</span> “bijna overal” voor een integreerbare functie <span class="math inline">\(g\)</span></p></li>
@@ -898,7 +898,7 @@ f(x) &amp;= \frac{a_0}{2} + \sum_{k=1}^{n} a_k \cos\left(\frac{2\pi}{L} k x\righ
 <li><p>Sommige operatoren hebben niet de volledige Hilbertruimte als domein:</p>
 <ul>
 <li><span class="math inline">\({\hat{D}}\)</span> kan enkel op afleidbare functies werken</li>
-<li><span class="math inline">\({\hat{M}}_h f\)</span> kan niet meer kwadratisch integreerbaar zijn</li>
+<li><span class="math inline">\({\hat{M}}_h f\)</span> is mogelijks niet meer kwadratisch integreerbaar</li>
 </ul>
 <p><span class="math inline">\(\rightarrow\)</span> domein is deel<del>verzameling</del>ruimte van <span class="math inline">\(H\)</span></p></li>
 <li><p>beschouw operator <span class="math inline">\({\hat{A}}\)</span> met domein <span class="math inline">\(\mathop{\mathrm{\mathcal{D}}}_{{\hat{A}}} {\preccurlyeq}H\)</span>:</p>
@@ -1007,7 +1007,7 @@ f(x) &amp;= \frac{a_0}{2} + \sum_{k=1}^{n} a_k \cos\left(\frac{2\pi}{L} k x\righ
 <li><p>Voorbeeld 1: <span class="math inline">\({\left\langle{w},{\hat{A}}^-{v}\right\rangle} = \sum_{n \in {\mathbb{N}}} \sqrt{n+1} \overline{w^n} v^{n+1} = {\left\langle{\hat{A}}^+{w},{v}\right\rangle}\)</span> voor alle <span class="math inline">\({v},{w}\)</span> met <span class="math inline">\(\sum_{n \in {\mathbb{N}}} n {\left\lvert v_n\right\rvert}^2 &lt; \infty\)</span> <span class="math inline">\(\Rightarrow {\hat{A}}^+ = ({\hat{A}}^-)^\dagger\)</span>: domein van deze operatoren is reeds maximaal</p></li>
 <li><p>Voorbeeld 2: op <span class="math inline">\(L^2([a,b],{\mathbb{F}})\)</span>, beschouw <span class="math inline">\({\hat{D}}\)</span> met als domein alle afleidbare functies met <span class="math inline">\(f' \in L^2([a,b],{\mathbb{F}})\)</span> en <span class="math inline">\(f(a)=f(b)=0\)</span></p>
 <p><span class="math display">\[\int_a^b \overline{g(x)} f'(x)\,{\mathrm{d}}x = g(b)f(b) - g(a)f(a) - \int_a^b \overline{g'(x)}f(x)\,{\mathrm{d}}x\]</span></p>
-<p><span class="math inline">\(\Rightarrow\)</span> <span class="math inline">\(({\hat{D}}^\dagger g)(x) = -g'(x)\)</span> met als domein alle afleidbare functies <span class="math inline">\(g\)</span> met <span class="math inline">\(f' \in L^2([a,b],{\mathbb{F}})\)</span>, zonder bijkomende randvoorwaarden</p></li>
+<p><span class="math inline">\(\Rightarrow\)</span> <span class="math inline">\(({\hat{D}}^\dagger g)(x) = -g'(x)\)</span> met als domein alle afleidbare functies <span class="math inline">\(g\)</span> met <span class="math inline">\(g' \in L^2([a,b],{\mathbb{F}})\)</span>, zonder bijkomende randvoorwaarden</p></li>
 <li><p><span class="math inline">\({\hat{A}} \subset {\hat{B}} \Rightarrow {\hat{B}}^\dagger \subset {\hat{A}}^\dagger\)</span> (minder <span class="math inline">\({v}\in \mathop{\mathrm{\mathcal{D}}}_{{\hat{A}}}\)</span> dan in <span class="math inline">\(\mathop{\mathrm{\mathcal{D}}}_{{\hat{B}}} \implies\)</span> meer <span class="math inline">\({w}\in \mathop{\mathrm{\mathcal{D}}}_{{\hat{A}}^\dagger}\)</span> mogelijk)</p></li>
 <li><p>Als <span class="math inline">\({\hat{A}}^\dagger\)</span> zelf ook dicht gedefineerd is, dan kunnen we <span class="math inline">\({\hat{A}}^{\dagger\dagger}\)</span> definiëren:</p>
 <p><span class="math inline">\(\rightarrow\)</span> <span class="math inline">\({\hat{A}} \subset {\hat{A}}^{\dagger\dagger}\)</span> (<span class="math inline">\(\mathop{\mathrm{\mathcal{D}}}_{{\hat{A}}^{\dagger\dagger}}\)</span> bevat alle <span class="math inline">\({v}\)</span> zodat <span class="math inline">\({w}\mapsto {\left\langle{v},{\hat{A}}^\dagger{w}\right\rangle} = {\overline{{\left\langle{\hat{A}}^\dagger {w},{v}\right\rangle}}}\)</span> continu is voor alle <span class="math inline">\({w}\in \mathop{\mathrm{\mathcal{D}}}_{{\hat{A}}^\dagger}\)</span>: zeker voldaan <span class="math inline">\({v}\in \mathop{\mathrm{\mathcal{D}}}_{{\hat{A}}}\)</span>)</p></li>
@@ -1128,8 +1128,8 @@ f(x) &amp;= \frac{a_0}{2} + \sum_{k=1}^{n} a_k \cos\left(\frac{2\pi}{L} k x\righ
 </ul></li>
 </ul>
 </section>
-<section id="compacte-operatoren-geen-stellingenbewijzen" class="level2 smaller">
-<h2 class="smaller anchored" data-anchor-id="compacte-operatoren-geen-stellingenbewijzen">Compacte operatoren (geen stellingen/bewijzen)</h2>
+<section id="compacte-operatoren" class="level2 smaller">
+<h2 class="smaller anchored" data-anchor-id="compacte-operatoren">Compacte operatoren</h2>
 <ul>
 <li>compacte operatoren (deelverzameling van begrende operatoren)
 <ul>
@@ -1144,8 +1144,8 @@ f(x) &amp;= \frac{a_0}{2} + \sum_{k=1}^{n} a_k \cos\left(\frac{2\pi}{L} k x\righ
 </ul></li>
 </ul>
 </section>
-<section id="compacte-operatoren-geen-stellingenbewijzen-1" class="level2 smaller">
-<h2 class="smaller anchored" data-anchor-id="compacte-operatoren-geen-stellingenbewijzen-1">Compacte operatoren (geen stellingen/bewijzen)</h2>
+<section id="compacte-operatoren-1" class="level2 smaller">
+<h2 class="smaller anchored" data-anchor-id="compacte-operatoren-1">Compacte operatoren</h2>
 <ul>
 <li><p>zelftoegevoegde compacte operator <span class="math inline">\({\hat{A}}\)</span> beschikt over een spectrale decompositie</p>
 <p><span class="math display">\[{\hat{A}} = \sum_{n} \lambda_n {\hat{P}}_{\lambda_n}\quad \implies H = V_0 \bigoplus_{n} V_{\lambda_n}\]</span></p>
@@ -1159,8 +1159,8 @@ f(x) &amp;= \frac{a_0}{2} + \sum_{k=1}^{n} a_k \cos\left(\frac{2\pi}{L} k x\righ
 </ul></li>
 </ul>
 </section>
-<section id="compacte-operatoren-geen-stellingenbewijzen-2" class="level2 smaller">
-<h2 class="smaller anchored" data-anchor-id="compacte-operatoren-geen-stellingenbewijzen-2">Compacte operatoren (geen stellingen/bewijzen)</h2>
+<section id="compacte-operatoren-2" class="level2 smaller">
+<h2 class="smaller anchored" data-anchor-id="compacte-operatoren-2">Compacte operatoren</h2>
 <ul>
 <li><p>algemene compacte operator <span class="math inline">\({\hat{A}}\)</span> beschikt over <strong>Schmidt-decompositie</strong>:</p>
 <p>niet-stijgende rij positieve getallen <span class="math inline">\((\sigma_n \in {\mathbb{R}}_{\geq 0})_{n \in {\mathbb{N}}_0}\)</span> en verzamelingen orthonormale vectoren <span class="math inline">\((u_n \in H)_{n \in {\mathbb{N}}_0}\)</span> en <span class="math inline">\((v_n \in H)_{n \in {\mathbb{N}}_0}\)</span> met <span class="math inline">\({\hat{A}}u_n = \sigma_n v_n\)</span> en <span class="math inline">\({\hat{A}}^\dagger v_n = \sigma_n u_n\)</span> zodat</p>
@@ -1174,7 +1174,7 @@ f(x) &amp;= \frac{a_0}{2} + \sum_{k=1}^{n} a_k \cos\left(\frac{2\pi}{L} k x\righ
 <section id="spectrum-van-algemene-operatoren" class="level2 smaller">
 <h2 class="smaller anchored" data-anchor-id="spectrum-van-algemene-operatoren">Spectrum van algemene operatoren</h2>
 <ul>
-<li><p>Operator <span class="math inline">\({\hat{A}}\)</span> met dicht domein <span class="math inline">\(\mathop{\mathrm{\mathcal{D}}}_{{\hat{A}}}\)</span> en bereik <span class="math inline">\(\mathcal{R}_{{\hat{A}}}\)</span> is injectieef indien <span class="math inline">\(\mathop{\mathrm{ker}}({\hat{A}})=\{{o}\}\)</span></p>
+<li><p>Operator <span class="math inline">\({\hat{A}}\)</span> met dicht domein <span class="math inline">\(\mathop{\mathrm{\mathcal{D}}}_{{\hat{A}}}\)</span> en bereik <span class="math inline">\(\mathcal{R}_{{\hat{A}}}\)</span> is injectief indien <span class="math inline">\(\mathop{\mathrm{ker}}({\hat{A}})=\{{o}\}\)</span></p>
 <p><span class="math inline">\(\Rightarrow\)</span> we kunnen de inverse <span class="math inline">\({\hat{A}}^{-1}\)</span> definiëren als operator met domein <span class="math inline">\(\mathcal{R}_{{\hat{A}}}\)</span></p>
 <p><span class="math inline">\(\Rightarrow\)</span> deze inverse is enkel “dicht gedefinieerd” als <span class="math inline">\(\overline{\mathcal{R}_{{\hat{A}}}} = H\)</span></p></li>
 <li><p>Voor <span class="math inline">\({\hat{A}}\in \mathop{\mathrm{End}}(H)\)</span> definiëren we de resolvente verzameling als de verzameling van complexe getallen <span class="math inline">\(\lambda\)</span> waarvoor</p>

@@ -1,7 +1,7 @@
 ---
 title: "Hoofdstuk 8 - Lineaire differentiaaloperatoren"
 author: "Jutho Haegeman"
-date: "11/22/2023"
+date: "12/06/2024"
 # format:
 #   revealjs:
 #     theme: solarized
@@ -273,7 +273,7 @@ $\rightarrow$ hoe kunnen we het bestaan en de uniciteit van de oplossingen karak
 
     $$(\map{L} u_f)(x) = f(x), \quad \forall a < x < b\qquad \text{with}\ B_i[u_f] = 0, \forall i=1,\ldots,m$$
 
-  * een particuliere oplossing $u_\gamma$ van de homogene differentiaalvergelijknig met inhomogene randvoorwaarden
+  * een particuliere oplossing $u_\gamma$ van de homogene differentiaalvergelijking met inhomogene randvoorwaarden
 
     $$(\map{L} u_\gamma)(x) = 0, \quad \forall a < x < b\qquad \text{with}\ B_i[u_\gamma] = \gamma_i, \forall i=1,\ldots,m$$
 
@@ -392,7 +392,7 @@ $$-u''(x) = f(x)$$
 
 * $u(0) = u'(0) =u'(1) = 0$: $c_0=0$, $c_2=0$, $c_2 + \int_0^1 \,\drm z f(z)=0$
   * $\ker(\map{L}) = \{\zerovec\}$ $\implies$ uniciteit
-  * $\map{L}^\dagger$ heeft randvoorwaarden $v'(1)=0$ (zelf-toegevoegd)
+  * $\map{L}^\dagger$ heeft randvoorwaarden $v'(1)=0$
     $\Rightarrow \ker(\map{L}^\dagger)=\{v_0(x)=1\}$ $\implies$ existentie enkel als $\inner{v_0}{f}=0 = \int_0^1\,\drm z f(z)$
 
 
@@ -868,14 +868,14 @@ $$t^2 \ddot{u}(t) + t \dot{u}(t) + (t^2 - \nu^2) u(t) = 0$$
 * randvoorwaarden $B_i[u]=\gamma_i$ voor $i=1,\ldots,m$: $\mat{B} \mat{X} \vec{c} = \vec{\gamma}$  met
 
   * $\mat{B}$ de matrix zodat $B_i[u] = \sum_{j=0}^{p-1} B_{i,j} u^{(j)}(a) + B_{i,j+p} u^{(j)}(b)$
-  * $\mat{X} = \mat{X} = \begin{bmatrix}
+  * $\mat{X} = \begin{bmatrix}
 		\mat{Z}(a)\\
 		\mat{Z}(b)
 	\end{bmatrix}$ de matrix met als $j$de kolom $\vec{x}_j = \begin{bmatrix}
 	u_j(a) & u_j'(a) & \ldots & u^{(p-1)}_j(a) & u_j(b) & u_j'(b) & \dots & u_j^{(p-1)}(b)
 \end{bmatrix}^\transpose$
 
-  * unieke oplossing voor elke $\gamma$ vereist $m=p$ zodat $\mat{B}\mat{X} = \mat{M}$ een vierkante matrix is $\rightarrow$ noodzkaleijk maar niet voldoende
+  * unieke oplossing voor elke $\gamma$ vereist $m=p$ zodat $\mat{B}\mat{X} = \mat{M}$ een vierkante matrix is $\rightarrow$ noodzakelijk maar niet voldoende
 
 ## Randvoorwaarden {.smaller}
 
