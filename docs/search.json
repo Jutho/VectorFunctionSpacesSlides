@@ -1897,11 +1897,18 @@
     "text": "Order By\n       Default\n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Title\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\nDate\n\n\nTitle\n\n\nAuthor\n\n\n\n\n\n\nSep 24, 2024\n\n\nHoofdstuk 1 - Elementaire wiskundige structuren\n\n\nJutho Haegeman\n\n\n\n\nOct 1, 2024\n\n\nHoofdstuk 2 - Lineaire afbeeldingen\n\n\nJutho Haegeman\n\n\n\n\nOct 8, 2024\n\n\nHoofdstuk 3 - Lineaire operatoren en eigenwaarden\n\n\nJutho Haegeman\n\n\n\n\nOct 15, 2024\n\n\nHoofdstuk 4 - Normen en afstanden\n\n\nJutho Haegeman\n\n\n\n\nNov 12, 2024\n\n\nHoofdstuk 5 - Inwendig product en orthogonaliteit\n\n\nJutho Haegeman\n\n\n\n\nNov 12, 2024\n\n\nHoofdstuk 6 - Unitaire gelijkvormigheid en unitaire equivalentie\n\n\nJutho Haegeman\n\n\n\n\nDec 6, 2024\n\n\nHoofdstuk 7 - Functieruimten\n\n\nJutho Haegeman\n\n\n\n\nDec 6, 2024\n\n\nHoofdstuk 8 - Lineaire differentiaaloperatoren\n\n\nJutho Haegeman\n\n\n\n\nDec 5, 2023\n\n\nHoofdstuk 9 - Fourieranalyse en distributies\n\n\nJutho Haegeman\n\n\n\n\n\n\nNo matching items"
   },
   {
+    "objectID": "slides/H9.html",
+    "href": "slides/H9.html",
+    "title": "Hoofdstuk 9 - Fourieranalyse en distributies",
+    "section": "",
+    "text": "$$ % Math operators % % \n% VECTORS\n% specifically for vectors in F^n \n% MATRICES\n% SCALARS \n% LINEAR MAPS\n% FIELDS \n% RELATIONS \n% % % % % % % % %\n%\n$$\n\n\nFouriertransformaties\n\nvoornaamste eigenschappen\nFouriertransformatie als unitaire transformatie \\(L^2({\\mathbb{R}}) \\to L^2({\\mathbb{R}})\\)\ntoepassing: Gaussische distributies en centrale limietstelling\n\nTheorie van distributies en testfuncties\n\nReguliere en singuliere distributies = Dirac delta\nDistributionele afgeleiden en limieten\nDiracrijen\nAndere voorbeelden: Cauchy-hoofdwaarde\nDistributies en Fouriertransformaties\n\nVerband tussen verschillende types Fouriertransformaties\n\nDiscrete tijd Fourier transformatie\nNyquist sampling theorema\nFouriertransformaties en translatie-invariante operatoren"
+  },
+  {
     "objectID": "slides/H9.html#doel-van-dit-hoofdstuk",
     "href": "slides/H9.html#doel-van-dit-hoofdstuk",
     "title": "Hoofdstuk 9 - Fourieranalyse en distributies",
-    "section": "Doel van dit hoofdstuk",
-    "text": "Doel van dit hoofdstuk\n\n$$ % Math operators % % \n% VECTORS\n% specifically for vectors in F^n \n% MATRICES\n% SCALARS \n% LINEAR MAPS\n% FIELDS \n% RELATIONS \n% % % % % % % % %\n%\n$$\n\n\nFouriertransformaties\n\nvoornaamste eigenschappen\nFouriertransformatie als unitaire transformatie \\(L^2({\\mathbb{R}}) \\to L^2({\\mathbb{R}})\\)\ntoepassing: Gaussische distributies en centrale limietstelling\n\nTheorie van distributies en testfuncties\n\nReguliere en singuliere distributies = Dirac delta\nDistributionele afgeleiden en limieten\nDiracrijen\nAndere voorbeelden: Cauchy-hoofdwaarde\nDistributies en Fouriertransformaties\n\nVerband tussen verschillende types Fouriertransformaties\n\nDiscrete tijd Fourier transformatie\nNyquist sampling theorema\nFouriertransformaties en translatie-invariante operatoren"
+    "section": "",
+    "text": "$$ % Math operators % % \n% VECTORS\n% specifically for vectors in F^n \n% MATRICES\n% SCALARS \n% LINEAR MAPS\n% FIELDS \n% RELATIONS \n% % % % % % % % %\n%\n$$\n\n\nFouriertransformaties\n\nvoornaamste eigenschappen\nFouriertransformatie als unitaire transformatie \\(L^2({\\mathbb{R}}) \\to L^2({\\mathbb{R}})\\)\ntoepassing: Gaussische distributies en centrale limietstelling\n\nTheorie van distributies en testfuncties\n\nReguliere en singuliere distributies = Dirac delta\nDistributionele afgeleiden en limieten\nDiracrijen\nAndere voorbeelden: Cauchy-hoofdwaarde\nDistributies en Fouriertransformaties\n\nVerband tussen verschillende types Fouriertransformaties\n\nDiscrete tijd Fourier transformatie\nNyquist sampling theorema\nFouriertransformaties en translatie-invariante operatoren"
   },
   {
     "objectID": "slides/H9.html#fouriertransformatie-motivatie",
