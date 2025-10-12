@@ -466,9 +466,13 @@ Invariante deelruimte van een gegeven operator $\map{A}\in\End(V)$
 * $\map{A}$ en $\map{A} + a \idmap$ hebben dezelfde invariante deelruimten
 
 * Twee reeksen van invariante deelruimten:
-  * $\{\zerovec\} = \ker((\map{A}-\scalara\idmap)^0) \subspace	\ker(\map{A}-\scalara\idmap) \subspace$ $\qquad\ker((\map{A}-\scalara\idmap)^2) \subspace \ldots \subspace \ker((\map{A}-\scalara\idmap)^k) \subspace \ldots$
+  * $\{\zerovec\} = \ker((\map{A}-\scalara\idmap)^0) \subspace	\ker(\map{A}-\scalara\idmap) \subspace$
+    
+    $\qquad\qquad\ker((\map{A}-\scalara\idmap)^2) \subspace \ldots \subspace \ker((\map{A}-\scalara\idmap)^k) \subspace \ldots$
 
-  * $V = \im((\map{A}-\scalara\idmap)^0) \supspace 	\im(\map{A}-\scalara\idmap) \supspace$ $\qquad\im((\map{A}-\scalara\idmap)^2) \supspace \ldots \supspace \im((\map{A}-\scalara\idmap)^k) \supspace \ldots$
+  * $V = \im((\map{A}-\scalara\idmap)^0) \supspace 	\im(\map{A}-\scalara\idmap) \supspace$
+    
+    $\qquad\qquad\im((\map{A}-\scalara\idmap)^2) \supspace \ldots \supspace \im((\map{A}-\scalara\idmap)^k) \supspace \ldots$
 
   Dimensie van deze deelruimten is monotoon stijgend (strikte relatie, eigenlijke deelruimten) in de eerste reeks, en monotoon dalend in de tweede, tot een bepaalde index $k=s$, waar beide reeksen stabiliseren:
 
@@ -628,7 +632,7 @@ Problemen omdat $\GL(V)$ niet compact is: limieten van inverteerbare matrices ku
 
 * $\mat{A}$ en $\mat{A}^\transpose$ hebben dezelfde karakteristieke veelterm (en minimaalveelterm)
 
-* Voor elke eigenwaarde $\lambda$ van $\mat{A}$ bestaan er ook "linker" eigenvectoren
+* Voor elke eigenwaarde $\lambda$ van $\mat{A}$ bestaan er ook "linkse" eigenvectoren
 
   $\vec{w}^\transpose \mat{A} = \lambda \vec{w}^\transpose \iff \mat{A}^\transpose \vec{w} = \lambda \vec{w}$
 
@@ -648,7 +652,7 @@ Stel $\map{A}^\ast(\omega') = \lambda' \omega'$ en $\map{A}\vv = \lambda \vv$:
 
 * $\lambda = \lambda'$ : $\omega[\vv] \neq 0$? 
 
-* Uit Jordan-decompositie $\mat{J}_{\mat{A}} = \bigoplus_{\lambda \in \sigma_{\map{A}}} \bigoplus_{k=1}^{s_\lambda} \bigoplus_{i=1}^{p^{(\lambda)}_{k-1}} \mat{J}^{(k)}(\lambda)$ leren we dat elke Jordan-blok één rechter-eigenvector oplevert (de basisvector geassocieerd met de eerste kolom van het blok), en één linker-eigenvector (de basisvector geassocieerd met de laatste rij van het blok)
+* Uit Jordan-decompositie $\mat{J}_{\mat{A}} = \bigoplus_{\lambda \in \sigma_{\map{A}}} \bigoplus_{k=1}^{s_\lambda} \bigoplus_{i=1}^{p^{(\lambda)}_{k-1}} \mat{J}^{(k)}(\lambda)$ leren we dat elke Jordan-blok één rechtse eigenvector oplevert (de basisvector geassocieerd met de eerste kolom van het blok), en één linkse eigenvector (de basisvector geassocieerd met de laatste rij van het blok)
 
   $\Rightarrow \omega[\vv] \neq 0$ enkel als ze horen bij een Jordan-blok van grootte $1$
 

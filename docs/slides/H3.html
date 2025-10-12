@@ -624,8 +624,10 @@ window.Quarto = {
 <li><p><span class="math inline">{\hat{A}}</span> en <span class="math inline">{\hat{A}} + a {\hat{1}}</span> hebben dezelfde invariante deelruimten</p></li>
 <li><p>Twee reeksen van invariante deelruimten:</p>
 <ul>
-<li><p><span class="math inline">\{{o}\} = \mathop{\mathrm{ker}}(({\hat{A}}-{a}{\hat{1}})^0) {\preccurlyeq}\mathop{\mathrm{ker}}({\hat{A}}-{a}{\hat{1}}) {\preccurlyeq}</span> <span class="math inline">\qquad\mathop{\mathrm{ker}}(({\hat{A}}-{a}{\hat{1}})^2) {\preccurlyeq}\ldots {\preccurlyeq}\mathop{\mathrm{ker}}(({\hat{A}}-{a}{\hat{1}})^k) {\preccurlyeq}\ldots</span></p></li>
-<li><p><span class="math inline">V = \mathop{\mathrm{im}}(({\hat{A}}-{a}{\hat{1}})^0) {\succcurlyeq}\mathop{\mathrm{im}}({\hat{A}}-{a}{\hat{1}}) {\succcurlyeq}</span> <span class="math inline">\qquad\mathop{\mathrm{im}}(({\hat{A}}-{a}{\hat{1}})^2) {\succcurlyeq}\ldots {\succcurlyeq}\mathop{\mathrm{im}}(({\hat{A}}-{a}{\hat{1}})^k) {\succcurlyeq}\ldots</span></p></li>
+<li><p><span class="math inline">\{{o}\} = \mathop{\mathrm{ker}}(({\hat{A}}-{a}{\hat{1}})^0) {\preccurlyeq}\mathop{\mathrm{ker}}({\hat{A}}-{a}{\hat{1}}) {\preccurlyeq}</span></p>
+<p><span class="math inline">\qquad\qquad\mathop{\mathrm{ker}}(({\hat{A}}-{a}{\hat{1}})^2) {\preccurlyeq}\ldots {\preccurlyeq}\mathop{\mathrm{ker}}(({\hat{A}}-{a}{\hat{1}})^k) {\preccurlyeq}\ldots</span></p></li>
+<li><p><span class="math inline">V = \mathop{\mathrm{im}}(({\hat{A}}-{a}{\hat{1}})^0) {\succcurlyeq}\mathop{\mathrm{im}}({\hat{A}}-{a}{\hat{1}}) {\succcurlyeq}</span></p>
+<p><span class="math inline">\qquad\qquad\mathop{\mathrm{im}}(({\hat{A}}-{a}{\hat{1}})^2) {\succcurlyeq}\ldots {\succcurlyeq}\mathop{\mathrm{im}}(({\hat{A}}-{a}{\hat{1}})^k) {\succcurlyeq}\ldots</span></p></li>
 </ul>
 <p>Dimensie van deze deelruimten is monotoon stijgend (strikte relatie, eigenlijke deelruimten) in de eerste reeks, en monotoon dalend in de tweede, tot een bepaalde index <span class="math inline">k=s</span>, waar beide reeksen stabiliseren:</p>
 <ul>
@@ -774,7 +776,7 @@ window.Quarto = {
 <h2 class="anchored" data-anchor-id="verwante-eigenwaardenproblemen-1">Verwante eigenwaardenproblemen</h2>
 <ul>
 <li><p><span class="math inline">{\mathsf{A}}</span> en <span class="math inline">{\mathsf{A}}^{\mathsf{T}}</span> hebben dezelfde karakteristieke veelterm (en minimaalveelterm)</p></li>
-<li><p>Voor elke eigenwaarde <span class="math inline">\lambda</span> van <span class="math inline">{\mathsf{A}}</span> bestaan er ook “linker” eigenvectoren</p>
+<li><p>Voor elke eigenwaarde <span class="math inline">\lambda</span> van <span class="math inline">{\mathsf{A}}</span> bestaan er ook “linkse” eigenvectoren</p>
 <p><span class="math inline">\boldsymbol{w}^{\mathsf{T}}{\mathsf{A}} = \lambda \boldsymbol{w}^{\mathsf{T}}\iff {\mathsf{A}}^{\mathsf{T}}\boldsymbol{w} = \lambda \boldsymbol{w}</span></p>
 <ul>
 <li><p>Intrinsieke betekenis:</p>
@@ -790,7 +792,7 @@ window.Quarto = {
 <li><p><span class="math inline">\omega'[{\hat{A}}{v}] = ({\hat{A}}^\ast \omega')[{v}] \Rightarrow \lambda \omega'[{v}] = \lambda' \omega'[{v}]</span></p></li>
 <li><p><span class="math inline">\lambda \neq \lambda' \Rightarrow \omega'[{v}] = 0</span></p></li>
 <li><p><span class="math inline">\lambda = \lambda'</span> : <span class="math inline">\omega[{v}] \neq 0</span>?</p></li>
-<li><p>Uit Jordan-decompositie <span class="math inline">{\mathsf{J}}_{{\mathsf{A}}} = \bigoplus_{\lambda \in \sigma_{{\hat{A}}}} \bigoplus_{k=1}^{s_\lambda} \bigoplus_{i=1}^{p^{(\lambda)}_{k-1}} {\mathsf{J}}^{(k)}(\lambda)</span> leren we dat elke Jordan-blok één rechter-eigenvector oplevert (de basisvector geassocieerd met de eerste kolom van het blok), en één linker-eigenvector (de basisvector geassocieerd met de laatste rij van het blok)</p>
+<li><p>Uit Jordan-decompositie <span class="math inline">{\mathsf{J}}_{{\mathsf{A}}} = \bigoplus_{\lambda \in \sigma_{{\hat{A}}}} \bigoplus_{k=1}^{s_\lambda} \bigoplus_{i=1}^{p^{(\lambda)}_{k-1}} {\mathsf{J}}^{(k)}(\lambda)</span> leren we dat elke Jordan-blok één rechtse eigenvector oplevert (de basisvector geassocieerd met de eerste kolom van het blok), en één linkse eigenvector (de basisvector geassocieerd met de laatste rij van het blok)</p>
 <p><span class="math inline">\Rightarrow \omega[{v}] \neq 0</span> enkel als ze horen bij een Jordan-blok van grootte <span class="math inline">1</span></p></li>
 </ul>
 </section>
