@@ -5,6 +5,8 @@ date: "10/15/2024"
 # format:
 #   revealjs:
 #     theme: solarized
+#     html-math-method: katex
+#     smaller: true
 #     chalkboard: true
 ---
 

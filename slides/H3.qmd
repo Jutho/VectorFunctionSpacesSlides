@@ -1,10 +1,12 @@
 ---
 title: "Hoofdstuk 3 - Lineaire operatoren en eigenwaarden"
 author: "Jutho Haegeman"
-date: "10/08/2024"
+date: "09/30/2025"
 # format:
 #   revealjs:
 #     theme: solarized
+#     html-math-method: katex
+#     smaller: true
 #     chalkboard: true
 ---
 
@@ -213,9 +215,11 @@ $$\underbrace{p(\map{T} \map{A} \map{T}^{-1})}_{\in \End(W)} = \map{T} \underbra
 * Een element $a$ van een ring $R$ dat voldoet aan $a^2 = a$ heet **idempotent**.
 
 * Idempotente lineaire operatoren $\map{P} \in \End(V)$ worden vaak projectie-operatoren, of kortweg projectoren, genoemd, omwille van de volgende eigenschap:
-  * $\map{P}^2 =\map{P} \Rightarrow V = \im(\map{P}) \oplus \ker(\map{P})$ (bewijs aan bord)
+  * $\map{P}^2 =\map{P} \Rightarrow V = \im(\map{P}) \oplus \ker(\map{P})$
   * $\forall \vv \in V: \vv = \underbrace{\map{P}\vv}_{\vv_1} + \underbrace{(\idmap - \map{P})\vv}_{\vv_2}$
-  * omgekeerd: gegeven $V = V_1 \oplus V_2$, de decompositie $\vv = \vv_1 + \vv_2$ definieert een **projector op $V_1$ parallel met $V_2$**: $\map{P}\vv = \vv_1 \in V_1$ (en $\vv_2 = \vv -\vv_1 = (\idmap - \map{P})\vv$).
+  * omgekeerd: gegeven $V = V_1 \oplus V_2$, de decompositie $\vv = \vv_1 + \vv_2$ definieert een **projector op $V_1$ parallel met $V_2$**:
+
+    $\map{P}\vv = \vv_1 \in V_1$ (en $\vv_2 = \vv -\vv_1 = (\idmap - \map{P})\vv$).
 
 ## Annihilerende veeltermen
 
@@ -226,7 +230,7 @@ $$\underbrace{p(\map{T} \map{A} \map{T}^{-1})}_{\in \End(W)} = \map{T} \underbra
   * **minimaalveelterm** $m_{\map{A}}(x)= x^s + \ldots$ is de monische veelterm van laagste graad $s$ die $\map{A}$ annihileert en is uniek
 * Elke annihilerende veelterm $p$ van $\map{A}$ voldoet aan
 
-  $p(x) = m_{\map{A}}(x) q(x)$ (bewijs aan bord)
+  $p(x) = m_{\map{A}}(x) q(x)$
 
 # Eigenwaarden, eigenruimten en diagonalisatie
 
@@ -270,13 +274,15 @@ $$\underbrace{p(\map{T} \map{A} \map{T}^{-1})}_{\in \End(W)} = \map{T} \underbra
 
 * $V$ oneindig-dimensionaal: zie later
 
-* Terzijde: $\map{R}_{\map{A}}(z) = (z\idmap-\map{A})^{-1}$ voor waarden $z \in \bbC \setminus \sigma_{\map{A}}$ is de *resolvent*. Nuttig in theoretische fysica met behulp van technieken uit de complexe analyse.
+* Terzijde: $\map{R}_{\map{A}}(z) = (z\idmap-\map{A})^{-1}$ voor waarden $z \in \bbC \setminus \sigma_{\map{A}}$ is de *resolvent*.
+  
+  Nuttig in theoretische fysica met behulp van technieken uit de complexe analyse.
 
 ## Eigenschappen van eigenwaarden en eigenruimten
 
 * $\map{A}\vv = \lambda \vv \Rightarrow p(\map{A})\vv = p(\lambda) \vv$
 * $p(x)$ is een annihilerende veelterm van $\map{A}$: $\lambda$ is een nulpunt van $p$
-* verzameling van eigenvectoren $\{\vv_1,\ldots,\vv_k\}$ horende bij onderling verschillende eigenwaarden $\{\lambda_1,\ldots,\lambda_k\}$ met $\lambda_i\neq \lambda_j$ zijn linear onafhankelijk (bewijs aan bord).
+* verzameling van eigenvectoren $\{\vv_1,\ldots,\vv_k\}$ horende bij onderling verschillende eigenwaarden $\{\lambda_1,\ldots,\lambda_k\}$ met $\lambda_i\neq \lambda_j$ zijn linear onafhankelijk.
 * $\Rightarrow$ Som van eigenruimten $\sum_{k} V_{\lambda_k}$ wordt directe som $\bigoplus_{k} V_{\lambda_k}$
 * $\Rightarrow \sum_{\lambda \in \sigma_{\map{A}}} r_\lambda \leq \dim(V)$
 
@@ -320,11 +326,10 @@ $$	\mat{C}_p = \begin{bmatrix}
 	\end{bmatrix}
 $$
 
-  (bewijs aan bord)
 
 ## Stelling van Caley - Hamilton
 
-* De karakteristieke veelterm $k_{\map{A}}(z)$ annihileert $\map{A}$ (bewijs aan bord).
+* De karakteristieke veelterm $k_{\map{A}}(z)$ annihileert $\map{A}$.
 
   $\Rightarrow k_{\map{A}}(z)= m_{\map{A}}(z) q(z)$ met bovendien: $k_{\map{A}}(z)$ en $m_{\map{A}}(z)$ hebben dezelfde nulpunten
 
@@ -379,7 +384,6 @@ $$
 
   $$m_{\map{A}}(z) = \prod_{\lambda \in \sigma_{\map{A}}} (z-\lambda)$$
 
-  Bewijs: aan bord
 
 ## Spectrale decompositie
 
@@ -418,8 +422,6 @@ hebben een gezamelijke spectrale decompositie
 	\map{P}_{i} \map{P}_j &= \delta_{i,j} \map{P}_i,&\sum_{i\in I} \map{P}_i = \idmap_V\\
 	\map{A} &= \sum_{i\in I} \lambda_{i} \map{P}_i&\map{B} = \sum_{i\in I} \mu_{i} \map{P}_i
 \end{align}
-
-(bewijs aan bord)
 
 # Veralgemeende eigenruimten en de Jordan normaalvorm
 ## Invariante deelruimten
@@ -486,7 +488,7 @@ met $U_\lambda$ en $U_\lambda^{\text{c}}$ beide invariante deelruimten van $\map
 * Per constructie is $\map{A}|_{U_\lambda} = \lambda \idmap_{U_\lambda} + \map{N}$ voor een nilpotente operator $\map{N}$ met index $s$
 
   $\Rightarrow$ $m_{\map{A}|_{U_\lambda}}(z) = (z-\lambda)^s$ en $k_{\map{A}|_{U_\lambda}}(z) = (z-\lambda)^{\dim(U_\lambda)}$
-* Per constructie is $\map{A}|_{U_{\lambda}^{\text{c}}}-\lambda \idmap_{U_\lambda}^{\text{c}}$ injectief/inverteerbaar, zodat $\map{A}|_{U_{\lambda}^{\text{c}}}$ geen eigenwaarden $\lambda$ kan hebben.
+* Per constructie is $\map{A}|_{U_{\lambda}^{\text{c}}}-\lambda \idmap_{U_\lambda^{\text{c}}}$ injectief/inverteerbaar, zodat $\map{A}|_{U_{\lambda}^{\text{c}}}$ geen eigenwaarden $\lambda$ kan hebben.
 
   $\Rightarrow$ $m_{\map{A}}(z) = m_{\map{A}|_{U_\lambda}}(z) m_{\map{A}|_{U_\lambda^{\text{c}}}}(z)$ en $k_{\map{A}}(z) = k_{\map{A}|_{U_\lambda}}(z) \underbrace{k_{\map{A}|_{U_\lambda^{\text{c}}}}(z)}_{\text{geen nulpunten $\lambda$}}$
 
@@ -594,11 +596,9 @@ Voor een companion matrix $\mat{C} \in \bbF^{n \times n}$ met (unieke) eigenwaar
 
 ## Sensitiviteit van eigenwaarden en eigenruimten {.smaller}
 
-* Voorbeeld 1: $\mat{A}_1(\eps)=\begin{equation}
-\mat{A}_1(\eps)	= \begin{bmatrix}
+* Voorbeeld 1: $\mat{A}_1(\eps)	= \begin{bmatrix}
 	 0 & 1\\ \eps & 0	
-	\end{bmatrix}
-\end{equation}$
+	\end{bmatrix}$
 
   * $\eps = 0$: $\sigma_{\mat{A}}=\{0\}$ met $q_0 = s_0 = 2$, $r_0=1$: 1 Jordan blok
   * $\eps > 0$: $\sigma_{\mat{A}}=\{+\sqrt{\eps},-\sqrt{\eps}\}$ en $\mat{V}(\eps) = \begin{bmatrix}

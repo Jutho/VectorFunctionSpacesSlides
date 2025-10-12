@@ -1,10 +1,12 @@
 ---
 title: "Hoofdstuk 2 - Lineaire afbeeldingen"
 author: "Jutho Haegeman"
-date: "10/01/2024"
+date: "09/23/2025"
 # format:
 #   revealjs:
 #     theme: solarized
+#     html-math-method: katex
+#     smaller: true
 #     chalkboard: true
 ---
 
@@ -194,7 +196,7 @@ Homomorfismen tussen vectorruimten: $\varphi \in \Hom(V,W)$
 
 ## Voorbeelden
 
-* $\Hom(\bbF^n, \bbF^n) \cong \bbF^{m \times n}$: matrices die werken op standaard kolomvectoren via matrix-vector-vermenigvuldiging
+* $\Hom(\bbF^n, \bbF^m) \cong \bbF^{m \times n}$: matrices die werken op standaard kolomvectoren via matrix-vector-vermenigvuldiging
 * De identiteitsafbeelding $\idmap_V$
 * Afgeleide-operator $\map{D}$, die werkt op functies op een interval $I \subseteq \bbR$ als
   $(\map{D}f)(x) = \frac{\drm f}{\drm x}(x) = f'(x)$
@@ -370,7 +372,7 @@ Een matrix $\mat{A}\in \bbF^{m \times n}$ kan een lineaire afbeelding van $\bbF^
 * De rijen van de matrix $\mat{A}$ definieren vectoren van lengte $n$, en spannen een deelruimte op van $\bbF^n$, de **rijruimte**
 * De bijbehorende dimensie is de **rijrang** van $\mat{A}$
 
-* Stelling 1: rijrang = kolomrang (aan bord) $\Rightarrow$ rang!
+* Stelling 1: rijrang = kolomrang $\Rightarrow$ rang!
 * Stelling 2: $\rank(\mat{A}\cdot \mat{B}) \leq \min(\rank(\mat{A}), \rank(\mat{B}))$
 
 ## Spoor
@@ -385,10 +387,10 @@ Gegeven een vierkante matrix $\mat{A} \in \bbF^{n \times n}$
 Gegeven een vierkante matrix $\mat{A} \in \bbF^{n \times n}$
 
 * **Leibniz formule**
-  \begin{align}
+  \begin{align*}
   \det(\mat{A}) &= \sum_{\sigma \in S_n} \sgn(\sigma) A^1_{\ \sigma(1)} A^2_{\ \sigma(2)} \cdots A^n_{\ \sigma(n)}\\
   &= \epsilon^{j_1j_2\cdots j_n} A^1_{\ j_1} A^2_{\ j_2} \cdots A^n_{\ j_n}
-  \end{align}
+  \end{align*}
 
   met $\epsilon^{i_1i_2\cdots i_n} = \begin{cases} \sgn(\sigma),&\sigma=(i_1,i_2,\ldots,i_n) \in S_n\\ 0, &(i_1,i_2,\ldots,i_n) \not\in S_n\end{cases}$
 
@@ -406,7 +408,7 @@ Gegeven een vierkante matrix $\mat{A} \in \bbF^{n \times n}$
   * alternerend in twee opeenvolgende kolommen: $\vec{a}_i =\vec{a}_{i+1} \Rightarrow \det = 0$
   * eenheidsmatrix $\idmat_n \eqsim$ standaardbasis $(\vec{e}_1,\ldots,\vec{e}_n)$ $\Rightarrow \det = 1$
 
-* eigenschappen die je verwacht voor het **volume** van een parallellopipidum opgespannen $(\vec{a}_1, \ldots,\vec{a}_n)$
+* eigenschappen die je verwacht voor het **volume** van een parallellopipidum opgespannen door $(\vec{a}_1, \ldots,\vec{a}_n)$
   
   $\Rightarrow \det(\mat{A})$ is de volumeverandering door de lineaire afbeelding $\mat{A}$
 
@@ -427,11 +429,11 @@ Beschouw een multidimensionele integraal $\int_V g(\vec{x}) \drm x^1 \drm x^2 \c
 Stel dat we een algemene (niet noodzakelijk lineaire) coordinatentransformatie willen doorvoeren: $\vec{x} = \vec{f}(\vec{y})$ met $\vec{f}:\bbR^n \to \bbR^n$ of dus $x^i = f^i(y^1,y^2,\ldots,y^n)$
 
 Rond een bepaald punt $\vec{x}_k =\vec{f}(\vec{y}_k)$ geldt de eerste-orde Taylor benadering:
-\begin{align}
+\begin{align*}
 x^i &= f^i(\vec{y}) = f^i(\vec{y}_k + (\vec{y}-\vec{y}_k)) \\
 &= f^i(\vec{y}_k) + \frac{\partial f^i}{\partial y^j}(\vec{y}_k) (y^j - y_k^j) \\
 &= x^i_k + \frac{\partial f^i}{\partial y^j}(\vec{y}_k) (y^j - y_k^j)
-\end{align}
+\end{align*}
 
 ## Determinant: toepassing
 
@@ -489,12 +491,10 @@ Beschouw een matrixwaardige functie $\mat{A}(t)$, i.e. een matrix waarvan de ele
 
 * **Jacobi's formule:**
   
-  \begin{align}
+  \begin{align*}
   \frac{\drm\ }{\drm t} \det(\mat{A}(t)) &= \tr\left[\adj(\mat{A}(t)) \frac{\drm \mat{A}}{\drm t}(t)\right]\\
   &= \det(\mat{A}(t)) \tr\left[\mat{A}^{-1}(t) \frac{\drm \mat{A}}{\drm t}(t)\right]
-  \end{align}
-
-* Bewijs: aan bord
+  \end{align*}
 
 # Algemene lineaire groep en basistranformaties
 
@@ -531,12 +531,12 @@ $B_V$ en $\tilde{B}_V$, alsook $B_W$ en $\tilde{B}_W$ en een lineaire afbeelding
 
 * Matrixrepresentatie $\mat{A} = \phi_{B_W} \circ \map{A} \circ \phi_{B_V}^{-1}$
 * Matrixrepresentatie
-  \begin{align}
+  \begin{align*}
   \tilde{\mat{A}} &= \phi_{\tilde{B}_W} \circ \map{A} \circ \phi_{\tilde{B}_V}^{-1}\\
   & = \phi_{\tilde{B}_W} \circ (\phi_{B_W}^{-1} \circ \mat{A} \circ \phi_{B_V}) \circ \phi_{\tilde{B}_V}^{-1}\\
   &= (\phi_{\tilde{B}_W} \circ \phi_{B_W}^{-1}) \circ \mat{A} \circ (\phi_{\tilde{B}_V} \circ \phi_{B_V})^{-1}\\
   &= \mat{T}_W \cdot \mat{A} \cdot \mat{T}_V^{-1}
-  \end{align}
+  \end{align*}
 
 ## Basistransformaties
 
@@ -605,6 +605,18 @@ Beschouw eindigdimensionale vectorruimte $V$ met basis $B = \{\ve_1,\ldots,\ve_n
 * Continue functies $V = C(\bbR; \bbF)$: Dirac-delta $\delta_a[f] = f(a)$
   
   $\Rightarrow$ zie H9 voor theorie van distributies
+
+## Lineaire functionalen: meer voorbeelden van duale basis
+
+* Ruimte $\bbF[x]$ van polynomen:
+  * basis van monomials $B=\{e_n=x^n,n=0,1,2,\ldots\}$
+  * $\Rightarrow$ duale basis $B^* = \left\{\epsilon^n = \frac{1}{n!}\left.\frac{\drm\ }{\drm x^n}\right|_{x=0} , n=0,1,2,\ldots\right\}$
+
+* Ruimte $\bbF_n[x]$ van $n$de-graads polynomen:
+  * n+1 verschillende punten $\{x^0,\ldots,x^n\} \subseteq \bbR$ geven aanleiding tot duale basis
+    $\tilde{B}^* = \{\varphi^i, i=0,\ldots,n\}$ waarbij $\varphi^i[p] = p(x^i)$ 
+  * $\Rightarrow$ geassocieerde basis voor $\bbF_n[x]$ bestaat uit de Lagrange veeltermen:
+    $$f_j(x) = \prod_{\substack{i=0 \\ i\neq j}}^n \frac{(x - x_i)}{(x_j - x_i)}$$
 
 ## Lineaire functionalen en basistransformaties
 
@@ -788,7 +800,7 @@ Een afbeelding $\map{B}:V \to W$ tussen complexe vectorruimten $V$ en $W$ wordt 
 
 ## Reële, complexe en antilineaire afbeeldingen: matrixgedaante
 
-\begin{align}
+\begin{align*}
 	\mat{L} &= \begin{bmatrix}
 		\mat{L}_{11} & \mat{L}_{12} \\ \mat{L}_{21} & \mat{L}_{22}
 	\end{bmatrix} \\
@@ -803,8 +815,8 @@ Een afbeelding $\map{B}:V \to W$ tussen complexe vectorruimten $V$ en $W$ wordt 
 		\mat{B}_1 & -\mat{B}_2 \\ \mat{B}_2 & \mat{B}_1
 	\end{bmatrix}\begin{bmatrix}
 		\idmat & \zeromat \\ \zeromat & -\idmat
-	\end{bmatrix}\label{eq:linalg:reallinearblockform}
-\end{align}
+	\end{bmatrix}
+\end{align*}
 
 $$\Rightarrow \mat{A} = \mat{A}_1 + \irm \mat{A}_2$$
 
@@ -979,7 +991,7 @@ $\begin{bmatrix}
 
 ::: {.r-fit-text}
 
-\begin{align}
+\begin{align*}
 	\mat{A}^{-1} &= \mat{U}^{-1} \mat{D}^{-1} \mat{L}^{-1}\nonumber\\
 	&= \begin{bmatrix}
 		\idmat_{n_1} &  -\mat{A}_{11}^{-1} \mat{A}_{12}\\
@@ -994,7 +1006,7 @@ $\begin{bmatrix}
 	\mat{A}_{11}^{-1} + \mat{A}_{11}^{-1} \mat{A}_{12} (\mat{A}_{22} - \mat{A}_{21} \mat{A}_{11}^{-1} \mat{A}_{12})^{-1}  \mat{A}_{21} \mat{A}_{11}^{-1} & -\mat{A}_{11}^{-1} \mat{A}_{12} (\mat{A}_{22} - \mat{A}_{21} \mat{A}_{11}^{-1} \mat{A}_12)^{-1}\\
 		-(\mat{A}_{22} - \mat{A}_{21} \mat{A}_{11}^{-1} \mat{A}_{12})^{-1}  \mat{A}_{21} \mat{A}_{11}^{-1} & (\mat{A}_{22} - \mat{A}_{21} \mat{A}_{11}^{-1} \mat{A}_{12})^{-1} 
 	\end{bmatrix}
-\end{align}
+\end{align*}
 
 :::
 
@@ -1049,12 +1061,12 @@ Voor vierkante matrices $\mat{A} \in \bbF^{n\times n}$, $\mat{C} \in \bbF^{k \ti
 
 * Recursieve structuur van inverse van som
 
-\begin{align}
+\begin{align*}
 (\mat{A} + \mat{B})^{-1} &= \mat{A}^{-1} - \mat{A}^{-1} (\mat{B}^{-1} + \mat{A}^{-1})^{-1} \mat{A}^{-1} \\
 	&= \mat{A}^{-1} - \mat{A}^{-1} (\idmat + \mat{A} \mat{B}^{-1} )^{-1}\\
 	&= \mat{A}^{-1} - \mat{A}^{-1} \mat{B} (\mat{A} + \mat{B})^{-1}\\
   &=  \sum_{k=0}^{\infty} (-\mat{A}^{-1} \mat{B})^k\mat{A}^{-1}
-  \end{align}
+  \end{align*}
 
 * Afgeleide van de matrixinverse van een matrixwaardige functie:
 

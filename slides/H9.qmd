@@ -5,6 +5,8 @@ date: "12/05/2023"
 # format:
 #   revealjs:
 #     theme: solarized
+#     html-math-method: katex
+#     smaller: true
 #     chalkboard: true
 ---
 
@@ -177,7 +179,7 @@ $$
 * Herhaling Fourierreeks: $f \in L^2(I)$ met $I = [-L/2,+L/2]$
 
   \begin{align*}
-  &\widehat{f}_k = \inner{\varphi_k}{f} = \frac{1}{\sqrt{L}}\int_I f(x)\, \erm^{-\irm \frac{2\pi}{L} k x}\\
+  &\widehat{f}_k = \inner{\varphi_k}{f} = \frac{1}{\sqrt{L}}\int_I f(x)\, \erm^{-\irm \frac{2\pi}{L} k x}\,\drm x\\
   & \qquad \iff \qquad f(x) = \sum_{k \in \bbZ} \widehat{f}_k \varphi_k = \frac{1}{\sqrt{L}} \sum_{k \in \bbZ} \widehat{f}_k \erm^{+\irm \frac{2\pi}{L} k x}
   \end{align*}
 
@@ -330,7 +332,7 @@ Eigenschappen (wegens continuïteit van norm/inwendig product)
 
   $\Rightarrow$ $\map{F}$ is unitaire transformatie $L^2(\bbR) \to L^2(\bbR)$: $\map{F}^\dagger = \map{F}^{-1}$
 
-## Toepassing: Gaussiche distributie {.smaller}
+## Toepassing: Gaussische distributie {.smaller}
 
 * Gaussische distributie: $f_\sigma(x) = \frac{1}{\sigma \sqrt{2\pi}} \erm^{-\frac{x^2}{2\sigma^2}}$
 
@@ -923,13 +925,13 @@ We kunnen ook een Fouriertransformatie definiëren voor functies $f$ met domein
 * $\bbZ$: discrete "tijd" Fouriertransformatie (DTFT): 
 
   \begin{equation}
-    \widehat{f}(\xi) = \sum_{j \in \bbZ} f_j \erm^{-\irm 2\pi \xi j} \quad\leftrightarrow\quad f_j = \int_{0}^{1} \widehat{f}(\xi) \erm^{+\irm 2\pi \xi j}
+    \widehat{f}(\xi) = \sum_{j \in \bbZ} f_j \erm^{-\irm 2\pi \xi j} \quad\leftrightarrow\quad f_j = \int_{0}^{1} \widehat{f}(\xi) \erm^{+\irm 2\pi \xi j}\,\drm \xi
   \end{equation}
 
   met frequentie $\xi \in [0,1]$ of, meer gebruikelijk, met hoekfrequentie $\omega \in [-\pi,+\pi]$
 
   \begin{equation}
-    \widehat{f}(\omega) = \frac{1}{\sqrt{2\pi}} \sum_{j \in \bbZ} f_j \erm^{-\irm \omega j} \quad\leftrightarrow\quad f_j = \frac{1}{\sqrt{2\pi}}\int_{0}^{2\pi} \widehat{f}(\omega) \erm^{+\irm \omega j}
+    \widehat{f}(\omega) = \frac{1}{\sqrt{2\pi}} \sum_{j \in \bbZ} f_j \erm^{-\irm \omega j} \quad\leftrightarrow\quad f_j = \frac{1}{\sqrt{2\pi}}\int_{0}^{2\pi} \widehat{f}(\omega) \erm^{+\irm \omega j}\,\drm \omega
   \end{equation}
 
 ## Types Fouriertransformaties {.smaller}

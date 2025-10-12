@@ -30,4 +30,5 @@ website:
 format:
   html:
     theme: cosmo
+    html-math-method: katex
     toc: true

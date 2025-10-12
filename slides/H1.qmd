@@ -1,10 +1,12 @@
 ---
 title: "Hoofdstuk 1 - Elementaire wiskundige structuren"
 author: "Jutho Haegeman"
-date: "09/24/2024"
+date: "09/22/2025"
 # format:
 #   revealjs:
 #     theme: solarized
+#     html-math-method: katex
+#     smaller: true
 #     chalkboard: true
 ---
 
@@ -403,7 +405,7 @@ In een eindige ring geldt voor elk element dat het ofwel een nuldeler is, of dat
 ## Ring en veld
 
 * Het additief neutraal element $0$ heeft nooit een multiplicatief inverse
-* Een ring waaarbij elk niet-$0$ element een multiplicatief inverse heeft: lichaam / delingsring
+* Een ring waarbij elk niet-$0$ element een multiplicatief inverse heeft: lichaam / delingsring
 * Een delingsring waarbij $\cdot$ commutatief is: **veld**
 
 Voorbeeld van velden: $\bbQ$, $\bbR$, $\bbC$, $\bbZ_p$ voor $p$ priem
