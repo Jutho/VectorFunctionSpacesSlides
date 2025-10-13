@@ -303,7 +303,7 @@ Topologische concepten in een metrische ruimte $(X,d)$:
 
 We beschouwen nu een genormeerde vectorruimte $(V,\norm{\cdot})$ als metrische ruimte met metriek $d(\vv,\vw) = \norm{\vv-\vw}$
 
-* De norm $\norm{\cdot}:V\to \bbR$ is zelf een continue afbeelding (bewijs aan bord)
+* De norm $\norm{\cdot}:V\to \bbR$ is zelf een continue afbeelding
 
   $\Rightarrow$ voor een convergente rij $(v_n \in V)_{n\in\bbN_0}$ is de geassocieerde rij $(\norm{\vv_n})_{n\in\bbN_0}$ convergent (en dus begrensd)
 * Vector optelling $+:V \times V \to V$ en scalaire vermenigvuldiging $\bbF \times V \to V$ zijn continue afbeeldingen^[Hiervoor hebben we het volgende nodig: de productverzameling $X \times Y$ van twee metrische ruimten $(X, d_X)$ en $(Y, d_Y)$ is metrische ruimte, bevoorbeeld met metriek $d_{X,Y}((x,y), (x',y')) = d_X(x,x') + d_Y(y,y')$}]
@@ -335,17 +335,15 @@ Convergentie: $\lim_{n\to \infty} f_n = f$ als
 
 * Stelling: twee normen $\norm{\cdot}_a$ en $\norm{\cdot}_b$ zijn equivalent als en slechts als er constanten $C \geq c > 0$ bestaan zodat $c \norm{\vv}_a \leq \norm{\vv}_b \leq C\norm{\vv}_a$ voor alle $\vv \in V$
 
-  (bewijs aan bord)
-
+ 
 * Stelling: voor een eindig-dimensionale vectorruimte $V$ zijn alle normen equivalent 
 
-  (bewijs aan bord)
 
 * Voorbeelden voor $\vec{v} \in \bbF^n$:
   * $\frac{\norm{\vec{v}}_1}{\sqrt{n}} \leq \norm{\vec{v}}_2 \leq \norm{\vec{v}}_1$
   * $\frac{\norm{\vec{v}}_1}{n} \leq \norm{\vec{v}}_\infty \leq \norm{\vec{v}}_1$
 
-## Compacte verzameling (geen bewijzen)
+## Compacte verzameling
 
 * Een verzameling $U$ is compact als
 
@@ -356,7 +354,7 @@ Convergentie: $\lim_{n\to \infty} f_n = f$ als
 
 * Stelling: in een eindig-dimensionale vectorruimte $V$ is een deelverzameling $U$ compact als en slechts als $U$ begrensd en gesloten is (analoog aan Vectoranalayse).
 
-## Compacte verzamelingen (geen bewijzen)
+## Compacte verzamelingen
 
 In een oneindig-dimensionale vectorruimte zijn gesloten begrensde deelverzamelingen niet compact.
 
@@ -367,7 +365,7 @@ In een oneindig-dimensionale vectorruimte zijn gesloten begrensde deelverzamelin
 
 * Technisch (Riesz lemma): Beschouw een eigenlijke gesloten deelruimte $W\subspace V$. Voor elke $\epsilon \in (0,1)$ kunnen we een $\vv_\epsilon \in V$ vinden waarvoor $\norm{\vv_\epsilon}=1$ en $\norm{\vv_\epsilon - \vw} > \epsilon$ voor alle $w \in W$.
 
-# Banachruimten (geen bewijzen)
+# Banachruimten
 
 ## Cauchy rijen en compleetheid
 
@@ -473,7 +471,8 @@ Beschouw genormeerde vectorruimten $(V,\norm{\cdot}_V)$ en $(W,\norm{\cdot}_W)$.
 
 * Een lineaire afbeelding $\map{A}\in \Hom(V,W)$ wordt begrensd genoemd als er een constante $C \in \bbR_{\geq 0}$ bestaat zodat
   $$\norm{\map{A}\vv}_W\leq C \norm{\vv}_V,\quad\forall \vv\in V$$
-* Stelling: Voor een lineaire afbeelding $\map{A}\in \Hom(V,W)$ zijn volgende eigenschappen equivalent (bewijs aan bord)
+* Stelling: Voor een lineaire afbeelding $\map{A}\in \Hom(V,W)$ zijn volgende eigenschappen equivalent
+
   * $\map{A}$ is begrensd
   * $\map{A}$ is continu in de oorsprong
   * $\map{A}$ is overal continu (en zelfs uniform continu)
@@ -503,7 +502,7 @@ Deze norm staat gekend als de **geïnduceerde norm** of soms ook **operator norm
 
 ## Geïnduceerde norm
 
-* Voor $(V, \norm{\cdot}_V)$ een genormeerde ruimte en $(W,\norm{\cdot}_W)$ een Banachruimte geldt dat de ruimte $\mathcal{B}(V,W)$ van begrensde lineaire afbeeldingen in combinatie met de geïnduceerde norm $\norm{\cdot}_{V\to W}$ zelf een Banachruimte is (geen bewijs)
+* Voor $(V, \norm{\cdot}_V)$ een genormeerde ruimte en $(W,\norm{\cdot}_W)$ een Banachruimte geldt dat de ruimte $\mathcal{B}(V,W)$ van begrensde lineaire afbeeldingen in combinatie met de geïnduceerde norm $\norm{\cdot}_{V\to W}$ zelf een Banachruimte is
 
 ## Normen voor lineaire operatoren
 
@@ -512,7 +511,7 @@ Beschouw nu specifiek $\map{A}\in \End(V)$ voor een Banachruimte $(V,\norm{\cdot
 * Een norm $\norm{\cdot}$ voor lineaire operatoren wordt **submultiplicatief** genoemd als
   $$\norm{\map{A}\cdot\map{B}} \leq \norm{\map{A}} \norm{\map{B}}, \quad \forall \map{A},\map{B} \in \mathcal{B}(V)$$
 
-* De geinduceerde norm $\norm{\map{A}}_{V\to V}$ is submultiplicatief (bewijs aan bord)
+* De geinduceerde norm $\norm{\map{A}}_{V\to V}$ is submultiplicatief
 
 * Voor elke submultiplicatieve of ondergeschikte norm geldt $\norm{\idmap} \geq 1$. Voor de geinduceerde norm is $\norm{\idmap}=1$.
 
@@ -537,8 +536,8 @@ Gegeven een familie van normen $\{\norm{\cdot}^{(m \times n)}: \bbF^{m\times n} 
 $$\norm{\mat{A}\mat{B}}^{(m \times n)} \leq \norm{\mat{A}}^{(m \times k)} \norm{\mat{B}}^{(k \times n)}$$
 voor alle $\mat{A}\in\bbF^{m\times k}$ en $\mat{B}\in\bbF^{k\times n}$
 
-* de normen $\norm{\mat{A}}_{p\times p}$ zijn consistent (bewijs aan bord)
-* de normen $\norm{\mat{A}}_{\text{F}}=\norm{\text{vectorize}(\mat{A})}_2$ zijn consistent (bewijs aan bord)
+* de normen $\norm{\mat{A}}_{p\times p}$ zijn consistent 
+* de normen $\norm{\mat{A}}_{\text{F}}=\norm{\text{vectorize}(\mat{A})}_2$ zijn consistent
 * de norm $\norm{\text{vectorize}(\mat{A})}_\infty$ is niet consistent
 
 ## Matrixnormen: terminologie
@@ -554,13 +553,12 @@ voor alle $\mat{A}\in\bbF^{m\times k}$ en $\mat{B}\in\bbF^{k\times n}$
 * De spectraalstraal van een operator $\map{A}\in\End(V)$ is gedefinieerd als
   $$\rho_{\map{A}} = \sup\{\abs{\lambda};\lambda \in \sigma_{\map{A}}\}$$
 
-* Voor een submultiplicatieve norm en $V$ eindig-dimensionaal geldt $\norm{\map{A}} \geq \rho_{\map{A}}$ (bewijs aan bord)
+* Voor een submultiplicatieve norm en $V$ eindig-dimensionaal geldt $\norm{\map{A}} \geq \rho_{\map{A}}$
   * ook $\rho_{\map{A}}^n \leq \norm{\map{A}^n}$
   * als $\map{A}$ inverteerbaar: $\norm{\map{A}}^{-1}\leq \rho_{\map{A}}^{-1}$
 
 * Gelfand formule: $\rho_\map{A} =\lim_{n\to\infty}\norm{\map{A}^n}^{\frac{1}{n}}$
 
-  (bewijs aan bord)
 
 ## Duale normen
 
@@ -571,7 +569,6 @@ Gegeven een genormeerde vectorruimte $(V,\norm{\cdot})$:
 
 * voor $V = \bbF$ met Hölder norm $\norm{\cdot}_p$ wordt de duale norm gegeven door $\norm{\xi}_p^\ast = \norm{\vec{\xi}}_q$ waarbij $1/p+1/q=1$, en $\vec{\xi}$ de componenten van $\xi$, i.e. zodat $\xi[\vec{v}]=\vec{\xi}^\transpose \vec{v}$
 
-  (bewijs aan bord)
 
 # Toepassingen
 
@@ -610,7 +607,7 @@ Lineair system $\map{A}\vx = \vy$ met $\vx,\vy \in V$ en $\map{A} \in \End(V)$ m
  +\infty,&\text{otherwise}
  \end{cases}$$
 
-  met hierin $\norm{\map{A}}$ de geïnduceerde norm geassocieerd aan de vectornorm (bewijs: eenvoudig, zie ook Py4Sci)
+  met hierin $\norm{\map{A}}$ de geïnduceerde norm geassocieerd aan de vectornorm
 
 ## Sensitiviteit van lineaire systemen
 

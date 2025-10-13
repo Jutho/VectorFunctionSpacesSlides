@@ -931,6 +931,8 @@ $\Rightarrow: \lambda = \frac{1\pm \sqrt{5}}{2}$
 
 $x_0 = 0, x_1 = 1 \Rightarrow (x_n)_{n \in \bbN} = (0,1,1,2,3,5,8,13,\ldots)$
 
+$\Rightarrow x_n = \frac{1}{\sqrt{5}} \left[\left(\frac{1 + \sqrt{5}}{2}\right)^n - \left(\frac{1 - \sqrt{5}}{2}\right)^n\right]$
+
 ## Continue dynamische systemen
 
 Er is geen "kleinste eenheid van evolutie"

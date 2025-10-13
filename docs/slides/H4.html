@@ -209,17 +209,17 @@ window.Quarto = {
   <li><a href="#continuïteit-in-genormeerde-vectorruimte" id="toc-continuïteit-in-genormeerde-vectorruimte" class="nav-link" data-scroll-target="#continuïteit-in-genormeerde-vectorruimte">Continuïteit in genormeerde vectorruimte</a></li>
   <li><a href="#convergentie-in-functieruimten" id="toc-convergentie-in-functieruimten" class="nav-link" data-scroll-target="#convergentie-in-functieruimten">Convergentie in functieruimten</a></li>
   <li><a href="#equivalentie-van-normen" id="toc-equivalentie-van-normen" class="nav-link" data-scroll-target="#equivalentie-van-normen">Equivalentie van normen</a></li>
-  <li><a href="#compacte-verzameling-geen-bewijzen" id="toc-compacte-verzameling-geen-bewijzen" class="nav-link" data-scroll-target="#compacte-verzameling-geen-bewijzen">Compacte verzameling (geen bewijzen)</a></li>
-  <li><a href="#compacte-verzamelingen-geen-bewijzen" id="toc-compacte-verzamelingen-geen-bewijzen" class="nav-link" data-scroll-target="#compacte-verzamelingen-geen-bewijzen">Compacte verzamelingen (geen bewijzen)</a></li>
+  <li><a href="#compacte-verzameling" id="toc-compacte-verzameling" class="nav-link" data-scroll-target="#compacte-verzameling">Compacte verzameling</a></li>
+  <li><a href="#compacte-verzamelingen" id="toc-compacte-verzamelingen" class="nav-link" data-scroll-target="#compacte-verzamelingen">Compacte verzamelingen</a></li>
   </ul></li>
-  <li><a href="#banachruimten-geen-bewijzen" id="toc-banachruimten-geen-bewijzen" class="nav-link" data-scroll-target="#banachruimten-geen-bewijzen">Banachruimten (geen bewijzen)</a>
+  <li><a href="#banachruimten" id="toc-banachruimten" class="nav-link" data-scroll-target="#banachruimten">Banachruimten</a>
   <ul class="collapse">
   <li><a href="#cauchy-rijen-en-compleetheid" id="toc-cauchy-rijen-en-compleetheid" class="nav-link" data-scroll-target="#cauchy-rijen-en-compleetheid">Cauchy rijen en compleetheid</a></li>
-  <li><a href="#banachruimten" id="toc-banachruimten" class="nav-link" data-scroll-target="#banachruimten">Banachruimten</a></li>
   <li><a href="#banachruimten-1" id="toc-banachruimten-1" class="nav-link" data-scroll-target="#banachruimten-1">Banachruimten</a></li>
+  <li><a href="#banachruimten-2" id="toc-banachruimten-2" class="nav-link" data-scroll-target="#banachruimten-2">Banachruimten</a></li>
   <li><a href="#banachruimten-complete-verzameling" id="toc-banachruimten-complete-verzameling" class="nav-link" data-scroll-target="#banachruimten-complete-verzameling">Banachruimten: complete verzameling</a></li>
   <li><a href="#banachruimten-complete-verzameling-1" id="toc-banachruimten-complete-verzameling-1" class="nav-link" data-scroll-target="#banachruimten-complete-verzameling-1">Banachruimten: complete verzameling</a></li>
-  <li><a href="#banachruimten-2" id="toc-banachruimten-2" class="nav-link" data-scroll-target="#banachruimten-2">Banachruimten</a></li>
+  <li><a href="#banachruimten-3" id="toc-banachruimten-3" class="nav-link" data-scroll-target="#banachruimten-3">Banachruimten</a></li>
   <li><a href="#banachruimten-en-basis" id="toc-banachruimten-en-basis" class="nav-link" data-scroll-target="#banachruimten-en-basis">Banachruimten en basis</a></li>
   </ul></li>
   <li><a href="#normen-voor-lineaire-afbeeldingen" id="toc-normen-voor-lineaire-afbeeldingen" class="nav-link" data-scroll-target="#normen-voor-lineaire-afbeeldingen">Normen voor lineaire afbeeldingen</a>
@@ -446,7 +446,7 @@ window.Quarto = {
 <h2 class="smaller anchored" data-anchor-id="continuïteit-in-genormeerde-vectorruimte">Continuïteit in genormeerde vectorruimte</h2>
 <p>We beschouwen nu een genormeerde vectorruimte <span class="math inline">(V,{\left\lVert\cdot\right\rVert})</span> als metrische ruimte met metriek <span class="math inline">d({v},{w}) = {\left\lVert{v}-{w}\right\rVert}</span></p>
 <ul>
-<li><p>De norm <span class="math inline">{\left\lVert\cdot\right\rVert}:V\to {\mathbb{R}}</span> is zelf een continue afbeelding (bewijs aan bord)</p>
+<li><p>De norm <span class="math inline">{\left\lVert\cdot\right\rVert}:V\to {\mathbb{R}}</span> is zelf een continue afbeelding</p>
 <p><span class="math inline">\Rightarrow</span> voor een convergente rij <span class="math inline">(v_n \in V)_{n\in{\mathbb{N}}_0}</span> is de geassocieerde rij <span class="math inline">({\left\lVert{v}_n\right\rVert})_{n\in{\mathbb{N}}_0}</span> convergent (en dus begrensd)</p></li>
 <li><p>Vector optelling <span class="math inline">+:V \times V \to V</span> en scalaire vermenigvuldiging <span class="math inline">{\mathbb{F}}\times V \to V</span> zijn continue afbeeldingen<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p></li>
 </ul>
@@ -470,10 +470,8 @@ window.Quarto = {
 <h2 class="smaller anchored" data-anchor-id="equivalentie-van-normen">Equivalentie van normen</h2>
 <ul>
 <li><p>Twee normen voor een vectorruimte <span class="math inline">V</span> zijn equivalent als ze aanleiding geven tot dezelfde definitie van convergerende rijen (met dan dezelfde limietpunten)</p></li>
-<li><p>Stelling: twee normen <span class="math inline">{\left\lVert\cdot\right\rVert}_a</span> en <span class="math inline">{\left\lVert\cdot\right\rVert}_b</span> zijn equivalent als en slechts als er constanten <span class="math inline">C \geq c &gt; 0</span> bestaan zodat <span class="math inline">c {\left\lVert{v}\right\rVert}_a \leq {\left\lVert{v}\right\rVert}_b \leq C{\left\lVert{v}\right\rVert}_a</span> voor alle <span class="math inline">{v}\in V</span></p>
-<p>(bewijs aan bord)</p></li>
-<li><p>Stelling: voor een eindig-dimensionale vectorruimte <span class="math inline">V</span> zijn alle normen equivalent</p>
-<p>(bewijs aan bord)</p></li>
+<li><p>Stelling: twee normen <span class="math inline">{\left\lVert\cdot\right\rVert}_a</span> en <span class="math inline">{\left\lVert\cdot\right\rVert}_b</span> zijn equivalent als en slechts als er constanten <span class="math inline">C \geq c &gt; 0</span> bestaan zodat <span class="math inline">c {\left\lVert{v}\right\rVert}_a \leq {\left\lVert{v}\right\rVert}_b \leq C{\left\lVert{v}\right\rVert}_a</span> voor alle <span class="math inline">{v}\in V</span></p></li>
+<li><p>Stelling: voor een eindig-dimensionale vectorruimte <span class="math inline">V</span> zijn alle normen equivalent</p></li>
 <li><p>Voorbeelden voor <span class="math inline">\boldsymbol{v} \in {\mathbb{F}}^n</span>:</p>
 <ul>
 <li><span class="math inline">\frac{{\left\lVert\boldsymbol{v}\right\rVert}_1}{\sqrt{n}} \leq {\left\lVert\boldsymbol{v}\right\rVert}_2 \leq {\left\lVert\boldsymbol{v}\right\rVert}_1</span></li>
@@ -481,8 +479,8 @@ window.Quarto = {
 </ul></li>
 </ul>
 </section>
-<section id="compacte-verzameling-geen-bewijzen" class="level2">
-<h2 class="anchored" data-anchor-id="compacte-verzameling-geen-bewijzen">Compacte verzameling (geen bewijzen)</h2>
+<section id="compacte-verzameling" class="level2">
+<h2 class="anchored" data-anchor-id="compacte-verzameling">Compacte verzameling</h2>
 <ul>
 <li><p>Een verzameling <span class="math inline">U</span> is compact als</p>
 <ul>
@@ -493,8 +491,8 @@ window.Quarto = {
 <li><p>Stelling: in een eindig-dimensionale vectorruimte <span class="math inline">V</span> is een deelverzameling <span class="math inline">U</span> compact als en slechts als <span class="math inline">U</span> begrensd en gesloten is (analoog aan Vectoranalayse).</p></li>
 </ul>
 </section>
-<section id="compacte-verzamelingen-geen-bewijzen" class="level2">
-<h2 class="anchored" data-anchor-id="compacte-verzamelingen-geen-bewijzen">Compacte verzamelingen (geen bewijzen)</h2>
+<section id="compacte-verzamelingen" class="level2">
+<h2 class="anchored" data-anchor-id="compacte-verzamelingen">Compacte verzamelingen</h2>
 <p>In een oneindig-dimensionale vectorruimte zijn gesloten begrensde deelverzamelingen niet compact.</p>
 <ul>
 <li><p>Voorbeeld: <span class="math inline">C^0([a,b],{\mathbb{F}})</span> met <span class="math inline">{\left\lVert\cdot\right\rVert}_\infty</span></p>
@@ -506,8 +504,8 @@ window.Quarto = {
 </ul>
 </section>
 </section>
-<section id="banachruimten-geen-bewijzen" class="level1">
-<h1>Banachruimten (geen bewijzen)</h1>
+<section id="banachruimten" class="level1">
+<h1>Banachruimten</h1>
 <section id="cauchy-rijen-en-compleetheid" class="level2">
 <h2 class="anchored" data-anchor-id="cauchy-rijen-en-compleetheid">Cauchy rijen en compleetheid</h2>
 <ul>
@@ -518,8 +516,8 @@ window.Quarto = {
 <li><p>Een genormeerde vectorruimte <span class="math inline">(V,{\left\lVert\cdot\right\rVert})</span> die metrisch compleet is wordt een Banachruimte genoemd</p></li>
 </ul>
 </section>
-<section id="banachruimten" class="level2">
-<h2 class="anchored" data-anchor-id="banachruimten">Banachruimten</h2>
+<section id="banachruimten-1" class="level2">
+<h2 class="anchored" data-anchor-id="banachruimten-1">Banachruimten</h2>
 <p>Voorbeelden:</p>
 <ul>
 <li>Elke eindig-dimensionale vectorruimte, met om het even welke keuze van norm</li>
@@ -528,8 +526,8 @@ window.Quarto = {
 <li>Ruimte <span class="math inline">C^0([a,b],{\mathbb{F}})</span> met maximumnorm/uniformnorm <span class="math inline">{\left\lVert\cdot\right\rVert}_\infty</span> voor begrensd (compact) interval <span class="math inline">[a,b]</span></li>
 </ul>
 </section>
-<section id="banachruimten-1" class="level2">
-<h2 class="anchored" data-anchor-id="banachruimten-1">Banachruimten</h2>
+<section id="banachruimten-2" class="level2">
+<h2 class="anchored" data-anchor-id="banachruimten-2">Banachruimten</h2>
 <p>Tegenvoorbeeld:</p>
 <ul>
 <li>Ruimte <span class="math inline">{\mathbb{F}}[x]</span> van polynomen met norm <span class="math inline">{\left\lVert p\right\rVert}= \max_{x \in [a,b]} {\left\lvert p(x)\right\rvert}</span>
@@ -565,8 +563,8 @@ window.Quarto = {
 <li><span class="math inline">\{x^n, n=0,1,2,\ldots\}</span> is een complete verzameling voor <span class="math inline">C^0([a,b],{\mathbb{F}})</span></li>
 </ul>
 </section>
-<section id="banachruimten-2" class="level2 smaller">
-<h2 class="smaller anchored" data-anchor-id="banachruimten-2">Banachruimten</h2>
+<section id="banachruimten-3" class="level2 smaller">
+<h2 class="smaller anchored" data-anchor-id="banachruimten-3">Banachruimten</h2>
 <p>Van rijen naar reeksen in genormeerde vectorruimten <span class="math inline">(V,{\left\lVert\cdot\right\rVert})</span></p>
 <ul>
 <li><p>Convergentie van reeksen: als rij van partieelsommen convergeert</p>
@@ -606,8 +604,8 @@ window.Quarto = {
 <h2 class="anchored" data-anchor-id="continuïteit-van-lineaire-afbeeldingen">Continuïteit van lineaire afbeeldingen</h2>
 <p>Beschouw genormeerde vectorruimten <span class="math inline">(V,{\left\lVert\cdot\right\rVert}_V)</span> en <span class="math inline">(W,{\left\lVert\cdot\right\rVert}_W)</span>.</p>
 <ul>
-<li>Een lineaire afbeelding <span class="math inline">{\hat{A}}\in \mathop{\mathrm{Hom}}(V,W)</span> wordt begrensd genoemd als er een constante <span class="math inline">C \in {\mathbb{R}}_{\geq 0}</span> bestaat zodat <span class="math display">{\left\lVert{\hat{A}}{v}\right\rVert}_W\leq C {\left\lVert{v}\right\rVert}_V,\quad\forall {v}\in V</span></li>
-<li>Stelling: Voor een lineaire afbeelding <span class="math inline">{\hat{A}}\in \mathop{\mathrm{Hom}}(V,W)</span> zijn volgende eigenschappen equivalent (bewijs aan bord)
+<li><p>Een lineaire afbeelding <span class="math inline">{\hat{A}}\in \mathop{\mathrm{Hom}}(V,W)</span> wordt begrensd genoemd als er een constante <span class="math inline">C \in {\mathbb{R}}_{\geq 0}</span> bestaat zodat <span class="math display">{\left\lVert{\hat{A}}{v}\right\rVert}_W\leq C {\left\lVert{v}\right\rVert}_V,\quad\forall {v}\in V</span></p></li>
+<li><p>Stelling: Voor een lineaire afbeelding <span class="math inline">{\hat{A}}\in \mathop{\mathrm{Hom}}(V,W)</span> zijn volgende eigenschappen equivalent</p>
 <ul>
 <li><span class="math inline">{\hat{A}}</span> is begrensd</li>
 <li><span class="math inline">{\hat{A}}</span> is continu in de oorsprong</li>
@@ -637,7 +635,7 @@ window.Quarto = {
 <section id="geïnduceerde-norm-1" class="level2">
 <h2 class="anchored" data-anchor-id="geïnduceerde-norm-1">Geïnduceerde norm</h2>
 <ul>
-<li>Voor <span class="math inline">(V, {\left\lVert\cdot\right\rVert}_V)</span> een genormeerde ruimte en <span class="math inline">(W,{\left\lVert\cdot\right\rVert}_W)</span> een Banachruimte geldt dat de ruimte <span class="math inline">\mathcal{B}(V,W)</span> van begrensde lineaire afbeeldingen in combinatie met de geïnduceerde norm <span class="math inline">{\left\lVert\cdot\right\rVert}_{V\to W}</span> zelf een Banachruimte is (geen bewijs)</li>
+<li>Voor <span class="math inline">(V, {\left\lVert\cdot\right\rVert}_V)</span> een genormeerde ruimte en <span class="math inline">(W,{\left\lVert\cdot\right\rVert}_W)</span> een Banachruimte geldt dat de ruimte <span class="math inline">\mathcal{B}(V,W)</span> van begrensde lineaire afbeeldingen in combinatie met de geïnduceerde norm <span class="math inline">{\left\lVert\cdot\right\rVert}_{V\to W}</span> zelf een Banachruimte is</li>
 </ul>
 </section>
 <section id="normen-voor-lineaire-operatoren" class="level2">
@@ -645,7 +643,7 @@ window.Quarto = {
 <p>Beschouw nu specifiek <span class="math inline">{\hat{A}}\in \mathop{\mathrm{End}}(V)</span> voor een Banachruimte <span class="math inline">(V,{\left\lVert\cdot\right\rVert}_V)</span>. De begrensde lineaire operatoren worden genoteerd als <span class="math inline">\mathcal{B}(V) = \mathcal{B}(V,V) {\preccurlyeq}\mathop{\mathrm{End}}(V)</span>.</p>
 <ul>
 <li><p>Een norm <span class="math inline">{\left\lVert\cdot\right\rVert}</span> voor lineaire operatoren wordt <strong>submultiplicatief</strong> genoemd als <span class="math display">{\left\lVert{\hat{A}}\cdot{\hat{B}}\right\rVert} \leq {\left\lVert{\hat{A}}\right\rVert} {\left\lVert{\hat{B}}\right\rVert}, \quad \forall {\hat{A}},{\hat{B}} \in \mathcal{B}(V)</span></p></li>
-<li><p>De geinduceerde norm <span class="math inline">{\left\lVert{\hat{A}}\right\rVert}_{V\to V}</span> is submultiplicatief (bewijs aan bord)</p></li>
+<li><p>De geinduceerde norm <span class="math inline">{\left\lVert{\hat{A}}\right\rVert}_{V\to V}</span> is submultiplicatief</p></li>
 <li><p>Voor elke submultiplicatieve of ondergeschikte norm geldt <span class="math inline">{\left\lVert{\hat{1}}\right\rVert} \geq 1</span>. Voor de geinduceerde norm is <span class="math inline">{\left\lVert{\hat{1}}\right\rVert}=1</span>.</p></li>
 </ul>
 </section>
@@ -669,8 +667,8 @@ window.Quarto = {
 <p>Gegeven een familie van normen <span class="math inline">\{{\left\lVert\cdot\right\rVert}^{(m \times n)}: {\mathbb{F}}^{m\times n} \to {\mathbb{R}}_{\geq 0}; \forall m, n \in {\mathbb{N}}\}</span> voor matrices van alle groottes:</p>
 <ul>
 <li><p>deze worden <strong>consistent</strong> genoemd als <span class="math display">{\left\lVert{\mathsf{A}}{\mathsf{B}}\right\rVert}^{(m \times n)} \leq {\left\lVert{\mathsf{A}}\right\rVert}^{(m \times k)} {\left\lVert{\mathsf{B}}\right\rVert}^{(k \times n)}</span> voor alle <span class="math inline">{\mathsf{A}}\in{\mathbb{F}}^{m\times k}</span> en <span class="math inline">{\mathsf{B}}\in{\mathbb{F}}^{k\times n}</span></p></li>
-<li><p>de normen <span class="math inline">{\left\lVert{\mathsf{A}}\right\rVert}_{p\times p}</span> zijn consistent (bewijs aan bord)</p></li>
-<li><p>de normen <span class="math inline">{\left\lVert{\mathsf{A}}\right\rVert}_{\text{F}}={\left\lVert\text{vectorize}({\mathsf{A}})\right\rVert}_2</span> zijn consistent (bewijs aan bord)</p></li>
+<li><p>de normen <span class="math inline">{\left\lVert{\mathsf{A}}\right\rVert}_{p\times p}</span> zijn consistent</p></li>
+<li><p>de normen <span class="math inline">{\left\lVert{\mathsf{A}}\right\rVert}_{\text{F}}={\left\lVert\text{vectorize}({\mathsf{A}})\right\rVert}_2</span> zijn consistent</p></li>
 <li><p>de norm <span class="math inline">{\left\lVert\text{vectorize}({\mathsf{A}})\right\rVert}_\infty</span> is niet consistent</p></li>
 </ul>
 </section>
@@ -687,13 +685,12 @@ window.Quarto = {
 <h2 class="anchored" data-anchor-id="spectraalstraal">Spectraalstraal</h2>
 <ul>
 <li><p>De spectraalstraal van een operator <span class="math inline">{\hat{A}}\in\mathop{\mathrm{End}}(V)</span> is gedefinieerd als <span class="math display">\rho_{{\hat{A}}} = \sup\{{\left\lvert\lambda\right\rvert};\lambda \in \sigma_{{\hat{A}}}\}</span></p></li>
-<li><p>Voor een submultiplicatieve norm en <span class="math inline">V</span> eindig-dimensionaal geldt <span class="math inline">{\left\lVert{\hat{A}}\right\rVert} \geq \rho_{{\hat{A}}}</span> (bewijs aan bord)</p>
+<li><p>Voor een submultiplicatieve norm en <span class="math inline">V</span> eindig-dimensionaal geldt <span class="math inline">{\left\lVert{\hat{A}}\right\rVert} \geq \rho_{{\hat{A}}}</span></p>
 <ul>
 <li>ook <span class="math inline">\rho_{{\hat{A}}}^n \leq {\left\lVert{\hat{A}}^n\right\rVert}</span></li>
 <li>als <span class="math inline">{\hat{A}}</span> inverteerbaar: <span class="math inline">{\left\lVert{\hat{A}}\right\rVert}^{-1}\leq \rho_{{\hat{A}}}^{-1}</span></li>
 </ul></li>
-<li><p>Gelfand formule: <span class="math inline">\rho_{\hat{A}} =\lim_{n\to\infty}{\left\lVert{\hat{A}}^n\right\rVert}^{\frac{1}{n}}</span></p>
-<p>(bewijs aan bord)</p></li>
+<li><p>Gelfand formule: <span class="math inline">\rho_{\hat{A}} =\lim_{n\to\infty}{\left\lVert{\hat{A}}^n\right\rVert}^{\frac{1}{n}}</span></p></li>
 </ul>
 </section>
 <section id="duale-normen" class="level2">
@@ -701,8 +698,7 @@ window.Quarto = {
 <p>Gegeven een genormeerde vectorruimte <span class="math inline">(V,{\left\lVert\cdot\right\rVert})</span>:</p>
 <ul>
 <li><p>geïnduceerde norm op <span class="math inline">\mathcal{B}(V,{\mathbb{F}}){\preccurlyeq}V^\ast</span> wordt genoteerd als de duale norm <span class="math inline">{\left\lVert\cdot\right\rVert}^\ast</span>: <span class="math display">{\left\lVert\xi\right\rVert}^\ast = \sup\left\{\frac{{\left\lvert\xi[v]\right\rvert}}{{\left\lVert v\right\rVert}} ; \forall v \in V, v \neq {o}\right\}, \quad \forall \xi \in V^\ast</span></p></li>
-<li><p>voor <span class="math inline">V = {\mathbb{F}}</span> met Hölder norm <span class="math inline">{\left\lVert\cdot\right\rVert}_p</span> wordt de duale norm gegeven door <span class="math inline">{\left\lVert\xi\right\rVert}_p^\ast = {\left\lVert\boldsymbol{\xi}\right\rVert}_q</span> waarbij <span class="math inline">1/p+1/q=1</span>, en <span class="math inline">\boldsymbol{\xi}</span> de componenten van <span class="math inline">\xi</span>, i.e.&nbsp;zodat <span class="math inline">\xi[\boldsymbol{v}]=\boldsymbol{\xi}^{\mathsf{T}}\boldsymbol{v}</span></p>
-<p>(bewijs aan bord)</p></li>
+<li><p>voor <span class="math inline">V = {\mathbb{F}}</span> met Hölder norm <span class="math inline">{\left\lVert\cdot\right\rVert}_p</span> wordt de duale norm gegeven door <span class="math inline">{\left\lVert\xi\right\rVert}_p^\ast = {\left\lVert\boldsymbol{\xi}\right\rVert}_q</span> waarbij <span class="math inline">1/p+1/q=1</span>, en <span class="math inline">\boldsymbol{\xi}</span> de componenten van <span class="math inline">\xi</span>, i.e.&nbsp;zodat <span class="math inline">\xi[\boldsymbol{v}]=\boldsymbol{\xi}^{\mathsf{T}}\boldsymbol{v}</span></p></li>
 </ul>
 </section>
 </section>
@@ -741,7 +737,7 @@ window.Quarto = {
 {\left\lVert{\hat{A}}\right\rVert}{\left\lVert{\hat{A}}^{-1}\right\rVert},&amp;\text{if ${\hat{A}}$ is invertible}\\
 +\infty,&amp;\text{otherwise}
 \end{cases}</span></p>
-<p>met hierin <span class="math inline">{\left\lVert{\hat{A}}\right\rVert}</span> de geïnduceerde norm geassocieerd aan de vectornorm (bewijs: eenvoudig, zie ook Py4Sci)</p></li>
+<p>met hierin <span class="math inline">{\left\lVert{\hat{A}}\right\rVert}</span> de geïnduceerde norm geassocieerd aan de vectornorm</p></li>
 </ul>
 </section>
 <section id="sensitiviteit-van-lineaire-systemen-1" class="level2">

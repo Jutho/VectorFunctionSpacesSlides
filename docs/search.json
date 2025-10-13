@@ -410,7 +410,7 @@
     "href": "slides/H3.html#recurrentierelatie-voorbeeld",
     "title": "Hoofdstuk 3 - Lineaire operatoren en eigenwaarden",
     "section": "Recurrentierelatie: voorbeeld",
-    "text": "Recurrentierelatie: voorbeeld\nBekendste voorbeeld: Fibonacci\nx_{n+2} = x_{n} + x_{n+1}\n\\Rightarrow \\lambda^2 = \\lambda + 1\n\\Rightarrow: \\lambda = \\frac{1\\pm \\sqrt{5}}{2}\nx_0 = 0, x_1 = 1 \\Rightarrow (x_n)_{n \\in {\\mathbb{N}}} = (0,1,1,2,3,5,8,13,\\ldots)"
+    "text": "Recurrentierelatie: voorbeeld\nBekendste voorbeeld: Fibonacci\nx_{n+2} = x_{n} + x_{n+1}\n\\Rightarrow \\lambda^2 = \\lambda + 1\n\\Rightarrow: \\lambda = \\frac{1\\pm \\sqrt{5}}{2}\nx_0 = 0, x_1 = 1 \\Rightarrow (x_n)_{n \\in {\\mathbb{N}}} = (0,1,1,2,3,5,8,13,\\ldots)\n\\Rightarrow x_n = \\frac{1}{\\sqrt{5}} \\left[\\left(\\frac{1 + \\sqrt{5}}{2}\\right)^n - \\left(\\frac{1 - \\sqrt{5}}{2}\\right)^n\\right]"
   },
   {
     "objectID": "slides/H3.html#continue-dynamische-systemen",
@@ -823,7 +823,7 @@
     "href": "slides/H4.html#continuïteit-in-genormeerde-vectorruimte",
     "title": "Hoofdstuk 4 - Normen en afstanden",
     "section": "Continuïteit in genormeerde vectorruimte",
-    "text": "Continuïteit in genormeerde vectorruimte\nWe beschouwen nu een genormeerde vectorruimte (V,{\\left\\lVert\\cdot\\right\\rVert}) als metrische ruimte met metriek d({v},{w}) = {\\left\\lVert{v}-{w}\\right\\rVert}\n\nDe norm {\\left\\lVert\\cdot\\right\\rVert}:V\\to {\\mathbb{R}} is zelf een continue afbeelding (bewijs aan bord)\n\\Rightarrow voor een convergente rij (v_n \\in V)_{n\\in{\\mathbb{N}}_0} is de geassocieerde rij ({\\left\\lVert{v}_n\\right\\rVert})_{n\\in{\\mathbb{N}}_0} convergent (en dus begrensd)\nVector optelling +:V \\times V \\to V en scalaire vermenigvuldiging {\\mathbb{F}}\\times V \\to V zijn continue afbeeldingen1"
+    "text": "Continuïteit in genormeerde vectorruimte\nWe beschouwen nu een genormeerde vectorruimte (V,{\\left\\lVert\\cdot\\right\\rVert}) als metrische ruimte met metriek d({v},{w}) = {\\left\\lVert{v}-{w}\\right\\rVert}\n\nDe norm {\\left\\lVert\\cdot\\right\\rVert}:V\\to {\\mathbb{R}} is zelf een continue afbeelding\n\\Rightarrow voor een convergente rij (v_n \\in V)_{n\\in{\\mathbb{N}}_0} is de geassocieerde rij ({\\left\\lVert{v}_n\\right\\rVert})_{n\\in{\\mathbb{N}}_0} convergent (en dus begrensd)\nVector optelling +:V \\times V \\to V en scalaire vermenigvuldiging {\\mathbb{F}}\\times V \\to V zijn continue afbeeldingen1"
   },
   {
     "objectID": "slides/H4.html#convergentie-in-functieruimten",
@@ -837,21 +837,21 @@
     "href": "slides/H4.html#equivalentie-van-normen",
     "title": "Hoofdstuk 4 - Normen en afstanden",
     "section": "Equivalentie van normen",
-    "text": "Equivalentie van normen\n\nTwee normen voor een vectorruimte V zijn equivalent als ze aanleiding geven tot dezelfde definitie van convergerende rijen (met dan dezelfde limietpunten)\nStelling: twee normen {\\left\\lVert\\cdot\\right\\rVert}_a en {\\left\\lVert\\cdot\\right\\rVert}_b zijn equivalent als en slechts als er constanten C \\geq c &gt; 0 bestaan zodat c {\\left\\lVert{v}\\right\\rVert}_a \\leq {\\left\\lVert{v}\\right\\rVert}_b \\leq C{\\left\\lVert{v}\\right\\rVert}_a voor alle {v}\\in V\n(bewijs aan bord)\nStelling: voor een eindig-dimensionale vectorruimte V zijn alle normen equivalent\n(bewijs aan bord)\nVoorbeelden voor \\boldsymbol{v} \\in {\\mathbb{F}}^n:\n\n\\frac{{\\left\\lVert\\boldsymbol{v}\\right\\rVert}_1}{\\sqrt{n}} \\leq {\\left\\lVert\\boldsymbol{v}\\right\\rVert}_2 \\leq {\\left\\lVert\\boldsymbol{v}\\right\\rVert}_1\n\\frac{{\\left\\lVert\\boldsymbol{v}\\right\\rVert}_1}{n} \\leq {\\left\\lVert\\boldsymbol{v}\\right\\rVert}_\\infty \\leq {\\left\\lVert\\boldsymbol{v}\\right\\rVert}_1"
+    "text": "Equivalentie van normen\n\nTwee normen voor een vectorruimte V zijn equivalent als ze aanleiding geven tot dezelfde definitie van convergerende rijen (met dan dezelfde limietpunten)\nStelling: twee normen {\\left\\lVert\\cdot\\right\\rVert}_a en {\\left\\lVert\\cdot\\right\\rVert}_b zijn equivalent als en slechts als er constanten C \\geq c &gt; 0 bestaan zodat c {\\left\\lVert{v}\\right\\rVert}_a \\leq {\\left\\lVert{v}\\right\\rVert}_b \\leq C{\\left\\lVert{v}\\right\\rVert}_a voor alle {v}\\in V\nStelling: voor een eindig-dimensionale vectorruimte V zijn alle normen equivalent\nVoorbeelden voor \\boldsymbol{v} \\in {\\mathbb{F}}^n:\n\n\\frac{{\\left\\lVert\\boldsymbol{v}\\right\\rVert}_1}{\\sqrt{n}} \\leq {\\left\\lVert\\boldsymbol{v}\\right\\rVert}_2 \\leq {\\left\\lVert\\boldsymbol{v}\\right\\rVert}_1\n\\frac{{\\left\\lVert\\boldsymbol{v}\\right\\rVert}_1}{n} \\leq {\\left\\lVert\\boldsymbol{v}\\right\\rVert}_\\infty \\leq {\\left\\lVert\\boldsymbol{v}\\right\\rVert}_1"
   },
   {
-    "objectID": "slides/H4.html#compacte-verzameling-geen-bewijzen",
-    "href": "slides/H4.html#compacte-verzameling-geen-bewijzen",
+    "objectID": "slides/H4.html#compacte-verzameling",
+    "href": "slides/H4.html#compacte-verzameling",
     "title": "Hoofdstuk 4 - Normen en afstanden",
-    "section": "Compacte verzameling (geen bewijzen)",
-    "text": "Compacte verzameling (geen bewijzen)\n\nEen verzameling U is compact als\n\nWanneer U wordt bedekt door open verzamelingen \\mathcal{V}=\\{V_1,V_2,\\ldots,\\} (i.e. U \\subseteq \\bigcup \\mathcal{V}), dan wordt U ook bedekt door een eindig aantal van die verzamelingen\nElke rij ({v}_n \\in U) heeft een convergerende deelrij met limietpunt in U\n\n(equivalente karakterisaties in metrische ruimten)\nStelling: in een eindig-dimensionale vectorruimte V is een deelverzameling U compact als en slechts als U begrensd en gesloten is (analoog aan Vectoranalayse)."
+    "section": "Compacte verzameling",
+    "text": "Compacte verzameling\n\nEen verzameling U is compact als\n\nWanneer U wordt bedekt door open verzamelingen \\mathcal{V}=\\{V_1,V_2,\\ldots,\\} (i.e. U \\subseteq \\bigcup \\mathcal{V}), dan wordt U ook bedekt door een eindig aantal van die verzamelingen\nElke rij ({v}_n \\in U) heeft een convergerende deelrij met limietpunt in U\n\n(equivalente karakterisaties in metrische ruimten)\nStelling: in een eindig-dimensionale vectorruimte V is een deelverzameling U compact als en slechts als U begrensd en gesloten is (analoog aan Vectoranalayse)."
   },
   {
-    "objectID": "slides/H4.html#compacte-verzamelingen-geen-bewijzen",
-    "href": "slides/H4.html#compacte-verzamelingen-geen-bewijzen",
+    "objectID": "slides/H4.html#compacte-verzamelingen",
+    "href": "slides/H4.html#compacte-verzamelingen",
     "title": "Hoofdstuk 4 - Normen en afstanden",
-    "section": "Compacte verzamelingen (geen bewijzen)",
-    "text": "Compacte verzamelingen (geen bewijzen)\nIn een oneindig-dimensionale vectorruimte zijn gesloten begrensde deelverzamelingen niet compact.\n\nVoorbeeld: C^0([a,b],{\\mathbb{F}}) met {\\left\\lVert\\cdot\\right\\rVert}_\\infty\n\nBeschouw de gesloten eenheidsbol: \\overline{B_1({o})} = \\{{v}\\in V|{\\left\\lVert{v}\\right\\rVert} \\leq 1\\}\nBeschouw de rij \\{f_n(x)=x^n\\} met elke {\\left\\lVert f_n\\right\\rVert} = 1. Er bestaat geen convergente deelrij.\n\nTechnisch (Riesz lemma): Beschouw een eigenlijke gesloten deelruimte W{\\preccurlyeq}V. Voor elke \\epsilon \\in (0,1) kunnen we een {v}_\\epsilon \\in V vinden waarvoor {\\left\\lVert{v}_\\epsilon\\right\\rVert}=1 en {\\left\\lVert{v}_\\epsilon - {w}\\right\\rVert} &gt; \\epsilon voor alle w \\in W."
+    "section": "Compacte verzamelingen",
+    "text": "Compacte verzamelingen\nIn een oneindig-dimensionale vectorruimte zijn gesloten begrensde deelverzamelingen niet compact.\n\nVoorbeeld: C^0([a,b],{\\mathbb{F}}) met {\\left\\lVert\\cdot\\right\\rVert}_\\infty\n\nBeschouw de gesloten eenheidsbol: \\overline{B_1({o})} = \\{{v}\\in V|{\\left\\lVert{v}\\right\\rVert} \\leq 1\\}\nBeschouw de rij \\{f_n(x)=x^n\\} met elke {\\left\\lVert f_n\\right\\rVert} = 1. Er bestaat geen convergente deelrij.\n\nTechnisch (Riesz lemma): Beschouw een eigenlijke gesloten deelruimte W{\\preccurlyeq}V. Voor elke \\epsilon \\in (0,1) kunnen we een {v}_\\epsilon \\in V vinden waarvoor {\\left\\lVert{v}_\\epsilon\\right\\rVert}=1 en {\\left\\lVert{v}_\\epsilon - {w}\\right\\rVert} &gt; \\epsilon voor alle w \\in W."
   },
   {
     "objectID": "slides/H4.html#cauchy-rijen-en-compleetheid",
@@ -861,15 +861,15 @@
     "text": "Cauchy rijen en compleetheid\n\nEen Cauchy-rij in een metrische ruimte (X,d) is een rij (x_n \\in X)_{n\\in{\\mathbb{N}}_0} zodat \\forall \\epsilon &gt;0: \\exists N_\\epsilon \\in {\\mathbb{N}} met dan n,m &gt; N_\\epsilon \\implies d(x_n,x_m) &lt; \\epsilon\n(intuïtief: elementen in de staart van de rij komen arbitrair dicht bij elkaar)\nEen convergente rij is altijd een Cauchy-rij\nAls elke Cauchy-rij convergeert wordt X (metrisch) compleet genoemd\nEen genormeerde vectorruimte (V,{\\left\\lVert\\cdot\\right\\rVert}) die metrisch compleet is wordt een Banachruimte genoemd"
   },
   {
-    "objectID": "slides/H4.html#banachruimten",
-    "href": "slides/H4.html#banachruimten",
+    "objectID": "slides/H4.html#banachruimten-1",
+    "href": "slides/H4.html#banachruimten-1",
     "title": "Hoofdstuk 4 - Normen en afstanden",
     "section": "Banachruimten",
     "text": "Banachruimten\nVoorbeelden:\n\nElke eindig-dimensionale vectorruimte, met om het even welke keuze van norm\nElke eindig-dimensionale deelruimte W van een oneindig-dimensionale vectorruimte V, met als norm de restrictie van {\\left\\lVert\\cdot\\right\\rVert} tot W\nDe ruimte \\ell^p({\\mathbb{F}}) van oneindige rijen met eindige p-norm (en dit voor alle p \\in [1,+\\infty])\nRuimte C^0([a,b],{\\mathbb{F}}) met maximumnorm/uniformnorm {\\left\\lVert\\cdot\\right\\rVert}_\\infty voor begrensd (compact) interval [a,b]"
   },
   {
-    "objectID": "slides/H4.html#banachruimten-1",
-    "href": "slides/H4.html#banachruimten-1",
+    "objectID": "slides/H4.html#banachruimten-2",
+    "href": "slides/H4.html#banachruimten-2",
     "title": "Hoofdstuk 4 - Normen en afstanden",
     "section": "Banachruimten",
     "text": "Banachruimten\nTegenvoorbeeld:\n\nRuimte {\\mathbb{F}}[x] van polynomen met norm {\\left\\lVert p\\right\\rVert}= \\max_{x \\in [a,b]} {\\left\\lvert p(x)\\right\\rvert}\n\np_n(x) = \\sum_{k=0}^n \\frac{1}{k!}x^k definieert een Cauchy-rij\n\\lim_{n\\to\\infty} p_n bestaat niet als polynoom\n\nHerinterpreteer {\\mathbb{F}}[x] als (eigenlijke) deelruimte van C^0([a,b],{\\mathbb{F}})\n\n\\lim_{n\\to\\infty} p_n = \\exp bestaat als continue functie\n\\Rightarrow een oneindige deelruimte van een Banachruimte is niet noodzakelijk gesloten"
@@ -889,8 +889,8 @@
     "text": "Banachruimten: complete verzameling\nVoorbeeld: stelling van Stone-Weierstrass\nEquivalente formuleringen:\n\nElke continue functie kan aribtrair dicht (in uniform-norm) benaderd worden door een veelterm\n{\\mathbb{F}}[x] is een dichte deelverzameling van C^0([a,b],{\\mathbb{F}})\n\\{x^n, n=0,1,2,\\ldots\\} is een complete verzameling voor C^0([a,b],{\\mathbb{F}})"
   },
   {
-    "objectID": "slides/H4.html#banachruimten-2",
-    "href": "slides/H4.html#banachruimten-2",
+    "objectID": "slides/H4.html#banachruimten-3",
+    "href": "slides/H4.html#banachruimten-3",
     "title": "Hoofdstuk 4 - Normen en afstanden",
     "section": "Banachruimten",
     "text": "Banachruimten\nVan rijen naar reeksen in genormeerde vectorruimten (V,{\\left\\lVert\\cdot\\right\\rVert})\n\nConvergentie van reeksen: als rij van partieelsommen convergeert\n\\sum_{n=1}^{+\\infty} {v}_n   ={v}\\iff  \\lim_{n\\to\\infty} \\sum_{k=1}^{n} {v}_k = {v}\\iff \\lim_{n\\to \\infty} {\\left\\lVert\\sum_{k=1}^{n} {v}_k - {v}\\right\\rVert} = 0\nEen reeks \\sum_{n=1}^{+\\infty} {v}_n is absoluut convergent als de reeks \\sum_{n=1}^{+\\infty} {\\left\\lVert{v}_n\\right\\rVert} convergeert\n(absolute convergentie is zeker geen nodige voorwaarde voor convergentie van een reeks)\nStelling: Een genormeerde vectorruimte is metrisch compleet (Banachruimte) als en slechts als absolute convergentie een voldoende voorwaarde is voor convergentie van een reeks (elke absoluut convergente reeks convergeert)."
@@ -914,7 +914,7 @@
     "href": "slides/H4.html#continuïteit-van-lineaire-afbeeldingen",
     "title": "Hoofdstuk 4 - Normen en afstanden",
     "section": "Continuïteit van lineaire afbeeldingen",
-    "text": "Continuïteit van lineaire afbeeldingen\nBeschouw genormeerde vectorruimten (V,{\\left\\lVert\\cdot\\right\\rVert}_V) en (W,{\\left\\lVert\\cdot\\right\\rVert}_W).\n\nEen lineaire afbeelding {\\hat{A}}\\in \\mathop{\\mathrm{Hom}}(V,W) wordt begrensd genoemd als er een constante C \\in {\\mathbb{R}}_{\\geq 0} bestaat zodat {\\left\\lVert{\\hat{A}}{v}\\right\\rVert}_W\\leq C {\\left\\lVert{v}\\right\\rVert}_V,\\quad\\forall {v}\\in V\nStelling: Voor een lineaire afbeelding {\\hat{A}}\\in \\mathop{\\mathrm{Hom}}(V,W) zijn volgende eigenschappen equivalent (bewijs aan bord)\n\n{\\hat{A}} is begrensd\n{\\hat{A}} is continu in de oorsprong\n{\\hat{A}} is overal continu (en zelfs uniform continu)"
+    "text": "Continuïteit van lineaire afbeeldingen\nBeschouw genormeerde vectorruimten (V,{\\left\\lVert\\cdot\\right\\rVert}_V) en (W,{\\left\\lVert\\cdot\\right\\rVert}_W).\n\nEen lineaire afbeelding {\\hat{A}}\\in \\mathop{\\mathrm{Hom}}(V,W) wordt begrensd genoemd als er een constante C \\in {\\mathbb{R}}_{\\geq 0} bestaat zodat {\\left\\lVert{\\hat{A}}{v}\\right\\rVert}_W\\leq C {\\left\\lVert{v}\\right\\rVert}_V,\\quad\\forall {v}\\in V\nStelling: Voor een lineaire afbeelding {\\hat{A}}\\in \\mathop{\\mathrm{Hom}}(V,W) zijn volgende eigenschappen equivalent\n\n{\\hat{A}} is begrensd\n{\\hat{A}} is continu in de oorsprong\n{\\hat{A}} is overal continu (en zelfs uniform continu)"
   },
   {
     "objectID": "slides/H4.html#begrensde-lineaire-afbeeldingen",
@@ -935,14 +935,14 @@
     "href": "slides/H4.html#geïnduceerde-norm-1",
     "title": "Hoofdstuk 4 - Normen en afstanden",
     "section": "Geïnduceerde norm",
-    "text": "Geïnduceerde norm\n\nVoor (V, {\\left\\lVert\\cdot\\right\\rVert}_V) een genormeerde ruimte en (W,{\\left\\lVert\\cdot\\right\\rVert}_W) een Banachruimte geldt dat de ruimte \\mathcal{B}(V,W) van begrensde lineaire afbeeldingen in combinatie met de geïnduceerde norm {\\left\\lVert\\cdot\\right\\rVert}_{V\\to W} zelf een Banachruimte is (geen bewijs)"
+    "text": "Geïnduceerde norm\n\nVoor (V, {\\left\\lVert\\cdot\\right\\rVert}_V) een genormeerde ruimte en (W,{\\left\\lVert\\cdot\\right\\rVert}_W) een Banachruimte geldt dat de ruimte \\mathcal{B}(V,W) van begrensde lineaire afbeeldingen in combinatie met de geïnduceerde norm {\\left\\lVert\\cdot\\right\\rVert}_{V\\to W} zelf een Banachruimte is"
   },
   {
     "objectID": "slides/H4.html#normen-voor-lineaire-operatoren",
     "href": "slides/H4.html#normen-voor-lineaire-operatoren",
     "title": "Hoofdstuk 4 - Normen en afstanden",
     "section": "Normen voor lineaire operatoren",
-    "text": "Normen voor lineaire operatoren\nBeschouw nu specifiek {\\hat{A}}\\in \\mathop{\\mathrm{End}}(V) voor een Banachruimte (V,{\\left\\lVert\\cdot\\right\\rVert}_V). De begrensde lineaire operatoren worden genoteerd als \\mathcal{B}(V) = \\mathcal{B}(V,V) {\\preccurlyeq}\\mathop{\\mathrm{End}}(V).\n\nEen norm {\\left\\lVert\\cdot\\right\\rVert} voor lineaire operatoren wordt submultiplicatief genoemd als {\\left\\lVert{\\hat{A}}\\cdot{\\hat{B}}\\right\\rVert} \\leq {\\left\\lVert{\\hat{A}}\\right\\rVert} {\\left\\lVert{\\hat{B}}\\right\\rVert}, \\quad \\forall {\\hat{A}},{\\hat{B}} \\in \\mathcal{B}(V)\nDe geinduceerde norm {\\left\\lVert{\\hat{A}}\\right\\rVert}_{V\\to V} is submultiplicatief (bewijs aan bord)\nVoor elke submultiplicatieve of ondergeschikte norm geldt {\\left\\lVert{\\hat{1}}\\right\\rVert} \\geq 1. Voor de geinduceerde norm is {\\left\\lVert{\\hat{1}}\\right\\rVert}=1."
+    "text": "Normen voor lineaire operatoren\nBeschouw nu specifiek {\\hat{A}}\\in \\mathop{\\mathrm{End}}(V) voor een Banachruimte (V,{\\left\\lVert\\cdot\\right\\rVert}_V). De begrensde lineaire operatoren worden genoteerd als \\mathcal{B}(V) = \\mathcal{B}(V,V) {\\preccurlyeq}\\mathop{\\mathrm{End}}(V).\n\nEen norm {\\left\\lVert\\cdot\\right\\rVert} voor lineaire operatoren wordt submultiplicatief genoemd als {\\left\\lVert{\\hat{A}}\\cdot{\\hat{B}}\\right\\rVert} \\leq {\\left\\lVert{\\hat{A}}\\right\\rVert} {\\left\\lVert{\\hat{B}}\\right\\rVert}, \\quad \\forall {\\hat{A}},{\\hat{B}} \\in \\mathcal{B}(V)\nDe geinduceerde norm {\\left\\lVert{\\hat{A}}\\right\\rVert}_{V\\to V} is submultiplicatief\nVoor elke submultiplicatieve of ondergeschikte norm geldt {\\left\\lVert{\\hat{1}}\\right\\rVert} \\geq 1. Voor de geinduceerde norm is {\\left\\lVert{\\hat{1}}\\right\\rVert}=1."
   },
   {
     "objectID": "slides/H4.html#normen-voor-matrices-1",
@@ -956,7 +956,7 @@
     "href": "slides/H4.html#consistente-matrixnormen",
     "title": "Hoofdstuk 4 - Normen en afstanden",
     "section": "Consistente matrixnormen",
-    "text": "Consistente matrixnormen\nGegeven een familie van normen \\{{\\left\\lVert\\cdot\\right\\rVert}^{(m \\times n)}: {\\mathbb{F}}^{m\\times n} \\to {\\mathbb{R}}_{\\geq 0}; \\forall m, n \\in {\\mathbb{N}}\\} voor matrices van alle groottes:\n\ndeze worden consistent genoemd als {\\left\\lVert{\\mathsf{A}}{\\mathsf{B}}\\right\\rVert}^{(m \\times n)} \\leq {\\left\\lVert{\\mathsf{A}}\\right\\rVert}^{(m \\times k)} {\\left\\lVert{\\mathsf{B}}\\right\\rVert}^{(k \\times n)} voor alle {\\mathsf{A}}\\in{\\mathbb{F}}^{m\\times k} en {\\mathsf{B}}\\in{\\mathbb{F}}^{k\\times n}\nde normen {\\left\\lVert{\\mathsf{A}}\\right\\rVert}_{p\\times p} zijn consistent (bewijs aan bord)\nde normen {\\left\\lVert{\\mathsf{A}}\\right\\rVert}_{\\text{F}}={\\left\\lVert\\text{vectorize}({\\mathsf{A}})\\right\\rVert}_2 zijn consistent (bewijs aan bord)\nde norm {\\left\\lVert\\text{vectorize}({\\mathsf{A}})\\right\\rVert}_\\infty is niet consistent"
+    "text": "Consistente matrixnormen\nGegeven een familie van normen \\{{\\left\\lVert\\cdot\\right\\rVert}^{(m \\times n)}: {\\mathbb{F}}^{m\\times n} \\to {\\mathbb{R}}_{\\geq 0}; \\forall m, n \\in {\\mathbb{N}}\\} voor matrices van alle groottes:\n\ndeze worden consistent genoemd als {\\left\\lVert{\\mathsf{A}}{\\mathsf{B}}\\right\\rVert}^{(m \\times n)} \\leq {\\left\\lVert{\\mathsf{A}}\\right\\rVert}^{(m \\times k)} {\\left\\lVert{\\mathsf{B}}\\right\\rVert}^{(k \\times n)} voor alle {\\mathsf{A}}\\in{\\mathbb{F}}^{m\\times k} en {\\mathsf{B}}\\in{\\mathbb{F}}^{k\\times n}\nde normen {\\left\\lVert{\\mathsf{A}}\\right\\rVert}_{p\\times p} zijn consistent\nde normen {\\left\\lVert{\\mathsf{A}}\\right\\rVert}_{\\text{F}}={\\left\\lVert\\text{vectorize}({\\mathsf{A}})\\right\\rVert}_2 zijn consistent\nde norm {\\left\\lVert\\text{vectorize}({\\mathsf{A}})\\right\\rVert}_\\infty is niet consistent"
   },
   {
     "objectID": "slides/H4.html#matrixnormen-terminologie",
@@ -970,14 +970,14 @@
     "href": "slides/H4.html#spectraalstraal",
     "title": "Hoofdstuk 4 - Normen en afstanden",
     "section": "Spectraalstraal",
-    "text": "Spectraalstraal\n\nDe spectraalstraal van een operator {\\hat{A}}\\in\\mathop{\\mathrm{End}}(V) is gedefinieerd als \\rho_{{\\hat{A}}} = \\sup\\{{\\left\\lvert\\lambda\\right\\rvert};\\lambda \\in \\sigma_{{\\hat{A}}}\\}\nVoor een submultiplicatieve norm en V eindig-dimensionaal geldt {\\left\\lVert{\\hat{A}}\\right\\rVert} \\geq \\rho_{{\\hat{A}}} (bewijs aan bord)\n\nook \\rho_{{\\hat{A}}}^n \\leq {\\left\\lVert{\\hat{A}}^n\\right\\rVert}\nals {\\hat{A}} inverteerbaar: {\\left\\lVert{\\hat{A}}\\right\\rVert}^{-1}\\leq \\rho_{{\\hat{A}}}^{-1}\n\nGelfand formule: \\rho_{\\hat{A}} =\\lim_{n\\to\\infty}{\\left\\lVert{\\hat{A}}^n\\right\\rVert}^{\\frac{1}{n}}\n(bewijs aan bord)"
+    "text": "Spectraalstraal\n\nDe spectraalstraal van een operator {\\hat{A}}\\in\\mathop{\\mathrm{End}}(V) is gedefinieerd als \\rho_{{\\hat{A}}} = \\sup\\{{\\left\\lvert\\lambda\\right\\rvert};\\lambda \\in \\sigma_{{\\hat{A}}}\\}\nVoor een submultiplicatieve norm en V eindig-dimensionaal geldt {\\left\\lVert{\\hat{A}}\\right\\rVert} \\geq \\rho_{{\\hat{A}}}\n\nook \\rho_{{\\hat{A}}}^n \\leq {\\left\\lVert{\\hat{A}}^n\\right\\rVert}\nals {\\hat{A}} inverteerbaar: {\\left\\lVert{\\hat{A}}\\right\\rVert}^{-1}\\leq \\rho_{{\\hat{A}}}^{-1}\n\nGelfand formule: \\rho_{\\hat{A}} =\\lim_{n\\to\\infty}{\\left\\lVert{\\hat{A}}^n\\right\\rVert}^{\\frac{1}{n}}"
   },
   {
     "objectID": "slides/H4.html#duale-normen",
     "href": "slides/H4.html#duale-normen",
     "title": "Hoofdstuk 4 - Normen en afstanden",
     "section": "Duale normen",
-    "text": "Duale normen\nGegeven een genormeerde vectorruimte (V,{\\left\\lVert\\cdot\\right\\rVert}):\n\ngeïnduceerde norm op \\mathcal{B}(V,{\\mathbb{F}}){\\preccurlyeq}V^\\ast wordt genoteerd als de duale norm {\\left\\lVert\\cdot\\right\\rVert}^\\ast: {\\left\\lVert\\xi\\right\\rVert}^\\ast = \\sup\\left\\{\\frac{{\\left\\lvert\\xi[v]\\right\\rvert}}{{\\left\\lVert v\\right\\rVert}} ; \\forall v \\in V, v \\neq {o}\\right\\}, \\quad \\forall \\xi \\in V^\\ast\nvoor V = {\\mathbb{F}} met Hölder norm {\\left\\lVert\\cdot\\right\\rVert}_p wordt de duale norm gegeven door {\\left\\lVert\\xi\\right\\rVert}_p^\\ast = {\\left\\lVert\\boldsymbol{\\xi}\\right\\rVert}_q waarbij 1/p+1/q=1, en \\boldsymbol{\\xi} de componenten van \\xi, i.e. zodat \\xi[\\boldsymbol{v}]=\\boldsymbol{\\xi}^{\\mathsf{T}}\\boldsymbol{v}\n(bewijs aan bord)"
+    "text": "Duale normen\nGegeven een genormeerde vectorruimte (V,{\\left\\lVert\\cdot\\right\\rVert}):\n\ngeïnduceerde norm op \\mathcal{B}(V,{\\mathbb{F}}){\\preccurlyeq}V^\\ast wordt genoteerd als de duale norm {\\left\\lVert\\cdot\\right\\rVert}^\\ast: {\\left\\lVert\\xi\\right\\rVert}^\\ast = \\sup\\left\\{\\frac{{\\left\\lvert\\xi[v]\\right\\rvert}}{{\\left\\lVert v\\right\\rVert}} ; \\forall v \\in V, v \\neq {o}\\right\\}, \\quad \\forall \\xi \\in V^\\ast\nvoor V = {\\mathbb{F}} met Hölder norm {\\left\\lVert\\cdot\\right\\rVert}_p wordt de duale norm gegeven door {\\left\\lVert\\xi\\right\\rVert}_p^\\ast = {\\left\\lVert\\boldsymbol{\\xi}\\right\\rVert}_q waarbij 1/p+1/q=1, en \\boldsymbol{\\xi} de componenten van \\xi, i.e. zodat \\xi[\\boldsymbol{v}]=\\boldsymbol{\\xi}^{\\mathsf{T}}\\boldsymbol{v}"
   },
   {
     "objectID": "slides/H4.html#functies-van-matrices-en-operatoren",
@@ -998,7 +998,7 @@
     "href": "slides/H4.html#sensitiviteit-van-lineaire-systemen",
     "title": "Hoofdstuk 4 - Normen en afstanden",
     "section": "Sensitiviteit van lineaire systemen",
-    "text": "Sensitiviteit van lineaire systemen\nLineair system {\\hat{A}}{x}= {y} met {x},{y}\\in V en {\\hat{A}} \\in \\mathop{\\mathrm{End}}(V) met V een genormeerde vectorruimte met norm {\\left\\lVert\\cdot\\right\\rVert}\n\nStel kleine variatie {y}\\to {y}+ \\Delta{y}\\Rightarrow {x}\\to {x}+ \\Delta {x}\n\\frac{{\\left\\lVert\\Delta {x}\\right\\rVert}}{{\\left\\lVert{x}\\right\\rVert}} \\leq \\kappa({\\hat{A}}) \\frac{{\\left\\lVert\\Delta{y}\\right\\rVert}}{{\\left\\lVert{y}\\right\\rVert}}\nmet het condititiegetal \\kappa({\\hat{A}}) gegeven door\n\\kappa({\\hat{A}}) = \\begin{cases}\n{\\left\\lVert{\\hat{A}}\\right\\rVert}{\\left\\lVert{\\hat{A}}^{-1}\\right\\rVert},&\\text{if ${\\hat{A}}$ is invertible}\\\\\n+\\infty,&\\text{otherwise}\n\\end{cases}\nmet hierin {\\left\\lVert{\\hat{A}}\\right\\rVert} de geïnduceerde norm geassocieerd aan de vectornorm (bewijs: eenvoudig, zie ook Py4Sci)"
+    "text": "Sensitiviteit van lineaire systemen\nLineair system {\\hat{A}}{x}= {y} met {x},{y}\\in V en {\\hat{A}} \\in \\mathop{\\mathrm{End}}(V) met V een genormeerde vectorruimte met norm {\\left\\lVert\\cdot\\right\\rVert}\n\nStel kleine variatie {y}\\to {y}+ \\Delta{y}\\Rightarrow {x}\\to {x}+ \\Delta {x}\n\\frac{{\\left\\lVert\\Delta {x}\\right\\rVert}}{{\\left\\lVert{x}\\right\\rVert}} \\leq \\kappa({\\hat{A}}) \\frac{{\\left\\lVert\\Delta{y}\\right\\rVert}}{{\\left\\lVert{y}\\right\\rVert}}\nmet het condititiegetal \\kappa({\\hat{A}}) gegeven door\n\\kappa({\\hat{A}}) = \\begin{cases}\n{\\left\\lVert{\\hat{A}}\\right\\rVert}{\\left\\lVert{\\hat{A}}^{-1}\\right\\rVert},&\\text{if ${\\hat{A}}$ is invertible}\\\\\n+\\infty,&\\text{otherwise}\n\\end{cases}\nmet hierin {\\left\\lVert{\\hat{A}}\\right\\rVert} de geïnduceerde norm geassocieerd aan de vectornorm"
   },
   {
     "objectID": "slides/H4.html#sensitiviteit-van-lineaire-systemen-1",
