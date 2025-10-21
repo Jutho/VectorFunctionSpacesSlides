@@ -774,7 +774,7 @@
     "href": "slides/H4.html#hölder-p-norm-1",
     "title": "Hoofdstuk 4 - Normen en afstanden",
     "section": "Hölder p-norm",
-    "text": "Hölder p-norm\n\n{\\left\\lVert\\cdot\\right\\rVert}_p is absoluut homogeen en positief definiet per constructie.\ndriehoeksongelijkheid kunnen we in een aantal stappen bewijzen, waarvoor we q = p/(p-1) invoeren, of dus 1/p + 1/q = 1 (inclusief p=0 \\leftrightarrow q=\\infty en vice versa):\n\nYoung’s ongelijkheid: \\forall a,b \\in {\\mathbb{R}}_{\\geq 0}: ab \\leq \\frac{a^p}{p} + \\frac{b^q}{q}\nHölder’s ongelijkheid: \\sum_{i=1}^n {\\left\\lvert v^i\\right\\rvert}{\\left\\lvert w^i\\right\\rvert} \\leq {\\left\\lVert v\\right\\rVert}_p {\\left\\lVert w\\right\\rVert}_q\nMinkowski’s ongelijkheid: {\\left\\lVert{v}+{w}\\right\\rVert}_p \\leq {\\left\\lVert{v}\\right\\rVert}_p + {\\left\\lVert{w}\\right\\rVert}_p"
+    "text": "Hölder p-norm\n\n{\\left\\lVert\\cdot\\right\\rVert}_p is absoluut homogeen en positief definiet per constructie.\ndriehoeksongelijkheid kunnen we in een aantal stappen bewijzen, waarvoor we q = p/(p-1) invoeren, of dus 1/p + 1/q = 1 (inclusief p=1 \\leftrightarrow q=\\infty en vice versa):\n\nYoung’s ongelijkheid: \\forall a,b \\in {\\mathbb{R}}_{\\geq 0}: ab \\leq \\frac{a^p}{p} + \\frac{b^q}{q}\nHölder’s ongelijkheid: \\sum_{i=1}^n {\\left\\lvert v^i\\right\\rvert}{\\left\\lvert w^i\\right\\rvert} \\leq {\\left\\lVert v\\right\\rVert}_p {\\left\\lVert w\\right\\rVert}_q\nMinkowski’s ongelijkheid: {\\left\\lVert{v}+{w}\\right\\rVert}_p \\leq {\\left\\lVert{v}\\right\\rVert}_p + {\\left\\lVert{w}\\right\\rVert}_p"
   },
   {
     "objectID": "slides/H4.html#hölder-p-norm-2",
@@ -802,7 +802,7 @@
     "href": "slides/H4.html#metrische-ruimten-1",
     "title": "Hoofdstuk 4 - Normen en afstanden",
     "section": "Metrische ruimten",
-    "text": "Metrische ruimten\nBelang van metrische ruimten is dat we concepten uit analyse van functies {\\mathbb{R}}\\to {\\mathbb{R}} kunnen veralgemenen:\n\nConvergentie van een rij (x_n \\in X)_{n \\in {\\mathbb{N}}_0}:\n\n\\lim_{n \\to \\infty} x_n = x \\iff \\lim_{n \\to \\infty} d(x_n,x) = 0\nof dus: \\forall \\epsilon &gt; 0, \\exists N_\\epsilon \\in {\\mathbb{N}}_0 zodat n \\geq N_\\epsilon \\implies d(x,x_n) \\leq \\epsilon\n\nContinuïteit van \\Phi:X \\to Y tussen metrische ruimten (X,d_X) en (Y,d_Y):\n\n\\Phi is continu in x \\in X: \\lim_{n \\to \\infty} \\Phi(x_n) = \\Phi(x) voor alle rijen (x_n)_{n \\in{\\mathbb{N}}_0} met \\lim_{n\\to\\infty} x_n = x\n\\Phi is continu in x \\in X: \\forall \\epsilon &gt; 0, \\exists \\delta_{\\epsilon} &gt; 0 zodat d_X(x',x) &lt; \\delta_\\epsilon \\implies d_Y(\\Phi(x'),\\Phi(x))&lt;\\epsilon\n\\Phi continu in volledig X: \\lim_{n\\to\\infty}\\Phi(x_n) = \\Phi(\\lim_{n\\to\\infty} x_n) voor alle convergerende rijen\n\n\n\n\nVoor een continue afbeelding \\Phi kan \\delta_\\epsilon in de tweede definitie nog steeds afhangen van x. Is dat niet nodig, dan heet \\Phi ook “uniform continu”."
+    "text": "Metrische ruimten\nBelang van metrische ruimten is dat we concepten uit analyse van functies {\\mathbb{R}}\\to {\\mathbb{R}} kunnen veralgemenen:\n\nConvergentie van een rij (x_n \\in X)_{n \\in {\\mathbb{N}}_0}:\n\n\\lim_{n \\to \\infty} x_n = x \\iff \\lim_{n \\to \\infty} d(x_n,x) = 0\nof dus: \\forall \\epsilon &gt; 0, \\exists N_\\epsilon \\in {\\mathbb{N}}_0 zodat n \\geq N_\\epsilon \\implies d(x,x_n) \\leq \\epsilon\n\nContinuïteit van \\Phi:X \\to Y tussen metrische ruimten (X,d_X) en (Y,d_Y):\n\n\\Phi is continu in x \\in X: \\lim_{n \\to \\infty} \\Phi(x_n) = \\Phi(x) voor alle rijen (x_n)_{n \\in{\\mathbb{N}}_0} met \\lim_{n\\to\\infty} x_n = x\n\\Phi is continu in x \\in X: \\forall \\epsilon &gt; 0, \\exists \\delta_{\\epsilon} &gt; 0 zodat d_X(x',x) &lt; \\delta_\\epsilon \\implies d_Y(\\Phi(x'),\\Phi(x))&lt;\\epsilon\n\\Phi continu in volledig X: \\lim_{n\\to\\infty}\\Phi(x_n) = \\Phi(\\lim_{n\\to\\infty} x_n) voor alle convergerende rijen1"
   },
   {
     "objectID": "slides/H4.html#metrische-ruimten-2",
@@ -816,21 +816,28 @@
     "href": "slides/H4.html#metrische-ruimten-3",
     "title": "Hoofdstuk 4 - Normen en afstanden",
     "section": "Metrische ruimten",
-    "text": "Metrische ruimten\nTopologische concepten in een metrische ruimte (X,d):\n\nOpen bol: B_r(x) = \\{x'\\in X| d(x,x') &lt; r\\}\nOpen (deel)verzameling S: \\forall x \\in S, \\exists r&gt;0 zodat B_r(x) \\subseteq S\nGesloten deelverzameling S als S^\\text{c} = X \\setminus S open is\n\n\\Rightarrow een convergerende rij (x_n \\in S) voldoet aan \\lim_{n\\to\\infty} x_n \\in S\nX and \\{\\} zijn zowel open als gesloten\n\nSluiting \\overline{S}: kleinste gesloten verzameling die S bevat = S en al zijn limietpunten\nDichte deelverzameling S: als \\overline{S} = X (bvb: \\overline{Q}={\\mathbb{R}})\nBegrensde verzameling S: \\exists M \\in {\\mathbb{R}}_{\\geq 0} zodat d(x,y)&lt;M, \\forall x,y \\in S\nCompacte verzameling: zie verderop\nX is separabel (scheidbaar?) als X een aftelbare dichte deelverzameling heeft"
+    "text": "Metrische ruimten\nTopologische concepten in een metrische ruimte (X,d):\n\nOpen bol: B_r(x) = \\{x'\\in X| d(x,x') &lt; r\\}\nOpen (deel)verzameling S: \\forall x \\in S, \\exists r&gt;0 zodat B_r(x) \\subseteq S\nGesloten deelverzameling S als S^\\text{c} = X \\setminus S open is\n\n\\Rightarrow een convergerende rij (x_n \\in S) voldoet aan \\lim_{n\\to\\infty} x_n \\in S\nX and \\{\\} zijn zowel open als gesloten\n\nSluiting \\overline{S}: kleinste gesloten verzameling die S bevat = S en al zijn limietpunten\nDichte deelverzameling S: als \\overline{S} = X (bvb: \\overline{\\mathbb{Q}}={\\mathbb{R}})\nBegrensde verzameling S: \\exists M \\in {\\mathbb{R}}_{\\geq 0} zodat d(x,y)&lt;M, \\forall x,y \\in S\nCompacte verzameling: zie verderop\nX is separabel (scheidbaar?) als X een aftelbare dichte deelverzameling heeft"
   },
   {
     "objectID": "slides/H4.html#continuïteit-in-genormeerde-vectorruimte",
     "href": "slides/H4.html#continuïteit-in-genormeerde-vectorruimte",
     "title": "Hoofdstuk 4 - Normen en afstanden",
     "section": "Continuïteit in genormeerde vectorruimte",
-    "text": "Continuïteit in genormeerde vectorruimte\nWe beschouwen nu een genormeerde vectorruimte (V,{\\left\\lVert\\cdot\\right\\rVert}) als metrische ruimte met metriek d({v},{w}) = {\\left\\lVert{v}-{w}\\right\\rVert}\n\nDe norm {\\left\\lVert\\cdot\\right\\rVert}:V\\to {\\mathbb{R}} is zelf een continue afbeelding\n\\Rightarrow voor een convergente rij (v_n \\in V)_{n\\in{\\mathbb{N}}_0} is de geassocieerde rij ({\\left\\lVert{v}_n\\right\\rVert})_{n\\in{\\mathbb{N}}_0} convergent (en dus begrensd)\nVector optelling +:V \\times V \\to V en scalaire vermenigvuldiging {\\mathbb{F}}\\times V \\to V zijn continue afbeeldingen1"
+    "text": "Continuïteit in genormeerde vectorruimte\nWe beschouwen nu een genormeerde vectorruimte (V,{\\left\\lVert\\cdot\\right\\rVert}) als metrische ruimte met metriek d({v},{w}) = {\\left\\lVert{v}-{w}\\right\\rVert}\n\nDe norm {\\left\\lVert\\cdot\\right\\rVert}:V\\to {\\mathbb{R}} is zelf een continue afbeelding\n\\Rightarrow voor een convergente rij (v_n \\in V)_{n\\in{\\mathbb{N}}_0} is de geassocieerde rij ({\\left\\lVert{v}_n\\right\\rVert})_{n\\in{\\mathbb{N}}_0} convergent (en dus begrensd)\nVector optelling +:V \\times V \\to V en scalaire vermenigvuldiging {\\mathbb{F}}\\times V \\to V zijn continue afbeeldingen2"
   },
   {
     "objectID": "slides/H4.html#convergentie-in-functieruimten",
     "href": "slides/H4.html#convergentie-in-functieruimten",
     "title": "Hoofdstuk 4 - Normen en afstanden",
     "section": "Convergentie in functieruimten",
-    "text": "Convergentie in functieruimten\nBeschouw opnieuw C^0([a,b],{\\mathbb{F}}) met nu de p=\\infty-norm, welke zich herleidt tot:2\n{\\left\\lVert f\\right\\rVert}_p = \\sup_{x\\in [a,b]}{\\left\\lvert f(x)\\right\\rvert} = \\max_{x\\in[a,b]}{\\left\\lvert f(x)\\right\\rvert}\nConvergentie: \\lim_{n\\to \\infty} f_n = f als\n\n\\max_{x\\in [a,b]} {\\left\\lvert f_n(x)-f(x)\\right\\rvert} &lt; \\epsilon voor alle n &gt; N_\\epsilon\n{\\left\\lvert f_n(x)-f(x)\\right\\rvert} &lt; \\epsilon voor alle x \\in [a,b] voor alle n &gt; N_\\epsilon\n\\Rightarrow uniforme convergentie van een reeks\n\\Rightarrow {\\left\\lVert f\\right\\rVert}_{\\infty} voor continue functies wordt de uniform-norm genoemd\ncontrast met puntsgewijze convergentie:\n{\\left\\lvert f_n(x)-f(x)\\right\\rvert} &lt; \\epsilon voor alle n &gt; N_{\\epsilon,x} voor alle x \\in [a,b]\nkan niet worden bekomen met behulp van norm (tegenvoorbeeld aan bord)"
+    "text": "Convergentie in functieruimten\nBeschouw opnieuw C^0([a,b],{\\mathbb{F}}) met nu de p=\\infty-norm, welke zich herleidt tot:3\n{\\left\\lVert f\\right\\rVert}_p = \\sup_{x\\in [a,b]}{\\left\\lvert f(x)\\right\\rvert} = \\max_{x\\in[a,b]}{\\left\\lvert f(x)\\right\\rvert}\nConvergentie: \\lim_{n\\to \\infty} f_n = f als\n\n\\max_{x\\in [a,b]} {\\left\\lvert f_n(x)-f(x)\\right\\rvert} &lt; \\epsilon voor alle n &gt; N_\\epsilon\n{\\left\\lvert f_n(x)-f(x)\\right\\rvert} &lt; \\epsilon voor alle x \\in [a,b] voor alle n &gt; N_\\epsilon\n\\Rightarrow uniforme convergentie van een reeks\n\\Rightarrow {\\left\\lVert f\\right\\rVert}_{\\infty} voor continue functies wordt de uniform-norm genoemd\ncontrast met puntsgewijze convergentie:\n{\\left\\lvert f_n(x)-f(x)\\right\\rvert} &lt; \\epsilon voor alle n &gt; N_{\\epsilon,x} voor alle x \\in [a,b]\nkan niet worden bekomen met behulp van norm"
+  },
+  {
+    "objectID": "slides/H4.html#convergentie-in-functieruimten-voorbeeld",
+    "href": "slides/H4.html#convergentie-in-functieruimten-voorbeeld",
+    "title": "Hoofdstuk 4 - Normen en afstanden",
+    "section": "Convergentie in functieruimten (voorbeeld)",
+    "text": "Convergentie in functieruimten (voorbeeld)\nBeschouw de rij (f_n \\in C^0([0,1],{\\mathbb{R}}))_{n \\in {\\mathbb{N}}_0} met f_n(x) = \\exp(-n x)\n\n(f_n) convergeert puntsgewijs naar de (niet-continue!) functie\ng(x) = \\begin{cases} 1, x=0 \\\\ 0, x \\in (0,1]\\end{cases}\n(f_n) convergeert volgens de p=1 norm naar de continue functie\nh(x) = 0, \\forall x \\in [0,1]\n(f_n) convergeert niet volgens de p= \\infty norm"
   },
   {
     "objectID": "slides/H4.html#equivalentie-van-normen",
@@ -851,7 +858,7 @@
     "href": "slides/H4.html#compacte-verzamelingen",
     "title": "Hoofdstuk 4 - Normen en afstanden",
     "section": "Compacte verzamelingen",
-    "text": "Compacte verzamelingen\nIn een oneindig-dimensionale vectorruimte zijn gesloten begrensde deelverzamelingen niet compact.\n\nVoorbeeld: C^0([a,b],{\\mathbb{F}}) met {\\left\\lVert\\cdot\\right\\rVert}_\\infty\n\nBeschouw de gesloten eenheidsbol: \\overline{B_1({o})} = \\{{v}\\in V|{\\left\\lVert{v}\\right\\rVert} \\leq 1\\}\nBeschouw de rij \\{f_n(x)=x^n\\} met elke {\\left\\lVert f_n\\right\\rVert} = 1. Er bestaat geen convergente deelrij.\n\nTechnisch (Riesz lemma): Beschouw een eigenlijke gesloten deelruimte W{\\preccurlyeq}V. Voor elke \\epsilon \\in (0,1) kunnen we een {v}_\\epsilon \\in V vinden waarvoor {\\left\\lVert{v}_\\epsilon\\right\\rVert}=1 en {\\left\\lVert{v}_\\epsilon - {w}\\right\\rVert} &gt; \\epsilon voor alle w \\in W."
+    "text": "Compacte verzamelingen\nIn een oneindig-dimensionale vectorruimte zijn gesloten begrensde deelverzamelingen niet noodzakelijkcompact.\n\nVoorbeeld: C^0([a,b],{\\mathbb{F}}) met {\\left\\lVert\\cdot\\right\\rVert}_\\infty\n\nBeschouw de gesloten eenheidsbol: \\overline{B_1({o})} = \\{{v}\\in V|{\\left\\lVert{v}\\right\\rVert} \\leq 1\\}\nBeschouw de rij \\{f_n(x)=x^n\\} met elke {\\left\\lVert f_n\\right\\rVert} = 1. Er bestaat geen convergente deelrij.\n\nTechnisch (Riesz lemma): Beschouw een eigenlijke gesloten deelruimte W{\\preccurlyeq}V. Voor elke \\epsilon \\in (0,1) kunnen we een {v}_\\epsilon \\in V vinden waarvoor {\\left\\lVert{v}_\\epsilon\\right\\rVert}=1 en {\\left\\lVert{v}_\\epsilon - {w}\\right\\rVert} &gt; \\epsilon voor alle w \\in W."
   },
   {
     "objectID": "slides/H4.html#cauchy-rijen-en-compleetheid",
@@ -879,14 +886,14 @@
     "href": "slides/H4.html#banachruimten-complete-verzameling",
     "title": "Hoofdstuk 4 - Normen en afstanden",
     "section": "Banachruimten: complete verzameling",
-    "text": "Banachruimten: complete verzameling\nAangezien (oneindig-dimensionale) deelruimten W {\\preccurlyeq}V open kunnen zijn, kunnen we hun sluiting \\overline{W} bekijken.\n\nZoals eerder: als \\overline{W}=V, dan is W een dichte deelruimte\nElke vector {v}\\in V kan arbitrair dicht benaderd worden door een vector {w}\\in W:\n\\forall \\epsilon &gt; 0, {v}\\in V : \\exists {w}\\in W zodat {\\left\\lVert{v}-{w}\\right\\rVert}&lt;\\epsilon\nEen verzameling S waarvoor {\\mathbb{F}}S dicht is, of dus \\overline{{\\mathbb{F}}S}=V, wordt een totale, fundamentele of complete verzameling genoemd\n(Contrast met H1: complete verzameling als {\\mathbb{F}}S = V)"
+    "text": "Banachruimten: complete verzameling\nAangezien (oneindig-dimensionale) deelruimten W {\\preccurlyeq}V niet noodzakelijk gesloten zijn (in tegenstelling tot eindig-dimensionale deelruimten), kunnen we hun sluiting \\overline{W} bekijken.\n\nZoals eerder: als \\overline{W}=V, dan is W een dichte deelruimte\nElke vector {v}\\in V kan arbitrair dicht benaderd worden door een vector {w}\\in W:\n\\forall \\epsilon &gt; 0, {v}\\in V : \\exists {w}\\in W zodat {\\left\\lVert{v}-{w}\\right\\rVert}&lt;\\epsilon\nEen verzameling S waarvoor {\\mathbb{F}}S dicht is, of dus \\overline{{\\mathbb{F}}S}=V, wordt een totale, fundamentele of complete verzameling genoemd\n(Contrast met H1: complete verzameling als {\\mathbb{F}}S = V)"
   },
   {
     "objectID": "slides/H4.html#banachruimten-complete-verzameling-1",
     "href": "slides/H4.html#banachruimten-complete-verzameling-1",
     "title": "Hoofdstuk 4 - Normen en afstanden",
     "section": "Banachruimten: complete verzameling",
-    "text": "Banachruimten: complete verzameling\nVoorbeeld: stelling van Stone-Weierstrass\nEquivalente formuleringen:\n\nElke continue functie kan aribtrair dicht (in uniform-norm) benaderd worden door een veelterm\n{\\mathbb{F}}[x] is een dichte deelverzameling van C^0([a,b],{\\mathbb{F}})\n\\{x^n, n=0,1,2,\\ldots\\} is een complete verzameling voor C^0([a,b],{\\mathbb{F}})"
+    "text": "Banachruimten: complete verzameling\nVoorbeeld: stelling van Stone-Weierstrass\nEquivalente formuleringen:\n\nElke continue functie kan arbitrair dicht (in uniform-norm) benaderd worden door een veelterm\n{\\mathbb{F}}[x] is een dichte deelverzameling van C^0([a,b],{\\mathbb{F}})\n\\{x^n, n=0,1,2,\\ldots\\} is een complete verzameling voor C^0([a,b],{\\mathbb{F}})"
   },
   {
     "objectID": "slides/H4.html#banachruimten-3",
@@ -900,7 +907,7 @@
     "href": "slides/H4.html#banachruimten-en-basis",
     "title": "Hoofdstuk 4 - Normen en afstanden",
     "section": "Banachruimten en basis",
-    "text": "Banachruimten en basis\nConvergentie van rijen en reeksen laat een nieuw concept van basis toe in Banachruimten (V,{\\left\\lVert\\cdot\\right\\rVert})\n\nEen Schauder basis is een rij ({e}_n \\in V)_{n \\in {\\mathbb{N}}_0} zodat voor elke vector {v}\\in V een rij van coefficiënten (a^n \\in {\\mathbb{F}})_{n \\in {\\mathbb{N}}_0} bestaat, zodat de reeks \\sum_{n =1}^{+\\infty} a^n {e}_n convergeert naar {v}\nDe rij (x^n)_{n \\in {\\mathbb{N}}} is geen (!!) Schauder basis voor (C^0([a,b],{\\mathbb{F}}), {\\left\\lVert\\cdot\\right\\rVert}_{\\infty}):\n\neen reeks \\sum_{n=0}^{+\\infty} a_n x^n die convergeert met betrekking tot {\\left\\lVert\\cdot\\right\\rVert}_{\\infty} (uniforme convergentie) geeft sowieso aanleiding tot een analytische functie\neen continue functie zoals {\\left\\lvert x\\right\\rvert} heeft geen convergente Taylorreeks\n\n\n\\Rightarrow allerlei technische subtiliteiten die verdwijnen in het geval van Hilbertruimten (zie volgend hoofdstuk)"
+    "text": "Banachruimten en basis\nConvergentie van rijen en reeksen laat een nieuw concept van basis toe in Banachruimten (V,{\\left\\lVert\\cdot\\right\\rVert})\n\nEen Schauder basis is een rij ({e}_n \\in V)_{n \\in {\\mathbb{N}}_0} zodat voor elke vector {v}\\in V een rij van coefficiënten (a^n \\in {\\mathbb{F}})_{n \\in {\\mathbb{N}}_0} bestaat, zodat de reeks \\sum_{n =1}^{+\\infty} a^n {e}_n convergeert naar {v}\nDe rij (x^n)_{n \\in {\\mathbb{N}}} is geen (!!) Schauder basis voor (C^0([a,b],{\\mathbb{F}}), {\\left\\lVert\\cdot\\right\\rVert}_{\\infty}):\n\neen reeks \\sum_{n=0}^{+\\infty} a_n x^n die convergeert met betrekking tot {\\left\\lVert\\cdot\\right\\rVert}_{\\infty} (uniforme convergentie) geeft sowieso aanleiding tot een analytische functie\neen niet-analytische continue functie zoals {\\left\\lvert x\\right\\rvert} heeft geen Taylorreeks die in het volledige interval convergent is\n\n\n\\Rightarrow allerlei technische subtiliteiten die verdwijnen in het geval van Hilbertruimten (zie volgend hoofdstuk)"
   },
   {
     "objectID": "slides/H4.html#normen-voor-matrices",
@@ -1019,7 +1026,7 @@
     "href": "slides/H4.html#footnotes",
     "title": "Hoofdstuk 4 - Normen en afstanden",
     "section": "Footnotes",
-    "text": "Footnotes\n\n\nHiervoor hebben we het volgende nodig: de productverzameling X \\times Y van twee metrische ruimten (X, d_X) en (Y, d_Y) is metrische ruimte, bevoorbeeld met metriek d_{X,Y}((x,y), (x',y')) = d_X(x,x') + d_Y(y,y')}↩︎\nExtremumstelling van Weierstrass: \\sup wordt \\max voor continue f begrensd interval [a,b]↩︎"
+    "text": "Footnotes\n\n\nVoor een continue afbeelding \\Phi kan \\delta_\\epsilon in de tweede definitie nog steeds afhangen van x. Is dat niet nodig, dan heet \\Phi ook “uniform continu”.↩︎\nHiervoor hebben we het volgende nodig: de productverzameling X \\times Y van twee metrische ruimten (X, d_X) en (Y, d_Y) is metrische ruimte, bevoorbeeld met metriek d_{X,Y}((x,y), (x',y')) = d_X(x,x') + d_Y(y,y')}↩︎\nExtremumstelling van Weierstrass: \\sup wordt \\max voor continue f begrensd interval [a,b]↩︎"
   },
   {
     "objectID": "slides/H7.html",
@@ -1894,7 +1901,7 @@
     "href": "index.html",
     "title": "Vector and Function Spaces – Slides",
     "section": "",
-    "text": "Order By\n      Default\n      \n        Date - Oldest\n      \n      \n        Date - Newest\n      \n      \n        Title\n      \n      \n        Author\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\nDate\n\n\n\nTitle\n\n\n\nAuthor\n\n\n\n\n\n\n\n\nSep 22, 2025\n\n\nHoofdstuk 1 - Elementaire wiskundige structuren\n\n\nJutho Haegeman\n\n\n\n\n\n\nSep 23, 2025\n\n\nHoofdstuk 2 - Lineaire afbeeldingen\n\n\nJutho Haegeman\n\n\n\n\n\n\nSep 30, 2025\n\n\nHoofdstuk 3 - Lineaire operatoren en eigenwaarden\n\n\nJutho Haegeman\n\n\n\n\n\n\nOct 15, 2024\n\n\nHoofdstuk 4 - Normen en afstanden\n\n\nJutho Haegeman\n\n\n\n\n\n\nNov 12, 2024\n\n\nHoofdstuk 5 - Inwendig product en orthogonaliteit\n\n\nJutho Haegeman\n\n\n\n\n\n\nNov 12, 2024\n\n\nHoofdstuk 6 - Unitaire gelijkvormigheid en unitaire equivalentie\n\n\nJutho Haegeman\n\n\n\n\n\n\nDec 6, 2024\n\n\nHoofdstuk 7 - Functieruimten\n\n\nJutho Haegeman\n\n\n\n\n\n\nDec 6, 2024\n\n\nHoofdstuk 8 - Lineaire differentiaaloperatoren\n\n\nJutho Haegeman\n\n\n\n\n\n\nDec 5, 2023\n\n\nHoofdstuk 9 - Fourieranalyse en distributies\n\n\nJutho Haegeman\n\n\n\n\n\n\nNo matching items"
+    "text": "Order By\n      Default\n      \n        Date - Oldest\n      \n      \n        Date - Newest\n      \n      \n        Title\n      \n      \n        Author\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\nDate\n\n\n\nTitle\n\n\n\nAuthor\n\n\n\n\n\n\n\n\nSep 22, 2025\n\n\nHoofdstuk 1 - Elementaire wiskundige structuren\n\n\nJutho Haegeman\n\n\n\n\n\n\nSep 23, 2025\n\n\nHoofdstuk 2 - Lineaire afbeeldingen\n\n\nJutho Haegeman\n\n\n\n\n\n\nSep 30, 2025\n\n\nHoofdstuk 3 - Lineaire operatoren en eigenwaarden\n\n\nJutho Haegeman\n\n\n\n\n\n\nOct 21, 2025\n\n\nHoofdstuk 4 - Normen en afstanden\n\n\nJutho Haegeman\n\n\n\n\n\n\nNov 12, 2024\n\n\nHoofdstuk 5 - Inwendig product en orthogonaliteit\n\n\nJutho Haegeman\n\n\n\n\n\n\nNov 12, 2024\n\n\nHoofdstuk 6 - Unitaire gelijkvormigheid en unitaire equivalentie\n\n\nJutho Haegeman\n\n\n\n\n\n\nDec 6, 2024\n\n\nHoofdstuk 7 - Functieruimten\n\n\nJutho Haegeman\n\n\n\n\n\n\nDec 6, 2024\n\n\nHoofdstuk 8 - Lineaire differentiaaloperatoren\n\n\nJutho Haegeman\n\n\n\n\n\n\nDec 5, 2023\n\n\nHoofdstuk 9 - Fourieranalyse en distributies\n\n\nJutho Haegeman\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "slides/H9.html",

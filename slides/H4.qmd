@@ -1,7 +1,7 @@
 ---
 title: "Hoofdstuk 4 - Normen en afstanden"
 author: "Jutho Haegeman"
-date: "10/15/2024"
+date: "10/21/2025"
 # format:
 #   revealjs:
 #     theme: solarized
@@ -209,7 +209,7 @@ Speciale gevallen:
 
 * $\norm{\cdot}_p$ is absoluut homogeen en positief definiet per constructie.
 
-* driehoeksongelijkheid kunnen we in een aantal stappen bewijzen, waarvoor we $q = p/(p-1)$ invoeren, of dus $1/p + 1/q = 1$ (inclusief $p=0 \leftrightarrow q=\infty$ en vice versa):
+* driehoeksongelijkheid kunnen we in een aantal stappen bewijzen, waarvoor we $q = p/(p-1)$ invoeren, of dus $1/p + 1/q = 1$ (inclusief $p=1 \leftrightarrow q=\infty$ en vice versa):
 
   * Young's ongelijkheid: $\forall a,b \in \bbR_{\geq 0}: ab \leq \frac{a^p}{p} + \frac{b^q}{q}$
   * Hölder's ongelijkheid: $\sum_{i=1}^n \abs{v^i}\abs{w^i} \leq \norm{v}_p \norm{w}_q$
@@ -271,11 +271,7 @@ Belang van metrische ruimten is dat we concepten uit analyse van functies $\bbR 
 
   * $\Phi$ is continu in $x \in X$: $\lim_{n \to \infty} \Phi(x_n) = \Phi(x)$ voor alle rijen $(x_n)_{n \in\bbN_0}$ met $\lim_{n\to\infty} x_n = x$
   * $\Phi$ is continu in $x \in X$: $\forall \epsilon > 0$, $\exists \delta_{\epsilon} > 0$ zodat $d_X(x',x) < \delta_\epsilon \implies d_Y(\Phi(x'),\Phi(x))<\epsilon$
-  * $\Phi$ continu in volledig $X$: $\lim_{n\to\infty}\Phi(x_n) = \Phi(\lim_{n\to\infty} x_n)$ voor alle convergerende rijen 
-
-::: aside
-Voor een continue afbeelding $\Phi$ kan $\delta_\epsilon$ in de tweede definitie nog steeds afhangen van $x$. Is dat niet nodig, dan heet $\Phi$ ook "uniform continu".
-:::
+  * $\Phi$ continu in volledig $X$: $\lim_{n\to\infty}\Phi(x_n) = \Phi(\lim_{n\to\infty} x_n)$ voor alle convergerende rijen^[Voor een continue afbeelding $\Phi$ kan $\delta_\epsilon$ in de tweede definitie nog steeds afhangen van $x$. Is dat niet nodig, dan heet $\Phi$ ook "uniform continu".]
 
 ## Metrische ruimten
 
@@ -294,7 +290,7 @@ Topologische concepten in een metrische ruimte $(X,d)$:
   * $\Rightarrow$ een convergerende rij $(x_n \in S)$ voldoet aan $\lim_{n\to\infty} x_n \in S$
   * $X$ and $\{\}$ zijn zowel open als gesloten
 * Sluiting $\overline{S}$: kleinste gesloten verzameling die $S$ bevat = $S$ en al zijn limietpunten
-* Dichte deelverzameling $S$: als $\overline{S} = X$ (bvb: $\overline{Q}=\bbR$)
+* Dichte deelverzameling $S$: als $\overline{S} = X$ (bvb: $\overline{\mathbb{Q}}=\bbR$)
 * Begrensde verzameling $S$: $\exists M \in \bbR_{\geq 0}$ zodat $d(x,y)<M, \forall x,y \in S$
 * Compacte verzameling: zie verderop
 * $X$ is **separabel** (scheidbaar?) als $X$ een aftelbare dichte deelverzameling heeft
@@ -327,7 +323,20 @@ Convergentie: $\lim_{n\to \infty} f_n = f$ als
 
   $\abs{f_n(x)-f(x)} < \epsilon$ voor alle $n > N_{\epsilon,x}$ voor alle $x \in [a,b]$
 
-  kan niet worden bekomen met behulp van norm (tegenvoorbeeld aan bord)
+  kan niet worden bekomen met behulp van norm
+
+## Convergentie in functieruimten (voorbeeld) {.smaller}
+
+Beschouw de rij $(f_n \in C^0([0,1],\bbR))_{n \in \bbN_0}$ met $f_n(x) = \exp(-n x)$
+
+* $(f_n)$ convergeert puntsgewijs naar de (niet-continue!) functie
+  
+  $g(x) = \begin{cases} 1, x=0 \\ 0, x \in (0,1]\end{cases}$
+* $(f_n)$ convergeert volgens de $p=1$ norm naar de continue functie
+  
+  $h(x) = 0, \forall x \in [0,1]$
+* $(f_n)$ convergeert niet volgens de $p= \infty$ norm
+
 
 ## Equivalentie van normen {.smaller}
 
@@ -356,7 +365,7 @@ Convergentie: $\lim_{n\to \infty} f_n = f$ als
 
 ## Compacte verzamelingen
 
-In een oneindig-dimensionale vectorruimte zijn gesloten begrensde deelverzamelingen niet compact.
+In een oneindig-dimensionale vectorruimte zijn gesloten begrensde deelverzamelingen niet noodzakelijkcompact.
 
 * Voorbeeld: $C^0([a,b],\bbF)$ met $\norm{\cdot}_\infty$
   
@@ -401,7 +410,7 @@ Tegenvoorbeeld:
 
 ## Banachruimten: complete verzameling
 
-Aangezien (oneindig-dimensionale) deelruimten $W \subspace V$ open kunnen zijn, kunnen we hun sluiting $\overline{W}$ bekijken. 
+Aangezien (oneindig-dimensionale) deelruimten $W \subspace V$ niet noodzakelijk gesloten zijn (in tegenstelling tot eindig-dimensionale deelruimten), kunnen we hun sluiting $\overline{W}$ bekijken. 
 
 * Zoals eerder: als $\overline{W}=V$, dan is $W$ een **dichte** deelruimte
 
@@ -419,7 +428,7 @@ Voorbeeld: stelling van Stone-Weierstrass
 
 Equivalente formuleringen:
 
-* Elke continue functie kan aribtrair dicht (in uniform-norm) benaderd worden door een veelterm
+* Elke continue functie kan arbitrair dicht (in uniform-norm) benaderd worden door een veelterm
 * $\bbF[x]$ is een dichte deelverzameling van $C^0([a,b],\bbF)$
 * $\{x^n, n=0,1,2,\ldots\}$ is een complete verzameling voor $C^0([a,b],\bbF)$
 
@@ -447,7 +456,7 @@ Convergentie van rijen en reeksen laat een nieuw concept van basis toe in Banach
 
   * een reeks $\sum_{n=0}^{+\infty} a_n x^n$ die convergeert met betrekking tot $\norm{\cdot}_{\infty}$ (uniforme convergentie) geeft sowieso aanleiding tot een analytische functie
 
-  * een continue functie zoals $\abs{x}$ heeft geen convergente Taylorreeks
+  * een niet-analytische continue functie zoals $\abs{x}$ heeft geen Taylorreeks die in het volledige interval convergent is
 
 $\Rightarrow$ allerlei technische subtiliteiten die verdwijnen in het geval van Hilbertruimten (zie volgend hoofdstuk)
 
