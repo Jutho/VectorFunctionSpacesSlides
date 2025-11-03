@@ -963,7 +963,7 @@
     "href": "slides/H4.html#consistente-matrixnormen",
     "title": "Hoofdstuk 4 - Normen en afstanden",
     "section": "Consistente matrixnormen",
-    "text": "Consistente matrixnormen\nGegeven een familie van normen \\{{\\left\\lVert\\cdot\\right\\rVert}^{(m \\times n)}: {\\mathbb{F}}^{m\\times n} \\to {\\mathbb{R}}_{\\geq 0}; \\forall m, n \\in {\\mathbb{N}}\\} voor matrices van alle groottes:\n\ndeze worden consistent genoemd als {\\left\\lVert{\\mathsf{A}}{\\mathsf{B}}\\right\\rVert}^{(m \\times n)} \\leq {\\left\\lVert{\\mathsf{A}}\\right\\rVert}^{(m \\times k)} {\\left\\lVert{\\mathsf{B}}\\right\\rVert}^{(k \\times n)} voor alle {\\mathsf{A}}\\in{\\mathbb{F}}^{m\\times k} en {\\mathsf{B}}\\in{\\mathbb{F}}^{k\\times n}\nde normen {\\left\\lVert{\\mathsf{A}}\\right\\rVert}_{p\\times p} zijn consistent\nde normen {\\left\\lVert{\\mathsf{A}}\\right\\rVert}_{\\text{F}}={\\left\\lVert\\text{vectorize}({\\mathsf{A}})\\right\\rVert}_2 zijn consistent\nde norm {\\left\\lVert\\text{vectorize}({\\mathsf{A}})\\right\\rVert}_\\infty is niet consistent"
+    "text": "Consistente matrixnormen\nGegeven een familie van normen \\{{\\left\\lVert\\cdot\\right\\rVert}^{(m \\times n)}: {\\mathbb{F}}^{m\\times n} \\to {\\mathbb{R}}_{\\geq 0}; \\forall m, n \\in {\\mathbb{N}}\\} voor matrices van alle groottes:\n\ndeze worden consistent genoemd als {\\left\\lVert{\\mathsf{A}}{\\mathsf{B}}\\right\\rVert}^{(m \\times n)} \\leq {\\left\\lVert{\\mathsf{A}}\\right\\rVert}^{(m \\times k)} {\\left\\lVert{\\mathsf{B}}\\right\\rVert}^{(k \\times n)} voor alle {\\mathsf{A}}\\in{\\mathbb{F}}^{m\\times k} en {\\mathsf{B}}\\in{\\mathbb{F}}^{k\\times n}\nde normen {\\left\\lVert{\\mathsf{A}}\\right\\rVert}_{p\\to p} zijn consistent\nde norm {\\left\\lVert{\\mathsf{A}}\\right\\rVert}_{\\text{F}}={\\left\\lVert\\text{vectorize}({\\mathsf{A}})\\right\\rVert}_2 is consistent\nde norm {\\left\\lVert\\text{vectorize}({\\mathsf{A}})\\right\\rVert}_\\infty is niet consistent"
   },
   {
     "objectID": "slides/H4.html#matrixnormen-terminologie",
@@ -1901,7 +1901,7 @@
     "href": "index.html",
     "title": "Vector and Function Spaces – Slides",
     "section": "",
-    "text": "Order By\n      Default\n      \n        Date - Oldest\n      \n      \n        Date - Newest\n      \n      \n        Title\n      \n      \n        Author\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\nDate\n\n\n\nTitle\n\n\n\nAuthor\n\n\n\n\n\n\n\n\nSep 22, 2025\n\n\nHoofdstuk 1 - Elementaire wiskundige structuren\n\n\nJutho Haegeman\n\n\n\n\n\n\nSep 23, 2025\n\n\nHoofdstuk 2 - Lineaire afbeeldingen\n\n\nJutho Haegeman\n\n\n\n\n\n\nSep 30, 2025\n\n\nHoofdstuk 3 - Lineaire operatoren en eigenwaarden\n\n\nJutho Haegeman\n\n\n\n\n\n\nOct 21, 2025\n\n\nHoofdstuk 4 - Normen en afstanden\n\n\nJutho Haegeman\n\n\n\n\n\n\nNov 12, 2024\n\n\nHoofdstuk 5 - Inwendig product en orthogonaliteit\n\n\nJutho Haegeman\n\n\n\n\n\n\nNov 12, 2024\n\n\nHoofdstuk 6 - Unitaire gelijkvormigheid en unitaire equivalentie\n\n\nJutho Haegeman\n\n\n\n\n\n\nDec 6, 2024\n\n\nHoofdstuk 7 - Functieruimten\n\n\nJutho Haegeman\n\n\n\n\n\n\nDec 6, 2024\n\n\nHoofdstuk 8 - Lineaire differentiaaloperatoren\n\n\nJutho Haegeman\n\n\n\n\n\n\nDec 5, 2023\n\n\nHoofdstuk 9 - Fourieranalyse en distributies\n\n\nJutho Haegeman\n\n\n\n\n\n\nNo matching items"
+    "text": "Order By\n      Default\n      \n        Date - Oldest\n      \n      \n        Date - Newest\n      \n      \n        Title\n      \n      \n        Author\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\nDate\n\n\n\nTitle\n\n\n\nAuthor\n\n\n\n\n\n\n\n\nSep 22, 2025\n\n\nHoofdstuk 1 - Elementaire wiskundige structuren\n\n\nJutho Haegeman\n\n\n\n\n\n\nSep 23, 2025\n\n\nHoofdstuk 2 - Lineaire afbeeldingen\n\n\nJutho Haegeman\n\n\n\n\n\n\nSep 30, 2025\n\n\nHoofdstuk 3 - Lineaire operatoren en eigenwaarden\n\n\nJutho Haegeman\n\n\n\n\n\n\nOct 21, 2025\n\n\nHoofdstuk 4 - Normen en afstanden\n\n\nJutho Haegeman\n\n\n\n\n\n\nOct 28, 2025\n\n\nHoofdstuk 5 - Inwendig product en orthogonaliteit\n\n\nJutho Haegeman\n\n\n\n\n\n\nNov 12, 2024\n\n\nHoofdstuk 6 - Unitaire gelijkvormigheid en unitaire equivalentie\n\n\nJutho Haegeman\n\n\n\n\n\n\nDec 6, 2024\n\n\nHoofdstuk 7 - Functieruimten\n\n\nJutho Haegeman\n\n\n\n\n\n\nDec 6, 2024\n\n\nHoofdstuk 8 - Lineaire differentiaaloperatoren\n\n\nJutho Haegeman\n\n\n\n\n\n\nDec 5, 2023\n\n\nHoofdstuk 9 - Fourieranalyse en distributies\n\n\nJutho Haegeman\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "slides/H9.html",
@@ -2475,21 +2475,14 @@
     "href": "slides/H5.html",
     "title": "Hoofdstuk 5 - Inwendig product en orthogonaliteit",
     "section": "",
-    "text": "$$ % Math operators % % \n% VECTORS\n% specifically for vectors in F^n \n% MATRICES\n% SCALARS \n% LINEAR MAPS\n% FIELDS \n% RELATIONS \n% % % % % % % % %\n%\n$$\n\n\nConcept van inwendig product:\n\ngeeft aanleiding tot lengte, oriëntatie, geometrie (bvb Pythogoras)\ngeeft ook aanleiding tot (antilinear) isomorfisme tussen vector ruimte en zijn duale\n\nConcept van orthogonaliteit: orthogonale projectie, orthogonale basis: enorm belangrijk voor zowel theorie als praktijk (numerieke algoritmen)"
+    "text": "$$ % Math operators % % \n% VECTORS\n% specifically for vectors in F^n \n% MATRICES\n% SCALARS \n% LINEAR MAPS\n% FIELDS \n% RELATIONS \n% % % % % % % % %\n%\n$$\n\n\nConcept van inwendig product:\n\ngeeft aanleiding tot lengte, oriëntatie, geometrie (bvb Pythogoras)\ngeeft ook aanleiding tot (antilinear) isomorfisme tussen vector ruimte en zijn duale\n\nConcept van orthogonaliteit: orthogonale projectie, orthogonale basis: enorm belangrijk voor zowel theorie als praktijk (numerieke algoritmen)\nLineaire afbeeldingen tussen inwendig product ruimten, toegevoegde afbeelding, zelftoegevoegde en normale operatoren, orthogonale en unitaire afbeeldingen\nGerelateerde concepten: bilineare en sesquilineare vormen\nToepassing: kleinste kwadratenoplossing voor overgedetermineerde systemen"
   },
   {
     "objectID": "slides/H5.html#doel-van-dit-hoofdstuk",
     "href": "slides/H5.html#doel-van-dit-hoofdstuk",
     "title": "Hoofdstuk 5 - Inwendig product en orthogonaliteit",
     "section": "",
-    "text": "$$ % Math operators % % \n% VECTORS\n% specifically for vectors in F^n \n% MATRICES\n% SCALARS \n% LINEAR MAPS\n% FIELDS \n% RELATIONS \n% % % % % % % % %\n%\n$$\n\n\nConcept van inwendig product:\n\ngeeft aanleiding tot lengte, oriëntatie, geometrie (bvb Pythogoras)\ngeeft ook aanleiding tot (antilinear) isomorfisme tussen vector ruimte en zijn duale\n\nConcept van orthogonaliteit: orthogonale projectie, orthogonale basis: enorm belangrijk voor zowel theorie als praktijk (numerieke algoritmen)"
-  },
-  {
-    "objectID": "slides/H5.html#doel-van-dit-hoofdstuk-1",
-    "href": "slides/H5.html#doel-van-dit-hoofdstuk-1",
-    "title": "Hoofdstuk 5 - Inwendig product en orthogonaliteit",
-    "section": "Doel van dit hoofdstuk",
-    "text": "Doel van dit hoofdstuk\n\nLineaire afbeeldingen tussen inwendig product ruimten, toegevoegde afbeelding, zelftoegevoegde en normale operatoren, orthogonale en unitaire afbeeldingen\nGerelateerde concepten: bilineare en sesquilineare vormen\nToepassing: kleinste kwadratenoplossing voor overgedetermineerde systemen"
+    "text": "$$ % Math operators % % \n% VECTORS\n% specifically for vectors in F^n \n% MATRICES\n% SCALARS \n% LINEAR MAPS\n% FIELDS \n% RELATIONS \n% % % % % % % % %\n%\n$$\n\n\nConcept van inwendig product:\n\ngeeft aanleiding tot lengte, oriëntatie, geometrie (bvb Pythogoras)\ngeeft ook aanleiding tot (antilinear) isomorfisme tussen vector ruimte en zijn duale\n\nConcept van orthogonaliteit: orthogonale projectie, orthogonale basis: enorm belangrijk voor zowel theorie als praktijk (numerieke algoritmen)\nLineaire afbeeldingen tussen inwendig product ruimten, toegevoegde afbeelding, zelftoegevoegde en normale operatoren, orthogonale en unitaire afbeeldingen\nGerelateerde concepten: bilineare en sesquilineare vormen\nToepassing: kleinste kwadratenoplossing voor overgedetermineerde systemen"
   },
   {
     "objectID": "slides/H5.html#bilineaire-vormen",
@@ -2531,7 +2524,7 @@
     "href": "slides/H5.html#sesquilineaire-vormen-en-matrices",
     "title": "Hoofdstuk 5 - Inwendig product en orthogonaliteit",
     "section": "Sesquilineaire vormen en matrices",
-    "text": "Sesquilineaire vormen en matrices\n\nbasisrepresentatie: B_V=\\{{e}_1,\\ldots,{e}_n\\}\nC({v},{w}) = \\overline{v^i} C({e}_i,{e}_j) w^j = \\boldsymbol{v}^{\\mathsf{H}}{\\mathsf{C}} \\boldsymbol{w} met C_{ij} = C({e}_i,{e}_j) \\Rightarrow {\\mathsf{C}} \\in {\\mathbb{F}}^{n \\times n}\n\n(anti)hermitisch : {\\mathsf{C}} = \\pm {\\mathsf{C}}^{{\\mathsf{H}}} \\Leftrightarrow C_{ij} = \\pm \\overline{C_{ji}}\nbasistransformatie:\n\nvector: \\tilde{v}^i = [{\\mathsf{T}}]^i_{\\ j} v^j\nduale vector: \\tilde{\\xi}_i = [{\\mathsf{T}}^{-{\\mathsf{T}}}]_i^{\\ j}\\xi_j\nsesquilineaire vorm: \\tilde{C}_{ij} = [{\\mathsf{T}}^{-{\\mathsf{H}}}]_i^{\\ k}[{\\mathsf{T}}^{-{\\mathsf{T}}}]_j^{\\ l}C_{kl}\n(eenduidiger: \\tilde{C}_{\\bar{\\imath}j} = [{\\mathsf{T}}^{-{\\mathsf{H}}}]_\\bar{\\imath}^{\\ \\bar{k}}[{\\mathsf{T}}^{-{\\mathsf{T}}}]_j^{\\ l}C_{\\bar{k}l})"
+    "text": "Sesquilineaire vormen en matrices\n\nbasisrepresentatie: B_V=\\{{e}_1,\\ldots,{e}_n\\}\nC({v},{w}) = \\overline{v^i} C({e}_i,{e}_j) w^j = \\boldsymbol{v}^{\\mathsf{H}}{\\mathsf{C}} \\boldsymbol{w} met C_{ij} = C({e}_i,{e}_j) \\Rightarrow {\\mathsf{C}} \\in {\\mathbb{F}}^{n \\times n}\n\n(anti)hermitisch : {\\mathsf{C}} = \\pm {\\mathsf{C}}^{{\\mathsf{H}}} \\Leftrightarrow C_{ij} = \\pm \\overline{C_{ji}}\nbasistransformatie:\n\nvector: \\tilde{v}^i = [{\\mathsf{T}}]^i_{\\ j} v^j\nduale vector: \\tilde{\\xi}_i = [{\\mathsf{T}}^{-{\\mathsf{T}}}]_i^{\\ j}\\xi_j\nsesquilineaire vorm: \\tilde{C}_{ij} = [{\\mathsf{T}}^{-{\\mathsf{H}}}]_i^{\\ k}[{\\mathsf{T}}^{-{\\mathsf{T}}}]_j^{\\ l}C_{kl}\n(eenduidiger: \\tilde{C}_{\\bar{\\imath}j} = [{\\mathsf{T}}^{-{\\mathsf{H}}}]_{\\bar{\\imath}}^{\\ \\bar{k}}[{\\mathsf{T}}^{-{\\mathsf{T}}}]_{j}^{\\ l} C_{\\bar{k}l} )"
   },
   {
     "objectID": "slides/H5.html#bilineaire-en-sesquilineaire-vormen",
@@ -2552,7 +2545,7 @@
     "href": "slides/H5.html#cauchy-schwarz-ongelijkheid",
     "title": "Hoofdstuk 5 - Inwendig product en orthogonaliteit",
     "section": "Cauchy-Schwarz ongelijkheid",
-    "text": "Cauchy-Schwarz ongelijkheid\n\nCauchy-Schwarz-Bunjakowski: {\\left\\lvert{\\left\\langle{v},{w}\\right\\rangle}\\right\\rvert}^2 \\leq {\\left\\langle{v},{v}\\right\\rangle}{\\left\\langle{w},{w}\\right\\rangle}\n(bewijs aan bord)\ngevolg: {\\left\\lVert{v}\\right\\rVert} = \\sqrt{{\\left\\langle{v},{v}\\right\\rangle}} is een valabele norm\n\\Rightarrow Cauchy-Schwarz ongelijkheid: {\\left\\lvert{\\left\\langle{v},{w}\\right\\rangle}\\right\\rvert} \\leq {\\left\\lVert{v}\\right\\rVert}{\\left\\lVert{w}\\right\\rVert}\n\\Rightarrow als {\\mathbb{F}}={\\mathbb{R}}:\n\n-1 \\leq \\frac{{\\left\\langle{v},{w}\\right\\rangle}}{{\\left\\lVert{v}\\right\\rVert}{\\left\\lVert{w}\\right\\rVert}} \\leq +1\n{\\left\\langle{v},{w}\\right\\rangle} = {\\left\\lVert{v}\\right\\rVert}{\\left\\lVert{w}\\right\\rVert}\\cos(\\theta) definieert \\theta\n\ninwendig product is continu t.o.v. de geassocieerde norm\n(bewijs aan bord)\nHilbertruimte: inwendig productruimte die metrisch compleet is"
+    "text": "Cauchy-Schwarz ongelijkheid\n\nCauchy-Schwarz-Bunjakowski: {\\left\\lvert{\\left\\langle{v},{w}\\right\\rangle}\\right\\rvert}^2 \\leq {\\left\\langle{v},{v}\\right\\rangle}{\\left\\langle{w},{w}\\right\\rangle}\ngevolg: {\\left\\lVert{v}\\right\\rVert} = \\sqrt{{\\left\\langle{v},{v}\\right\\rangle}} is een valabele norm\n\\Rightarrow Cauchy-Schwarz ongelijkheid: {\\left\\lvert{\\left\\langle{v},{w}\\right\\rangle}\\right\\rvert} \\leq {\\left\\lVert{v}\\right\\rVert}{\\left\\lVert{w}\\right\\rVert}\n\\Rightarrow als {\\mathbb{F}}={\\mathbb{R}}:\n\n-1 \\leq \\frac{{\\left\\langle{v},{w}\\right\\rangle}}{{\\left\\lVert{v}\\right\\rVert}{\\left\\lVert{w}\\right\\rVert}} \\leq +1\n{\\left\\langle{v},{w}\\right\\rangle} = {\\left\\lVert{v}\\right\\rVert}{\\left\\lVert{w}\\right\\rVert}\\cos(\\theta) definieert \\theta\n\ninwendig product is continu t.o.v. de geassocieerde norm\nHilbertruimte: inwendig productruimte die metrisch compleet is"
   },
   {
     "objectID": "slides/H5.html#inwendig-product-voorbeelden-eindig-dimensionaal",
@@ -2573,7 +2566,7 @@
     "href": "slides/H5.html#inwendig-product-bijkomende-eigenschappen",
     "title": "Hoofdstuk 5 - Inwendig product en orthogonaliteit",
     "section": "Inwendig product: bijkomende eigenschappen",
-    "text": "Inwendig product: bijkomende eigenschappen\n\nParallellogram wet: voor de norm {\\left\\lVert{v}\\right\\rVert} = \\sqrt{{\\left\\langle{v},{v}\\right\\rangle}} geassocieerd aan een inwendig product geldt\n{\\left\\lVert{v}+ {w}\\right\\rVert}^2 + {\\left\\lVert{v}- {w}\\right\\rVert}^2 = 2({\\left\\lVert{v}\\right\\rVert}^2 + {\\left\\lVert{w}\\right\\rVert}^2)\n(bewijs volgt uit rechtstreeks invullen van definitie)\nGegeven een genormeerde vectorruimte (V,{\\left\\lVert\\cdot\\right\\rVert}) waarbij de norm voldoet aan de parallellogramwet. Dan kan uit die norm een inwendig product worden gedefinieerd via de zogenaamde polarisatie-identiteit:\n\\begin{align}\n  {\\left\\langle{v},{w}\\right\\rangle} = \\begin{cases}\n\\frac{1}{4}{\\left\\lVert{v}+ {w}\\right\\rVert}^2 - \\frac{1}{4}{\\left\\lVert{v}- {w}\\right\\rVert}^2,&\\text{$V$ real}\\\\\n\\frac{1}{4}{\\left\\lVert{v}+ {w}\\right\\rVert}^2 - \\frac{1}{4}{\\left\\lVert{v}- {w}\\right\\rVert}^2 + \\frac{{\\mathrm{i}}}{4}{\\left\\lVert{v}- {\\mathrm{i}}{w}\\right\\rVert}^2 - \\frac{{\\mathrm{i}}}{4}{\\left\\lVert{v}+ {\\mathrm{i}}{w}\\right\\rVert}^2,&\\text{$V$ complex}\n\\end{cases}\\label{eq:inner:polarisation}\n\\end{align}\n(bewijs niet te kennen)"
+    "text": "Inwendig product: bijkomende eigenschappen\n\nParallellogram wet: voor de norm {\\left\\lVert{v}\\right\\rVert} = \\sqrt{{\\left\\langle{v},{v}\\right\\rangle}} geassocieerd aan een inwendig product geldt\n{\\left\\lVert{v}+ {w}\\right\\rVert}^2 + {\\left\\lVert{v}- {w}\\right\\rVert}^2 = 2({\\left\\lVert{v}\\right\\rVert}^2 + {\\left\\lVert{w}\\right\\rVert}^2)\nGegeven een genormeerde vectorruimte (V,{\\left\\lVert\\cdot\\right\\rVert}) waarbij de norm voldoet aan de parallellogramwet. Dan kan uit die norm een inwendig product worden gedefinieerd via de zogenaamde polarisatie-identiteit:\n\\begin{align}\n  {\\left\\langle{v},{w}\\right\\rangle} = \\begin{cases}\n\\frac{1}{4}{\\left\\lVert{v}+ {w}\\right\\rVert}^2 - \\frac{1}{4}{\\left\\lVert{v}- {w}\\right\\rVert}^2,&\\text{$V$ real}\\\\\n\\frac{1}{4}{\\left\\lVert{v}+ {w}\\right\\rVert}^2 - \\frac{1}{4}{\\left\\lVert{v}- {w}\\right\\rVert}^2 + \\frac{{\\mathrm{i}}}{4}{\\left\\lVert{v}- {\\mathrm{i}}{w}\\right\\rVert}^2 - \\frac{{\\mathrm{i}}}{4}{\\left\\lVert{v}+ {\\mathrm{i}}{w}\\right\\rVert}^2,&\\text{$V$ complex}\n\\end{cases}\n\\end{align}\n(bewijs niet te kennen)"
   },
   {
     "objectID": "slides/H5.html#orthogonaliteit",
@@ -2587,21 +2580,21 @@
     "href": "slides/H5.html#orthogonaal-complement",
     "title": "Hoofdstuk 5 - Inwendig product en orthogonaliteit",
     "section": "Orthogonaal complement",
-    "text": "Orthogonaal complement\n\nverzameling S \\subseteq V:\nS^\\perp = \\{{v}\\in V | {\\left\\langle{w},{v}\\right\\rangle} = 0\\ \\text{voor alle}\\ {w}\\in S\\}\neigenschappen:\n\nS^\\perp is gesloten deelruimte (bewijs aan bord)\nS^\\perp = ({\\mathbb{F}}S)^\\perp = (\\overline{{\\mathbb{F}}S})^\\perp\nS \\cap S^\\perp = \\{{o}\\} of \\{\\} (afhankelijk van {o}\\in S)"
+    "text": "Orthogonaal complement\n\nverzameling S \\subseteq V:\nS^\\perp = \\{{v}\\in V | {\\left\\langle{w},{v}\\right\\rangle} = 0\\ \\text{voor alle}\\ {w}\\in S\\}\neigenschappen:\n\nS^\\perp is gesloten deelruimte\nS^\\perp = ({\\mathbb{F}}S)^\\perp = (\\overline{{\\mathbb{F}}S})^\\perp\nS \\cap S^\\perp = \\{{o}\\} of \\{\\} (afhankelijk van {o}\\in S)"
   },
   {
     "objectID": "slides/H5.html#orthogonale-projectie",
     "href": "slides/H5.html#orthogonale-projectie",
     "title": "Hoofdstuk 5 - Inwendig product en orthogonaliteit",
     "section": "Orthogonale projectie",
-    "text": "Orthogonale projectie\nGegeven een gesloten (!) deelruimte W {\\preccurlyeq}V\n\nstelling: orthogonale projectie van een vector {v}\\in V is de vector {w}\\in W die voldoet aan\n\n{\\left\\lVert{v}-{w}\\right\\rVert} = \\inf_{{w}' \\in W}{\\left\\lVert{v}-{w}'\\right\\rVert}\nof: {v}- {w}\\in W^\\perp\n\nbeide karakterisaties zijn equivalent en leiden tot een unieke oplossing (bewijs aan bord)\nGevolg: orthogonale directe som decompositie V = W \\oplus W^\\perp"
+    "text": "Orthogonale projectie\nGegeven een gesloten (!) deelruimte W {\\preccurlyeq}V\n\nstelling: orthogonale projectie van een vector {v}\\in V is de vector {w}\\in W die voldoet aan\n\n{\\left\\lVert{v}-{w}\\right\\rVert} = \\inf_{{w}' \\in W}{\\left\\lVert{v}-{w}'\\right\\rVert}\nof: {v}- {w}\\in W^\\perp\n\nbeide karakterisaties zijn equivalent en leiden tot een unieke oplossing\nGevolg: orthogonale directe som decompositie V = W \\oplus W^\\perp"
   },
   {
     "objectID": "slides/H5.html#orthogonale-projector",
     "href": "slides/H5.html#orthogonale-projector",
     "title": "Hoofdstuk 5 - Inwendig product en orthogonaliteit",
     "section": "Orthogonale projector",
-    "text": "Orthogonale projector\n\northogonale projector {\\hat{P}}\\in\\mathop{\\mathrm{End}}(V):\n{\\hat{P}}^2 = {\\hat{P}} en {\\left\\langle{\\hat{P}}{v},{w}\\right\\rangle} = {\\left\\langle{v},{\\hat{P}}{w}\\right\\rangle}, \\forall {v},{w}\\in V\n\\Rightarrow operator norm {\\left\\lVert{\\hat{P}}\\right\\rVert} = 1 (bewijs aan bord)\nstelling:\n\nde projector {\\hat{P}}_W op gesloten deelruimte W langsheen W^\\perp is een orthogonale projector\nelke orthogonale projector leidt tot een orthogonale directe som decompositie: \\mathop{\\mathrm{ker}}({\\hat{P}}) = \\mathop{\\mathrm{im}}({\\hat{P}})^\\perp en beide zijn gesloten deelruimten van V\n\n(bewijs aan bord)"
+    "text": "Orthogonale projector\n\northogonale projector {\\hat{P}}\\in\\mathop{\\mathrm{End}}(V):\n{\\hat{P}}^2 = {\\hat{P}} en {\\left\\langle{\\hat{P}}{v},{w}\\right\\rangle} = {\\left\\langle{v},{\\hat{P}}{w}\\right\\rangle}, \\forall {v},{w}\\in V\n\\Rightarrow operator norm {\\left\\lVert{\\hat{P}}\\right\\rVert} = 1\nstelling:\n\nde projector {\\hat{P}}_W op gesloten deelruimte W langsheen W^\\perp is een orthogonale projector\nelke orthogonale projector leidt tot een orthogonale directe som decompositie: \\mathop{\\mathrm{ker}}({\\hat{P}}) = \\mathop{\\mathrm{im}}({\\hat{P}})^\\perp en beide zijn gesloten deelruimten van V"
   },
   {
     "objectID": "slides/H5.html#orthogonaal-complement-en-directe-som",
@@ -2664,7 +2657,7 @@
     "href": "slides/H5.html#lineaire-functionalen",
     "title": "Hoofdstuk 5 - Inwendig product en orthogonaliteit",
     "section": "Lineaire functionalen",
-    "text": "Lineaire functionalen\nGegeven een Hilbertruimte V:\n\nAan elke {v}\\in V associeren we een \\chi_{v}\\in V^\\ast \\chi_{v}: V \\to {\\mathbb{F}}: w \\mapsto \\chi_v[w] = {\\left\\langle{v},{w}\\right\\rangle}\n\nAfbeelding {v}\\to \\chi_{{v}} is antilineair (triviaal)\nAfbeelding {v}\\to \\chi_{{v}} is injectief (bewijs aan bord)\nLineaire functionaal \\chi_{v} is continu en dus ook begrensd\nInderdaad: {\\left\\lvert\\chi_{v}[w]\\right\\rvert} \\leq {\\left\\lVert{v}\\right\\rVert} {\\left\\lVert{w}\\right\\rVert} (Cauchy-Schwarz)\n\n\n\\Rightarrow kunnen we elke (begrensde) functionaal zo bekomen?"
+    "text": "Lineaire functionalen\nGegeven een Hilbertruimte V:\n\nAan elke {v}\\in V associeren we een \\chi_{v}\\in V^\\ast \\chi_{v}: V \\to {\\mathbb{F}}: w \\mapsto \\chi_v[w] = {\\left\\langle{v},{w}\\right\\rangle}\n\nAfbeelding {v}\\to \\chi_{{v}} is antilineair (triviaal)\nAfbeelding {v}\\to \\chi_{{v}} is injectief\nLineaire functionaal \\chi_{v} is continu en dus ook begrensd\nInderdaad: {\\left\\lvert\\chi_{v}[w]\\right\\rvert} \\leq {\\left\\lVert{v}\\right\\rVert} {\\left\\lVert{w}\\right\\rVert} (Cauchy-Schwarz)\n\n\n\\Rightarrow kunnen we elke (begrensde) functionaal zo bekomen?"
   },
   {
     "objectID": "slides/H5.html#lineaire-functionalen-1",
@@ -2685,7 +2678,7 @@
     "href": "slides/H5.html#representatiestelling-van-riesz",
     "title": "Hoofdstuk 5 - Inwendig product en orthogonaliteit",
     "section": "Representatiestelling van Riesz",
-    "text": "Representatiestelling van Riesz\nGeldt dit ook voor oneindig-dimensionale Hilbertruimten V?\n\nVanaf nu: V^\\ast = \\mathcal{B}(V,{\\mathbb{F}}) (begrensde lineaire functionalen)\nRepresentatiestelling van Riesz:\nvoor elke \\xi \\in V^\\ast bestaat er {v}_\\xi \\in V zodat \\xi[{w}] = {\\left\\langle{v}_\\xi,{w}\\right\\rangle} voor alle {w}\\in V\nBewijs: (meer uitleg aan bord)\n\n\\mathop{\\mathrm{ker}}(\\xi) is gesloten wegens continuïteit\northogonaal complement is één-dimensionaal\nwe kunnen een element uit \\mathop{\\mathrm{ker}}(\\xi)^\\perp kiezen zodat gelijkheid geldt\n\nGevolg: voor Hilbertruimten geldt V \\cong V^\\ast"
+    "text": "Representatiestelling van Riesz\nGeldt dit ook voor oneindig-dimensionale Hilbertruimten V?\n\nVanaf nu: V^\\ast = \\mathcal{B}(V,{\\mathbb{F}}) (begrensde lineaire functionalen)\nRepresentatiestelling van Riesz:\nvoor elke \\xi \\in V^\\ast bestaat er {v}_\\xi \\in V zodat \\xi[{w}] = {\\left\\langle{v}_\\xi,{w}\\right\\rangle} voor alle {w}\\in V\nBewijs:\n\n\\mathop{\\mathrm{ker}}(\\xi) is gesloten wegens continuïteit\northogonaal complement is één-dimensionaal\nwe kunnen een element uit \\mathop{\\mathrm{ker}}(\\xi)^\\perp kiezen zodat gelijkheid geldt\n\nGevolg: voor Hilbertruimten geldt V \\cong V^\\ast"
   },
   {
     "objectID": "slides/H5.html#begrensde-lineaire-afbeeldingen",
@@ -2720,7 +2713,7 @@
     "href": "slides/H5.html#toegevoegde-afbeelding-eigenschappen",
     "title": "Hoofdstuk 5 - Inwendig product en orthogonaliteit",
     "section": "Toegevoegde afbeelding: eigenschappen",
-    "text": "Toegevoegde afbeelding: eigenschappen\nBeschouw {\\hat{A}}\\in\\mathcal{B}(V,W)\n\n{\\left\\lVert{\\hat{A}}^\\dagger{\\hat{A}}\\right\\rVert} = {\\left\\lVert{\\hat{A}}{\\hat{A}}^\\dagger\\right\\rVert} = {\\left\\lVert{\\hat{A}}\\right\\rVert}^2 (bewijs aan bord)\n\\mathop{\\mathrm{ker}}({\\hat{A}}^\\dagger) = \\mathop{\\mathrm{im}}({\\hat{A}})^\\perp (bewijs aan bord)\nGevolgen:\n\nW = \\mathop{\\mathrm{ker}}({\\hat{A}}^\\dagger) \\oplus \\overline{\\mathop{\\mathrm{im}}({\\hat{A}})}\nV = \\mathop{\\mathrm{ker}}({\\hat{A}})\\oplus \\overline{\\mathop{\\mathrm{im}}({\\hat{A}}^\\dagger)}"
+    "text": "Toegevoegde afbeelding: eigenschappen\nBeschouw {\\hat{A}}\\in\\mathcal{B}(V,W)\n\n{\\left\\lVert{\\hat{A}}^\\dagger{\\hat{A}}\\right\\rVert} = {\\left\\lVert{\\hat{A}}{\\hat{A}}^\\dagger\\right\\rVert} = {\\left\\lVert{\\hat{A}}\\right\\rVert}^2\n\\mathop{\\mathrm{ker}}({\\hat{A}}^\\dagger) = \\mathop{\\mathrm{im}}({\\hat{A}})^\\perp\nGevolgen:\n\nW = \\mathop{\\mathrm{ker}}({\\hat{A}}^\\dagger) \\oplus \\overline{\\mathop{\\mathrm{im}}({\\hat{A}})}\nV = \\mathop{\\mathrm{ker}}({\\hat{A}})\\oplus \\overline{\\mathop{\\mathrm{im}}({\\hat{A}}^\\dagger)}"
   },
   {
     "objectID": "slides/H5.html#toegevoegde-afbeelding-voorbeeld",
@@ -2783,7 +2776,7 @@
     "href": "slides/H5.html#normale-operatoren-eigenschappen",
     "title": "Hoofdstuk 5 - Inwendig product en orthogonaliteit",
     "section": "Normale operatoren: eigenschappen",
-    "text": "Normale operatoren: eigenschappen\n\n{\\hat{A}}\\in \\mathop{\\mathrm{End}}(V): normaal \\iff \\forall {v}\\in V: {\\left\\lVert{\\hat{A}}{v}\\right\\rVert} = {\\left\\lVert{\\hat{A}}^\\dagger{v}\\right\\rVert}\n{\\hat{A}} \\in \\mathop{\\mathrm{End}}(V) en normaal en {\\hat{A}}{v}= \\lambda {v}:\n\n{\\hat{A}}^\\dagger {v}= {\\overline{\\lambda}} {v} (uit voorgaande)\n{\\hat{A}}_{\\text{r}}{v}= \\mathop{\\mathrm{Re}}(\\lambda) {v},\\quad{\\hat{A}}_{\\text{i}}{v}= \\mathop{\\mathrm{Im}}(\\lambda) {v} (triviaal uit voorgaande)\n{\\hat{A}}{w}= \\mu {w} met \\mu \\neq \\lambda \\implies {\\left\\langle{v},{w}\\right\\rangle}=0 (bewijs aan bord)\n\n{\\hat{A}} \\in \\mathop{\\mathrm{End}}(V) en normaal: {\\left\\lVert{\\hat{A}}^n\\right\\rVert} = {\\left\\lVert{\\hat{A}}\\right\\rVert}^n (bewijs aan bord)\n\n{\\left\\lVert{\\hat{A}}\\right\\rVert} = \\rho_{{\\hat{A}}} (spectraalstraal, volgt direct uit Gelfand’s formule)\n{\\hat{A}} kan niet nilpotent zijn (bewijs aan bord)\nV eindig-dimensionaal:\n{\\hat{A}} is diagonaliseerbaar en eigenvectoren kunnen als orthonormale basis gekozen worden (zie H6)"
+    "text": "Normale operatoren: eigenschappen\n\n{\\hat{A}}\\in \\mathop{\\mathrm{End}}(V): normaal \\iff \\forall {v}\\in V: {\\left\\lVert{\\hat{A}}{v}\\right\\rVert} = {\\left\\lVert{\\hat{A}}^\\dagger{v}\\right\\rVert}\n{\\hat{A}} \\in \\mathop{\\mathrm{End}}(V) en normaal en {\\hat{A}}{v}= \\lambda {v}:\n\n{\\hat{A}}^\\dagger {v}= {\\overline{\\lambda}} {v} (uit voorgaande)\n{\\hat{A}}_{\\text{r}}{v}= \\mathop{\\mathrm{Re}}(\\lambda) {v},\\quad{\\hat{A}}_{\\text{i}}{v}= \\mathop{\\mathrm{Im}}(\\lambda) {v} (triviaal uit voorgaande)\n{\\hat{A}}{w}= \\mu {w} met \\mu \\neq \\lambda \\implies {\\left\\langle{v},{w}\\right\\rangle}=0\n\n{\\hat{A}} \\in \\mathop{\\mathrm{End}}(V) en normaal: {\\left\\lVert{\\hat{A}}^n\\right\\rVert} = {\\left\\lVert{\\hat{A}}\\right\\rVert}^n\n\n{\\left\\lVert{\\hat{A}}\\right\\rVert} = \\rho_{{\\hat{A}}} (spectraalstraal, volgt direct uit Gelfand’s formule)\n{\\hat{A}} kan niet nilpotent zijn\nV eindig-dimensionaal:\n{\\hat{A}} is diagonaliseerbaar en eigenvectoren kunnen als orthonormale basis gekozen worden (zie H6)"
   },
   {
     "objectID": "slides/H5.html#hilbert-schmidt-inwendig-product",

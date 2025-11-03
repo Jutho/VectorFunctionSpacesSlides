@@ -545,8 +545,8 @@ Gegeven een familie van normen $\{\norm{\cdot}^{(m \times n)}: \bbF^{m\times n} 
 $$\norm{\mat{A}\mat{B}}^{(m \times n)} \leq \norm{\mat{A}}^{(m \times k)} \norm{\mat{B}}^{(k \times n)}$$
 voor alle $\mat{A}\in\bbF^{m\times k}$ en $\mat{B}\in\bbF^{k\times n}$
 
-* de normen $\norm{\mat{A}}_{p\times p}$ zijn consistent 
-* de normen $\norm{\mat{A}}_{\text{F}}=\norm{\text{vectorize}(\mat{A})}_2$ zijn consistent
+* de normen $\norm{\mat{A}}_{p\to p}$ zijn consistent 
+* de norm $\norm{\mat{A}}_{\text{F}}=\norm{\text{vectorize}(\mat{A})}_2$ is consistent
 * de norm $\norm{\text{vectorize}(\mat{A})}_\infty$ is niet consistent
 
 ## Matrixnormen: terminologie

@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Jutho Haegeman">
-<meta name="dcterms.date" content="2024-11-12">
+<meta name="dcterms.date" content="2025-10-28">
 
 <title>Hoofdstuk 5 - Inwendig product en orthogonaliteit – Vector- en functieruimten – Slides</title>
 <style>
@@ -193,7 +193,6 @@ window.Quarto = {
    
   <ul>
   <li><a href="#doel-van-dit-hoofdstuk" id="toc-doel-van-dit-hoofdstuk" class="nav-link active" data-scroll-target="#doel-van-dit-hoofdstuk">Doel van dit hoofdstuk</a></li>
-  <li><a href="#doel-van-dit-hoofdstuk-1" id="toc-doel-van-dit-hoofdstuk-1" class="nav-link" data-scroll-target="#doel-van-dit-hoofdstuk-1">Doel van dit hoofdstuk</a></li>
   <li><a href="#proloog-bilineaire-en-sesquilineaire-vormen" id="toc-proloog-bilineaire-en-sesquilineaire-vormen" class="nav-link" data-scroll-target="#proloog-bilineaire-en-sesquilineaire-vormen">Proloog: Bilineaire en sesquilineaire vormen</a>
   <ul class="collapse">
   <li><a href="#bilineaire-vormen" id="toc-bilineaire-vormen" class="nav-link" data-scroll-target="#bilineaire-vormen">Bilineaire vormen</a></li>
@@ -281,7 +280,7 @@ window.Quarto = {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">November 12, 2024</p>
+      <p class="date">October 28, 2025</p>
     </div>
   </div>
   
@@ -315,11 +314,6 @@ window.Quarto = {
 <li>geeft ook aanleiding tot (antilinear) isomorfisme tussen vector ruimte en zijn duale</li>
 </ul></li>
 <li><p>Concept van orthogonaliteit: orthogonale projectie, orthogonale basis: enorm belangrijk voor zowel theorie als praktijk (numerieke algoritmen)</p></li>
-</ul>
-</section>
-<section id="doel-van-dit-hoofdstuk-1" class="level2">
-<h2 class="anchored" data-anchor-id="doel-van-dit-hoofdstuk-1">Doel van dit hoofdstuk</h2>
-<ul>
 <li><p>Lineaire afbeeldingen tussen inwendig product ruimten, toegevoegde afbeelding, zelftoegevoegde en normale operatoren, orthogonale en unitaire afbeeldingen</p></li>
 <li><p>Gerelateerde concepten: bilineare en sesquilineare vormen</p></li>
 <li><p>Toepassing: kleinste kwadratenoplossing voor overgedetermineerde systemen</p></li>
@@ -414,7 +408,7 @@ window.Quarto = {
 <li><p>vector: <span class="math inline">\tilde{v}^i = [{\mathsf{T}}]^i_{\ j} v^j</span></p></li>
 <li><p>duale vector: <span class="math inline">\tilde{\xi}_i = [{\mathsf{T}}^{-{\mathsf{T}}}]_i^{\ j}\xi_j</span></p></li>
 <li><p>sesquilineaire vorm: <span class="math inline">\tilde{C}_{ij} = [{\mathsf{T}}^{-{\mathsf{H}}}]_i^{\ k}[{\mathsf{T}}^{-{\mathsf{T}}}]_j^{\ l}C_{kl}</span></p>
-<p>(eenduidiger: <span class="math inline">\tilde{C}_{\bar{\imath}j} = [{\mathsf{T}}^{-{\mathsf{H}}}]_\bar{\imath}^{\ \bar{k}}[{\mathsf{T}}^{-{\mathsf{T}}}]_j^{\ l}C_{\bar{k}l}</span>)</p></li>
+<p>(eenduidiger: <span class="math inline">\tilde{C}_{\bar{\imath}j} = [{\mathsf{T}}^{-{\mathsf{H}}}]_{\bar{\imath}}^{\ \bar{k}}[{\mathsf{T}}^{-{\mathsf{T}}}]_{j}^{\ l} C_{\bar{k}l}</span> )</p></li>
 </ul></li>
 </ul></li>
 </ul>
@@ -461,8 +455,7 @@ window.Quarto = {
 <section id="cauchy-schwarz-ongelijkheid" class="level2">
 <h2 class="anchored" data-anchor-id="cauchy-schwarz-ongelijkheid">Cauchy-Schwarz ongelijkheid</h2>
 <ul>
-<li><p>Cauchy-Schwarz-Bunjakowski: <span class="math inline">{\left\lvert{\left\langle{v},{w}\right\rangle}\right\rvert}^2 \leq {\left\langle{v},{v}\right\rangle}{\left\langle{w},{w}\right\rangle}</span></p>
-<p>(bewijs aan bord)</p></li>
+<li><p>Cauchy-Schwarz-Bunjakowski: <span class="math inline">{\left\lvert{\left\langle{v},{w}\right\rangle}\right\rvert}^2 \leq {\left\langle{v},{v}\right\rangle}{\left\langle{w},{w}\right\rangle}</span></p></li>
 <li><p>gevolg: <span class="math inline">{\left\lVert{v}\right\rVert} = \sqrt{{\left\langle{v},{v}\right\rangle}}</span> is een valabele norm</p>
 <p><span class="math inline">\Rightarrow</span> Cauchy-Schwarz ongelijkheid: <span class="math inline">{\left\lvert{\left\langle{v},{w}\right\rangle}\right\rvert} \leq {\left\lVert{v}\right\rVert}{\left\lVert{w}\right\rVert}</span></p>
 <p><span class="math inline">\Rightarrow</span> als <span class="math inline">{\mathbb{F}}={\mathbb{R}}</span>:</p>
@@ -470,8 +463,7 @@ window.Quarto = {
 <li><span class="math inline">-1 \leq \frac{{\left\langle{v},{w}\right\rangle}}{{\left\lVert{v}\right\rVert}{\left\lVert{w}\right\rVert}} \leq +1</span></li>
 <li><span class="math inline">{\left\langle{v},{w}\right\rangle} = {\left\lVert{v}\right\rVert}{\left\lVert{w}\right\rVert}\cos(\theta)</span> definieert <span class="math inline">\theta</span></li>
 </ul></li>
-<li><p>inwendig product is continu t.o.v. de geassocieerde norm</p>
-<p>(bewijs aan bord)</p></li>
+<li><p>inwendig product is continu t.o.v. de geassocieerde norm</p></li>
 <li><p><strong>Hilbertruimte</strong>: inwendig productruimte die metrisch compleet is</p></li>
 </ul>
 </section>
@@ -503,14 +495,13 @@ window.Quarto = {
 <h2 class="smaller anchored" data-anchor-id="inwendig-product-bijkomende-eigenschappen">Inwendig product: bijkomende eigenschappen</h2>
 <ul>
 <li><p>Parallellogram wet: voor de norm <span class="math inline">{\left\lVert{v}\right\rVert} = \sqrt{{\left\langle{v},{v}\right\rangle}}</span> geassocieerd aan een inwendig product geldt</p>
-<p><span class="math display">{\left\lVert{v}+ {w}\right\rVert}^2 + {\left\lVert{v}- {w}\right\rVert}^2 = 2({\left\lVert{v}\right\rVert}^2 + {\left\lVert{w}\right\rVert}^2)</span></p>
-<p>(bewijs volgt uit rechtstreeks invullen van definitie)</p></li>
+<p><span class="math display">{\left\lVert{v}+ {w}\right\rVert}^2 + {\left\lVert{v}- {w}\right\rVert}^2 = 2({\left\lVert{v}\right\rVert}^2 + {\left\lVert{w}\right\rVert}^2)</span></p></li>
 <li><p>Gegeven een genormeerde vectorruimte <span class="math inline">(V,{\left\lVert\cdot\right\rVert})</span> waarbij de norm voldoet aan de parallellogramwet. Dan kan uit die norm een inwendig product worden gedefinieerd via de zogenaamde <strong>polarisatie-identiteit</strong>:</p>
 <p><span class="math display">\begin{align}
   {\left\langle{v},{w}\right\rangle} = \begin{cases}
 \frac{1}{4}{\left\lVert{v}+ {w}\right\rVert}^2 - \frac{1}{4}{\left\lVert{v}- {w}\right\rVert}^2,&amp;\text{$V$ real}\\
 \frac{1}{4}{\left\lVert{v}+ {w}\right\rVert}^2 - \frac{1}{4}{\left\lVert{v}- {w}\right\rVert}^2 + \frac{{\mathrm{i}}}{4}{\left\lVert{v}- {\mathrm{i}}{w}\right\rVert}^2 - \frac{{\mathrm{i}}}{4}{\left\lVert{v}+ {\mathrm{i}}{w}\right\rVert}^2,&amp;\text{$V$ complex}
-\end{cases}\label{eq:inner:polarisation}
+\end{cases}
 \end{align}</span></p>
 <p>(bewijs niet te kennen)</p></li>
 </ul>
@@ -544,7 +535,7 @@ window.Quarto = {
 <p><span class="math display">S^\perp = \{{v}\in V | {\left\langle{w},{v}\right\rangle} = 0\ \text{voor alle}\ {w}\in S\}</span></p>
 <p>eigenschappen:</p>
 <ul>
-<li><span class="math inline">S^\perp</span> is gesloten deelruimte (bewijs aan bord)</li>
+<li><span class="math inline">S^\perp</span> is gesloten deelruimte</li>
 <li><span class="math inline">S^\perp = ({\mathbb{F}}S)^\perp = (\overline{{\mathbb{F}}S})^\perp</span></li>
 <li><span class="math inline">S \cap S^\perp = \{{o}\}</span> of <span class="math inline">\{\}</span> (afhankelijk van <span class="math inline">{o}\in S</span>)</li>
 </ul></li>
@@ -559,7 +550,7 @@ window.Quarto = {
 <li><span class="math inline">{\left\lVert{v}-{w}\right\rVert} = \inf_{{w}' \in W}{\left\lVert{v}-{w}'\right\rVert}</span></li>
 <li>of: <span class="math inline">{v}- {w}\in W^\perp</span></li>
 </ul>
-<p>beide karakterisaties zijn equivalent en leiden tot een unieke oplossing (bewijs aan bord)</p></li>
+<p>beide karakterisaties zijn equivalent en leiden tot een unieke oplossing</p></li>
 <li><p>Gevolg: <strong>orthogonale directe som decompositie</strong> <span class="math inline">V = W \oplus W^\perp</span></p></li>
 </ul>
 </section>
@@ -568,13 +559,12 @@ window.Quarto = {
 <ul>
 <li><p><strong>orthogonale projector</strong> <span class="math inline">{\hat{P}}\in\mathop{\mathrm{End}}(V)</span>:</p>
 <p><span class="math inline">{\hat{P}}^2 = {\hat{P}}</span> en <span class="math inline">{\left\langle{\hat{P}}{v},{w}\right\rangle} = {\left\langle{v},{\hat{P}}{w}\right\rangle}, \forall {v},{w}\in V</span></p>
-<p><span class="math inline">\Rightarrow</span> operator norm <span class="math inline">{\left\lVert{\hat{P}}\right\rVert} = 1</span> (bewijs aan bord)</p></li>
+<p><span class="math inline">\Rightarrow</span> operator norm <span class="math inline">{\left\lVert{\hat{P}}\right\rVert} = 1</span></p></li>
 <li><p>stelling:</p>
 <ul>
 <li>de projector <span class="math inline">{\hat{P}}_W</span> op gesloten deelruimte <span class="math inline">W</span> langsheen <span class="math inline">W^\perp</span> is een orthogonale projector</li>
 <li>elke orthogonale projector leidt tot een orthogonale directe som decompositie: <span class="math inline">\mathop{\mathrm{ker}}({\hat{P}}) = \mathop{\mathrm{im}}({\hat{P}})^\perp</span> en beide zijn gesloten deelruimten van <span class="math inline">V</span></li>
-</ul>
-<p>(bewijs aan bord)</p></li>
+</ul></li>
 </ul>
 </section>
 <section id="orthogonaal-complement-en-directe-som" class="level2">
@@ -693,7 +683,7 @@ window.Quarto = {
 <li><p>Aan elke <span class="math inline">{v}\in V</span> associeren we een <span class="math inline">\chi_{v}\in V^\ast</span> <span class="math display">\chi_{v}: V \to {\mathbb{F}}: w \mapsto \chi_v[w] = {\left\langle{v},{w}\right\rangle}</span></p>
 <ul>
 <li>Afbeelding <span class="math inline">{v}\to \chi_{{v}}</span> is antilineair (triviaal)</li>
-<li>Afbeelding <span class="math inline">{v}\to \chi_{{v}}</span> is injectief (bewijs aan bord)</li>
+<li>Afbeelding <span class="math inline">{v}\to \chi_{{v}}</span> is injectief</li>
 <li>Lineaire functionaal <span class="math inline">\chi_{v}</span> is continu en dus ook begrensd</li>
 <li>Inderdaad: <span class="math inline">{\left\lvert\chi_{v}[w]\right\rvert} \leq {\left\lVert{v}\right\rVert} {\left\lVert{w}\right\rVert}</span> (Cauchy-Schwarz)</li>
 </ul></li>
@@ -733,7 +723,7 @@ window.Quarto = {
 <li><p>Vanaf nu: <span class="math inline">V^\ast = \mathcal{B}(V,{\mathbb{F}})</span> (begrensde lineaire functionalen)</p></li>
 <li><p>Representatiestelling van Riesz:</p>
 <p>voor elke <span class="math inline">\xi \in V^\ast</span> bestaat er <span class="math inline">{v}_\xi \in V</span> zodat <span class="math inline">\xi[{w}] = {\left\langle{v}_\xi,{w}\right\rangle}</span> voor alle <span class="math inline">{w}\in V</span></p>
-<p>Bewijs: (meer uitleg aan bord)</p>
+<p>Bewijs:</p>
 <ul>
 <li><span class="math inline">\mathop{\mathrm{ker}}(\xi)</span> is gesloten wegens continuïteit</li>
 <li>orthogonaal complement is één-dimensionaal</li>
@@ -804,8 +794,8 @@ window.Quarto = {
 <h2 class="anchored" data-anchor-id="toegevoegde-afbeelding-eigenschappen">Toegevoegde afbeelding: eigenschappen</h2>
 <p>Beschouw <span class="math inline">{\hat{A}}\in\mathcal{B}(V,W)</span></p>
 <ul>
-<li><p><span class="math inline">{\left\lVert{\hat{A}}^\dagger{\hat{A}}\right\rVert} = {\left\lVert{\hat{A}}{\hat{A}}^\dagger\right\rVert} = {\left\lVert{\hat{A}}\right\rVert}^2</span> (bewijs aan bord)</p></li>
-<li><p><span class="math inline">\mathop{\mathrm{ker}}({\hat{A}}^\dagger) = \mathop{\mathrm{im}}({\hat{A}})^\perp</span> (bewijs aan bord)</p>
+<li><p><span class="math inline">{\left\lVert{\hat{A}}^\dagger{\hat{A}}\right\rVert} = {\left\lVert{\hat{A}}{\hat{A}}^\dagger\right\rVert} = {\left\lVert{\hat{A}}\right\rVert}^2</span></p></li>
+<li><p><span class="math inline">\mathop{\mathrm{ker}}({\hat{A}}^\dagger) = \mathop{\mathrm{im}}({\hat{A}})^\perp</span></p>
 <p>Gevolgen:</p>
 <ul>
 <li><span class="math inline">W = \mathop{\mathrm{ker}}({\hat{A}}^\dagger) \oplus \overline{\mathop{\mathrm{im}}({\hat{A}})}</span></li>
@@ -958,12 +948,12 @@ window.Quarto = {
 <ul>
 <li><p><span class="math inline">{\hat{A}}^\dagger {v}= {\overline{\lambda}} {v}</span> (uit voorgaande)</p></li>
 <li><p><span class="math inline">{\hat{A}}_{\text{r}}{v}= \mathop{\mathrm{Re}}(\lambda) {v},\quad{\hat{A}}_{\text{i}}{v}= \mathop{\mathrm{Im}}(\lambda) {v}</span> (triviaal uit voorgaande)</p></li>
-<li><p><span class="math inline">{\hat{A}}{w}= \mu {w}</span> met <span class="math inline">\mu \neq \lambda \implies {\left\langle{v},{w}\right\rangle}=0</span> (bewijs aan bord)</p></li>
+<li><p><span class="math inline">{\hat{A}}{w}= \mu {w}</span> met <span class="math inline">\mu \neq \lambda \implies {\left\langle{v},{w}\right\rangle}=0</span></p></li>
 </ul></li>
-<li><p><span class="math inline">{\hat{A}} \in \mathop{\mathrm{End}}(V)</span> en normaal: <span class="math inline">{\left\lVert{\hat{A}}^n\right\rVert} = {\left\lVert{\hat{A}}\right\rVert}^n</span> (bewijs aan bord)</p>
+<li><p><span class="math inline">{\hat{A}} \in \mathop{\mathrm{End}}(V)</span> en normaal: <span class="math inline">{\left\lVert{\hat{A}}^n\right\rVert} = {\left\lVert{\hat{A}}\right\rVert}^n</span></p>
 <ul>
 <li><p><span class="math inline">{\left\lVert{\hat{A}}\right\rVert} = \rho_{{\hat{A}}}</span> (spectraalstraal, volgt direct uit Gelfand’s formule)</p></li>
-<li><p><span class="math inline">{\hat{A}}</span> kan niet nilpotent zijn (bewijs aan bord)</p></li>
+<li><p><span class="math inline">{\hat{A}}</span> kan niet nilpotent zijn</p></li>
 <li><p><span class="math inline">V</span> eindig-dimensionaal:</p>
 <p><span class="math inline">{\hat{A}}</span> is diagonaliseerbaar en eigenvectoren kunnen als orthonormale basis gekozen worden (zie H6)</p></li>
 </ul></li>

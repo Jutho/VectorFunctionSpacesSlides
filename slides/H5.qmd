@@ -1,7 +1,7 @@
 ---
 title: "Hoofdstuk 5 - Inwendig product en orthogonaliteit"
 author: "Jutho Haegeman"
-date: "11/12/2024"
+date: "10/28/2025"
 # format:
 #   revealjs:
 #     theme: solarized
@@ -163,8 +163,6 @@ $$
 * Concept van orthogonaliteit: orthogonale projectie, orthogonale basis:
   enorm belangrijk voor zowel theorie als praktijk (numerieke algoritmen)
 
-## Doel van dit hoofdstuk
-
 * Lineaire afbeeldingen tussen inwendig product ruimten, toegevoegde afbeelding, zelftoegevoegde en normale operatoren, orthogonale en unitaire afbeeldingen
 
 * Gerelateerde concepten: bilineare en sesquilineare vormen
@@ -252,7 +250,7 @@ Herleidt zich tot (symmetrische of antisymmetrische) bilineaire vormen voor $\bb
     * duale vector: $\tilde{\xi}_i = [\mat{T}^{-\transpose}]_i^{\ j}\xi_j$
     * sesquilineaire vorm: $\tilde{C}_{ij} = [\mat{T}^{-\hermitian}]_i^{\ k}[\mat{T}^{-\transpose}]_j^{\ l}C_{kl}$
 
-      (eenduidiger: $\tilde{C}_{\bar{\imath}j} = [\mat{T}^{-\hermitian}]_\bar{\imath}^{\ \bar{k}}[\mat{T}^{-\transpose}]_j^{\ l}C_{\bar{k}l}$)
+      (eenduidiger: $\tilde{C}_{\bar{\imath}j} = [\mat{T}^{-\hermitian}]_{\bar{\imath}}^{\ \bar{k}}[\mat{T}^{-\transpose}]_{j}^{\ l} C_{\bar{k}l}$ )
 
 ## Bilineaire en sesquilineaire vormen {.smaller}
 
@@ -299,8 +297,6 @@ Inwendig product op vectorruimte $V$ = hermitische, positief definiete sesquilin
 
 * Cauchy-Schwarz-Bunjakowski: $\abs{\inner{\vv}{\vw}}^2 \leq \inner{\vv}{\vv}\inner{\vw}{\vw}$
   
-  (bewijs aan bord)
-
 * gevolg: $\norm{\vv} = \sqrt{\inner{\vv}{\vv}}$ is een valabele norm
 
   $\Rightarrow$ Cauchy-Schwarz ongelijkheid: $\abs{\inner{\vv}{\vw}} \leq \norm{\vv}\norm{\vw}$
@@ -311,7 +307,6 @@ Inwendig product op vectorruimte $V$ = hermitische, positief definiete sesquilin
 
 * inwendig product is continu t.o.v. de geassocieerde norm
 
-  (bewijs aan bord)
 * **Hilbertruimte**: inwendig productruimte die metrisch compleet is
 
 ## Inwendig product: voorbeelden (eindig-dimensionaal) {.smaller}
@@ -351,7 +346,6 @@ Inwendig product op vectorruimte $V$ = hermitische, positief definiete sesquilin
 
   $$\norm{\vv + \vw}^2 + \norm{\vv - \vw}^2 = 2(\norm{\vv}^2 + \norm{\vw}^2)$$
 
-  (bewijs volgt uit rechtstreeks invullen van definitie)
 
 * Gegeven een genormeerde vectorruimte $(V,\norm{\cdot})$ waarbij de norm voldoet aan de parallellogramwet. Dan kan uit die norm een inwendig product worden gedefinieerd via de zogenaamde **polarisatie-identiteit**:
 
@@ -360,7 +354,7 @@ Inwendig product op vectorruimte $V$ = hermitische, positief definiete sesquilin
 	\inner{\vv}{\vw} = \begin{cases}
   \frac{1}{4}\norm{\vv + \vw}^2 - \frac{1}{4}\norm{\vv - \vw}^2,&\text{$V$ real}\\
   \frac{1}{4}\norm{\vv + \vw}^2 - \frac{1}{4}\norm{\vv - \vw}^2 + \frac{\irm}{4}\norm{\vv - \irm \vw}^2 - \frac{\irm}{4}\norm{\vv + \irm \vw}^2,&\text{$V$ complex}
-  \end{cases}\label{eq:inner:polarisation}
+  \end{cases}
   \end{align}
 
   (bewijs niet te kennen)
@@ -398,7 +392,7 @@ Gegeven een inwendig productruimte $(V,\inner{\ }{\ })$
   $$S^\perp = \{\vv \in V | \inner{\vw}{\vv} = 0\ \text{voor alle}\ \vw \in S\}$$
 
   eigenschappen:
-  * $S^\perp$ is gesloten deelruimte (bewijs aan bord)
+  * $S^\perp$ is gesloten deelruimte
   * $S^\perp = (\bbF S)^\perp = (\overline{\bbF S})^\perp$
   * $S \cap S^\perp = \{\zerovec\}$ of $\{\}$ (afhankelijk van $\zerovec \in S$)
 
@@ -410,7 +404,7 @@ Gegeven een **gesloten (!)** deelruimte $W \subspace V$
   * $\norm{\vv-\vw} = \inf_{\vw' \in W}\norm{\vv-\vw'}$
   * of: $\vv - \vw \in W^\perp$
 
-  beide karakterisaties zijn equivalent en leiden tot een unieke oplossing (bewijs aan bord)
+  beide karakterisaties zijn equivalent en leiden tot een unieke oplossing
 
 * Gevolg: **orthogonale directe som decompositie**
   $V = W \oplus W^\perp$
@@ -421,13 +415,12 @@ Gegeven een **gesloten (!)** deelruimte $W \subspace V$
 
 	$\map{P}^2 = \map{P}$ en $\inner{\map{P}\vv}{\vw} = \inner{\vv}{\map{P}\vw}, \forall \vv,\vw \in V$
 
-  $\Rightarrow$ operator norm $\norm{\map{P}} = 1$ (bewijs aan bord)
+  $\Rightarrow$ operator norm $\norm{\map{P}} = 1$
 
 * stelling:
   * de projector $\map{P}_W$ op gesloten deelruimte $W$ langsheen $W^\perp$ is een orthogonale projector
   * elke orthogonale projector leidt tot een orthogonale directe som decompositie: $\ker(\map{P}) = \im(\map{P})^\perp$ en beide zijn gesloten deelruimten van $V$
 
-  (bewijs aan bord)
 
 ## Orthogonaal complement en directe som
 
@@ -572,7 +565,7 @@ Gegeven een Hilbertruimte $V$:
   $$\chi_\vv: V \to \bbF : w \mapsto \chi_v[w] = \inner{\vv}{\vw}$$
 
   * Afbeelding $\vv \to \chi_{\vv}$ is antilineair (triviaal)
-  * Afbeelding $\vv \to \chi_{\vv}$ is injectief (bewijs aan bord)
+  * Afbeelding $\vv \to \chi_{\vv}$ is injectief
   * Lineaire functionaal $\chi_\vv$ is continu en dus ook begrensd
   * Inderdaad: $\abs{\chi_\vv[w]} \leq \norm{\vv} \norm{\vw}$ (Cauchy-Schwarz)
 
@@ -621,7 +614,7 @@ Geldt dit ook voor oneindig-dimensionale Hilbertruimten $V$?
 
   voor elke $\xi \in V^\ast$ bestaat er $\vv_\xi \in V$ zodat $\xi[\vw] = \inner{\vv_\xi}{\vw}$ voor alle $\vw \in V$
 
-  Bewijs: (meer uitleg aan bord)
+  Bewijs:
   * $\ker(\xi)$ is gesloten wegens continuïteit
   * orthogonaal complement is één-dimensionaal
   * we kunnen een element uit $\ker(\xi)^\perp$ kiezen zodat gelijkheid geldt
@@ -698,9 +691,9 @@ Als $B_V$ en $B_W$ orthonormaal:
 
 Beschouw $\map{A}\in\mathcal{B}(V,W)$
 
-* $\norm{\map{A}^\dagger\map{A}} = \norm{\map{A}\map{A}^\dagger} = \norm{\map{A}}^2$ (bewijs aan bord)
+* $\norm{\map{A}^\dagger\map{A}} = \norm{\map{A}\map{A}^\dagger} = \norm{\map{A}}^2$
 
-* $\ker(\map{A}^\dagger) = \im(\map{A})^\perp$ (bewijs aan bord)
+* $\ker(\map{A}^\dagger) = \im(\map{A})^\perp$
 
   Gevolgen:
   * $W = \ker(\map{A}^\dagger) \oplus \overline{\im(\map{A})}$
@@ -877,12 +870,12 @@ $\map{A}$ een antilineaire operator tussen complexe Hilbertruimten $V$ en $W$
   
   * $\map{A}_{\text{r}}\vv = \real(\lambda) \vv,\quad\map{A}_{\text{i}}\vv = \imag(\lambda) \vv$ (triviaal uit voorgaande)
 
-  * $\map{A}\vw = \mu \vw$ met $\mu \neq \lambda \implies \inner{\vv}{\vw}=0$ (bewijs aan bord)
+  * $\map{A}\vw = \mu \vw$ met $\mu \neq \lambda \implies \inner{\vv}{\vw}=0$ 
 
-* $\map{A} \in \End(V)$ en normaal: $\norm{\map{A}^n} = \norm{\map{A}}^n$ (bewijs aan bord)
+* $\map{A} \in \End(V)$ en normaal: $\norm{\map{A}^n} = \norm{\map{A}}^n$
 
   * $\norm{\map{A}} = \rho_{\map{A}}$ (spectraalstraal, volgt direct uit Gelfand's formule)
-  * $\map{A}$ kan niet nilpotent zijn (bewijs aan bord)
+  * $\map{A}$ kan niet nilpotent zijn
   * $V$ eindig-dimensionaal:
 
     $\map{A}$ is diagonaliseerbaar en eigenvectoren kunnen als orthonormale basis gekozen worden (zie H6)
