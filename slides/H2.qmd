@@ -328,7 +328,7 @@ Enkele eigenschappen van matrixvermenigvuldiging:
 
 * Indien we de standaard basisvectoren van $\bbC S$ noteren als  $\vert 0 \rangle$ en $\vert 1 \rangle$ (de zogenaamde ket-notatie van Dirac), dan komt dat overeen met de taal waarin quantum bits (qubits) geformuleerd worden. De flip-operatie op een qubit wordt beschreven door bovenstaande matrix, die ook $\sigma^x$ wordt genoemd, en 1 van de drie Pauli matrices is.
 
-## Voorbeeld van lineaire extensie (2) {.smaller}
+## Voorbeeld van lineaire extensie (2)
 
 Beschouw een groep $G = \{g_1,g_2,\ldots\}$. Met elk groepselement kunnen we een element uit $\Aut(G)$ associeren, namelijk op 2 verschillende manieren:
 

@@ -256,7 +256,7 @@ en dan noemen we $(X,d)$ een metrische ruimte
 
 * Een genormeerde vectorruimte $(V,\norm{\cdot})$ wordt een metrische ruimte met de keuze $d(\vv,\vw) = \norm{\vv-\vw}$
 
-## Metrische ruimten {.smaller}
+## Metrische ruimten
 
 Belang van metrische ruimten is dat we concepten uit analyse van functies $\bbR \to \bbR$ kunnen veralgemenen:
 
@@ -280,7 +280,7 @@ Belang van metrische ruimten is dat we concepten uit analyse van functies $\bbR 
   * Een isometrische afbeelding is automatisch injectief
   * Een bijectieve isometrische afbeelding definieert een isomorfisme tussen $(X, d_X)$ en $(Y, d_Y)$
 
-## Metrische ruimten {.smaller}
+## Metrische ruimten
 
 Topologische concepten in een metrische ruimte $(X,d)$:
 
@@ -295,7 +295,7 @@ Topologische concepten in een metrische ruimte $(X,d)$:
 * Compacte verzameling: zie verderop
 * $X$ is **separabel** (scheidbaar?) als $X$ een aftelbare dichte deelverzameling heeft
 
-## Continuïteit in genormeerde vectorruimte {.smaller}
+## Continuïteit in genormeerde vectorruimte
 
 We beschouwen nu een genormeerde vectorruimte $(V,\norm{\cdot})$ als metrische ruimte met metriek $d(\vv,\vw) = \norm{\vv-\vw}$
 
@@ -304,7 +304,7 @@ We beschouwen nu een genormeerde vectorruimte $(V,\norm{\cdot})$ als metrische r
   $\Rightarrow$ voor een convergente rij $(v_n \in V)_{n\in\bbN_0}$ is de geassocieerde rij $(\norm{\vv_n})_{n\in\bbN_0}$ convergent (en dus begrensd)
 * Vector optelling $+:V \times V \to V$ en scalaire vermenigvuldiging $\bbF \times V \to V$ zijn continue afbeeldingen^[Hiervoor hebben we het volgende nodig: de productverzameling $X \times Y$ van twee metrische ruimten $(X, d_X)$ en $(Y, d_Y)$ is metrische ruimte, bevoorbeeld met metriek $d_{X,Y}((x,y), (x',y')) = d_X(x,x') + d_Y(y,y')$}]
 
-## Convergentie in functieruimten {.smaller}
+## Convergentie in functieruimten
 
 Beschouw opnieuw $C^0([a,b],\bbF)$ met nu de $p=\infty$-norm, welke zich herleidt tot:^[Extremumstelling van Weierstrass: $\sup$ wordt $\max$ voor continue $f$ begrensd interval $[a,b]$]
 
@@ -325,7 +325,7 @@ Convergentie: $\lim_{n\to \infty} f_n = f$ als
 
   kan niet worden bekomen met behulp van norm
 
-## Convergentie in functieruimten (voorbeeld) {.smaller}
+## Convergentie in functieruimten (voorbeeld)
 
 Beschouw de rij $(f_n \in C^0([0,1],\bbR))_{n \in \bbN_0}$ met $f_n(x) = \exp(-n x)$
 
@@ -338,7 +338,7 @@ Beschouw de rij $(f_n \in C^0([0,1],\bbR))_{n \in \bbN_0}$ met $f_n(x) = \exp(-n
 * $(f_n)$ convergeert niet volgens de $p= \infty$ norm
 
 
-## Equivalentie van normen {.smaller}
+## Equivalentie van normen
 
 * Twee normen voor een vectorruimte $V$ zijn equivalent als ze aanleiding geven tot dezelfde definitie van convergerende rijen (met dan dezelfde limietpunten)
 
@@ -432,7 +432,7 @@ Equivalente formuleringen:
 * $\bbF[x]$ is een dichte deelverzameling van $C^0([a,b],\bbF)$
 * $\{x^n, n=0,1,2,\ldots\}$ is een complete verzameling voor $C^0([a,b],\bbF)$
 
-## Banachruimten {.smaller}
+## Banachruimten
 
 Van rijen naar reeksen in genormeerde vectorruimten $(V,\norm{\cdot})$
 
@@ -446,7 +446,7 @@ Van rijen naar reeksen in genormeerde vectorruimten $(V,\norm{\cdot})$
 
 * Stelling: Een genormeerde vectorruimte is metrisch compleet (Banachruimte) als en slechts als absolute convergentie een voldoende voorwaarde is voor convergentie van een reeks (elke absoluut convergente reeks convergeert).
 
-## Banachruimten en basis {.smaller}
+## Banachruimten en basis
 
 Convergentie van rijen en reeksen laat een nieuw concept van basis toe in Banachruimten $(V,\norm{\cdot})$
 

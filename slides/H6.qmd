@@ -1,7 +1,7 @@
 ---
 title: "Hoofdstuk 6 - Unitaire gelijkvormigheid en unitaire equivalentie"
 author: "Jutho Haegeman"
-date: "11/12/2024"
+date: "11/12/2025"
 # format:
 #   revealjs:
 #     theme: solarized
@@ -372,8 +372,6 @@ Beschouw vierkante matrices $\mat{A} \in \bbC^{n \times n}$
 
   **Schur-decompositie:** $\mat{A} = \mat{Z} \mat{T}\mat{Z}^\hermitian$ met $T^i_{\ j}=0$ voor $1 \leq j < i \leq n$
 
-  (bewijs aan bord)
-
   $\Rightarrow$ $\text{diag}(\mat{T}) = \sigma(\mat{T}) = \sigma(\mat{A})$
 
 * Praktisch: er is geen deterministisch algoritme dat in een eindig aantal stappen de eigenwaarden bepaalt
@@ -540,8 +538,6 @@ We beperken ons nu tot reële bilineaire vormen $B:V \times V \to \bbR$ (met $V$
 
 * **Traagheidswet van Sylvester**: Twee symmetrische matrices $\mat{B},\mat{\tilde{B}} \in \bbR^{n \times n}$ zijn congruent als en slechts als hetzelfde aantal positieve, negatieve en nul eigenwaarden hebben.
 
-  (bewijs aan bord)
-
 ## Kwadratische en symmetrische bilineaire vormen {.smaller}
 
 * Praktisch algoritme voor canonische vorm: 
@@ -667,7 +663,7 @@ Voor matrix $\mat{A} = \mat{U} \mat{S}\mat{V}^\hermitian\in \bbF^{m \times n}$:
 
   $\Rightarrow$ deze kolommen vormen orthonormale basis voor $\ker(\mat{A})$
 
-* geïnduceerde norm $\norm{\mat{A}}_2 = \sigma_1$ (bewijs aan bord)
+* geïnduceerde norm $\norm{\mat{A}}_2 = \sigma_1$
 * Frobenius norm $\norm{\mat{A}}_{\text{F}} = \sqrt{\sum_{i=1}^p \sigma_i^2}$
 * voor inverteerbare (en dus vierkante volle-rang) $\mat{A}\in\bbF^{n \times n}$: $\mat{A}^{-1} = \mat{V} \mat{S}^{-1} \mat{U}^\hermitian$
 
@@ -687,8 +683,6 @@ Beschouw een lineair stelsel $\mat{A}\mat{x} = \mat{y}$ met $\mat{A}\in\bbF^{m \
     
     $$\Rightarrow \vec{x}^\ast = \underbrace{\mat{V}_p \mat{S}_p^{-1} \mat{U}_p^\hermitian}_{=\mat{A}^+} \vec{y}$$
 
-    (bewijs aan bord)
-
 * Moore-Penrose pseudo-inverse gekarakteriseerd door
   * $\mat{A} \mat{A}^+ = \mat{P}_{\im(\mat{A})}$
   * $\mat{A}^+ \mat{A} = \mat{P}_{\ker(\mat{A})^\perp}$
@@ -705,8 +699,8 @@ Beschouw een lineair stelsel $\mat{A}\mat{x} = \mat{y}$ met $\mat{A}\in\bbF^{m \
   
   (getruncteerde singulierenwaardendecompositie)
 
-  * voor $\norm{\mat{A}-\mat{B}}_{2 \times 2}$ (bewijs aan bord)
-  * ook voor $\norm{\mat{A}-\mat{B}}_{\text{F}}$ (bewijs niet te kennen)
+  * voor $\norm{\mat{A}-\mat{B}}_{2 \times 2}$
+  * ook voor $\norm{\mat{A}-\mat{B}}_{\text{F}}$
 
 ## Polaire decompositie en isometrische benadering
 

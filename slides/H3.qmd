@@ -461,7 +461,7 @@ Invariante deelruimte van een gegeven operator $\map{A}\in\End(V)$
 * $\im(\map{A})$: $\map{A} \im(\map{A}) \subspace \im(\map{A})$
 * $\ker(\map{A})$: $\map{A} \ker(\map{A}) = \{0\} \subspace \ker(\map{A})$
 
-## Invariante deelruimten  {.smaller}
+## Invariante deelruimten
 
 * $\map{A}$ en $\map{A} + a \idmap$ hebben dezelfde invariante deelruimten
 
@@ -481,7 +481,7 @@ Invariante deelruimte van een gegeven operator $\map{A}\in\End(V)$
 
   Er geldt dan ook $V = \ker((\map{A}-\scalara\idmap)^s) \oplus \im((\map{A}-\scalara\idmap)^s)$
 
-## Veralgemeende eigenruimten: {.smaller}
+## Veralgemeende eigenruimten:
 
 Gegeven een eigenwaarde $\lambda \in \sigma_{\map{A}}$, dan bestaat er een $s$ zodat
 
@@ -499,7 +499,7 @@ met $U_\lambda$ en $U_\lambda^{\text{c}}$ beide invariante deelruimten van $\map
 $\Rightarrow$ $\dim(U_\lambda) = q_\lambda$ en $s = s_\lambda$ (macht van $(z-\lambda)$ in $m_{\map{A}}(z)$)
 
 
-## Veralgemeende eigenruimten: voorbeeld {.smaller}
+## Veralgemeende eigenruimten: voorbeeld
 
 $p(z) = (z-1)(z+1)^2 = z^3 + z^2 - z - 1 \Rightarrow \mat{C}_p = \begin{bmatrix} 0 & 1 & 0 \\ 0 & 0 & 1 \\ 1 & 1 & -1 \end{bmatrix}$:
 
@@ -512,7 +512,7 @@ $p(z) = (z-1)(z+1)^2 = z^3 + z^2 - z - 1 \Rightarrow \mat{C}_p = \begin{bmatrix}
 		1 & 1 & 0 \\ 0 & 1 & 1 \\ 1 & 1 & 0 
 	\end{bmatrix}^2\right) = \ker\left(\begin{bmatrix} 1 & 2 & 1 \\ 1 & 2 & 1 \\ 1 & 2 & 1 \end{bmatrix}\right)$
 
-## Veralgemeende eigenruimten: voorbeeld {.smaller}
+## Veralgemeende eigenruimten: voorbeeld
 
 $p(z) = (z-1)(z+1)^2 = z^3 + z^2 - z - 1 \Rightarrow \mat{C}_p = \begin{bmatrix} 0 & 1 & 0 \\ 0 & 0 & 1 \\ 1 & 1 & -1 \end{bmatrix}$:
 
@@ -537,7 +537,7 @@ $p(z) = (z-1)(z+1)^2 = z^3 + z^2 - z - 1 \Rightarrow \mat{C}_p = \begin{bmatrix}
 
 * Als alle $s_\lambda=1$ $\Leftrightarrow$ alle $N_\lambda=\zeromap$ $\Rightarrow$ diagonaalvorm
 
-## Jordan normaalvorm (geen bewijzen) {.smaller}
+## Jordan normaalvorm (geen bewijzen)
 
 * We kunnen een specifieke basis kiezen voor $U_\lambda$ zodat $\map{N}_\lambda$ een canonische vorm / normaalvorm aanneemt
 
@@ -555,7 +555,7 @@ $p(z) = (z-1)(z+1)^2 = z^3 + z^2 - z - 1 \Rightarrow \mat{C}_p = \begin{bmatrix}
 
   met $p_k \geq 0$ het aantal keer dat er een blok met index $k$ voorkomt, en dus $p_s \geq 1$.
 
-## Jordan normaalvorm (geen bewijzen) {.smaller}
+## Jordan normaalvorm (geen bewijzen)
 
 * Jordan normaalvorm / canonische vorm: er bestaat een basis $B$ zodat
 
@@ -572,7 +572,7 @@ $p(z) = (z-1)(z+1)^2 = z^3 + z^2 - z - 1 \Rightarrow \mat{C}_p = \begin{bmatrix}
   $$\mat{A}= \mat{V} \mat{J}_\mat{A} \mat{V}^{-1} = \mat{V} \left[\bigoplus_{\lambda \in \sigma_{\mat{A}}} \bigoplus_{k=1}^{s_\lambda} \bigoplus_{i=1}^{p^{(\lambda)}_{k}} \mat{J}_k(\lambda) \right]\mat{V}^{-1}$$
 
 
-## Companion matrix herbekeken {.smaller}
+## Companion matrix herbekeken
 
 Voor een companion matrix $\mat{C} \in \bbF^{n \times n}$ met (unieke) eigenwaarden ${\lambda_1,\lambda_2,\cdots,\lambda_m}$ geldt
 
@@ -598,7 +598,7 @@ Voor een companion matrix $\mat{C} \in \bbF^{n \times n}$ met (unieke) eigenwaar
 * Hoe sterk verandert de eigenwaardedecompositie of Jordandecompositie van een matrix bij een kleine variatie in de matrixcomponenten? Is er een notie van "continuïteit" of "gladheid"?
 * moeilijk en uitgebreid onderwerp waarvoor we nog niet alle gereedschappen en concepten ter beschikking hebben (normen, hermitische matrices, …)
 
-## Sensitiviteit van eigenwaarden en eigenruimten {.smaller}
+## Sensitiviteit van eigenwaarden en eigenruimten
 
 * Voorbeeld 1: $\mat{A}_1(\eps)	= \begin{bmatrix}
 	 0 & 1\\ \eps & 0	
@@ -642,7 +642,7 @@ Problemen omdat $\GL(V)$ niet compact is: limieten van inverteerbare matrices ku
 
     $\omega = w_i \varepsilon^i$ voldoet aan $\map{A}^\ast(\omega) = \lambda \omega$
 
-## Verwante eigenwaardenproblemen {.smaller}
+## Verwante eigenwaardenproblemen
 
 Stel $\map{A}^\ast(\omega') = \lambda' \omega'$ en $\map{A}\vv = \lambda \vv$:
 
@@ -682,7 +682,7 @@ Stel $\map{A}^\ast(\omega') = \lambda' \omega'$ en $\map{A}\vv = \lambda \vv$:
 
 * Voor $\map{A},\map{B} \in \End(V)$ met $\commutator{\map{A}}{\map{B}}=\zeromap$ en twee functies $f,g$: $\commutator{f(\map{A})}{g(\map{B})}=\zeromap$
 
-## Functies van lineaire operatoren: definitie 1 {.smaller}
+## Functies van lineaire operatoren: definitie 1
 
 * Als $\map{A}$ diagonaliseerbaar is, definitie van $f(\map{A})$ via diagonaalvorm / spectrale decompositie:
 
@@ -698,7 +698,7 @@ Stel $\map{A}^\ast(\omega') = \lambda' \omega'$ en $\map{A}\vv = \lambda \vv$:
 			\cos(\theta) & -\sin(\theta) \\ \sin(\theta) & \cos(\theta)
 		\end{bmatrix}$
 
-## Functies van lineaire operatoren: definitie 2 {.smaller}
+## Functies van lineaire operatoren: definitie 2
 
 Als $f(z) = \sum_{n=0}^{+\infty} f_n z^n$ een Taylorreeks rond $z=0$ (Maclaurin reeks) heeft:
 
@@ -724,7 +724,7 @@ Betekenis van een reeks van een operator? Convergentie? Zie Hoofdstuk 4
 			\cos(\theta) & -\sin(\theta) \\ \sin(\theta) & \cos(\theta)
 		\end{bmatrix}$
 
-## Functies van lineaire operatoren: definitie 3 {.smaller}
+## Functies van lineaire operatoren: definitie 3
 
 Via Jordan-decompositie: $f(\mat{A}) = \mat{V} \left[\bigoplus_{\lambda \in \sigma_{\mat{A}}} \bigoplus_{k=1}^{s_\lambda} \bigoplus_{i=1}^{p^{(\lambda)}_{k}} f\left(\mat{J}_k(\lambda)\right) \right]\mat{V}^{-1}$
 
@@ -792,7 +792,7 @@ Maar niet:
 
 Bewijs: door uitwerking van de Taylorreeks en vergelijken van de machten in $t$
 
-## Logaritmische functie en machten {.smaller}
+## Logaritmische functie en machten
 
 $f(z) = \log(z)$ of $f(z)=z^{\alpha}$ met $\alpha \not\in\bbN$: geen Taylorreeks rond $z=0$
 
@@ -894,7 +894,7 @@ Perturbaties rond $\vec{x}^\ast=\vec{0}$ bepaald door eigenwaarden (Jordan-decom
  	&= (\vec{x}_{n+1}, \dots, \vec{x}_{n+k-1}, \vec{\phi}(\vec{x}_{n}, \dots, \vec{x}_{n+k-2}, \vec{x}_{n+k-1}))
 \end{align*}
 
-## Recurrentierelaties {.smaller}
+## Recurrentierelaties
 
 $$\vec{x}_{n+k} = \mat{A}_{0} \vec{x}_{n} + \mat{A}_{1} \vec{x}_{n+1} + \dots + \mat{A}_{k-2} \vec{x}_{n+k-2} + \mat{A}_{k-1} \vec{x}_{n_k-1}$$
 
@@ -956,7 +956,7 @@ $\dot{\vec{x}}(t) = \vec{\varphi}(\vec{x}(t))$ (eerste orde differentiaalvergeli
   * een $\real{\lambda}>0$: perturbatie groeit exponentieel in de tijd
   * $\lambda = \irm 2\pi/p$: periodieke baan met periode $p$
 
-## Hogere orde differentiaalvergelijkingen {.smaller}
+## Hogere orde differentiaalvergelijkingen
 
 * $\vec{x}^{(k)}(t) = \vec{\varphi}(t, \vec{x}(t), \dot{\vec{x}(t)},\ldots, \vec{x}^{(k-1)}(t))$
 
