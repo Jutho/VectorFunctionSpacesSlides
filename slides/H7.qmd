@@ -825,7 +825,9 @@ Voor functies $f$ met domein $\bbR$:
 * Herschalingsoperator: $(\map{\sigma}_s f)(x) = f(s x)$ voor $s \in \bbR_{\neq 0}$, of $s \in \bbR_{> 0}$
 * Spiegeloperator: $(\map{\pi} f)(x) = f(-x)$
 
-Voor functies met domein $\bbR^d$: voor de hand liggende uitbreiding, en ook rotatie-operator.
+Voor functies met domein $\bbR^d$:
+
+* voor de hand liggende uitbreiding, en ook rotatie-operator.
 
 ## Domein van een operator
 

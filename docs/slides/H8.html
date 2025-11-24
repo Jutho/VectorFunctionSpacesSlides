@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Jutho Haegeman">
-<meta name="dcterms.date" content="2024-12-06">
+<meta name="dcterms.date" content="2025-11-24">
 
 <title>Hoofdstuk 8 - Lineaire differentiaaloperatoren – Vector- en functieruimten – Slides</title>
 <style>
@@ -296,7 +296,7 @@ window.Quarto = {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">December 6, 2024</p>
+      <p class="date">November 24, 2025</p>
     </div>
   </div>
   
@@ -308,8 +308,8 @@ window.Quarto = {
 </header>
 
 
-<section id="doel-van-dit-hoofdstuk" class="level2 smaller">
-<h2 class="smaller anchored" data-anchor-id="doel-van-dit-hoofdstuk">Doel van dit hoofdstuk</h2>
+<section id="doel-van-dit-hoofdstuk" class="level2">
+<h2 class="anchored" data-anchor-id="doel-van-dit-hoofdstuk">Doel van dit hoofdstuk</h2>
 <div class="hidden">
 <p>$$ % Math operators % % </p>
 % VECTORS
@@ -337,8 +337,8 @@ window.Quarto = {
 </section>
 <section id="differentiaaloperatoren-en-hun-toegevoegde" class="level1">
 <h1>Differentiaaloperatoren en hun toegevoegde</h1>
-<section id="lineaire-differentiaalvergelijkingen" class="level2 smaller">
-<h2 class="smaller anchored" data-anchor-id="lineaire-differentiaalvergelijkingen">Lineaire differentiaalvergelijkingen</h2>
+<section id="lineaire-differentiaalvergelijkingen" class="level2">
+<h2 class="anchored" data-anchor-id="lineaire-differentiaalvergelijkingen">Lineaire differentiaalvergelijkingen</h2>
 <ul>
 <li><p>Lineaire differentiaalvergelijking:</p>
 <p><span class="math display">({\hat{L}} u)(x) = f(x),\quad a &lt; x &lt; b</span></p>
@@ -354,8 +354,8 @@ window.Quarto = {
 </ul></li>
 </ul>
 </section>
-<section id="terugkerend-voorbeeld" class="level2 smaller">
-<h2 class="smaller anchored" data-anchor-id="terugkerend-voorbeeld">(Terugkerend) voorbeeld</h2>
+<section id="terugkerend-voorbeeld" class="level2">
+<h2 class="anchored" data-anchor-id="terugkerend-voorbeeld">(Terugkerend) voorbeeld</h2>
 <p><span class="math display">  -u''(x) = x</span></p>
 <ul>
 <li>zonder randvoorwaarden: <span class="math inline">u(x) = c_1 + c_2 x -\frac{1}{2} x^2</span></li>
@@ -372,8 +372,8 @@ window.Quarto = {
 </ul>
 <p><span class="math inline">\rightarrow</span> hoe kunnen we het bestaan en de uniciteit van de oplossingen karakteriseren?</p>
 </section>
-<section id="bijkomende-bemerkingen" class="level2 smaller">
-<h2 class="smaller anchored" data-anchor-id="bijkomende-bemerkingen">Bijkomende bemerkingen</h2>
+<section id="bijkomende-bemerkingen" class="level2">
+<h2 class="anchored" data-anchor-id="bijkomende-bemerkingen">Bijkomende bemerkingen</h2>
 <ol type="1">
 <li><p>Met behulp van de positie en afleidingsoperator kunnen we <span class="math inline">{\hat{L}}</span> schrijven als</p>
 <p><span class="math display">{\hat{L}} = \sum_{j=0}^{p} a_j({\hat{X}}) {\hat{D}}^j</span></p></li>
@@ -384,8 +384,8 @@ window.Quarto = {
 </ul></li>
 </ol>
 </section>
-<section id="bijkomende-bemerkingen-1" class="level2 smaller">
-<h2 class="smaller anchored" data-anchor-id="bijkomende-bemerkingen-1">Bijkomende bemerkingen</h2>
+<section id="bijkomende-bemerkingen-1" class="level2">
+<h2 class="anchored" data-anchor-id="bijkomende-bemerkingen-1">Bijkomende bemerkingen</h2>
 <ol start="3" type="1">
 <li><p>Waarde en regulariteit van de coefficiënten <span class="math inline">a_k(x)</span>?</p>
 <ul>
@@ -402,8 +402,8 @@ window.Quarto = {
 </ul></li>
 </ol>
 </section>
-<section id="bijkomende-bemerkingen-2" class="level2 smaller">
-<h2 class="smaller anchored" data-anchor-id="bijkomende-bemerkingen-2">Bijkomende bemerkingen</h2>
+<section id="bijkomende-bemerkingen-2" class="level2">
+<h2 class="anchored" data-anchor-id="bijkomende-bemerkingen-2">Bijkomende bemerkingen</h2>
 <ol start="4" type="1">
 <li><p>Domein van oplossingen = domein van <span class="math inline">{\hat{L}}</span></p>
 <ul>
@@ -416,13 +416,13 @@ window.Quarto = {
 </ul></li>
 </ol>
 </section>
-<section id="superpositie" class="level2 smaller">
-<h2 class="smaller anchored" data-anchor-id="superpositie">Superpositie</h2>
+<section id="superpositie" class="level2">
+<h2 class="anchored" data-anchor-id="superpositie">Superpositie</h2>
 <ul>
 <li><p><strong>superpositie</strong> = belangrijkste eigenschap/gevolg van lineariteit</p>
 <p><span class="math display">\begin{align*}
   {\hat{L}} u_1 &amp;= f_1 &amp;\text{met}&amp;&amp;B_i[ u_1 ] = \gamma_{1,i}, \forall i =1,\ldots,m\\
-  {\hat{L}} u_2 &amp;= f_2 &amp;\text{met}&amp;&amp;B_i[ u_2 ] = \gamma_{2,i} \forall i =1,\ldots,m
+  {\hat{L}} u_2 &amp;= f_2 &amp;\text{met}&amp;&amp;B_i[ u_2 ] = \gamma_{2,i}, \forall i =1,\ldots,m    
 \end{align*}</span></p>
 <p><span class="math inline">\Rightarrow</span> <span class="math inline">u =a^1 u_1 + a^2 u_2</span> is de oplossing van <span class="math display">\begin{align*}
   {\hat{L}} u&amp;= a^1 f_1 + a^2 f_2 &amp;\text{met}&amp;&amp;B_i[ u ] = a^1 \gamma_{1,i} + a^2 \gamma_{2,i}, \forall i =1,\ldots,m
@@ -436,8 +436,8 @@ window.Quarto = {
 <p><span class="math display">({\hat{L}} u)(x) = 0, \quad \forall a &lt; x &lt; b\qquad \text{with}\ B_i[u] = 0, \forall i=1,\ldots,m</span></p></li>
 </ul>
 </section>
-<section id="superpositie-structuur-van-de-oplossingen" class="level2 smaller">
-<h2 class="smaller anchored" data-anchor-id="superpositie-structuur-van-de-oplossingen">Superpositie: structuur van de oplossingen</h2>
+<section id="superpositie-structuur-van-de-oplossingen" class="level2">
+<h2 class="anchored" data-anchor-id="superpositie-structuur-van-de-oplossingen">Superpositie: structuur van de oplossingen</h2>
 <ul>
 <li><p>We ontbinden de oplossing van het algemene probleem als <span class="math inline">u = u_0 + u_f + u_\gamma</span>:</p>
 <ul>
@@ -452,8 +452,8 @@ window.Quarto = {
 <p><span class="math inline">\rightarrow</span> wanneer is het bestaan van <span class="math inline">u_f</span> en <span class="math inline">u_\gamma</span> gegarandeerd?</p></li>
 </ul>
 </section>
-<section id="existentie-en-uniciteit" class="level2 smaller">
-<h2 class="smaller anchored" data-anchor-id="existentie-en-uniciteit">Existentie en uniciteit</h2>
+<section id="existentie-en-uniciteit" class="level2">
+<h2 class="anchored" data-anchor-id="existentie-en-uniciteit">Existentie en uniciteit</h2>
 <ul>
 <li><p>Existentie van <span class="math inline">u_\gamma</span> is voor later</p></li>
 <li><p>Voor <span class="math inline">u_0</span> en <span class="math inline">u_f</span> definiëren we de nu het domein van de differentiaaloperator als:</p>
@@ -471,34 +471,34 @@ window.Quarto = {
 </ul></li>
 </ul>
 </section>
-<section id="toegevoegde-operator" class="level2 smaller">
-<h2 class="smaller anchored" data-anchor-id="toegevoegde-operator">Toegevoegde operator</h2>
+<section id="toegevoegde-operator" class="level2">
+<h2 class="anchored" data-anchor-id="toegevoegde-operator">Toegevoegde operator</h2>
 <ul>
 <li><p>We zijn geïnteresseerd in de kernel van de toegevoegde operator, i.e.</p>
-<p><span class="math display">\begin{align}
+<p><span class="math display">\begin{align*}
   ({\hat{L}}^\dagger v)(x) = 0, \quad \forall a &lt; x &lt; b\qquad \text{met}\ v\in\mathop{\mathrm{\mathcal{D}}}\,\!_{{\hat{L}}^\dagger}\rightarrow\text{randvoorwaarden?}
-\end{align}</span></p></li>
+\end{align*}</span></p></li>
 <li><p><strong>formeel toegevoegde operator</strong>:</p>
 <p><span class="math display">{\hat{L}}^\dagger = \sum_{j=0}^{p} (-1)^{j} {\hat{D}}^j \overline{a_j}({\hat{X}})\implies     ({\hat{L}}^\dagger v)(x) = \sum_{j=0}^{p} (-1)^j \frac{{\mathrm{d}}^j\ }{{\mathrm{d}}x^j} (\overline{a_j(x)} v(x))</span></p>
 <p>(met behulp van <span class="math inline">{\hat{D}}^\dagger = -{\hat{D}}</span>)</p>
 <ul>
 <li>als <span class="math inline">{\hat{L}}={\hat{L}}^\dagger</span>: <strong>formeel zelf-toegevoegd</strong></li>
 </ul></li>
-<li><p>identiteit van Lagrange: (bewijs aan bord)</p>
+<li><p>identiteit van Lagrange:</p>
 <p><span class="math display">\overline{v(x)} ({\hat{L}}u)(x) - \overline{({\hat{L}}^\dagger v)(x)}u(x) = \frac{{\mathrm{d}}\ }{{\mathrm{d}}x} J(u(x),v(x))</span></p>
 <p>met hierin <span class="math inline">J(u(x),v(x)) = \sum_{j=0}^{p} \sum_{k=0}^{j-1} (-1)^k \left(\frac{{\mathrm{d}}^k\ }{{\mathrm{d}}x^k}[ a_j(x) \overline{v(x)}]\right)\left(\frac{{\mathrm{d}}^{j-1-k}\ }{{\mathrm{d}}x^{j-1-k}}u(x)\right)</span><br>
 (bilineaire concomitant)</p></li>
 </ul>
 </section>
-<section id="toegevoegde-operator-randvoorwaarden" class="level2 smaller">
-<h2 class="smaller anchored" data-anchor-id="toegevoegde-operator-randvoorwaarden">Toegevoegde operator: randvoorwaarden</h2>
+<section id="toegevoegde-operator-randvoorwaarden" class="level2">
+<h2 class="anchored" data-anchor-id="toegevoegde-operator-randvoorwaarden">Toegevoegde operator: randvoorwaarden</h2>
 <ul>
 <li><p>De identiteit van Lagrange geïntegreerd over <span class="math inline">[a,b]</span> = identiteit van Green:</p>
 <p><span class="math display">{\left\langle v,{\hat{L}}u\right\rangle} - {\left\langle{\hat{L}}^\dagger v,u\right\rangle} =\left. J(u(x),v(x))\right|^b_a = \left. J(u(x),v(x))\right|_{x=b} - \left. J(u(x),v(x))\right|_{x=a}</span></p></li>
-<li><p>Met behulp van <span class="math display">\begin{align}
+<li><p>Met behulp van <span class="math display">\begin{align*}
   \boldsymbol{x} = \begin{bmatrix}u(a) &amp; u'(a) &amp; \dots &amp; u^{(p-1)}(a) &amp; u(b) &amp; u'(b) &amp; \dots &amp; u^{(p-1)}(b)\end{bmatrix}^{\mathsf{T}}\nonumber\\
   \boldsymbol{y} = \begin{bmatrix}v(a) &amp; v'(a) &amp; \dots &amp; v^{(p-1)}(a) &amp; v(b) &amp; v'(b) &amp; \dots &amp; v^{(p-1)}(b)\end{bmatrix}^{\mathsf{T}}
-\end{align}</span></p>
+\end{align*}</span></p>
 <p><span class="math inline">\Rightarrow \left. J(u(x),v(x))\right|^b_a = \boldsymbol{y}^{\mathsf{H}}{\mathsf{P}} \boldsymbol{x}</span> met <span class="math inline">{\mathsf{P}}</span> een <span class="math inline">2p \times 2p</span> matrix</p></li>
 <li><p>Randvoorwaarden voor <span class="math inline">{\hat{L}}</span>: <span class="math inline">{\mathsf{B}} \boldsymbol{x} = \boldsymbol{0}</span> met <span class="math inline">{\mathsf{B}}</span> een <span class="math inline">m \times 2p</span> matrix met volle rang (<span class="math inline">=m</span>)</p>
 <ul>
@@ -508,8 +508,8 @@ window.Quarto = {
 </ul></li>
 </ul>
 </section>
-<section id="toegevoegde-operator-voorbeeld" class="level2 smaller">
-<h2 class="smaller anchored" data-anchor-id="toegevoegde-operator-voorbeeld">Toegevoegde operator: voorbeeld</h2>
+<section id="toegevoegde-operator-voorbeeld" class="level2">
+<h2 class="anchored" data-anchor-id="toegevoegde-operator-voorbeeld">Toegevoegde operator: voorbeeld</h2>
 <ul>
 <li><span class="math inline">{\hat{L}}=-{\hat{D}}^2</span> op het interval <span class="math inline">[0,1]</span>:
 <ul>
@@ -530,8 +530,8 @@ window.Quarto = {
 </ul></li>
 </ul>
 </section>
-<section id="toegevoegde-operator-en-existentie-voorbeeld" class="level2 smaller">
-<h2 class="smaller anchored" data-anchor-id="toegevoegde-operator-en-existentie-voorbeeld">Toegevoegde operator en existentie: voorbeeld</h2>
+<section id="toegevoegde-operator-en-existentie-voorbeeld" class="level2">
+<h2 class="anchored" data-anchor-id="toegevoegde-operator-en-existentie-voorbeeld">Toegevoegde operator en existentie: voorbeeld</h2>
 <p><span class="math display">-u''(x) = f(x)</span></p>
 <ul>
 <li><p>zonder randvoorwaarden:</p>
@@ -552,8 +552,8 @@ window.Quarto = {
 </ul></li>
 </ul>
 </section>
-<section id="toegevoegde-operator-en-existentie-voorbeeld-1" class="level2 smaller">
-<h2 class="smaller anchored" data-anchor-id="toegevoegde-operator-en-existentie-voorbeeld-1">Toegevoegde operator en existentie: voorbeeld</h2>
+<section id="toegevoegde-operator-en-existentie-voorbeeld-1" class="level2">
+<h2 class="anchored" data-anchor-id="toegevoegde-operator-en-existentie-voorbeeld-1">Toegevoegde operator en existentie: voorbeeld</h2>
 <p><span class="math display">-u''(x) = f(x)</span></p>
 <ul>
 <li><span class="math inline">u(0) = u'(0) =u'(1) = 0</span>: <span class="math inline">c_0=0</span>, <span class="math inline">c_2=0</span>, <span class="math inline">c_2 + \int_0^1 \,{\mathrm{d}}z f(z)=0</span>
@@ -569,8 +569,8 @@ window.Quarto = {
 </ul>
 <p><span class="math inline">\Rightarrow</span> dit zullen we enkel kunnen bereiken met <span class="math inline">m = 2p-m = p</span> randvoorwaarden</p>
 </section>
-<section id="zelftoegevoegde-differentiaaloperatoren" class="level2 smaller">
-<h2 class="smaller anchored" data-anchor-id="zelftoegevoegde-differentiaaloperatoren">Zelftoegevoegde differentiaaloperatoren</h2>
+<section id="zelftoegevoegde-differentiaaloperatoren" class="level2">
+<h2 class="anchored" data-anchor-id="zelftoegevoegde-differentiaaloperatoren">Zelftoegevoegde differentiaaloperatoren</h2>
 <ul>
 <li>Zelftoegevoegde operatoren hebben nuttige eigenschappen (vb spectrum)</li>
 <li>Eindig-dimensionaal:
@@ -590,55 +590,55 @@ window.Quarto = {
 </ul></li>
 </ul>
 </section>
-<section id="zelftoegevoegde-differentiaaloperatoren-1" class="level2 smaller">
-<h2 class="smaller anchored" data-anchor-id="zelftoegevoegde-differentiaaloperatoren-1">Zelftoegevoegde differentiaaloperatoren</h2>
+<section id="zelftoegevoegde-differentiaaloperatoren-1" class="level2">
+<h2 class="anchored" data-anchor-id="zelftoegevoegde-differentiaaloperatoren-1">Zelftoegevoegde differentiaaloperatoren</h2>
 <ul>
 <li><p>Veralgemeende Lagrange-identiteit: <span class="math display">w(x) \overline{v(x)} ({\hat{L}}u)(x) - w(x) \overline{({\hat{L}}^\dagger v)(x)} u(x) = \frac{{\mathrm{d}}\ }{{\mathrm{d}}x} J(u(x),v(x))</span> met <span class="math inline">J(u(x),v(x)) = \sum_{j=0}^{p} \sum_{k=0}^{j-1} (-1)^k \left(\frac{{\mathrm{d}}^k\ }{{\mathrm{d}}x^k}[ w(x) a_j(x) \overline{v(x)}]\right)\left(\frac{{\mathrm{d}}^{j-1-k}\ }{{\mathrm{d}}x^{j-1-k}}u(x)\right)</span></p></li>
-<li><p>Een reële 2de-orde differentiaaloperator is formeel zelf-toegevoegd t.o.v. <span class="math inline">{\left\langle\ ,\ \right\rangle}_w</span> als en slechts als hij kan geschreven worden in de vorm van een <strong>Sturm-Liouville operator</strong>: (bewijs aan bord) <span class="math display">({\hat{L}}u)(x) = -\frac{1}{w(x)} \frac{{\mathrm{d}}\ }{{\mathrm{d}}x} \left( p(x) \frac{{\mathrm{d}}\ }{{\mathrm{d}}x} u (x)\right) + \frac{q(x)}{w(x)} u(x)</span></p></li>
-<li><p>Er bestaat een keuze van <span class="math inline">w</span> die elke reële 2de-orde differentiaaloperator met <span class="math inline">a_2(x)\neq 0</span> voor <span class="math inline">x \in [a,b]</span> formeel zelf-toegevoegd maakt (bewijs aan bord)</p></li>
+<li><p>Een reële 2de-orde differentiaaloperator is formeel zelf-toegevoegd t.o.v. <span class="math inline">{\left\langle\ ,\ \right\rangle}_w</span> als en slechts als hij kan geschreven worden in de vorm van een <strong>Sturm-Liouville operator</strong>: <span class="math display">({\hat{L}}u)(x) = -\frac{1}{w(x)} \frac{{\mathrm{d}}\ }{{\mathrm{d}}x} \left( p(x) \frac{{\mathrm{d}}\ }{{\mathrm{d}}x} u (x)\right) + \frac{q(x)}{w(x)} u(x)</span></p></li>
+<li><p>Er bestaat een keuze van <span class="math inline">w</span> die elke reële 2de-orde differentiaaloperator met <span class="math inline">a_2(x)\neq 0</span> voor <span class="math inline">x \in [a,b]</span> formeel zelf-toegevoegd maakt</p></li>
 </ul>
 </section>
-<section id="sturm-liouville-operator-randvoorwaarden" class="level2 smaller">
-<h2 class="smaller anchored" data-anchor-id="sturm-liouville-operator-randvoorwaarden">Sturm-Liouville operator: randvoorwaarden</h2>
+<section id="sturm-liouville-operator-randvoorwaarden" class="level2">
+<h2 class="anchored" data-anchor-id="sturm-liouville-operator-randvoorwaarden">Sturm-Liouville operator: randvoorwaarden</h2>
 <ul>
 <li><p>voor Sturm-Liouville operator <span class="math inline">{\hat{L}}</span>: <span class="math inline">J(u(x),v(x)) = -p(x) \left[\overline{v(x)}  u'(x) - \overline{v'(x)} u(x)\right]</span></p>
-<p><span class="math display">\begin{align}
-  \left[J(u(x),v(x))\right]_a^b &amp;= \boldsymbol{y}^{\mathsf{H}}{\mathsf{P}}\boldsymbol{x} =\begin{bmatrix}v(a)\\v'(a)\\v(b)\\v'(b)\end{bmatrix}^{\mathsf{H}}\begin{bmatrix} 0 &amp; +p(a) &amp; 0 &amp; 0 \\ -p(a) &amp; 0 &amp; 0 &amp; 0 \\ 0 &amp; 0 &amp; 0 &amp; -p(b) \\ 0 &amp; 0 &amp; +p(b) &amp; 0\end{bmatrix} \begin{bmatrix}u(a)\\u'(a)\\u(b)\\u'(b)\end{bmatrix}\label{eq:diff:boundarygeneralsturmliouville}\\
+<p><span class="math display">\begin{align*}
+  \left[J(u(x),v(x))\right]_a^b &amp;= \boldsymbol{y}^{\mathsf{H}}{\mathsf{P}}\boldsymbol{x} =\begin{bmatrix}v(a)\\v'(a)\\v(b)\\v'(b)\end{bmatrix}^{\mathsf{H}}\begin{bmatrix} 0 &amp; +p(a) &amp; 0 &amp; 0 \\ -p(a) &amp; 0 &amp; 0 &amp; 0 \\ 0 &amp; 0 &amp; 0 &amp; -p(b) \\ 0 &amp; 0 &amp; +p(b) &amp; 0\end{bmatrix} \begin{bmatrix}u(a)\\u'(a)\\u(b)\\u'(b)\end{bmatrix}\\
   &amp;= p(b) \det\left(\begin{bmatrix}
     u(b) &amp; \overline{v(b)} \\ u'(b) &amp; \overline{v'(b)}
   \end{bmatrix}\right) - p(a) \det\left(\begin{bmatrix}
     u(a) &amp; \overline{v(a)} \\ u'(a) &amp; \overline{v'(a)}
   \end{bmatrix}\right).
-\end{align}</span></p></li>
+\end{align*}</span></p></li>
 <li><p>reguliere Sturm-Liouville operator: <span class="math inline">p(a)\neq 0</span>, <span class="math inline">p(b)\neq 0</span></p></li>
 </ul>
 </section>
-<section id="sturm-liouville-operator-randvoorwaarden-1" class="level2 smaller">
-<h2 class="smaller anchored" data-anchor-id="sturm-liouville-operator-randvoorwaarden-1">Sturm-Liouville operator: randvoorwaarden</h2>
+<section id="sturm-liouville-operator-randvoorwaarden-1" class="level2">
+<h2 class="anchored" data-anchor-id="sturm-liouville-operator-randvoorwaarden-1">Sturm-Liouville operator: randvoorwaarden</h2>
 <p>Reguliere Sturm-Liouville operator is zelftoegevoegd voor:</p>
 <ul>
-<li><p>gescheiden randvoorwaarden: <span class="math display">\begin{align}
+<li><p>gescheiden randvoorwaarden: <span class="math display">\begin{align*}
   {\mathsf{B}} \boldsymbol{x} = \begin{bmatrix}
     \alpha_{1} &amp; \alpha_{2} &amp; 0 &amp; 0\\
     0 &amp; 0 &amp; \beta_{1} &amp; \beta_{2}
   \end{bmatrix}\begin{bmatrix}u(a)\\u'(a)\\u(b)\\u'(b)\end{bmatrix} = \boldsymbol{0} \quad \iff\quad \begin{cases} \alpha_{1} u(a) + \alpha_{2} u'(a) = 0\\
-  \beta_{1} u(b) + \beta_{2} u'(b) = 0\end{cases}.\label{eq:diff:seperatedbc}
-\end{align}</span></p></li>
-<li><p><span class="math inline">p(a) = p(b)</span> en periodieke randvoorwaarden: <span class="math display">\begin{align}
+  \beta_{1} u(b) + \beta_{2} u'(b) = 0\end{cases}.
+\end{align*}</span></p></li>
+<li><p><span class="math inline">p(a) = p(b)</span> en periodieke randvoorwaarden: <span class="math display">\begin{align*}
   {\mathsf{B}} \boldsymbol{x} = \begin{bmatrix}
     1 &amp; 0 &amp; -1 &amp; 0\\
     0 &amp; 1 &amp; 0 &amp; -1
   \end{bmatrix}\begin{bmatrix}u(a)\\u'(a)\\u(b)\\u'(b)\end{bmatrix} = \boldsymbol{0} \quad \iff\quad \begin{cases}  u(a) = u(b)\\
   u'(a) = u'(b)\end{cases}
-\end{align}</span></p></li>
+\end{align*}</span></p></li>
 <li><p>andere oplossingen voor de randvoorwaarden, maar dit zijn de twee fysisch meest relevante gevallen</p></li>
 </ul>
 </section>
 </section>
 <section id="beginvoorwaardeproblemen" class="level1">
 <h1>Beginvoorwaardeproblemen</h1>
-<section id="beginvoorwaardeprobleem" class="level2 smaller">
-<h2 class="smaller anchored" data-anchor-id="beginvoorwaardeprobleem">Beginvoorwaardeprobleem</h2>
+<section id="beginvoorwaardeprobleem" class="level2">
+<h2 class="anchored" data-anchor-id="beginvoorwaardeprobleem">Beginvoorwaardeprobleem</h2>
 <p><span class="math display">({\hat{L}} u)(t) = \sum_{j=0}^{p} a_j(t) \frac{{\mathrm{d}}^j u}{{\mathrm{d}}t^j}(t) = f(t),\  a&lt;t&lt;b,\quad \text{met}\ u^{(i)}(a) = \gamma_i,\  i=0,\ldots,p-1.</span></p>
 <ul>
 <li>meestal <span class="math inline">t</span> in plaats van <span class="math inline">x</span></li>
@@ -651,10 +651,10 @@ window.Quarto = {
 </ul></li>
 </ul>
 </section>
-<section id="homogene-oplossing" class="level2 smaller">
-<h2 class="smaller anchored" data-anchor-id="homogene-oplossing">Homogene oplossing</h2>
+<section id="homogene-oplossing" class="level2">
+<h2 class="anchored" data-anchor-id="homogene-oplossing">Homogene oplossing</h2>
 <p>Herschrijven als (en veralgemenen tot voorwaarde op willekeurig punt <span class="math inline">c \in [a,b]</span>) <span class="math display">\frac{{\mathrm{d}}\boldsymbol{z}}{{\mathrm{d}}t}(t) = {\mathsf{A}}(t) \boldsymbol{z}(t),\  a&lt;t&lt;b,\quad \text{met}\ \boldsymbol{z}(c) = \boldsymbol{\zeta}</span></p>
-<p><span class="math display">\begin{align}
+<p><span class="math display">\begin{align*}
 \boldsymbol{z}(t)&amp;= \begin{bmatrix}
     u(t)\\
     \dot{u}(t)\\
@@ -666,19 +666,20 @@ window.Quarto = {
     \vdots\\
     \gamma_{p-1}
 \end{bmatrix}
-\end{align}</span> <span class="math display">\begin{align}
+\end{align*}</span> <span class="math display">\begin{align*}
     {\mathsf{A}}(t) =  \begin{bmatrix}
         0 &amp; 1 &amp; 0 &amp; 0 &amp; \dots &amp; 0\\
         0 &amp; 0 &amp; 1 &amp; 0 &amp; \dots &amp; 0\\
         \vdots &amp; \vdots &amp; \vdots &amp; \vdots &amp; &amp; \vdots\\
         -\frac{a_0(t)}{a_p(t)} &amp; -\frac{a_1(t)}{a_p(t)} &amp; -\frac{a_2(t)}{a_p(t)} &amp; -\frac{a_3(t)}{a_p(t)} &amp; \dots &amp; -\frac{a_{p-1}(t)}{a_p(t)}
-    \end{bmatrix}\label{eq:diff:Acompanion}
-\end{align}</span></p>
+    \end{bmatrix}
+\end{align*}</span></p>
 </section>
-<section id="homogene-oplossing-1" class="level2 smaller">
-<h2 class="smaller anchored" data-anchor-id="homogene-oplossing-1">Homogene oplossing</h2>
+<section id="homogene-oplossing-1" class="level2">
+<h2 class="anchored" data-anchor-id="homogene-oplossing-1">Homogene oplossing</h2>
 <ul>
-<li><p>autonome geval (<span class="math inline">{\mathsf{A}}(t) ={\mathsf{A}}(0)={\mathsf{A}}</span>): <span class="math inline">\boldsymbol{z}(t) = \exp\left((t-c){\mathsf{A}} \right) \boldsymbol{\zeta} = \sum_{n=0}^{+\infty} \frac{1}{n!} (t-c)^n {\mathsf{A}}^n  \boldsymbol{\zeta}</span></p></li>
+<li><p>autonome geval (<span class="math inline">{\mathsf{A}}(t) ={\mathsf{A}}(0)={\mathsf{A}}</span>):</p>
+<p><span class="math inline">\boldsymbol{z}(t) = \exp\left((t-c){\mathsf{A}} \right) \boldsymbol{\zeta} = \sum_{n=0}^{+\infty} \frac{1}{n!} (t-c)^n {\mathsf{A}}^n  \boldsymbol{\zeta}</span></p></li>
 <li><p>veralgemening: <span class="math inline">\boldsymbol{z}(t) = \exp\left(\int_{c}^{t} {\mathsf{A}}(\tau)\,{\mathrm{d}}\tau\right) \boldsymbol{\zeta}</span> ? <span class="math inline">\qquad\rightarrow</span> <strong>NEEN</strong>!</p>
 <p>(enkel als <span class="math inline">{\left[{\mathsf{A}}(t),{\mathsf{A}}(t')\right]}={\mathsf{O}}</span> voor alle <span class="math inline">t,t' \in [a,b]</span>, bvb als <span class="math inline">p=1</span>)</p></li>
 <li><p>Herschrijf probleem als</p>
@@ -690,8 +691,8 @@ window.Quarto = {
 \end{cases}</span></p></li>
 </ul>
 </section>
-<section id="homogene-oplossing-2" class="level2 smaller">
-<h2 class="smaller anchored" data-anchor-id="homogene-oplossing-2">Homogene oplossing</h2>
+<section id="homogene-oplossing-2" class="level2">
+<h2 class="anchored" data-anchor-id="homogene-oplossing-2">Homogene oplossing</h2>
 <p>Oplossing voor <span class="math inline">([{\hat{1}}- {\hat{{\mathsf{K}}}}]\boldsymbol{z})(t) = \boldsymbol{\zeta}</span>:</p>
 <p><span class="math display">\boldsymbol{z}(t) = \sum_{n=0}^{+\infty} ({\hat{{\mathsf{K}}}}^n \boldsymbol{\zeta})(t) = \sum_{n=0}^{+\infty} \int_c^t {\mathrm{d}}t_1\int_c^{t_1} {\mathrm{d}}t_2 \cdots \int_c^{t_{n-1}} {\mathrm{d}}t_n\, {\mathsf{A}}(t_1) {\mathsf{A}}(t_2) \cdots {\mathsf{A}}(t_n) \zeta</span></p>
 <p>(in de eerste uitdrukking beschouwen we <span class="math inline">\boldsymbol{\zeta}</span> als de constante vectorfunctie <span class="math inline">t \mapsto \boldsymbol{\zeta}</span>)</p>
@@ -706,41 +707,41 @@ window.Quarto = {
 <p><span class="math inline">\Rightarrow</span> reeks convergeert absoluut</p></li>
 </ul>
 </section>
-<section id="tijdsordening-en-tijdsgeordende-exponentiële" class="level2 smaller">
-<h2 class="smaller anchored" data-anchor-id="tijdsordening-en-tijdsgeordende-exponentiële">Tijdsordening en tijdsgeordende exponentiële</h2>
+<section id="tijdsordening-en-tijdsgeordende-exponentiële" class="level2">
+<h2 class="anchored" data-anchor-id="tijdsordening-en-tijdsgeordende-exponentiële">Tijdsordening en tijdsgeordende exponentiële</h2>
 <p>In de (kwantum)fysica wordt vaak de <strong>tijdsordening</strong> “operator” (procedure) ingevoerd:</p>
 <p><span class="math display">\mathcal{T}\left[{\mathsf{A}}(t_1){\mathsf{A}}(t_2)\right] = \begin{cases} {\mathsf{A}}(t_1){\mathsf{A}}(t_2),&amp;t_1 &gt; t_2\\
 {\mathsf{A}}(t_2){\mathsf{A}}(t_1),&amp;t_2 &gt; t_1\\   
 \end{cases}</span></p>
 <p>Daarmee geldt: <span class="math inline">\int_c^t{\mathrm{d}}t_1\int_c^{t_1}{\mathrm{d}}t_2 {\mathsf{A}}(t_1){\mathsf{A}}(t_2) =\frac{1}{2} \int_c^t{\mathrm{d}}t_2\int_{c}^{t}{\mathrm{d}}t_1 \mathcal{T}\left[{\mathsf{A}}(t_1){\mathsf{A}}(t_2)\right]</span></p>
-<p><span class="math display">\begin{align}
+<p><span class="math display">\begin{align*}
     \Rightarrow \boldsymbol{z}(t) &amp;= \sum_{n=0}^{+\infty} \int_c^t {\mathrm{d}}t_1\int_c^{t_1} {\mathrm{d}}t_2 \cdots \int_c^{t_{n-1}} {\mathrm{d}}t_n\, {\mathsf{A}}(t_1) {\mathsf{A}}(t_2) \cdots {\mathsf{A}}(t_n)\boldsymbol{\zeta} \nonumber\\
     &amp;=  \sum_{n=0}^{+\infty}\frac{1}{n!} \int_c^t {\mathrm{d}}t_1\int_c^{t} {\mathrm{d}}t_2 \cdots \int_c^{t} {\mathrm{d}}t_n\, \mathcal{T}\left[{\mathsf{A}}(t_1) {\mathsf{A}}(t_2) \cdots {\mathsf{A}}(t_n)\right]\boldsymbol{\zeta}\nonumber\\
     &amp;= \mathcal{T}\exp\left(\int_{c}^{t} {\mathsf{A}}(\tau){\mathrm{d}}\tau\right) \boldsymbol{\zeta}
-\end{align}</span></p>
+\end{align*}</span></p>
 <p><span class="math inline">\Rightarrow \mathcal{T}\exp</span> = <strong>tijdsgeordende exponentiële</strong></p>
 </section>
-<section id="fundamentale-matrixoplossing" class="level2 smaller">
-<h2 class="smaller anchored" data-anchor-id="fundamentale-matrixoplossing">Fundamentale matrixoplossing</h2>
+<section id="fundamentale-matrixoplossing" class="level2">
+<h2 class="anchored" data-anchor-id="fundamentale-matrixoplossing">Fundamentale matrixoplossing</h2>
 <p>Beschouw een matrixfunctie <span class="math inline">[a,b]\to{\mathbb{F}}^{p \times r}: t \mapsto {\mathsf{Z}}(t)</span>, zodat de kolommen van <span class="math inline">{\mathsf{Z}}(t)</span> oplossingen zijn van de homogene differentiaalvergelijking <span class="math inline">\dot{\boldsymbol{z}}(t) = {\mathsf{A}}(t) \boldsymbol{z}(t)</span> zonder randvoorwaarden:</p>
 <ul>
-<li><p>als kolommen lineair onafhankelijk zijn op 1 tijdstip <span class="math inline">t_0</span>, dan zijn ze op elk ander tijdstip lineair onafhankelijk (bewijs aan bord)</p></li>
+<li><p>als kolommen lineair onafhankelijk zijn op 1 tijdstip <span class="math inline">t_0</span>, dan zijn ze op elk ander tijdstip lineair onafhankelijk</p></li>
 <li><p>er bestaan precies <span class="math inline">p</span> lineair onafhankelijke oplossingen ten opzichte waarvan elke andere oplossing kan worden geëxpandeerd</p></li>
 <li><p><strong>fundamentele (oplossings)matrix</strong>:</p>
 <p><span class="math inline">[a,b]\to{\mathbb{F}}^{p \times p}: t \mapsto {\mathsf{Z}}(t)</span> met <span class="math inline">\frac{{\mathrm{d}}\ }{{\mathrm{d}}t}{\mathsf{Z}}(t) = {\mathsf{A}}(t){\mathsf{Z}}(t)</span> en <span class="math inline">\det({\mathsf{Z}}(c)) \neq 0</span></p>
-<p><span class="math inline">\Rightarrow</span> <strong>stelling van Liouville</strong> (bewijs aan bord)</p>
+<p><span class="math inline">\Rightarrow</span> <strong>stelling van Liouville</strong></p>
 <p><span class="math display">\det\big({\mathsf{Z}}(t)\big) =  \det\big({\mathsf{Z}}(c)\big) \exp\left[\int_c^{t} \mathop{\mathrm{tr}}\big({\mathsf{A}}(\tau)\big)\,{\mathrm{d}}\tau\right]</span></p>
 <p>(m.b.v. Jacobi’s formule uit H2: <span class="math inline">\frac{{\mathrm{d}}\ }{{\mathrm{d}}t} \det\big({\mathsf{A}}(t)\big) = \det\big({\mathsf{A}}(t)\big) \mathop{\mathrm{tr}}\left({\mathsf{A}}(t)^{-1} \frac{{\mathrm{d}}{\mathsf{A}}}{{\mathrm{d}}t}(t)\right)</span>)</p></li>
 </ul>
 </section>
-<section id="fundamentale-matrices" class="level2 smaller">
-<h2 class="smaller anchored" data-anchor-id="fundamentale-matrices">Fundamentale matrices</h2>
+<section id="fundamentale-matrices" class="level2">
+<h2 class="anchored" data-anchor-id="fundamentale-matrices">Fundamentale matrices</h2>
 <ul>
 <li><p>Fundamentale matrices <span class="math inline">{\mathsf{Z}}(t)</span> en <span class="math inline">\tilde{{\mathsf{Z}}}(t)</span> van dezelfde vergelijking <span class="math inline">\dot{\boldsymbol{z}}(t) = {\mathsf{A}}(t) \boldsymbol{z}(t)</span>:</p>
 <p>er bestaat constante inverteerbare matrix <span class="math inline">{\mathsf{C}} \in {\mathbb{F}}^{p\times p}</span> zodat <span class="math inline">\tilde{{\mathsf{Z}}}(t) = {\mathsf{Z}}(t) {\mathsf{C}}</span></p></li>
 <li><p><strong>“principale” fundamentele matrix</strong> <span class="math inline">{\mathsf{Z}}(t,t_0)</span>:</p>
 <p><span class="math inline">\frac{{\mathrm{d}}\ }{{\mathrm{d}}t} {\mathsf{Z}}(t,t_0) = {\mathsf{A}}(t) {\mathsf{Z}}(t,t_0)</span> en <span class="math inline">{\mathsf{Z}}(t_0,t_0) = {\mathsf{I}}</span> voor elke <span class="math inline">t_0 \in [a,b]</span></p>
-<p>Eigenschappen (bewijs aan bord):</p>
+<p>Eigenschappen:</p>
 <ul>
 <li><span class="math inline">\dot{\boldsymbol{z}}(t) = {\mathsf{A}}(t) \boldsymbol{z}(t)</span> en <span class="math inline">\boldsymbol{z}(t_0) = \boldsymbol{\zeta}</span>: <span class="math inline">\boldsymbol{z}(t) = {\mathsf{Z}}(t,t_0) \boldsymbol{\zeta}</span></li>
 <li><span class="math inline">{\mathsf{Z}}(t,t_0) = \tilde{{\mathsf{Z}}}(t)\tilde{{\mathsf{Z}}}(t_0)^{-1}</span> voor elke fundamental matrix <span class="math inline">\tilde{{\mathsf{Z}}}</span></li>
@@ -751,8 +752,8 @@ window.Quarto = {
 <p><span class="math inline">\rightarrow \det\left[\mathcal{T} \exp\left(\int_{t_0}^t {\mathsf{A}}(\tau)\,{\mathrm{d}}\tau\right)\right] = \exp\left[\int_{t_0}^{t} \mathop{\mathrm{tr}}\big({\mathsf{A}}(\tau)\big)\,{\mathrm{d}}\tau\right]</span> veralgemening van <span class="math inline">\det\left[\exp({\mathsf{A}})\right] = \exp\left(\mathop{\mathrm{tr}}[{\mathsf{A}}]\right)</span></p></li>
 </ul>
 </section>
-<section id="fundamentele-matrices-en-wronskiaan" class="level2 smaller">
-<h2 class="smaller anchored" data-anchor-id="fundamentele-matrices-en-wronskiaan">Fundamentele matrices en Wronskiaan</h2>
+<section id="fundamentele-matrices-en-wronskiaan" class="level2">
+<h2 class="anchored" data-anchor-id="fundamentele-matrices-en-wronskiaan">Fundamentele matrices en Wronskiaan</h2>
 <p>terug naar scalaire functies <span class="math inline">u(t)</span></p>
 <ul>
 <li><p>Gegeven een verzameling functies <span class="math inline">\{u_i(t):[a,b] \to {\mathbb{F}}; i=1,\dots,p\}</span></p></li>
@@ -770,8 +771,8 @@ window.Quarto = {
 <p>Wronskiaan = determinant van fundamentele matrix voor equivalent eerste-orde probleem <span class="math inline">\Rightarrow</span> Liouville = <strong>Abel’s formule</strong>: <span class="math inline">W(t) = W(t_0) {\mathrm{e}}^{-\int_{t_0}^t \frac{a_{p-1}(\tau)}{a_p(\tau)}\,{\mathrm{d}}\tau}</span></p></li>
 </ul>
 </section>
-<section id="wronskiaan-en-abels-formule" class="level2 smaller">
-<h2 class="smaller anchored" data-anchor-id="wronskiaan-en-abels-formule">Wronskiaan en Abel’s formule</h2>
+<section id="wronskiaan-en-abels-formule" class="level2">
+<h2 class="anchored" data-anchor-id="wronskiaan-en-abels-formule">Wronskiaan en Abel’s formule</h2>
 <p>Voor <span class="math inline">p=2</span></p>
 <ul>
 <li>Abel’s formule kan eenvoudig rechtstreeks bewezen worden:
@@ -783,16 +784,15 @@ window.Quarto = {
 <ul>
 <li><p>gegeven een eerste oplossing <span class="math inline">u(t)</span> met <span class="math inline">u(t_0)\neq 0</span>, tweede oplossing <span class="math inline">v(t)</span> gegeven door</p>
 <p><span class="math display">v(t) = u(t)\int_{t_0}^{t} \frac{1}{p(\tau) u(\tau)^2}\,{\mathrm{d}}\tau</span></p>
-<p>met <span class="math inline">\frac{{\mathrm{d}}\ }{{\mathrm{d}}t} \log p(t) = \frac{1}{p(t)} \frac{{\mathrm{d}}\ }{{\mathrm{d}}t} p(t) = \frac{a_1(t)}{a_2(t)}</span></p>
-<p>(bewijs aan bord)</p></li>
+<p>met <span class="math inline">\frac{{\mathrm{d}}\ }{{\mathrm{d}}t} \log p(t) = \frac{1}{p(t)} \frac{{\mathrm{d}}\ }{{\mathrm{d}}t} p(t) = \frac{a_1(t)}{a_2(t)}</span></p></li>
 </ul></li>
 </ul>
 </section>
-<section id="theorema-van-floquet" class="level2 smaller">
-<h2 class="smaller anchored" data-anchor-id="theorema-van-floquet">Theorema van Floquet</h2>
+<section id="theorema-van-floquet" class="level2">
+<h2 class="anchored" data-anchor-id="theorema-van-floquet">Theorema van Floquet</h2>
 <p><span class="math inline">\frac{{\mathrm{d}}\boldsymbol{z}}{{\mathrm{d}}t} (t) = {\mathsf{A}}(t) \boldsymbol{z}(t)</span> met <span class="math inline">{\mathsf{A}}(t+T) ={\mathsf{A}}(t)</span> (periodiek)</p>
 <ul>
-<li><strong>Floquet</strong>: (bewijs aan bord)
+<li><strong>Floquet</strong>:
 <ul>
 <li><p>elke fundamentele matrix is van de vorm <span class="math inline">{\mathsf{Z}}(t) = {\mathsf{Q}}(t) {\mathrm{e}}^{\mathrm{B} t}</span> met periodieke <span class="math inline">{\mathsf{Q}}(t)={\mathsf{Q}}(t+T)</span> en constante <span class="math inline">{\mathsf{B}}</span>.</p></li>
 <li><p><span class="math inline">{\mathsf{C}} = \exp(T {\mathsf{B}}) = {\mathsf{Z}}(t+T){\mathsf{Z}}(t)^{-1}</span> staat gekend als de <strong>monodromie</strong> matrix</p></li>
@@ -807,21 +807,21 @@ window.Quarto = {
 </ul></li>
 </ul>
 </section>
-<section id="inhomogene-oplossing" class="level2 smaller">
-<h2 class="smaller anchored" data-anchor-id="inhomogene-oplossing">Inhomogene oplossing</h2>
+<section id="inhomogene-oplossing" class="level2">
+<h2 class="anchored" data-anchor-id="inhomogene-oplossing">Inhomogene oplossing</h2>
 <p><span class="math display">\frac{{\mathrm{d}}\boldsymbol{z}}{{\mathrm{d}}t}(t) = {\mathsf{A}}(t) \boldsymbol{z}(t) + \boldsymbol{b}(t),\quad a &lt; t &lt; b\qquad \text{met}\ \boldsymbol{z}(t_0) = \boldsymbol{\zeta}</span></p>
 <p>(voor <span class="math inline">p</span>de orde scalaire differentiaalvergelijking: <span class="math inline">\boldsymbol{b}(t) = \begin{bmatrix} 0 &amp; 0 &amp; \dots &amp; f(t)/a_p(t) \end{bmatrix}^{\mathsf{T}}</span>)</p>
 <ul>
 <li><p>na integratie: <span class="math inline">\boldsymbol{z}(t) - ({\hat{{\mathsf{K}}}}\boldsymbol{z})(t) =  \boldsymbol{\zeta} + \int_{t_0}^{t} \boldsymbol{b}(\tau)\,{\mathrm{d}}\tau</span></p>
-<p><span class="math display">\begin{align}
+<p><span class="math display">\begin{align*}
   \Rightarrow \boldsymbol{z}(t) &amp;= {\mathsf{Z}}(t,t_0) \boldsymbol{\zeta} + \sum_{n=0}^{+\infty} \int_{t_0}^t {\mathrm{d}}t_1\int_{t_0}^{t_1} {\mathrm{d}}t_2 \cdots \int_{t_0}^{t_{n-1}} {\mathrm{d}}t_n\int_{t_0}^{t_n} {\mathrm{d}}\tau\, {\mathsf{A}}(t_1) {\mathsf{A}}(t_2) \cdots {\mathsf{A}}(t_n) \boldsymbol{b}(\tau)\nonumber\\
   &amp;={\mathsf{Z}}(t,t_0) \boldsymbol{\zeta} + \int_{t_0}^{t} {\mathrm{d}}\tau \sum_{n=0}^{+\infty} \int_{\tau}^t {\mathrm{d}}t_1\int_{\tau}^{t_1} {\mathrm{d}}t_2 \cdots \int_{\tau}^{t_{n-1}} {\mathrm{d}}t_n\, {\mathsf{A}}(t_1) {\mathsf{A}}(t_2) \cdots {\mathsf{A}}(t_n) \boldsymbol{b}(\tau)\nonumber\\
-  &amp;= {\mathsf{Z}}(t,t_0) \boldsymbol{\zeta} + \int_{t_0}^{t} {\mathsf{Z}}(t,\tau) \boldsymbol{b}(\tau)\,{\mathrm{d}}\tau.\label{eq:diff:firstorderinhomogeneousgeneralsolution}
-\end{align}</span></p></li>
+  &amp;= {\mathsf{Z}}(t,t_0) \boldsymbol{\zeta} + \int_{t_0}^{t} {\mathsf{Z}}(t,\tau) \boldsymbol{b}(\tau)\,{\mathrm{d}}\tau.
+\end{align*}</span></p></li>
 </ul>
 </section>
-<section id="analyciteit-van-de-oplossingen" class="level2 smaller">
-<h2 class="smaller anchored" data-anchor-id="analyciteit-van-de-oplossingen">Analyciteit van de oplossingen</h2>
+<section id="analyciteit-van-de-oplossingen" class="level2">
+<h2 class="anchored" data-anchor-id="analyciteit-van-de-oplossingen">Analyciteit van de oplossingen</h2>
 <ul>
 <li><p><span class="math inline">{\mathsf{A}}(t)</span> en <span class="math inline">{\mathsf{b}}(t)</span> analytisch zijn in <span class="math inline">[a,b]</span>:</p>
 <ul>
@@ -838,8 +838,8 @@ window.Quarto = {
 <p>differentiaalvergelijking <span class="math inline">\rightarrow</span> recursierelatie voor coefficiënten <span class="math inline">u_k</span></p></li>
 </ul>
 </section>
-<section id="voorbeeld-taylorreeks-1" class="level2 smaller">
-<h2 class="smaller anchored" data-anchor-id="voorbeeld-taylorreeks-1">Voorbeeld Taylorreeks (1)</h2>
+<section id="voorbeeld-taylorreeks-1" class="level2">
+<h2 class="anchored" data-anchor-id="voorbeeld-taylorreeks-1">Voorbeeld Taylorreeks (1)</h2>
 <p>Airy-vergelijking / Stokes-vergelijking (toepassingen in kwantummechanica en optica):</p>
 <p><span class="math display">\ddot{u}(t) - t u(t) = 0</span></p>
 <ul>
@@ -856,8 +856,8 @@ window.Quarto = {
 </ul></li>
 </ul>
 </section>
-<section id="voorbeeld-taylorreeks-2" class="level2 smaller">
-<h2 class="smaller anchored" data-anchor-id="voorbeeld-taylorreeks-2">Voorbeeld Taylorreeks (2)</h2>
+<section id="voorbeeld-taylorreeks-2" class="level2">
+<h2 class="anchored" data-anchor-id="voorbeeld-taylorreeks-2">Voorbeeld Taylorreeks (2)</h2>
 <p>Legendre vergelijking (gerelateerd aan Laplace vergelijking in sferische coördinaten):</p>
 <p><span class="math display">(1-t^2) \ddot{u}(t) - 2t \dot{u}(t) +\nu(\nu+1) = 0</span></p>
 <ul>
@@ -874,8 +874,8 @@ window.Quarto = {
 </ul></li>
 </ul>
 </section>
-<section id="singulier-beginvoorwaardeproblemen-zonder-bewijs" class="level2 smaller">
-<h2 class="smaller anchored" data-anchor-id="singulier-beginvoorwaardeproblemen-zonder-bewijs">Singulier beginvoorwaardeproblemen (zonder bewijs)</h2>
+<section id="singulier-beginvoorwaardeproblemen-zonder-bewijs" class="level2">
+<h2 class="anchored" data-anchor-id="singulier-beginvoorwaardeproblemen-zonder-bewijs">Singulier beginvoorwaardeproblemen (zonder bewijs)</h2>
 <ul>
 <li><p><span class="math inline">{\mathsf{A}}(t)</span> analytisch in <span class="math inline">(0,\rho)</span> maar met singulariteit voor <span class="math inline">t=0</span></p>
 <p><span class="math inline">\Rightarrow</span> fundamentele matrix <span class="math inline">{\mathsf{Z}}(t)</span> is analytische functie van <span class="math inline">\log(t)</span></p></li>
@@ -891,8 +891,8 @@ window.Quarto = {
 <p>(via <span class="math inline">\boldsymbol{z}(t) = \begin{bmatrix}u(t) &amp; (t-\tau) \dot{u}(t) &amp; (t-\tau)^2 \ddot{u}(t) &amp; \ldots &amp; (t-\tau)^{p-1} u^{(p-1)}(t)\end{bmatrix}^{\mathsf{T}}</span>)</p></li>
 </ul>
 </section>
-<section id="methode-van-frobenius" class="level2 smaller">
-<h2 class="smaller anchored" data-anchor-id="methode-van-frobenius">Methode van Frobenius</h2>
+<section id="methode-van-frobenius" class="level2">
+<h2 class="anchored" data-anchor-id="methode-van-frobenius">Methode van Frobenius</h2>
 <p><span class="math inline">p</span>de orde differentiaalvergelijking met zwak singulier punt bij <span class="math inline">t=\tau</span>:</p>
 <ul>
 <li><p>testoplossing <span class="math inline">u(t) = (t-\tau)^\lambda \sum_{k=0}^{+\infty} u_k (t-\tau)^k</span></p></li>
@@ -909,8 +909,8 @@ u_q(t) &amp;= t^\lambda \left(\frac{1}{(q-1)!} x_1(t) (\log t)^{q-1} + \frac{1}{
 <li><p>voor oplossing <span class="math inline">\lambda</span> en <span class="math inline">\mu = \lambda+n</span> met <span class="math inline">n \in {\mathbb{N}}_0</span> (maar geen oplossingen <span class="math inline">\mu+n'</span>): <span class="math inline">u_1(t) = t^\mu x_1(t)</span> en <span class="math inline">u_2(t) = c u_1(t) \log t + t^\lambda x_2(t)</span></p></li>
 </ul>
 </section>
-<section id="methode-van-frobenius-voor-2de-orde" class="level2 smaller">
-<h2 class="smaller anchored" data-anchor-id="methode-van-frobenius-voor-2de-orde">Methode van Frobenius voor 2de orde</h2>
+<section id="methode-van-frobenius-voor-2de-orde" class="level2">
+<h2 class="anchored" data-anchor-id="methode-van-frobenius-voor-2de-orde">Methode van Frobenius voor 2de orde</h2>
 <p>Voor 2de orde differentiaalvergelijking:</p>
 <ul>
 <li><p>indiciële vergelijking heeft twee oplossingen <span class="math inline">\lambda_1</span> en <span class="math inline">\lambda_2</span>, gesorteerd zodat <span class="math inline">\mathop{\mathrm{Re}}{\lambda_1} \geq \mathop{\mathrm{Re}}{\lambda_2}</span>.</p>
@@ -925,8 +925,8 @@ u_q(t) &amp;= t^\lambda \left(\frac{1}{(q-1)!} x_1(t) (\log t)^{q-1} + \frac{1}{
 </ul></li>
 </ul>
 </section>
-<section id="voorbeeld-zwak-singulier-punt" class="level2 smaller">
-<h2 class="smaller anchored" data-anchor-id="voorbeeld-zwak-singulier-punt">Voorbeeld zwak singulier punt</h2>
+<section id="voorbeeld-zwak-singulier-punt" class="level2">
+<h2 class="anchored" data-anchor-id="voorbeeld-zwak-singulier-punt">Voorbeeld zwak singulier punt</h2>
 <p>Besselvergelijking (radieel deel van Laplacevergelijking cylindrische coördinaten):</p>
 <p><span class="math display">t^2 \ddot{u}(t) + t \dot{u}(t) + (t^2 - \nu^2) u(t) = 0</span></p>
 <ul>
@@ -938,8 +938,8 @@ u_q(t) &amp;= t^\lambda \left(\frac{1}{(q-1)!} x_1(t) (\log t)^{q-1} + \frac{1}{
 <p><span class="math display">J_{\nu}(t)=\left(\frac{t}{2}\right)^\nu \sum_{m=0}^{+\infty} \frac{(-1)^m}{\Gamma(m+1)\Gamma(m+\nu+1)}\left(\frac{t}{2}\right)^{2m}</span></p></li>
 </ul>
 </section>
-<section id="voorbeeld-zwak-singulier-punt-1" class="level2 smaller">
-<h2 class="smaller anchored" data-anchor-id="voorbeeld-zwak-singulier-punt-1">Voorbeeld zwak singulier punt</h2>
+<section id="voorbeeld-zwak-singulier-punt-1" class="level2">
+<h2 class="anchored" data-anchor-id="voorbeeld-zwak-singulier-punt-1">Voorbeeld zwak singulier punt</h2>
 <p>Besselvergelijking (radieel deel van Laplacevergelijking cylindrische coördinaten):</p>
 <p><span class="math display">t^2 \ddot{u}(t) + t \dot{u}(t) + (t^2 - \nu^2) u(t) = 0</span></p>
 <ul>
@@ -955,8 +955,8 @@ u_q(t) &amp;= t^\lambda \left(\frac{1}{(q-1)!} x_1(t) (\log t)^{q-1} + \frac{1}{
 </ul></li>
 </ul>
 </section>
-<section id="voorbeeld-zwak-singulier-punt-2" class="level2 smaller">
-<h2 class="smaller anchored" data-anchor-id="voorbeeld-zwak-singulier-punt-2">Voorbeeld zwak singulier punt</h2>
+<section id="voorbeeld-zwak-singulier-punt-2" class="level2">
+<h2 class="anchored" data-anchor-id="voorbeeld-zwak-singulier-punt-2">Voorbeeld zwak singulier punt</h2>
 <p>Besselvergelijking (radieel deel van Laplacevergelijking cylindrische coördinaten):</p>
 <p><span class="math display">t^2 \ddot{u}(t) + t \dot{u}(t) + (t^2 - \nu^2) u(t) = 0</span></p>
 <ul>
@@ -973,8 +973,8 @@ u_q(t) &amp;= t^\lambda \left(\frac{1}{(q-1)!} x_1(t) (\log t)^{q-1} + \frac{1}{
 </section>
 <section id="randvoorwaardeproblemen" class="level1">
 <h1>Randvoorwaardeproblemen</h1>
-<section id="randvoorwaarden" class="level2 smaller">
-<h2 class="smaller anchored" data-anchor-id="randvoorwaarden">Randvoorwaarden</h2>
+<section id="randvoorwaarden" class="level2">
+<h2 class="anchored" data-anchor-id="randvoorwaarden">Randvoorwaarden</h2>
 <ul>
 <li><p><span class="math inline">({\hat{L}}u)(x) = \sum_{j=0}^{p} a_j(x) \frac{{\mathrm{d}}^j u}{{\mathrm{d}}x^j}(x) =0</span> zonder randvoorwaarden:</p>
 <ul>
@@ -997,8 +997,8 @@ u_j(a) &amp; u_j'(a) &amp; \ldots &amp; u^{(p-1)}_j(a) &amp; u_j(b) &amp; u_j'(b
 </ul></li>
 </ul>
 </section>
-<section id="randvoorwaarden-1" class="level2 smaller">
-<h2 class="smaller anchored" data-anchor-id="randvoorwaarden-1">Randvoorwaarden</h2>
+<section id="randvoorwaarden-1" class="level2">
+<h2 class="anchored" data-anchor-id="randvoorwaarden-1">Randvoorwaarden</h2>
 <ul>
 <li><p>voorbeeld <span class="math inline">-u''(x) = 0</span>: <span class="math inline">u_1(x) = 1</span>, <span class="math inline">u_2(x) = x</span> <span class="math inline">\rightarrow {\mathsf{Z}} = \begin{bmatrix} 1 &amp; x \\ 0 &amp; 1 \end{bmatrix}</span></p>
 <ul>
@@ -1015,8 +1015,8 @@ u_j(a) &amp; u_j'(a) &amp; \ldots &amp; u^{(p-1)}_j(a) &amp; u_j(b) &amp; u_j'(b
 <li><p>met exact <span class="math inline">p</span> randvoorwaarden: existentie van <span class="math inline">u_\gamma</span> voor elke <span class="math inline">\boldsymbol{\gamma}</span> komt overeen met uniciteit: enkel triviale <span class="math inline">u_0(x)=0</span> voldoet aan volledig homogeen probleem</p></li>
 </ul>
 </section>
-<section id="gescheiden-randvoorwaarden" class="level2 smaller">
-<h2 class="smaller anchored" data-anchor-id="gescheiden-randvoorwaarden">Gescheiden randvoorwaarden</h2>
+<section id="gescheiden-randvoorwaarden" class="level2">
+<h2 class="anchored" data-anchor-id="gescheiden-randvoorwaarden">Gescheiden randvoorwaarden</h2>
 <ul>
 <li><p>tweede-orde differentiaalvergelijking: <strong>gescheiden randvoorwaarden</strong>:</p>
 <p><span class="math display">B_1[u] = \alpha_1 u(a) + \alpha_2 u'(a) = \gamma_1,\qquad B_2[u] = \beta_1 u(b) + \beta_2 u'(b) = \gamma_2</span></p>
@@ -1032,8 +1032,8 @@ u_j(a) &amp; u_j'(a) &amp; \ldots &amp; u^{(p-1)}_j(a) &amp; u_j(b) &amp; u_j'(b
   \end{bmatrix}</span>: <span class="math inline">\mathop{\mathrm{rank}}({\mathsf{M}}) &gt; 0 \Rightarrow \mathop{\mathrm{nullity}}{\mathsf{M}} &lt; 2</span> <span class="math inline">\Rightarrow</span> volledig homogeen probleem heeft hoogstens één lineair onafhankelijke niet-triviale oplossing <span class="math inline">u_0(x)</span></p></li>
 </ul>
 </section>
-<section id="inhomogene-oplossing-1" class="level2 smaller">
-<h2 class="smaller anchored" data-anchor-id="inhomogene-oplossing-1">Inhomogene oplossing</h2>
+<section id="inhomogene-oplossing-1" class="level2">
+<h2 class="anchored" data-anchor-id="inhomogene-oplossing-1">Inhomogene oplossing</h2>
 <p>Oplossing van <span class="math inline">({\hat{L}} u_f)(x) = f(x)</span> met <span class="math inline">B_i[u_f] = 0</span> voor <span class="math inline">i=1,\ldots,p</span></p>
 <ul>
 <li><p>Herhaling beginvoorwaardeprobleem: <span class="math inline">\boldsymbol{z}(t) = \int_{t_0}^{t} {\mathsf{Z}}(t,\tau) \boldsymbol{b}(\tau)\,{\mathrm{d}}\tau</span></p>
@@ -1045,8 +1045,8 @@ u_j(a) &amp; u_j'(a) &amp; \ldots &amp; u^{(p-1)}_j(a) &amp; u_j(b) &amp; u_j'(b
 <p>met <span class="math inline">g_\xi(x)</span> de <strong>Greense functie</strong>, gedefinieerd door voorwaarden op volgende slide.</p></li>
 </ul>
 </section>
-<section id="greense-functie" class="level2 smaller">
-<h2 class="smaller anchored" data-anchor-id="greense-functie">Greense functie</h2>
+<section id="greense-functie" class="level2">
+<h2 class="anchored" data-anchor-id="greense-functie">Greense functie</h2>
 <p><span class="math display">u_f(x) = \int_{a}^b g_\xi(x) f(\xi)\,{\mathrm{d}}\xi</span></p>
 <p>Greense functie (volledig) gedefinieerd door</p>
 <ul>
@@ -1055,10 +1055,9 @@ u_j(a) &amp; u_j'(a) &amp; \ldots &amp; u^{(p-1)}_j(a) &amp; u_j(b) &amp; u_j'(b
 <li><span class="math inline">g_\xi(x)</span> en zijn afgeleiden <span class="math inline">g^{(j)}_{\xi}(x)</span> voor <span class="math inline">j \leq p-2</span> zijn continu in <span class="math inline">x=\xi</span></li>
 <li><span class="math inline">g^{(p-1)}_\xi(x)</span> is discontinu bij <span class="math inline">x = \xi</span> en voldoet aan de “sprongconditie” <span class="math inline">g^{(p-1)}_\xi(\xi^+) - g^{(p-1)}_\xi(\xi^-) = \frac{1}{a_p(\xi)}</span></li>
 </ul>
-<p>(grote stappen van het bewijs aan bord; niet actief te kennen)</p>
 </section>
-<section id="greense-functie-1" class="level2 smaller">
-<h2 class="smaller anchored" data-anchor-id="greense-functie-1">Greense functie</h2>
+<section id="greense-functie-1" class="level2">
+<h2 class="anchored" data-anchor-id="greense-functie-1">Greense functie</h2>
 <p><span class="math display">u_f(x) = \int_{a}^b g_\xi(x) f(\xi)\,{\mathrm{d}}\xi</span></p>
 <p><span class="math inline">\rightarrow</span> met oplossingen <span class="math inline">u_j(x)</span> (<span class="math inline">j=1,\ldots,p</span>) van de homogene differentiaalvergelijking zonder randvoorwaarden geldt</p>
 <p><span class="math display">g_\xi(x) = H(\xi-x) \sum_{i=1}^{p} c^j(\xi) u_j(x)  + H(x - \xi) \sum_{i=1}^{p} d^j(\xi) u_j(x)</span></p>
@@ -1066,8 +1065,8 @@ u_j(a) &amp; u_j'(a) &amp; \ldots &amp; u^{(p-1)}_j(a) &amp; u_j(b) &amp; u_j'(b
 <li>coefficiënten <span class="math inline">c^j</span> en <span class="math inline">d^j</span> worden opgelegd door randvoorwaarden, continuïteitsvoorwaarden en sprongconditie</li>
 </ul>
 </section>
-<section id="greense-functie-2" class="level2 smaller">
-<h2 class="smaller anchored" data-anchor-id="greense-functie-2">Greense functie</h2>
+<section id="greense-functie-2" class="level2">
+<h2 class="anchored" data-anchor-id="greense-functie-2">Greense functie</h2>
 <p><span class="math display">u_f(x) = \int_{a}^b g_\xi(x) f(\xi)\,{\mathrm{d}}\xi</span></p>
 <ul>
 <li><p>voor <span class="math inline">p=2</span>:</p>
@@ -1083,8 +1082,8 @@ u_j(a) &amp; u_j'(a) &amp; \ldots &amp; u^{(p-1)}_j(a) &amp; u_j(b) &amp; u_j'(b
 <p>met <span class="math inline">W(x) = u_1(x) u_2'(x) - u_1'(x) u_2(x) \neq 0</span> voor alle <span class="math inline">x \in [a,b]</span></p></li>
 </ul>
 </section>
-<section id="greense-functie-voorbeeld" class="level2 smaller">
-<h2 class="smaller anchored" data-anchor-id="greense-functie-voorbeeld">Greense functie: voorbeeld</h2>
+<section id="greense-functie-voorbeeld" class="level2">
+<h2 class="anchored" data-anchor-id="greense-functie-voorbeeld">Greense functie: voorbeeld</h2>
 <ul>
 <li><p><span class="math inline">-u''(x) = f(x)</span> en <span class="math inline">B_1[u] = u(a)</span> en <span class="math inline">B_2[u] = u(b)</span>; stel <span class="math inline">[a,b]=[0,1]</span>:</p>
 <ul>
@@ -1101,8 +1100,8 @@ u_j(a) &amp; u_j'(a) &amp; \ldots &amp; u^{(p-1)}_j(a) &amp; u_j(b) &amp; u_j'(b
   \end{align*}</span></p></li>
 </ul>
 </section>
-<section id="greense-functie-interpretatie" class="level2 smaller">
-<h2 class="smaller anchored" data-anchor-id="greense-functie-interpretatie">Greense functie: interpretatie</h2>
+<section id="greense-functie-interpretatie" class="level2">
+<h2 class="anchored" data-anchor-id="greense-functie-interpretatie">Greense functie: interpretatie</h2>
 <ul>
 <li><p><span class="math inline">({\hat{L}}u_f)(x) = f(x)</span> en <span class="math inline">B_i[u_f]=0</span> met <span class="math inline">u_f(x) = \int_{a}^b g_\xi(x) f(\xi)\,{\mathrm{d}}\xi</span></p>
 <p><span class="math inline">\Rightarrow ({\hat{L}} g_\xi)(x) = \delta(x-\xi)</span> met <span class="math inline">B_i[g_\xi] = 0</span>?</p>
@@ -1114,8 +1113,8 @@ u_j(a) &amp; u_j'(a) &amp; \ldots &amp; u^{(p-1)}_j(a) &amp; u_j(b) &amp; u_j'(b
 <p><span class="math inline">\rightarrow</span> moet automatisch aan toegevoegde randvoorwaarden voldoen</p></li>
 </ul>
 </section>
-<section id="greense-functie-en-toegevoegde-operator-voorbeeld" class="level2 smaller">
-<h2 class="smaller anchored" data-anchor-id="greense-functie-en-toegevoegde-operator-voorbeeld">Greense functie en toegevoegde operator: voorbeeld</h2>
+<section id="greense-functie-en-toegevoegde-operator-voorbeeld" class="level2">
+<h2 class="anchored" data-anchor-id="greense-functie-en-toegevoegde-operator-voorbeeld">Greense functie en toegevoegde operator: voorbeeld</h2>
 <ul>
 <li><p><span class="math inline">-u''(x)=0</span> met randvoorwaarden <span class="math inline">u(0) = u(1)= 0</span>: zelftoegevoegd</p>
 <p><span class="math inline">\Rightarrow g(x,y) = \begin{cases} x(1-y),&amp;0 &lt; x &lt; y\\
@@ -1135,8 +1134,8 @@ y (1-x), &amp;y &lt; x &lt; 1
 </section>
 <section id="sturm-liouville-eigenwaardeproblemen" class="level1">
 <h1>Sturm-Liouville eigenwaardeproblemen</h1>
-<section id="eigenwaardeproblemen-met-differentiaaloperatoren" class="level2 smaller">
-<h2 class="smaller anchored" data-anchor-id="eigenwaardeproblemen-met-differentiaaloperatoren">Eigenwaardeproblemen met differentiaaloperatoren</h2>
+<section id="eigenwaardeproblemen-met-differentiaaloperatoren" class="level2">
+<h2 class="anchored" data-anchor-id="eigenwaardeproblemen-met-differentiaaloperatoren">Eigenwaardeproblemen met differentiaaloperatoren</h2>
 <p><span class="math display">({\hat{L}}u)(x) = \lambda u(x),\qquad B_i[u] = 0, i =1,\ldots,m</span></p>
 <ul>
 <li>Motivatie:
@@ -1152,8 +1151,8 @@ y (1-x), &amp;y &lt; x &lt; 1
 </ul></li>
 </ul>
 </section>
-<section id="eigenwaardeproblemen-voorbeeld" class="level2 smaller">
-<h2 class="smaller anchored" data-anchor-id="eigenwaardeproblemen-voorbeeld">Eigenwaardeproblemen: voorbeeld</h2>
+<section id="eigenwaardeproblemen-voorbeeld" class="level2">
+<h2 class="anchored" data-anchor-id="eigenwaardeproblemen-voorbeeld">Eigenwaardeproblemen: voorbeeld</h2>
 <ul>
 <li><span class="math inline">-u''(x) = \lambda u(x)</span>:
 <ul>
@@ -1168,21 +1167,21 @@ y (1-x), &amp;y &lt; x &lt; 1
 </ul>
 <p><span class="math inline">\Rightarrow</span> we beperken ons tot 2de orde zelftoegevoegde operatoren: Sturm-Liouville operatoren met gescheiden (of periodieke) randvoorwaarden</p>
 </section>
-<section id="regulier-sturm-liouville-probleem" class="level2 smaller">
-<h2 class="smaller anchored" data-anchor-id="regulier-sturm-liouville-probleem">Regulier Sturm-Liouville probleem</h2>
-<p><span class="math display">\begin{align}
+<section id="regulier-sturm-liouville-probleem" class="level2">
+<h2 class="anchored" data-anchor-id="regulier-sturm-liouville-probleem">Regulier Sturm-Liouville probleem</h2>
+<p><span class="math display">\begin{align*}
 ({\hat{L}}u)(x)= -\frac{1}{w(x)} \frac{{\mathrm{d}}\ }{{\mathrm{d}}x}\left(p(x)\frac{{\mathrm{d}}u}{{\mathrm{d}}x}(x)\right) + \frac{q(x)}{w(x)} u(x) = \lambda u(x)
-\end{align}</span> of equivalent <span class="math display">\begin{align}
+\end{align*}</span> of equivalent <span class="math display">\begin{align*}
 - \frac{{\mathrm{d}}\ }{{\mathrm{d}}x}\left(p(x)\frac{{\mathrm{d}}u}{{\mathrm{d}}x}(x)\right) + q(x) u(x) = \lambda w(x) u(x)
-\end{align}</span> met</p>
+\end{align*}</span> met</p>
 <ul>
 <li>Bestudeerd voor functies <span class="math inline">u \in L^2_w(I,{\mathbb{F}})</span> met compact interval <span class="math inline">I=[a,b]</span> (typisch <span class="math inline">{\mathbb{F}}={\mathbb{R}}</span>)</li>
 <li>De functies <span class="math inline">w(x)</span>, <span class="math inline">p(x)</span>, <span class="math inline">p'(x)</span> and <span class="math inline">q(x)</span> zijn reëel en continu met <span class="math inline">w(x)&gt;0</span> en <span class="math inline">p(x)&gt;0</span> voor alle <span class="math inline">x \in [a,b]</span></li>
 <li>Gescheiden randvoorwaarden <span class="math inline">B_1[u] = \alpha_1 u(a) + \alpha_2 u'(a)=0</span> en <span class="math inline">B_2[u] = \beta_1 u(b) + \beta_2 u'(b) = 0</span></li>
 </ul>
 </section>
-<section id="regulier-sturm-liouville-probleem-1" class="level2 smaller">
-<h2 class="smaller anchored" data-anchor-id="regulier-sturm-liouville-probleem-1">Regulier Sturm-Liouville probleem</h2>
+<section id="regulier-sturm-liouville-probleem-1" class="level2">
+<h2 class="anchored" data-anchor-id="regulier-sturm-liouville-probleem-1">Regulier Sturm-Liouville probleem</h2>
 <p>Structuur van de oplossingen voor een regulier Sturm-Liouville probleem:</p>
 <ul>
 <li>(punt)spectrum van <span class="math inline">{\hat{L}}</span> correspondeert met een oneindige rij reële getallen <span class="math inline">\lambda_0 &lt; \lambda_1 &lt; \lambda_2 &lt; \ldots &lt; \lambda_n &lt; \ldots</span>, met een eindige ondergrens <span class="math inline">-\infty &lt;M&lt;\lambda_0</span> maar geen bovengrens: <span class="math inline">\lim_{n\to \infty} \lambda_n = +\infty</span></li>
@@ -1191,9 +1190,8 @@ y (1-x), &amp;y &lt; x &lt; 1
 <li>De eigenvectoren <span class="math inline">\{u_n, n \in {\mathbb{N}}\}</span> vormen een complete orthonormale basis.</li>
 </ul>
 </section>
-<section id="regulier-sturm-liouville-probleem-2" class="level2 smaller">
-<h2 class="smaller anchored" data-anchor-id="regulier-sturm-liouville-probleem-2">Regulier Sturm-Liouville probleem</h2>
-<p>Bewijs: niet te kennen, enkele basisintuïties:</p>
+<section id="regulier-sturm-liouville-probleem-2" class="level2">
+<h2 class="anchored" data-anchor-id="regulier-sturm-liouville-probleem-2">Regulier Sturm-Liouville probleem</h2>
 <ul>
 <li><p>Dimensionaliteit van <span class="math inline">\mathop{\mathrm{ker}}({\hat{L}}-\lambda {\hat{1}})</span> is 0 of 1 voor gescheiden randvoorwaarden (zie eerder)</p></li>
 <li><p>Orthonormaliteit van eigenvectoren uit zelf-toegevoegd zijn van <span class="math inline">{\hat{L}}</span></p></li>
@@ -1206,8 +1204,8 @@ y (1-x), &amp;y &lt; x &lt; 1
 <p><span class="math inline">\Rightarrow</span> <span class="math inline">\lambda_n = M + \frac{1}{\mu_n}</span></p></li>
 </ul>
 </section>
-<section id="regulier-sturm-liouville-probleem-3" class="level2 smaller">
-<h2 class="smaller anchored" data-anchor-id="regulier-sturm-liouville-probleem-3">Regulier Sturm-Liouville probleem</h2>
+<section id="regulier-sturm-liouville-probleem-3" class="level2">
+<h2 class="anchored" data-anchor-id="regulier-sturm-liouville-probleem-3">Regulier Sturm-Liouville probleem</h2>
 <p>Bijkomende gevolgen en eigenschappen</p>
 <ul>
 <li><p>Resolutie van de identiteit:</p>
@@ -1221,8 +1219,8 @@ y (1-x), &amp;y &lt; x &lt; 1
 <p><span class="math inline">u_n(x)</span> heeft exact <span class="math inline">n</span> nulpunten in <span class="math inline">(a,b)</span></p></li>
 </ul>
 </section>
-<section id="regulier-sturm-liouville-probleem-voorbeeld" class="level2 smaller">
-<h2 class="smaller anchored" data-anchor-id="regulier-sturm-liouville-probleem-voorbeeld">Regulier Sturm-Liouville probleem: voorbeeld</h2>
+<section id="regulier-sturm-liouville-probleem-voorbeeld" class="level2">
+<h2 class="anchored" data-anchor-id="regulier-sturm-liouville-probleem-voorbeeld">Regulier Sturm-Liouville probleem: voorbeeld</h2>
 <ul>
 <li><p><span class="math inline">{\hat{L}} = -{\hat{D}}^2</span> op <span class="math inline">L^2([0,L])</span> (dus met <span class="math inline">w(x)=1</span>) met Dirichlet voorwaarden <span class="math inline">u(0)=u(L)=0</span>:</p>
 <ul>
@@ -1238,8 +1236,8 @@ y (1-x), &amp;y &lt; x &lt; 1
 </ul></li>
 </ul>
 </section>
-<section id="rayleigh-ritz-methode" class="level2 smaller">
-<h2 class="smaller anchored" data-anchor-id="rayleigh-ritz-methode">Rayleigh-Ritz methode</h2>
+<section id="rayleigh-ritz-methode" class="level2">
+<h2 class="anchored" data-anchor-id="rayleigh-ritz-methode">Rayleigh-Ritz methode</h2>
 <ul>
 <li><p>Voor alle functies <span class="math inline">u \in \mathop{\mathrm{\mathcal{D}}}_{{\hat{L}}}</span> (inclusief randvoorwaarden) geldt</p>
 <p><span class="math display">\mathcal{R}[u] = \frac{{\left\langle u,{\hat{L}}u\right\rangle}_w}{{\left\langle u,u\right\rangle}_w} \geq \lambda_0</span></p>
@@ -1259,8 +1257,8 @@ y (1-x), &amp;y &lt; x &lt; 1
 </ul></li>
 </ul>
 </section>
-<section id="rayleigh-ritz-methode-1" class="level2 smaller">
-<h2 class="smaller anchored" data-anchor-id="rayleigh-ritz-methode-1">Rayleigh-Ritz methode</h2>
+<section id="rayleigh-ritz-methode-1" class="level2">
+<h2 class="anchored" data-anchor-id="rayleigh-ritz-methode-1">Rayleigh-Ritz methode</h2>
 <p>Algemeen: zoek beste benadering <span class="math inline">u^\ast</span> binnen een bepaalde deelverzameling <span class="math inline">U \subseteq \mathop{\mathrm{\mathcal{D}}}_{{\hat{L}}}</span>:</p>
 <p><strong>Rayleigh-Ritz methode = variationeel principe</strong>:</p>
 <p>$<span class="math inline">u^\ast = \mathop{\mathrm{arg\ min}}_{u \in U} \mathcal{R}[u]</span></p>
@@ -1273,8 +1271,8 @@ y (1-x), &amp;y &lt; x &lt; 1
 </ul></li>
 </ul>
 </section>
-<section id="uitbreidingen-op-sturm-liouville-theorie" class="level2 smaller">
-<h2 class="smaller anchored" data-anchor-id="uitbreidingen-op-sturm-liouville-theorie">Uitbreidingen op Sturm-Liouville theorie</h2>
+<section id="uitbreidingen-op-sturm-liouville-theorie" class="level2">
+<h2 class="anchored" data-anchor-id="uitbreidingen-op-sturm-liouville-theorie">Uitbreidingen op Sturm-Liouville theorie</h2>
 <ul>
 <li><p><span class="math inline">p(a) = p(b)</span> en <span class="math inline">p(x)</span>, <span class="math inline">p'(x)</span>, <span class="math inline">w(x)</span> en <span class="math inline">s(x)</span> continue in <span class="math inline">(a,b]</span>:</p>
 <ul>
@@ -1293,8 +1291,8 @@ y (1-x), &amp;y &lt; x &lt; 1
 <li><p>Algemeen: <span class="math inline">M &lt; \lambda_0 &lt; \tilde{\lambda}_1 \leq \tilde{\lambda}_2 &lt; \lambda_1 \leq \lambda_2 &lt; \tilde{\lambda}_3 \leq \tilde{\lambda}_4 &lt; \ldots</span></p></li>
 </ul>
 </section>
-<section id="uitbreidingen-op-sturm-liouville-theorie-1" class="level2 smaller">
-<h2 class="smaller anchored" data-anchor-id="uitbreidingen-op-sturm-liouville-theorie-1">Uitbreidingen op Sturm-Liouville theorie</h2>
+<section id="uitbreidingen-op-sturm-liouville-theorie-1" class="level2">
+<h2 class="anchored" data-anchor-id="uitbreidingen-op-sturm-liouville-theorie-1">Uitbreidingen op Sturm-Liouville theorie</h2>
 <ul>
 <li><p><strong>singulier Sturm-Liouville probleem</strong>:</p>
 <ul>
@@ -1316,8 +1314,8 @@ y (1-x), &amp;y &lt; x &lt; 1
 </ul></li>
 </ul>
 </section>
-<section id="uitbreidingen-op-sturm-liouville-theorie-2" class="level2 smaller">
-<h2 class="smaller anchored" data-anchor-id="uitbreidingen-op-sturm-liouville-theorie-2">Uitbreidingen op Sturm-Liouville theorie</h2>
+<section id="uitbreidingen-op-sturm-liouville-theorie-2" class="level2">
+<h2 class="anchored" data-anchor-id="uitbreidingen-op-sturm-liouville-theorie-2">Uitbreidingen op Sturm-Liouville theorie</h2>
 <ul>
 <li><p>Voorbeelden op oneindig interval <span class="math inline">x \in (-\infty,+\infty)</span>:</p>
 <ul>
@@ -1339,8 +1337,8 @@ y (1-x), &amp;y &lt; x &lt; 1
 </section>
 <section id="partiële-differentiaalvergelijkingen" class="level1">
 <h1>Partiële differentiaalvergelijkingen</h1>
-<section id="beginvoorwaardeproblemen-1" class="level2 smaller">
-<h2 class="smaller anchored" data-anchor-id="beginvoorwaardeproblemen-1">Beginvoorwaardeproblemen</h2>
+<section id="beginvoorwaardeproblemen-1" class="level2">
+<h2 class="anchored" data-anchor-id="beginvoorwaardeproblemen-1">Beginvoorwaardeproblemen</h2>
 <ul>
 <li><p>Beschouw:</p>
 <ul>
@@ -1360,8 +1358,8 @@ y (1-x), &amp;y &lt; x &lt; 1
 </ul></li>
 </ul>
 </section>
-<section id="meerdimensionale-sturm-liouville-operator" class="level2 smaller">
-<h2 class="smaller anchored" data-anchor-id="meerdimensionale-sturm-liouville-operator">Meerdimensionale Sturm-Liouville operator</h2>
+<section id="meerdimensionale-sturm-liouville-operator" class="level2">
+<h2 class="anchored" data-anchor-id="meerdimensionale-sturm-liouville-operator">Meerdimensionale Sturm-Liouville operator</h2>
 <ul>
 <li><p>Functies <span class="math inline">u(\boldsymbol{x})</span> met <span class="math inline">\boldsymbol{x} \in \Omega \subseteq {\mathbb{R}}^d</span></p></li>
 <li><p>Afgeleide-operatoren $(_i u)() = ()</p>
@@ -1376,8 +1374,8 @@ y (1-x), &amp;y &lt; x &lt; 1
 </ul></li>
 </ul>
 </section>
-<section id="meerdimensionale-sturm-liouville-operator-1" class="level2 smaller">
-<h2 class="smaller anchored" data-anchor-id="meerdimensionale-sturm-liouville-operator-1">Meerdimensionale Sturm-Liouville operator</h2>
+<section id="meerdimensionale-sturm-liouville-operator-1" class="level2">
+<h2 class="anchored" data-anchor-id="meerdimensionale-sturm-liouville-operator-1">Meerdimensionale Sturm-Liouville operator</h2>
 <p>Sturm-Liouville probleem: <span class="math inline">{\hat{L}} u_n(\boldsymbol{x}) = \lambda_n u_n(\boldsymbol{x})</span> waarbij <span class="math inline">u_n(\boldsymbol{x})</span> voldoet aan de randvoorwaarden</p>
 <ul>
 <li><p>Praktische oplossing: scheiding der veranderlijken (na overgang naar aangepaste coördinaten: cartesisch, cylindrisch, sferisch, …)</p></li>
@@ -1393,8 +1391,8 @@ y (1-x), &amp;y &lt; x &lt; 1
 </ul></li>
 </ul>
 </section>
-<section id="meerdimensionale-sturm-liouville-operator-2" class="level2 smaller">
-<h2 class="smaller anchored" data-anchor-id="meerdimensionale-sturm-liouville-operator-2">Meerdimensionale Sturm-Liouville operator</h2>
+<section id="meerdimensionale-sturm-liouville-operator-2" class="level2">
+<h2 class="anchored" data-anchor-id="meerdimensionale-sturm-liouville-operator-2">Meerdimensionale Sturm-Liouville operator</h2>
 <ul>
 <li><p>Voorbeeld: <span class="math inline">{\hat{L}} = - \boldsymbol{\nabla}^2 = - \Delta = - {\hat{D}}_x^2 - {\hat{D}}_y^2 - {\hat{D}}_z^2</span></p>
 <ul>
