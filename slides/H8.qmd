@@ -541,7 +541,7 @@ $$\vec{z}(t) = \sum_{n=0}^{+\infty} (\map{\mat{K}}^n \vec{\zeta})(t) = \sum_{n=0
 
 (in de eerste uitdrukking beschouwen we $\vec{\zeta}$ als de constante vectorfunctie $t \mapsto \vec{\zeta}$)
 
-Bewijs (deels aan bord):
+Belangrijkste ingrediënten uit het bewijs:
 
 * ruimte van vectorfuncties $\vec{z}: [a,b] \to \bbF^p : t \mapsto \vec{z}(t)$
   * inwendig product en toegevoegde niet belangrijk in deze context
@@ -921,7 +921,7 @@ Oplossing van $(\map{L} u_f)(x) = f(x)$ met $B_i[u_f] = 0$ voor $i=1,\ldots,p$
 
 * Herhaling beginvoorwaardeprobleem: $\vec{z}(t) = \int_{t_0}^{t} \mat{Z}(t,\tau) \vec{b}(\tau)\,\drm \tau$
 
-  $$\rightarrow u(t) = u_f(x) = \int_{a}^x u_p(x,\xi) \frac{f(\xi)}{a_p(\xi)}\,\drm \tau = \int_{a}^b H(x-\xi) u_p(x,\xi) \frac{f(\xi)}{a_p(\xi)}\,\drm \xi$$
+  $$\rightarrow u(t) = u_f(x) = \int_{a}^x u_p(x,\xi) \frac{f(\xi)}{a_p(\xi)}\,\drm \xi = \int_{a}^b H(x-\xi) u_p(x,\xi) \frac{f(\xi)}{a_p(\xi)}\,\drm \xi$$
 
   met $H(x)$ de Heaviside stapfunctie en $u_p(x,\xi)$ de laatste kolom uit de principieel fundamentele matrix, i.e. de oplossing van het homogeen probleem die voldoet aan
   
@@ -1080,9 +1080,9 @@ met
 Structuur van de oplossingen voor een regulier Sturm-Liouville probleem:
 
 * (punt)spectrum van $\map{L}$ correspondeert met een oneindige rij reële getallen $\lambda_0 < \lambda_1 < \lambda_2 < \ldots < \lambda_n < \ldots$, met een eindige ondergrens $-\infty <M<\lambda_0$ maar geen bovengrens: $\lim_{n\to \infty} \lambda_n = +\infty$
-* Voor elke eigenwaarde $\lambda_n$ is er exact één (lineair onafhankelijke) eigenvector $u_n(x)$.
-* Eigenvectors corresponderende met verschillende eigenwaarden zijn orthogonaal met behulp van het gewogen inwendig product $\inner{\ }{\ }_w$ van $L^2_w([a,b])$.
-* De eigenvectoren $\{u_n, n \in \bbN\}$ vormen een complete orthonormale basis.
+* Voor elke eigenwaarde $\lambda_n$ is er exact één (lineair onafhankelijke) eigenvector $u_n(x)$
+* Eigenvectors corresponderende met verschillende eigenwaarden zijn orthogonaal met behulp van het gewogen inwendig product $\inner{\ }{\ }_w$ van $L^2_w([a,b])$
+* De eigenvectoren $\{u_n, n \in \bbN\}$ vormen een complete orthonormale basis
 
 ## Regulier Sturm-Liouville probleem
 
@@ -1162,7 +1162,7 @@ Algemeen: zoek beste benadering $u^\ast$ binnen een bepaalde deelverzameling $U 
 
 **Rayleigh-Ritz methode = variationeel principe**: 
 
-$$u^\ast = \argmin_{u \in U} \mathcal{R}[u]$
+$u^\ast = \argmin_{u \in U} \mathcal{R}[u]$
 
 * voor $U = \bbF\{\ve_1,\ldots,\ve_m\}$: $u = \sum_{k=1}^m c^k e_k$
 

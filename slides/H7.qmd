@@ -870,6 +870,7 @@ Voor functies met domein $\bbR^d$:
 * Integraaloperator:
 
   $\norm{\map{A}f}^2 = \int_I \underbrace{\abs{\int_I A(x,y) f(y)\,\drm y}^2}_{\Downarrow\ \text{Cauchy-Schwarz}} \,\drm x$
+  
   $\quad\leq \int_I \left(\int_I \abs{A(x,y)}^2\,\drm y\right)^2 \left(\int_I f(y),\drm y\right)^2\,\drm x = \left(\int_I\int_I \abs{A(x,y)}^2 \,\drm y\drm x\right) \norm{f}^2$
 
   $\Rightarrow$ begrensd als $\left(\int_I\int_I \abs{A(x,y)}^2 \,\drm y\drm x\right) < \infty$
