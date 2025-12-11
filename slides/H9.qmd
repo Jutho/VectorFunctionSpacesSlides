@@ -647,7 +647,9 @@ Daaruit volgt (veralgemening naar meer dimensies)
 
     $\Rightarrow \lim_{n \to +\infty} T_{f_n} = 0$
 
-    $\Rightarrow$ "$\lim_{n \to +\infty} n^3 \erm^{\irm n x} = 0$" (geldt voor geen enkele vorm van convergentie)
+    $\Rightarrow$ "$\lim_{n \to +\infty} n^3 \erm^{\irm n x} = 0$"
+    
+    (dit geldt voor geen enkele andere vorm van convergentie)
 
 ## Sokhotski-Plemelj formule
 
