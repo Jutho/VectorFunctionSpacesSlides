@@ -1,7 +1,7 @@
 ---
 title: "Hoofdstuk 2 - Lineaire afbeeldingen"
 author: "Jutho Haegeman"
-date: "09/23/2025"
+date: "09/22/2026"
 # format:
 #   revealjs:
 #     theme: solarized
@@ -81,7 +81,7 @@ $$
 \newcommand{\vect}[1]{{#1}}
 \renewcommand{\vec}[1]{\boldsymbol{#1}} % specifically for vectors in F^n
 \newcommand{\zerovec}{{o}}
-\newcommand{\vu}{\vect{u}}
+\renewcommand{\vu}{\vect{u}}
 \newcommand{\vv}{\vect{v}}
 \newcommand{\vw}{\vect{w}}
 \newcommand{\ve}{\vect{e}}
@@ -124,16 +124,6 @@ $$
 \newcommand{\subspace}{{\preccurlyeq}}
 \newcommand{\supspace}{{\succcurlyeq}}
 
-%\newcommand{\vz}{{\bm{z}}}
-%\newcommand{\ovz}{{\overline{\bm{z}}}}
-%\newcommand{\oz}{{\overline{z}}}
-%\newcommand{\vu}{{\bm{u}}}
-%\newcommand{\ovu}{{\overline{\bm{u}}}}
-%\newcommand{\ou}{{\overline{u}}}
-%\newcommand{\vr}{{\bm{r}}}
-%\newcommand{\ovr}{{\overline{\bm{r}}}}
-%\newcommand{\orr}{{\overline{r}}}
-
 \newcommand{\eps}{{\varepsilon}}
 \newcommand{\levicivita}{{\epsilon}}
 
@@ -142,10 +132,9 @@ $$
 \newcommand{\sz}{{\sigma^z}}
 \renewcommand{\sp}{{\sigma^+}}
 \newcommand{\sm}{{\sigma^-}}
-%
 
-\DeclareMathOperator*{\sumint}{%
-\mathchoice%
+\DeclareMathOperator*{\sumint}{
+\mathchoice
   {\ooalign{$\displaystyle\sum$\cr\hidewidth$\displaystyle\int$\hidewidth\cr}}
   {\ooalign{\raisebox{.14\height}{\scalebox{.7}{$\textstyle\sum$}}\cr\hidewidth$\textstyle\int$\hidewidth\cr}}
   {\ooalign{\raisebox{.2\height}{\scalebox{.6}{$\scriptstyle\sum$}}\cr$\scriptstyle\int$\cr}}
@@ -166,17 +155,11 @@ Herhaling:
 
 * Lineaire stelsels: oplossingstructuur en relevante matrixontbindingen
 
-## Doel van dit hoofdstuk
-
 Nieuw (?)
 
 * Lineaire functionalen en duale ruimte
 
 * Determinanten als volume(verandering), Jacobianen en substituties in meervoudige integralen
-
-* Lineaire afbeeldingen in reële en complexe vectorruimten; antilineaire afbeeldingen
-
-* Blokmatrices en Schur complementen
 
 # Lineaire afbeeldingen
 
@@ -185,7 +168,7 @@ Nieuw (?)
 Homomorfismen tussen vectorruimten: $\varphi \in \Hom(V,W)$
 
 * Structuurbehoud: 
-  * Additiviteit: $\varphi(\vv_1 + \vv_2) = \varphi(\vv_1) + \varphi(\vv_2)$^[Additiviteit impliceert homogeniteit voor rationale getallen, en bij uitbreiding reële getallen als we over een notie van continuïteit zouden beschikken]
+  * Additiviteit: $\varphi(\vv_1 + \vv_2) = \varphi(\vv_1) + \varphi(\vv_2)$
   * Homogeniteit: $\varphi(a \vv) = a \varphi(\vv)$
 
   $\Rightarrow$ **lineariteit** $\varphi(a_1 \vv_1 + a_2 \vw) = a_1 \varphi(\vv_1) + a_2 \varphi(\vv_2)$
@@ -308,7 +291,7 @@ Enkele eigenschappen van matrixvermenigvuldiging:
 * geheugencomplexiteit: $mn + np + mp$ scalairen
 * voor $m \approx n \approx p$: $\order(n^3)$ bewerkingen op $\order(n^2)$ data
 
-## Lineaire extensie en vrije vectorruimte
+<!-- ## Lineaire extensie en vrije vectorruimte
 
 * Voor een verzameling $S$ waarvan we de elementen $\{a_1, a_2,\ldots\}$ beschouwen als abstracte entiteiten zonder vooraf bestaande vectorstructuur:
   * de **vrije vectorruimte** $\bbF S$ bestaat uit alle "formele" lineaire combinaties, waarbij we de elementen van $S$ als abstracte basisvectoren beschouwen (zie H1)
@@ -335,7 +318,7 @@ Beschouw een groep $G = \{g_1,g_2,\ldots\}$. Met elk groepselement kunnen we een
 * linker-multiplicatie: $L_{g} (h) = g h$ zodat $L_{g_1} L_{g_2} = L_{g_1 g_2}$
 * rechter-multiplicatie: $R_{g}(h) = h g^{-1}$ zodat $R_{g_1} R_{g_2} = R_{g_1 g_2}$
 
-Deze transformaties kunnen gepromoveerd worden tot lineaire transformaties op $\bbC G$, waarbij $\map{L}_g$ en $\map{R}_g$ zullen worden voorgesteld door "permutatiematrices': vierkante matrices met enkel nul en één, zodat er exact één element één is in elke rij en elke kolom. Deze staan gekend als de linker en rechter reguliere representatie, en spelen een belangrijke rol bij de ontwikkeling van representatietheorie.
+Deze transformaties kunnen gepromoveerd worden tot lineaire transformaties op $\bbC G$, waarbij $\map{L}_g$ en $\map{R}_g$ zullen worden voorgesteld door "permutatiematrices': vierkante matrices met enkel nul en één, zodat er exact één element één is in elke rij en elke kolom. Deze staan gekend als de linker en rechter reguliere representatie, en spelen een belangrijke rol bij de ontwikkeling van representatietheorie. -->
 
 ## Bewerkingen met matrices
 Gegeven een matrix $\mat{A}$ met componenten $A^i_{\ j}$
@@ -653,7 +636,7 @@ $$ \chi_j = \xi_i A^i_{\ j} = (\mat{A}^\transpose)^{\ i}_j \xi_i$$
 
 $\Rightarrow$ transponeren geeft de matrix-representatie van de duale lineaire afbeelding
 
-# Affiene transformaties
+<!-- # Affiene transformaties
 
 ## Affiene ruimten: herhaling
 
@@ -836,7 +819,7 @@ Tijdsomkeringsymmetrie in kwantummechanica:
 
   $\Rightarrow (\map{T} \Psi) = \conj{\Psi(-p)}$
 
-  = Complexe conjugatie + spiegeling van momentum
+  = Complexe conjugatie + spiegeling van momentum -->
 
 
 # Lineaire systemen
@@ -932,7 +915,7 @@ $f_{\vec{X}}(\vec{x}) = Z \erm^{-\frac{1}{2} (\vec{x}-\vec{\mu})^\transpose \mat
   * covariantiematrix $\Sigma^{ij} = \langle (X^i-\langle X^i \rangle)(X^j-\langle X^j \rangle)\rangle = \\
   \langle X^i X^j \rangle - \langle X^i \rangle \langle X^j \rangle = (\mat{A}^{-1})^{ij}$
 
-## Blokmatrices
+<!-- ## Blokmatrices
 
 * Lineair stelsel dat bestaat uit twee delen voor 1 groep onbekenden: $\map{A}_1 \vx = \vy_1$ en $\map{A}_2 \vx = \vy_2$
 
@@ -969,7 +952,6 @@ $\begin{bmatrix}
 
 * $\mat{A}_{11}$ inverteerbaar $\Rightarrow$ blok-LDU-decompositie:
 
-::: {.r-fit-text}
   $$	\mat{A} = \underbrace{\begin{bmatrix}
 		\idmat_{n_1} & \zeromat \\ \mat{A}_{21} \mat{A}_{11}^{-1} & \idmat_{n_2}
 	\end{bmatrix}}_{\mat{L}}
@@ -981,7 +963,6 @@ $\begin{bmatrix}
 		\idmat_{n_1} &  \mat{A}_{11}^{-1} \mat{A}_{12}\\
 		\zeromat & \idmat_{n_2}
 	\end{bmatrix}}_{\mat{U}}$$
-:::
 
 * Schur complement $(\mat{A}/\mat{A}_{11}) = \mat{A}_{22} - \mat{A}_{21} \mat{A}_{11}^{-1} \mat{A}_{12}$
 
@@ -1070,4 +1051,4 @@ Voor vierkante matrices $\mat{A} \in \bbF^{n\times n}$, $\mat{C} \in \bbF^{k \ti
 
 * Afgeleide van de matrixinverse van een matrixwaardige functie:
 
-  $$\frac{\drm \mat{A}^{-1}}{\drm x}(x) = -\mat{A}^{-1}(x) \frac{\drm \mat{A}}{\drm x}(x) \mat{A}^{-1}(x)$$
+  $$\frac{\drm \mat{A}^{-1}}{\drm x}(x) = -\mat{A}^{-1}(x) \frac{\drm \mat{A}}{\drm x}(x) \mat{A}^{-1}(x)$$ -->

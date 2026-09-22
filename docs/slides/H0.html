@@ -6,8 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Jutho Haegeman &amp; Lander Burgelman">
+<meta name="dcterms.date" content="2026-09-21">
 
-<title>Vector- en functieruimten – Slides - Vector and Function Spaces – Slides</title>
+<title>Vector- en functieruimten – Slides - Vector- en functieruimten</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,24 +25,22 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -61,35 +61,6 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
-
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-date','listing-title','listing-author',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-title-sort'] }],
-      
-      searchColumns: ["listing-date","listing-title","listing-author"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
 
   <script>window.backupDefine = window.define; window.define = undefined;</script><script src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.js"></script>
   <script>document.addEventListener("DOMContentLoaded", function () {
@@ -117,7 +88,7 @@ ul.task-list li input[type="checkbox"] {
     <nav class="navbar navbar-expand-lg navbar-dark ">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">Vector- en functieruimten – Slides</span>
     </a>
   </div>
@@ -128,43 +99,43 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./index.html" rel="" target="" aria-current="page">
+    <a class="nav-link" href="../index.html" rel="" target="">
  <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./slides/H1.html" rel="" target="">
+    <a class="nav-link" href="../slides/H1.html" rel="" target="">
  <span class="menu-text">H1</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./slides/H2.html" rel="" target="">
+    <a class="nav-link" href="../slides/H2.html" rel="" target="">
  <span class="menu-text">H2</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./slides/H3.html" rel="" target="">
+    <a class="nav-link" href="../slides/H3.html" rel="" target="">
  <span class="menu-text">H3</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./slides/H4.html" rel="" target="">
+    <a class="nav-link" href="../slides/H4.html" rel="" target="">
  <span class="menu-text">H4</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./slides/H5.html" rel="" target="">
+    <a class="nav-link" href="../slides/H5.html" rel="" target="">
  <span class="menu-text">H5</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./slides/H6.html" rel="" target="">
+    <a class="nav-link" href="../slides/H6.html" rel="" target="">
  <span class="menu-text">H6</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./slides/H7.html" rel="" target="">
+    <a class="nav-link" href="../slides/H7.html" rel="" target="">
  <span class="menu-text">H7</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./slides/H8.html" rel="" target="">
+    <a class="nav-link" href="../slides/H8.html" rel="" target="">
  <span class="menu-text">H8</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./slides/H9.html" rel="" target="">
+    <a class="nav-link" href="../slides/H9.html" rel="" target="">
  <span class="menu-text">H9</span></a>
   </li>  
 </ul>
@@ -179,21 +150,48 @@ ul.task-list li input[type="checkbox"] {
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#inleiding-en-praktische-informatie" id="toc-inleiding-en-praktische-informatie" class="nav-link active" data-scroll-target="#inleiding-en-praktische-informatie">Inleiding en praktische informatie</a>
+  <ul class="collapse">
+  <li><a href="#motivatie" id="toc-motivatie" class="nav-link" data-scroll-target="#motivatie">Motivatie</a></li>
+  <li><a href="#motivatie-lineariteit" id="toc-motivatie-lineariteit" class="nav-link" data-scroll-target="#motivatie-lineariteit">Motivatie: lineariteit</a></li>
+  <li><a href="#lesgevers-en-lesschema" id="toc-lesgevers-en-lesschema" class="nav-link" data-scroll-target="#lesgevers-en-lesschema">Lesgevers en lesschema</a></li>
+  <li><a href="#evaluatie" id="toc-evaluatie" class="nav-link" data-scroll-target="#evaluatie">Evaluatie</a></li>
+  <li><a href="#cursusmateriaal" id="toc-cursusmateriaal" class="nav-link" data-scroll-target="#cursusmateriaal">Cursusmateriaal</a></li>
+  <li><a href="#vragen-en-opmerkingen" id="toc-vragen-en-opmerkingen" class="nav-link" data-scroll-target="#vragen-en-opmerkingen">Vragen en opmerkingen</a></li>
+  </ul></li>
+  <li><a href="#vragen" id="toc-vragen" class="nav-link" data-scroll-target="#vragen">Vragen ?</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Vector and Function Spaces – Slides</h1>
+<h1 class="title">Vector- en functieruimten</h1>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Jutho Haegeman &amp; Lander Burgelman </p>
+          </div>
+  </div>
     
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">September 21, 2026</p>
+    </div>
+  </div>
   
     
   </div>
@@ -201,169 +199,131 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-
-
-
-
-<div class="quarto-listing quarto-listing-container-table" id="listing-listing">
-<div class="listing-actions-group">
-   <div class="input-group input-group-sm quarto-listing-sort">
-     <span class="input-group-text"><i class="bi bi-sort-down"></i></span>
-     <select id="listing-listing-sort" class="form-select" aria-label="Order By" onchange="window['quarto-listings']['listing-listing'].sort(this.options[this.selectedIndex].value, { order: this.options[this.selectedIndex].getAttribute('data-direction')})">
-       <option value="" disabled="" selected="" hidden="">Order By</option>
-       <option value="index" data-direction="asc">Default</option>
-         <option value="listing-date-sort" data-direction="asc">
-          Date - Oldest
-        </option>
-         <option value="listing-date-sort" data-direction="desc">
-          Date - Newest
-        </option>
-         <option value="listing-title-sort" data-direction="asc">
-          Title
-        </option>
-         <option value="listing-author" data-direction="asc">
-          Author
-        </option>
-     </select>
-  </div>
-    <div class="input-group input-group-sm quarto-listing-filter">
-      <span class="input-group-text"><i class="bi bi-search"></i></span>
-      <input type="text" class="search form-control" placeholder="Filter">
-    </div>
+<section id="inleiding-en-praktische-informatie" class="level1">
+<h1>Inleiding en praktische informatie</h1>
+<div class="hidden">
+<p>$$ % Math operators % % </p>
+% VECTORS
+<p>% specifically for vectors in F^n </p>
+% MATRICES
+<p>% SCALARS </p>
+% LINEAR MAPS
+<p>% FIELDS </p>
+<p>% RELATIONS </p>
+<p>$$</p>
 </div>
+<section id="motivatie" class="level2">
+<h2 class="anchored" data-anchor-id="motivatie">Motivatie</h2>
+<p>Vergelijkingen van de fysica:</p>
+<ul>
+<li><p>Aangedreven harmonische oscillator: <span class="math inline">m \frac{{\mathrm{d}}^2 x}{{\mathrm{d}}t^2} + \gamma \frac{{\mathrm{d}}x}{{\mathrm{d}}t} + k x = F(t)</span></p></li>
+<li><p>Warmtevergelijking of diffusievergelijking: <span class="math inline">\frac{\partial u}{\partial t} = \alpha \nabla^2 u</span></p></li>
+<li><p>Golfvergelijking: <span class="math inline">\frac{\partial^2 u}{\partial t^2} = c^2 \nabla^2 u</span></p></li>
+<li><p>Maxwellvergelijkingen:</p>
+<p><span class="math inline">\nabla \cdot \boldsymbol{E} = \frac{\rho}{\varepsilon_0}, \quad \nabla \cdot \boldsymbol{B} = 0, \quad \nabla \times \boldsymbol{E} = -\frac{\partial \boldsymbol{B}}{\partial t}, \quad \nabla \times \boldsymbol{B} = \mu_0 \boldsymbol{J} + \mu_0 \varepsilon_0 \frac{\partial \boldsymbol{E}}{\partial t}</span></p></li>
+<li><p>Schrödingervergelijking: <span class="math inline">i \hbar \frac{\partial \psi}{\partial t} = -\frac{\hbar^2}{2m} \nabla^2 \psi + V \psi</span></p></li>
+</ul>
+<p>versus</p>
+<ul>
+<li>Navier-Stokesvergelijking: <span class="math inline">\rho \left( \frac{\partial \boldsymbol{v}}{\partial t} + (\boldsymbol{v} \cdot \nabla) \boldsymbol{v} \right) = -\nabla p + \mu \nabla^2 \boldsymbol{v} + \boldsymbol{f}</span></li>
+</ul>
+</section>
+<section id="motivatie-lineariteit" class="level2">
+<h2 class="anchored" data-anchor-id="motivatie-lineariteit">Motivatie: lineariteit</h2>
+<ul>
+<li><p>Lineariteit:</p>
+<p>lineare combinatie van bronnen <span class="math inline">\Rightarrow</span> lineaire combinatie van oplossingen</p></li>
+<li><p>Lineariteit is alom tegenwoordig (soms als benadering rond evenwichtstoestand)</p></li>
+<li><p>Ligt aan de grondslag van een hele reeks wiskundige technieken, zowel analytisch als numeriek:</p>
+<ul>
+<li>Basistranformaties, orthogonale en unitaire transformaties</li>
+<li>Basisoplossingen , eigenfuncties en eigenwaarden</li>
+<li>Superpositieprincipe</li>
+<li>Fourier-analyse (alsook Lapace- en Z-transformaties)</li>
+<li>Begin- en randvoorwaardeproblemen: Greense functies</li>
+<li>Numerieke lineaire algebra en numerieke integratie</li>
+<li>Numerieke optimalisatie en root finding:
+<ul>
+<li>Newton-Raphson methode, gradient descent, conjugate gradient, quasi-Newton methoden, …</li>
+</ul></li>
+</ul></li>
+</ul>
+</section>
+<section id="lesgevers-en-lesschema" class="level2">
+<h2 class="anchored" data-anchor-id="lesgevers-en-lesschema">Lesgevers en lesschema</h2>
+<ul>
+<li><p>Theorielessen:</p>
+<ul>
+<li>Jutho Haegeman, Lander Burgelman</li>
+<li>Dinsdagnamiddag (13u - 15u45 in week 1 - 6, 14u30 - 17u15 in week 7 - 12)</li>
+</ul></li>
+<li><p>Oefeningenlessen:</p>
+<ul>
+<li>Sander De Meyer, Kevin Vervoort</li>
+<li>Maandagvoormiddag (11u30 - 12u45) + (in week 7 - 12) vrijdagvoormiddag (11u30 - 12u45)</li>
+</ul></li>
+<li><p>Afwijkingen van het lesschema worden tijdig gecommuniceerd via Ufora.</p></li>
+</ul>
+</section>
+<section id="evaluatie" class="level2">
+<h2 class="anchored" data-anchor-id="evaluatie">Evaluatie</h2>
+<ul>
+<li><p>Theorie en oefeningen tellen elk voor 50%</p>
+<ul>
+<li><p>Examen voor 18 van de 20 punten:</p>
+<ul>
+<li>open boek voor beide onderdelen</li>
+<li>theorie-gedeelte: analoog aan Lineaire Algebra, waar-valsvragen, bewijzen toelichten, korte theoretische oefeningen</li>
+<li>oefeningen-gedeelte: analoog aan wat er in de oefeningenles wordt behandeld</li>
+<li>tijd zelf in te delen</li>
+</ul></li>
+<li><p>2 punten op “niet-periodegebonden evaluatie”:</p>
+<ul>
+<li>mini-examen in één van de laatste lesweken, over een deel van de leerstof, evenzeer openboek met theorie-gedeelte (waar-valsvragen) en een oefeningen-gedeelte</li>
+<li>details worden nog gecommuniceerd</li>
+</ul></li>
+</ul></li>
+</ul>
+</section>
+<section id="cursusmateriaal" class="level2">
+<h2 class="anchored" data-anchor-id="cursusmateriaal">Cursusmateriaal</h2>
+<ul>
+<li><p>Theoriecursus beschikbaar als PDF op Ufora, wordt nog verder bijgewerkt.</p>
+<ul>
+<li><p>Eenvoudige versie (“-simple”) bevat sowieso alles wat we gaan zien, mogelijks wordt ook daar nog in geschrapt.</p></li>
+<li><p>Geavanceerde versie bevat extra materiaal, in de vorm van secties die in meer detail bepaalde aspecten behandelen, bijkomende opmerkingen en verwijzingen, en appendices met geavanceerd/wiskundig actergrondmateriaal.</p></li>
+<li><p>Beide documenten zijn momenteel nog niet volledig klaar en zullen nog onderhevig zijn aan wijzigingen, voornamelijk vanaf na Hoofdstuk 6.</p></li>
+</ul></li>
+<li><p>Oefeningen:</p>
+<ul>
+<li>Zie eerste oefeningenles</li>
+</ul></li>
+<li><p>Verder op ufora: slides, extra materiaal en links, referentielijst, …&nbsp;</p></li>
+</ul>
+</section>
+<section id="vragen-en-opmerkingen" class="level2">
+<h2 class="anchored" data-anchor-id="vragen-en-opmerkingen">Vragen en opmerkingen</h2>
+<ul>
+<li><p>Inhoudelijke vragen over de cursus of oefeningen:</p>
+<ul>
+<li><p>Tijdens de les (of pauze).</p></li>
+<li><p>Via het discussieforum op Ufora:</p>
+<p>voor iedereen zichtbaar, iedereen kan antwoorden, docenten en assistenten volgen mee en zullen ook antwoorden.</p></li>
+<li><p>Inhoudelijke vragen via mail worden toch naar het forum doorverwezen.</p></li>
+<li><p>Niet-inhoudelijke vragen (praktisch, organisatorisch, …&nbsp;) via mail.</p></li>
+</ul></li>
+<li><p>Typfouten of andere fouten in de cursus:</p>
+<p>steeds welkom, zelfs als je niet zeker bent!</p></li>
+</ul>
+</section>
+</section>
+<section id="vragen" class="level1">
+<h1>Vragen ?</h1>
 
-<table class="quarto-listing-table table">
-<thead>
-<tr>
-<th>
-<a class="sort" data-sort="listing-date-sort" onclick="if (this.classList.contains('sort-asc')) { this.classList.add('sort-desc'); this.classList.remove('sort-asc') } else { this.classList.add('sort-asc'); this.classList.remove('sort-desc')} return false;">Date</a>
-</th>
-<th>
-<a class="sort" data-sort="listing-title-sort" onclick="if (this.classList.contains('sort-asc')) { this.classList.add('sort-desc'); this.classList.remove('sort-asc') } else { this.classList.add('sort-asc'); this.classList.remove('sort-desc')} return false;">Title</a>
-</th>
-<th>
-<a class="sort" data-sort="listing-author" onclick="if (this.classList.contains('sort-asc')) { this.classList.add('sort-desc'); this.classList.remove('sort-asc') } else { this.classList.add('sort-asc'); this.classList.remove('sort-desc')} return false;">Author</a>
-</th>
-</tr>
-</thead>
-<tbody class="list">
-<tr data-index="0" data-listing-date-sort="1789941600000" data-listing-file-modified-sort="1790090202982" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="15" data-listing-title-sort="Hoofdstuk 1 - Elementaire wiskundige structuren" data-listing-filename-sort="H1.qmd">
-<td>
-<span class="listing-date">Sep 21, 2026</span>
-</td>
-<td>
-<a href="./slides/H1.html" class="title listing-title">Hoofdstuk 1 - Elementaire wiskundige structuren</a>
-</td>
-<td>
-<span class="listing-author">Jutho Haegeman</span>
-</td>
-</tr>
-<tr data-index="1" data-listing-date-sort="1790028000000" data-listing-file-modified-sort="1790090177226" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="24" data-listing-title-sort="Hoofdstuk 2 - Lineaire afbeeldingen" data-listing-filename-sort="H2.qmd">
-<td>
-<span class="listing-date">Sep 22, 2026</span>
-</td>
-<td>
-<a href="./slides/H2.html" class="title listing-title">Hoofdstuk 2 - Lineaire afbeeldingen</a>
-</td>
-<td>
-<span class="listing-author">Jutho Haegeman</span>
-</td>
-</tr>
-<tr data-index="2" data-listing-date-sort="1790028000000" data-listing-file-modified-sort="1790090161034" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="24" data-listing-title-sort="Hoofdstuk 3 - Lineaire operatoren en eigenwaarden" data-listing-filename-sort="H3.qmd">
-<td>
-<span class="listing-date">Sep 22, 2026</span>
-</td>
-<td>
-<a href="./slides/H3.html" class="title listing-title">Hoofdstuk 3 - Lineaire operatoren en eigenwaarden</a>
-</td>
-<td>
-<span class="listing-author">Jutho Haegeman</span>
-</td>
-</tr>
-<tr data-index="3" data-listing-date-sort="1760997600000" data-listing-file-modified-sort="1790090227721" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="15" data-listing-title-sort="Hoofdstuk 4 - Normen en afstanden" data-listing-filename-sort="H4.qmd">
-<td>
-<span class="listing-date">Oct 21, 2025</span>
-</td>
-<td>
-<a href="./slides/H4.html" class="title listing-title">Hoofdstuk 4 - Normen en afstanden</a>
-</td>
-<td>
-<span class="listing-author">Jutho Haegeman</span>
-</td>
-</tr>
-<tr data-index="4" data-listing-date-sort="1761606000000" data-listing-file-modified-sort="1790090231650" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="19" data-listing-title-sort="Hoofdstuk 5 - Inwendig product en orthogonaliteit" data-listing-filename-sort="H5.qmd">
-<td>
-<span class="listing-date">Oct 28, 2025</span>
-</td>
-<td>
-<a href="./slides/H5.html" class="title listing-title">Hoofdstuk 5 - Inwendig product en orthogonaliteit</a>
-</td>
-<td>
-<span class="listing-author">Jutho Haegeman</span>
-</td>
-</tr>
-<tr data-index="5" data-listing-date-sort="1762902000000" data-listing-file-modified-sort="1790090234934" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="16" data-listing-title-sort="Hoofdstuk 6 - Unitaire gelijkvormigheid en unitaire equivalentie" data-listing-filename-sort="H6.qmd">
-<td>
-<span class="listing-date">Nov 12, 2025</span>
-</td>
-<td>
-<a href="./slides/H6.html" class="title listing-title">Hoofdstuk 6 - Unitaire gelijkvormigheid en unitaire equivalentie</a>
-</td>
-<td>
-<span class="listing-author">Jutho Haegeman</span>
-</td>
-</tr>
-<tr data-index="6" data-listing-date-sort="1763420400000" data-listing-file-modified-sort="1790090238981" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="34" data-listing-title-sort="Hoofdstuk 7 - Functieruimten" data-listing-filename-sort="H7.qmd">
-<td>
-<span class="listing-date">Nov 18, 2025</span>
-</td>
-<td>
-<a href="./slides/H7.html" class="title listing-title">Hoofdstuk 7 - Functieruimten</a>
-</td>
-<td>
-<span class="listing-author">Jutho Haegeman</span>
-</td>
-</tr>
-<tr data-index="7" data-listing-date-sort="1763938800000" data-listing-file-modified-sort="1790090242957" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="34" data-listing-title-sort="Hoofdstuk 8 - Lineaire differentiaaloperatoren" data-listing-filename-sort="H8.qmd">
-<td>
-<span class="listing-date">Nov 24, 2025</span>
-</td>
-<td>
-<a href="./slides/H8.html" class="title listing-title">Hoofdstuk 8 - Lineaire differentiaaloperatoren</a>
-</td>
-<td>
-<span class="listing-author">Jutho Haegeman</span>
-</td>
-</tr>
-<tr data-index="8" data-listing-date-sort="1764630000000" data-listing-file-modified-sort="1790090247556" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="34" data-listing-title-sort="Hoofdstuk 9 - Fourieranalyse en distributies" data-listing-filename-sort="H9.qmd">
-<td>
-<span class="listing-date">Dec 2, 2025</span>
-</td>
-<td>
-<a href="./slides/H9.html" class="title listing-title">Hoofdstuk 9 - Fourieranalyse en distributies</a>
-</td>
-<td>
-<span class="listing-author">Jutho Haegeman</span>
-</td>
-</tr>
-<tr data-index="9" data-listing-date-sort="1789941600000" data-listing-file-modified-sort="1790090189327" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-title-sort="Vector- en functieruimten" data-listing-filename-sort="H0.qmd">
-<td>
-<span class="listing-date">Sep 21, 2026</span>
-</td>
-<td>
-<a href="./slides/H0.html" class="title listing-title">Vector- en functieruimten</a>
-</td>
-<td>
-<span class="listing-author">Jutho Haegeman &amp; Lander Burgelman</span>
-</td>
-</tr>
-</tbody>
 
-</table>
-<div class="listing-no-matching d-none">
-No matching items
-</div>
-</div></main> <!-- /main -->
+</section>
+
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {

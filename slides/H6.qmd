@@ -82,7 +82,7 @@ $$
 \newcommand{\vect}[1]{{#1}}
 \renewcommand{\vec}[1]{\boldsymbol{#1}} % specifically for vectors in F^n
 \newcommand{\zerovec}{{o}}
-\newcommand{\vu}{\vect{u}}
+\renewcommand{\vu}{\vect{u}}
 \newcommand{\vv}{\vect{v}}
 \newcommand{\vw}{\vect{w}}
 \newcommand{\ve}{\vect{e}}
@@ -125,16 +125,6 @@ $$
 \newcommand{\subspace}{{\preccurlyeq}}
 \newcommand{\supspace}{{\succcurlyeq}}
 
-%\newcommand{\vz}{{\bm{z}}}
-%\newcommand{\ovz}{{\overline{\bm{z}}}}
-%\newcommand{\oz}{{\overline{z}}}
-%\newcommand{\vu}{{\bm{u}}}
-%\newcommand{\ovu}{{\overline{\bm{u}}}}
-%\newcommand{\ou}{{\overline{u}}}
-%\newcommand{\vr}{{\bm{r}}}
-%\newcommand{\ovr}{{\overline{\bm{r}}}}
-%\newcommand{\orr}{{\overline{r}}}
-
 \newcommand{\eps}{{\varepsilon}}
 \newcommand{\levicivita}{{\epsilon}}
 
@@ -143,10 +133,9 @@ $$
 \newcommand{\sz}{{\sigma^z}}
 \renewcommand{\sp}{{\sigma^+}}
 \newcommand{\sm}{{\sigma^-}}
-%
 
-\DeclareMathOperator*{\sumint}{%
-\mathchoice%
+\DeclareMathOperator*{\sumint}{
+\mathchoice
   {\ooalign{$\displaystyle\sum$\cr\hidewidth$\displaystyle\int$\hidewidth\cr}}
   {\ooalign{\raisebox{.14\height}{\scalebox{.7}{$\textstyle\sum$}}\cr\hidewidth$\textstyle\int$\hidewidth\cr}}
   {\ooalign{\raisebox{.2\height}{\scalebox{.6}{$\scriptstyle\sum$}}\cr$\scriptstyle\int$\cr}}

@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Jutho Haegeman">
-<meta name="dcterms.date" content="2025-09-23">
+<meta name="dcterms.date" content="2026-09-22">
 
 <title>Vector- en functieruimten – Slides - Hoofdstuk 2 - Lineaire afbeeldingen</title>
 <style>
@@ -155,7 +155,6 @@ ul.task-list li input[type="checkbox"] {
    
   <ul>
   <li><a href="#doel-van-dit-hoofdstuk" id="toc-doel-van-dit-hoofdstuk" class="nav-link active" data-scroll-target="#doel-van-dit-hoofdstuk">Doel van dit hoofdstuk</a></li>
-  <li><a href="#doel-van-dit-hoofdstuk-1" id="toc-doel-van-dit-hoofdstuk-1" class="nav-link" data-scroll-target="#doel-van-dit-hoofdstuk-1">Doel van dit hoofdstuk</a></li>
   <li><a href="#lineaire-afbeeldingen" id="toc-lineaire-afbeeldingen" class="nav-link" data-scroll-target="#lineaire-afbeeldingen">Lineaire afbeeldingen</a>
   <ul class="collapse">
   <li><a href="#definitie" id="toc-definitie" class="nav-link" data-scroll-target="#definitie">Definitie</a></li>
@@ -174,9 +173,6 @@ ul.task-list li input[type="checkbox"] {
   <ul class="collapse">
   <li><a href="#matrixvoorstelling-van-lineaire-afbeeldingen" id="toc-matrixvoorstelling-van-lineaire-afbeeldingen" class="nav-link" data-scroll-target="#matrixvoorstelling-van-lineaire-afbeeldingen">Matrixvoorstelling van lineaire afbeeldingen</a></li>
   <li><a href="#matrixvoorstelling-en-compositie" id="toc-matrixvoorstelling-en-compositie" class="nav-link" data-scroll-target="#matrixvoorstelling-en-compositie">Matrixvoorstelling en compositie</a></li>
-  <li><a href="#lineaire-extensie-en-vrije-vectorruimte" id="toc-lineaire-extensie-en-vrije-vectorruimte" class="nav-link" data-scroll-target="#lineaire-extensie-en-vrije-vectorruimte">Lineaire extensie en vrije vectorruimte</a></li>
-  <li><a href="#voorbeeld-van-lineaire-extensie-1" id="toc-voorbeeld-van-lineaire-extensie-1" class="nav-link" data-scroll-target="#voorbeeld-van-lineaire-extensie-1">Voorbeeld van lineaire extensie (1)</a></li>
-  <li><a href="#voorbeeld-van-lineaire-extensie-2" id="toc-voorbeeld-van-lineaire-extensie-2" class="nav-link" data-scroll-target="#voorbeeld-van-lineaire-extensie-2">Voorbeeld van lineaire extensie (2)</a></li>
   <li><a href="#bewerkingen-met-matrices" id="toc-bewerkingen-met-matrices" class="nav-link" data-scroll-target="#bewerkingen-met-matrices">Bewerkingen met matrices</a></li>
   <li><a href="#bewerkingen-met-matrices-1" id="toc-bewerkingen-met-matrices-1" class="nav-link" data-scroll-target="#bewerkingen-met-matrices-1">Bewerkingen met matrices</a></li>
   <li><a href="#rang-van-een-matrix" id="toc-rang-van-een-matrix" class="nav-link" data-scroll-target="#rang-van-een-matrix">Rang van een matrix</a></li>
@@ -207,28 +203,6 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#lineaire-functionalen-en-basistransformaties" id="toc-lineaire-functionalen-en-basistransformaties" class="nav-link" data-scroll-target="#lineaire-functionalen-en-basistransformaties">Lineaire functionalen en basistransformaties</a></li>
   <li><a href="#duale-lineaire-afbeeldingen-en-de-getransponeerde" id="toc-duale-lineaire-afbeeldingen-en-de-getransponeerde" class="nav-link" data-scroll-target="#duale-lineaire-afbeeldingen-en-de-getransponeerde">Duale lineaire afbeeldingen en de getransponeerde</a></li>
   </ul></li>
-  <li><a href="#affiene-transformaties" id="toc-affiene-transformaties" class="nav-link" data-scroll-target="#affiene-transformaties">Affiene transformaties</a>
-  <ul class="collapse">
-  <li><a href="#affiene-ruimten-herhaling" id="toc-affiene-ruimten-herhaling" class="nav-link" data-scroll-target="#affiene-ruimten-herhaling">Affiene ruimten: herhaling</a></li>
-  <li><a href="#affiene-transformaties-1" id="toc-affiene-transformaties-1" class="nav-link" data-scroll-target="#affiene-transformaties-1">Affiene transformaties</a></li>
-  <li><a href="#affiene-transformaties-als-matrix" id="toc-affiene-transformaties-als-matrix" class="nav-link" data-scroll-target="#affiene-transformaties-als-matrix">Affiene transformaties als matrix</a></li>
-  </ul></li>
-  <li><a href="#lineaire-afbeeldingen-in-reële-en-complexe-vectorruimten" id="toc-lineaire-afbeeldingen-in-reële-en-complexe-vectorruimten" class="nav-link" data-scroll-target="#lineaire-afbeeldingen-in-reële-en-complexe-vectorruimten">Lineaire afbeeldingen in reële en complexe vectorruimten</a>
-  <ul class="collapse">
-  <li><a href="#van-reële-naar-complexe-ruimte" id="toc-van-reële-naar-complexe-ruimte" class="nav-link" data-scroll-target="#van-reële-naar-complexe-ruimte">Van reële naar complexe ruimte</a></li>
-  <li><a href="#van-reële-naar-complexe-ruimte-1" id="toc-van-reële-naar-complexe-ruimte-1" class="nav-link" data-scroll-target="#van-reële-naar-complexe-ruimte-1">Van reële naar complexe ruimte</a></li>
-  <li><a href="#van-complexe-naar-reële-ruimte" id="toc-van-complexe-naar-reële-ruimte" class="nav-link" data-scroll-target="#van-complexe-naar-reële-ruimte">Van complexe naar reële ruimte:</a></li>
-  <li><a href="#van-complexe-naar-reële-ruimte-1" id="toc-van-complexe-naar-reële-ruimte-1" class="nav-link" data-scroll-target="#van-complexe-naar-reële-ruimte-1">Van complexe naar reële ruimte:</a></li>
-  <li><a href="#complexe-lineaire-afbeeldingen" id="toc-complexe-lineaire-afbeeldingen" class="nav-link" data-scroll-target="#complexe-lineaire-afbeeldingen">Complexe lineaire afbeeldingen</a></li>
-  <li><a href="#complexe-lineaire-afbeeldingen-1" id="toc-complexe-lineaire-afbeeldingen-1" class="nav-link" data-scroll-target="#complexe-lineaire-afbeeldingen-1">Complexe lineaire afbeeldingen</a></li>
-  <li><a href="#complexe-lineaire-afbeeldingen-2" id="toc-complexe-lineaire-afbeeldingen-2" class="nav-link" data-scroll-target="#complexe-lineaire-afbeeldingen-2">Complexe lineaire afbeeldingen</a></li>
-  <li><a href="#reële-lineaire-afbeeldingen" id="toc-reële-lineaire-afbeeldingen" class="nav-link" data-scroll-target="#reële-lineaire-afbeeldingen">Reële lineaire afbeeldingen</a></li>
-  <li><a href="#antilineaire-afbeeldingen" id="toc-antilineaire-afbeeldingen" class="nav-link" data-scroll-target="#antilineaire-afbeeldingen">Antilineaire afbeeldingen</a></li>
-  <li><a href="#antilineaire-afbeeldingen-eigenschappen" id="toc-antilineaire-afbeeldingen-eigenschappen" class="nav-link" data-scroll-target="#antilineaire-afbeeldingen-eigenschappen">Antilineaire afbeeldingen: eigenschappen</a></li>
-  <li><a href="#antilineaire-afbeeldingen-conjugatie" id="toc-antilineaire-afbeeldingen-conjugatie" class="nav-link" data-scroll-target="#antilineaire-afbeeldingen-conjugatie">Antilineaire afbeeldingen: conjugatie</a></li>
-  <li><a href="#reële-complexe-en-antilineaire-afbeeldingen-matrixgedaante" id="toc-reële-complexe-en-antilineaire-afbeeldingen-matrixgedaante" class="nav-link" data-scroll-target="#reële-complexe-en-antilineaire-afbeeldingen-matrixgedaante">Reële, complexe en antilineaire afbeeldingen: matrixgedaante</a></li>
-  <li><a href="#antilineaire-afbeelding-voorbeeld" id="toc-antilineaire-afbeelding-voorbeeld" class="nav-link" data-scroll-target="#antilineaire-afbeelding-voorbeeld">Antilineaire afbeelding: voorbeeld</a></li>
-  </ul></li>
   <li><a href="#lineaire-systemen" id="toc-lineaire-systemen" class="nav-link" data-scroll-target="#lineaire-systemen">Lineaire systemen</a>
   <ul class="collapse">
   <li><a href="#lineaire-systemen-definitie-en-terminologie" id="toc-lineaire-systemen-definitie-en-terminologie" class="nav-link" data-scroll-target="#lineaire-systemen-definitie-en-terminologie">Lineaire systemen: definitie en terminologie</a></li>
@@ -239,12 +213,6 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#toepassingen-van-lu-decompositie" id="toc-toepassingen-van-lu-decompositie" class="nav-link" data-scroll-target="#toepassingen-van-lu-decompositie">Toepassingen van LU decompositie</a></li>
   <li><a href="#multidimensionale-gaussische-distributie-1" id="toc-multidimensionale-gaussische-distributie-1" class="nav-link" data-scroll-target="#multidimensionale-gaussische-distributie-1">Multidimensionale Gaussische distributie (1)</a></li>
   <li><a href="#multidimensionale-gaussische-distributie-2" id="toc-multidimensionale-gaussische-distributie-2" class="nav-link" data-scroll-target="#multidimensionale-gaussische-distributie-2">Multidimensionale Gaussische distributie (2)</a></li>
-  <li><a href="#blokmatrices" id="toc-blokmatrices" class="nav-link" data-scroll-target="#blokmatrices">Blokmatrices</a></li>
-  <li><a href="#blokmatrices-en-blok-ldu-decompositie" id="toc-blokmatrices-en-blok-ldu-decompositie" class="nav-link" data-scroll-target="#blokmatrices-en-blok-ldu-decompositie">Blokmatrices en blok-LDU-decompositie:</a></li>
-  <li><a href="#blokmatrices-en-blok-ldu-decompositie-1" id="toc-blokmatrices-en-blok-ldu-decompositie-1" class="nav-link" data-scroll-target="#blokmatrices-en-blok-ldu-decompositie-1">Blokmatrices en blok-LDU-decompositie:</a></li>
-  <li><a href="#blokmatrices-en-blok-ldu-decompositie-2" id="toc-blokmatrices-en-blok-ldu-decompositie-2" class="nav-link" data-scroll-target="#blokmatrices-en-blok-ldu-decompositie-2">Blokmatrices en blok-LDU-decompositie:</a></li>
-  <li><a href="#sherman-morrison-woodbury-matrixidentiteit" id="toc-sherman-morrison-woodbury-matrixidentiteit" class="nav-link" data-scroll-target="#sherman-morrison-woodbury-matrixidentiteit">Sherman-Morrison-Woodbury matrixidentiteit</a></li>
-  <li><a href="#toepassingen" id="toc-toepassingen" class="nav-link" data-scroll-target="#toepassingen">Toepassingen</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -271,7 +239,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">September 23, 2025</p>
+      <p class="date">September 22, 2026</p>
     </div>
   </div>
   
@@ -292,8 +260,6 @@ ul.task-list li input[type="checkbox"] {
 % LINEAR MAPS
 <p>% FIELDS </p>
 <p>% RELATIONS </p>
-<p>% % % % % % % % %</p>
-<p>%</p>
 <p>$$</p>
 </div>
 <p>Herhaling:</p>
@@ -304,15 +270,10 @@ ul.task-list li input[type="checkbox"] {
 <li><p>Lineaire transformaties, algemene lineaire groep, basistransformaties</p></li>
 <li><p>Lineaire stelsels: oplossingstructuur en relevante matrixontbindingen</p></li>
 </ul>
-</section>
-<section id="doel-van-dit-hoofdstuk-1" class="level2">
-<h2 class="anchored" data-anchor-id="doel-van-dit-hoofdstuk-1">Doel van dit hoofdstuk</h2>
 <p>Nieuw (?)</p>
 <ul>
 <li><p>Lineaire functionalen en duale ruimte</p></li>
 <li><p>Determinanten als volume(verandering), Jacobianen en substituties in meervoudige integralen</p></li>
-<li><p>Lineaire afbeeldingen in reële en complexe vectorruimten; antilineaire afbeeldingen</p></li>
-<li><p>Blokmatrices en Schur complementen</p></li>
 </ul>
 </section>
 <section id="lineaire-afbeeldingen" class="level1">
@@ -323,7 +284,7 @@ ul.task-list li input[type="checkbox"] {
 <ul>
 <li><p>Structuurbehoud:</p>
 <ul>
-<li>Additiviteit: <span class="math inline">\varphi({v}_1 + {v}_2) = \varphi({v}_1) + \varphi({v}_2)</span><a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></li>
+<li>Additiviteit: <span class="math inline">\varphi({v}_1 + {v}_2) = \varphi({v}_1) + \varphi({v}_2)</span></li>
 <li>Homogeniteit: <span class="math inline">\varphi(a {v}) = a \varphi({v})</span></li>
 </ul>
 <p><span class="math inline">\Rightarrow</span> <strong>lineariteit</strong> <span class="math inline">\varphi(a_1 {v}_1 + a_2 {w}) = a_1 \varphi({v}_1) + a_2 \varphi({v}_2)</span></p></li>
@@ -447,38 +408,34 @@ ul.task-list li input[type="checkbox"] {
 <li>geheugencomplexiteit: <span class="math inline">mn + np + mp</span> scalairen</li>
 <li>voor <span class="math inline">m \approx n \approx p</span>: <span class="math inline">\mathop{\mathrm{\mathscr{O}}}(n^3)</span> bewerkingen op <span class="math inline">\mathop{\mathrm{\mathscr{O}}}(n^2)</span> data</li>
 </ul>
-</section>
-<section id="lineaire-extensie-en-vrije-vectorruimte" class="level2">
-<h2 class="anchored" data-anchor-id="lineaire-extensie-en-vrije-vectorruimte">Lineaire extensie en vrije vectorruimte</h2>
-<ul>
-<li>Voor een verzameling <span class="math inline">S</span> waarvan we de elementen <span class="math inline">\{a_1, a_2,\ldots\}</span> beschouwen als abstracte entiteiten zonder vooraf bestaande vectorstructuur:
-<ul>
-<li>de <strong>vrije vectorruimte</strong> <span class="math inline">{\mathbb{F}}S</span> bestaat uit alle “formele” lineaire combinaties, waarbij we de elementen van <span class="math inline">S</span> als abstracte basisvectoren beschouwen (zie H1)</li>
-</ul></li>
-<li>Voor verzamelingen <span class="math inline">S,S'</span> en een afbeelding <span class="math inline">\varphi:S\to S'</span>:
-<ul>
-<li><p>De <strong>lineaire extensie</strong> van <span class="math inline">\varphi</span> is een lineaire afbeelding <span class="math inline">\mathop{\mathrm{Hom}}({\mathbb{F}}S, {\mathbb{F}}S')</span>, gedefinieerd als</p>
-<p><span class="math display">{\hat{\varphi}}({v}) = v^i {\hat{\varphi}}(a_i) = v^i \varphi(a_i)</span></p>
-<p>met <span class="math inline">\varphi(a_i)</span> een element uit <span class="math inline">S'</span> (= basisvector uit <span class="math inline">{\mathbb{F}}S'</span>).</p></li>
-</ul></li>
-</ul>
-</section>
-<section id="voorbeeld-van-lineaire-extensie-1" class="level2">
-<h2 class="anchored" data-anchor-id="voorbeeld-van-lineaire-extensie-1">Voorbeeld van lineaire extensie (1)</h2>
-<ul>
-<li><p>Beschouw de verzameling van bits <span class="math inline">S=\{0,1\}</span> en de bit-flip-operatie <span class="math inline">\varphi:S\to S</span> met <span class="math inline">\varphi(0) =1</span>, <span class="math inline">\varphi(1) = 0</span></p></li>
-<li><p><span class="math inline">{\mathbb{C}}S \cong {\mathbb{C}}^2</span> en <span class="math inline">{\hat{\varphi}} \cong \begin{bmatrix} 0 &amp; 1 \\ 1 &amp; 0 \end{bmatrix}</span></p></li>
-<li><p>Indien we de standaard basisvectoren van <span class="math inline">{\mathbb{C}}S</span> noteren als <span class="math inline">\vert 0 \rangle</span> en <span class="math inline">\vert 1 \rangle</span> (de zogenaamde ket-notatie van Dirac), dan komt dat overeen met de taal waarin quantum bits (qubits) geformuleerd worden. De flip-operatie op een qubit wordt beschreven door bovenstaande matrix, die ook <span class="math inline">\sigma^x</span> wordt genoemd, en 1 van de drie Pauli matrices is.</p></li>
-</ul>
-</section>
-<section id="voorbeeld-van-lineaire-extensie-2" class="level2">
-<h2 class="anchored" data-anchor-id="voorbeeld-van-lineaire-extensie-2">Voorbeeld van lineaire extensie (2)</h2>
-<p>Beschouw een groep <span class="math inline">G = \{g_1,g_2,\ldots\}</span>. Met elk groepselement kunnen we een element uit <span class="math inline">\mathop{\mathrm{Aut}}(G)</span> associeren, namelijk op 2 verschillende manieren:</p>
-<ul>
-<li>linker-multiplicatie: <span class="math inline">L_{g} (h) = g h</span> zodat <span class="math inline">L_{g_1} L_{g_2} = L_{g_1 g_2}</span></li>
-<li>rechter-multiplicatie: <span class="math inline">R_{g}(h) = h g^{-1}</span> zodat <span class="math inline">R_{g_1} R_{g_2} = R_{g_1 g_2}</span></li>
-</ul>
-<p>Deze transformaties kunnen gepromoveerd worden tot lineaire transformaties op <span class="math inline">{\mathbb{C}}G</span>, waarbij <span class="math inline">{\hat{L}}_g</span> en <span class="math inline">{\hat{R}}_g</span> zullen worden voorgesteld door “permutatiematrices’: vierkante matrices met enkel nul en één, zodat er exact één element één is in elke rij en elke kolom. Deze staan gekend als de linker en rechter reguliere representatie, en spelen een belangrijke rol bij de ontwikkeling van representatietheorie.</p>
+<!-- ## Lineaire extensie en vrije vectorruimte
+
+* Voor een verzameling $S$ waarvan we de elementen $\{a_1, a_2,\ldots\}$ beschouwen als abstracte entiteiten zonder vooraf bestaande vectorstructuur:
+  * de **vrije vectorruimte** $\bbF S$ bestaat uit alle "formele" lineaire combinaties, waarbij we de elementen van $S$ als abstracte basisvectoren beschouwen (zie H1)
+
+* Voor verzamelingen $S,S'$ en een afbeelding $\varphi:S\to S'$: 
+  * De **lineaire extensie** van $\varphi$ is een lineaire afbeelding $\Hom(\bbF S, \bbF S')$, gedefinieerd als 
+  
+    $$\map{\varphi}(\vv) = v^i \map{\varphi}(a_i) = v^i \varphi(a_i)$$
+  
+    met $\varphi(a_i)$ een element uit $S'$ (= basisvector uit $\bbF S'$).
+
+## Voorbeeld van lineaire extensie (1)
+
+* Beschouw de verzameling van bits $S=\{0,1\}$ en de bit-flip-operatie $\varphi:S\to S$ met $\varphi(0) =1$, $\varphi(1) = 0$
+
+* $\bbC S \cong \bbC^2$ en $\map{\varphi} \cong \begin{bmatrix} 0 & 1 \\ 1 & 0 \end{bmatrix}$
+
+* Indien we de standaard basisvectoren van $\bbC S$ noteren als  $\vert 0 \rangle$ en $\vert 1 \rangle$ (de zogenaamde ket-notatie van Dirac), dan komt dat overeen met de taal waarin quantum bits (qubits) geformuleerd worden. De flip-operatie op een qubit wordt beschreven door bovenstaande matrix, die ook $\sigma^x$ wordt genoemd, en 1 van de drie Pauli matrices is.
+
+## Voorbeeld van lineaire extensie (2)
+
+Beschouw een groep $G = \{g_1,g_2,\ldots\}$. Met elk groepselement kunnen we een element uit $\Aut(G)$ associeren, namelijk op 2 verschillende manieren:
+
+* linker-multiplicatie: $L_{g} (h) = g h$ zodat $L_{g_1} L_{g_2} = L_{g_1 g_2}$
+* rechter-multiplicatie: $R_{g}(h) = h g^{-1}$ zodat $R_{g_1} R_{g_2} = R_{g_1 g_2}$
+
+Deze transformaties kunnen gepromoveerd worden tot lineaire transformaties op $\bbC G$, waarbij $\map{L}_g$ en $\map{R}_g$ zullen worden voorgesteld door "permutatiematrices': vierkante matrices met enkel nul en één, zodat er exact één element één is in elke rij en elke kolom. Deze staan gekend als de linker en rechter reguliere representatie, en spelen een belangrijke rol bij de ontwikkeling van representatietheorie. -->
 </section>
 <section id="bewerkingen-met-matrices" class="level2">
 <h2 class="anchored" data-anchor-id="bewerkingen-met-matrices">Bewerkingen met matrices</h2>
@@ -771,193 +728,190 @@ x^i &amp;= f^i(\boldsymbol{y}) = f^i(\boldsymbol{y}_k + (\boldsymbol{y}-\boldsym
 <p>In coordinaten:</p>
 <p><span class="math display"> \chi_j = \xi_i A^i_{\ j} = ({\mathsf{A}}^{\mathsf{T}})^{\ i}_j \xi_i</span></p>
 <p><span class="math inline">\Rightarrow</span> transponeren geeft de matrix-representatie van de duale lineaire afbeelding</p>
-</section>
-</section>
-<section id="affiene-transformaties" class="level1">
-<h1>Affiene transformaties</h1>
-<section id="affiene-ruimten-herhaling" class="level2">
-<h2 class="anchored" data-anchor-id="affiene-ruimten-herhaling">Affiene ruimten: herhaling</h2>
-<ul>
-<li><p>Affiene ruimte <span class="math inline">A</span> over een vectorruimte <span class="math inline">V</span>: verzameling van punten <span class="math inline">A=\{P, Q, \ldots\}</span> zodat voor elke <span class="math inline">P \in A, {v}\in V</span> er exact één <span class="math inline">Q</span> bestaat waarvoor <span class="math inline">Q = P + {v}</span>, en vice versa, voor elke <span class="math inline">P,Q \in A</span> bestaat er exact één <span class="math inline">{v}\in V</span> zodat <span class="math inline">Q = P + {v}</span>.</p></li>
-<li><p>Na keuze van 1 vast punt <span class="math inline">O \in A</span>, de oorsprong, kunnen we elk punt <span class="math inline">P\in A</span> karakteriseren via <span class="math inline">x_{PO}</span> zodat <span class="math inline">P = O + x_{PO}</span></p></li>
-</ul>
-</section>
-<section id="affiene-transformaties-1" class="level2">
-<h2 class="anchored" data-anchor-id="affiene-transformaties-1">Affiene transformaties</h2>
-<ul>
-<li>Affiene transformaties:
-<ul>
-<li>lineaire transformaties <span class="math inline">{\hat{T}} \in \mathop{\mathrm{GL}}(V)</span> kunnen werken als <span class="math inline">P \mapsto P' = O + {\hat{T}}(x_{PO})</span></li>
-<li>translaties: vectoren <span class="math inline">{v}\in V</span> kunnen werken als <span class="math inline">P \mapsto P' = O + {v}+ x_{PO}</span></li>
-<li>beide samen: <span class="math inline">({\hat{T}},{v}): P \mapsto P' = O + {v}+ {\hat{T}} x_{PO}</span></li>
-</ul></li>
-<li>Compositie van affiene transformaties:
-<ul>
-<li><span class="math inline">({\hat{T}}_1,{v}_1) \circ ({\hat{T}}_2,{v}_2) = ({\hat{T}}_1{\hat{T}}_2, {v}_1 + {\hat{T}}_1 {v}_2)</span></li>
-<li><span class="math inline">({\hat{T}},{v})^{-1} = ({\hat{T}}^{-1}, -{\hat{T}}^{-1}{v})</span></li>
-<li><span class="math inline">\Rightarrow \mathop{\mathrm{Aut}}(A) = \mathop{\mathrm{Aff}}(V) = V \rtimes \mathop{\mathrm{GL}}(V)</span> (semidirect product)</li>
-</ul></li>
-</ul>
-</section>
-<section id="affiene-transformaties-als-matrix" class="level2">
-<h2 class="anchored" data-anchor-id="affiene-transformaties-als-matrix">Affiene transformaties als matrix</h2>
-<p>Voor <span class="math inline">V = {\mathbb{F}}^n</span> kunnen we de affiene transformaties voorstellen als</p>
-<p><span class="math display">  \begin{bmatrix}
-        \boldsymbol{x}'\\ 1
+<!-- # Affiene transformaties
+
+## Affiene ruimten: herhaling
+
+* Affiene ruimte $A$ over een vectorruimte $V$: verzameling van punten $A=\{P, Q, \ldots\}$ zodat voor elke $P \in A, \vv \in V$ er exact één $Q$ bestaat waarvoor $Q = P + \vv$, en vice versa, voor elke $P,Q \in A$ bestaat er exact één $\vv \in V$ zodat $Q = P + \vv$.
+
+* Na keuze van 1 vast punt $O \in A$, de oorsprong, kunnen we elk punt $P\in A$ karakteriseren via $x_{PO}$ zodat $P = O + x_{PO}$
+
+## Affiene transformaties
+
+* Affiene transformaties:
+  * lineaire transformaties $\map{T} \in \GL(V)$ kunnen werken als $P \mapsto P' = O + \map{T}(x_{PO})$ 
+  * translaties: vectoren $\vv \in V$ kunnen werken als $P \mapsto P' = O + \vv + x_{PO}$
+  * beide samen: $(\map{T},\vv): P \mapsto P' = O + \vv + \map{T} x_{PO}$
+
+* Compositie van affiene transformaties:
+  *  $(\map{T}_1,\vv_1) \circ (\map{T}_2,\vv_2) = (\map{T}_1\map{T}_2, \vv_1 + \map{T}_1 \vv_2)$
+  * $(\map{T},\vv)^{-1} = (\map{T}^{-1}, -\map{T}^{-1}\vv)$
+  * $\Rightarrow \Aut(A) = \Aff(V) = V \rtimes \GL(V)$ (semidirect product)
+
+## Affiene transformaties als matrix
+
+Voor $V = \bbF^n$ kunnen we de affiene transformaties voorstellen als
+
+$$  \begin{bmatrix}
+        \vec{x}'\\ 1
     \end{bmatrix} = \begin{bmatrix}
-        {\mathsf{T}} &amp; \boldsymbol{v} \\ {\mathsf{O}}_{n \times 1} &amp; 1
+        \mat{T} & \vec{v} \\ \zeromat_{n \times 1} & 1
     \end{bmatrix} \begin{bmatrix}
-        \boldsymbol{x} \\ 1
+        \vec{x} \\ 1
     \end{bmatrix}
-</span></p>
-<p>In abstracte termen:</p>
-<p><span class="math inline">\mathop{\mathrm{Aff}}(V)</span> is een deelgroep van <span class="math inline">\mathop{\mathrm{GL}}(V \oplus {\mathbb{F}})</span></p>
-</section>
-</section>
-<section id="lineaire-afbeeldingen-in-reële-en-complexe-vectorruimten" class="level1">
-<h1>Lineaire afbeeldingen in reële en complexe vectorruimten</h1>
-<section id="van-reële-naar-complexe-ruimte" class="level2">
-<h2 class="anchored" data-anchor-id="van-reële-naar-complexe-ruimte">Van reële naar complexe ruimte</h2>
-<ul>
-<li>Gegeven een reële vectorruimte <span class="math inline">W</span>. Kunnen we <span class="math inline">W</span> ‘uitbreiden’ tot een vectorruimte over <span class="math inline">{\mathbb{C}}</span>?
-<ul>
-<li>Eindigdimensionaal: Kies basis <span class="math inline">B \Rightarrow W \cong {\mathbb{R}}^n</span>, breidt uit tot <span class="math inline">{\mathbb{C}}^n</span>, d.w.z. laat complexe expansiecoëfficiënten toe, of dus, <span class="math inline">W = {\mathbb{R}}B \Rightarrow W^{{\mathbb{C}}} = {\mathbb{C}}B</span>.</li>
-<li>Bemerk dat <span class="math inline">\mathop{\mathrm{dim}}_{{\mathbb{R}}}(W) = \mathop{\mathrm{dim}}_{{\mathbb{C}}}(W^{{\mathbb{C}}})</span></li>
-<li>We zullen dit vaak impliciet doen, bvb. voor eigenwaarden en eigenvectoren van een reële matrix.</li>
-</ul></li>
-</ul>
-</section>
-<section id="van-reële-naar-complexe-ruimte-1" class="level2">
-<h2 class="anchored" data-anchor-id="van-reële-naar-complexe-ruimte-1">Van reële naar complexe ruimte</h2>
-<ul>
-<li>Gegeven een reële vectorruimte <span class="math inline">W</span>. Kunnen we <span class="math inline">W</span> ‘uitbreiden’ tot een vectorruimte over <span class="math inline">{\mathbb{C}}</span>?
-<ul>
-<li><p>Basisonafhankelijke constructie:</p>
-<p>Definieer <span class="math inline">W^{\mathbb{C}}= W \times W</span>, met</p>
-<ul>
-<li>vectoradditie <span class="math inline">({w}_1,{w}_2) + ({w}_1',{w}_2') = ({w}_1+ {w}_1', {w}_2 + {w}_2')</span> (idem als voor <span class="math inline">W \oplus W</span>)</li>
-<li>vermenigvuldiging met complexe scalairen: <span class="math inline">(a + {\mathrm{i}}b) ({w}_1,{w}_2) = (a {w}_1 - b {w}_2, b {w}_1 + a {w}_2)</span></li>
-</ul>
-<p><span class="math inline">\Rightarrow</span> genoteerd als <span class="math inline">W^{\mathbb{C}}= W \oplus ({\mathrm{i}}W)</span></p></li>
-</ul></li>
-</ul>
-</section>
-<section id="van-complexe-naar-reële-ruimte" class="level2">
-<h2 class="anchored" data-anchor-id="van-complexe-naar-reële-ruimte">Van complexe naar reële ruimte:</h2>
-<ul>
-<li>Gegeven een complexe vectorruimte <span class="math inline">V</span>. Kunnen we <span class="math inline">V</span> ‘herinterpreteren’ als een vectorruimte over <span class="math inline">{\mathbb{R}}</span>?
-<ul>
-<li>Behoudt dezelfde verzameling van vectoren <span class="math inline">V^{{\mathbb{R}}} = V</span>, beperk de vermenigvuldiging met scalairen tot reële scalairen</li>
-</ul>
-<span class="math inline">\Rightarrow</span> dit verandert de betekenis van “lineaire afhankelijkheid”, “lineaire span”, “voortbrengendheid”, “compleetheid”, “basis” en “dimensie”</li>
-</ul>
-</section>
-<section id="van-complexe-naar-reële-ruimte-1" class="level2">
-<h2 class="anchored" data-anchor-id="van-complexe-naar-reële-ruimte-1">Van complexe naar reële ruimte:</h2>
-<ul>
-<li><p>Gegeven een complexe vectorruimte <span class="math inline">V</span>. Kunnen we <span class="math inline">V</span> ‘herinterpreteren’ als een vectorruimte over <span class="math inline">{\mathbb{R}}</span>?</p>
-<ul>
-<li><p>Stel <span class="math inline">V</span> eindig-dimensionaal met basis <span class="math inline">B=\{{e}_1,\ldots,{e}_n\}</span>. Om elke vector te kunnne expanderen met behulp van reële coefficiënten moeten we de basis uitbreiden tot <span class="math inline">B^{\mathbb{R}}= \{{e}_1,\ldots,{e}_n,{\mathrm{i}}{e}_1, \ldots, {\mathrm{i}}{e}_n\}</span>.</p></li>
-<li><p><span class="math inline">\mathop{\mathrm{dim}}_{{\mathbb{C}}}(V) = n \Rightarrow \mathop{\mathrm{dim}}_{{\mathbb{R}}}(V^{\mathbb{R}}) = 2 n = 2 \mathop{\mathrm{dim}}_{{\mathbb{C}}}(V)</span></p></li>
-<li><p><span class="math inline">V \cong {\mathbb{C}}^n</span> en <span class="math inline">V^{\mathbb{R}}\cong {\mathbb{R}}^{2n}</span> (met <span class="math inline">V = V^{\mathbb{R}}</span> als verzameling)</p></li>
-<li><p><span class="math inline">\boldsymbol{v}^{\mathbb{R}}= (\mathop{\mathrm{Re}}(\boldsymbol{v}), \mathop{\mathrm{Im}}(\boldsymbol{v}))</span></p></li>
-</ul></li>
-</ul>
-</section>
-<section id="complexe-lineaire-afbeeldingen" class="level2">
-<h2 class="anchored" data-anchor-id="complexe-lineaire-afbeeldingen">Complexe lineaire afbeeldingen</h2>
-<p>Beschouw nu twee complexe vectorruimten <span class="math inline">V</span> en <span class="math inline">W</span>, en hun reële versie <span class="math inline">V^{\mathbb{R}}</span> en <span class="math inline">W^{\mathbb{R}}</span>.</p>
-<p>Een (complexe) lineaire afbeelding <span class="math inline">{\hat{A}}\in \mathop{\mathrm{Hom}}_{{\mathbb{C}}}(V,W)</span> voldoet aan</p>
-<p><span class="math display">{\hat{A}}(a_1 {v}_1 + a_2 {v}_2) = a_1 {\hat{A}}({v}_1) + a_2 {\hat{A}}({v}_2)</span></p>
-<p>Als dit geldt voor <span class="math inline">a_1,a_2 \in {\mathbb{C}}</span>, dan zeker voor <span class="math inline">a_1,a_2 \in {\mathbb{R}}</span></p>
-<p><span class="math inline">\Rightarrow {\hat{A}} \in \mathop{\mathrm{Hom}}_{{\mathbb{R}}}(V^{\mathbb{R}}, W^{\mathbb{R}})</span></p>
-<p>Er bestaat en inclusie van complexe lineaire afbeeldingen in <span class="math inline">\mathop{\mathrm{Hom}}(V,W)</span> naar reële lineaire afbeelding in <span class="math inline">\mathop{\mathrm{Hom}}_{{\mathbb{R}}}(V^{\mathbb{R}}, W^{\mathbb{R}})</span></p>
-</section>
-<section id="complexe-lineaire-afbeeldingen-1" class="level2">
-<h2 class="anchored" data-anchor-id="complexe-lineaire-afbeeldingen-1">Complexe lineaire afbeeldingen</h2>
-<p>Als matrix: <span class="math inline">{\mathsf{A}}^{\mathbb{R}}= \begin{bmatrix} \mathop{\mathrm{Re}}({\mathsf{A}}) &amp; -\mathop{\mathrm{Im}}({\mathsf{A}}) \\ \mathop{\mathrm{Im}}({\mathsf{A}}) &amp; \mathop{\mathrm{Re}}({\mathsf{A}}) \end{bmatrix}</span></p>
-<p>Niet alle afbeeldingen in <span class="math inline">\mathop{\mathrm{Hom}}_{{\mathbb{R}}}(V^{\mathbb{R}},W^{\mathbb{R}})</span> komen overeen met complexe lineaire afbeeldingen <span class="math inline">{\hat{A}} \in \mathop{\mathrm{Hom}}_{{\mathbb{C}}}(V,W)</span>.</p>
-<p>Wat is de betekenis van de andere, en is er een natuurlijke keuze voor het complement?</p>
-</section>
-<section id="complexe-lineaire-afbeeldingen-2" class="level2">
-<h2 class="anchored" data-anchor-id="complexe-lineaire-afbeeldingen-2">Complexe lineaire afbeeldingen</h2>
-<ul>
-<li><p>In <span class="math inline">V^{\mathbb{R}}</span> kan je niet vermenigvuldigen met <span class="math inline">{\mathrm{i}}</span>.</p></li>
-<li><p>Maar je kan wel werken met de linaire afbeelding <span class="math inline">{\hat{J}}_V = {\mathrm{i}}{\hat{1}}_V</span>, en deze vormt een geldige lineaire afbeelding die ook bestaat in <span class="math inline">\mathop{\mathrm{End}}_{{\mathbb{R}}}(V^{\mathbb{R}})</span>.</p></li>
-<li><p>Uiteraard geldt <span class="math inline">{\hat{J}}_V^2 = - {\hat{1}}_V</span>.</p></li>
-<li><p>Matrixrepresentatie als reële matrix: <span class="math display">{\mathsf{J}}_V^{\mathbb{R}}= \begin{bmatrix} {\mathsf{O}}_{n \times n} &amp; -{\mathsf{I}}_{n \times n} \\ {\mathsf{I}}_{n \times n} &amp; {\mathsf{O}}_{n \times n} \end{bmatrix}</span></p></li>
-<li><p>Complexe lineaire afbeelding: <span class="math inline">{\hat{A}}\circ {\hat{J}}_V = {\hat{J}}_W \circ{\hat{A}}</span></p></li>
-</ul>
-</section>
-<section id="reële-lineaire-afbeeldingen" class="level2">
-<h2 class="anchored" data-anchor-id="reële-lineaire-afbeeldingen">Reële lineaire afbeeldingen</h2>
-<p>Beschouw nu een willekeurige (reëel lineaire) afbeelding <span class="math inline">{\hat{L}} \in \mathop{\mathrm{Hom}}_{{\mathbb{R}}}(V^{\mathbb{R}},W^{\mathbb{R}})</span>.</p>
-<p>We kunnen deze uniek ontbinden als</p>
-<p><span class="math display">{\hat{L}} = \underbrace{\frac{1}{2}({\hat{L}} - {\hat{J}}_W {\hat{L}} {\hat{J}}_V)}_{{\hat{A}}} + \underbrace{\frac{1}{2} ({\hat{L}} + {\hat{J}}_W {\hat{L}} {\hat{J}}_V)}_{{\hat{B}}}</span></p>
-<p>waarbij geldt:</p>
-<ul>
-<li><span class="math inline">{\hat{J}}_W \circ {\hat{A}} = {\hat{A}} \circ {\hat{J}}_V</span> (complexe lineaire afbeelding)</li>
-<li><span class="math inline">{\hat{J}}_W \circ {\hat{B}} = - {\hat{B}} \circ {\hat{J}}_V</span></li>
-</ul>
-</section>
-<section id="antilineaire-afbeeldingen" class="level2">
-<h2 class="anchored" data-anchor-id="antilineaire-afbeeldingen">Antilineaire afbeeldingen</h2>
-<p>Dit leidt tot een nieuwe definitie:</p>
-<p>Een afbeelding <span class="math inline">{\hat{B}}:V \to W</span> tussen complexe vectorruimten <span class="math inline">V</span> en <span class="math inline">W</span> wordt <strong>antilineair</strong> genoemd indien ze voldoet aan</p>
-<ul>
-<li><span class="math inline">{\hat{B}}({v}_1 + {v}_2) = {\hat{B}}({v}_1) + {\hat{B}}({v}_2)</span></li>
-<li><span class="math inline">{\hat{B}}({a}{v}) = {\overline{{a}}} {\hat{B}}({v})</span></li>
-</ul>
-</section>
-<section id="antilineaire-afbeeldingen-eigenschappen" class="level2">
-<h2 class="anchored" data-anchor-id="antilineaire-afbeeldingen-eigenschappen">Antilineaire afbeeldingen: eigenschappen</h2>
-<ul>
-<li>Compositie van even aantal antilineaire afbeeldingen is (complex) lineaire afbeelding</li>
-<li>Complexe lineaire combinaties van antilineaire afbeeldingen zijn antilineaire afbeeldingen (antilineaire afbeeldingen vormen een complexe vectorruimte)</li>
-<li>Elke reëel lineaire afbeelding tussen <span class="math inline">V^{\mathbb{R}}</span> en <span class="math inline">W^{\mathbb{R}}</span> kan uniek ontbonden worden als som van een lineaire afbeeldingen tussen <span class="math inline">V</span> en <span class="math inline">W</span> en een antilineaire afbeeldingen tussen <span class="math inline">V</span> en <span class="math inline">W</span></li>
-</ul>
-</section>
-<section id="antilineaire-afbeeldingen-conjugatie" class="level2">
-<h2 class="anchored" data-anchor-id="antilineaire-afbeeldingen-conjugatie">Antilineaire afbeeldingen: conjugatie</h2>
-<ul>
-<li>Beschouw een basis <span class="math inline">B</span> voor de complexe vectorruimte <span class="math inline">V</span>, die dus een bijbehorende basis <span class="math inline">B^{\mathbb{R}}= \{{e}_1,\ldots,{e}_n,{\mathrm{i}}{e}_1,\ldots,{\mathrm{i}}{e}_n\}</span> voor <span class="math inline">V^{\mathbb{R}}</span> impliceert.</li>
-<li>De specifieke afbeelding <span class="math inline">{\hat{C}}_B \in \mathop{\mathrm{End}}_{{\mathbb{R}}}(V^{\mathbb{R}})</span> met matrixrepresentatie <span class="math inline">{\mathsf{C}}_B^{{\mathbb{R}}} = \begin{bmatrix} {\mathsf{I}}_{n\times n} &amp; {\mathsf{O}}_{n \times n} \\ {\mathsf{O}}_{n \times n} &amp; -{\mathsf{I}}_{n \times n} \end{bmatrix}</span> noemen we de complexe conjugatie-operator geassocieerd aan de basiskeuze <span class="math inline">B</span>. Ten opzichte van <span class="math inline">V</span>, is <span class="math inline">{\hat{C}}_B</span> een zuiver antilineaire operator.</li>
-<li>Elke andere antilineaire operator <span class="math inline">{\hat{B}}</span> kan nu geschreven worden als een product <span class="math inline">{\hat{B}} = {\hat{B}}' \circ {\hat{C}}_B</span>, waarbij <span class="math inline">{\hat{B}}' \in \mathop{\mathrm{Hom}}(V,W)</span> een gewone (complex) lineaire afbeelding.</li>
-</ul>
-</section>
-<section id="reële-complexe-en-antilineaire-afbeeldingen-matrixgedaante" class="level2">
-<h2 class="anchored" data-anchor-id="reële-complexe-en-antilineaire-afbeeldingen-matrixgedaante">Reële, complexe en antilineaire afbeeldingen: matrixgedaante</h2>
-<p><span class="math display">\begin{align*}
-    {\mathsf{L}} &amp;= \begin{bmatrix}
-        {\mathsf{L}}_{11} &amp; {\mathsf{L}}_{12} \\ {\mathsf{L}}_{21} &amp; {\mathsf{L}}_{22}
+$$
+
+In abstracte termen: 
+
+$\Aff(V)$ is een deelgroep van $\GL(V \oplus \bbF)$
+
+# Lineaire afbeeldingen in reële en complexe vectorruimten
+
+## Van reële naar complexe ruimte
+
+* Gegeven een reële vectorruimte $W$. Kunnen we $W$ 'uitbreiden' tot een vectorruimte over $\bbC$? 
+  * Eindigdimensionaal: Kies basis $B \Rightarrow W \cong \bbR^n$, breidt uit tot $\bbC^n$, d.w.z. laat complexe expansiecoëfficiënten toe, of dus, $W = \bbR B \Rightarrow W^{\bbC} = \bbC B$. 
+  * Bemerk dat $\dim_{\bbR}(W) = \dim_{\bbC}(W^{\bbC})$
+  * We zullen dit vaak impliciet doen, bvb. voor eigenwaarden en eigenvectoren van een reële matrix.
+
+## Van reële naar complexe ruimte
+
+* Gegeven een reële vectorruimte $W$. Kunnen we $W$ 'uitbreiden' tot een vectorruimte over $\bbC$? 
+  * Basisonafhankelijke constructie:
+
+    Definieer $W^\bbC = W \times W$, met
+    * vectoradditie $(\vw_1,\vw_2) + (\vw_1',\vw_2') = (\vw_1+ \vw_1', \vw_2 + \vw_2')$ (idem als voor $W \oplus W$)
+    * vermenigvuldiging met complexe scalairen: $(a + \irm b) (\vw_1,\vw_2) = (a \vw_1 - b \vw_2, b \vw_1 + a \vw_2)$
+
+    $\Rightarrow$ genoteerd als $W^\bbC = W \oplus (\irm W)$
+
+## Van complexe naar reële ruimte:
+
+* Gegeven een complexe vectorruimte $V$. Kunnen we $V$ 'herinterpreteren' als een vectorruimte over $\bbR$?
+  * Behoudt dezelfde verzameling van vectoren $V^{\bbR} = V$, beperk de vermenigvuldiging met scalairen tot reële scalairen
+  
+  $\Rightarrow$ dit verandert de betekenis van "lineaire afhankelijkheid", "lineaire span", "voortbrengendheid", "compleetheid", "basis" en "dimensie"
+
+## Van complexe naar reële ruimte:
+
+* Gegeven een complexe vectorruimte $V$. Kunnen we $V$ 'herinterpreteren' als een vectorruimte over $\bbR$?
+
+  * Stel $V$ eindig-dimensionaal met basis $B=\{\ve_1,\ldots,\ve_n\}$. Om elke vector te kunnne expanderen met behulp van reële coefficiënten moeten we de basis uitbreiden tot $B^\bbR = \{\ve_1,\ldots,\ve_n,\irm \ve_1, \ldots, \irm \ve_n\}$. 
+
+  * $\dim_{\bbC}(V) = n \Rightarrow \dim_{\bbR}(V^\bbR) = 2 n = 2 \dim_{\bbC}(V)$
+
+  * $V \cong \bbC^n$ en $V^\bbR \cong \bbR^{2n}$ (met $V = V^\bbR$ als verzameling)
+
+  * $\vec{v}^\bbR = (\real(\vec{v}), \imag(\vec{v}))$
+
+## Complexe lineaire afbeeldingen
+
+Beschouw nu twee complexe vectorruimten $V$ en $W$, en hun reële versie $V^\bbR$ en $W^\bbR$.
+
+Een (complexe) lineaire afbeelding $\map{A}\in \Hom_{\bbC}(V,W)$ voldoet aan
+
+$$\map{A}(a_1 \vv_1 + a_2 \vv_2) = a_1 \map{A}(\vv_1) + a_2 \map{A}(\vv_2)$$
+
+Als dit geldt voor $a_1,a_2 \in \bbC$, dan zeker voor $a_1,a_2 \in \bbR$
+
+$\Rightarrow \map{A} \in \Hom_{\bbR}(V^\bbR, W^\bbR)$
+
+Er bestaat en inclusie van complexe lineaire afbeeldingen in $\Hom(V,W)$ naar reële lineaire afbeelding in $\Hom_{\bbR}(V^\bbR, W^\bbR)$
+
+## Complexe lineaire afbeeldingen
+
+Als matrix: $\mat{A}^\bbR = \begin{bmatrix} \real(\mat{A}) & -\imag(\mat{A}) \\ \imag(\mat{A}) & \real(\mat{A}) \end{bmatrix}$
+
+Niet alle afbeeldingen in $\Hom_{\bbR}(V^\bbR,W^\bbR)$ komen overeen met complexe lineaire afbeeldingen $\map{A} \in \Hom_{\bbC}(V,W)$.
+
+Wat is de betekenis van de andere, en is er een natuurlijke keuze voor het complement? 
+
+## Complexe lineaire afbeeldingen
+
+* In $V^\bbR$ kan je niet vermenigvuldigen met $\irm$.
+
+* Maar je kan wel werken met de linaire afbeelding $\map{J}_V = \irm \idmap_V$, en deze vormt een geldige lineaire afbeelding die ook bestaat in $\End_{\bbR}(V^\bbR)$.
+
+* Uiteraard geldt $\map{J}_V^2 = - \idmap_V$.
+
+* Matrixrepresentatie als reële matrix:
+  $$\mat{J}_V^\bbR = \begin{bmatrix} \zeromat_{n \times n} & -\idmat_{n \times n} \\ \idmat_{n \times n} & \zeromat_{n \times n} \end{bmatrix}$$
+
+* Complexe lineaire afbeelding: $\map{A}\circ \map{J}_V = \map{J}_W \circ\map{A}$
+
+## Reële lineaire afbeeldingen
+
+Beschouw nu een willekeurige (reëel lineaire) afbeelding $\map{L} \in \Hom_{\bbR}(V^\bbR,W^\bbR)$.
+
+We kunnen deze uniek ontbinden als
+
+$$\map{L} = \underbrace{\frac{1}{2}(\map{L} - \map{J}_W \map{L} \map{J}_V)}_{\map{A}} + \underbrace{\frac{1}{2} (\map{L} + \map{J}_W \map{L} \map{J}_V)}_{\map{B}}$$
+
+waarbij geldt:
+
+* $\map{J}_W \circ \map{A} = \map{A} \circ \map{J}_V$ (complexe lineaire afbeelding)
+* $\map{J}_W \circ \map{B} = - \map{B} \circ \map{J}_V$
+
+## Antilineaire afbeeldingen
+
+Dit leidt tot een nieuwe definitie:
+
+Een afbeelding $\map{B}:V \to W$ tussen complexe vectorruimten $V$ en $W$ wordt **antilineair** genoemd indien ze voldoet aan
+
+* $\map{B}(\vv_1 + \vv_2) = \map{B}(\vv_1) + \map{B}(\vv_2)$
+* $\map{B}(\scalara \vv) = \conj{\scalara} \map{B}(\vv)$
+
+## Antilineaire afbeeldingen: eigenschappen
+
+* Compositie van even aantal antilineaire afbeeldingen is (complex) lineaire afbeelding
+* Complexe lineaire combinaties van antilineaire afbeeldingen zijn antilineaire afbeeldingen (antilineaire afbeeldingen vormen een complexe vectorruimte)
+* Elke reëel lineaire afbeelding tussen $V^\bbR$ en $W^\bbR$ kan uniek ontbonden worden als som van een lineaire afbeeldingen tussen $V$ en $W$ en een antilineaire afbeeldingen tussen $V$ en $W$
+
+## Antilineaire afbeeldingen: conjugatie
+
+* Beschouw een basis $B$ voor de complexe vectorruimte $V$, die dus een bijbehorende basis $B^\bbR = \{\ve_1,\ldots,\ve_n,\irm\ve_1,\ldots,\irm\ve_n\}$ voor $V^\bbR$ impliceert.
+* De specifieke afbeelding $\map{C}_B \in \End_{\bbR}(V^\bbR)$ met matrixrepresentatie $\mat{C}_B^{\bbR} = \begin{bmatrix} \idmat_{n\times n} & \zeromat_{n \times n} \\ \zeromat_{n \times n}  & -\idmat_{n \times n} \end{bmatrix}$ noemen we de complexe conjugatie-operator geassocieerd aan de basiskeuze $B$. Ten opzichte van $V$, is $\map{C}_B$ een zuiver antilineaire operator.
+* Elke andere antilineaire operator $\map{B}$ kan nu geschreven worden als een product $\map{B} = \map{B}' \circ \map{C}_B$, waarbij $\map{B}' \in \Hom(V,W)$ een gewone (complex) lineaire afbeelding.
+
+## Reële, complexe en antilineaire afbeeldingen: matrixgedaante
+
+\begin{align*}
+    \mat{L} &= \begin{bmatrix}
+        \mat{L}_{11} & \mat{L}_{12} \\ \mat{L}_{21} & \mat{L}_{22}
     \end{bmatrix} \\
-  &amp;=\begin{bmatrix}
-        {\mathsf{A}}_{1} &amp; -{\mathsf{A}}_{2} \\ {\mathsf{A}}_2 &amp; {\mathsf{A}}_1
+  &=\begin{bmatrix}
+        \mat{A}_{1} & -\mat{A}_{2} \\ \mat{A}_2 & \mat{A}_1
     \end{bmatrix} + \begin{bmatrix}
-        {\mathsf{B}}_1 &amp; {\mathsf{B}}_2 \\ {\mathsf{B}}_2 &amp; -{\mathsf{B}}_1
+        \mat{B}_1 & \mat{B}_2 \\ \mat{B}_2 & -\mat{B}_1
     \end{bmatrix} \nonumber\\
-    &amp;= \begin{bmatrix}
-        {\mathsf{A}}_{1} &amp; -{\mathsf{A}}_{2} \\ {\mathsf{A}}_2 &amp; {\mathsf{A}}_1
+    &= \begin{bmatrix}
+        \mat{A}_{1} & -\mat{A}_{2} \\ \mat{A}_2 & \mat{A}_1
     \end{bmatrix} + \begin{bmatrix}
-        {\mathsf{B}}_1 &amp; -{\mathsf{B}}_2 \\ {\mathsf{B}}_2 &amp; {\mathsf{B}}_1
+        \mat{B}_1 & -\mat{B}_2 \\ \mat{B}_2 & \mat{B}_1
     \end{bmatrix}\begin{bmatrix}
-        {\mathsf{I}}&amp; {\mathsf{O}}\\ {\mathsf{O}}&amp; -{\mathsf{I}}
+        \idmat & \zeromat \\ \zeromat & -\idmat
     \end{bmatrix}
-\end{align*}</span></p>
-<p><span class="math display">\Rightarrow {\mathsf{A}} = {\mathsf{A}}_1 + {\mathrm{i}}{\mathsf{A}}_2</span></p>
-</section>
-<section id="antilineaire-afbeelding-voorbeeld" class="level2">
-<h2 class="anchored" data-anchor-id="antilineaire-afbeelding-voorbeeld">Antilineaire afbeelding: voorbeeld</h2>
-<p>Tijdsomkeringsymmetrie in kwantummechanica:</p>
-<ul>
-<li><p>Actie op golffunctie <span class="math inline">{\hat{T}}: \psi(x) \mapsto {\overline{\psi(x)}}</span></p></li>
-<li><p>Stel: <span class="math inline">\psi_p(x) \sim {\mathrm{e}}^{{\mathrm{i}}p x} \Rightarrow {\hat{T}} \psi_p = \psi_{-p}</span></p></li>
-<li><p>Golffunctie in momentumruimte (<span class="math inline">\cong</span> Fouriertransformatie)</p>
-<p><span class="math inline">\Psi(p) \sim \int {\mathrm{e}}^{-{\mathrm{i}}p x} \psi(x)\,{\mathrm{d}}x</span></p></li>
-<li><p>Actie van tijdsomkering op momentum-golffunctie</p>
-<p><span class="math inline">\Rightarrow ({\hat{T}} \Psi) = {\overline{\Psi(-p)}}</span></p>
-<p>= Complexe conjugatie + spiegeling van momentum</p></li>
-</ul>
+\end{align*}
+
+$$\Rightarrow \mat{A} = \mat{A}_1 + \irm \mat{A}_2$$
+
+## Antilineaire afbeelding: voorbeeld
+
+Tijdsomkeringsymmetrie in kwantummechanica:
+
+* Actie op golffunctie $\map{T}: \psi(x) \mapsto \conj{\psi(x)}$
+
+* Stel: $\psi_p(x) \sim \erm^{\irm p x} \Rightarrow \map{T} \psi_p = \psi_{-p}$
+
+* Golffunctie in momentumruimte ($\cong$ Fouriertransformatie)
+  
+  $\Psi(p) \sim \int \erm^{-\irm p x} \psi(x)\,\drm x$
+
+* Actie van tijdsomkering op momentum-golffunctie 
+
+  $\Rightarrow (\map{T} \Psi) = \conj{\Psi(-p)}$
+
+  = Complexe conjugatie + spiegeling van momentum -->
 </section>
 </section>
 <section id="lineaire-systemen" class="level1">
@@ -1053,130 +1007,149 @@ x^i &amp;= f^i(\boldsymbol{y}) = f^i(\boldsymbol{y}_k + (\boldsymbol{y}-\boldsym
 <li><p>covariantiematrix <span class="math inline">\Sigma^{ij} = \langle (X^i-\langle X^i \rangle)(X^j-\langle X^j \rangle)\rangle = \\ \langle X^i X^j \rangle - \langle X^i \rangle \langle X^j \rangle = ({\mathsf{A}}^{-1})^{ij}</span></p></li>
 </ul></li>
 </ul>
-</section>
-<section id="blokmatrices" class="level2">
-<h2 class="anchored" data-anchor-id="blokmatrices">Blokmatrices</h2>
-<ul>
-<li><p>Lineair stelsel dat bestaat uit twee delen voor 1 groep onbekenden: <span class="math inline">{\hat{A}}_1 {x}= {y}_1</span> en <span class="math inline">{\hat{A}}_2 {x}= {y}_2</span></p>
-<p><span class="math inline">\Rightarrow \begin{bmatrix}  {\mathsf{A}}_1 \\ {\mathsf{A}}_2  \end{bmatrix} \boldsymbol{x} = \begin{bmatrix}  \boldsymbol{y}_1 \\ \boldsymbol{y}_2  \end{bmatrix}</span></p>
-<ul>
-<li><span class="math inline">{\mathsf{A}}_1 \in {\mathbb{F}}^{m_1 \times n}, {\mathsf{A}}_2 \in {\mathbb{F}}^{m_2 \times n}</span></li>
-<li>(technisch: directe som <span class="math inline">{y}_1 \oplus {y}_2</span>)</li>
-</ul></li>
-<li><p>Twee groepen van onbekenden:</p>
-<p><span class="math inline">\begin{bmatrix}  {\mathsf{A}}_{11} &amp; {\mathsf{A}}_{12} \\ {\mathsf{A}}_{21} &amp; {\mathsf{A}}_{22}  \end{bmatrix}  \begin{bmatrix}  \boldsymbol{x}_1 \\ \boldsymbol{x}_2  \end{bmatrix} =  \begin{bmatrix}  \boldsymbol{y}_1 \\ \boldsymbol{y}_2  \end{bmatrix}</span></p>
-<ul>
-<li><span class="math inline">{\mathsf{A}}_{ij} \in {\mathbb{F}}^{m_i \times n_j}</span> voor <span class="math inline">i,j=1,2</span></li>
-</ul></li>
-</ul>
-</section>
-<section id="blokmatrices-en-blok-ldu-decompositie" class="level2">
-<h2 class="anchored" data-anchor-id="blokmatrices-en-blok-ldu-decompositie">Blokmatrices en blok-LDU-decompositie:</h2>
-<p><span class="math inline">\begin{bmatrix}  {\mathsf{A}}_{11} &amp; {\mathsf{A}}_{12} \\ {\mathsf{A}}_{21} &amp; {\mathsf{A}}_{22}  \end{bmatrix}</span> met <span class="math inline">m_1=n_1</span> en <span class="math inline">m_2 = n_2</span>:</p>
-<ul>
-<li><p><span class="math inline">{\mathsf{A}}_{11}</span> en <span class="math inline">{\mathsf{A}}_{22}</span> zijn vierkante matrices</p></li>
-<li><p><span class="math inline">{\mathsf{A}}_{11}</span> inverteerbaar <span class="math inline">\Rightarrow</span> blok-LDU-decompositie:</p></li>
-</ul>
-<div class="r-fit-text">
-<p><span class="math display">    {\mathsf{A}} = \underbrace{\begin{bmatrix}
-        {\mathsf{I}}_{n_1} &amp; {\mathsf{O}}\\ {\mathsf{A}}_{21} {\mathsf{A}}_{11}^{-1} &amp; {\mathsf{I}}_{n_2}
-    \end{bmatrix}}_{{\mathsf{L}}}
-    \underbrace{\begin{bmatrix}
-        {\mathsf{A}}_{11}&amp; {\mathsf{O}}\\
-        {\mathsf{O}}&amp; {\mathsf{A}}_{22} - {\mathsf{A}}_{21} {\mathsf{A}}_{11}^{-1} {\mathsf{A}}_{12}
-    \end{bmatrix}}_{{\mathsf{D}}}
-    \underbrace{\begin{bmatrix}
-        {\mathsf{I}}_{n_1} &amp;  {\mathsf{A}}_{11}^{-1} {\mathsf{A}}_{12}\\
-        {\mathsf{O}}&amp; {\mathsf{I}}_{n_2}
-    \end{bmatrix}}_{{\mathsf{U}}}</span></p>
-</div>
-<ul>
-<li><p>Schur complement <span class="math inline">({\mathsf{A}}/{\mathsf{A}}_{11}) = {\mathsf{A}}_{22} - {\mathsf{A}}_{21} {\mathsf{A}}_{11}^{-1} {\mathsf{A}}_{12}</span></p></li>
-<li><p><span class="math inline">\det({\mathsf{A}}) = \det({\mathsf{A}}_{11}) \det({\mathsf{A}}/{\mathsf{A}}_{11})</span></p></li>
-</ul>
-</section>
-<section id="blokmatrices-en-blok-ldu-decompositie-1" class="level2">
-<h2 class="anchored" data-anchor-id="blokmatrices-en-blok-ldu-decompositie-1">Blokmatrices en blok-LDU-decompositie:</h2>
-<div class="r-fit-text">
-<p><span class="math display">\begin{align*}
-    {\mathsf{A}}^{-1} &amp;= {\mathsf{U}}^{-1} {\mathsf{D}}^{-1} {\mathsf{L}}^{-1}\nonumber\\
-    &amp;= \begin{bmatrix}
-        {\mathsf{I}}_{n_1} &amp;  -{\mathsf{A}}_{11}^{-1} {\mathsf{A}}_{12}\\
-        {\mathsf{O}}&amp; {\mathsf{I}}_{n_2}
-    \end{bmatrix}\begin{bmatrix}
-        {\mathsf{A}}_{11}^{-1}&amp; {\mathsf{O}}\\
-        {\mathsf{O}}&amp; ({\mathsf{A}}_{22} - {\mathsf{A}}_{21} {\mathsf{A}}_{11}^{-1} {\mathsf{A}}_{12})^{-1}
-    \end{bmatrix}\begin{bmatrix}
-        {\mathsf{I}}_{n_1} &amp; {\mathsf{O}}\\ -{\mathsf{A}}_{21} {\mathsf{A}}_{11}^{-1} &amp; {\mathsf{I}}_{n_2}
-    \end{bmatrix}   \nonumber\\
-    &amp;= \begin{bmatrix}
-    {\mathsf{A}}_{11}^{-1} + {\mathsf{A}}_{11}^{-1} {\mathsf{A}}_{12} ({\mathsf{A}}_{22} - {\mathsf{A}}_{21} {\mathsf{A}}_{11}^{-1} {\mathsf{A}}_{12})^{-1}  {\mathsf{A}}_{21} {\mathsf{A}}_{11}^{-1} &amp; -{\mathsf{A}}_{11}^{-1} {\mathsf{A}}_{12} ({\mathsf{A}}_{22} - {\mathsf{A}}_{21} {\mathsf{A}}_{11}^{-1} {\mathsf{A}}_12)^{-1}\\
-        -({\mathsf{A}}_{22} - {\mathsf{A}}_{21} {\mathsf{A}}_{11}^{-1} {\mathsf{A}}_{12})^{-1}  {\mathsf{A}}_{21} {\mathsf{A}}_{11}^{-1} &amp; ({\mathsf{A}}_{22} - {\mathsf{A}}_{21} {\mathsf{A}}_{11}^{-1} {\mathsf{A}}_{12})^{-1}
+<!-- ## Blokmatrices
+
+* Lineair stelsel dat bestaat uit twee delen voor 1 groep onbekenden: $\map{A}_1 \vx = \vy_1$ en $\map{A}_2 \vx = \vy_2$
+
+  $\Rightarrow \begin{bmatrix}
+        \mat{A}_1 \\ \mat{A}_2 
+    \end{bmatrix} \vec{x} = \begin{bmatrix}
+        \vec{y}_1 \\ \vec{y}_2
+    \end{bmatrix}$
+  
+  * $\mat{A}_1 \in \bbF^{m_1 \times n}, \mat{A}_2 \in \bbF^{m_2 \times n}$
+  * (technisch: directe som $\vy_1 \oplus \vy_2$)
+
+* Twee groepen van onbekenden:
+
+  $\begin{bmatrix}
+        \mat{A}_{11} & \mat{A}_{12} \\ \mat{A}_{21} & \mat{A}_{22}
     \end{bmatrix}
-\end{align*}</span></p>
-</div>
-<ul>
-<li><p>Toepassing: probabiliteitsdistributie</p>
-<p><span class="math inline">f_{\boldsymbol{X}}(\boldsymbol{x}_1,\boldsymbol{x}_2) = \sqrt{\frac{\det({\mathsf{A}})}{(2\pi)^n}} {\mathrm{e}}^{-\frac{1}{2} \begin{bmatrix}  \boldsymbol{x}_1 \\ \boldsymbol{x}_2\end{bmatrix}^{\mathsf{T}}\begin{bmatrix}  {\mathsf{A}}_{11} &amp; {\mathsf{A}}_{12} \\ {\mathsf{A}}_{21} &amp; {\mathsf{A}}_{22}  \end{bmatrix} \begin{bmatrix}  \boldsymbol{x}_1 \\ \boldsymbol{x}_2\end{bmatrix}}</span></p>
-<ul>
-<li><p>marginale distributie van <span class="math inline">\boldsymbol{X}_2</span>:</p>
-<p><span class="math inline">f_{\boldsymbol{X}_2}(\boldsymbol{x}_2) = \int_{{\mathbb{R}}^{n_1}} f_{\boldsymbol{X}}(\boldsymbol{x}_1,\boldsymbol{x}_2) \,{\mathrm{d}}^{n_1} \boldsymbol{x}_1</span></p></li>
-</ul></li>
-</ul>
-</section>
-<section id="blokmatrices-en-blok-ldu-decompositie-2" class="level2">
-<h2 class="anchored" data-anchor-id="blokmatrices-en-blok-ldu-decompositie-2">Blokmatrices en blok-LDU-decompositie:</h2>
-<ul>
-<li><p>Toepassing: probabiliteitsdistributie</p>
-<p><span class="math inline">f_{\boldsymbol{X}}(\boldsymbol{x}_1,\boldsymbol{x}_2) = \sqrt{\frac{\det({\mathsf{A}})}{(2\pi)^n}} {\mathrm{e}}^{-\frac{1}{2} \begin{bmatrix}  \boldsymbol{x}_1 \\ \boldsymbol{x}_2\end{bmatrix}^{\mathsf{T}}\begin{bmatrix}  {\mathsf{A}}_{11} &amp; {\mathsf{A}}_{12} \\ {\mathsf{A}}_{21} &amp; {\mathsf{A}}_{22}  \end{bmatrix} \begin{bmatrix}  \boldsymbol{x}_1 \\ \boldsymbol{x}_2\end{bmatrix}}</span></p>
-<ul>
-<li><p>marginale distributie van <span class="math inline">\boldsymbol{X}_2</span>:</p>
-<p><span class="math inline">f_{\boldsymbol{X}_2}(\boldsymbol{x}_2) = \int_{{\mathbb{R}}^{n_1}} f_{\boldsymbol{X}}(\boldsymbol{x}_1,\boldsymbol{x}_2) \,{\mathrm{d}}^{n_1} \boldsymbol{x}_1</span></p></li>
-<li><p>substitutie: <span class="math inline">\boldsymbol{x}_1 = \boldsymbol{y}_1 - {\mathsf{A}}_{11}^{-1} {\mathsf{A}}_{12} \boldsymbol{x}_2</span></p></li>
-<li><p><span class="math inline">\Rightarrow f_{\boldsymbol{X}_2}(\boldsymbol{x}_2) =\sqrt{\frac{\det({\mathsf{A}}/{\mathsf{A}}_{11})}{(2\pi)^{n_2}}} {\mathrm{e}}^{-\frac{1}{2} \boldsymbol{x}_2^{\mathsf{T}}({\mathsf{A}}/{\mathsf{A}}_{11}) \boldsymbol{x}_2}</span></p>
-<p>Nog steeds Gaussische distributie. Covariantiematrix voor <span class="math inline">\boldsymbol{x}_2</span> is gegeven door <span class="math inline">({\mathsf{A}}/{\mathsf{A}}_{11})^{-1}</span></p></li>
-</ul></li>
-</ul>
-</section>
-<section id="sherman-morrison-woodbury-matrixidentiteit" class="level2">
-<h2 class="anchored" data-anchor-id="sherman-morrison-woodbury-matrixidentiteit">Sherman-Morrison-Woodbury matrixidentiteit</h2>
-<p>Voor vierkante matrices <span class="math inline">{\mathsf{A}} \in {\mathbb{F}}^{n\times n}</span>, <span class="math inline">{\mathsf{C}} \in {\mathbb{F}}^{k \times k}</span> en matrices <span class="math inline">{\mathsf{U}} \in {\mathbb{F}}^{n \times k}</span>, <span class="math inline">{\mathsf{V}} \in {\mathbb{F}}^{k \times n}</span>, de <strong>matrixidentiteit van Woodbury</strong> stelt dat</p>
-<p><span class="math display">\begin{equation}
-    ({\mathsf{A}} + {\mathsf{U}} {\mathsf{C}} {\mathsf{V}})^{-1} = {\mathsf{A}}^{-1} - {\mathsf{A}}^{-1} {\mathsf{U}} ({\mathsf{C}}^{-1} + {\mathsf{V}} {\mathsf{A}}^{-1} {\mathsf{U}})^{-1} {\mathsf{V}} {\mathsf{A}}^{-1}
-\end{equation}</span></p>
-<ul>
-<li><p>Bewijs: aan bord</p></li>
-<li><p><span class="math inline">k=1</span>: “rang-1 updates” <span class="math inline">\rightarrow</span> <strong>Sherman-Morrison formule</strong></p>
-<p><span class="math inline">({\mathsf{A}} + \boldsymbol{u} \boldsymbol{v}^{\mathsf{T}})^{-1} = {\mathsf{A}}^{-1} - \frac{{\mathsf{A}}^{-1}\boldsymbol{u} \boldsymbol{v}^{{\mathsf{T}}} {\mathsf{A}}^{-1} }{1 + \boldsymbol{v}^{\mathsf{T}}{\mathsf{A}}^{-1} \boldsymbol{u}}</span></p></li>
-</ul>
-</section>
-<section id="toepassingen" class="level2">
-<h2 class="anchored" data-anchor-id="toepassingen">Toepassingen</h2>
-<ul>
-<li>Recursieve structuur van inverse van som</li>
-</ul>
-<p><span class="math display">\begin{align*}
-({\mathsf{A}} + {\mathsf{B}})^{-1} &amp;= {\mathsf{A}}^{-1} - {\mathsf{A}}^{-1} ({\mathsf{B}}^{-1} + {\mathsf{A}}^{-1})^{-1} {\mathsf{A}}^{-1} \\
-    &amp;= {\mathsf{A}}^{-1} - {\mathsf{A}}^{-1} ({\mathsf{I}}+ {\mathsf{A}} {\mathsf{B}}^{-1} )^{-1}\\
-    &amp;= {\mathsf{A}}^{-1} - {\mathsf{A}}^{-1} {\mathsf{B}} ({\mathsf{A}} + {\mathsf{B}})^{-1}\\
-  &amp;=  \sum_{k=0}^{\infty} (-{\mathsf{A}}^{-1} {\mathsf{B}})^k{\mathsf{A}}^{-1}
-  \end{align*}</span></p>
-<ul>
-<li><p>Afgeleide van de matrixinverse van een matrixwaardige functie:</p>
-<p><span class="math display">\frac{{\mathrm{d}}{\mathsf{A}}^{-1}}{{\mathrm{d}}x}(x) = -{\mathsf{A}}^{-1}(x) \frac{{\mathrm{d}}{\mathsf{A}}}{{\mathrm{d}}x}(x) {\mathsf{A}}^{-1}(x)</span></p></li>
-</ul>
+    \begin{bmatrix}
+        \vec{x}_1 \\ \vec{x}_2
+    \end{bmatrix} =
+    \begin{bmatrix}
+        \vec{y}_1 \\ \vec{y}_2
+    \end{bmatrix}$
+
+  * $\mat{A}_{ij} \in \bbF^{m_i \times n_j}$ voor $i,j=1,2$
+
+## Blokmatrices en blok-LDU-decompositie:
+
+$\begin{bmatrix}
+        \mat{A}_{11} & \mat{A}_{12} \\ \mat{A}_{21} & \mat{A}_{22}
+    \end{bmatrix}$ met $m_1=n_1$ en $m_2 = n_2$:
+
+* $\mat{A}_{11}$ en $\mat{A}_{22}$ zijn vierkante matrices
+
+* $\mat{A}_{11}$ inverteerbaar $\Rightarrow$ blok-LDU-decompositie:
+
+  $$    \mat{A} = \underbrace{\begin{bmatrix}
+        \idmat_{n_1} & \zeromat \\ \mat{A}_{21} \mat{A}_{11}^{-1} & \idmat_{n_2}
+    \end{bmatrix}}_{\mat{L}}
+    \underbrace{\begin{bmatrix}
+        \mat{A}_{11}& \zeromat\\
+        \zeromat & \mat{A}_{22} - \mat{A}_{21} \mat{A}_{11}^{-1} \mat{A}_{12} 
+    \end{bmatrix}}_{\mat{D}}
+    \underbrace{\begin{bmatrix}
+        \idmat_{n_1} &  \mat{A}_{11}^{-1} \mat{A}_{12}\\
+        \zeromat & \idmat_{n_2}
+    \end{bmatrix}}_{\mat{U}}$$
+
+* Schur complement $(\mat{A}/\mat{A}_{11}) = \mat{A}_{22} - \mat{A}_{21} \mat{A}_{11}^{-1} \mat{A}_{12}$
+
+* $\det(\mat{A}) = \det(\mat{A}_{11}) \det(\mat{A}/\mat{A}_{11})$
+
+## Blokmatrices en blok-LDU-decompositie:
+
+::: {.r-fit-text}
+
+\begin{align*}
+    \mat{A}^{-1} &= \mat{U}^{-1} \mat{D}^{-1} \mat{L}^{-1}\nonumber\\
+    &= \begin{bmatrix}
+        \idmat_{n_1} &  -\mat{A}_{11}^{-1} \mat{A}_{12}\\
+        \zeromat & \idmat_{n_2}
+    \end{bmatrix}\begin{bmatrix}
+        \mat{A}_{11}^{-1}& \zeromat\\
+        \zeromat & (\mat{A}_{22} - \mat{A}_{21} \mat{A}_{11}^{-1} \mat{A}_{12})^{-1} 
+    \end{bmatrix}\begin{bmatrix}
+        \idmat_{n_1} & \zeromat \\ -\mat{A}_{21} \mat{A}_{11}^{-1} & \idmat_{n_2}
+    \end{bmatrix}   \nonumber\\
+    &= \begin{bmatrix}
+    \mat{A}_{11}^{-1} + \mat{A}_{11}^{-1} \mat{A}_{12} (\mat{A}_{22} - \mat{A}_{21} \mat{A}_{11}^{-1} \mat{A}_{12})^{-1}  \mat{A}_{21} \mat{A}_{11}^{-1} & -\mat{A}_{11}^{-1} \mat{A}_{12} (\mat{A}_{22} - \mat{A}_{21} \mat{A}_{11}^{-1} \mat{A}_12)^{-1}\\
+        -(\mat{A}_{22} - \mat{A}_{21} \mat{A}_{11}^{-1} \mat{A}_{12})^{-1}  \mat{A}_{21} \mat{A}_{11}^{-1} & (\mat{A}_{22} - \mat{A}_{21} \mat{A}_{11}^{-1} \mat{A}_{12})^{-1} 
+    \end{bmatrix}
+\end{align*}
+
+:::
+
+* Toepassing: probabiliteitsdistributie
+
+  $f_{\vec{X}}(\vec{x}_1,\vec{x}_2) = \sqrt{\frac{\det(\mat{A})}{(2\pi)^n}} \erm^{-\frac{1}{2} \begin{bmatrix}
+        \vec{x}_1 \\ \vec{x}_2\end{bmatrix}^\transpose \begin{bmatrix}
+        \mat{A}_{11} & \mat{A}_{12} \\ \mat{A}_{21} & \mat{A}_{22}
+    \end{bmatrix} \begin{bmatrix}
+        \vec{x}_1 \\ \vec{x}_2\end{bmatrix}}$
+
+  * marginale distributie van $\vec{X}_2$:
+
+    $f_{\vec{X}_2}(\vec{x}_2) = \int_{\bbR^{n_1}} f_{\vec{X}}(\vec{x}_1,\vec{x}_2) \,\drm^{n_1} \vec{x}_1$
+
+## Blokmatrices en blok-LDU-decompositie:
+
+* Toepassing: probabiliteitsdistributie
+
+  $f_{\vec{X}}(\vec{x}_1,\vec{x}_2) = \sqrt{\frac{\det(\mat{A})}{(2\pi)^n}} \erm^{-\frac{1}{2} \begin{bmatrix}
+        \vec{x}_1 \\ \vec{x}_2\end{bmatrix}^\transpose \begin{bmatrix}
+        \mat{A}_{11} & \mat{A}_{12} \\ \mat{A}_{21} & \mat{A}_{22}
+    \end{bmatrix} \begin{bmatrix}
+        \vec{x}_1 \\ \vec{x}_2\end{bmatrix}}$
+
+  * marginale distributie van $\vec{X}_2$:
+
+    $f_{\vec{X}_2}(\vec{x}_2) = \int_{\bbR^{n_1}} f_{\vec{X}}(\vec{x}_1,\vec{x}_2) \,\drm^{n_1} \vec{x}_1$
+
+  * substitutie: $\vec{x}_1 = \vec{y}_1 - \mat{A}_{11}^{-1} \mat{A}_{12} \vec{x}_2$
+
+  * $\Rightarrow f_{\vec{X}_2}(\vec{x}_2) =\sqrt{\frac{\det(\mat{A}/\mat{A}_{11})}{(2\pi)^{n_2}}} \erm^{-\frac{1}{2} \vec{x}_2^\transpose (\mat{A}/\mat{A}_{11}) \vec{x}_2}$
+
+    Nog steeds Gaussische distributie. Covariantiematrix voor $\vec{x}_2$ is gegeven door $(\mat{A}/\mat{A}_{11})^{-1}$
+
+
+## Sherman-Morrison-Woodbury matrixidentiteit
+
+Voor vierkante matrices $\mat{A} \in \bbF^{n\times n}$, $\mat{C} \in \bbF^{k \times k}$ en matrices $\mat{U} \in \bbF^{n \times k}$, $\mat{V} \in \bbF^{k \times n}$, de **matrixidentiteit van Woodbury** stelt dat
+
+\begin{equation}
+    (\mat{A} + \mat{U} \mat{C} \mat{V})^{-1} = \mat{A}^{-1} - \mat{A}^{-1} \mat{U} (\mat{C}^{-1} + \mat{V} \mat{A}^{-1} \mat{U})^{-1} \mat{V} \mat{A}^{-1}
+\end{equation}
+
+* Bewijs: aan bord
+
+* $k=1$: "rang-1 updates" $\rightarrow$ **Sherman-Morrison formule**
+
+  $(\mat{A} + \vec{u} \vec{v}^\transpose)^{-1} = \mat{A}^{-1} - \frac{\mat{A}^{-1}\vec{u} \vec{v}^{\transpose} \mat{A}^{-1} }{1 + \vec{v}^\transpose \mat{A}^{-1} \vec{u}}$
+
+## Toepassingen
+
+* Recursieve structuur van inverse van som
+
+\begin{align*}
+(\mat{A} + \mat{B})^{-1} &= \mat{A}^{-1} - \mat{A}^{-1} (\mat{B}^{-1} + \mat{A}^{-1})^{-1} \mat{A}^{-1} \\
+    &= \mat{A}^{-1} - \mat{A}^{-1} (\idmat + \mat{A} \mat{B}^{-1} )^{-1}\\
+    &= \mat{A}^{-1} - \mat{A}^{-1} \mat{B} (\mat{A} + \mat{B})^{-1}\\
+  &=  \sum_{k=0}^{\infty} (-\mat{A}^{-1} \mat{B})^k\mat{A}^{-1}
+  \end{align*}
+
+* Afgeleide van de matrixinverse van een matrixwaardige functie:
+
+  $$\frac{\drm \mat{A}^{-1}}{\drm x}(x) = -\mat{A}^{-1}(x) \frac{\drm \mat{A}}{\drm x}(x) \mat{A}^{-1}(x)$$ -->
 
 
 </section>
 </section>
 
-
-<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
-
-<ol>
-<li id="fn1"><p>Additiviteit impliceert homogeniteit voor rationale getallen, en bij uitbreiding reële getallen als we over een notie van continuïteit zouden beschikken<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-</ol>
-</section></div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {

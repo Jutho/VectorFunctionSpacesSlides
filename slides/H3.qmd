@@ -1,7 +1,7 @@
 ---
 title: "Hoofdstuk 3 - Lineaire operatoren en eigenwaarden"
 author: "Jutho Haegeman"
-date: "09/30/2025"
+date: "09/22/2026"
 # format:
 #   revealjs:
 #     theme: solarized
@@ -81,7 +81,7 @@ $$
 \newcommand{\vect}[1]{{#1}}
 \renewcommand{\vec}[1]{\boldsymbol{#1}} % specifically for vectors in F^n
 \newcommand{\zerovec}{{o}}
-\newcommand{\vu}{\vect{u}}
+\renewcommand{\vu}{\vect{u}}
 \newcommand{\vv}{\vect{v}}
 \newcommand{\vw}{\vect{w}}
 \newcommand{\ve}{\vect{e}}
@@ -124,16 +124,6 @@ $$
 \newcommand{\subspace}{{\preccurlyeq}}
 \newcommand{\supspace}{{\succcurlyeq}}
 
-%\newcommand{\vz}{{\bm{z}}}
-%\newcommand{\ovz}{{\overline{\bm{z}}}}
-%\newcommand{\oz}{{\overline{z}}}
-%\newcommand{\vu}{{\bm{u}}}
-%\newcommand{\ovu}{{\overline{\bm{u}}}}
-%\newcommand{\ou}{{\overline{u}}}
-%\newcommand{\vr}{{\bm{r}}}
-%\newcommand{\ovr}{{\overline{\bm{r}}}}
-%\newcommand{\orr}{{\overline{r}}}
-
 \newcommand{\eps}{{\varepsilon}}
 \newcommand{\levicivita}{{\epsilon}}
 
@@ -142,10 +132,9 @@ $$
 \newcommand{\sz}{{\sigma^z}}
 \renewcommand{\sp}{{\sigma^+}}
 \newcommand{\sm}{{\sigma^-}}
-%
 
-\DeclareMathOperator*{\sumint}{%
-\mathchoice%
+\DeclareMathOperator*{\sumint}{
+\mathchoice
   {\ooalign{$\displaystyle\sum$\cr\hidewidth$\displaystyle\int$\hidewidth\cr}}
   {\ooalign{\raisebox{.14\height}{\scalebox{.7}{$\textstyle\sum$}}\cr\hidewidth$\textstyle\int$\hidewidth\cr}}
   {\ooalign{\raisebox{.2\height}{\scalebox{.6}{$\scriptstyle\sum$}}\cr$\scriptstyle\int$\cr}}
@@ -385,6 +374,13 @@ $$
   $$m_{\map{A}}(z) = \prod_{\lambda \in \sigma_{\map{A}}} (z-\lambda)$$
 
 
+
+Centrale grootheid in het bewijs: spectrale projector
+
+
+* $\map{P}_\lambda = \prod_{\substack{\lambda'\in\sigma_{\map{A}}\\\lambda\neq \lambda'}} \frac{(\map{A} - \lambda')}{(\lambda - \lambda')}$
+
+
 ## Spectrale decompositie
 
 $\map{A}$ diagonaliseerbaar: $\bigoplus_{\lambda \in \sigma_{\map{A}}} V_\lambda = V$
@@ -401,14 +397,6 @@ $\map{A}$ diagonaliseerbaar: $\bigoplus_{\lambda \in \sigma_{\map{A}}} V_\lambda
   (diagonaalvorm in operatornotatie)
 
   $\Rightarrow p(\map{A}) = \sum p(\lambda) \map{P}_\lambda,\quad \map{A}^{-1} = \sum \lambda^{-1} \map{P}_\lambda$ (als $0\not\in \sigma_{\map{A}}$)
-
-## Spectrale decompositie
-
-Expliciete uitdrukkingen voor de spectrale projector:
-
-* $\map{P}_\lambda = \prod_{\substack{\lambda'\in\sigma_{\map{A}}\\\lambda\neq \lambda'}} \frac{(\map{A} - \lambda')}{(\lambda - \lambda')}$
-
-* Terzijde: $\map{P}_{\lambda}=\lim_{z \to \lambda} (z - \lambda) R_{\map{A}}(z)$
 
 ## Spectrale decompositie van commuterende operatoren
 

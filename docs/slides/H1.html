@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Jutho Haegeman">
-<meta name="dcterms.date" content="2025-09-22">
+<meta name="dcterms.date" content="2026-09-21">
 
 <title>Vector- en functieruimten – Slides - Hoofdstuk 1 - Elementaire wiskundige structuren</title>
 <style>
@@ -155,6 +155,7 @@ ul.task-list li input[type="checkbox"] {
    
   <ul>
   <li><a href="#doel-van-dit-hoofdstuk" id="toc-doel-van-dit-hoofdstuk" class="nav-link active" data-scroll-target="#doel-van-dit-hoofdstuk">Doel van dit hoofdstuk</a></li>
+  <li><a href="#doel-van-dit-hoofdstuk-1" id="toc-doel-van-dit-hoofdstuk-1" class="nav-link" data-scroll-target="#doel-van-dit-hoofdstuk-1">Doel van dit hoofdstuk</a></li>
   <li><a href="#verzamelingen-en-afbeeldingen" id="toc-verzamelingen-en-afbeeldingen" class="nav-link" data-scroll-target="#verzamelingen-en-afbeeldingen">Verzamelingen en afbeeldingen</a>
   <ul class="collapse">
   <li><a href="#verzamelingen" id="toc-verzamelingen" class="nav-link" data-scroll-target="#verzamelingen">Verzamelingen</a></li>
@@ -199,18 +200,21 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#bewerkingen-met-deelruimten-1" id="toc-bewerkingen-met-deelruimten-1" class="nav-link" data-scroll-target="#bewerkingen-met-deelruimten-1">Bewerkingen met deelruimten</a></li>
   <li><a href="#bewerkingen-met-deelruimten-2" id="toc-bewerkingen-met-deelruimten-2" class="nav-link" data-scroll-target="#bewerkingen-met-deelruimten-2">Bewerkingen met deelruimten</a></li>
   <li><a href="#bewerkingen-met-deelruimten-3" id="toc-bewerkingen-met-deelruimten-3" class="nav-link" data-scroll-target="#bewerkingen-met-deelruimten-3">Bewerkingen met deelruimten</a></li>
-  <li><a href="#affiene-ruimte" id="toc-affiene-ruimte" class="nav-link" data-scroll-target="#affiene-ruimte">Affiene ruimte</a></li>
   </ul></li>
   <li><a href="#algebras" id="toc-algebras" class="nav-link" data-scroll-target="#algebras">Algebras</a>
   <ul class="collapse">
-  <li><a href="#algebra" id="toc-algebra" class="nav-link" data-scroll-target="#algebra">Algebra</a></li>
   <li><a href="#algebras-1" id="toc-algebras-1" class="nav-link" data-scroll-target="#algebras-1">Algebras</a></li>
+  <li><a href="#algebras-2" id="toc-algebras-2" class="nav-link" data-scroll-target="#algebras-2">Algebras</a></li>
+  </ul></li>
+  <li><a href="#samenvatting" id="toc-samenvatting" class="nav-link" data-scroll-target="#samenvatting">Samenvatting</a>
+  <ul class="collapse">
+  <li><a href="#samenvatting-1" id="toc-samenvatting-1" class="nav-link" data-scroll-target="#samenvatting-1">Samenvatting</a></li>
   </ul></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
-<main class="content page-columns page-full" id="quarto-document-content">
+<main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
@@ -231,7 +235,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">September 22, 2025</p>
+      <p class="date">September 21, 2026</p>
     </div>
   </div>
   
@@ -252,17 +256,22 @@ ul.task-list li input[type="checkbox"] {
 % LINEAR MAPS
 <p>% FIELDS </p>
 <p>% RELATIONS </p>
-<p>% % % % % % % % %</p>
-<p>%</p>
 <p>$$</p>
 </div>
 <ul>
 <li><p>Belangrijkste wiskundige concepten:</p>
 <p>Herhaling (voornamelijk)</p></li>
 <li><p>Notatie en terminologie</p></li>
-<li><p>Geen bewijzen, geen letterlijke vragen</p></li>
 <li><p>Weinig voorbeelden om beknopt te blijven</p></li>
 </ul>
+</section>
+<section id="doel-van-dit-hoofdstuk-1" class="level2">
+<h2 class="anchored" data-anchor-id="doel-van-dit-hoofdstuk-1">Doel van dit hoofdstuk</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="algebraicstructures.svg" class="nostretch img-fluid figure-img" width="700"></p>
+</figure>
+</div>
 </section>
 <section id="verzamelingen-en-afbeeldingen" class="level1">
 <h1>Verzamelingen en afbeeldingen</h1>
@@ -301,7 +310,7 @@ ul.task-list li input[type="checkbox"] {
 <li>afbeelding <span class="math inline">\varphi</span>, domein <span class="math inline">A</span>, codomein <span class="math inline">B</span></li>
 <li>argument <span class="math inline">a</span>, waarde of beeld <span class="math inline">\varphi(a)</span></li>
 <li>beeld van <span class="math inline">C \subseteq A</span>: <span class="math inline">\varphi(C) = \{\varphi(a) | a \in C\}</span></li>
-<li>invers beeld (preimage) van <span class="math inline">D \subseteq B</span>:<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> <span class="math inline">\varphi^{-1}(D) = \{a \in A | \varphi(a) \in D\}</span></li>
+<li>invers beeld (preimage) van <span class="math inline">D \subseteq B</span>: <span class="math inline">\varphi^{-1}(D) = \{a \in A | \varphi(a) \in D\}</span></li>
 </ul></li>
 <li>compositie <span class="math inline">\varphi \circ \psi</span>, identiteitsafbeelding <span class="math inline">\mathop{\mathrm{id}}_A</span></li>
 </ul>
@@ -393,7 +402,7 @@ ul.task-list li input[type="checkbox"] {
 </ol>
 </section>
 </section>
-<section id="groepen-ringen-en-velden" class="level1 page-columns page-full">
+<section id="groepen-ringen-en-velden" class="level1">
 <h1>Groepen, ringen en velden</h1>
 <section id="bineaire-operatie" class="level2">
 <h2 class="anchored" data-anchor-id="bineaire-operatie">Bineaire operatie</h2>
@@ -514,7 +523,7 @@ ul.task-list li input[type="checkbox"] {
 <p>(in dat geval is <span class="math inline">\cdot</span> niet commutatief)</p></li>
 </ul>
 </section>
-<section id="ring-1" class="level2 page-columns page-full">
+<section id="ring-1" class="level2">
 <h2 class="anchored" data-anchor-id="ring-1">Ring</h2>
 <p>In een ring is er een neutraal element <span class="math inline">0</span> van <span class="math inline">+</span> en een neutraal element <span class="math inline">1</span> van <span class="math inline">\cdot</span>. Verder kunnen er nog elementen zijn met een speciale rol:</p>
 <ul>
@@ -523,10 +532,7 @@ ul.task-list li input[type="checkbox"] {
 <li>Multiplicatief invers element: <span class="math inline">a^{-1}</span> zodat <span class="math inline">a^{-1}\cdot a = a\cdot a^{-1} = 1</span></li>
 <li>Nuldeler: <span class="math inline">a b = 0</span> voor minstens 1 element <span class="math inline">b \neq 0</span>.</li>
 </ul>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<p>In een eindige ring geldt voor elk element dat het ofwel een nuldeler is, of dat het een multipicatief inverse heeft.</p>
-</div></div></section>
+</section>
 <section id="ring-en-veld" class="level2">
 <h2 class="anchored" data-anchor-id="ring-en-veld">Ring en veld</h2>
 <ul>
@@ -597,7 +603,7 @@ ul.task-list li input[type="checkbox"] {
 <section id="homomorfismen" class="level2">
 <h2 class="anchored" data-anchor-id="homomorfismen">Homomorfismen</h2>
 <p>Structuurbehoudende afbeelding tussen twee vectorruimten <span class="math inline">V</span> and <span class="math inline">W</span>:</p>
-<p><span class="math inline">\varphi:V\to W</span> met <span class="math inline">\varphi (a_1 {v}_1 + a_2 {v}_2) = a_1 \varphi({v}_1) + a_2 \varphi({v}_2)</span></p>
+<p><span class="math inline">\varphi:V\to W</span> met <span class="math inline">\varphi (a^1 {v}_1 + a^2 {v}_2) = a^1 \varphi({v}_1) + a^2 \varphi({v}_2)</span></p>
 <ul>
 <li><p>vector-homomorfismen <span class="math inline">\mathop{\mathrm{Hom}}(V,W)</span>:</p>
 <p><strong>lineaire afbeeldingen</strong> <span class="math inline">\rightarrow</span> Hoofdstuk 2</p></li>
@@ -613,7 +619,7 @@ ul.task-list li input[type="checkbox"] {
 <h2 class="anchored" data-anchor-id="lineaire-combinaties">Lineaire combinaties</h2>
 <p>Gegeven een deelverzameling <span class="math inline">S \subseteq V</span> van een vectorruimte <span class="math inline">V</span> over <span class="math inline">{\mathbb{F}}</span> (dus niet noodzakelijk een deelruimte):</p>
 <ul>
-<li>Een lineaire combinatie uit <span class="math inline">S</span> is elke vector <span class="math inline">{v}= \sum_{i=1}^m a_i {v}_i</span> met <span class="math inline">a_i \in {\mathbb{F}}</span>, <span class="math inline">{v}_i \in S</span> voor <span class="math inline">i=1,\ldots,m</span> voor een eindige integer <span class="math inline">m</span><a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a></li>
+<li>Een lineaire combinatie uit <span class="math inline">S</span> is elke vector <span class="math inline">{v}= \sum_{i=1}^m a^i {v}_i</span> met <span class="math inline">a^i \in {\mathbb{F}}</span>, <span class="math inline">{v}_i \in S</span> voor <span class="math inline">i=1,\ldots,m</span> voor een eindige integer <span class="math inline">m</span></li>
 </ul>
 </section>
 <section id="lineaire-span-en-compleetheid" class="level2">
@@ -630,7 +636,7 @@ ul.task-list li input[type="checkbox"] {
 <section id="lineaire-onafhankelijkheid-en-basis" class="level2">
 <h2 class="anchored" data-anchor-id="lineaire-onafhankelijkheid-en-basis">Lineaire onafhankelijkheid en basis</h2>
 <ul>
-<li><p>Een deelverzameling <span class="math inline">S \subseteq V</span> van een vectorruimte <span class="math inline">V</span> over <span class="math inline">{\mathbb{F}}</span> wordt <strong>lineair onafhankelijk</strong> genoemd als voor elke lineaire combinatie <span class="math inline">\sum_{i=1}^m a_i {v}_i</span> geldt dat de vergelijking <span class="math inline">\sum_{i=1}^m a_i {v}_i = {o}_V</span> impliceert dat <span class="math inline">a_i = 0</span> voor <span class="math inline">i=1,\ldots,m</span>.</p></li>
+<li><p>Een deelverzameling <span class="math inline">S \subseteq V</span> van een vectorruimte <span class="math inline">V</span> over <span class="math inline">{\mathbb{F}}</span> wordt <strong>lineair onafhankelijk</strong> genoemd als voor elke lineaire combinatie <span class="math inline">\sum_{i=1}^m a^i {v}_i</span> geldt dat de vergelijking <span class="math inline">\sum_{i=1}^m a^i {v}_i = {o}_V</span> impliceert dat <span class="math inline">a^i = 0</span> voor <span class="math inline">i=1,\ldots,m</span>.</p></li>
 <li><p>Een verzameling <span class="math inline">S</span> die tegelijkertijd lineair onafhankelijk is en compleet is (<span class="math inline">V</span> voortbrengt) wordt een <em>basis</em> genoemd</p></li>
 <li><p>Voorbeeld: <span class="math inline">\{\boldsymbol{e}_i =(0,\ldots,\underbrace{0,1,0}_{\text{positie $i$}},\ldots,0); i=1,\ldots,n\}</span> is een basis voor <span class="math inline">{\mathbb{F}}^n</span></p></li>
 </ul>
@@ -721,68 +727,72 @@ ul.task-list li input[type="checkbox"] {
 <li><span class="math inline">\mathop{\mathrm{dim}}(V/W) = \mathop{\mathrm{dim}}(V) - \mathop{\mathrm{dim}}(W)</span></li>
 </ul></li>
 </ul>
-</section>
-<section id="affiene-ruimte" class="level2">
-<h2 class="anchored" data-anchor-id="affiene-ruimte">Affiene ruimte</h2>
-<p>Gegeven een vectorruimte <span class="math inline">V</span>, een geassocieerde affiene ruimte is een verzameling van punten <span class="math inline">A = \{P, Q, \ldots\}</span> waarop de abelse groep <span class="math inline">(V,+)</span> een groepsactie heeft, of dus</p>
-<ul>
-<li><span class="math inline">\forall P \in A: P + {o}_V = P</span></li>
-<li><span class="math inline">\forall P \in A, {v},{w}\in V: P + ({v}+ {w}) = (P+{v}) + {w}</span></li>
-</ul>
-<p>met bovendien:</p>
-<ul>
-<li>als <span class="math inline">P + {v}= P</span> voor een bepaalde <span class="math inline">P</span>, dan is <span class="math inline">{v}= {o}_V</span></li>
-<li><span class="math inline">\forall P, Q \in A</span>: er bestaat een <span class="math inline">{v}\in V</span> zodat <span class="math inline">Q = P + {v}</span>
-<ul>
-<li>notatie: <span class="math inline">{v}= Q - P</span></li>
-</ul></li>
-</ul>
-<p><span class="math inline">A</span> is zoals de vectorruimte <span class="math inline">V</span> die zijn oorsprong is vergeten</p>
+<!-- ## Affiene ruimte
+
+Gegeven een vectorruimte $V$, een geassocieerde affiene ruimte is een verzameling van punten $A = \{P, Q, \ldots\}$ waarop de abelse groep $(V,+)$ een groepsactie heeft, of dus
+
+* $\forall P \in A: P + \zerovec_V = P$
+* $\forall P \in A, \vv,\vw \in V: P + (\vv + \vw) = (P+\vv) + \vw$
+
+met bovendien:
+
+* als $P + \vv = P$ voor een bepaalde $P$, dan is $\vv = \zerovec_V$
+* $\forall P, Q \in A$: er bestaat een $\vv\in V$ zodat $Q = P + \vv$
+  * notatie: $\vv = Q - P$
+
+$A$ is zoals de vectorruimte $V$ die zijn oorsprong is vergeten -->
 </section>
 </section>
 <section id="algebras" class="level1">
 <h1>Algebras</h1>
-<section id="algebra" class="level2">
-<h2 class="anchored" data-anchor-id="algebra">Algebra</h2>
+<section id="algebras-1" class="level2">
+<h2 class="anchored" data-anchor-id="algebras-1">Algebras</h2>
 <p>Een vectorruimte <span class="math inline">V</span> met een binaire operatie <span class="math inline">\odot: V \times V \mapsto V</span> die lineair is beide argumenten afzonderlijk (= bilineair)</p>
 <ul>
-<li><span class="math inline">(a_1 {v}_1 + a_2 {v}_2) \odot {w}= a_1 ({v}_1 \odot {w}) + a_2 ({v}_2 \odot {w})</span></li>
-<li><span class="math inline">{v}\odot (b_1 {w}_1 + b_2 {w}_2) = b_1 ({v}\odot {w}_1) + b_2 ({v}\odot {w}_2)</span></li>
+<li><span class="math inline">(a^1 {v}_1 + a^2 {v}_2) \odot {w}= a^1 ({v}_1 \odot {w}) + a^2 ({v}_2 \odot {w})</span></li>
+<li><span class="math inline">{v}\odot (b^1 {w}_1 + b^2 {w}_2) = b^1 ({v}\odot {w}_1) + b^2 ({v}\odot {w}_2)</span></li>
 </ul>
 <p>Ten opzichte van een basis <span class="math inline">B = \{{e}_1,\ldots,{e}_n\}</span>:</p>
 <p><span class="math inline">(v^i {e}_i) \odot (w^j {e}_j) = v^i w^j ({e}_i \odot {e}_j) = v^i v^j \underbrace{f_{ij}^k}_{\text{structuurconstanten}} {e}_k</span></p>
 </section>
-<section id="algebras-1" class="level2">
-<h2 class="anchored" data-anchor-id="algebras-1">Algebras</h2>
+<section id="algebras-2" class="level2">
+<h2 class="anchored" data-anchor-id="algebras-2">Algebras</h2>
 <ul>
-<li><p>Associatieve algebra <span class="math inline">(V,\cdot)</span>:</p>
+<li>Associatieve algebra <span class="math inline">(V,\cdot)</span>:
 <ul>
 <li><span class="math inline">({u}\cdot {v}) \cdot {w}= {u}\cdot ({v}\cdot {w})</span></li>
 <li>vaak ook met een neutraal element</li>
-<li>belangrijkste voorbeeld: vierkante matrices <span class="math inline">{\mathbb{F}}^{n \times n}</span></li>
-<li><strong>commutator</strong>: <span class="math inline">[{v},{w}] = {v}\cdot {w}- {w}\cdot {v}</span></li>
+<li>belangrijkste voorbeeld: vierkante matrices <span class="math inline">{\mathbb{F}}^{n \times n}</span> <!-- * **commutator**: $[\vv,\vw] = \vv \cdot \vw - \vw \cdot \vv$ --></li>
 </ul></li>
-<li><p>Alternerend product: <span class="math inline">{v}\odot {v}= 0 \Rightarrow {v}\odot {w}= -{w}\odot {v}</span></p>
+<li>Alternerend product: <span class="math inline">{v}\odot {v}= 0 \Rightarrow {v}\odot {w}= -{w}\odot {v}</span>
 <ul>
+<li>automatisch antisymmetrisch / anticommutatief</li>
+<li>veralgemening naar antisymmetrische multilineaire vormen (Hoofdstuk 6)</li>
 <li>voorbeeld: vectorproduct <span class="math inline">\times</span> op <span class="math inline">{\mathbb{R}}^3</span></li>
 </ul></li>
-<li><p>Lie-algebra: algebra met alternered product, genoteerd als <span class="math inline">[{v}, {w}] = -[{w},{v}]</span> dat voldoet aan Jacobi-identiteit</p>
-<p><span class="math inline">[{u},[{v},{w}]] + [{v},[{w},{u}]] + [{w},[{u},{v}]] = 0</span></p>
-<p><span class="math inline">\rightarrow</span> kan gemaakt worden uit associatieve algebra m.b.v. commutator (controleer!)</p></li>
 </ul>
+<!-- * Lie-algebra: algebra met alternered product, genoteerd als $[\vv, \vw] = -[\vw,\vv]$ dat voldoet aan Jacobi-identiteit
+
+  $[\vu,[\vv,\vw]] + [\vv,[\vw,\vu]] + [\vw,[\vu,\vv]] = 0$
+  
+  $\rightarrow$ kan gemaakt worden uit associatieve algebra m.b.v. commutator (controleer!) -->
+</section>
+</section>
+<section id="samenvatting" class="level1">
+<h1>Samenvatting</h1>
+<section id="samenvatting-1" class="level2">
+<h2 class="anchored" data-anchor-id="samenvatting-1">Samenvatting</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="algebraicstructures.svg" class="nostretch img-fluid figure-img" width="700"></p>
+</figure>
+</div>
 
 
 </section>
 </section>
 
-
-<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
-
-<ol>
-<li id="fn1"><p>Invers beeld vereist geen injectiviteit, en gedraagt zich beter dan beeld onder unie en doorsnede: <span class="math inline">\varphi^{-1}(D_1 \cup D_2) = \varphi^{-1}(D_1) \cup \varphi^{-1}(D_2)</span> en analoog voor <span class="math inline">\cap</span><a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn2"><p><span class="math inline">S</span> zelf kan eindig of oneindig veel elementen bevatten, maar we hebben geen manier om op dit moment betekenis te geven aan een oneindige som (=reeks)<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-</ol>
-</section></div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {

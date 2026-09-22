@@ -1,12 +1,12 @@
 ---
 title: "Hoofdstuk 1 - Elementaire wiskundige structuren"
 author: "Jutho Haegeman"
-date: "09/22/2025"
+date: "09/21/2026"
 # format:
 #   revealjs:
 #     theme: solarized
-#     html-math-method: katex
 #     smaller: true
+#     html-math-method: katex
 #     chalkboard: true
 ---
 
@@ -81,7 +81,7 @@ $$
 \newcommand{\vect}[1]{{#1}}
 \renewcommand{\vec}[1]{\boldsymbol{#1}} % specifically for vectors in F^n
 \newcommand{\zerovec}{{o}}
-\newcommand{\vu}{\vect{u}}
+\renewcommand{\vu}{\vect{u}}
 \newcommand{\vv}{\vect{v}}
 \newcommand{\vw}{\vect{w}}
 \newcommand{\ve}{\vect{e}}
@@ -124,16 +124,6 @@ $$
 \newcommand{\subspace}{{\preccurlyeq}}
 \newcommand{\supspace}{{\succcurlyeq}}
 
-%\newcommand{\vz}{{\bm{z}}}
-%\newcommand{\ovz}{{\overline{\bm{z}}}}
-%\newcommand{\oz}{{\overline{z}}}
-%\newcommand{\vu}{{\bm{u}}}
-%\newcommand{\ovu}{{\overline{\bm{u}}}}
-%\newcommand{\ou}{{\overline{u}}}
-%\newcommand{\vr}{{\bm{r}}}
-%\newcommand{\ovr}{{\overline{\bm{r}}}}
-%\newcommand{\orr}{{\overline{r}}}
-
 \newcommand{\eps}{{\varepsilon}}
 \newcommand{\levicivita}{{\epsilon}}
 
@@ -142,10 +132,9 @@ $$
 \newcommand{\sz}{{\sigma^z}}
 \renewcommand{\sp}{{\sigma^+}}
 \newcommand{\sm}{{\sigma^-}}
-%
 
-\DeclareMathOperator*{\sumint}{%
-\mathchoice%
+\DeclareMathOperator*{\sumint}{
+\mathchoice
   {\ooalign{$\displaystyle\sum$\cr\hidewidth$\displaystyle\int$\hidewidth\cr}}
   {\ooalign{\raisebox{.14\height}{\scalebox{.7}{$\textstyle\sum$}}\cr\hidewidth$\textstyle\int$\hidewidth\cr}}
   {\ooalign{\raisebox{.2\height}{\scalebox{.6}{$\scriptstyle\sum$}}\cr$\scriptstyle\int$\cr}}
@@ -157,11 +146,14 @@ $$
 * Belangrijkste wiskundige concepten:
 
   Herhaling (voornamelijk)
+
 * Notatie en terminologie
 
-* Geen bewijzen, geen letterlijke vragen
-
 * Weinig voorbeelden om beknopt te blijven
+
+## Doel van dit hoofdstuk
+
+![](algebraicstructures.svg){.nostretch fig-align="center" width="700px"}
 
 # Verzamelingen en afbeeldingen
 
@@ -193,7 +185,7 @@ $$
   - afbeelding $\varphi$, domein $A$, codomein $B$
   - argument $a$, waarde of beeld $\varphi(a)$
   - beeld van $C \subseteq A$: $\varphi(C) = \{\varphi(a) | a \in C\}$
-  - invers beeld (preimage) van $D \subseteq B$:^[Invers beeld vereist geen injectiviteit, en gedraagt zich beter dan beeld onder unie en doorsnede: $\varphi^{-1}(D_1 \cup D_2) = \varphi^{-1}(D_1) \cup \varphi^{-1}(D_2)$ en analoog voor $\cap$]
+  - invers beeld (preimage) van $D \subseteq B$:
    $\varphi^{-1}(D) = \{a \in A | \varphi(a) \in D\}$
 
 * compositie $\varphi \circ \psi$, identiteitsafbeelding $\id_A$
@@ -240,6 +232,7 @@ Relatie tussen elementen $a \in A$ en $b \in B$ = deelverzameling van koppels $(
       \sim$ = verzameling van equivalentieklassen 
 
 ## Relaties
+
 1.  Equivalentierelatie $\sim$ tussen elementen $a, b, c \in A$
     * Voorbeeld (dat vaak terugkomt):
       
@@ -250,7 +243,6 @@ Relatie tussen elementen $a \in A$ en $b \in B$ = deelverzameling van koppels $(
       $\bbZ / \sim = \bbZ / (n \bbZ)$
       
       in fysica: $\bbZ_n$: gehele getallen modulo $n$
-
 
 ## Relaties
 2.  Partiële orde relatie $a \preccurlyeq b$ tussen elementen $a, b \in A$
@@ -398,10 +390,6 @@ In een ring is er een neutraal element $0$ van $+$ en een neutraal element $1$ v
 * Multiplicatief invers element: $a^{-1}$ zodat $a^{-1}\cdot a = a\cdot a^{-1} = 1$
 * Nuldeler: $a b = 0$ voor minstens 1 element $b \neq 0$.
 
-::: aside
-In een eindige ring geldt voor elk element dat het ofwel een nuldeler is, of dat het een multipicatief inverse heeft.
-:::
-
 ## Ring en veld
 
 * Het additief neutraal element $0$ heeft nooit een multiplicatief inverse
@@ -462,7 +450,7 @@ $\bbF$ is typisch $\bbR$ of $\bbC$
 
 Structuurbehoudende afbeelding tussen twee vectorruimten $V$ and $W$:
 
-$\varphi:V\to W$ met $\varphi (a_1 \vv_1 + a_2 \vv_2) = a_1 \varphi(\vv_1) + a_2 \varphi(\vv_2)$
+$\varphi:V\to W$ met $\varphi (a^1 \vv_1 + a^2 \vv_2) = a^1 \varphi(\vv_1) + a^2 \varphi(\vv_2)$
 
 * vector-homomorfismen $\Hom(V,W)$:
 
@@ -483,8 +471,8 @@ $\varphi:V\to W$ met $\varphi (a_1 \vv_1 + a_2 \vv_2) = a_1 \varphi(\vv_1) + a_2
 
 Gegeven een deelverzameling $S \subseteq V$ van een vectorruimte $V$ over $\bbF$ (dus niet noodzakelijk een deelruimte):
 
-* Een lineaire combinatie uit $S$ is elke vector $\vv = \sum_{i=1}^m a_i \vv_i$
-met $a_i \in \bbF$, $\vv_i \in S$ voor $i=1,\ldots,m$ voor een eindige integer $m$^[$S$ zelf kan eindig of oneindig veel elementen bevatten, maar we hebben geen manier om op dit moment betekenis te geven aan een oneindige som (=reeks)]
+* Een lineaire combinatie uit $S$ is elke vector $\vv = \sum_{i=1}^m a^i \vv_i$
+met $a^i \in \bbF$, $\vv_i \in S$ voor $i=1,\ldots,m$ voor een eindige integer $m$
 
 ## Lineaire span en compleetheid
 
@@ -503,7 +491,7 @@ met $a_i \in \bbF$, $\vv_i \in S$ voor $i=1,\ldots,m$ voor een eindige integer $
 ## Lineaire onafhankelijkheid en basis
 
 * Een deelverzameling $S \subseteq V$ van een vectorruimte $V$ over $\bbF$ wordt **lineair onafhankelijk** genoemd als voor elke lineaire combinatie 
-$\sum_{i=1}^m a_i \vv_i$ geldt dat de vergelijking $\sum_{i=1}^m a_i \vv_i = \zerovec_V$ impliceert dat $a_i = 0$ voor $i=1,\ldots,m$.
+$\sum_{i=1}^m a^i \vv_i$ geldt dat de vergelijking $\sum_{i=1}^m a^i \vv_i = \zerovec_V$ impliceert dat $a^i = 0$ voor $i=1,\ldots,m$.
 
 * Een verzameling $S$ die tegelijkertijd lineair onafhankelijk is en compleet is ($V$ voortbrengt) wordt een *basis* genoemd
 
@@ -592,7 +580,7 @@ Gegeven een deelruimte $W \subseteq V$:
   * equivalentieklassen: $\vv+ W = \{\vv + \vw; \vw \in W\}$
   * $\dim(V/W) = \dim(V) - \dim(W)$
 
-## Affiene ruimte
+<!-- ## Affiene ruimte
 
 Gegeven een vectorruimte $V$, een geassocieerde affiene ruimte is een verzameling van punten $A = \{P, Q, \ldots\}$ waarop de abelse groep $(V,+)$ een groepsactie heeft, of dus
 
@@ -605,17 +593,17 @@ met bovendien:
 * $\forall P, Q \in A$: er bestaat een $\vv\in V$ zodat $Q = P + \vv$
   * notatie: $\vv = Q - P$
 
-$A$ is zoals de vectorruimte $V$ die zijn oorsprong is vergeten
+$A$ is zoals de vectorruimte $V$ die zijn oorsprong is vergeten -->
 
 # Algebras
 
-## Algebra
+## Algebras
 
 Een vectorruimte $V$ met een binaire operatie $\odot: V \times V \mapsto V$
 die lineair is beide argumenten afzonderlijk (= bilineair)
 
-* $(a_1 \vv_1 + a_2 \vv_2) \odot \vw = a_1 (\vv_1 \odot \vw) + a_2 (\vv_2 \odot \vw)$
-* $\vv \odot (b_1 \vw_1 + b_2 \vw_2) = b_1 (\vv \odot \vw_1) + b_2 (\vv \odot \vw_2)$
+* $(a^1 \vv_1 + a^2 \vv_2) \odot \vw = a^1 (\vv_1 \odot \vw) + a^2 (\vv_2 \odot \vw)$
+* $\vv \odot (b^1 \vw_1 + b^2 \vw_2) = b^1 (\vv \odot \vw_1) + b^2 (\vv \odot \vw_2)$
 
 Ten opzichte van een basis $B = \{\ve_1,\ldots,\ve_n\}$:
 
@@ -627,13 +615,22 @@ $(v^i \ve_i) \odot (w^j \ve_j) = v^i w^j (\ve_i \odot \ve_j) = v^i v^j \underbra
   * $(\vu \cdot \vv) \cdot \vw = \vu \cdot (\vv \cdot \vw)$
   * vaak ook met een neutraal element
   * belangrijkste voorbeeld: vierkante matrices $\bbF^{n \times n}$
-  * **commutator**: $[\vv,\vw] = \vv \cdot \vw - \vw \cdot \vv$
+  <!-- * **commutator**: $[\vv,\vw] = \vv \cdot \vw - \vw \cdot \vv$ -->
 
 * Alternerend product: $\vv \odot \vv = 0 \Rightarrow \vv \odot \vw = -\vw \odot \vv$
+  * automatisch antisymmetrisch / anticommutatief
+  * veralgemening naar antisymmetrische multilineaire vormen (Hoofdstuk 6)
   * voorbeeld: vectorproduct $\times$ op $\bbR^3$
 
-* Lie-algebra: algebra met alternered product, genoteerd als $[\vv, \vw] = -[\vw,\vv]$ dat voldoet aan Jacobi-identiteit
+<!-- * Lie-algebra: algebra met alternered product, genoteerd als $[\vv, \vw] = -[\vw,\vv]$ dat voldoet aan Jacobi-identiteit
 
   $[\vu,[\vv,\vw]] + [\vv,[\vw,\vu]] + [\vw,[\vu,\vv]] = 0$
   
-  $\rightarrow$ kan gemaakt worden uit associatieve algebra m.b.v. commutator (controleer!)
+  $\rightarrow$ kan gemaakt worden uit associatieve algebra m.b.v. commutator (controleer!) -->
+
+
+# Samenvatting
+
+## Samenvatting
+
+![](algebraicstructures.svg){.nostretch fig-align="center" width="700px"}

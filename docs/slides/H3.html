@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Jutho Haegeman">
-<meta name="dcterms.date" content="2025-09-30">
+<meta name="dcterms.date" content="2026-09-22">
 
 <title>Vector- en functieruimten – Slides - Hoofdstuk 3 - Lineaire operatoren en eigenwaarden</title>
 <style>
@@ -180,7 +180,6 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#diagonalisatie-voorbeelden" id="toc-diagonalisatie-voorbeelden" class="nav-link" data-scroll-target="#diagonalisatie-voorbeelden">Diagonalisatie: voorbeelden</a></li>
   <li><a href="#diagonalisatie-en-minimaalveelterm" id="toc-diagonalisatie-en-minimaalveelterm" class="nav-link" data-scroll-target="#diagonalisatie-en-minimaalveelterm">Diagonalisatie en minimaalveelterm</a></li>
   <li><a href="#spectrale-decompositie" id="toc-spectrale-decompositie" class="nav-link" data-scroll-target="#spectrale-decompositie">Spectrale decompositie</a></li>
-  <li><a href="#spectrale-decompositie-1" id="toc-spectrale-decompositie-1" class="nav-link" data-scroll-target="#spectrale-decompositie-1">Spectrale decompositie</a></li>
   <li><a href="#spectrale-decompositie-van-commuterende-operatoren" id="toc-spectrale-decompositie-van-commuterende-operatoren" class="nav-link" data-scroll-target="#spectrale-decompositie-van-commuterende-operatoren">Spectrale decompositie van commuterende operatoren</a></li>
   </ul></li>
   <li><a href="#veralgemeende-eigenruimten-en-de-jordan-normaalvorm" id="toc-veralgemeende-eigenruimten-en-de-jordan-normaalvorm" class="nav-link" data-scroll-target="#veralgemeende-eigenruimten-en-de-jordan-normaalvorm">Veralgemeende eigenruimten en de Jordan normaalvorm</a>
@@ -255,7 +254,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">September 30, 2025</p>
+      <p class="date">September 22, 2026</p>
     </div>
   </div>
   
@@ -276,8 +275,6 @@ ul.task-list li input[type="checkbox"] {
 % LINEAR MAPS
 <p>% FIELDS </p>
 <p>% RELATIONS </p>
-<p>% % % % % % % % %</p>
-<p>%</p>
 <p>$$</p>
 </div>
 <p>Herhaling:</p>
@@ -504,6 +501,10 @@ ul.task-list li input[type="checkbox"] {
 <li><p>Stelling: <span class="math inline">{\hat{A}} \in \mathop{\mathrm{End}}(V)</span> is <strong>diagonaliseerbaar</strong> als en slechts als <span class="math inline">s_{\lambda} =1</span> voor alle eigenwaarden <span class="math inline">\lambda \in \sigma_{{\hat{A}}}</span>, of dus</p>
 <p><span class="math display">m_{{\hat{A}}}(z) = \prod_{\lambda \in \sigma_{{\hat{A}}}} (z-\lambda)</span></p></li>
 </ul>
+<p>Centrale grootheid in het bewijs: spectrale projector</p>
+<ul>
+<li><span class="math inline">{\hat{P}}_\lambda = \prod_{\substack{\lambda'\in\sigma_{{\hat{A}}}\\\lambda\neq \lambda'}} \frac{({\hat{A}} - \lambda')}{(\lambda - \lambda')}</span></li>
+</ul>
 </section>
 <section id="spectrale-decompositie" class="level2">
 <h2 class="anchored" data-anchor-id="spectrale-decompositie">Spectrale decompositie</h2>
@@ -519,14 +520,6 @@ ul.task-list li input[type="checkbox"] {
 <li><p>spectrale decompositie: <span class="math inline">{\hat{A}} = \sum_{\lambda \in \sigma_{{\hat{A}}}} \lambda {\hat{P}}_\lambda</span></p>
 <p>(diagonaalvorm in operatornotatie)</p>
 <p><span class="math inline">\Rightarrow p({\hat{A}}) = \sum p(\lambda) {\hat{P}}_\lambda,\quad {\hat{A}}^{-1} = \sum \lambda^{-1} {\hat{P}}_\lambda</span> (als <span class="math inline">0\not\in \sigma_{{\hat{A}}}</span>)</p></li>
-</ul>
-</section>
-<section id="spectrale-decompositie-1" class="level2">
-<h2 class="anchored" data-anchor-id="spectrale-decompositie-1">Spectrale decompositie</h2>
-<p>Expliciete uitdrukkingen voor de spectrale projector:</p>
-<ul>
-<li><p><span class="math inline">{\hat{P}}_\lambda = \prod_{\substack{\lambda'\in\sigma_{{\hat{A}}}\\\lambda\neq \lambda'}} \frac{({\hat{A}} - \lambda')}{(\lambda - \lambda')}</span></p></li>
-<li><p>Terzijde: <span class="math inline">{\hat{P}}_{\lambda}=\lim_{z \to \lambda} (z - \lambda) R_{{\hat{A}}}(z)</span></p></li>
 </ul>
 </section>
 <section id="spectrale-decompositie-van-commuterende-operatoren" class="level2">
