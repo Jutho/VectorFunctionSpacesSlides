@@ -399,7 +399,7 @@ Gegeven een vierkante matrix $\mat{A} \in \bbF^{n \times n}$
 
 * $\det(\mat{A}) =0 \iff \rank(\mat{A}) < n$
 
-* $\epsilon^{j_1j_2\cdots j_n} A^{i_1}_{\ j_1} A^{i_2}_{\ j_2} \cdots A^{i_n}_{\ j_n} = \epsilon^{i_1i_2\cdots i_n}$
+* $\epsilon^{j_1j_2\cdots j_n} A^{i_1}_{\ j_1} A^{i_2}_{\ j_2} \cdots A^{i_n}_{\ j_n} = \det(\mat{A})\epsilon^{i_1i_2\cdots i_n}$
 
 * $\det(\mat{A}\cdot\mat{B}) = \det(\mat{A})\det(\mat{B})$
 
