@@ -287,7 +287,7 @@ Enkele eigenschappen van matrixvermenigvuldiging:
 
 * $\mat{A} \in \bbF^{m\times n}, \mat{B}\in\bbF^{n \times p} \Rightarrow \mat{C} \in \bbF^{m \times p}$
 * associatief, neutraal element = $\idmat_n$ ($n \times n$ eenheidsmatrix), niet commutatief, bilineair
-* computationele complexiteit: $mnp$ vermenigvuldigingen en $mn(p-1)$ addities van scalairen (naïve telling)
+* computationele complexiteit: $mnp$ vermenigvuldigingen en $mp(n-1)$ addities van scalairen (naïve telling)
 * geheugencomplexiteit: $mn + np + mp$ scalairen
 * voor $m \approx n \approx p$: $\order(n^3)$ bewerkingen op $\order(n^2)$ data
 
@@ -399,7 +399,7 @@ Gegeven een vierkante matrix $\mat{A} \in \bbF^{n \times n}$
 
 * $\det(\mat{A}) =0 \iff \rank(\mat{A}) < n$
 
-* $\epsilon^{j_1j_2\cdots j_n} A^{i_1}_{\ j_1} A^{i_2}_{\ j_2} \cdots A^{i_n}_{\ j_n} = \epsilon^{i_1i_2\cdots i_n}$
+* $\epsilon^{j_1j_2\cdots j_n} A^{i_1}_{\ j_1} A^{i_2}_{\ j_2} \cdots A^{i_n}_{\ j_n} = \det(\mat{A}) \epsilon^{i_1i_2\cdots i_n}$
 
 * $\det(\mat{A}\cdot\mat{B}) = \det(\mat{A})\det(\mat{B})$
 

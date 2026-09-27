@@ -1,7 +1,7 @@
 ---
 title: "Hoofdstuk 3 - Lineaire operatoren en eigenwaarden"
 author: "Jutho Haegeman"
-date: "09/22/2026"
+date: "09/27/2026"
 # format:
 #   revealjs:
 #     theme: solarized
@@ -147,6 +147,8 @@ Herhaling:
 
 * Machten en veeltermen van operatoren
 
+* Projectie-operatoren (idempotente operatoren)
+
 * Karakteristieke veelterm
 
 * Eigenwaarden en eigenvectoren, diagonalisatie
@@ -155,13 +157,13 @@ Herhaling:
 
 Nieuw:
 
-* Idempotente en nilpotente operatoren
-
 * Minimaalveelterm, Cayley-Hamiltontheorema
 
-* Companion-matrix van een veelterm
+* Nilpotente operatoren
 
 * Invariante deelruimten en veralgemeende eigenruimten, Jordan-decompositie
+
+* Companion-matrix van een veelterm
 
 * Functies van operatoren
 
@@ -191,14 +193,6 @@ $$[p(\map{A}),q(\map{A})] = p(\map{A})q(\map{A}) - q(\map{A})p(\map{A}) = \zerom
 
 $$\underbrace{p(\map{T} \map{A} \map{T}^{-1})}_{\in \End(W)} = \map{T} \underbrace{p(\map{A})}_{\in \End(V)} \map{T}^{-1}$$
 
-## Nilpotente operatoren
-
-* Een element $a$ fvan een ring $R$ dat voldoet aan aan $a^s = 0$ heet **nilpotent** met index $s$ (als $n=s$ de kleinste waarde is waarvoor $a^n=0$)
-
-* Nilpotente operatoren $\map{N} \in \End(V)$ voldoen dus aan $\map{N}^s = \zeromap$ en spelen een rol bij de veralgemeene eigenwaardendecompositie
-
-* Voorbeeld: $\mat{A} = \begin{bmatrix} 0 & c \\ 0 & 0 \end{bmatrix}$ is nilpotent met index $s=2$ (voor elke $c \neq 0$)
-
 ## Projectie-operator
 
 * Een element $a$ van een ring $R$ dat voldoet aan $a^2 = a$ heet **idempotent**.
@@ -209,6 +203,14 @@ $$\underbrace{p(\map{T} \map{A} \map{T}^{-1})}_{\in \End(W)} = \map{T} \underbra
   * omgekeerd: gegeven $V = V_1 \oplus V_2$, de decompositie $\vv = \vv_1 + \vv_2$ definieert een **projector op $V_1$ parallel met $V_2$**:
 
     $\map{P}\vv = \vv_1 \in V_1$ (en $\vv_2 = \vv -\vv_1 = (\idmap - \map{P})\vv$).
+
+## Nilpotente operatoren
+
+* Een element $a$ fvan een ring $R$ dat voldoet aan aan $a^s = 0$ heet **nilpotent** met index $s$ (als $n=s$ de kleinste waarde is waarvoor $a^n=0$)
+
+* Nilpotente operatoren $\map{N} \in \End(V)$ voldoen dus aan $\map{N}^s = \zeromap$ en spelen een rol bij de veralgemeene eigenwaardendecompositie
+
+* Voorbeeld: $\mat{A} = \begin{bmatrix} 0 & c \\ 0 & 0 \end{bmatrix}$ is nilpotent met index $s=2$ (voor elke $c \neq 0$)
 
 ## Annihilerende veeltermen
 
@@ -307,11 +309,13 @@ Gegeven een veelterm $p(z) = z^n + p_{n-1} z^{n-1} + \ldots + p_0 \in \bbF[z]$, 
 
 * **Companion matrix** 
 $$	\mat{C}_p = \begin{bmatrix}
-		0 & 1 & 0 & \ldots & 0 & 0\\
-		0 & 0 & 1 &\ldots & 0 & 0\\
+		0 & 1 & 0 & \ldots & 0  & 0 & 0\\
+		0 & 0 & 1 &\ldots & 0  & 0 & 0\\
+		0 & 0 & 0 &\ldots & 0  & 0 & 0\\
 		\vdots & \vdots & \vdots & \ddots & \vdots & \vdots\\
-		0 & 0 & 0 &\ldots & 0 & 1\\
-		-p_0 & -p_1 & -p_2& \ldots & -p_{n-2} & -p_{n-1}
+		0 & 0 & 0 &\ldots & 0 & 1 & 0\\
+		0 & 0 & 0 &\ldots & 0 & 0 & 1\\
+		-p_0 & -p_1 & -p_2& \ldots & -p_{n-3} & -p_{n-2} & -p_{n-1}
 	\end{bmatrix}
 $$
 
@@ -724,12 +728,11 @@ Via Jordan-decompositie: $f(\mat{A}) = \mat{V} \left[\bigoplus_{\lambda \in \sig
 
 ::: {.r-fit-text}
   $\Rightarrow f(\mat{J}^{(k)}(\lambda)) = \begin{bmatrix}
- f(\lambda) & f^{(1)}(\lambda) & \frac{f^{(2)}(\lambda)}{2} & \frac{f^{(3)}(\lambda)}{3!} & \cdots & \frac{f^{(k-2)}(\lambda)}{(k-2)!} &   	\frac{f^{(k-1)}(\lambda)}{(k-1)!}\\
-0 & f(\lambda) & f^{(1)}(\lambda) & \frac{f^{(2)}(\lambda)}{2} & \cdots & \frac{f^{(k-3)}(\lambda)}{(k-3)!} &   	\frac{f^{(k-2)}(\lambda)}{(k-2)!}\\
-0 & 0 & f(\lambda) & f^{(1)}(\lambda) & \cdots & \frac{f^{(k-4)}(\lambda)}{(k-4)!} &   	\frac{f^{(k-3)}(\lambda)}{(k-3)!}\\
-0 & 0 & 0 & f(\lambda) & \cdots & \frac{f^{(k-5)}(\lambda)}{(k-5)!} &   	\frac{f^{(k-4)}(\lambda)}{(k-4)!}\\
+ f(\lambda) & f^{(1)}(\lambda) & \frac{f^{(2)}(\lambda)}{2} & \frac{f^{(3)}(\lambda)}{3!} & \cdots &   	\frac{f^{(k-1)}(\lambda)}{(k-1)!}\\
+0 & f(\lambda) & f^{(1)}(\lambda) & \frac{f^{(2)}(\lambda)}{2} & \cdots &   	\frac{f^{(k-2)}(\lambda)}{(k-2)!}\\
+0 & 0 & f(\lambda) & f^{(1)}(\lambda) & \cdots &   	\frac{f^{(k-3)}(\lambda)}{(k-3)!}\\
+0 & 0 & 0 & f(\lambda) & \cdots &   	\frac{f^{(k-4)}(\lambda)}{(k-4)!}\\
   	\vdots & \vdots & \vdots & \vdots & \ddots & \vdots & \vdots\\
-  	0 & 0 & 0 & 0 & \cdots & f(\lambda) & f^{(1)}(\lambda)\\
   	0 & 0 & 0 & 0 & \cdots & 0 & f(\lambda)
  \end{bmatrix}$
 
@@ -740,13 +743,12 @@ Via Jordan-decompositie: $f(\mat{A}) = \mat{V} \left[\bigoplus_{\lambda \in \sig
 $\exp(t J^{(k)}(\lambda)) = e^{t \lambda} \left(\idmat + t \mat{N}_k + \frac{t^2}{2} \big(\mat{N}_k\big)^2 + \ldots \right)
 	\\
   = e^{t \lambda} \begin{bmatrix}
-1 & t & \frac{t^2}{2} & \frac{t^3}{3!} & \cdots & \frac{t^{k-2}}{(k-2)!} &   	\frac{t^{k-1}}{(k-1)!}\\
-0 & 1 & t & \frac{t^2}{2} & \cdots & \frac{t^{k-3}}{(k-3)!} &   	\frac{t^{k-2}}{(k-2)!}\\
-0 & 0 & 1 & t & \cdots & \frac{t^{k-4}}{(k-4)!} &   	\frac{t^{k-3}}{(k-3)!}\\
-0 & 0 & 0 & 1 & \cdots & \frac{t^{k-5}}{(k-5)!} &   	\frac{t^{k-4}}{(k-4)!}\\
+1 & t & \frac{t^2}{2} & \frac{t^3}{3!} & \cdots &   	\frac{t^{k-1}}{(k-1)!}\\
+0 & 1 & t & \frac{t^2}{2} & \cdots &   	\frac{t^{k-2}}{(k-2)!}\\
+0 & 0 & 1 & t & \cdots &   	\frac{t^{k-3}}{(k-3)!}\\
+0 & 0 & 0 & 1 & \cdots &   	\frac{t^{k-4}}{(k-4)!}\\
   	\vdots & \vdots & \vdots & \vdots & \ddots & \vdots & \vdots\\
-  	0 & 0 & 0 & 0 & \cdots & 1 & t\\
-  	0 & 0 & 0 & 0 & \cdots & 0 & 1
+  	0 & 0 & 0 & 0 & \cdots & 1
  \end{bmatrix}$
 
 ## Exponentiële functie: eigenschappen
