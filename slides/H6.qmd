@@ -2,147 +2,12 @@
 title: "Hoofdstuk 6 - Unitaire gelijkvormigheid en unitaire equivalentie"
 author: "Jutho Haegeman"
 date: "11/12/2025"
-# format:
-#   revealjs:
-#     theme: solarized
-#     html-math-method: katex
-#     smaller: true
-#     chalkboard: true
 ---
 
 ## Doel van dit hoofdstuk
 
 
-::: {.hidden}
-$$
-% Math operators
-\DeclareMathOperator{\Aut}{Aut}
-\DeclareMathOperator{\End}{End}
-\DeclareMathOperator{\Hom}{Hom}
-\DeclareMathOperator{\GL}{GL}
-\DeclareMathOperator{\SL}{SL}
-\DeclareMathOperator{\Unitary}{U}
-\DeclareMathOperator{\Orthogonal}{O}
-\DeclareMathOperator{\SU}{SU}
-\DeclareMathOperator{\SO}{SO}
-\DeclareMathOperator{\Aff}{Aff}
-\DeclareMathOperator{\dom}{dom}
-\DeclareMathOperator{\cod}{codom}
-\DeclareMathOperator{\D}{\mathcal{D}}
-\DeclareMathOperator{\E}{\mathcal{E}}
-\DeclareMathOperator{\R}{\mathcal{R}}
-\DeclareMathOperator{\Schw}{\mathcal{S}}
-\DeclareMathOperator{\im}{im}
-%\DeclareMathOperator{\ker}{ker}
-%\DeclareMathOperator{\dim}{dim}
-\DeclareMathOperator{\codim}{codim}
-\DeclareMathOperator{\convhull}{co}
-
-\newcommand{\opgreek}[1]{\begingroup\mathgroup-1 #1\endgroup}
-\DeclareMathOperator{\rank}{rank}
-\DeclareMathOperator{\nullity}{nullity}
-
-\DeclareMathOperator{\Pv}{Pv}
-
-\DeclareMathOperator{\tr}{tr}
-\DeclareMathOperator{\sgn}{sgn}
-\DeclareMathOperator{\id}{id}
-\DeclareMathOperator{\adj}{adj}
-
-\DeclareMathOperator*{\varmin}{min}
-\DeclareMathOperator*{\varmax}{max}
-\DeclareMathOperator*{\argmin}{arg\ min}
-\DeclareMathOperator*{\argmax}{arg\ max}
-\DeclareMathOperator{\order}{\mathscr{O}}
-\DeclareMathOperator{\sign}{sgn}
-\DeclareMathOperator{\spanop}{span}
-\DeclareMathOperator{\arctanh}{arctanh}
-\DeclareMathOperator{\arccosh}{arccosh}
-\DeclareMathOperator{\arcsinh}{arcsinh}
-\DeclareMathOperator{\arccot}{arccot}
-\DeclareMathOperator{\sinc}{sinc}
-
-
-\newcommand{\commutator}[2]{{\left[#1,#2\right]}}
-\newcommand{\anticommutator}[2]{{\left\{#1,#2\right\}}}
-
-\DeclareMathOperator{\real}{Re}
-\DeclareMathOperator{\imag}{Im}
-\newcommand{\conj}[1]{{\overline{#1}}}
-\newcommand{\abs}[1]{{\left\lvert#1\right\rvert}}
-\newcommand{\norm}[1]{{\left\lVert#1\right\rVert}}
-\newcommand{\inner}[2]{{\left\langle#1,#2\right\rangle}}
-
-\newcommand{\drm}{{\mathrm{d}}}
-\newcommand{\erm}{{\mathrm{e}}}
-\newcommand{\irm}{{\mathrm{i}}}
-
-
-% VECTORS
-\newcommand{\vect}[1]{{#1}}
-\renewcommand{\vec}[1]{\boldsymbol{#1}} % specifically for vectors in F^n
-\newcommand{\zerovec}{{o}}
-\renewcommand{\vu}{\vect{u}}
-\newcommand{\vv}{\vect{v}}
-\newcommand{\vw}{\vect{w}}
-\newcommand{\ve}{\vect{e}}
-\newcommand{\vf}{\vect{f}}
-\newcommand{\vx}{\vect{x}}
-\newcommand{\vy}{\vect{y}}
-
-% MATRICES
-\newcommand{\mat}[1]{{\mathsf{#1}}}
-\newcommand{\zeromat}{\mat{O}}
-\newcommand{\idmat}{\mat{I}}
-
-% SCALARS
-\newcommand{\scalara}{{a}}
-\newcommand{\scalarb}{{b}}
-\newcommand{\scalarc}{{c}}
-
-% LINEAR MAPS
-\DeclareMathAlphabet{\mymathbb}{U}{BOONDOX-ds}{m}{n}
-\newcommand{\map}[1]{{\hat{#1}}}
-\newcommand{\idmap}{\map{1}}
-\newcommand{\zeromap}{\map{0}}
-
-\newcommand{\transpose}{{\mathsf{T}}}
-\newcommand{\hermitian}{{\mathsf{H}}}
-
-\renewcommand{\d}{{\mathrm{d}}}
-
-% FIELDS
-\newcommand{\bbF}{{\mathbb{F}}}
-\newcommand{\bbN}{{\mathbb{N}}}
-\newcommand{\bbZ}{{\mathbb{Z}}}
-\newcommand{\bbQ}{{\mathbb{Q}}}
-\newcommand{\bbR}{{\mathbb{R}}}
-\newcommand{\bbC}{{\mathbb{C}}}
-\newcommand{\bbH}{{\mathbb{H}}}
-\newcommand{\bbT}{{\mathbb{T}}}
-
-% RELATIONS
-\newcommand{\subspace}{{\preccurlyeq}}
-\newcommand{\supspace}{{\succcurlyeq}}
-
-\newcommand{\eps}{{\varepsilon}}
-\newcommand{\levicivita}{{\epsilon}}
-
-\newcommand{\sx}{{\sigma^x}}
-\newcommand{\sy}{{\sigma^y}}
-\newcommand{\sz}{{\sigma^z}}
-\renewcommand{\sp}{{\sigma^+}}
-\newcommand{\sm}{{\sigma^-}}
-
-\DeclareMathOperator*{\sumint}{
-\mathchoice
-  {\ooalign{$\displaystyle\sum$\cr\hidewidth$\displaystyle\int$\hidewidth\cr}}
-  {\ooalign{\raisebox{.14\height}{\scalebox{.7}{$\textstyle\sum$}}\cr\hidewidth$\textstyle\int$\hidewidth\cr}}
-  {\ooalign{\raisebox{.2\height}{\scalebox{.6}{$\scriptstyle\sum$}}\cr$\scriptstyle\int$\cr}}
-  {\ooalign{\raisebox{.2\height}{\scalebox{.6}{$\scriptstyle\sum$}}\cr$\scriptstyle\int$\cr}}
-}
-$$
-:::
+{{< include _macros.qmd >}}
 
 * Overzicht van belangrijkste algoritmen, matrixdecomposities en toepassingen gebaseerd op unitaire transformaties
 * Elementaire unitaire transformaties = bouwstenen
@@ -168,7 +33,7 @@ $$
 
 # Unitaire en orthogonale groep 
 
-## Unitaire groep en speciaal unitaire groep {.smaller}
+## Unitaire groep en speciaal unitaire groep {.smaller .scrollable}
 
 * unitaire groep: $\Unitary(n) = \{\mat{U}\in\bbC^{n\times n} | \mat{U}^\hermitian \mat{U} = \idmat_n = \mat{U}\mat{U}^\hermitian\}$
   
@@ -208,7 +73,7 @@ $\Rightarrow$ $\mat{P}(\sigma) \in \Orthogonal(n)$: $\mat{P}(\sigma)^\transpose 
 
 Elke orthogonale/unitaire matrix met enkel 0 en 1 als elementen is een permutatiematrix (exact één element 1 in elke rij en elke kolom)
 
-## Givenstransformatie {.smaller}
+## Givenstransformatie {.smaller .scrollable}
 
 $\mat{G} \in \bbF^{n \times n}$ met
 
@@ -238,7 +103,7 @@ en $1 \leq i < j \leq n$ en $\abs{c}^2 + \abs{s}^2 = 1$
 
   en $r = \frac{a}{\abs{a}} \sqrt{\abs{a}^2+\abs{b}^2}$
 
-## Householder transformatie {.smaller}
+## Householder transformatie {.smaller .scrollable}
 
 $\mat{H}\in\bbF^{n \times n}$ op basis van $\vec{v} \in \bbF^n$:
 
@@ -260,7 +125,7 @@ $\Rightarrow \mat{H}^\hermitian = \mat{H}^{-1} = \mat{H}$
   
   $\Rightarrow \mat{H}\vec{w} = \mp \frac{w^1}{\abs{w^1}}\norm{w} \vec{e}_1$
 
-## Discrete Fouriertransformatie {.smaller}
+## Discrete Fouriertransformatie {.smaller .scrollable}
 
 Functies $f:\{0,\ldots,n-1\} \to \bbC$ $\quad(\eqsim (f_0,f_1,\ldots,f_{n-1})=\vec{f} \in \bbC^n)$
 
@@ -303,7 +168,7 @@ Functies $f:\{0,\ldots,n-1\} \to \bbC$ $\quad(\eqsim (f_0,f_1,\ldots,f_{n-1})=\v
 
 # QR decompositie herbekeken
 
-## QR decompositie van algemene matrices {.smaller}
+## QR decompositie van algemene matrices {.smaller .scrollable}
 
 Vorig hoofdstuk: $\mat{A} \in \bbF^{m \times n}$ met $m \geq n$: 
 
@@ -323,7 +188,7 @@ Alternatieve voorstelling:
 
   $\Rightarrow$ bouw $\mat{Q}$ uit Givens- of Householdertransformaties
 
-## QR decompositie van algemene matrices {.smaller}
+## QR decompositie van algemene matrices {.smaller .scrollable}
 
 * algoritme op basis van Householder transformaties:
 
@@ -343,7 +208,7 @@ Alternatieve voorstelling:
 
 # Schur decompositie en machtmethode
 
-## Schur decompositie {.smaller}
+## Schur decompositie {.smaller .scrollable}
 
 Beschouw vierkante matrices $\mat{A} \in \bbC^{n \times n}$
 
@@ -368,7 +233,7 @@ Beschouw vierkante matrices $\mat{A} \in \bbC^{n \times n}$
   * gerelateerd aan Abel-Ruffini theorema: er is geen expliciete oplossing voor nulpunten van veeltermen van graad 5 of hoger in termen van basisoperaties $+, -, *, /, \cdot^n , \sqrt[n]{\cdot}$
 
 
-## Schur decompositie van normale matrices {.smaller}
+## Schur decompositie van normale matrices {.smaller .scrollable}
 
 Normale matrix: $\mat{A}^\hermitian \mat{A} = \mat{A}\mat{A}^\hermitian$
 
@@ -391,7 +256,7 @@ Normale matrix: $\mat{A}^\hermitian \mat{A} = \mat{A}\mat{A}^\hermitian$
 * altijd diagonaliseerbaar, nooit niet-triviale Jordanblokken
 * spectrale decompositie $V = \sum_{\lambda \in \sigma(\mat{A})} V_\lambda$ is orthogonale directe som decompositie
 
-## Machtsmethode {.smaller}
+## Machtsmethode {.smaller .scrollable}
 
 Gegeven $\mat{A}\in \bbF^{n\times n}$:
 
@@ -415,7 +280,7 @@ Gegeven $\mat{A}\in \bbF^{n\times n}$:
 
   * convergentie: $\norm{\vec{q}_k-\vec{q}_\infty} = \order\left(\abs{\frac{\lambda_2}{\lambda_1}}^k\right)$ (**lineaire convergentie**)
 
-## Deelruimte-iteratie {.smaller}
+## Deelruimte-iteratie {.smaller .scrollable}
 
 Gegeven $\mat{A}\in \bbF^{n\times n}$:
 
@@ -439,7 +304,7 @@ Gegeven $\mat{A}\in \bbF^{n\times n}$:
 
   (bemerk: eerste kolom van $\mat{Q}$ ondergaat zelfde stappen als machtsiteratie)
 
-## QR-iteratie {.smaller}
+## QR-iteratie {.smaller .scrollable}
 
 Gegeven $\mat{A}\in \bbF^{n\times n}$:
 
@@ -486,7 +351,7 @@ Gegeven $\mat{A}\in \bbF^{n\times n}$:
 
   $\rightarrow$ canonische vorm: Schur (=diagonaal voor normale $\mat{A}$)
 
-## Kwadratische en symmetrische bilineaire vormen {.smaller}
+## Kwadratische en symmetrische bilineaire vormen {.smaller .scrollable}
 
 We beperken ons nu tot reële bilineaire vormen $B:V \times V \to \bbR$ (met $V$ een reële vectorruimte), die bovendien symmetrisch worden verondersteld (bijvoorbeeld omdat ze geassocieerd zijn aan een kwadratische vorm).
 
@@ -527,7 +392,7 @@ We beperken ons nu tot reële bilineaire vormen $B:V \times V \to \bbR$ (met $V$
 
 * **Traagheidswet van Sylvester**: Twee symmetrische matrices $\mat{B},\mat{\tilde{B}} \in \bbR^{n \times n}$ zijn congruent als en slechts als hetzelfde aantal positieve, negatieve en nul eigenwaarden hebben.
 
-## Kwadratische en symmetrische bilineaire vormen {.smaller}
+## Kwadratische en symmetrische bilineaire vormen {.smaller .scrollable}
 
 * Praktisch algoritme voor canonische vorm: 
   * eigenwaarden niet van belang, dus misschien mogelijk in eindig aantal stappen
@@ -594,7 +459,7 @@ Bewijs:
 
 * $\mat{A}\mat{A}^\hermitian = \mat{U} \mat{S}\mat{S}^\hermitian \mat{U}^\hermitian$: zelfde niet-nul eigenwaarden als $\mat{A}^\hermitian \mat{A}$
 
-## Singuliere waardendecompositie: eigenschappen {.smaller}
+## Singuliere waardendecompositie: eigenschappen {.smaller .scrollable}
 
 * Notatie: $\vec{u}_i$ en $\vec{v}_i$ de $i$de kolom uit $\mat{U}$ en $\mat{V}$
 * Notatie: $\mat{U}_k \in \bbF^{m \times k}$ en $\mat{V}_k \in \bbF^{n \times k}$ de restrictie van $\mat{U}$ en $\mat{V}$ tot de eerste $k$ kolommen, en $\mat{S}_{k} \in \bbF^{k \times k}$ de eerste $k$ kolommen en rijen van $\mat{S}$
@@ -637,7 +502,7 @@ Bewijs:
   $\mat{A}\in \bbF^{m\times n}$ met $m > n$: $\mat{A} = \mat{Q} \mat{R} = (\mat{Q} \mat{U}_{\mat{R}}) \mat{S}_{\mat{R}} \mat{V}_{\mat{R}}^\hermitian =  \mat{U}_{\mat{A}}\mat{S}_{\mat{A}} \mat{V}_{\mat{A}}^\hermitian$
 
 
-## Verband met rang, norm en conditiegetal: {.smaller}
+## Verband met rang, norm en conditiegetal: {.smaller .scrollable}
 
 Voor matrix $\mat{A} = \mat{U} \mat{S}\mat{V}^\hermitian\in \bbF^{m \times n}$:
 
@@ -658,7 +523,7 @@ Voor matrix $\mat{A} = \mat{U} \mat{S}\mat{V}^\hermitian\in \bbF^{m \times n}$:
 
   $\Rightarrow$ conditiegetal (geassocieerd aan geïnduceerde $2$-norm): $\kappa(\mat{A}) = \sigma_1/\sigma_n$
 
-## Kleinste kwadratenoplossing {.smaller}
+## Kleinste kwadratenoplossing {.smaller .scrollable}
 
 Beschouw een lineair stelsel $\mat{A}\mat{x} = \mat{y}$ met $\mat{A}\in\bbF^{m \times n}$ en $\nullity(\mat{A}) \geq 0$:
 

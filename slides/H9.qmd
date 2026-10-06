@@ -2,147 +2,12 @@
 title: "Hoofdstuk 9 - Fourieranalyse en distributies"
 author: "Jutho Haegeman"
 date: "12/02/2025"
-# format:
-#   revealjs:
-#     theme: solarized
-#     html-math-method: katex
-#     smaller: true
-#     chalkboard: true
 ---
 
-## Doel van dit hoofdstuk
+## Doel van dit hoofdstuk {.scrollable}
 
 
-::: {.hidden}
-$$
-% Math operators
-\DeclareMathOperator{\Aut}{Aut}
-\DeclareMathOperator{\End}{End}
-\DeclareMathOperator{\Hom}{Hom}
-\DeclareMathOperator{\GL}{GL}
-\DeclareMathOperator{\SL}{SL}
-\DeclareMathOperator{\Unitary}{U}
-\DeclareMathOperator{\Orthogonal}{O}
-\DeclareMathOperator{\SU}{SU}
-\DeclareMathOperator{\SO}{SO}
-\DeclareMathOperator{\Aff}{Aff}
-\DeclareMathOperator{\dom}{dom}
-\DeclareMathOperator{\cod}{codom}
-\DeclareMathOperator{\D}{\mathcal{D}}
-\DeclareMathOperator{\E}{\mathcal{E}}
-\DeclareMathOperator{\R}{\mathcal{R}}
-\DeclareMathOperator{\Schw}{\mathcal{S}}
-\DeclareMathOperator{\im}{im}
-%\DeclareMathOperator{\ker}{ker}
-%\DeclareMathOperator{\dim}{dim}
-\DeclareMathOperator{\codim}{codim}
-\DeclareMathOperator{\convhull}{co}
-
-\newcommand{\opgreek}[1]{\begingroup\mathgroup-1 #1\endgroup}
-\DeclareMathOperator{\rank}{rank}
-\DeclareMathOperator{\nullity}{nullity}
-
-\DeclareMathOperator{\Pv}{Pv}
-
-\DeclareMathOperator{\tr}{tr}
-\DeclareMathOperator{\sgn}{sgn}
-\DeclareMathOperator{\id}{id}
-\DeclareMathOperator{\adj}{adj}
-
-\DeclareMathOperator*{\varmin}{min}
-\DeclareMathOperator*{\varmax}{max}
-\DeclareMathOperator*{\argmin}{arg\ min}
-\DeclareMathOperator*{\argmax}{arg\ max}
-\DeclareMathOperator{\order}{\mathscr{O}}
-\DeclareMathOperator{\sign}{sgn}
-\DeclareMathOperator{\spanop}{span}
-\DeclareMathOperator{\arctanh}{arctanh}
-\DeclareMathOperator{\arccosh}{arccosh}
-\DeclareMathOperator{\arcsinh}{arcsinh}
-\DeclareMathOperator{\arccot}{arccot}
-\DeclareMathOperator{\sinc}{sinc}
-
-
-\newcommand{\commutator}[2]{{\left[#1,#2\right]}}
-\newcommand{\anticommutator}[2]{{\left\{#1,#2\right\}}}
-
-\DeclareMathOperator{\real}{Re}
-\DeclareMathOperator{\imag}{Im}
-\newcommand{\conj}[1]{{\overline{#1}}}
-\newcommand{\abs}[1]{{\left\lvert#1\right\rvert}}
-\newcommand{\norm}[1]{{\left\lVert#1\right\rVert}}
-\newcommand{\inner}[2]{{\left\langle#1,#2\right\rangle}}
-
-\newcommand{\drm}{{\mathrm{d}}}
-\newcommand{\erm}{{\mathrm{e}}}
-\newcommand{\irm}{{\mathrm{i}}}
-
-
-% VECTORS
-\newcommand{\vect}[1]{{#1}}
-\renewcommand{\vec}[1]{\boldsymbol{#1}} % specifically for vectors in F^n
-\newcommand{\zerovec}{{o}}
-\renewcommand{\vu}{\vect{u}}
-\newcommand{\vv}{\vect{v}}
-\newcommand{\vw}{\vect{w}}
-\newcommand{\ve}{\vect{e}}
-\newcommand{\vf}{\vect{f}}
-\newcommand{\vx}{\vect{x}}
-\newcommand{\vy}{\vect{y}}
-
-% MATRICES
-\newcommand{\mat}[1]{{\mathsf{#1}}}
-\newcommand{\zeromat}{\mat{O}}
-\newcommand{\idmat}{\mat{I}}
-
-% SCALARS
-\newcommand{\scalara}{{a}}
-\newcommand{\scalarb}{{b}}
-\newcommand{\scalarc}{{c}}
-
-% LINEAR MAPS
-\DeclareMathAlphabet{\mymathbb}{U}{BOONDOX-ds}{m}{n}
-\newcommand{\map}[1]{{\hat{#1}}}
-\newcommand{\idmap}{\map{1}}
-\newcommand{\zeromap}{\map{0}}
-
-\newcommand{\transpose}{{\mathsf{T}}}
-\newcommand{\hermitian}{{\mathsf{H}}}
-
-\renewcommand{\d}{{\mathrm{d}}}
-
-% FIELDS
-\newcommand{\bbF}{{\mathbb{F}}}
-\newcommand{\bbN}{{\mathbb{N}}}
-\newcommand{\bbZ}{{\mathbb{Z}}}
-\newcommand{\bbQ}{{\mathbb{Q}}}
-\newcommand{\bbR}{{\mathbb{R}}}
-\newcommand{\bbC}{{\mathbb{C}}}
-\newcommand{\bbH}{{\mathbb{H}}}
-\newcommand{\bbT}{{\mathbb{T}}}
-
-% RELATIONS
-\newcommand{\subspace}{{\preccurlyeq}}
-\newcommand{\supspace}{{\succcurlyeq}}
-
-\newcommand{\eps}{{\varepsilon}}
-\newcommand{\levicivita}{{\epsilon}}
-
-\newcommand{\sx}{{\sigma^x}}
-\newcommand{\sy}{{\sigma^y}}
-\newcommand{\sz}{{\sigma^z}}
-\renewcommand{\sp}{{\sigma^+}}
-\newcommand{\sm}{{\sigma^-}}
-
-\DeclareMathOperator*{\sumint}{
-\mathchoice
-  {\ooalign{$\displaystyle\sum$\cr\hidewidth$\displaystyle\int$\hidewidth\cr}}
-  {\ooalign{\raisebox{.14\height}{\scalebox{.7}{$\textstyle\sum$}}\cr\hidewidth$\textstyle\int$\hidewidth\cr}}
-  {\ooalign{\raisebox{.2\height}{\scalebox{.6}{$\scriptstyle\sum$}}\cr$\scriptstyle\int$\cr}}
-  {\ooalign{\raisebox{.2\height}{\scalebox{.6}{$\scriptstyle\sum$}}\cr$\scriptstyle\int$\cr}}
-}
-$$
-:::
+{{< include _macros.qmd >}}
 
 * Fouriertransformaties
   * voornaamste eigenschappen
@@ -163,7 +28,7 @@ $$
 
 # Fouriertransformaties
 
-## Fouriertransformatie: motivatie
+## Fouriertransformatie: motivatie {.scrollable}
 
 * Herhaling Fourierreeks: $f \in L^2(I)$ met $I = [-L/2,+L/2]$
 
@@ -183,7 +48,7 @@ $$
 
   * niet rigorous: geen orthonormale aftelbare basis meer
 
-## Fouriertransformatie: definitie en varianten
+## Fouriertransformatie: definitie en varianten {.scrollable}
 
 * **Fouriertransformatie**: $\widehat{f}(\xi) = \int_{-\infty}^{+\infty} f(x)\erm^{-\irm 2\pi \xi x} \,\drm x$
 
@@ -208,7 +73,7 @@ $$
 
     * $\vec{k}$ de golfvector
 
-## Fouriertransformatie: voorbeelden
+## Fouriertransformatie: voorbeelden {.scrollable}
 
 * $f(x) = \exp(-a \abs{x})$ met een parameter $a > 0$:
 
@@ -243,7 +108,7 @@ $$
   * voorbeeld waarbij $\widehat{f}(\xi)$ niet absoluut integreerbaar is
   * is inverse Fouriertransformatie wel goed gedefinieerd?
 
-## Fouriertransformatie: eigenschappen
+## Fouriertransformatie: eigenschappen {.scrollable}
 
 Fourierbeeld: $\widehat{f}(\xi) = \int_{-\infty}^{+\infty} f(x)\erm^{-\irm 2\pi \xi x} \,\drm x\quad$ (gedefinieerd voor $f \in L^1(\bbR)$)
 
@@ -260,7 +125,7 @@ Fourierbeeld: $\widehat{f}(\xi) = \int_{-\infty}^{+\infty} f(x)\erm^{-\irm 2\pi 
   * begrensd: $\norm{\widehat{f}}_\infty = \sup_{\xi} \abs{\widehat{f}(\xi)} \leq \norm{f}_1$
   * verdwijnt op oneindig: $\lim_{\xi \to \pm \infty} \abs{\widehat{f}(\xi)} = 0$ (Riemann-Lebesgue lemma)
 
-## Fouriertransformatie: eigenschappen
+## Fouriertransformatie: eigenschappen {.scrollable}
 
 * Convolutie: $f,g \in L^1(\bbR) \implies h = f \ast g \in L^1(\bbR)$ met
 
@@ -278,7 +143,7 @@ Fourierbeeld: $\widehat{f}(\xi) = \int_{-\infty}^{+\infty} f(x)\erm^{-\irm 2\pi 
 
   + Riemann-Lebesgue: $\widehat{f}(\xi)$ daalt sneller dan $\order(\xi^{-p})$
 
-## Fouriertransformatie als unitaire transformatie
+## Fouriertransformatie als unitaire transformatie {.scrollable}
 
 * We verwachten $\map{F}: L^2(\bbR) \to L^2(\bbR) : f \mapsto \widehat{f}$ een unitaire transformatie
 
@@ -302,7 +167,7 @@ Fourierbeeld: $\widehat{f}(\xi) = \int_{-\infty}^{+\infty} f(x)\erm^{-\irm 2\pi 
 
     $\Rightarrow \norm{f}_2 = \norm{g}_2 = \frac{1}{L}\sum_{k\in\bbZ} \abs{\widehat{f}(k/L + \xi)}^2$ en integreer over $\xi \in [0,1/L]$
 
-## Fouriertransformatie als unitaire transformatie
+## Fouriertransformatie als unitaire transformatie {.scrollable}
 
 Voor elke functie $f \in L^2(\bbR)$ kunnen we de **Plancherel-Fourier constructie** gebruiken:
 
@@ -368,7 +233,7 @@ $\Rightarrow$ **Centrale limietstelling**: gemiddelde van $n$ identiek verdeelde
 
 # Distributies
 
-## Distributies: motivatie
+## Distributies: motivatie {.scrollable}
 
 * Motivatie komt uit de fysica (vb elektromagnetisme): brontermen zijn grillig op microscopische schaal maar de details hiervan zijn irrelevant voor observaties om macroscopische schaal
 
@@ -381,7 +246,7 @@ $\Rightarrow$ **Centrale limietstelling**: gemiddelde van $n$ identiek verdeelde
 
       $\Rightarrow$ hangt af van wat de limiet $\lim_{n\to \infty} \varphi_n(x)=\varphi(x)$ betekent.
 
-## Testfuncties
+## Testfuncties {.scrollable}
 
 Testfuncties: gladde functies met eventuele lokaliteitsvoorwaarden, gedefinieerd op gebied $\Omega \subseteq \bbR^d$ 
 
@@ -414,7 +279,7 @@ Testfuncties: gladde functies met eventuele lokaliteitsvoorwaarden, gedefinieerd
   * $(f \ast \rho_a)(x)$ met $f$ een continue functie met compacte drager
   * $f(x)\rho_a(x)$ met $f$ een gladde functie ($f \in \mathcal{E}(\bbR)$)
 
-## Testfuncties en limieten
+## Testfuncties en limieten {.scrollable}
 
 * Distributies zijn continue lineaire functionalen op ruimte van testfuncties:
   * notatie: $\mathcal{D}^\ast(\Omega)$, $\mathcal{S}^\ast(\Omega)$, $\mathcal{E}^\ast(\Omega)$
@@ -435,7 +300,7 @@ Testfuncties: gladde functies met eventuele lokaliteitsvoorwaarden, gedefinieerd
 
 * Dit soort definitie voor limiet komt niet uit norm of metriek
 
-## Reguliere en singuliere distributies
+## Reguliere en singuliere distributies {.scrollable}
 
 * **reguliere distributie**: voor elke functie $f$ die "lokaal integreerbaar is": $\int_K \abs{f(x)}\,\drm x$ bestaat voor elke compacte subset $K \subset \bbR$:
 
@@ -468,7 +333,7 @@ Testfuncties: gladde functies met eventuele lokaliteitsvoorwaarden, gedefinieerd
 
   * Analoog in hogere dimensies: $\delta_{\vec{a}}[\varphi] = \int_{\bbR^d} \delta_{\vec{a}}(\vec{x}) \varphi(\vec{x}) \,\drm x = \varphi(\vec{a})$
 
-## Elementaire bewerkingen met distributies
+## Elementaire bewerkingen met distributies {.scrollable}
 
 Bewerkingen op distributies: translatie, herschaling, afgeleide, Fourier …
 
@@ -490,7 +355,7 @@ Daaruit volgt (veralgemening naar meer dimensies)
 
   $\Rightarrow \int_{\bbR^d}\delta(s \vec{x})\varphi(\vec{x})\,\drm \vec{x} = \frac{1}{\abs{s}^d} \int_{\bbR^d}\delta(\vec{x})\varphi(\vec{x})\,\drm \vec{x}$
 
-## Elementaire bewerkingen met distributies
+## Elementaire bewerkingen met distributies {.scrollable}
 
 * Product van distributies? Niet gedefinieerd
 
@@ -514,7 +379,7 @@ Daaruit volgt (veralgemening naar meer dimensies)
 
   * algemene definitie: $T'[\varphi] = T[-\varphi']$
 
-## Distributionele afgeleide: voorbeelden
+## Distributionele afgeleide: voorbeelden {.scrollable}
 
 * $f(x) = \abs{x}$: lokaal integreerbaar, niet afleidbaar voor $x=0$
   
@@ -538,7 +403,7 @@ Daaruit volgt (veralgemening naar meer dimensies)
   &= -T[(\psi\varphi)'] + T[\psi'\varphi]  = T'[\psi\varphi] + (\psi' T)[\varphi] = (\psi T' + \psi' T)[\varphi].
   \end{align*}	
 
-## Uitgebreid voorbeeld: Cauchy hoofdwaarde
+## Uitgebreid voorbeeld: Cauchy hoofdwaarde {.scrollable}
 
 * $\log\abs{x}$: absoluut integreerbaar (ondanks divergentie), niet afleidbaar bij $x=0$
 
@@ -559,7 +424,7 @@ Daaruit volgt (veralgemening naar meer dimensies)
     T_f'[\varphi] = \lim_{\epsilon \to 0^+} \left(\int_{-\infty}^{-\epsilon} \frac{\varphi(x)}{x}\,\drm x + \int_{+\epsilon}^{+\infty}\frac{\varphi(x)}{x}\,\drm x\right) = \lim_{\epsilon\to 0^+} \int_\epsilon^{+\infty} \frac{\varphi(x) - \varphi(-x)}{x}\,\drm x 
   \end{align*}
 
-## Uitgebreid voorbeeld: Cauchy hoofdwaarde
+## Uitgebreid voorbeeld: Cauchy hoofdwaarde {.scrollable}
 
 * beschouw een functie $g(x)$ op $I=[a,c]$ met een eerste-orde pool in $x=b \in I$: $g(x) = \frac{\varphi(x)}{x-b}$ met $\varphi(x)$ glad voor $x\in I$:
 
@@ -593,7 +458,7 @@ Daaruit volgt (veralgemening naar meer dimensies)
 
   * algemene definitie: $(T \circ \vec{g})[\varphi] = T[\varphi_{\vec{g}}]$ met $\varphi_{\vec{g}}(\vec{x}) = \frac{1}{\abs{\det \mat{J}_{\vec{g}}(\vec{g}^{-1}(\vec{x}))}} \varphi(\vec{g}^{-1}(\vec{x}))$
 
-## Coördinatentransformatie: voorbeelden
+## Coördinatentransformatie: voorbeelden {.scrollable}
 
 * $\vec{x} = \vec{g}(\vec{y}) = s \vec{y}$:
   $(T \circ \vec{g})[\varphi] = (\map{\sigma}_s T)[\varphi] = T[\abs{s}^{-d} (\map{\sigma}_{1/s}\varphi)] = \frac{1}{\abs{s}^d} T[\map{\sigma}_{1/s} \varphi]$
@@ -617,7 +482,7 @@ Daaruit volgt (veralgemening naar meer dimensies)
   
   $\delta( (r\cos \theta - x_0) \vec{e}_x + (r \sin \theta - y_0)\vec{e}_y) = \frac{1}{r} \delta(r-r_0) \delta(\theta - \theta_0)=\frac{1}{r_0} \delta(r-r_0) \delta(\theta - \theta_0)$
 
-## Convergentie van rijen van distributies
+## Convergentie van rijen van distributies {.scrollable}
 
 * een rij distributies $(T_n \in \mathcal{D}^\ast(\Omega))_{n\in\bbN_0}$ convergeert naar een distributie $T\in \mathcal{D}^\ast(\Omega)$ als voor alle $\varphi \in \mathcal{D}(\Omega)$:
   
@@ -671,7 +536,7 @@ Daaruit volgt (veralgemening naar meer dimensies)
   * $f(x) = \frac{1}{\sqrt{2\pi}}\erm^{-\frac{x^2}{2}}\quad\implies\quad \delta(x)=\lim_{s\to 0^+} \frac{1}{\sqrt{2\pi} s}\erm^{-\frac{x^2}{2s^2}}$
   * $f(x) = \frac{1}{\pi} \frac{1}{1+x^2}\quad\implies\quad\delta(x)=\lim_{s \to 0^+} \frac{1}{\pi} \frac{s}{x^2+s^2}$ (Breit-Wigner formule)
 
-## Dirac-rijen en Fouriertransformatie
+## Dirac-rijen en Fouriertransformatie {.scrollable}
 
 * "bewijs" van inverse Fourier-transformatie:
 
@@ -714,7 +579,7 @@ Bemerk: voor regularisatie in Fourier-Plancherel constructie:
 
   * $\Rightarrow \forall s>0$: $\lim_{n \to \infty} \frac{1}{\pi} \frac{ \sin( n sx)}{x} = s \lim_{n \to \infty} \frac{1}{\pi} \frac{ \sin( n sx)}{sx} = s \delta(s x) = \delta(x)$
 
-## Reeksen van distributies
+## Reeksen van distributies {.scrollable}
 
 * Herhaling convergentie Fourierreeks $f_n(x) = \lim_{n\to \infty} \frac{1}{\sqrt{L}} \sum_{k=-n}^{+n} \widehat{f}_k \erm^{\irm \frac{2\pi}{L} k x}$
 
@@ -738,7 +603,7 @@ Bemerk: voor regularisatie in Fourier-Plancherel constructie:
 
   $\Rightarrow$ $\sum_{\substack{k \in \bbZ\\ k\neq 0}} -\frac{\erm^{\irm k x}}{\irm k} = -\sum_{k =1}^{+\infty} \frac{2\sin(k x)}{k}$ convergeert in $2$-norm maar niet uniform (Gibbs-fenomeen)
 
-## Reeksen van distributies
+## Reeksen van distributies {.scrollable}
 
 $f(x) = x-\pi - 2\pi \left\lfloor \frac{x}{2\pi} \right\rfloor =(x-\pi) + \sum_{n=-\infty}^{0} 2\pi H(2\pi n - x) - \sum_{n=1}^{+\infty} 2\pi H(x - 2\pi n)$
 
@@ -760,7 +625,7 @@ $f(x) = x-\pi - 2\pi \left\lfloor \frac{x}{2\pi} \right\rfloor =(x-\pi) + \sum_{
 
 * polynomiaal stijgende Fourierreeks: $\sum_{k=-\infty}^{+\infty} (ik)^p \erm^{\irm k x} = 2\pi \sum_{n \in \bbZ} \delta^{(p)}(x - 2\pi n)$
 
-## Fouriertransformatie van distributies
+## Fouriertransformatie van distributies {.scrollable}
 
 * Reguliere distributie met $f \in L^1(\bbR) \subspace L^1_{\text{loc}}(\bbR)$:
 
@@ -779,7 +644,7 @@ $f(x) = x-\pi - 2\pi \left\lfloor \frac{x}{2\pi} \right\rfloor =(x-\pi) + \sum_{
 
   $\lim_{n \to \infty} \sup_{x \in \bbR} \abs{ x^k \frac{\drm^l\ }{\drm x^l} (\varphi_n(x) - \varphi(x)) } = 0$ voor alle $k, l \in \bbN$
 
-## Getemperde distributies
+## Getemperde distributies {.scrollable}
 
 * Met grotere ruimte van testfuncties en bijbehorende convergentiemaat:
 
@@ -800,7 +665,7 @@ $\rightarrow$ **getemperde distributies** (niet te snel stijgend)
 
 * Algemene definitie: $\widehat{T}[\varphi] = T[\widehat{\varphi}]$ voor $T \in \mathcal{S}^\ast(\bbR)$ en $\varphi \in \mathcal{S}(\bbR)$
 
-## Fouriertransformatie van getemperde distributies
+## Fouriertransformatie van getemperde distributies {.scrollable}
 
 Voorbeelden:
 
@@ -821,7 +686,7 @@ Voorbeelden:
 
 * $\widehat{\mathrm{sgn}}(\xi) = \frac{1}{2}(\widehat{H}(x) - \widehat{H}(-x)) = -\frac{\irm}{2\pi} \Pv \frac{1}{x}$ (gevolg van voorgaande)
 
-## Poisson sommatieformule
+## Poisson sommatieformule {.scrollable}
 
 * voor $\varphi \in \Schw(\bbR)$ (gladde functie die sneller dan elke macht van $\abs{x}$ daalt) geldt
   $$\sum_{n \in \bbZ} \varphi(n) = \sum_{k\ \in \bbZ} \widehat{\varphi}(k)$$
@@ -842,7 +707,7 @@ Voorbeelden:
 
   als ene som snel convergeert ($\sigma$ groot of klein) convergeert andere traag
 
-## Distributies en convoluties?
+## Distributies en convoluties? {.scrollable}
 
 Voor reguliere distributies geassocieerd aan $f,g \in L^1(\bbR)$: $f \ast g \in L^1(\bbR)$
 
@@ -860,7 +725,7 @@ $\rightarrow$ algemene definitie? vereist dat $\psi$ of $\chi$ nog steeds een te
 
   $\rightarrow$ geen testfunctie in $\Schw(\bbR)$
 
-## Compacte distributies
+## Compacte distributies {.scrollable}
 
 * "Drager van een distributie" $T$: gesloten verzameling $K \subseteq \Omega$ zodat $T[\varphi] =0$ voor alle $\varphi$ met $\mathrm{supp}(\varphi) \subseteq \Omega \setminus K$
 
@@ -877,7 +742,7 @@ $\rightarrow$ algemene definitie? vereist dat $\psi$ of $\chi$ nog steeds een te
 * Convoluties kunnen worden gedefinieerd tussen 1 (getemperde) distributie $T \in \D^{\ast}(\bbR)$ of $\Schw^\ast(\bbR)$ en 1 compacte distributie $S$ als
   $$(S \ast T)[\varphi] = T[ y \mapsto (\map{\tau}_y S)[\varphi]]$$
 
-## Convoluties van distributies: voorbeelden
+## Convoluties van distributies: voorbeelden {.scrollable}
 
 * $(\delta_a \ast T)[\varphi] = T[y \mapsto (\map{\tau}_y\delta_a)[\varphi]] = T[y\mapsto \delta_{a+y}[\varphi]] = T[y \mapsto \varphi(y+a)]$
 $\qquad= T[\map{\tau}_{-a} \varphi] = (\map{\tau}_{a} T)[\varphi]$
@@ -903,7 +768,7 @@ $\qquad= T[\map{\tau}_{-a} \varphi] = (\map{\tau}_{a} T)[\varphi]$
 
 # Fourieranalyse herbekeken
 
-## Types Fouriertransformaties
+## Types Fouriertransformaties {.scrollable}
 
 Tot dusver: Fouriertransformaties gedefinieerd voor functies $f$ met domein
 
@@ -957,7 +822,7 @@ We kunnen ook een Fouriertransformatie definiëren voor functies $f$ met domein
     $\widehat{f}^{\text{(per)}}(\xi) = \frac{1}{\sqrt{L}} \sum_{k \in \bbZ} \widehat{f}_k \int_{-\infty}^{+\infty} \erm^{-i 2\pi \left(\xi - \frac{k}{L} \right) x}\,\drm x$
     $\qquad =  \frac{1}{\sqrt{L}} \sum_{k \in \bbZ} \widehat{f}_k \delta\left(\xi - \frac{k}{L}\right) = \frac{1}{L} \sum_{k \in \bbZ} \widehat{f}^{\text{(triv)}}(k/L) \delta\left(\xi-\frac{k}{L}\right)$
 
-## Fouriertransformaties relateren
+## Fouriertransformaties relateren {.scrollable}
 
 * analoog voor $f$ met domein $\bbZ_N$ en zijn uitbreiding naar $\bbZ$
 
@@ -990,7 +855,7 @@ Beschouw functie $f(x)$ voor $x \in \bbR$, en zijn samples $F_j = f(j \epsilon)$
   &= \sum_{n \in \bbZ} \frac{1}{\epsilon} \widehat{f}\left(\frac{\chi}{\epsilon} - \frac{n}{\epsilon}\right)
   \end{align*}
 
-## Sampling en Shannon-Nyquisttheorema
+## Sampling en Shannon-Nyquisttheorema {.scrollable}
 
 * $f$ heeft een gelimiteerde brandbreedte heeft met maximale frequentie $\Xi$ als $\mathrm{supp}(f) \subseteq [-\Xi,+\Xi]$
 
@@ -1012,7 +877,7 @@ Beschouw functie $f(x)$ voor $x \in \bbR$, en zijn samples $F_j = f(j \epsilon)$
 
   $\rightarrow$ indien $f$ niet bandgelimiteerd: aliasing / moirépatronen
 
-## Translaties
+## Translaties {.scrollable}
 
 * voor functies op $\bbR$ of $\bbZ$:
   * $(\map{\tau}_a f)(x) = f(x-a)$ of $(\map{\tau}_m f)_j = f_{j-m}$
@@ -1031,7 +896,7 @@ Beschouw functie $f(x)$ voor $x \in \bbR$, en zijn samples $F_j = f(j \epsilon)$
     * integraaloperator $\map{A}$: als integraalkern van de vorm $A(x,y) = a(x-y)$ is
       $(\map{A}f)(x) = \int A(x,y)f(y)\,\drm y = \int a(x-y) f(y)\,\drm y = (a \ast f)(x)$
       
-## Eigenfuncties van translaties
+## Eigenfuncties van translaties {.scrollable}
 
 * $\commutator{\map{A}}{\map{\tau}_a}=\zeromap$ en alle $\commutator{\map{\tau}_a}{\map{\tau}_b} = \zeromap$ (abelse groep)
 
@@ -1049,7 +914,7 @@ Beschouw functie $f(x)$ voor $x \in \bbR$, en zijn samples $F_j = f(j \epsilon)$
     * de functies $\psi_s(x) = \exp(s x)$ zijn nooit normaliseerbaar en dus niet in $L^2(\bbR)$
     * de functies $\exp(\irm 2\pi \xi x - \epsilon \abs{x})$ zitten  (voor $\epsilon>0$) in $L^2(\bbR)$ en vormen benaderende eigenvectoren (continue spectrum)
 
-## Eigenfuncties van translaties
+## Eigenfuncties van translaties {.scrollable}
 
 * $(\map{\tau}_n f)_j = f_{j-n} = \lambda_n f_j$:
   * zonder voorwaarde op de rijruimte: $f_j = \exp(s j)$ en $\lambda_n = \exp(s n)$
@@ -1068,7 +933,7 @@ Beschouw functie $f(x)$ voor $x \in \bbR$, en zijn samples $F_j = f(j \epsilon)$
   * Discreet versus continu in origineel domein: onbegrensd versus begrensd (compact) in Fourier domein
   * Onbegrensd versus compact in origineel domein: continu versus discreet in Fourier domein
 
-## Fouriertransformaties en translatie-invariante operatoren
+## Fouriertransformaties en translatie-invariante operatoren {.scrollable}
 
 * we weten al: DFT diagonaliseert circulante matrices
 

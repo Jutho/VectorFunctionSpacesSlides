@@ -2,146 +2,11 @@
 title: "Hoofdstuk 3 - Lineaire operatoren en eigenwaarden"
 author: "Jutho Haegeman"
 date: "09/27/2026"
-# format:
-#   revealjs:
-#     theme: solarized
-#     html-math-method: katex
-#     smaller: true
-#     chalkboard: true
 ---
 
 ## Doel van dit hoofdstuk
 
-::: {.hidden}
-$$
-% Math operators
-\DeclareMathOperator{\Aut}{Aut}
-\DeclareMathOperator{\End}{End}
-\DeclareMathOperator{\Hom}{Hom}
-\DeclareMathOperator{\GL}{GL}
-\DeclareMathOperator{\SL}{SL}
-\DeclareMathOperator{\Unitary}{U}
-\DeclareMathOperator{\Orthogonal}{O}
-\DeclareMathOperator{\SU}{SU}
-\DeclareMathOperator{\SO}{SO}
-\DeclareMathOperator{\Aff}{Aff}
-\DeclareMathOperator{\dom}{dom}
-\DeclareMathOperator{\cod}{codom}
-\DeclareMathOperator{\D}{\mathcal{D}}
-\DeclareMathOperator{\E}{\mathcal{E}}
-\DeclareMathOperator{\R}{\mathcal{R}}
-\DeclareMathOperator{\Schw}{\mathcal{S}}
-\DeclareMathOperator{\im}{im}
-%\DeclareMathOperator{\ker}{ker}
-%\DeclareMathOperator{\dim}{dim}
-\DeclareMathOperator{\codim}{codim}
-\DeclareMathOperator{\convhull}{co}
-
-\newcommand{\opgreek}[1]{\begingroup\mathgroup-1 #1\endgroup}
-\DeclareMathOperator{\rank}{rank}
-\DeclareMathOperator{\nullity}{nullity}
-
-\DeclareMathOperator{\Pv}{Pv}
-
-\DeclareMathOperator{\tr}{tr}
-\DeclareMathOperator{\sgn}{sgn}
-\DeclareMathOperator{\id}{id}
-\DeclareMathOperator{\adj}{adj}
-
-\DeclareMathOperator*{\varmin}{min}
-\DeclareMathOperator*{\varmax}{max}
-\DeclareMathOperator*{\argmin}{arg\ min}
-\DeclareMathOperator*{\argmax}{arg\ max}
-\DeclareMathOperator{\order}{\mathscr{O}}
-\DeclareMathOperator{\sign}{sgn}
-\DeclareMathOperator{\spanop}{span}
-\DeclareMathOperator{\arctanh}{arctanh}
-\DeclareMathOperator{\arccosh}{arccosh}
-\DeclareMathOperator{\arcsinh}{arcsinh}
-\DeclareMathOperator{\arccot}{arccot}
-\DeclareMathOperator{\sinc}{sinc}
-
-
-\newcommand{\commutator}[2]{{\left[#1,#2\right]}}
-\newcommand{\anticommutator}[2]{{\left\{#1,#2\right\}}}
-
-\DeclareMathOperator{\real}{Re}
-\DeclareMathOperator{\imag}{Im}
-\newcommand{\conj}[1]{{\overline{#1}}}
-\newcommand{\abs}[1]{{\left\lvert#1\right\rvert}}
-\newcommand{\norm}[1]{{\left\lVert#1\right\rVert}}
-\newcommand{\inner}[2]{{\left\langle#1,#2\right\rangle}}
-
-\newcommand{\drm}{{\mathrm{d}}}
-\newcommand{\erm}{{\mathrm{e}}}
-\newcommand{\irm}{{\mathrm{i}}}
-
-
-% VECTORS
-\newcommand{\vect}[1]{{#1}}
-\renewcommand{\vec}[1]{\boldsymbol{#1}} % specifically for vectors in F^n
-\newcommand{\zerovec}{{o}}
-\renewcommand{\vu}{\vect{u}}
-\newcommand{\vv}{\vect{v}}
-\newcommand{\vw}{\vect{w}}
-\newcommand{\ve}{\vect{e}}
-\newcommand{\vf}{\vect{f}}
-\newcommand{\vx}{\vect{x}}
-\newcommand{\vy}{\vect{y}}
-
-% MATRICES
-\newcommand{\mat}[1]{{\mathsf{#1}}}
-\newcommand{\zeromat}{\mat{O}}
-\newcommand{\idmat}{\mat{I}}
-
-% SCALARS
-\newcommand{\scalara}{{a}}
-\newcommand{\scalarb}{{b}}
-\newcommand{\scalarc}{{c}}
-
-% LINEAR MAPS
-\DeclareMathAlphabet{\mymathbb}{U}{BOONDOX-ds}{m}{n}
-\newcommand{\map}[1]{{\hat{#1}}}
-\newcommand{\idmap}{\map{1}}
-\newcommand{\zeromap}{\map{0}}
-
-\newcommand{\transpose}{{\mathsf{T}}}
-\newcommand{\hermitian}{{\mathsf{H}}}
-
-\renewcommand{\d}{{\mathrm{d}}}
-
-% FIELDS
-\newcommand{\bbF}{{\mathbb{F}}}
-\newcommand{\bbN}{{\mathbb{N}}}
-\newcommand{\bbZ}{{\mathbb{Z}}}
-\newcommand{\bbQ}{{\mathbb{Q}}}
-\newcommand{\bbR}{{\mathbb{R}}}
-\newcommand{\bbC}{{\mathbb{C}}}
-\newcommand{\bbH}{{\mathbb{H}}}
-\newcommand{\bbT}{{\mathbb{T}}}
-
-% RELATIONS
-\newcommand{\subspace}{{\preccurlyeq}}
-\newcommand{\supspace}{{\succcurlyeq}}
-
-\newcommand{\eps}{{\varepsilon}}
-\newcommand{\levicivita}{{\epsilon}}
-
-\newcommand{\sx}{{\sigma^x}}
-\newcommand{\sy}{{\sigma^y}}
-\newcommand{\sz}{{\sigma^z}}
-\renewcommand{\sp}{{\sigma^+}}
-\newcommand{\sm}{{\sigma^-}}
-
-\DeclareMathOperator*{\sumint}{
-\mathchoice
-  {\ooalign{$\displaystyle\sum$\cr\hidewidth$\displaystyle\int$\hidewidth\cr}}
-  {\ooalign{\raisebox{.14\height}{\scalebox{.7}{$\textstyle\sum$}}\cr\hidewidth$\textstyle\int$\hidewidth\cr}}
-  {\ooalign{\raisebox{.2\height}{\scalebox{.6}{$\scriptstyle\sum$}}\cr$\scriptstyle\int$\cr}}
-  {\ooalign{\raisebox{.2\height}{\scalebox{.6}{$\scriptstyle\sum$}}\cr$\scriptstyle\int$\cr}}
-}
-$$
-:::
+{{< include _macros.qmd >}}
 
 Herhaling:
 
@@ -206,7 +71,7 @@ $$\underbrace{p(\map{T} \map{A} \map{T}^{-1})}_{\in \End(W)} = \map{T} \underbra
 
 ## Nilpotente operatoren
 
-* Een element $a$ fvan een ring $R$ dat voldoet aan aan $a^s = 0$ heet **nilpotent** met index $s$ (als $n=s$ de kleinste waarde is waarvoor $a^n=0$)
+* Een element $a$ van een ring $R$ dat voldoet aan $a^s = 0$ heet **nilpotent** met index $s$ (als $n=s$ de kleinste waarde is waarvoor $a^n=0$)
 
 * Nilpotente operatoren $\map{N} \in \End(V)$ voldoen dus aan $\map{N}^s = \zeromap$ en spelen een rol bij de veralgemeene eigenwaardendecompositie
 
@@ -453,7 +318,7 @@ Invariante deelruimte van een gegeven operator $\map{A}\in\End(V)$
 * $\im(\map{A})$: $\map{A} \im(\map{A}) \subspace \im(\map{A})$
 * $\ker(\map{A})$: $\map{A} \ker(\map{A}) = \{0\} \subspace \ker(\map{A})$
 
-## Invariante deelruimten
+## Invariante deelruimten {.scrollable}
 
 * $\map{A}$ en $\map{A} + a \idmap$ hebben dezelfde invariante deelruimten
 
@@ -473,7 +338,7 @@ Invariante deelruimte van een gegeven operator $\map{A}\in\End(V)$
 
   Er geldt dan ook $V = \ker((\map{A}-\scalara\idmap)^s) \oplus \im((\map{A}-\scalara\idmap)^s)$
 
-## Veralgemeende eigenruimten:
+## Veralgemeende eigenruimten: {.scrollable}
 
 Gegeven een eigenwaarde $\lambda \in \sigma_{\map{A}}$, dan bestaat er een $s$ zodat
 
@@ -491,7 +356,7 @@ met $U_\lambda$ en $U_\lambda^{\text{c}}$ beide invariante deelruimten van $\map
 $\Rightarrow$ $\dim(U_\lambda) = q_\lambda$ en $s = s_\lambda$ (macht van $(z-\lambda)$ in $m_{\map{A}}(z)$)
 
 
-## Veralgemeende eigenruimten: voorbeeld
+## Veralgemeende eigenruimten: voorbeeld {.scrollable}
 
 $p(z) = (z-1)(z+1)^2 = z^3 + z^2 - z - 1 \Rightarrow \mat{C}_p = \begin{bmatrix} 0 & 1 & 0 \\ 0 & 0 & 1 \\ 1 & 1 & -1 \end{bmatrix}$:
 
@@ -504,7 +369,7 @@ $p(z) = (z-1)(z+1)^2 = z^3 + z^2 - z - 1 \Rightarrow \mat{C}_p = \begin{bmatrix}
 		1 & 1 & 0 \\ 0 & 1 & 1 \\ 1 & 1 & 0 
 	\end{bmatrix}^2\right) = \ker\left(\begin{bmatrix} 1 & 2 & 1 \\ 1 & 2 & 1 \\ 1 & 2 & 1 \end{bmatrix}\right)$
 
-## Veralgemeende eigenruimten: voorbeeld
+## Veralgemeende eigenruimten: voorbeeld {.scrollable}
 
 $p(z) = (z-1)(z+1)^2 = z^3 + z^2 - z - 1 \Rightarrow \mat{C}_p = \begin{bmatrix} 0 & 1 & 0 \\ 0 & 0 & 1 \\ 1 & 1 & -1 \end{bmatrix}$:
 
@@ -529,7 +394,7 @@ $p(z) = (z-1)(z+1)^2 = z^3 + z^2 - z - 1 \Rightarrow \mat{C}_p = \begin{bmatrix}
 
 * Als alle $s_\lambda=1$ $\Leftrightarrow$ alle $N_\lambda=\zeromap$ $\Rightarrow$ diagonaalvorm
 
-## Jordan normaalvorm (geen bewijzen)
+## Jordan normaalvorm (geen bewijzen) {.scrollable}
 
 * We kunnen een specifieke basis kiezen voor $U_\lambda$ zodat $\map{N}_\lambda$ een canonische vorm / normaalvorm aanneemt
 
@@ -547,7 +412,7 @@ $p(z) = (z-1)(z+1)^2 = z^3 + z^2 - z - 1 \Rightarrow \mat{C}_p = \begin{bmatrix}
 
   met $p_k \geq 0$ het aantal keer dat er een blok met index $k$ voorkomt, en dus $p_s \geq 1$.
 
-## Jordan normaalvorm (geen bewijzen)
+## Jordan normaalvorm (geen bewijzen) {.scrollable}
 
 * Jordan normaalvorm / canonische vorm: er bestaat een basis $B$ zodat
 
@@ -564,7 +429,7 @@ $p(z) = (z-1)(z+1)^2 = z^3 + z^2 - z - 1 \Rightarrow \mat{C}_p = \begin{bmatrix}
   $$\mat{A}= \mat{V} \mat{J}_\mat{A} \mat{V}^{-1} = \mat{V} \left[\bigoplus_{\lambda \in \sigma_{\mat{A}}} \bigoplus_{k=1}^{s_\lambda} \bigoplus_{i=1}^{p^{(\lambda)}_{k}} \mat{J}_k(\lambda) \right]\mat{V}^{-1}$$
 
 
-## Companion matrix herbekeken
+## Companion matrix herbekeken {.scrollable}
 
 Voor een companion matrix $\mat{C} \in \bbF^{n \times n}$ met (unieke) eigenwaarden ${\lambda_1,\lambda_2,\cdots,\lambda_m}$ geldt
 
@@ -690,7 +555,7 @@ Stel $\map{A}^\ast(\omega') = \lambda' \omega'$ en $\map{A}\vv = \lambda \vv$:
 			\cos(\theta) & -\sin(\theta) \\ \sin(\theta) & \cos(\theta)
 		\end{bmatrix}$
 
-## Functies van lineaire operatoren: definitie 2
+## Functies van lineaire operatoren: definitie 2 {.scrollable}
 
 Als $f(z) = \sum_{n=0}^{+\infty} f_n z^n$ een Taylorreeks rond $z=0$ (Maclaurin reeks) heeft:
 
@@ -716,7 +581,7 @@ Betekenis van een reeks van een operator? Convergentie? Zie Hoofdstuk 4
 			\cos(\theta) & -\sin(\theta) \\ \sin(\theta) & \cos(\theta)
 		\end{bmatrix}$
 
-## Functies van lineaire operatoren: definitie 3
+## Functies van lineaire operatoren: definitie 3 {.scrollable}
 
 Via Jordan-decompositie: $f(\mat{A}) = \mat{V} \left[\bigoplus_{\lambda \in \sigma_{\mat{A}}} \bigoplus_{k=1}^{s_\lambda} \bigoplus_{i=1}^{p^{(\lambda)}_{k}} f\left(\mat{J}_k(\lambda)\right) \right]\mat{V}^{-1}$
 
@@ -884,7 +749,7 @@ Perturbaties rond $\vec{x}^\ast=\vec{0}$ bepaald door eigenwaarden (Jordan-decom
  	&= (\vec{x}_{n+1}, \dots, \vec{x}_{n+k-1}, \vec{\phi}(\vec{x}_{n}, \dots, \vec{x}_{n+k-2}, \vec{x}_{n+k-1}))
 \end{align*}
 
-## Recurrentierelaties
+## Recurrentierelaties {.scrollable}
 
 $$\vec{x}_{n+k} = \mat{A}_{0} \vec{x}_{n} + \mat{A}_{1} \vec{x}_{n+1} + \dots + \mat{A}_{k-2} \vec{x}_{n+k-2} + \mat{A}_{k-1} \vec{x}_{n_k-1}$$
 
@@ -946,7 +811,7 @@ $\dot{\vec{x}}(t) = \vec{\varphi}(\vec{x}(t))$ (eerste orde differentiaalvergeli
   * een $\real{\lambda}>0$: perturbatie groeit exponentieel in de tijd
   * $\lambda = \irm 2\pi/p$: periodieke baan met periode $p$
 
-## Hogere orde differentiaalvergelijkingen
+## Hogere orde differentiaalvergelijkingen {.scrollable}
 
 * $\vec{x}^{(k)}(t) = \vec{\varphi}(t, \vec{x}(t), \dot{\vec{x}(t)},\ldots, \vec{x}^{(k-1)}(t))$
 

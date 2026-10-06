@@ -2,146 +2,11 @@
 title: "Hoofdstuk 7 - Functieruimten"
 author: "Jutho Haegeman"
 date: "11/18/2025"
-# format:
-#   revealjs:
-#     theme: solarized
-#     html-math-method: katex
-#     smaller: true
-#     chalkboard: true
 ---
 
 ## Doel van dit hoofdstuk
 
-::: {.hidden}
-$$
-% Math operators
-\DeclareMathOperator{\Aut}{Aut}
-\DeclareMathOperator{\End}{End}
-\DeclareMathOperator{\Hom}{Hom}
-\DeclareMathOperator{\GL}{GL}
-\DeclareMathOperator{\SL}{SL}
-\DeclareMathOperator{\Unitary}{U}
-\DeclareMathOperator{\Orthogonal}{O}
-\DeclareMathOperator{\SU}{SU}
-\DeclareMathOperator{\SO}{SO}
-\DeclareMathOperator{\Aff}{Aff}
-\DeclareMathOperator{\dom}{dom}
-\DeclareMathOperator{\cod}{codom}
-\DeclareMathOperator{\D}{\mathcal{D}}
-\DeclareMathOperator{\E}{\mathcal{E}}
-\DeclareMathOperator{\R}{\mathcal{R}}
-\DeclareMathOperator{\Schw}{\mathcal{S}}
-\DeclareMathOperator{\im}{im}
-%\DeclareMathOperator{\ker}{ker}
-%\DeclareMathOperator{\dim}{dim}
-\DeclareMathOperator{\codim}{codim}
-\DeclareMathOperator{\convhull}{co}
-
-\newcommand{\opgreek}[1]{\begingroup\mathgroup-1 #1\endgroup}
-\DeclareMathOperator{\rank}{rank}
-\DeclareMathOperator{\nullity}{nullity}
-
-\DeclareMathOperator{\Pv}{Pv}
-
-\DeclareMathOperator{\tr}{tr}
-\DeclareMathOperator{\sgn}{sgn}
-\DeclareMathOperator{\id}{id}
-\DeclareMathOperator{\adj}{adj}
-
-\DeclareMathOperator*{\varmin}{min}
-\DeclareMathOperator*{\varmax}{max}
-\DeclareMathOperator*{\argmin}{arg\ min}
-\DeclareMathOperator*{\argmax}{arg\ max}
-\DeclareMathOperator{\order}{\mathscr{O}}
-\DeclareMathOperator{\sign}{sgn}
-\DeclareMathOperator{\spanop}{span}
-\DeclareMathOperator{\arctanh}{arctanh}
-\DeclareMathOperator{\arccosh}{arccosh}
-\DeclareMathOperator{\arcsinh}{arcsinh}
-\DeclareMathOperator{\arccot}{arccot}
-\DeclareMathOperator{\sinc}{sinc}
-
-
-\newcommand{\commutator}[2]{{\left[#1,#2\right]}}
-\newcommand{\anticommutator}[2]{{\left\{#1,#2\right\}}}
-
-\DeclareMathOperator{\real}{Re}
-\DeclareMathOperator{\imag}{Im}
-\newcommand{\conj}[1]{{\overline{#1}}}
-\newcommand{\abs}[1]{{\left\lvert#1\right\rvert}}
-\newcommand{\norm}[1]{{\left\lVert#1\right\rVert}}
-\newcommand{\inner}[2]{{\left\langle#1,#2\right\rangle}}
-
-\newcommand{\drm}{{\mathrm{d}}}
-\newcommand{\erm}{{\mathrm{e}}}
-\newcommand{\irm}{{\mathrm{i}}}
-
-
-% VECTORS
-\newcommand{\vect}[1]{{#1}}
-\renewcommand{\vec}[1]{\boldsymbol{#1}} % specifically for vectors in F^n
-\newcommand{\zerovec}{{o}}
-\renewcommand{\vu}{\vect{u}}
-\newcommand{\vv}{\vect{v}}
-\newcommand{\vw}{\vect{w}}
-\newcommand{\ve}{\vect{e}}
-\newcommand{\vf}{\vect{f}}
-\newcommand{\vx}{\vect{x}}
-\newcommand{\vy}{\vect{y}}
-
-% MATRICES
-\newcommand{\mat}[1]{{\mathsf{#1}}}
-\newcommand{\zeromat}{\mat{O}}
-\newcommand{\idmat}{\mat{I}}
-
-% SCALARS
-\newcommand{\scalara}{{a}}
-\newcommand{\scalarb}{{b}}
-\newcommand{\scalarc}{{c}}
-
-% LINEAR MAPS
-\DeclareMathAlphabet{\mymathbb}{U}{BOONDOX-ds}{m}{n}
-\newcommand{\map}[1]{{\hat{#1}}}
-\newcommand{\idmap}{\map{1}}
-\newcommand{\zeromap}{\map{0}}
-
-\newcommand{\transpose}{{\mathsf{T}}}
-\newcommand{\hermitian}{{\mathsf{H}}}
-
-\renewcommand{\d}{{\mathrm{d}}}
-
-% FIELDS
-\newcommand{\bbF}{{\mathbb{F}}}
-\newcommand{\bbN}{{\mathbb{N}}}
-\newcommand{\bbZ}{{\mathbb{Z}}}
-\newcommand{\bbQ}{{\mathbb{Q}}}
-\newcommand{\bbR}{{\mathbb{R}}}
-\newcommand{\bbC}{{\mathbb{C}}}
-\newcommand{\bbH}{{\mathbb{H}}}
-\newcommand{\bbT}{{\mathbb{T}}}
-
-% RELATIONS
-\newcommand{\subspace}{{\preccurlyeq}}
-\newcommand{\supspace}{{\succcurlyeq}}
-
-\newcommand{\eps}{{\varepsilon}}
-\newcommand{\levicivita}{{\epsilon}}
-
-\newcommand{\sx}{{\sigma^x}}
-\newcommand{\sy}{{\sigma^y}}
-\newcommand{\sz}{{\sigma^z}}
-\renewcommand{\sp}{{\sigma^+}}
-\newcommand{\sm}{{\sigma^-}}
-
-\DeclareMathOperator*{\sumint}{
-\mathchoice
-  {\ooalign{$\displaystyle\sum$\cr\hidewidth$\displaystyle\int$\hidewidth\cr}}
-  {\ooalign{\raisebox{.14\height}{\scalebox{.7}{$\textstyle\sum$}}\cr\hidewidth$\textstyle\int$\hidewidth\cr}}
-  {\ooalign{\raisebox{.2\height}{\scalebox{.6}{$\scriptstyle\sum$}}\cr$\scriptstyle\int$\cr}}
-  {\ooalign{\raisebox{.2\height}{\scalebox{.6}{$\scriptstyle\sum$}}\cr$\scriptstyle\int$\cr}}
-}
-$$
-:::
+{{< include _macros.qmd >}}
 
 * Inzicht krijgen in de complicaties van het werken met functieruimten
 * Orthonormale basissen voor functieruimten:
@@ -169,7 +34,7 @@ $$
 
 (geen stellingen of bewijzen)
 
-## Functieruimten
+## Functieruimten {.scrollable}
 
 Gegeven een vectorruimte $Y$ over $\bbF$ en een willekeurige verzameling $X$:
 
@@ -190,7 +55,7 @@ $\rightarrow$ bijkomende eigenschappen: continuïteit, kwadratische integreerbaa
 
   * belangrijk dat deze compatibel zijn met (behouden blijven onder) lineaire combinaties
 
-## Lebesgue-ruimten
+## Lebesgue-ruimten {.scrollable}
 
 We willen ook graag minstens een norm (vanaf sectie 7.2: inwendig product):
 
@@ -209,7 +74,7 @@ $$f:X \to Y \quad \rightarrow \quad\norm{f}_p = \left(\int_{X} \norm{f(x)}_Y^p \
 
 $\rightarrow$ beperken tot deelverzameling van functies: moet deelruimte zijn!
 
-## Lebesgue-ruimten
+## Lebesgue-ruimten {.scrollable}
 
 $\mathcal{L}^p(I,\bbF)$ is de verzameling van functies $f:I\to \bbF$ (met dus $I=[a,b]$ of $I = \bbR$) die integreerbaar zijn en waarvoor $\int_I \abs{f(x)}^p \,\drm x$ eindig is
 
@@ -238,7 +103,7 @@ $\rightarrow$ $L^p(I,\bbF) = \mathcal{L}^p(I,\bbF)/U$: de vectorruimte van equiv
 
 * (in de praktijk werken we nog steeds gewoon met functies, die dan representatief zijn voor alle andere functies binnen die equivalentieklasse)
 
-## Van seminorm naar norm
+## Van seminorm naar norm {.scrollable}
 
 Observatie 2: voor $f,g \in \mathcal{L}^p(I,\bbF)$
 
@@ -262,7 +127,7 @@ Observatie 2: voor $f,g \in \mathcal{L}^p(I,\bbF)$
 
     $\Rightarrow$: $f_n \to 0$ terwijl $\int_0^1 f_n(x)\,\drm x = 1 - \exp(-n^2) \to 1$
 
-## Lebesgue-integraal
+## Lebesgue-integraal {.scrollable}
 
 * Riemann-integraal $\int_a^b f(x)\,\drm x$:
   * partitie $P$ van $[a,b]$: $\Delta_k = [x_{k-1},x_k]$ met $a = x_0 < x_1 < \ldots < x_{n_1} < x_n=b$
@@ -289,7 +154,7 @@ Observatie 2: voor $f,g \in \mathcal{L}^p(I,\bbF)$
 
   ![](riemannlebesgue.png)
 
-## Lebesgue-integraal
+## Lebesgue-integraal {.scrollable}
 
 * Probleem zit verdoken in de maat $\mu(E_k)$:
 
@@ -338,7 +203,7 @@ Observatie 2: voor $f,g \in \mathcal{L}^p(I,\bbF)$
   * $L^p_w(I,\bbF)$ met norm $\norm{f}_{p,w} = \left(\int_{I} w(x) \abs{f(x)}^p \,\drm x\right)^{1/p}$
     voor integreerbare functie $w$ met $w(x)>0$ voor alle $x \in I$
   
-## Bijkomende opmeringen
+## Bijkomende opmeringen {.scrollable}
 
 * $I = [a,b]$ (compact): $L^p(I,\bbF) \subspace L^q(I,\bbF)$ als $p > q$
 
@@ -366,7 +231,7 @@ Observatie 2: voor $f,g \in \mathcal{L}^p(I,\bbF)$
 
 # Hilbertruimten en inwendig product
 
-## Hilbertruimten en inwendig product
+## Hilbertruimten en inwendig product {.scrollable}
 
 * $L^2(I,\bbF)$ is een Hilbertruimte: $\norm{\cdot}_2$ voldoet aan parallellogramregel en is afkomstig van het inwendig product
 
@@ -396,7 +261,7 @@ Observatie 2: voor $f,g \in \mathcal{L}^p(I,\bbF)$
 * Verschillende families van orthogonale polynomen
   (door keuzes van $I$ en $w$)
 
-## Orthogonale veeltermen
+## Orthogonale veeltermen {.scrollable}
 
 Gram-Schmidt algoritme toegepast op $\{x^n, n\in\bbN_0\}$ $\Rightarrow$ $\{p_n(x), n \in \bbN_0\}$ met
 
@@ -433,7 +298,7 @@ Gram-Schmidt algoritme toegepast op $\{x^n, n\in\bbN_0\}$ $\Rightarrow$ $\{p_n(x
 
   de nulpunten van $p_n$ liggen tussen deze van $p_{n+1}$ in (alternerend)
 
-## Orthogonale veeltermen: Legendre
+## Orthogonale veeltermen: Legendre {.scrollable}
 
 * $I = [-1,+1]$, $w(x)=1$:
 
@@ -457,7 +322,7 @@ Gram-Schmidt algoritme toegepast op $\{x^n, n\in\bbN_0\}$ $\Rightarrow$ $\{p_n(x
 
   * Rodrigues formule: $P_n(x) = \frac{1}{2^n n!} \frac{\drm^n\ }{\drm x^n} (x^2 -1)^n$
 
-## Orthogonale veeltermen: Hermite
+## Orthogonale veeltermen: Hermite {.scrollable}
 
 * $I = \bbR$, $w(x)=\exp(-x^2)$: (polynomen worden kwadratisch integreerbaar)
 
@@ -485,7 +350,7 @@ Gram-Schmidt algoritme toegepast op $\{x^n, n\in\bbN_0\}$ $\Rightarrow$ $\{p_n(x
 
   is orthogonale fundamentele verzameling (basis) voor $L^2(\bbR,\bbF)$
 
-## Orthogonale veeltermen: Laguerre
+## Orthogonale veeltermen: Laguerre {.scrollable}
 
 * $I = [0,+\infty)$, $w(x)=\exp(-x)$:
 
@@ -509,7 +374,7 @@ Gram-Schmidt algoritme toegepast op $\{x^n, n\in\bbN_0\}$ $\Rightarrow$ $\{p_n(x
 
   * Rodrigues formule: $L_n(x) = \frac{\erm^x}{n!} \frac{\drm^n\ }{\drm x^n} (x^n \erm^{-x})$
 
-## Orthogonale veeltermen: Chebyshev
+## Orthogonale veeltermen: Chebyshev {.scrollable}
 
 * $I = [-1,1]$, $w(x) = (1-x^2)^{-1/2}$:
 
@@ -535,7 +400,7 @@ Gram-Schmidt algoritme toegepast op $\{x^n, n\in\bbN_0\}$ $\Rightarrow$ $\{p_n(x
 
 $\rightarrow$ vooral in numerieke analyse, statistiek, minder in fysica
 
-## Toepassing: Gaussische kwadratuur
+## Toepassing: Gaussische kwadratuur {.scrollable}
 
 * Numerieke benadering van integraal op basis van functiewaarden op een discrete, eindige verzameling $\{x_i \in I; i=1,\ldots,n\}$:
   
@@ -563,7 +428,7 @@ $\rightarrow$ vooral in numerieke analyse, statistiek, minder in fysica
 
   met $b^k = \int_I w(x) x^k\,\drm x$: lineair systeem met Vandermonde matrix
 
-## Toepassing: Gaussische kwadratuur
+## Toepassing: Gaussische kwadratuur {.scrollable}
 
 * Kunnen we beter doen als we de $\{x_i\}$ slim kiezen?
   
@@ -590,7 +455,7 @@ $\rightarrow$ vooral in numerieke analyse, statistiek, minder in fysica
 
 # Fourierreeksen
 
-## Periodieke functies
+## Periodieke functies {.scrollable}
 * periodieke functies $f:\bbR \to \bbC$ met $f(x+L) = f(x)$
   * functiewaarden $x \in [0,L)$ $\to$ periodiek uitbreiden
   * functie op circel $\cong$ 1-dimensionale torus $\bbT^1 = \bbR/(L\bbZ)$.
@@ -609,7 +474,7 @@ $\rightarrow$ vooral in numerieke analyse, statistiek, minder in fysica
 
 	$$\left\{\varphi_{\vec{k}}(\vec{x}) = \frac{1}{(L_1 L_2 \dots L_d)^{1/2}} \erm^{+\irm (\frac{2\pi}{L_1} k_1 x_1 + \dots + \frac{2\pi}{L_d} k_d x_d)}; \vec{k} \in \bbZ^d\right\}$$
 
-## Trigonometrische veeltermen en Fouriercoefficiënten
+## Trigonometrische veeltermen en Fouriercoefficiënten {.scrollable}
 
 * **Fouriercoefficiënten**: $\widehat{f}_k = \inner{\varphi_k}{f} = \frac{1}{\sqrt{L}} \int_{0}^{L} f(x) \erm^{-\irm \frac{2\pi}{L} k x}\,\drm x$ ($\forall k \in \bbZ$)
 
@@ -625,7 +490,7 @@ $\rightarrow$ vooral in numerieke analyse, statistiek, minder in fysica
 * **Fourierreeks**:
   $$\lim_{n \to \infty} \frac{1}{\sqrt{L}} \sum_{k=-n}^{+n} \widehat{f}_k \erm^{+\irm\frac{2\pi}{L} k x}$$
 
-## Fouriercoefficiënten: eigenschappen
+## Fouriercoefficiënten: eigenschappen {.scrollable}
 
 $$\widehat{f}_k = \inner{\varphi_k}{f} = \frac{1}{\sqrt{L}} \int_{0}^{L} f(x) \erm^{-\irm \frac{2\pi}{L}k x}\,\drm x$$
 
@@ -653,7 +518,7 @@ $$\widehat{f}_k = \inner{\varphi_k}{f} = \frac{1}{\sqrt{L}} \int_{0}^{L} f(x) \e
 
   $h(x) = (f \ast g)(x) = \int_0^L f(x-y \mod L) g(y)\,\drm y \implies \widehat{h}_k = \sqrt{L} \widehat{f}_k \widehat{g}_k$
 
-## Convergentie (geen stellingen/bewijzen)
+## Convergentie (geen stellingen/bewijzen) {.scrollable}
 
 * Beschouw $f_n = \frac{1}{\sqrt{L}} \sum_{k=-n}^{+n} \widehat{f}_k \erm^{+\irm\frac{2\pi}{L} k x}$
 
@@ -674,7 +539,7 @@ $$\widehat{f}_k = \inner{\varphi_k}{f} = \frac{1}{\sqrt{L}} \int_{0}^{L} f(x) \e
   
   $\implies \sum_{k \in \bbZ} \abs{\widehat{f}_k}^2 = \norm{\widehat{f}}_2^2$ en dus voor grote $k$: $\abs{\widehat{f}_k}$ daalt sneller dan $\abs{k}^{-1/2}$
 
-## Gladheid en convergentiesnelheid
+## Gladheid en convergentiesnelheid {.scrollable}
 
 * Een periodieke functie is continu, i.e. $f \in C^0(\bbT^1_L)$, als
   	\begin{align*}
@@ -694,7 +559,7 @@ $$\widehat{f}_k = \inner{\varphi_k}{f} = \frac{1}{\sqrt{L}} \int_{0}^{L} f(x) \e
 
     $\implies$ Fourierreeks voor $f$ convergeert uniform
 
-## Convoluties herbekeken
+## Convoluties herbekeken {.scrollable}
 
 * convolutie $h = f \ast g \leftrightarrow \widehat{h}_k = \sqrt{L} \widehat{f}_k \ast \widehat{g}_k$
 
@@ -716,7 +581,7 @@ $$\widehat{f}_k = \inner{\varphi_k}{f} = \frac{1}{\sqrt{L}} \int_{0}^{L} f(x) \e
 
     continuïteit van $f$ en $g$ noodzakelijk maar niet voldoende
 
-## Stuksgewijze continuïteit en Gibbsfenoneem
+## Stuksgewijze continuïteit en Gibbsfenomeen
 
 * $f(x) = H(x) = \frac{1}{2}(1 + \sgn(x))$ op interval $[-L/2,+L/2]$
 
@@ -736,7 +601,7 @@ $$\widehat{f}_k = \inner{\varphi_k}{f} = \frac{1}{\sqrt{L}} \int_{0}^{L} f(x) \e
 
     $\qquad \stackrel{m\to\infty}{\longrightarrow} \frac{1}{2} + \frac{1}{\pi} \int_0^\pi \frac{\sin(x)}{x}\,\drm x$
 
-## Stuksgewijze continuïteit en Gibbsfenoneem
+## Stuksgewijze continuïteit en Gibbsfenomeen
 
 * Gibbsfenomeen: functie met discontinuïteit $f(x_0^{\pm}) = f_0 \pm  \frac{1}{2} a$
   * $\lim_{n\to\infty} f_n(x_0) = f_0$
@@ -745,7 +610,7 @@ $$\widehat{f}_k = \inner{\varphi_k}{f} = \frac{1}{\sqrt{L}} \int_{0}^{L} f(x) \e
 
 * ![](gibbs.png){width=75%}
 
-## Relatie met discrete Fouriertransformatie
+## Relatie met discrete Fouriertransformatie {.scrollable}
 
 * $f(x) = \frac{1}{\sqrt{L}} \sum_{k \in \bbZ}\widehat{f}_k \erm^{+\irm \frac{2\pi}{L} k x}.$
 
@@ -767,7 +632,7 @@ $$\widehat{f}_k = \inner{\varphi_k}{f} = \frac{1}{\sqrt{L}} \int_{0}^{L} f(x) \e
 
 # Operatoren op Hilbertruimten
 
-## Veelvoorkomende operatoren op functieruimten
+## Veelvoorkomende operatoren op functieruimten {.scrollable}
 
 Hilbertuimte $H = L^2(I,\bbC)$: lineaire afbeeldingen $f \mapsto g$ met $f,g \in H$
 
@@ -787,7 +652,7 @@ Hilbertuimte $H = L^2(I,\bbC)$: lineaire afbeeldingen $f \mapsto g$ met $f,g \in
 
     $\rightarrow$ $\map{M}_h$ als integraaloperator met $A(x,y) = h(x)\delta(x-y)$ ? (zie later)
 
-## Veelvoorkomende operatoren op functieruimten
+## Veelvoorkomende operatoren op functieruimten {.scrollable}
 
 * Differentiaaloperatoren:
   * bekendste voorbeeld: $g(x) = (\map{D}f)(x) = f'(x)$
@@ -818,7 +683,7 @@ Voor functies met domein $\bbR^d$:
 
 * voor de hand liggende uitbreiding, en ook rotatie-operator.
 
-## Domein van een operator
+## Domein van een operator {.scrollable}
 
 * Sommige operatoren hebben niet de volledige Hilbertruimte als domein:
   * $\map{D}$ kan enkel op afleidbare functies werken
@@ -854,7 +719,7 @@ Voor functies met domein $\bbR^d$:
   * als fysici denken we meestal niet na over domein
   * behalve voor afleidingsoperatoren: randvoorwaarden (zie later)
 
-## Begrensde en onbegrensde operatoren
+## Begrensde en onbegrensde operatoren {.scrollable}
 
 * Integraaloperator:
 
@@ -889,7 +754,7 @@ Voor functies met domein $\bbR^d$:
 
   $\rightarrow \norm{f_n}_2 = \frac{L}{2}$ en $\norm{f'_n}_2 = \pi n$ voor arbitraire $n \in \bbN_0$
 
-## Begrensde en onbegrensde operatoren
+## Begrensde en onbegrensde operatoren {.scrollable}
 
 * $[\map{A},\map{B}] = \idmap$ (of technisch: restrictie $\subset \idmap$):
 
@@ -915,7 +780,7 @@ Voor functies met domein $\bbR^d$:
 
     (beide onbegrensd; domein $\D_{\map{A}^\pm} = \{\vv \in \ell^2(\bbN) | \sum_{n \in \bbN} n \abs{\vv_n}^2 < \infty\}$)
 
-## Toegevoegde van een onbegrensde operator
+## Toegevoegde van een onbegrensde operator {.scrollable}
 
 * Definitie van toegevoegde operator: mogelijke problemen
   * $\vv\mapsto \inner{\vw}{\map{A}\vv}$ is niet langer een continue lineaire functionaal op $H$
@@ -930,7 +795,7 @@ Voor functies met domein $\bbR^d$:
 
   4. uniciteit, lineairiteit van $\map{A}^\dagger$ en andere eigenschappen volgen zoals gewoonlijk
 
-## Toegevoegde: eigenschappen en voorbeelden
+## Toegevoegde: eigenschappen en voorbeelden {.scrollable}
 
 * Voorbeeld 1: $\inner{\vw}{\map{A}^-\vv} = \sum_{n \in \bbN} \sqrt{n+1} \overline{w^n} v^{n+1} = \inner{\map{A}^+\vw}{\vv}$ voor alle $\vv,\vw$ met $\sum_{n \in \bbN} n \abs{v_n}^2 < \infty$
   $\Rightarrow \map{A}^+ = (\map{A}^-)^\dagger$: domein van deze operatoren is reeds maximaal
@@ -947,7 +812,7 @@ Voor functies met domein $\bbR^d$:
 
   $\rightarrow$ $\map{A} \subset \map{A}^{\dagger\dagger}$ ($\D_{\map{A}^{\dagger\dagger}}$ bevat alle $\vv$ zodat $\vw \mapsto \inner{\vv}{\map{A}^\dagger\vw} = \conj{\inner{\map{A}^\dagger \vw}{\vv}}$ continu is voor alle $\vw \in \D_{\map{A}^\dagger}$: zeker voldaan $\vv \in \D_{\map{A}}$)
 
-## Symmetrische en zelftoegevoegde operatoren
+## Symmetrische en zelftoegevoegde operatoren {.scrollable}
 
 * **symmetrische / hermitische / hermitisch symmetrische operator**:
   $$\inner{\vw}{\map{A}\vv} = \inner{\map{A}\vw}{\vv}, \forall \vv,\vw \in \D\,\!_{\map{A}}$$
@@ -969,7 +834,7 @@ Voor functies met domein $\bbR^d$:
   $$\Rightarrow \map{A} \subset \map{A}^{\dagger\dagger} \subset \map{A}^\dagger$$
 
 
-## Uitgebreid voorbeeld
+## Uitgebreid voorbeeld {.scrollable}
 
 Beschouw de operator $\map{P}$ met actie $(\map{P}f)(x)=-\irm f'(x)$ en de identiteit
  \begin{align*}
@@ -989,7 +854,7 @@ Beschouw de operator $\map{P}$ met actie $(\map{P}f)(x)=-\irm f'(x)$ en de ident
   * $\map{P}_2^\dagger = \map{P}_1$: $\map{P}_2 \subset \map{P}_1$
   * $\map{P}_2^{\dagger\dagger} = \map{P}_1^\dagger = \map{P}_2$
 
-## Uitgebreid voorbeeld
+## Uitgebreid voorbeeld {.scrollable}
 
 Beschouw de operator $\map{P}$ met actie $(\map{P}f)(x)=-\irm f'(x)$ en de identiteit
  \begin{align*}
@@ -1009,7 +874,7 @@ Beschouw de operator $\map{P}$ met actie $(\map{P}f)(x)=-\irm f'(x)$ en de ident
   * nog steeds $\map{P}_4^\dagger = \map{P}_1$
   * $\map{P}_4^{\dagger\dagger} = \map{P}_2$ $\Rightarrow$ $\map{P}_4 \subset \map{P}_4^{\dagger\dagger} \subset \map{P}_4^\dagger$
 
-## Uitgebreid voorbeeld
+## Uitgebreid voorbeeld {.scrollable}
 
 Kunnen we een extensie vinden van $\map{P}_2$ waarvoor $\map{P}_3 = \map{P}_3^\dagger$ ? 
 
@@ -1044,7 +909,7 @@ Kunnen we een extensie vinden van $\map{P}_2$ waarvoor $\map{P}_3 = \map{P}_3^\d
 
 (geen bewijzen)
 
-## Eigenwaarden en eigenvectoren
+## Eigenwaarden en eigenvectoren {.scrollable}
 
 Eigenwaarden van operatoren op oneindig-dimensionale Hilbertruimten:
 
@@ -1067,7 +932,7 @@ Eigenwaarden van operatoren op oneindig-dimensionale Hilbertruimten:
  	0,&\text{elsewhere}
  	\end{cases}$ voldoet aan $\norm{x f(x) - \lambda f(x)}^2 = \int_{\lambda-\epsilon}^{\lambda+\epsilon} \frac{(x-\lambda)^2}{2\epsilon}\,\drm x = \frac{\epsilon^2}{3}$ voor alle $\lambda \in [a,b]$
 
-## Compacte operatoren
+## Compacte operatoren {.scrollable}
 
 * compacte operatoren (deelverzameling van begrende operatoren)
   * klasse van operatoren die zich meer als een "matrix" gedragen
@@ -1107,7 +972,7 @@ Eigenwaarden van operatoren op oneindig-dimensionale Hilbertruimten:
   * veralgemening van singuliere waardendecompositie
   * van belang voor definitie van kwantumverstrengeling ("entanglement")
 
-## Spectrum van algemene operatoren
+## Spectrum van algemene operatoren {.scrollable}
 
 * Operator $\map{A}$ met dicht domein $\D_{\map{A}}$ en bereik $\mathcal{R}_{\map{A}}$ is injectief indien $\ker(\map{A})=\{\zerovec\}$
   
@@ -1124,7 +989,7 @@ Eigenwaarden van operatoren op oneindig-dimensionale Hilbertruimten:
 
   * Het complement in $\bbC$ is het **spectrum**  $\sigma_{\map{A}}$ van $\map{A}$, en is dus een gesloten deelverzameling van $\bbC$
 
-## Spectrum van algemene operatoren
+## Spectrum van algemene operatoren {.scrollable}
 
 * spectrum $\sigma_{\map{A}}$ bevat verschillende bijdragen:
   * **puntspectrum** $\sigma^{(\text{p})}_{\map{A}}$: $\lambda \in \bbC$ waarvoor $\nullity(\map{A}-\lambda \idmap) > 0$ (de inverse kan niet worden gedefinieerd); dit zijn de echte eigenwaarden en eigenvectoren
@@ -1167,7 +1032,7 @@ Eigenwaarden van operatoren op oneindig-dimensionale Hilbertruimten:
 
     $\Rightarrow \sigma^{(\text{c})} = \{0\}$
 
-## Spectrum van algemene operatoren: voorbeelden
+## Spectrum van algemene operatoren: voorbeelden {.scrollable}
 
 * Op $H = \ell^2(\bbN_0)$: verschuivingsoperatoren
 	

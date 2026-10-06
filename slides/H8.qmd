@@ -2,147 +2,12 @@
 title: "Hoofdstuk 8 - Lineaire differentiaaloperatoren"
 author: "Jutho Haegeman"
 date: "11/24/2025"
-# format:
-#   revealjs:
-#     theme: solarized
-#     html-math-method: katex
-#     smaller: true
-#     chalkboard: true
 ---
 
 ## Doel van dit hoofdstuk
 
 
-::: {.hidden}
-$$
-% Math operators
-\DeclareMathOperator{\Aut}{Aut}
-\DeclareMathOperator{\End}{End}
-\DeclareMathOperator{\Hom}{Hom}
-\DeclareMathOperator{\GL}{GL}
-\DeclareMathOperator{\SL}{SL}
-\DeclareMathOperator{\Unitary}{U}
-\DeclareMathOperator{\Orthogonal}{O}
-\DeclareMathOperator{\SU}{SU}
-\DeclareMathOperator{\SO}{SO}
-\DeclareMathOperator{\Aff}{Aff}
-\DeclareMathOperator{\dom}{dom}
-\DeclareMathOperator{\cod}{codom}
-\DeclareMathOperator{\D}{\mathcal{D}}
-\DeclareMathOperator{\E}{\mathcal{E}}
-\DeclareMathOperator{\R}{\mathcal{R}}
-\DeclareMathOperator{\Schw}{\mathcal{S}}
-\DeclareMathOperator{\im}{im}
-%\DeclareMathOperator{\ker}{ker}
-%\DeclareMathOperator{\dim}{dim}
-\DeclareMathOperator{\codim}{codim}
-\DeclareMathOperator{\convhull}{co}
-
-\newcommand{\opgreek}[1]{\begingroup\mathgroup-1 #1\endgroup}
-\DeclareMathOperator{\rank}{rank}
-\DeclareMathOperator{\nullity}{nullity}
-
-\DeclareMathOperator{\Pv}{Pv}
-
-\DeclareMathOperator{\tr}{tr}
-\DeclareMathOperator{\sgn}{sgn}
-\DeclareMathOperator{\id}{id}
-\DeclareMathOperator{\adj}{adj}
-
-\DeclareMathOperator*{\varmin}{min}
-\DeclareMathOperator*{\varmax}{max}
-\DeclareMathOperator*{\argmin}{arg\ min}
-\DeclareMathOperator*{\argmax}{arg\ max}
-\DeclareMathOperator{\order}{\mathscr{O}}
-\DeclareMathOperator{\sign}{sgn}
-\DeclareMathOperator{\spanop}{span}
-\DeclareMathOperator{\arctanh}{arctanh}
-\DeclareMathOperator{\arccosh}{arccosh}
-\DeclareMathOperator{\arcsinh}{arcsinh}
-\DeclareMathOperator{\arccot}{arccot}
-\DeclareMathOperator{\sinc}{sinc}
-
-
-\newcommand{\commutator}[2]{{\left[#1,#2\right]}}
-\newcommand{\anticommutator}[2]{{\left\{#1,#2\right\}}}
-
-\DeclareMathOperator{\real}{Re}
-\DeclareMathOperator{\imag}{Im}
-\newcommand{\conj}[1]{{\overline{#1}}}
-\newcommand{\abs}[1]{{\left\lvert#1\right\rvert}}
-\newcommand{\norm}[1]{{\left\lVert#1\right\rVert}}
-\newcommand{\inner}[2]{{\left\langle#1,#2\right\rangle}}
-
-\newcommand{\drm}{{\mathrm{d}}}
-\newcommand{\erm}{{\mathrm{e}}}
-\newcommand{\irm}{{\mathrm{i}}}
-
-
-% VECTORS
-\newcommand{\vect}[1]{{#1}}
-\renewcommand{\vec}[1]{\boldsymbol{#1}} % specifically for vectors in F^n
-\newcommand{\zerovec}{{o}}
-\renewcommand{\vu}{\vect{u}}
-\newcommand{\vv}{\vect{v}}
-\newcommand{\vw}{\vect{w}}
-\newcommand{\ve}{\vect{e}}
-\newcommand{\vf}{\vect{f}}
-\newcommand{\vx}{\vect{x}}
-\newcommand{\vy}{\vect{y}}
-
-% MATRICES
-\newcommand{\mat}[1]{{\mathsf{#1}}}
-\newcommand{\zeromat}{\mat{O}}
-\newcommand{\idmat}{\mat{I}}
-
-% SCALARS
-\newcommand{\scalara}{{a}}
-\newcommand{\scalarb}{{b}}
-\newcommand{\scalarc}{{c}}
-
-% LINEAR MAPS
-\DeclareMathAlphabet{\mymathbb}{U}{BOONDOX-ds}{m}{n}
-\newcommand{\map}[1]{{\hat{#1}}}
-\newcommand{\idmap}{\map{1}}
-\newcommand{\zeromap}{\map{0}}
-
-\newcommand{\transpose}{{\mathsf{T}}}
-\newcommand{\hermitian}{{\mathsf{H}}}
-
-\renewcommand{\d}{{\mathrm{d}}}
-
-% FIELDS
-\newcommand{\bbF}{{\mathbb{F}}}
-\newcommand{\bbN}{{\mathbb{N}}}
-\newcommand{\bbZ}{{\mathbb{Z}}}
-\newcommand{\bbQ}{{\mathbb{Q}}}
-\newcommand{\bbR}{{\mathbb{R}}}
-\newcommand{\bbC}{{\mathbb{C}}}
-\newcommand{\bbH}{{\mathbb{H}}}
-\newcommand{\bbT}{{\mathbb{T}}}
-
-% RELATIONS
-\newcommand{\subspace}{{\preccurlyeq}}
-\newcommand{\supspace}{{\succcurlyeq}}
-
-\newcommand{\eps}{{\varepsilon}}
-\newcommand{\levicivita}{{\epsilon}}
-
-\newcommand{\sx}{{\sigma^x}}
-\newcommand{\sy}{{\sigma^y}}
-\newcommand{\sz}{{\sigma^z}}
-\renewcommand{\sp}{{\sigma^+}}
-\newcommand{\sm}{{\sigma^-}}
-
-\DeclareMathOperator*{\sumint}{
-\mathchoice
-  {\ooalign{$\displaystyle\sum$\cr\hidewidth$\displaystyle\int$\hidewidth\cr}}
-  {\ooalign{\raisebox{.14\height}{\scalebox{.7}{$\textstyle\sum$}}\cr\hidewidth$\textstyle\int$\hidewidth\cr}}
-  {\ooalign{\raisebox{.2\height}{\scalebox{.6}{$\scriptstyle\sum$}}\cr$\scriptstyle\int$\cr}}
-  {\ooalign{\raisebox{.2\height}{\scalebox{.6}{$\scriptstyle\sum$}}\cr$\scriptstyle\int$\cr}}
-}
-$$
-:::
+{{< include _macros.qmd >}}
 
 * Lineaire differentiaalvergelijkingen + randvoorwaarden
   * Beginvoorwaardeproblemen
@@ -154,7 +19,7 @@ $$
 
 # Differentiaaloperatoren en hun toegevoegde
 
-## Lineaire differentiaalvergelijkingen
+## Lineaire differentiaalvergelijkingen {.scrollable}
 
 * Lineaire differentiaalvergelijking:
 
@@ -228,7 +93,7 @@ $\rightarrow$ hoe kunnen we het bestaan en de uniciteit van de oplossingen karak
 
     * soms willen we ook de (homogene) randvoorwaarden opnemen in het domein van $\map{L}$
 
-## Superpositie
+## Superpositie {.scrollable}
 
 * **superpositie** = belangrijkste eigenschap/gevolg van lineariteit
 
@@ -250,7 +115,7 @@ $\rightarrow$ hoe kunnen we het bestaan en de uniciteit van de oplossingen karak
 
   $$(\map{L} u)(x) = 0, \quad \forall a < x < b\qquad \text{with}\ B_i[u] = 0, \forall i=1,\ldots,m$$
 
-## Superpositie: structuur van de oplossingen
+## Superpositie: structuur van de oplossingen {.scrollable}
 
 * We ontbinden de oplossing van het algemene probleem als $u = u_0 + u_f + u_\gamma$:
 
@@ -270,7 +135,7 @@ $\rightarrow$ hoe kunnen we het bestaan en de uniciteit van de oplossingen karak
 
   $\rightarrow$ wanneer is het bestaan van $u_f$ en $u_\gamma$ gegarandeerd?
 
-## Existentie en uniciteit
+## Existentie en uniciteit {.scrollable}
 
 * Existentie van $u_\gamma$ is voor later
 * Voor $u_0$ en $u_f$ definiëren we de nu het domein van de differentiaaloperator als:
@@ -291,7 +156,7 @@ $\rightarrow$ hoe kunnen we het bestaan en de uniciteit van de oplossingen karak
 
   * zonder bewijs: ook voldoende voorwaarde (gekend als "Fredholm alternative theorem") voor zogenaamde Fredholm operatoren: omvat bepaalde klassen van differentiaaloperatoren 
 
-## Toegevoegde operator
+## Toegevoegde operator {.scrollable}
 
 * We zijn geïnteresseerd in de kernel van de toegevoegde operator, i.e.
 
@@ -314,7 +179,7 @@ $\rightarrow$ hoe kunnen we het bestaan en de uniciteit van de oplossingen karak
   met hierin $J(u(x),v(x)) = \sum_{j=0}^{p} \sum_{k=0}^{j-1} (-1)^k \left(\frac{\drm^k\ }{\drm x^k}[ a_j(x) \overline{v(x)}]\right)\left(\frac{\drm^{j-1-k}\ }{\drm x^{j-1-k}}u(x)\right)$  
   (bilineaire concomitant)
 
-## Toegevoegde operator: randvoorwaarden
+## Toegevoegde operator: randvoorwaarden {.scrollable}
 
 * De identiteit van Lagrange geïntegreerd over $[a,b]$ = identiteit van Green:
   
@@ -337,7 +202,7 @@ $\rightarrow$ hoe kunnen we het bestaan en de uniciteit van de oplossingen karak
     
     $$\vec{y}^\hermitian \mat{P}\mat{K} = \vec{0}^\hermitian \Leftrightarrow (\mat{P}\mat{K})^\hermitian \vec{y} = \vec{0}$$
 
-## Toegevoegde operator: voorbeeld
+## Toegevoegde operator: voorbeeld {.scrollable}
 
 * $\map{L}=-\map{D}^2$ op het interval $[0,1]$:
   * formeel toegevoegde: $\map{L}^\dagger = -\map{D}^2$ (formeel zelftoegevoegd)
@@ -356,7 +221,7 @@ $\rightarrow$ hoe kunnen we het bestaan en de uniciteit van de oplossingen karak
 
       $\rightarrow$ $\map{L}$ is symmetrisch maar niet zelftoegevoegd
 
-## Toegevoegde operator en existentie: voorbeeld
+## Toegevoegde operator en existentie: voorbeeld {.scrollable}
 
 $$-u''(x) = f(x)$$
 
@@ -394,7 +259,7 @@ Algemene conclusies: voor een fysisch probleem willen graag dat de oplossing:
 
 $\Rightarrow$ dit zullen we enkel kunnen bereiken met $m = 2p-m = p$ randvoorwaarden
 
-## Zelftoegevoegde differentiaaloperatoren
+## Zelftoegevoegde differentiaaloperatoren {.scrollable}
 
 * Zelftoegevoegde operatoren hebben nuttige eigenschappen (vb spectrum)
 * Eindig-dimensionaal:
@@ -409,7 +274,7 @@ $\Rightarrow$ dit zullen we enkel kunnen bereiken met $m = 2p-m = p$ randvoorwaa
       (altijd zelftoegevoegd)
     * $\inner{v}{\map{D}u}_w = \inner{\map{D}^\dagger v}{u}_w$ $\rightarrow$ $(\map{D}^\dagger v)(x) = -\frac{1}{w(x)} \frac{\drm\ }{\drm x} \left[w(x)v(x)\right]$ 
 
-## Zelftoegevoegde differentiaaloperatoren
+## Zelftoegevoegde differentiaaloperatoren {.scrollable}
 
 * Veralgemeende Lagrange-identiteit:
   $$w(x) \overline{v(x)} (\map{L}u)(x) - w(x) \overline{(\map{L}^\dagger v)(x)} u(x) = \frac{\drm\ }{\drm x} J(u(x),v(x))$$
@@ -435,7 +300,7 @@ $\Rightarrow$ dit zullen we enkel kunnen bereiken met $m = 2p-m = p$ randvoorwaa
 
 * reguliere Sturm-Liouville operator: $p(a)\neq 0$, $p(b)\neq 0$
 
-## Sturm-Liouville operator: randvoorwaarden
+## Sturm-Liouville operator: randvoorwaarden {.scrollable}
 
 Reguliere Sturm-Liouville operator is zelftoegevoegd voor:
 
@@ -500,7 +365,7 @@ $$\frac{\drm \vec{z}}{\drm t}(t) = \mat{A}(t) \vec{z}(t),\  a<t<b,\quad \text{me
 	\end{bmatrix}
 \end{align*}
 
-## Homogene oplossing
+## Homogene oplossing {.scrollable}
 
 * autonome geval ($\mat{A}(t) =\mat{A}(0)=\mat{A}$):
   
@@ -539,7 +404,7 @@ Belangrijkste ingrediënten uit het bewijs:
   
   $\Rightarrow$ reeks convergeert absoluut
 
-## Tijdsordening en tijdsgeordende exponentiële
+## Tijdsordening en tijdsgeordende exponentiële {.scrollable}
 
 In de (kwantum)fysica wordt vaak de **tijdsordening** "operator" (procedure) ingevoerd:
 
@@ -557,7 +422,7 @@ Daarmee geldt: $\int_c^t\drm t_1\int_c^{t_1}\drm t_2 \mat{A}(t_1)\mat{A}(t_2) =\
 
 $\Rightarrow \mathcal{T}\exp$ = **tijdsgeordende exponentiële**
 
-## Fundamentale matrixoplossing
+## Fundamentale matrixoplossing {.scrollable}
 
 Beschouw een matrixfunctie $[a,b]\to\bbF^{p \times r}: t \mapsto \mat{Z}(t)$, zodat de kolommen van $\mat{Z}(t)$ oplossingen zijn van de homogene differentiaalvergelijking $\dot{\vec{z}}(t) = \mat{A}(t) \vec{z}(t)$ zonder randvoorwaarden:
 
@@ -573,7 +438,7 @@ Beschouw een matrixfunctie $[a,b]\to\bbF^{p \times r}: t \mapsto \mat{Z}(t)$, zo
 
   (m.b.v. Jacobi's formule uit H2: $\frac{\drm\ }{\drm t} \det\big(\mat{A}(t)\big) = \det\big(\mat{A}(t)\big) \tr\left(\mat{A}(t)^{-1} \frac{\drm \mat{A}}{\drm t}(t)\right)$)
 
-## Fundamentale matrices
+## Fundamentale matrices {.scrollable}
 
 * Fundamentale matrices $\mat{Z}(t)$ en $\tilde{\mat{Z}}(t)$ van dezelfde vergelijking $\dot{\vec{z}}(t) = \mat{A}(t) \vec{z}(t)$:
 
@@ -593,7 +458,7 @@ Beschouw een matrixfunctie $[a,b]\to\bbF^{p \times r}: t \mapsto \mat{Z}(t)$, zo
 
   $\rightarrow \det\left[\mathcal{T} \exp\left(\int_{t_0}^t \mat{A}(\tau)\,\drm \tau\right)\right] = \exp\left[\int_{t_0}^{t} \tr\big(\mat{A}(\tau)\big)\,\drm \tau\right]$ veralgemening van $\det\left[\exp(\mat{A})\right] = \exp\left(\tr[\mat{A}]\right)$
 
-## Fundamentele matrices en Wronskiaan
+## Fundamentele matrices en Wronskiaan {.scrollable}
 
 terug naar scalaire functies $u(t)$
 
@@ -613,7 +478,7 @@ terug naar scalaire functies $u(t)$
 
   Wronskiaan = determinant van fundamentele matrix voor equivalent eerste-orde probleem $\Rightarrow$ Liouville = **Abel's formule**: $W(t) = W(t_0) \erm^{-\int_{t_0}^t \frac{a_{p-1}(\tau)}{a_p(\tau)}\,\drm \tau}$
 
-## Wronskiaan en Abel's formule
+## Wronskiaan en Abel's formule {.scrollable}
 
 Voor $p=2$
 
@@ -630,7 +495,7 @@ Voor $p=2$
 
     met $\frac{\drm\ }{\drm t} \log p(t) = \frac{1}{p(t)} \frac{\drm\ }{\drm t} p(t) = \frac{a_1(t)}{a_2(t)}$
 
-## Theorema van Floquet
+## Theorema van Floquet {.scrollable}
 
 $\frac{\drm \vec{z}}{\drm t} (t) = \mat{A}(t) \vec{z}(t)$ met $\mat{A}(t+T) =\mat{A}(t)$ (periodiek)
 
@@ -648,7 +513,7 @@ $\frac{\drm \vec{z}}{\drm t} (t) = \mat{A}(t) \vec{z}(t)$ met $\mat{A}(t+T) =\ma
   * periodieke potentialen voor electronen: Bloch-golven (vastestoffysica)
 
 
-## Inhomogene oplossing
+## Inhomogene oplossing {.scrollable}
 
 $$\frac{\drm \vec{z}}{\drm t}(t) = \mat{A}(t) \vec{z}(t) + \vec{b}(t),\quad a < t < b\qquad \text{met}\ \vec{z}(t_0) = \vec{\zeta}$$
 
@@ -662,7 +527,7 @@ $$\frac{\drm \vec{z}}{\drm t}(t) = \mat{A}(t) \vec{z}(t) + \vec{b}(t),\quad a < 
     &= \mat{Z}(t,t_0) \vec{\zeta} + \int_{t_0}^{t} \mat{Z}(t,\tau) \vec{b}(\tau)\,\drm \tau.
   \end{align*}
 
-## Analyciteit van de oplossingen
+## Analyciteit van de oplossingen {.scrollable}
 
 * $\mat{A}(t)$ en $\mat{b}(t)$ analytisch zijn in $[a,b]$:
   * de oplossing $\vec{z}(t)$ is analytisch in $[a,b]$
@@ -681,7 +546,7 @@ $$\frac{\drm \vec{z}}{\drm t}(t) = \mat{A}(t) \vec{z}(t) + \vec{b}(t),\quad a < 
 
   differentiaalvergelijking $\rightarrow$ recursierelatie voor coefficiënten $u_k$
 
-## Voorbeeld Taylorreeks (1)
+## Voorbeeld Taylorreeks (1) {.scrollable}
 
 Airy-vergelijking / Stokes-vergelijking (toepassingen in kwantummechanica en optica):
   
@@ -702,7 +567,7 @@ $$\ddot{u}(t) - t u(t) = 0$$
 
   * **Airy-functie** $\mathrm{Ai}(t) = \frac{1}{3^{2/3} \Gamma\left(\frac{2}{3}\right)} u_a(t) - \frac{1}{3^{1/3} \Gamma\left(\frac{1}{3}\right)} u_b(t)$ daalt naar nul voor $t>0$
 
-## Voorbeeld Taylorreeks (2)
+## Voorbeeld Taylorreeks (2) {.scrollable}
 
 Legendre vergelijking (gerelateerd aan Laplace vergelijking in sferische coördinaten):
   
@@ -723,7 +588,7 @@ $$(1-t^2) \ddot{u}(t) - 2t \dot{u}(t) +\nu(\nu+1) = 0$$
     
     $\rightarrow$ andere oplossing: "Legendre-functies van het tweede type"
 
-## Singulier beginvoorwaardeproblemen (zonder bewijs)
+## Singulier beginvoorwaardeproblemen (zonder bewijs) {.scrollable}
 
 * $\mat{A}(t)$ analytisch in $(0,\rho)$ maar met singulariteit voor $t=0$
 
@@ -744,7 +609,7 @@ $$(1-t^2) \ddot{u}(t) - 2t \dot{u}(t) +\nu(\nu+1) = 0$$
 
   (via $\vec{z}(t) = \begin{bmatrix}u(t) & (t-\tau) \dot{u}(t) & (t-\tau)^2 \ddot{u}(t) & \ldots & (t-\tau)^{p-1} u^{(p-1)}(t)\end{bmatrix}^\transpose$)
 
-## Methode van Frobenius
+## Methode van Frobenius {.scrollable}
 
 $p$de orde differentiaalvergelijking met zwak singulier punt bij $t=\tau$:
 
@@ -785,7 +650,7 @@ Voor 2de orde differentiaalvergelijking:
 
     $v(t) = u(t)\int_{t_0}^{t} \frac{1}{p(\tau) u(\tau)^2}\,\drm \tau$
 
-## Voorbeeld zwak singulier punt
+## Voorbeeld zwak singulier punt {.scrollable}
 
 Besselvergelijking (radieel deel van Laplacevergelijking cylindrische coördinaten):
 
@@ -804,7 +669,7 @@ $$t^2 \ddot{u}(t) + t \dot{u}(t) + (t^2 - \nu^2) u(t) = 0$$
   $$J_{\nu}(t)=\left(\frac{t}{2}\right)^\nu \sum_{m=0}^{+\infty} \frac{(-1)^m}{\Gamma(m+1)\Gamma(m+\nu+1)}\left(\frac{t}{2}\right)^{2m}$$
 
 
-## Voorbeeld zwak singulier punt
+## Voorbeeld zwak singulier punt {.scrollable}
 
 Besselvergelijking (radieel deel van Laplacevergelijking cylindrische coördinaten):
 
@@ -846,7 +711,7 @@ $$t^2 \ddot{u}(t) + t \dot{u}(t) + (t^2 - \nu^2) u(t) = 0$$
 
 # Randvoorwaardeproblemen
 
-## Randvoorwaarden
+## Randvoorwaarden {.scrollable}
 
 * $(\map{L}u)(x) = \sum_{j=0}^{p} a_j(x) \frac{\drm^j u}{\drm x^j}(x) =0$ zonder randvoorwaarden:
 
@@ -868,7 +733,7 @@ $$t^2 \ddot{u}(t) + t \dot{u}(t) + (t^2 - \nu^2) u(t) = 0$$
 
   * unieke oplossing voor elke $\gamma$ vereist $m=p$ zodat $\mat{B}\mat{X} = \mat{M}$ een vierkante matrix is $\rightarrow$ noodzakelijk maar niet voldoende
 
-## Randvoorwaarden
+## Randvoorwaarden {.scrollable}
 
 * voorbeeld $-u''(x) = 0$: $u_1(x) = 1$, $u_2(x) = x$ $\rightarrow \mat{Z} = \begin{bmatrix} 1 & x \\ 0 & 1 \end{bmatrix}$
 
@@ -887,7 +752,7 @@ $$t^2 \ddot{u}(t) + t \dot{u}(t) + (t^2 - \nu^2) u(t) = 0$$
 
 * met exact $p$ randvoorwaarden: existentie van $u_\gamma$ voor elke $\vec{\gamma}$ komt overeen met uniciteit: enkel triviale $u_0(x)=0$ voldoet aan volledig homogeen probleem
 
-## Gescheiden randvoorwaarden
+## Gescheiden randvoorwaarden {.scrollable}
 
 * tweede-orde differentiaalvergelijking: **gescheiden randvoorwaarden**:
 
@@ -904,7 +769,7 @@ $$t^2 \ddot{u}(t) + t \dot{u}(t) + (t^2 - \nu^2) u(t) = 0$$
 		\begin{bmatrix} \beta_1 & \beta_2\end{bmatrix} \mat{Z}(b)\\
 	\end{bmatrix}$: $\rank(\mat{M}) > 0 \Rightarrow \nullity \mat{M} < 2$ $\Rightarrow$ volledig homogeen probleem heeft hoogstens één lineair onafhankelijke niet-triviale oplossing $u_0(x)$
 
-## Inhomogene oplossing
+## Inhomogene oplossing {.scrollable}
 
 Oplossing van $(\map{L} u_f)(x) = f(x)$ met $B_i[u_f] = 0$ voor $i=1,\ldots,p$
 
@@ -943,7 +808,7 @@ $$g_\xi(x) = H(\xi-x) \sum_{i=1}^{p} c^j(\xi) u_j(x)  + H(x - \xi) \sum_{i=1}^{p
 
 * coefficiënten $c^j$ en $d^j$ worden opgelegd door randvoorwaarden, continuïteitsvoorwaarden en sprongconditie
 
-## Greense functie
+## Greense functie {.scrollable}
 
 $$u_f(x) = \int_{a}^b g_\xi(x) f(\xi)\,\drm \xi$$
 
@@ -994,7 +859,7 @@ $$u_f(x) = \int_{a}^b g_\xi(x) f(\xi)\,\drm \xi$$
 
   $\rightarrow$ moet automatisch aan toegevoegde randvoorwaarden voldoen
 
-## Greense functie en toegevoegde operator: voorbeeld
+## Greense functie en toegevoegde operator: voorbeeld {.scrollable}
 
 * $-u''(x)=0$ met randvoorwaarden $u(0) = u(1)= 0$: zelftoegevoegd
 
@@ -1031,7 +896,7 @@ $$(\map{L}u)(x) = \lambda u(x),\qquad B_i[u] = 0, i =1,\ldots,m$$
   
       (voorbeeld: Schrödinger vergelijking)
 
-## Eigenwaardeproblemen: voorbeeld
+## Eigenwaardeproblemen: voorbeeld {.scrollable}
 
 * $-u''(x) = \lambda u(x)$:
   * zonder randvoorwaarden: $u(x) = c^1 \sin(\sqrt{\lambda} x) + c^2 \cos(\sqrt{\lambda}x)$
@@ -1049,7 +914,7 @@ $$(\map{L}u)(x) = \lambda u(x),\qquad B_i[u] = 0, i =1,\ldots,m$$
 
 $\Rightarrow$ we beperken ons tot 2de orde zelftoegevoegde operatoren: Sturm-Liouville operatoren met gescheiden (of periodieke) randvoorwaarden
 
-## Regulier Sturm-Liouville probleem
+## Regulier Sturm-Liouville probleem {.scrollable}
 
 \begin{align*}
 (\map{L}u)(x)= -\frac{1}{w(x)} \frac{\drm\ }{\drm x}\left(p(x)\frac{\drm u}{\drm x}(x)\right) + \frac{q(x)}{w(x)} u(x) = \lambda u(x) 
@@ -1073,7 +938,7 @@ Structuur van de oplossingen voor een regulier Sturm-Liouville probleem:
 * Eigenvectors corresponderende met verschillende eigenwaarden zijn orthogonaal met behulp van het gewogen inwendig product $\inner{\ }{\ }_w$ van $L^2_w([a,b])$
 * De eigenvectoren $\{u_n, n \in \bbN\}$ vormen een complete orthonormale basis
 
-## Regulier Sturm-Liouville probleem
+## Regulier Sturm-Liouville probleem {.scrollable}
 
 * Dimensionaliteit van $\ker(\map{L}-\lambda \idmap)$ is 0 of 1 voor gescheiden randvoorwaarden (zie eerder)
 * Orthonormaliteit van eigenvectoren uit zelf-toegevoegd zijn van $\map{L}$
@@ -1104,7 +969,7 @@ Bijkomende gevolgen en eigenschappen
 
   $u_n(x)$ heeft exact $n$ nulpunten in $(a,b)$
 
-## Regulier Sturm-Liouville probleem: voorbeeld
+## Regulier Sturm-Liouville probleem: voorbeeld {.scrollable}
 
 * $\map{L} = -\map{D}^2$ op $L^2([0,L])$ (dus met $w(x)=1$) met Dirichlet voorwaarden $u(0)=u(L)=0$:
 
@@ -1126,7 +991,7 @@ Bijkomende gevolgen en eigenschappen
   
     Oefening op Fourierreeksen!
 
-## Rayleigh-Ritz methode
+## Rayleigh-Ritz methode {.scrollable}
 
 * Voor alle functies $u \in \D_{\map{L}}$ (inclusief randvoorwaarden) geldt
 
@@ -1160,7 +1025,7 @@ $u^\ast = \argmin_{u \in U} \mathcal{R}[u]$
     (veralgemeend eigenwaardeprobleem: op te lossen als $\mat{B}^{-1}\mat{A} \vec{c} = \lambda \vec{c})$
   * voor $\inner{\ve_k}{\ve_l}=\delta_{kl}$: gewoon eigenwaardeprobleem
     
-## Uitbreidingen op Sturm-Liouville theorie
+## Uitbreidingen op Sturm-Liouville theorie {.scrollable}
 
 * $p(a) = p(b)$ en $p(x)$, $p'(x)$, $w(x)$ en $s(x)$ continue in $(a,b]$:
   * periodieke randvoorwaarden: $B_1[u] = u(a)-u(b) = 0$ en $B_2[u] = u'(a)-u'(b)=0$
@@ -1180,7 +1045,7 @@ $u^\ast = \argmin_{u \in U} \mathcal{R}[u]$
 
 * Algemeen: $M < \lambda_0 < \tilde{\lambda}_1 \leq \tilde{\lambda}_2 < \lambda_1 \leq \lambda_2 < \tilde{\lambda}_3 \leq \tilde{\lambda}_4 < \ldots$
 
-## Uitbreidingen op Sturm-Liouville theorie
+## Uitbreidingen op Sturm-Liouville theorie {.scrollable}
 
 * **singulier Sturm-Liouville probleem**:
 
@@ -1223,7 +1088,7 @@ $u^\ast = \argmin_{u \in U} \mathcal{R}[u]$
 
 # Partiële differentiaalvergelijkingen
 
-## Beginvoorwaardeproblemen
+## Beginvoorwaardeproblemen {.scrollable}
 
 * Beschouw:
   * $u_t(x) = u(x,t)$ zodat $u_t \in L^2(I)$ voor elk tijdstip $t$
@@ -1244,7 +1109,7 @@ $u^\ast = \argmin_{u \in U} \mathcal{R}[u]$
 
   * $u_f(x,t) = \int_{t_0}^{t} \drm \tau \sum_{n=0}^{+\infty} \erm^{(t-\tau) \lambda_n} u_n(x) \inner{u_n}{f_\tau} =\int_{t_0}^{t} \drm \tau \sum_{n=0}^{+\infty} \erm^{(t-\tau) \lambda_n} u_n(x) \int_I u_n(y)f(y,\tau)\,\drm y$
 
-## Meerdimensionale Sturm-Liouville operator
+## Meerdimensionale Sturm-Liouville operator {.scrollable}
 
 * Functies $u(\vec{x})$ met $\vec{x} \in \Omega \subseteq \bbR^d$
 * Afgeleide-operatoren $(\map{D}_i u)(\vec{x}) = \frac{\partial u}{\partial x^i}(\vec{x})
@@ -1262,7 +1127,7 @@ $u^\ast = \argmin_{u \in U} \mathcal{R}[u]$
 
     $\left[	\alpha u(\vec{x}) + \beta \sum_{i,j=1}^{d} n^i p_{ij}(\vec{x}) \frac{\partial u}{\partial x^j}(\vec{x}) \right]_{\vec{x}\in \partial \Omega} = 0$ met $n_i$ de normaal op de rand van $\Omega$
 
-## Meerdimensionale Sturm-Liouville operator
+## Meerdimensionale Sturm-Liouville operator {.scrollable}
 
 Sturm-Liouville probleem: $\map{L} u_n(\vec{x}) = \lambda_n u_n(\vec{x})$ waarbij $u_n(\vec{x})$ voldoet aan de randvoorwaarden
 
@@ -1280,7 +1145,7 @@ Sturm-Liouville probleem: $\map{L} u_n(\vec{x}) = \lambda_n u_n(\vec{x})$ waarbi
 
   * met $u(\vec{x})=X(x)Y(y)Z(z)$: $-\frac{X''(x)}{X(x)}	-\frac{Y''(y)}{Y(y)}	-\frac{Z''(z)}{Z(z)} = \lambda$
 
-## Meerdimensionale Sturm-Liouville operator
+## Meerdimensionale Sturm-Liouville operator {.scrollable}
 
 * Voorbeeld: $\map{L} = - \vec{\nabla}^2 = - \Delta = - \map{D}_x^2 - \map{D}_y^2 - \map{D}_z^2$
 

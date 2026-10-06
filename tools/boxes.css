@@ -1,0 +1,20 @@
+/* Boxes for definitions, theorems, examples, ... (tools/boxes.lua), after the lecture notes:
+   a coloured rule on the left, the label in the darkened colour, a light tint for definitions
+   and theorems. Colours: the Julia palette of the notes. */
+.vfr-box {
+  border-left: 3px solid var(--vfr-colour);
+  padding: 0.35em 0.7em;
+  margin: 0.6em 0;
+}
+.vfr-box > :first-child { margin-top: 0; }
+.vfr-box > :last-child { margin-bottom: 0; }
+.vfr-box .vfr-box-label { color: var(--vfr-label); }
+
+.vfr-definitie { --vfr-colour: #389826; --vfr-label: #276a1b; background: rgba(56, 152, 38, 0.10); }
+.vfr-stelling, .vfr-propositie, .vfr-lemma, .vfr-gevolg {
+  --vfr-colour: #CB3C33; --vfr-label: #8e2a24; background: rgba(203, 60, 51, 0.10);
+}
+.vfr-voorbeeld { --vfr-colour: #4063D8; --vfr-label: #2c4597; }
+.vfr-opmerking { --vfr-colour: #9558B2; --vfr-label: #683e7c; }
+.vfr-bewijs { --vfr-colour: #CB3C33; --vfr-label: #8e2a24; }
+

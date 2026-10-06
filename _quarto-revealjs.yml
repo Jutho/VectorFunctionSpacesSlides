@@ -1,0 +1,21 @@
+# Presentation profile: `make revealjs CH=H3` (or `quarto render slides/H3.qmd --profile revealjs --to revealjs`).
+# Output goes to _presentations/ so the published website in docs/ is left alone.
+project:
+  output-dir: _presentations
+  # Theme fonts from Google Fonts are swapped for a cached local copy, so the decks work
+  # offline. Runs after every render, including the re-renders of `quarto preview`.
+  post-render: tools/localize_fonts.py
+
+format:
+  revealjs:
+    theme: solarized
+    # Boxes around definitions, theorems, examples, ... (only in the decks, not on the website)
+    css: tools/boxes.css
+    smaller: true
+    # Local KaTeX copy, put there by the Makefile, so the decks work offline.
+    # The path is relative to the decks in _presentations/slides/.
+    html-math-method:
+      method: katex
+      url: ../katex/
+    chalkboard: true
+    slide-number: true

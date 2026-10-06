@@ -2,147 +2,12 @@
 title: "Hoofdstuk 5 - Inwendig product en orthogonaliteit"
 author: "Jutho Haegeman"
 date: "10/28/2025"
-# format:
-#   revealjs:
-#     theme: solarized
-#     html-math-method: katex
-#     smaller: true
-#     chalkboard: true
 ---
 
 ## Doel van dit hoofdstuk
 
 
-::: {.hidden}
-$$
-% Math operators
-\DeclareMathOperator{\Aut}{Aut}
-\DeclareMathOperator{\End}{End}
-\DeclareMathOperator{\Hom}{Hom}
-\DeclareMathOperator{\GL}{GL}
-\DeclareMathOperator{\SL}{SL}
-\DeclareMathOperator{\Unitary}{U}
-\DeclareMathOperator{\Orthogonal}{O}
-\DeclareMathOperator{\SU}{SU}
-\DeclareMathOperator{\SO}{SO}
-\DeclareMathOperator{\Aff}{Aff}
-\DeclareMathOperator{\dom}{dom}
-\DeclareMathOperator{\cod}{codom}
-\DeclareMathOperator{\D}{\mathcal{D}}
-\DeclareMathOperator{\E}{\mathcal{E}}
-\DeclareMathOperator{\R}{\mathcal{R}}
-\DeclareMathOperator{\Schw}{\mathcal{S}}
-\DeclareMathOperator{\im}{im}
-%\DeclareMathOperator{\ker}{ker}
-%\DeclareMathOperator{\dim}{dim}
-\DeclareMathOperator{\codim}{codim}
-\DeclareMathOperator{\convhull}{co}
-
-\newcommand{\opgreek}[1]{\begingroup\mathgroup-1 #1\endgroup}
-\DeclareMathOperator{\rank}{rank}
-\DeclareMathOperator{\nullity}{nullity}
-
-\DeclareMathOperator{\Pv}{Pv}
-
-\DeclareMathOperator{\tr}{tr}
-\DeclareMathOperator{\sgn}{sgn}
-\DeclareMathOperator{\id}{id}
-\DeclareMathOperator{\adj}{adj}
-
-\DeclareMathOperator*{\varmin}{min}
-\DeclareMathOperator*{\varmax}{max}
-\DeclareMathOperator*{\argmin}{arg\ min}
-\DeclareMathOperator*{\argmax}{arg\ max}
-\DeclareMathOperator{\order}{\mathscr{O}}
-\DeclareMathOperator{\sign}{sgn}
-\DeclareMathOperator{\spanop}{span}
-\DeclareMathOperator{\arctanh}{arctanh}
-\DeclareMathOperator{\arccosh}{arccosh}
-\DeclareMathOperator{\arcsinh}{arcsinh}
-\DeclareMathOperator{\arccot}{arccot}
-\DeclareMathOperator{\sinc}{sinc}
-
-
-\newcommand{\commutator}[2]{{\left[#1,#2\right]}}
-\newcommand{\anticommutator}[2]{{\left\{#1,#2\right\}}}
-
-\DeclareMathOperator{\real}{Re}
-\DeclareMathOperator{\imag}{Im}
-\newcommand{\conj}[1]{{\overline{#1}}}
-\newcommand{\abs}[1]{{\left\lvert#1\right\rvert}}
-\newcommand{\norm}[1]{{\left\lVert#1\right\rVert}}
-\newcommand{\inner}[2]{{\left\langle#1,#2\right\rangle}}
-
-\newcommand{\drm}{{\mathrm{d}}}
-\newcommand{\erm}{{\mathrm{e}}}
-\newcommand{\irm}{{\mathrm{i}}}
-
-
-% VECTORS
-\newcommand{\vect}[1]{{#1}}
-\renewcommand{\vec}[1]{\boldsymbol{#1}} % specifically for vectors in F^n
-\newcommand{\zerovec}{{o}}
-\renewcommand{\vu}{\vect{u}}
-\newcommand{\vv}{\vect{v}}
-\newcommand{\vw}{\vect{w}}
-\newcommand{\ve}{\vect{e}}
-\newcommand{\vf}{\vect{f}}
-\newcommand{\vx}{\vect{x}}
-\newcommand{\vy}{\vect{y}}
-
-% MATRICES
-\newcommand{\mat}[1]{{\mathsf{#1}}}
-\newcommand{\zeromat}{\mat{O}}
-\newcommand{\idmat}{\mat{I}}
-
-% SCALARS
-\newcommand{\scalara}{{a}}
-\newcommand{\scalarb}{{b}}
-\newcommand{\scalarc}{{c}}
-
-% LINEAR MAPS
-\DeclareMathAlphabet{\mymathbb}{U}{BOONDOX-ds}{m}{n}
-\newcommand{\map}[1]{{\hat{#1}}}
-\newcommand{\idmap}{\map{1}}
-\newcommand{\zeromap}{\map{0}}
-
-\newcommand{\transpose}{{\mathsf{T}}}
-\newcommand{\hermitian}{{\mathsf{H}}}
-
-\renewcommand{\d}{{\mathrm{d}}}
-
-% FIELDS
-\newcommand{\bbF}{{\mathbb{F}}}
-\newcommand{\bbN}{{\mathbb{N}}}
-\newcommand{\bbZ}{{\mathbb{Z}}}
-\newcommand{\bbQ}{{\mathbb{Q}}}
-\newcommand{\bbR}{{\mathbb{R}}}
-\newcommand{\bbC}{{\mathbb{C}}}
-\newcommand{\bbH}{{\mathbb{H}}}
-\newcommand{\bbT}{{\mathbb{T}}}
-
-% RELATIONS
-\newcommand{\subspace}{{\preccurlyeq}}
-\newcommand{\supspace}{{\succcurlyeq}}
-
-\newcommand{\eps}{{\varepsilon}}
-\newcommand{\levicivita}{{\epsilon}}
-
-\newcommand{\sx}{{\sigma^x}}
-\newcommand{\sy}{{\sigma^y}}
-\newcommand{\sz}{{\sigma^z}}
-\renewcommand{\sp}{{\sigma^+}}
-\newcommand{\sm}{{\sigma^-}}
-
-\DeclareMathOperator*{\sumint}{
-\mathchoice
-  {\ooalign{$\displaystyle\sum$\cr\hidewidth$\displaystyle\int$\hidewidth\cr}}
-  {\ooalign{\raisebox{.14\height}{\scalebox{.7}{$\textstyle\sum$}}\cr\hidewidth$\textstyle\int$\hidewidth\cr}}
-  {\ooalign{\raisebox{.2\height}{\scalebox{.6}{$\scriptstyle\sum$}}\cr$\scriptstyle\int$\cr}}
-  {\ooalign{\raisebox{.2\height}{\scalebox{.6}{$\scriptstyle\sum$}}\cr$\scriptstyle\int$\cr}}
-}
-$$
-:::
+{{< include _macros.qmd >}}
 
 * Concept van inwendig product:
   
@@ -241,7 +106,7 @@ Herleidt zich tot (symmetrische of antisymmetrische) bilineaire vormen voor $\bb
 
       (eenduidiger: $\tilde{C}_{\bar{\imath}j} = [\mat{T}^{-\hermitian}]_{\bar{\imath}}^{\ \bar{k}}[\mat{T}^{-\transpose}]_{j}^{\ l} C_{\bar{k}l}$ )
 
-## Bilineaire en sesquilineaire vormen {.smaller}
+## Bilineaire en sesquilineaire vormen {.smaller .scrollable}
 
 Bijkomende begrippen:
 
@@ -260,7 +125,7 @@ Bijkomende begrippen:
 
 # Inwendig productruimten
 
-## Inwendig product {.smaller}
+## Inwendig product {.smaller .scrollable}
 
 Inwendig product op vectorruimte $V$ = hermitische, positief definiete sesquilineaire vorm.
 
@@ -298,7 +163,7 @@ Inwendig product op vectorruimte $V$ = hermitische, positief definiete sesquilin
 
 * **Hilbertruimte**: inwendig productruimte die metrisch compleet is
 
-## Inwendig product: voorbeelden (eindig-dimensionaal) {.smaller}
+## Inwendig product: voorbeelden (eindig-dimensionaal) {.smaller .scrollable}
 
 * $V=\bbR^n$: euclidisch inwendig product
   $$\inner{\vec{v}}{\vec{w}}= \vec{v}^\transpose \vec{w} = v^i \delta_{ij} w^j = \sum_{i=1}^n v^i w^i$$
@@ -314,7 +179,7 @@ Inwendig product op vectorruimte $V$ = hermitische, positief definiete sesquilin
 
   $$\inner{\mat{A}}{\mat{B}}= \tr(\mat{A}^\hermitian \mat{B}) = \sum_{i=1}^m\sum_{j=1}^m \overline{A^i_{\ j}} B^i_{\ j}$$
 
-## Inwendig product: voorbeelden (oneindig-dimensionaal) {.smaller}
+## Inwendig product: voorbeelden (oneindig-dimensionaal) {.smaller .scrollable}
 
 * $V=\ell^2(\bbN_0, \bbF)$: rijen $\vec{v} = (v^i \in \bbF)_{i\in \bbN_0}$ waarvoor $\sum_{i=1}^{+\infty} \abs{v^i}^2 < \infty$
 
@@ -350,7 +215,7 @@ Inwendig product op vectorruimte $V$ = hermitische, positief definiete sesquilin
 
 # Orthogonaliteit en unitariteit
 
-## Orthogonaliteit {.smaller}
+## Orthogonaliteit {.smaller .scrollable}
 
 Gegeven een inwendig productruimte $(V,\inner{\ }{\ })$
 
@@ -465,7 +330,7 @@ Beschouw rij $(\ve_n, n \in \bbN_0)$ van orthonormale vectoren:
 * **expansiestelling**: compleet orthonormale rij vormt Schauder basis en elke vector $\vv \in V$ kan worden geëxpandeerd als de convergente reeks
   $$\vv = \sum_{i=1}^{+\infty} \ve_i \inner{\ve_i}{\vv}$$
 
-## Expansiestelling: gevolgen {.smaller}
+## Expansiestelling: gevolgen {.smaller .scrollable}
 
 * expansiecoefficiënten: $(\inner{\ve_i}{\vv})_{i\in \bbN_0}$
 
@@ -487,7 +352,7 @@ Beschouw rij $(\ve_n, n \in \bbN_0)$ van orthonormale vectoren:
 
   relatie $\vv\leftrightarrow (\inner{\ve_i}{\vv})_{i\in \bbN_0}$ is een Hilbertruimte-isomorfisme tussen $V$ en $\ell^2(\bbN_0; \bbF)$
 
-## Expansiestelling: voorbeeld {.smaller}
+## Expansiestelling: voorbeeld {.smaller .scrollable}
 
 * $V = L^2([0,L], \bbC)$: rij $(f_k)_{k\in \bbZ}$ met
 
@@ -505,7 +370,7 @@ Beschouw rij $(\ve_n, n \in \bbN_0)$ van orthonormale vectoren:
 
 * zie hoofdstuk 7 voor meer details
 
-## Gram-Schmidt {.smaller}
+## Gram-Schmidt {.smaller .scrollable}
 
 lineair onafhankelijke vectoren: $S=\{\vv_1,\vv_2,\ldots\}$ 
 
@@ -575,7 +440,7 @@ Als $V$ eindig-dimensionaal met $B_V=\{\ve_1,\ldots,\ve_n\}$:
 
   $\Rightarrow (\vv_\xi)^j = \overline{\xi_i g^{ij}}$
 
-## Lineaire functionalen en vectoren {.smaller}
+## Lineaire functionalen en vectoren {.smaller .scrollable}
 
 Voor $V$ eindig-dimensionaal kunnen we elke lineaire functionaal $\xi$ voorstellen als inwendig product met een geassocieerde vector $\vv_\xi$
 
@@ -612,7 +477,7 @@ Geldt dit ook voor oneindig-dimensionale Hilbertruimten $V$?
 
 # Begrensde lineaire afbeeldingen tussen Hilbertruimten
 
-## Begrensde lineaire afbeeldingen {.smaller}
+## Begrensde lineaire afbeeldingen {.smaller .scrollable}
 
 Hilbertruimten $(V, \inner{\ }{\ }_V)$ en $(W, \inner{\ }{\ }_W)$; lineaire afbeelding $\map{A} \in \mathcal{B}(V,W)$
 
@@ -700,7 +565,7 @@ Oneindig-dimensionaal voorbeeld:
 * $\inner{\vec{w}}{\map{S}\vec{v}} = \conj{w^2} v^1 + \conj{w^3} v^2 + \conj{w^4} v^3 + \dots = \inner{\map{T}\vec{w}}{\vec{v}}$
 * $\Rightarrow \map{T} = \map{S}^\dagger$
 
-## Zelf-toegevoegde operatoren {.smaller}
+## Zelf-toegevoegde operatoren {.smaller .scrollable}
 
 Hilbertruimte $V=W$: operatoren
 
@@ -724,7 +589,7 @@ Hilbertruimte $V=W$: operatoren
 
   * positief (semi)definiet: $\inner{\vv}{\map{A}\vv} > 0$ of $\geq 0$ voor alle $\vv \in V$
 
-## Zelf-toegevoegde operatoren: eigenschappen {.smaller}
+## Zelf-toegevoegde operatoren: eigenschappen {.smaller .scrollable}
 
 * $\map{A}\in\End(V)$ zelftoegevoegd en $\map{A}\vv = \lambda \vv$:
 
@@ -749,7 +614,7 @@ Hilbertruimte $V=W$: operatoren
 
   ($\map{M}_x$ is begrensd voor $L^2([a,b])$ met compact interval $[a,b]$; zie H7)
 
-## Isometrische en unitaire afbeeldingen {.smaller}
+## Isometrische en unitaire afbeeldingen {.smaller .scrollable}
 
 Beschouw $\map{Q}\in \mathcal{B}(V,W)$:
 
@@ -772,7 +637,7 @@ Beschouw $\map{Q}\in \mathcal{B}(V,W)$:
   
   als $\map{U}^{-1}$ bestaat en $\map{U}^\dagger \map{U}=\idmap_V$ $\implies$ $\map{U}^{-1}=\map{U}^\dagger$ en dus $\map{U}\map{U}^\dagger = \idmap_W$
 
-## Isometrische en unitaire afbeeldingen {.smaller}
+## Isometrische en unitaire afbeeldingen {.smaller .scrollable}
 
 * (zoals steeds) $V, W$ met $\dim(V) = \dim(W)$ eindig: isometrisch $\iff$ unitair
 
@@ -795,7 +660,7 @@ Beschouw $\map{Q}\in \mathcal{B}(V,W)$:
 
 * $\map{Q}$ isometrisch maar niet unitair: $\map{Q}\map{Q}^\dagger$ is orthogonale projector
 
-## Isometrische en unitaire matrices {.smaller}
+## Isometrische en unitaire matrices {.smaller .scrollable}
 
 * unitaire matrices $\mat{U} \in \bbC^{n\times n}$: basistransformatie tussen orthonormale basissen
 
@@ -849,7 +714,7 @@ $\map{A}$ een antilineaire operator tussen complexe Hilbertruimten $V$ en $W$
 
   $\Rightarrow$ $\map{A}_{\text{r}}$ en $\map{A}_{\text{i}}$ gelijktijdig diagonaliseerbaar?
 
-## Normale operatoren: eigenschappen {.smaller}
+## Normale operatoren: eigenschappen {.smaller .scrollable}
 
 * $\map{A}\in \End(V)$: normaal $\iff$ $\forall \vv \in V: \norm{\map{A}\vv} = \norm{\map{A}^\dagger\vv}$
 
@@ -869,7 +734,7 @@ $\map{A}$ een antilineaire operator tussen complexe Hilbertruimten $V$ en $W$
 
     $\map{A}$ is diagonaliseerbaar en eigenvectoren kunnen als orthonormale basis gekozen worden (zie H6)
 
-## Hilbert-Schmidt inwendig product {.smaller}
+## Hilbert-Schmidt inwendig product {.smaller .scrollable}
 
 Inwendig product voor lineaire afbeeldingen $\map{A} \in \mathcal{B}(V,W)$?
 
@@ -893,7 +758,7 @@ Inwendig product voor lineaire afbeeldingen $\map{A} \in \mathcal{B}(V,W)$?
 
 # Toepassing: kleinste-kwadratenoplossing
 
-## Overgedetermineerd stelsel {.smaller}
+## Overgedetermineerd stelsel {.smaller .scrollable}
 
 $\mat{A} \vec{x} = \vec{y}$ met $m$ vergelijkingen voor $n < m$ onbekenden:
 
