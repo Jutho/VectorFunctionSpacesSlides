@@ -29,6 +29,11 @@ website:
 
 lang: nl
 
+# Labels "Definitie 4.2." etc. for definitions, theorems, examples, ... (see tools/boxes.lua).
+# On the website they stay plain text; the reveal.js profile adds the boxes (tools/boxes.css).
+filters:
+  - tools/boxes.lua
+
 format:
   html:
     theme: cosmo
