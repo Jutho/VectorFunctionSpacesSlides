@@ -27,6 +27,8 @@ website:
       - href: slides/H9.qmd
         text: H9
 
+lang: nl
+
 format:
   html:
     theme: cosmo
