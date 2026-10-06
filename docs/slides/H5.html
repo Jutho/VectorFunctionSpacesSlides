@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="nl" xml:lang="nl"><head>
 
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.10.18">
@@ -7,7 +7,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Jutho Haegeman">
-<meta name="dcterms.date" content="2025-10-28">
 
 <title>Hoofdstuk 5 - Inwendig product en orthogonaliteit – Vector- en functieruimten – Slides</title>
 <style>
@@ -47,7 +46,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-445b8638c3d06994fee0907d791121c4.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-42a2195ca7e81fc7e69eb97a89bfda50.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -62,17 +61,17 @@ ul.task-list li input[type="checkbox"] {
   ],
   "show-item-context": false,
   "language": {
-    "search-no-results-text": "No results",
-    "search-matching-documents-text": "matching documents",
-    "search-copy-link-title": "Copy link to search",
-    "search-hide-matches-text": "Hide additional matches",
-    "search-more-match-text": "more match in this document",
-    "search-more-matches-text": "more matches in this document",
-    "search-clear-button-title": "Clear",
+    "search-no-results-text": "Geen resultaten",
+    "search-matching-documents-text": "Gevonden documenten",
+    "search-copy-link-title": "Kopieer link om te zoeken",
+    "search-hide-matches-text": "Extra overeenkomsten verbergen",
+    "search-more-match-text": "meer overeenkomst in dit document",
+    "search-more-matches-text": "meer overeenkomsten in dit document",
+    "search-clear-button-title": "Wissen",
     "search-text-placeholder": "",
-    "search-detached-cancel-button-title": "Cancel",
-    "search-submit-button-title": "Submit",
-    "search-label": "Search"
+    "search-detached-cancel-button-title": "Annuleren",
+    "search-submit-button-title": "Verzenden",
+    "search-label": "Zoeken"
   }
 }</script>
 
@@ -133,8 +132,8 @@ window.Quarto = {
     <span class="navbar-title">Vector- en functieruimten – Slides</span>
     </a>
   </div>
-            <div id="quarto-search" class="" title="Search"></div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+            <div id="quarto-search" class="" title="Zoeken"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Schakel navigatie" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
@@ -192,7 +191,7 @@ window.Quarto = {
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
+    <h2 id="toc-title">Op deze pagina</h2>
    
   <ul>
   <li><a href="#doel-van-dit-hoofdstuk" id="toc-doel-van-dit-hoofdstuk" class="nav-link active" data-scroll-target="#doel-van-dit-hoofdstuk">Doel van dit hoofdstuk</a></li>
@@ -274,16 +273,16 @@ window.Quarto = {
 <div class="quarto-title-meta">
 
     <div>
-    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-heading">Auteur</div>
     <div class="quarto-title-meta-contents">
              <p>Jutho Haegeman </p>
           </div>
   </div>
     
     <div>
-    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-heading">Publicatiedatum</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">October 28, 2025</p>
+      <p class="date">28 oktober 2025</p>
     </div>
   </div>
   
@@ -297,6 +296,7 @@ window.Quarto = {
 
 <section id="doel-van-dit-hoofdstuk" class="level2">
 <h2 class="anchored" data-anchor-id="doel-van-dit-hoofdstuk">Doel van dit hoofdstuk</h2>
+<!-- Shared LaTeX macros for all chapters, included near the top of each slides/H*.qmd. -->
 <div class="hidden">
 <p>$$ % Math operators % % </p>
 <p>% VECTORS % specifically for vectors in F^n </p>
@@ -413,8 +413,8 @@ window.Quarto = {
 </ul></li>
 </ul>
 </section>
-<section id="bilineaire-en-sesquilineaire-vormen" class="level2 smaller">
-<h2 class="smaller anchored" data-anchor-id="bilineaire-en-sesquilineaire-vormen">Bilineaire en sesquilineaire vormen</h2>
+<section id="bilineaire-en-sesquilineaire-vormen" class="level2 smaller scrollable">
+<h2 class="smaller scrollable anchored" data-anchor-id="bilineaire-en-sesquilineaire-vormen">Bilineaire en sesquilineaire vormen</h2>
 <p>Bijkomende begrippen:</p>
 <ul>
 <li><p><strong>ontaard</strong>: als een <span class="math inline">{v}\in V</span> bestaat zodat <span class="math inline">C({w},{v})=0</span> voor alle <span class="math inline">{w}\in V</span> <span class="math inline">\Rightarrow \mathop{\mathrm{rank}}({\mathsf{C}}) &lt; \mathop{\mathrm{dim}}(V)</span> of <span class="math inline">\det({\mathsf{C}})=0</span></p></li>
@@ -433,8 +433,8 @@ window.Quarto = {
 </section>
 <section id="inwendig-productruimten" class="level1">
 <h1>Inwendig productruimten</h1>
-<section id="inwendig-product" class="level2 smaller">
-<h2 class="smaller anchored" data-anchor-id="inwendig-product">Inwendig product</h2>
+<section id="inwendig-product" class="level2 smaller scrollable">
+<h2 class="smaller scrollable anchored" data-anchor-id="inwendig-product">Inwendig product</h2>
 <p>Inwendig product op vectorruimte <span class="math inline">V</span> = hermitische, positief definiete sesquilineaire vorm.</p>
 <ul>
 <li><p>notatie: <span class="math inline">V \times V \to {\mathbb{F}}: ({v},{w}) \mapsto {\left\langle{v},{w}\right\rangle}</span></p></li>
@@ -467,8 +467,8 @@ window.Quarto = {
 <li><p><strong>Hilbertruimte</strong>: inwendig productruimte die metrisch compleet is</p></li>
 </ul>
 </section>
-<section id="inwendig-product-voorbeelden-eindig-dimensionaal" class="level2 smaller">
-<h2 class="smaller anchored" data-anchor-id="inwendig-product-voorbeelden-eindig-dimensionaal">Inwendig product: voorbeelden (eindig-dimensionaal)</h2>
+<section id="inwendig-product-voorbeelden-eindig-dimensionaal" class="level2 smaller scrollable">
+<h2 class="smaller scrollable anchored" data-anchor-id="inwendig-product-voorbeelden-eindig-dimensionaal">Inwendig product: voorbeelden (eindig-dimensionaal)</h2>
 <ul>
 <li><p><span class="math inline">V={\mathbb{R}}^n</span>: euclidisch inwendig product <span class="math display">{\left\langle\boldsymbol{v},\boldsymbol{w}\right\rangle}= \boldsymbol{v}^{\mathsf{T}}\boldsymbol{w} = v^i \delta_{ij} w^j = \sum_{i=1}^n v^i w^i</span></p></li>
 <li><p><span class="math inline">V={\mathbb{C}}^n</span>: natuurlijke veralgemening <span class="math display">{\left\langle\boldsymbol{v},\boldsymbol{w}\right\rangle}= \boldsymbol{v}^{\mathsf{H}}\boldsymbol{w} = \overline{v^i} \delta_{ij} w^j = \sum_{i=1}^n \overline{v^i} w^i</span></p>
@@ -478,8 +478,8 @@ window.Quarto = {
 <p><span class="math display">{\left\langle{\mathsf{A}},{\mathsf{B}}\right\rangle}= \mathop{\mathrm{tr}}({\mathsf{A}}^{\mathsf{H}}{\mathsf{B}}) = \sum_{i=1}^m\sum_{j=1}^m \overline{A^i_{\ j}} B^i_{\ j}</span></p></li>
 </ul>
 </section>
-<section id="inwendig-product-voorbeelden-oneindig-dimensionaal" class="level2 smaller">
-<h2 class="smaller anchored" data-anchor-id="inwendig-product-voorbeelden-oneindig-dimensionaal">Inwendig product: voorbeelden (oneindig-dimensionaal)</h2>
+<section id="inwendig-product-voorbeelden-oneindig-dimensionaal" class="level2 smaller scrollable">
+<h2 class="smaller scrollable anchored" data-anchor-id="inwendig-product-voorbeelden-oneindig-dimensionaal">Inwendig product: voorbeelden (oneindig-dimensionaal)</h2>
 <ul>
 <li><p><span class="math inline">V=\ell^2({\mathbb{N}}_0, {\mathbb{F}})</span>: rijen <span class="math inline">\boldsymbol{v} = (v^i \in {\mathbb{F}})_{i\in {\mathbb{N}}_0}</span> waarvoor <span class="math inline">\sum_{i=1}^{+\infty} {\left\lvert v^i\right\rvert}^2 &lt; \infty</span></p>
 <p><span class="math display">\Rightarrow {\left\langle\boldsymbol{v},\boldsymbol{w}\right\rangle} = \sum_{i=1}^{+\infty} \overline{v^i} w^i</span></p>
@@ -509,8 +509,8 @@ window.Quarto = {
 </section>
 <section id="orthogonaliteit-en-unitariteit" class="level1">
 <h1>Orthogonaliteit en unitariteit</h1>
-<section id="orthogonaliteit" class="level2 smaller">
-<h2 class="smaller anchored" data-anchor-id="orthogonaliteit">Orthogonaliteit</h2>
+<section id="orthogonaliteit" class="level2 smaller scrollable">
+<h2 class="smaller scrollable anchored" data-anchor-id="orthogonaliteit">Orthogonaliteit</h2>
 <p>Gegeven een inwendig productruimte <span class="math inline">(V,{\left\langle\ ,\ \right\rangle})</span></p>
 <ul>
 <li><p>orthogonaliteit: <span class="math inline">{v}\perp {w}\iff {\left\langle{v},{w}\right\rangle}=0</span></p>
@@ -614,8 +614,8 @@ window.Quarto = {
 <li><p><strong>expansiestelling</strong>: compleet orthonormale rij vormt Schauder basis en elke vector <span class="math inline">{v}\in V</span> kan worden geëxpandeerd als de convergente reeks <span class="math display">{v}= \sum_{i=1}^{+\infty} {e}_i {\left\langle{e}_i,{v}\right\rangle}</span></p></li>
 </ul>
 </section>
-<section id="expansiestelling-gevolgen" class="level2 smaller">
-<h2 class="smaller anchored" data-anchor-id="expansiestelling-gevolgen">Expansiestelling: gevolgen</h2>
+<section id="expansiestelling-gevolgen" class="level2 smaller scrollable">
+<h2 class="smaller scrollable anchored" data-anchor-id="expansiestelling-gevolgen">Expansiestelling: gevolgen</h2>
 <ul>
 <li><p>expansiecoefficiënten: <span class="math inline">({\left\langle{e}_i,{v}\right\rangle})_{i\in {\mathbb{N}}_0}</span></p>
 <p>ook wel: <em>veralgemeende Fourier-coefficiënten</em> (zie volgende slide)</p></li>
@@ -629,8 +629,8 @@ window.Quarto = {
 <p>relatie <span class="math inline">{v}\leftrightarrow ({\left\langle{e}_i,{v}\right\rangle})_{i\in {\mathbb{N}}_0}</span> is een Hilbertruimte-isomorfisme tussen <span class="math inline">V</span> en <span class="math inline">\ell^2({\mathbb{N}}_0; {\mathbb{F}})</span></p></li>
 </ul>
 </section>
-<section id="expansiestelling-voorbeeld" class="level2 smaller">
-<h2 class="smaller anchored" data-anchor-id="expansiestelling-voorbeeld">Expansiestelling: voorbeeld</h2>
+<section id="expansiestelling-voorbeeld" class="level2 smaller scrollable">
+<h2 class="smaller scrollable anchored" data-anchor-id="expansiestelling-voorbeeld">Expansiestelling: voorbeeld</h2>
 <ul>
 <li><p><span class="math inline">V = L^2([0,L], {\mathbb{C}})</span>: rij <span class="math inline">(f_k)_{k\in {\mathbb{Z}}}</span> met</p>
 <p><span class="math display">f_k(x) = \frac{1}{\sqrt{L}}\exp\left(+{\mathrm{i}}\frac{2\pi}{L} k x\right)</span></p>
@@ -642,8 +642,8 @@ window.Quarto = {
 <li><p>zie hoofdstuk 7 voor meer details</p></li>
 </ul>
 </section>
-<section id="gram-schmidt" class="level2 smaller">
-<h2 class="smaller anchored" data-anchor-id="gram-schmidt">Gram-Schmidt</h2>
+<section id="gram-schmidt" class="level2 smaller scrollable">
+<h2 class="smaller scrollable anchored" data-anchor-id="gram-schmidt">Gram-Schmidt</h2>
 <p>lineair onafhankelijke vectoren: <span class="math inline">S=\{{v}_1,{v}_2,\ldots\}</span></p>
 <p><span class="math inline">\rightarrow</span> orthonormale rij <span class="math inline">(q_1,q_2,\ldots)</span> die zelfde (deel)ruimte opspant</p>
 <p><span class="math inline">\rightarrow</span> meer specifiek: <span class="math inline">{\mathbb{F}}\{{v}_i, i=1,\ldots,n\} = {\mathbb{F}}\{q_i; i=1,\ldots,n\}</span> voor alle <span class="math inline">n</span></p>
@@ -702,8 +702,8 @@ window.Quarto = {
 <p><span class="math inline">\Rightarrow ({v}_\xi)^j = \overline{\xi_i g^{ij}}</span></p></li>
 </ul>
 </section>
-<section id="lineaire-functionalen-en-vectoren" class="level2 smaller">
-<h2 class="smaller anchored" data-anchor-id="lineaire-functionalen-en-vectoren">Lineaire functionalen en vectoren</h2>
+<section id="lineaire-functionalen-en-vectoren" class="level2 smaller scrollable">
+<h2 class="smaller scrollable anchored" data-anchor-id="lineaire-functionalen-en-vectoren">Lineaire functionalen en vectoren</h2>
 <p>Voor <span class="math inline">V</span> eindig-dimensionaal kunnen we elke lineaire functionaal <span class="math inline">\xi</span> voorstellen als inwendig product met een geassocieerde vector <span class="math inline">{v}_\xi</span></p>
 <p>Interpretatie en gevolgen:</p>
 <ul>
@@ -735,8 +735,8 @@ window.Quarto = {
 </section>
 <section id="begrensde-lineaire-afbeeldingen-tussen-hilbertruimten" class="level1">
 <h1>Begrensde lineaire afbeeldingen tussen Hilbertruimten</h1>
-<section id="begrensde-lineaire-afbeeldingen" class="level2 smaller">
-<h2 class="smaller anchored" data-anchor-id="begrensde-lineaire-afbeeldingen">Begrensde lineaire afbeeldingen</h2>
+<section id="begrensde-lineaire-afbeeldingen" class="level2 smaller scrollable">
+<h2 class="smaller scrollable anchored" data-anchor-id="begrensde-lineaire-afbeeldingen">Begrensde lineaire afbeeldingen</h2>
 <p>Hilbertruimten <span class="math inline">(V, {\left\langle\ ,\ \right\rangle}_V)</span> en <span class="math inline">(W, {\left\langle\ ,\ \right\rangle}_W)</span>; lineaire afbeelding <span class="math inline">{\hat{A}} \in \mathcal{B}(V,W)</span></p>
 <ul>
 <li><p>Geinduceerde norm:</p>
@@ -820,8 +820,8 @@ window.Quarto = {
 <li><span class="math inline">\Rightarrow {\hat{T}} = {\hat{S}}^\dagger</span></li>
 </ul>
 </section>
-<section id="zelf-toegevoegde-operatoren" class="level2 smaller">
-<h2 class="smaller anchored" data-anchor-id="zelf-toegevoegde-operatoren">Zelf-toegevoegde operatoren</h2>
+<section id="zelf-toegevoegde-operatoren" class="level2 smaller scrollable">
+<h2 class="smaller scrollable anchored" data-anchor-id="zelf-toegevoegde-operatoren">Zelf-toegevoegde operatoren</h2>
 <p>Hilbertruimte <span class="math inline">V=W</span>: operatoren</p>
 <ul>
 <li><p>een operator is <strong>zelftoegevoegd</strong> als <span class="math inline">{\hat{A}}={\hat{A}}^\dagger</span></p>
@@ -838,8 +838,8 @@ window.Quarto = {
 </ul></li>
 </ul>
 </section>
-<section id="zelf-toegevoegde-operatoren-eigenschappen" class="level2 smaller">
-<h2 class="smaller anchored" data-anchor-id="zelf-toegevoegde-operatoren-eigenschappen">Zelf-toegevoegde operatoren: eigenschappen</h2>
+<section id="zelf-toegevoegde-operatoren-eigenschappen" class="level2 smaller scrollable">
+<h2 class="smaller scrollable anchored" data-anchor-id="zelf-toegevoegde-operatoren-eigenschappen">Zelf-toegevoegde operatoren: eigenschappen</h2>
 <ul>
 <li><p><span class="math inline">{\hat{A}}\in\mathop{\mathrm{End}}(V)</span> zelftoegevoegd en <span class="math inline">{\hat{A}}{v}= \lambda {v}</span>:</p>
 <p><span class="math inline">{\left\langle{v},{\hat{A}}{v}\right\rangle} = {\left\langle{\hat{A}}{v},{v}\right\rangle} \implies \lambda = {\overline{\lambda}}</span> of dus <span class="math inline">\lambda \in {\mathbb{R}}</span></p></li>
@@ -855,8 +855,8 @@ window.Quarto = {
 <p>(<span class="math inline">{\hat{M}}_x</span> is begrensd voor <span class="math inline">L^2([a,b])</span> met compact interval <span class="math inline">[a,b]</span>; zie H7)</p></li>
 </ul>
 </section>
-<section id="isometrische-en-unitaire-afbeeldingen" class="level2 smaller">
-<h2 class="smaller anchored" data-anchor-id="isometrische-en-unitaire-afbeeldingen">Isometrische en unitaire afbeeldingen</h2>
+<section id="isometrische-en-unitaire-afbeeldingen" class="level2 smaller scrollable">
+<h2 class="smaller scrollable anchored" data-anchor-id="isometrische-en-unitaire-afbeeldingen">Isometrische en unitaire afbeeldingen</h2>
 <p>Beschouw <span class="math inline">{\hat{Q}}\in \mathcal{B}(V,W)</span>:</p>
 <ul>
 <li><p>isometrisch <span class="math inline">\iff {\hat{Q}}^\dagger{\hat{Q}}={\hat{1}}_V</span></p>
@@ -870,8 +870,8 @@ window.Quarto = {
 <p>als <span class="math inline">{\hat{U}}^{-1}</span> bestaat en <span class="math inline">{\hat{U}}^\dagger {\hat{U}}={\hat{1}}_V</span> <span class="math inline">\implies</span> <span class="math inline">{\hat{U}}^{-1}={\hat{U}}^\dagger</span> en dus <span class="math inline">{\hat{U}}{\hat{U}}^\dagger = {\hat{1}}_W</span></p></li>
 </ul>
 </section>
-<section id="isometrische-en-unitaire-afbeeldingen-1" class="level2 smaller">
-<h2 class="smaller anchored" data-anchor-id="isometrische-en-unitaire-afbeeldingen-1">Isometrische en unitaire afbeeldingen</h2>
+<section id="isometrische-en-unitaire-afbeeldingen-1" class="level2 smaller scrollable">
+<h2 class="smaller scrollable anchored" data-anchor-id="isometrische-en-unitaire-afbeeldingen-1">Isometrische en unitaire afbeeldingen</h2>
 <ul>
 <li><p>(zoals steeds) <span class="math inline">V, W</span> met <span class="math inline">\mathop{\mathrm{dim}}(V) = \mathop{\mathrm{dim}}(W)</span> eindig: isometrisch <span class="math inline">\iff</span> unitair</p>
 <ul>
@@ -892,8 +892,8 @@ window.Quarto = {
 <li><p><span class="math inline">{\hat{Q}}</span> isometrisch maar niet unitair: <span class="math inline">{\hat{Q}}{\hat{Q}}^\dagger</span> is orthogonale projector</p></li>
 </ul>
 </section>
-<section id="isometrische-en-unitaire-matrices" class="level2 smaller">
-<h2 class="smaller anchored" data-anchor-id="isometrische-en-unitaire-matrices">Isometrische en unitaire matrices</h2>
+<section id="isometrische-en-unitaire-matrices" class="level2 smaller scrollable">
+<h2 class="smaller scrollable anchored" data-anchor-id="isometrische-en-unitaire-matrices">Isometrische en unitaire matrices</h2>
 <ul>
 <li><p>unitaire matrices <span class="math inline">{\mathsf{U}} \in {\mathbb{C}}^{n\times n}</span>: basistransformatie tussen orthonormale basissen</p>
 <ul>
@@ -940,8 +940,8 @@ window.Quarto = {
 <p><span class="math inline">\Rightarrow</span> <span class="math inline">{\hat{A}}_{\text{r}}</span> en <span class="math inline">{\hat{A}}_{\text{i}}</span> gelijktijdig diagonaliseerbaar?</p></li>
 </ul>
 </section>
-<section id="normale-operatoren-eigenschappen" class="level2 smaller">
-<h2 class="smaller anchored" data-anchor-id="normale-operatoren-eigenschappen">Normale operatoren: eigenschappen</h2>
+<section id="normale-operatoren-eigenschappen" class="level2 smaller scrollable">
+<h2 class="smaller scrollable anchored" data-anchor-id="normale-operatoren-eigenschappen">Normale operatoren: eigenschappen</h2>
 <ul>
 <li><p><span class="math inline">{\hat{A}}\in \mathop{\mathrm{End}}(V)</span>: normaal <span class="math inline">\iff</span> <span class="math inline">\forall {v}\in V: {\left\lVert{\hat{A}}{v}\right\rVert} = {\left\lVert{\hat{A}}^\dagger{v}\right\rVert}</span></p></li>
 <li><p><span class="math inline">{\hat{A}} \in \mathop{\mathrm{End}}(V)</span> en normaal en <span class="math inline">{\hat{A}}{v}= \lambda {v}</span>:</p>
@@ -959,8 +959,8 @@ window.Quarto = {
 </ul></li>
 </ul>
 </section>
-<section id="hilbert-schmidt-inwendig-product" class="level2 smaller">
-<h2 class="smaller anchored" data-anchor-id="hilbert-schmidt-inwendig-product">Hilbert-Schmidt inwendig product</h2>
+<section id="hilbert-schmidt-inwendig-product" class="level2 smaller scrollable">
+<h2 class="smaller scrollable anchored" data-anchor-id="hilbert-schmidt-inwendig-product">Hilbert-Schmidt inwendig product</h2>
 <p>Inwendig product voor lineaire afbeeldingen <span class="math inline">{\hat{A}} \in \mathcal{B}(V,W)</span>?</p>
 <ul>
 <li><p>geïnduceerde norm is niet afkomstig van inwendig product</p></li>
@@ -979,8 +979,8 @@ window.Quarto = {
 </section>
 <section id="toepassing-kleinste-kwadratenoplossing" class="level1">
 <h1>Toepassing: kleinste-kwadratenoplossing</h1>
-<section id="overgedetermineerd-stelsel" class="level2 smaller">
-<h2 class="smaller anchored" data-anchor-id="overgedetermineerd-stelsel">Overgedetermineerd stelsel</h2>
+<section id="overgedetermineerd-stelsel" class="level2 smaller scrollable">
+<h2 class="smaller scrollable anchored" data-anchor-id="overgedetermineerd-stelsel">Overgedetermineerd stelsel</h2>
 <p><span class="math inline">{\mathsf{A}} \boldsymbol{x} = \boldsymbol{y}</span> met <span class="math inline">m</span> vergelijkingen voor <span class="math inline">n &lt; m</span> onbekenden:</p>
 <ul>
 <li><p><span class="math inline">{\mathsf{A}} \in {\mathbb{F}}^{m \times n}</span>, <span class="math inline">\boldsymbol{x} \in {\mathbb{F}}^n</span> en <span class="math inline">\boldsymbol{y} \in {\mathbb{F}}^m</span></p></li>
@@ -1028,12 +1028,12 @@ window.Quarto = {
       // flash "checked"
       button.classList.add('code-copy-button-checked');
       var currentTitle = button.getAttribute("title");
-      button.setAttribute("title", "Copied!");
+      button.setAttribute("title", "Gekopieerd!");
       let tooltip;
       if (window.bootstrap) {
         button.setAttribute("data-bs-toggle", "tooltip");
         button.setAttribute("data-bs-placement", "left");
-        button.setAttribute("data-bs-title", "Copied!");
+        button.setAttribute("data-bs-title", "Gekopieerd!");
         tooltip = new bootstrap.Tooltip(button, 
           { trigger: "manual", 
             customClass: "code-copy-button-tooltip",

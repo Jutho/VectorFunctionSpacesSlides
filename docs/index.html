@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="nl" xml:lang="nl"><head>
 
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.10.18">
@@ -47,7 +47,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-445b8638c3d06994fee0907d791121c4.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-42a2195ca7e81fc7e69eb97a89bfda50.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -62,17 +62,17 @@ ul.task-list li input[type="checkbox"] {
   ],
   "show-item-context": false,
   "language": {
-    "search-no-results-text": "No results",
-    "search-matching-documents-text": "matching documents",
-    "search-copy-link-title": "Copy link to search",
-    "search-hide-matches-text": "Hide additional matches",
-    "search-more-match-text": "more match in this document",
-    "search-more-matches-text": "more matches in this document",
-    "search-clear-button-title": "Clear",
+    "search-no-results-text": "Geen resultaten",
+    "search-matching-documents-text": "Gevonden documenten",
+    "search-copy-link-title": "Kopieer link om te zoeken",
+    "search-hide-matches-text": "Extra overeenkomsten verbergen",
+    "search-more-match-text": "meer overeenkomst in dit document",
+    "search-more-matches-text": "meer overeenkomsten in dit document",
+    "search-clear-button-title": "Wissen",
     "search-text-placeholder": "",
-    "search-detached-cancel-button-title": "Cancel",
-    "search-submit-button-title": "Submit",
-    "search-label": "Search"
+    "search-detached-cancel-button-title": "Annuleren",
+    "search-submit-button-title": "Verzenden",
+    "search-label": "Zoeken"
   }
 }</script>
 <script>
@@ -162,8 +162,8 @@ window.Quarto = {
     <span class="navbar-title">Vector- en functieruimten – Slides</span>
     </a>
   </div>
-            <div id="quarto-search" class="" title="Search"></div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+            <div id="quarto-search" class="" title="Zoeken"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Schakel navigatie" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
@@ -252,20 +252,20 @@ window.Quarto = {
 <div class="listing-actions-group">
    <div class="input-group input-group-sm quarto-listing-sort">
     <span class="input-group-text"><i class="bi bi-sort-down"></i></span>
-    <select id="listing-listing-sort" class="form-select" aria-label="Order By" onchange="window['quarto-listings']['listing-listing'].sort(this.options[this.selectedIndex].value, { order: this.options[this.selectedIndex].getAttribute('data-direction')})">
-      <option value="" disabled="" selected="" hidden="">Order By</option>
-      <option value="index" data-direction="asc">Default</option>
+    <select id="listing-listing-sort" class="form-select" aria-label="Sorteer op" onchange="window['quarto-listings']['listing-listing'].sort(this.options[this.selectedIndex].value, { order: this.options[this.selectedIndex].getAttribute('data-direction')})">
+      <option value="" disabled="" selected="" hidden="">Sorteer op</option>
+      <option value="index" data-direction="asc">Standaard</option>
       <option value="listing-date-sort" data-direction="asc">
-        Date - Oldest
+        Datum - Oudste
       </option>
       <option value="listing-date-sort" data-direction="desc">
-        Date - Newest
+        Datum - Nieuwste
       </option>
       <option value="listing-title-sort" data-direction="asc">
-        Title
+        Titel
       </option>
       <option value="listing-author" data-direction="asc">
-        Author
+        Auteur
       </option>
     </select>
   </div>
@@ -279,24 +279,24 @@ window.Quarto = {
 <tr>
 
 <th>
-<a class="sort" data-sort="listing-date-sort" onclick="if (this.classList.contains('sort-asc')) { this.classList.add('sort-desc'); this.classList.remove('sort-asc') } else { this.classList.add('sort-asc'); this.classList.remove('sort-desc')} return false;">Date</a>
+<a class="sort" data-sort="listing-date-sort" onclick="if (this.classList.contains('sort-asc')) { this.classList.add('sort-desc'); this.classList.remove('sort-asc') } else { this.classList.add('sort-asc'); this.classList.remove('sort-desc')} return false;">Datum</a>
 </th>
 
 <th>
-<a class="sort" data-sort="listing-title-sort" onclick="if (this.classList.contains('sort-asc')) { this.classList.add('sort-desc'); this.classList.remove('sort-asc') } else { this.classList.add('sort-asc'); this.classList.remove('sort-desc')} return false;">Title</a>
+<a class="sort" data-sort="listing-title-sort" onclick="if (this.classList.contains('sort-asc')) { this.classList.add('sort-desc'); this.classList.remove('sort-asc') } else { this.classList.add('sort-asc'); this.classList.remove('sort-desc')} return false;">Titel</a>
 </th>
 
 <th>
-<a class="sort" data-sort="listing-author" onclick="if (this.classList.contains('sort-asc')) { this.classList.add('sort-desc'); this.classList.remove('sort-asc') } else { this.classList.add('sort-asc'); this.classList.remove('sort-desc')} return false;">Author</a>
+<a class="sort" data-sort="listing-author" onclick="if (this.classList.contains('sort-asc')) { this.classList.add('sort-desc'); this.classList.remove('sort-asc') } else { this.classList.add('sort-asc'); this.classList.remove('sort-desc')} return false;">Auteur</a>
 </th>
 
 </tr>
 </thead>
 <tbody class="list">
 
-<tr data-index="0" data-listing-date-sort="1789941600000" data-listing-file-modified-sort="1790090202000" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="15" data-listing-word-count-sort="2908" data-listing-title-sort="Hoofdstuk 1 - Elementaire wiskundige structuren" data-listing-filename-sort="H1.qmd">
+<tr data-index="0" data-listing-date-sort="1789941600000" data-listing-file-modified-sort="1790860510610" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="15" data-listing-word-count-sort="2886" data-listing-title-sort="Hoofdstuk 1 - Elementaire wiskundige structuren" data-listing-filename-sort="H1.qmd">
 <td>
-<span class="listing-date">Sep 21, 2026</span>
+<span class="listing-date">21 sep 2026</span>
 </td>
 <td>
 <a href="./slides/H1.html" class="title listing-title">Hoofdstuk 1 - Elementaire wiskundige structuren</a>
@@ -307,9 +307,9 @@ window.Quarto = {
 
 </tr>
 
-<tr data-index="1" data-listing-date-sort="1790028000000" data-listing-file-modified-sort="1790542229906" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="24" data-listing-word-count-sort="4778" data-listing-title-sort="Hoofdstuk 2 - Lineaire afbeeldingen" data-listing-filename-sort="H2.qmd">
+<tr data-index="1" data-listing-date-sort="1790028000000" data-listing-file-modified-sort="1790860510611" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="24" data-listing-word-count-sort="4755" data-listing-title-sort="Hoofdstuk 2 - Lineaire afbeeldingen" data-listing-filename-sort="H2.qmd">
 <td>
-<span class="listing-date">Sep 22, 2026</span>
+<span class="listing-date">22 sep 2026</span>
 </td>
 <td>
 <a href="./slides/H2.html" class="title listing-title">Hoofdstuk 2 - Lineaire afbeeldingen</a>
@@ -320,9 +320,9 @@ window.Quarto = {
 
 </tr>
 
-<tr data-index="2" data-listing-date-sort="1790460000000" data-listing-file-modified-sort="1790549680346" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="23" data-listing-word-count-sort="4591" data-listing-title-sort="Hoofdstuk 3 - Lineaire operatoren en eigenwaarden" data-listing-filename-sort="H3.qmd">
+<tr data-index="2" data-listing-date-sort="1790460000000" data-listing-file-modified-sort="1791205799558" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="23" data-listing-word-count-sort="4577" data-listing-title-sort="Hoofdstuk 3 - Lineaire operatoren en eigenwaarden" data-listing-filename-sort="H3.qmd">
 <td>
-<span class="listing-date">Sep 27, 2026</span>
+<span class="listing-date">27 sep 2026</span>
 </td>
 <td>
 <a href="./slides/H3.html" class="title listing-title">Hoofdstuk 3 - Lineaire operatoren en eigenwaarden</a>
@@ -333,22 +333,22 @@ window.Quarto = {
 
 </tr>
 
-<tr data-index="3" data-listing-date-sort="1791237600000" data-listing-file-modified-sort="1790542905175" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="15" data-listing-word-count-sort="2888" data-listing-title-sort="Hoofdstuk 4 - Normen en afstanden" data-listing-filename-sort="H4.qmd">
+<tr data-index="3" data-listing-date-sort="1791237600000" data-listing-file-modified-sort="1791271340776" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="14" data-listing-word-count-sort="2703" data-listing-title-sort="Hoofdstuk 4 - Normen en afstanden" data-listing-filename-sort="H4.qmd">
 <td>
-<span class="listing-date">Oct 6, 2026</span>
+<span class="listing-date">6 okt 2026</span>
 </td>
 <td>
 <a href="./slides/H4.html" class="title listing-title">Hoofdstuk 4 - Normen en afstanden</a>
 </td>
 <td>
-<span class="listing-author">Jutho Haegeman</span>
+<span class="listing-author">Lander Burgelman</span>
 </td>
 
 </tr>
 
-<tr data-index="4" data-listing-date-sort="1761606000000" data-listing-file-modified-sort="1790090231000" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="19" data-listing-word-count-sort="3730" data-listing-title-sort="Hoofdstuk 5 - Inwendig product en orthogonaliteit" data-listing-filename-sort="H5.qmd">
+<tr data-index="4" data-listing-date-sort="1761606000000" data-listing-file-modified-sort="1790860510613" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="19" data-listing-word-count-sort="3724" data-listing-title-sort="Hoofdstuk 5 - Inwendig product en orthogonaliteit" data-listing-filename-sort="H5.qmd">
 <td>
-<span class="listing-date">Oct 28, 2025</span>
+<span class="listing-date">28 okt 2025</span>
 </td>
 <td>
 <a href="./slides/H5.html" class="title listing-title">Hoofdstuk 5 - Inwendig product en orthogonaliteit</a>
@@ -359,9 +359,9 @@ window.Quarto = {
 
 </tr>
 
-<tr data-index="5" data-listing-date-sort="1762902000000" data-listing-file-modified-sort="1790090234000" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="16" data-listing-word-count-sort="3130" data-listing-title-sort="Hoofdstuk 6 - Unitaire gelijkvormigheid en unitaire equivalentie" data-listing-filename-sort="H6.qmd">
+<tr data-index="5" data-listing-date-sort="1762902000000" data-listing-file-modified-sort="1790860510614" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="16" data-listing-word-count-sort="3122" data-listing-title-sort="Hoofdstuk 6 - Unitaire gelijkvormigheid en unitaire equivalentie" data-listing-filename-sort="H6.qmd">
 <td>
-<span class="listing-date">Nov 12, 2025</span>
+<span class="listing-date">12 nov 2025</span>
 </td>
 <td>
 <a href="./slides/H6.html" class="title listing-title">Hoofdstuk 6 - Unitaire gelijkvormigheid en unitaire equivalentie</a>
@@ -372,9 +372,9 @@ window.Quarto = {
 
 </tr>
 
-<tr data-index="6" data-listing-date-sort="1763420400000" data-listing-file-modified-sort="1790090238000" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="34" data-listing-word-count-sort="6691" data-listing-title-sort="Hoofdstuk 7 - Functieruimten" data-listing-filename-sort="H7.qmd">
+<tr data-index="6" data-listing-date-sort="1763420400000" data-listing-file-modified-sort="1791103067477" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="34" data-listing-word-count-sort="6705" data-listing-title-sort="Hoofdstuk 7 - Functieruimten" data-listing-filename-sort="H7.qmd">
 <td>
-<span class="listing-date">Nov 18, 2025</span>
+<span class="listing-date">18 nov 2025</span>
 </td>
 <td>
 <a href="./slides/H7.html" class="title listing-title">Hoofdstuk 7 - Functieruimten</a>
@@ -385,9 +385,9 @@ window.Quarto = {
 
 </tr>
 
-<tr data-index="7" data-listing-date-sort="1763938800000" data-listing-file-modified-sort="1790090242000" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="34" data-listing-word-count-sort="6786" data-listing-title-sort="Hoofdstuk 8 - Lineaire differentiaaloperatoren" data-listing-filename-sort="H8.qmd">
+<tr data-index="7" data-listing-date-sort="1763938800000" data-listing-file-modified-sort="1790860510617" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="35" data-listing-word-count-sort="6805" data-listing-title-sort="Hoofdstuk 8 - Lineaire differentiaaloperatoren" data-listing-filename-sort="H8.qmd">
 <td>
-<span class="listing-date">Nov 24, 2025</span>
+<span class="listing-date">24 nov 2025</span>
 </td>
 <td>
 <a href="./slides/H8.html" class="title listing-title">Hoofdstuk 8 - Lineaire differentiaaloperatoren</a>
@@ -398,9 +398,9 @@ window.Quarto = {
 
 </tr>
 
-<tr data-index="8" data-listing-date-sort="1764630000000" data-listing-file-modified-sort="1790090247000" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="34" data-listing-word-count-sort="6663" data-listing-title-sort="Hoofdstuk 9 - Fourieranalyse en distributies" data-listing-filename-sort="H9.qmd">
+<tr data-index="8" data-listing-date-sort="1764630000000" data-listing-file-modified-sort="1790860510618" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="34" data-listing-word-count-sort="6674" data-listing-title-sort="Hoofdstuk 9 - Fourieranalyse en distributies" data-listing-filename-sort="H9.qmd">
 <td>
-<span class="listing-date">Dec 2, 2025</span>
+<span class="listing-date">2 dec 2025</span>
 </td>
 <td>
 <a href="./slides/H9.html" class="title listing-title">Hoofdstuk 9 - Fourieranalyse en distributies</a>
@@ -411,9 +411,9 @@ window.Quarto = {
 
 </tr>
 
-<tr data-index="9" data-listing-date-sort="1789941600000" data-listing-file-modified-sort="1790090189000" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="598" data-listing-title-sort="Vector- en functieruimten" data-listing-filename-sort="H0.qmd">
+<tr data-index="9" data-listing-date-sort="1789941600000" data-listing-file-modified-sort="1790860510609" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="575" data-listing-title-sort="Vector- en functieruimten" data-listing-filename-sort="H0.qmd">
 <td>
-<span class="listing-date">Sep 21, 2026</span>
+<span class="listing-date">21 sep 2026</span>
 </td>
 <td>
 <a href="./slides/H0.html" class="title listing-title">Vector- en functieruimten</a>
@@ -426,7 +426,7 @@ window.Quarto = {
 
 </tbody>
 </table>
-<div class="listing-no-matching d-none">No matching items</div>
+<div class="listing-no-matching d-none">Geen overeenkomsten</div>
 </div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
@@ -453,12 +453,12 @@ window.Quarto = {
       // flash "checked"
       button.classList.add('code-copy-button-checked');
       var currentTitle = button.getAttribute("title");
-      button.setAttribute("title", "Copied!");
+      button.setAttribute("title", "Gekopieerd!");
       let tooltip;
       if (window.bootstrap) {
         button.setAttribute("data-bs-toggle", "tooltip");
         button.setAttribute("data-bs-placement", "left");
-        button.setAttribute("data-bs-title", "Copied!");
+        button.setAttribute("data-bs-title", "Gekopieerd!");
         tooltip = new bootstrap.Tooltip(button, 
           { trigger: "manual", 
             customClass: "code-copy-button-tooltip",
