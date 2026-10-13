@@ -95,7 +95,7 @@ $V = \bbR^2$: $\norm{(x,y)} = \sqrt{x^2 + y^2}$
 :::
 
 ::: {.voorbeeld}
-$V = C(I,\bbF)$ voor een interval $I=[a,b] \subseteq \bbR$: $\norm{f} = \int_I \abs{f(x)}\,\drm x$ (zie later)
+$V = C^0(I,\bbF)$ voor een interval $I=[a,b] \subseteq \bbR$: $\norm{f} = \int_I \abs{f(x)}\,\drm x$ (zie later)
 :::
 
 ## Hölder $p$-norm
@@ -133,7 +133,7 @@ Speciale gevallen:
 De "lengte" van $\vv = (1, 1)$ hangt af van de norm
 :::
 ::: {.column width="50%"}
-Eenheidssferen $\norm{\vv}_p = 1$ in $\bbR^2$ voor $p \in \{1, 2, 4, \infty\}$
+Eenheids"sferen" $\norm{\vv}_p = 1$ in $\bbR^2$ voor $p \in \{1, 2, 4, \infty\}$
 :::
 ::::
 
@@ -141,24 +141,29 @@ Eenheidssferen $\norm{\vv}_p = 1$ in $\bbR^2$ voor $p \in \{1, 2, 4, \infty\}$
 
 * $\norm{\cdot}_p$ is absoluut homogeen en positief definiet per constructie.
 
-* Beschouw $q = p/(p-1)$, zodat $1/p + 1/q = 1$:
+* Beschouw $\displaystyle q = \frac{p}{p-1}$, zodat $\displaystyle \frac{1}{p} + \frac{1}{q} = 1$:
 
   ::: {.lemma nr="4.1"}
-  Young's ongelijkheid: $\forall a,b \in \bbR_{\geq 0}: ab \leq \frac{a^p}{p} + \frac{b^q}{q}$
+  Young's ongelijkheid:
+  $$\forall a,b \in \bbR_{\geq 0}: ab \leq \frac{a^p}{p} + \frac{b^q}{q}$$
   :::
 
   ::: {.lemma nr="4.2"}
-  Hölder's ongelijkheid: $\sum_{i=1}^n \abs{v^i}\abs{w^i} \leq \norm{v}_p \norm{w}_q$
+  Hölder's ongelijkheid:
+  $$\sum_{i=1}^n \abs{v^i}\abs{w^i} \leq \norm{\vv}_p \norm{\vw}_q$$
   :::
 
   ::: {.propositie nr="4.3"}
-  Minkowski's ongelijkheid: $\norm{\vv+\vw}_p \leq \norm{\vv}_p + \norm{\vw}_p$
+  Minkowski's ongelijkheid:
+  $$\norm{\vv+\vw}_p \leq \norm{\vv}_p + \norm{\vw}_p$$
   :::
 
 ## Hölder $p$-norm
 
 :::: {.columns}
 ::: {.column width="45%"}
+$\displaystyle q = \frac{p}{p-1}$, $\displaystyle p = \frac{q}{q-1}$
+
 ::: {.lemma nr="4.1"}
 Young's ongelijkheid:
 $$\forall a,b \in \bbR_{\geq 0}: ab \leq \frac{a^p}{p} + \frac{b^q}{q}$$
@@ -260,7 +265,7 @@ Een afbeelding $\Phi:X \to Y$ tussen metrische ruimten $(X,d_X)$ en $(Y,d_Y)$ is
 ::: {.opmerking nr="4.9"}
 * Een isometrische afbeelding is automatisch (uniform) continu ($\delta_\epsilon = \epsilon$)
 * Een isometrische afbeelding is automatisch injectief
-* Een bijectieve isometrische afbeelding definieert een isomorfisme tussen $(X, d_X)$ en $(Y, d_Y)$
+* Een bijectieve isometrische afbeelding definieert een **isomorfisme** tussen $(X, d_X)$ en $(Y, d_Y)$
 :::
 
 ## Metrische ruimten {.scrollable}
@@ -314,7 +319,7 @@ Convergentie: $\lim_{n\to \infty} f_n = f$ als
 
 * $\max_{x\in [a,b]} \abs{f_n(x)-f(x)} < \epsilon$ voor alle $n > N_\epsilon$
 * $\abs{f_n(x)-f(x)} < \epsilon$ voor alle $x \in [a,b]$ voor alle $n > N_\epsilon$
-  * $\Rightarrow$ **uniforme convergentie** van een reeks
+  * $\Rightarrow$ **uniforme convergentie** van een rij
   * $\Rightarrow$ $\norm{f}_{\infty}$ voor continue functies wordt de uniform-norm genoemd
 :::
 
