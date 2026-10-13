@@ -372,7 +372,7 @@ window.Quarto = {
 <p><span class="vfr-box-label"><strong>Voorbeeld 4.2.</strong></span> <span class="math inline">V = {\mathbb{R}}^2</span>: <span class="math inline">{\left\lVert(x,y)\right\rVert} = \sqrt{x^2 + y^2}</span></p>
 </div>
 <div class="vfr-box vfr-voorbeeld">
-<p><span class="vfr-box-label"><strong>Voorbeeld.</strong></span> <span class="math inline">V = C(I,{\mathbb{F}})</span> voor een interval <span class="math inline">I=[a,b] \subseteq {\mathbb{R}}</span>: <span class="math inline">{\left\lVert f\right\rVert} = \int_I {\left\lvert f(x)\right\rvert}\,{\mathrm{d}}x</span> (zie later)</p>
+<p><span class="vfr-box-label"><strong>Voorbeeld.</strong></span> <span class="math inline">V = C^0(I,{\mathbb{F}})</span> voor een interval <span class="math inline">I=[a,b] \subseteq {\mathbb{R}}</span>: <span class="math inline">{\left\lVert f\right\rVert} = \int_I {\left\lvert f(x)\right\rvert}\,{\mathrm{d}}x</span> (zie later)</p>
 </div>
 </section>
 <section id="hölder-p-norm" class="level2">
@@ -405,7 +405,7 @@ window.Quarto = {
 <div class="column" style="width:50%;">
 <p>De “lengte” van <span class="math inline">{v}= (1, 1)</span> hangt af van de norm</p>
 </div><div class="column" style="width:50%;">
-<p>Eenheidssferen <span class="math inline">{\left\lVert{v}\right\rVert}_p = 1</span> in <span class="math inline">{\mathbb{R}}^2</span> voor <span class="math inline">p \in \{1, 2, 4, \infty\}</span></p>
+<p>Eenheids”sferen” <span class="math inline">{\left\lVert{v}\right\rVert}_p = 1</span> in <span class="math inline">{\mathbb{R}}^2</span> voor <span class="math inline">p \in \{1, 2, 4, \infty\}</span></p>
 </div>
 </div>
 </section>
@@ -413,15 +413,15 @@ window.Quarto = {
 <h2 class="anchored" data-anchor-id="hölder-p-norm-2">Hölder <span class="math inline">p</span>-norm</h2>
 <ul>
 <li><p><span class="math inline">{\left\lVert\cdot\right\rVert}_p</span> is absoluut homogeen en positief definiet per constructie.</p></li>
-<li><p>Beschouw <span class="math inline">q = p/(p-1)</span>, zodat <span class="math inline">1/p + 1/q = 1</span>:</p>
+<li><p>Beschouw <span class="math inline">\displaystyle q = \frac{p}{p-1}</span>, zodat <span class="math inline">\displaystyle \frac{1}{p} + \frac{1}{q} = 1</span>:</p>
 <div class="vfr-box vfr-lemma">
-<p><span class="vfr-box-label"><strong>Lemma 4.1.</strong></span> Young’s ongelijkheid: <span class="math inline">\forall a,b \in {\mathbb{R}}_{\geq 0}: ab \leq \frac{a^p}{p} + \frac{b^q}{q}</span></p>
+<p><span class="vfr-box-label"><strong>Lemma 4.1.</strong></span> Young’s ongelijkheid: <span class="math display">\forall a,b \in {\mathbb{R}}_{\geq 0}: ab \leq \frac{a^p}{p} + \frac{b^q}{q}</span></p>
 </div>
 <div class="vfr-box vfr-lemma">
-<p><span class="vfr-box-label"><strong>Lemma 4.2.</strong></span> Hölder’s ongelijkheid: <span class="math inline">\sum_{i=1}^n {\left\lvert v^i\right\rvert}{\left\lvert w^i\right\rvert} \leq {\left\lVert v\right\rVert}_p {\left\lVert w\right\rVert}_q</span></p>
+<p><span class="vfr-box-label"><strong>Lemma 4.2.</strong></span> Hölder’s ongelijkheid: <span class="math display">\sum_{i=1}^n {\left\lvert v^i\right\rvert}{\left\lvert w^i\right\rvert} \leq {\left\lVert{v}\right\rVert}_p {\left\lVert{w}\right\rVert}_q</span></p>
 </div>
 <div class="vfr-box vfr-propositie">
-<p><span class="vfr-box-label"><strong>Propositie 4.3.</strong></span> Minkowski’s ongelijkheid: <span class="math inline">{\left\lVert{v}+{w}\right\rVert}_p \leq {\left\lVert{v}\right\rVert}_p + {\left\lVert{w}\right\rVert}_p</span></p>
+<p><span class="vfr-box-label"><strong>Propositie 4.3.</strong></span> Minkowski’s ongelijkheid: <span class="math display">{\left\lVert{v}+{w}\right\rVert}_p \leq {\left\lVert{v}\right\rVert}_p + {\left\lVert{w}\right\rVert}_p</span></p>
 </div></li>
 </ul>
 </section>
@@ -429,6 +429,7 @@ window.Quarto = {
 <h2 class="anchored" data-anchor-id="hölder-p-norm-3">Hölder <span class="math inline">p</span>-norm</h2>
 <div class="columns">
 <div class="column" style="width:45%;">
+<p><span class="math inline">\displaystyle q = \frac{p}{p-1}</span>, <span class="math inline">\displaystyle p = \frac{q}{q-1}</span></p>
 <div class="vfr-box vfr-lemma">
 <p><span class="vfr-box-label"><strong>Lemma 4.1.</strong></span> Young’s ongelijkheid: <span class="math display">\forall a,b \in {\mathbb{R}}_{\geq 0}: ab \leq \frac{a^p}{p} + \frac{b^q}{q}</span></p>
 </div>
@@ -530,7 +531,7 @@ window.Quarto = {
 <ul>
 <li>Een isometrische afbeelding is automatisch (uniform) continu (<span class="math inline">\delta_\epsilon = \epsilon</span>)</li>
 <li>Een isometrische afbeelding is automatisch injectief</li>
-<li>Een bijectieve isometrische afbeelding definieert een isomorfisme tussen <span class="math inline">(X, d_X)</span> en <span class="math inline">(Y, d_Y)</span></li>
+<li>Een bijectieve isometrische afbeelding definieert een <strong>isomorfisme</strong> tussen <span class="math inline">(X, d_X)</span> en <span class="math inline">(Y, d_Y)</span></li>
 </ul>
 </div>
 </section>
@@ -584,7 +585,7 @@ window.Quarto = {
 <li><span class="math inline">\max_{x\in [a,b]} {\left\lvert f_n(x)-f(x)\right\rvert} &lt; \epsilon</span> voor alle <span class="math inline">n &gt; N_\epsilon</span></li>
 <li><span class="math inline">{\left\lvert f_n(x)-f(x)\right\rvert} &lt; \epsilon</span> voor alle <span class="math inline">x \in [a,b]</span> voor alle <span class="math inline">n &gt; N_\epsilon</span>
 <ul>
-<li><span class="math inline">\Rightarrow</span> <strong>uniforme convergentie</strong> van een reeks</li>
+<li><span class="math inline">\Rightarrow</span> <strong>uniforme convergentie</strong> van een rij</li>
 <li><span class="math inline">\Rightarrow</span> <span class="math inline">{\left\lVert f\right\rVert}_{\infty}</span> voor continue functies wordt de uniform-norm genoemd</li>
 </ul></li>
 </ul>
