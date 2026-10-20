@@ -26,6 +26,8 @@ website:
         text: H8
       - href: slides/H9.qmd
         text: H9
+      - href: slides/H10.qmd
+        text: H10
 
 lang: nl
 

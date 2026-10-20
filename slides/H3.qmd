@@ -1,5 +1,6 @@
 ---
 title: "Hoofdstuk 3 - Lineaire operatoren en eigenwaarden"
+order: 3
 author: "Jutho Haegeman"
 date: "09/27/2026"
 ---

@@ -1,5 +1,6 @@
 ---
 title: "Hoofdstuk 2 - Lineaire afbeeldingen"
+order: 2
 author: "Jutho Haegeman"
 date: "09/22/2026"
 ---

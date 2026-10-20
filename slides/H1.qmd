@@ -1,5 +1,6 @@
 ---
 title: "Hoofdstuk 1 - Elementaire wiskundige structuren"
+order: 1
 author: "Jutho Haegeman"
 date: "09/21/2026"
 ---
