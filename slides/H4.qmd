@@ -1,5 +1,6 @@
 ---
 title: "Hoofdstuk 4 - Normen en afstanden"
+order: 4
 author: "Lander Burgelman"
 date: "10/06/2026"
 ---
@@ -222,7 +223,7 @@ Voor $V = C^0([a,b],\bbF)$: $\norm{f}_p = \left(\int_a^b \abs{f(x)}^p\,\drm x\ri
   * geen divergenties
   * $\norm{f}_p=0 \implies f=0$
 * Driehoeksongelijkheid kan op analoge manier bewezen worden
-* Meer over functies in H7
+* Meer over functies in H8
 :::
 
 ## Metrische ruimten
@@ -609,7 +610,7 @@ Voor $\mat{A}\in\bbF^{m \times n}$: geïnduceerde norm $\norm{\map{A}}_{p\to q}$
 :::
 
 ::: {.voorbeeld nr="4.16"}
-$\norm{\mat{A}}_{2 \to 2}$ is moeilijker te berekenen, en is gegeven door de grootste "singuliere waarde" (zie H6)
+$\norm{\mat{A}}_{2 \to 2}$ is moeilijker te berekenen, en is gegeven door de grootste "singuliere waarde" (zie H7)
 :::
 
 ## Consistente matrixnormen

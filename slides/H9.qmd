@@ -1,5 +1,6 @@
 ---
 title: "Hoofdstuk 9 - Fourieranalyse en distributies"
+order: 9
 author: "Jutho Haegeman"
 date: "12/02/2025"
 ---
@@ -772,8 +773,8 @@ $\qquad= T[\map{\tau}_{-a} \varphi] = (\map{\tau}_{a} T)[\varphi]$
 
 Tot dusver: Fouriertransformaties gedefinieerd voor functies $f$ met domein
 
-* $\{0,\ldots,N-1\} = \bbZ / (N \bbZ) \cong \bbZ_N$: discrete Fouriertransfomratie (DFT) in H6
-* $[0,L] \cong \bbR/(L \bbZ) \cong \mathbb{T}^{(1)}_L$: Fourierreeks (H7)
+* $\{0,\ldots,N-1\} = \bbZ / (N \bbZ) \cong \bbZ_N$: discrete Fouriertransfomratie (DFT) in H7
+* $[0,L] \cong \bbR/(L \bbZ) \cong \mathbb{T}^{(1)}_L$: Fourierreeks (H8)
 * $\bbR$: Fouriertransformatie (H9)
 
 We kunnen ook een Fouriertransformatie definiëren voor functies $f$ met domein
