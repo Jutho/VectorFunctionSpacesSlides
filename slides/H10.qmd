@@ -157,7 +157,7 @@ $$(\map{L} u)(x) = 0, \quad \forall a < x < b\qquad \text{met}\ B_i[u] = 0, \for
 * Existentie van $u_\gamma$ is voor later
 * Voor $u_0$ en $u_f$ definiëren we nu het domein van de differentiaaloperator als:
 
-  $$\D\,\!_{\map{L}} = \{ u \in L^2([a,b]) | u^{(p)}\ \text{bestaat en}\ u^{(p)} \in L^2([a,b])\ \text{en}\ B_i[u] = 0, \forall i=1,\ldots,m\}$$
+  $$\begin{aligned}\D\,\!_{\map{L}} = \{ u \in L^2([a,b]) \,|\, & u^{(p)}\ \text{bestaat en}\ u^{(p)} \in L^2([a,b]) \\ & \text{en}\ B_i[u] = 0, \forall i=1,\ldots,m\}\end{aligned}$$
 
   * voor uniciteit: $u_0 \in \ker(\map{L}) \Rightarrow \ker(\map{L}) = \{\zerovec\}$?
   * voor bestaan van $u_f$: $f \in \mathcal{R}_{\map{L}} = \{\map{L}u,\forall u \in \D_{\map{L}}\}$?
@@ -345,7 +345,7 @@ Er bestaat een keuze van $w$ die elke reële 2de-orde differentiaaloperator met 
 * Voor Sturm-Liouville operator $\map{L}$: $J(u(x),v(x)) = -p(x) \left[\overline{v(x)}  u'(x) - \overline{v'(x)} u(x)\right]$
 
   \begin{align*}
-    \left[J(u(x),v(x))\right]_a^b &= \vec{y}^\hermitian \mat{P}\vec{x} =\begin{bmatrix}v(a)\\v'(a)\\v(b)\\v'(b)\end{bmatrix}^\hermitian \begin{bmatrix} 0 & +p(a) & 0 & 0 \\ -p(a) & 0 & 0 & 0 \\ 0 & 0 & 0 & -p(b) \\ 0 & 0 & +p(b) & 0\end{bmatrix} \begin{bmatrix}u(a)\\u'(a)\\u(b)\\u'(b)\end{bmatrix}\\
+    \left[J(u(x),v(x))\right]_a^b &= \vec{y}^\hermitian \mat{P}\vec{x} \\ &=\begin{bmatrix}v(a)\\v'(a)\\v(b)\\v'(b)\end{bmatrix}^\hermitian \begin{bmatrix} 0 & +p(a) & 0 & 0 \\ -p(a) & 0 & 0 & 0 \\ 0 & 0 & 0 & -p(b) \\ 0 & 0 & +p(b) & 0\end{bmatrix} \begin{bmatrix}u(a)\\u'(a)\\u(b)\\u'(b)\end{bmatrix}\\
     &= p(b) \det\left(\begin{bmatrix}
       u(b) & \overline{v(b)} \\ u'(b) & \overline{v'(b)}
     \end{bmatrix}\right) - p(a) \det\left(\begin{bmatrix}
@@ -391,7 +391,8 @@ $p(a) = p(b)$ en **periodieke randvoorwaarden**:
 
 ## Beginvoorwaardeprobleem
 
-$$(\map{L} u)(t) = \sum_{j=0}^{p} a_j(t) \frac{\drm^j u}{\drm t^j}(t) = f(t),\  a<t<b,\quad \text{met}\ u^{(i)}(a) = \gamma_i,\  i=0,\ldots,p-1.$$
+$$(\map{L} u)(t) = \sum_{j=0}^{p} a_j(t) \frac{\drm^j u}{\drm t^j}(t) = f(t),\  a<t<b,$$
+$$\text{met}\ u^{(i)}(a) = \gamma_i,\  i=0,\ldots,p-1.$$
 
 * Meestal $t$ in plaats van $x$
 * ::: {.opmerking nr="10.9"}
@@ -651,8 +652,8 @@ $$\frac{\drm \vec{z}}{\drm t}(t) = \mat{A}(t) \vec{z}(t) + \vec{b}(t),\quad a < 
 * Na integratie: $\vec{z}(t) - (\map{\mat{K}}\vec{z})(t) =  \vec{\zeta} + \int_{t_0}^{t} \vec{b}(\tau)\,\drm \tau$
 
   \begin{align*}
-    \Rightarrow \vec{z}(t) &= \mat{Z}(t,t_0) \vec{\zeta} + \sum_{n=0}^{+\infty} \int_{t_0}^t \drm t_1\int_{t_0}^{t_1} \drm t_2 \cdots \int_{t_0}^{t_{n-1}} \drm t_n\int_{t_0}^{t_n} \drm \tau\, \mat{A}(t_1) \mat{A}(t_2) \cdots \mat{A}(t_n) \vec{b}(\tau)\nonumber\\
-    &=\mat{Z}(t,t_0) \vec{\zeta} + \int_{t_0}^{t} \drm \tau \sum_{n=0}^{+\infty} \int_{\tau}^t \drm t_1\int_{\tau}^{t_1} \drm t_2 \cdots \int_{\tau}^{t_{n-1}} \drm t_n\, \mat{A}(t_1) \mat{A}(t_2) \cdots \mat{A}(t_n) \vec{b}(\tau)\nonumber\\
+    \Rightarrow \vec{z}(t) &= \mat{Z}(t,t_0) \vec{\zeta} + \sum_{n=0}^{+\infty} \int_{t_0}^t \drm t_1\int_{t_0}^{t_1} \drm t_2 \cdots \int_{t_0}^{t_{n-1}} \drm t_n\int_{t_0}^{t_n} \drm \tau\\ &\qquad\qquad \mat{A}(t_1) \mat{A}(t_2) \cdots \mat{A}(t_n) \vec{b}(\tau)\nonumber\\
+    &=\mat{Z}(t,t_0) \vec{\zeta} + \int_{t_0}^{t} \drm \tau \sum_{n=0}^{+\infty} \int_{\tau}^t \drm t_1\int_{\tau}^{t_1} \drm t_2 \cdots \int_{\tau}^{t_{n-1}} \drm t_n\\ &\qquad\qquad \mat{A}(t_1) \mat{A}(t_2) \cdots \mat{A}(t_n) \vec{b}(\tau)\nonumber\\
     &= \mat{Z}(t,t_0) \vec{\zeta} + \int_{t_0}^{t} \mat{Z}(t,\tau) \vec{b}(\tau)\,\drm \tau.
   \end{align*}
 
@@ -786,7 +787,7 @@ $p$de orde differentiaalvergelijking met zwak singulier punt bij $t=\tau$:
   u_2(t) &= t^\lambda \big(x_1(t) (\log t) + x_2(t)\big)\\
   u_3(t) &= t^\lambda \left(\frac{1}{2} x_1(t) (\log t)^2 + x_2(t) (\log t) + x_3(t)\right)\\
   \ldots\\
-  u_q(t) &= t^\lambda \left(\frac{1}{(q-1)!} x_1(t) (\log t)^{q-1} + \frac{1}{(q-2)!} x_2(t) (\log t)^{q-2} + \ldots + x_{q}(t)\right)
+  u_q(t) &= t^\lambda \Big(\frac{1}{(q-1)!} x_1(t) (\log t)^{q-1} + \frac{1}{(q-2)!} x_2(t) (\log t)^{q-2}\\ &\qquad\qquad + \ldots + x_{q}(t)\Big)
   \end{align*}
 
   met $x_i(t)$ analytisch (Taylorreeksen)
@@ -1420,12 +1421,12 @@ Sturm-Liouville probleem: $\map{L} u_n(\vec{x}) = \lambda_n u_n(\vec{x})$ waarbi
   * oplossingen:
 
     \begin{align*}
-      \lambda_{k,m,n} = \left(k\frac{\pi}{a}\right)^2 + \left(\left(m+\frac{1}{2}\right) \frac{\pi}{b}\right)^2 + \left(n \frac{\pi}{c}\right)^2,\qquad u_{k,m,n}(\vec{x}) = X_k(x) Y_m(y) Z_n(z)
+      \lambda_{k,m,n} &= \left(k\frac{\pi}{a}\right)^2 + \left(\left(m+\frac{1}{2}\right) \frac{\pi}{b}\right)^2 + \left(n \frac{\pi}{c}\right)^2 \\ u_{k,m,n}(\vec{x}) &= X_k(x) Y_m(y) Z_n(z)
     \end{align*}
     met $k\in\bbN_0$, $m,n\in\bbN$ en
     \begin{align*}
-      X_k(x) &= \sqrt{\frac{2}{a}} \sin\frac{k\pi x}{a},&
-      Y_m(y) &= \sqrt{\frac{2}{b}} \sin\frac{(m+\frac{1}{2})\pi y}{b},&
+      X_k(x) &= \sqrt{\frac{2}{a}} \sin\frac{k\pi x}{a},\\
+      Y_m(y) &= \sqrt{\frac{2}{b}} \sin\frac{(m+\frac{1}{2})\pi y}{b},\\
       Z_n(z) &= \begin{cases}
         \sqrt{\frac{1}{c}},&n = 0\\
         \sqrt{\frac{2}{c}} \cos \frac{n\pi z}{c},&n \geq 1
