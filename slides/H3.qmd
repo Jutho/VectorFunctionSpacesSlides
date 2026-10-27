@@ -33,147 +33,219 @@ Nieuw:
 
 * Functies van operatoren
 
-* Toepassing: Lineaire dynamische sytemen
+* Toepassing: Lineaire dynamische systemen
 
 # Machten en veeltermen
 
-## Machten en veeltermen {.r-fit-text}
+## Machten en veeltermen
 
-Lineaire operator = endomorfisme: $\map{A} \in \End(V) = \Hom(V,V)$
+**Lineaire operator** = endomorfisme: $\map{A} \in \End(V) = \Hom(V,V)$
 
 * $\End(V)$ is een "associatieve algebra met eenheid" = "ring die een vectorruimte is"
-* Machten: aangezien $\map{A}$ een afbeelding $(V \to V)$ is, kunnen we composities nemen van $\map{A}$ met zichzelf:
 
-  $\map{A}^n = \underbrace{\map{A} \circ \map{A} \circ \cdots \circ \map{A}}_{\text{$n$ times}}$ en $\map{A}^0 = \idmap_V$
-* Veeltermen: aangezien $\End(V)$ ook een vectorruimte is, kunnen we lineaire combinaties nemen
+::: {.definitie nr="3.1"}
+**Machten**: aangezien $\map{A}$ een afbeelding $(V \to V)$ is, kunnen we composities nemen van $\map{A}$ met zichzelf:
+$$\map{A}^n = \underbrace{\map{A} \circ \map{A} \circ \cdots \circ \map{A}}_{\text{$n$ keer}} \quad \text{en} \quad \map{A}^0 = \idmap_V$$
+:::
 
-  $p(\map{A}) = p_s \map{A}^s + p_{s-1} \map{A}^{s-1} + \ldots + p_1 \map{A} + p_0 \idmap_V \in \End(V)$
+::: {.definitie nr="3.2"}
+**Veeltermen**: aangezien $\End(V)$ ook een vectorruimte is, kunnen we lineaire combinaties nemen
+$$p(\map{A}) = p_s \map{A}^s + p_{s-1} \map{A}^{s-1} + \ldots + p_1 \map{A} + p_0 \idmap_V \in \End(V)$$
+:::
 
 ## Eigenschappen van veeltermen
 
-* Voor twee veeltermen $p(x)$ en $q(x)$ en $\map{A}\in \End(V)$ geldt
- 
+::: {.propositie nr="3.1"}
+Voor twee veeltermen $p(x)$ en $q(x)$ en $\map{A}\in \End(V)$ geldt
 $$[p(\map{A}),q(\map{A})] = p(\map{A})q(\map{A}) - q(\map{A})p(\map{A}) = \zeromap$$
+:::
 
-* Voor een veelterm $p(x)$, een lineaire operator $\map{A}\in \End(V)$ en een lineaire transformatie (=inverteerbare lineaire afbeelding) $\map{T} \in \Hom(V,W)$ geldt
-
+::: {.propositie nr="3.2"}
+Voor een veelterm $p(x)$, een lineaire operator $\map{A}\in \End(V)$ en een lineaire transformatie (=inverteerbare lineaire afbeelding) $\map{T} \in \Hom(V,W)$ geldt
 $$\underbrace{p(\map{T} \map{A} \map{T}^{-1})}_{\in \End(W)} = \map{T} \underbrace{p(\map{A})}_{\in \End(V)} \map{T}^{-1}$$
+:::
 
 ## Projectie-operator
 
-* Een element $a$ van een ring $R$ dat voldoet aan $a^2 = a$ heet **idempotent**.
+::: {.definitie}
+Een element $a$ van een ring $R$ dat voldoet aan $a^2 = a$ heet **idempotent**.
+:::
 
 * Idempotente lineaire operatoren $\map{P} \in \End(V)$ worden vaak projectie-operatoren, of kortweg projectoren, genoemd, omwille van de volgende eigenschap:
-  * $\map{P}^2 =\map{P} \Rightarrow V = \im(\map{P}) \oplus \ker(\map{P})$
-  * $\forall \vv \in V: \vv = \underbrace{\map{P}\vv}_{\vv_1} + \underbrace{(\idmap - \map{P})\vv}_{\vv_2}$
-  * omgekeerd: gegeven $V = V_1 \oplus V_2$, de decompositie $\vv = \vv_1 + \vv_2$ definieert een **projector op $V_1$ parallel met $V_2$**:
 
-    $\map{P}\vv = \vv_1 \in V_1$ (en $\vv_2 = \vv -\vv_1 = (\idmap - \map{P})\vv$).
+  ::: {.propositie nr="3.3"}
+  $\map{P}^2 =\map{P} \Rightarrow V = \im(\map{P}) \oplus \ker(\map{P})$
+  :::
+
+  * $\forall \vv \in V: \vv = \underbrace{\map{P}\vv}_{\vv_1} + \underbrace{(\idmap - \map{P})\vv}_{\vv_2}$
+
+  ::: {.definitie nr="3.3"}
+  Omgekeerd: gegeven $V = V_1 \oplus V_2$, de decompositie $\vv = \vv_1 + \vv_2$ definieert een **projector op $V_1$ parallel met $V_2$**:
+  $$\map{P}\vv = \vv_1 \in V_1 \quad (\text{en } \vv_2 = \vv -\vv_1 = (\idmap - \map{P})\vv)$$
+  :::
 
 ## Nilpotente operatoren
 
-* Een element $a$ van een ring $R$ dat voldoet aan $a^s = 0$ heet **nilpotent** met index $s$ (als $n=s$ de kleinste waarde is waarvoor $a^n=0$)
+::: {.definitie nr="3.5"}
+Een element $a$ van een ring $R$ dat voldoet aan $a^s = 0$ heet **nilpotent** met index $s$ (als $n=s$ de kleinste waarde is waarvoor $a^n=0$)
+:::
 
-* Nilpotente operatoren $\map{N} \in \End(V)$ voldoen dus aan $\map{N}^s = \zeromap$ en spelen een rol bij de veralgemeene eigenwaardendecompositie
+* Nilpotente operatoren $\map{N} \in \End(V)$ voldoen dus aan $\map{N}^s = \zeromap$ en spelen een rol bij de veralgemeende eigenwaardendecompositie
 
 * Voorbeeld: $\mat{A} = \begin{bmatrix} 0 & c \\ 0 & 0 \end{bmatrix}$ is nilpotent met index $s=2$ (voor elke $c \neq 0$)
 
 ## Annihilerende veeltermen
 
-* Een veelterm $p \in \bbF[x]$ **annihileert** $\map{A}\in \End(V)$ als $p(\map{A})=\zeromap$
-* Voorbeeld: $\map{P}^2 = \map{P} \Rightarrow p(x) = x^2 - x$ annihileert $\map{P}$
+::: {.definitie nr="3.4"}
+Een veelterm $p \in \bbF[x]$ **annihileert** $\map{A}\in \End(V)$ als $p(\map{A})=\zeromap$
+:::
+
+::: {.voorbeeld nr="3.1"}
+$\map{P}^2 = \map{P} \Rightarrow p(x) = x^2 - x$ annihileert $\map{P}$
+:::
+
 * $V$ eindig-dimensionaal $\Rightarrow \dim(\End(V)) = \dim(V)^2$
   * $\Rightarrow$ er bestaat een $s$ waarvoor $\{\map{A}^0,\map{A}^1,\ldots,\map{A}^k\,\ldots,\map{A}^s\}$ niet meer lineair onafhankelijk is
-  * **minimaalveelterm** $m_{\map{A}}(x)= x^s + \ldots$ is de monische veelterm van laagste graad $s$ die $\map{A}$ annihileert en is uniek
-* Elke annihilerende veelterm $p$ van $\map{A}$ voldoet aan
 
-  $p(x) = m_{\map{A}}(x) q(x)$
+  ::: {.propositie nr="3.4"}
+  De **minimaalveelterm** $m_{\map{A}}(x)= x^s + \ldots$ is de monische veelterm van laagste graad $s$ die $\map{A}$ annihileert en is uniek
+  :::
+
+::: {.propositie nr="3.5"}
+Elke annihilerende veelterm $p$ van $\map{A}$ voldoet aan
+$$p(x) = m_{\map{A}}(x) q(x)$$
+:::
 
 # Eigenwaarden, eigenruimten en diagonalisatie
 
 ## Eigenwaarden en eigenvectoren
 
-* $\map{A} \in \End(V)$, $\lambda \in \bbF$, $\vv \in V$ met $\vv \neq \zerovec$:
+::: {.definitie nr="3.6"}
+$\map{A} \in \End(V)$, $\lambda \in \bbF$, $\vv \in V$ met $\vv \neq \zerovec$:
+$$\boxed{\map{A} \vv = \lambda \vv}$$
 
-  $$\map{A} \vv = \lambda \vv$$
+* **Eigenwaarde** (karakteristieke waarde) $\lambda$, **eigenvector** $\vv$
+:::
 
-  * Eigenwaarde (karakteristieke waarde) $\lambda$, eigenvector $\vv$
-  * elke $a \vv$ met $a \neq 0$ is ook een eigenvector
+::: {.opmerking nr="3.6"}
+Elke $a \vv$ met $a \neq 0$ is ook een eigenvector
+:::
 
 ## Eigenwaarden en eigenvectoren
 
-* Belang van het veld $\bbF$: $\mat{A} = \begin{bmatrix}
+::: {.voorbeeld nr="3.5"}
+Belang van het veld $\bbF$: $\mat{A} = \begin{bmatrix}
 		0 & -1 \\ 1 & 0
 	\end{bmatrix}$
-  * $\lambda \in \bbR$: geen
-  * $\lambda \in \bbC$: $\mat{A}(\vec{e}_1 \pm \irm \vec{e}_2) = \mp \irm (\vec{e}_1 \pm \irm \vec{e}_2)$
 
-    $\Rightarrow \lambda = +\irm$ en $\lambda = -\irm$
+* $\lambda \in \bbR$: geen
+* $\lambda \in \bbC$: $\mat{A}(\vec{e}_1 \pm \irm \vec{e}_2) = \mp \irm (\vec{e}_1 \pm \irm \vec{e}_2)$
 
+  $\Rightarrow \lambda = +\irm$ en $\lambda = -\irm$
+:::
 
-* Belang van domein: $\map{D} = \frac{\drm\ }{\drm x}$
-  * Op $C^{\infty}(\bbR,\bbF)$: $\frac{\drm\ }{\drm x} \erm^{\lambda x} = \lambda \erm^{\lambda x}$
-  * Op $\bbF[x]$: geen eigenvectoren / eigenwaarden
+::: {.voorbeeld nr="3.6"}
+Belang van domein: $\map{D} = \frac{\drm\ }{\drm x}$
+
+* Op $C^{\infty}(\bbR,\bbF)$: $\frac{\drm\ }{\drm x} \erm^{\lambda x} = \lambda \erm^{\lambda x}$
+* Op $\bbF[x]$: geen eigenvectoren / eigenwaarden
+:::
 
 ## Eigenruimten
 
-* Eigenruimte $V_\lambda = \{\vv \in V | \map{A} \vv = \lambda \vv\} = \ker(\map{A} - \lambda )$
+::: {.definitie nr="3.7"}
+**Eigenruimte** $V_\lambda = \{\vv \in V | \map{A} \vv = \lambda \vv\} = \ker(\map{A} - \lambda )$
 
-  * $\Rightarrow$ $\lambda$ is eigenwaarde als $\dim(V_\lambda) > 0$
-  * $r_\lambda = \dim(V_\lambda)$: **geometrische multipliciteit**
+* $\Rightarrow$ $\lambda$ is eigenwaarde als $\dim(V_\lambda) > 0$
+* $r_\lambda = \dim(V_\lambda)$: **geometrische multipliciteit**
+:::
 
-* $V$ eindigdimensionaal: $r_\lambda > 0 \Rightarrow \rank(\map{A}-\lambda \idmap) < \dim(V)$ en dus is $\map{A}-\lambda \idmap$ niet injectief en niet-inverteerbaar. Er geldt dus ook $\det(\map{A}-\lambda \idmap)=0$.
+* $V$ eindig-dimensionaal: $r_\lambda > 0 \Rightarrow \rank(\map{A}-\lambda \idmap) < \dim(V)$ en dus is $\map{A}-\lambda \idmap$ niet injectief en niet-inverteerbaar. Er geldt dus ook $\det(\map{A}-\lambda \idmap)=0$.
 
-## Spectrum 
-* Spectrum: $\sigma_{\map{A}} = \{ \lambda \in \bbF | (\map{A} - \lambda)$ heeft geen 'goed gedefinieerde inverse'$\}$
+## Spectrum
 
-* $V$ eindig-dimensionaal: $\sigma = \{\lambda_1,\ldots,\lambda_m\}$ bevat alleen eigenwaarden
+::: {.definitie nr="3.8"}
+**Spectrum**:
+$$\sigma_{\map{A}} = \{ \lambda \in \bbF \,|\, (\map{A} - \lambda) \text{ heeft geen ‘goed gedefinieerde inverse’} \}$$
+:::
+
+::: {.opmerking nr="3.10"}
+$V$ eindig-dimensionaal: $\sigma = \{\lambda_1,\ldots,\lambda_m\}$ bevat alleen eigenwaarden
+:::
 
 * $V$ oneindig-dimensionaal: zie later
 
-* Terzijde: $\map{R}_{\map{A}}(z) = (z\idmap-\map{A})^{-1}$ voor waarden $z \in \bbC \setminus \sigma_{\map{A}}$ is de *resolvent*.
-  
-  Nuttig in theoretische fysica met behulp van technieken uit de complexe analyse.
+::: {.opmerking nr="3.11"}
+Terzijde: $\map{R}_{\map{A}}(z) = (z\idmap-\map{A})^{-1}$ voor waarden $z \in \bbC \setminus \sigma_{\map{A}}$ is de **resolvent**.
+Nuttig in theoretische fysica met behulp van technieken uit de complexe analyse.
+:::
 
 ## Eigenschappen van eigenwaarden en eigenruimten
 
-* $\map{A}\vv = \lambda \vv \Rightarrow p(\map{A})\vv = p(\lambda) \vv$
-* $p(x)$ is een annihilerende veelterm van $\map{A}$: $\lambda$ is een nulpunt van $p$
-* verzameling van eigenvectoren $\{\vv_1,\ldots,\vv_k\}$ horende bij onderling verschillende eigenwaarden $\{\lambda_1,\ldots,\lambda_k\}$ met $\lambda_i\neq \lambda_j$ zijn linear onafhankelijk.
-* $\Rightarrow$ Som van eigenruimten $\sum_{k} V_{\lambda_k}$ wordt directe som $\bigoplus_{k} V_{\lambda_k}$
-* $\Rightarrow \sum_{\lambda \in \sigma_{\map{A}}} r_\lambda \leq \dim(V)$
+::: {.propositie nr="3.6"}
+$\map{A}\vv = \lambda \vv \Rightarrow p(\map{A})\vv = p(\lambda) \vv$
+:::
+
+::: {.gevolg nr="3.7"}
+$p(x)$ is een annihilerende veelterm van $\map{A}$: $\lambda$ is een nulpunt van $p$
+:::
+
+::: {.propositie nr="3.8"}
+Een verzameling van eigenvectoren $\{\vv_1,\ldots,\vv_k\}$ horende bij onderling verschillende eigenwaarden $\{\lambda_1,\ldots,\lambda_k\}$ met $\lambda_i\neq \lambda_j$ is lineair onafhankelijk.
+:::
+
+::: {.propositie nr="3.9"}
+$\Rightarrow$ Som van eigenruimten $\sum_{k} V_{\lambda_k}$ wordt directe som $\bigoplus_{k} V_{\lambda_k}$
+:::
+
+::: {.gevolg nr="3.10"}
+$\Rightarrow \sum_{\lambda \in \sigma_{\map{A}}} r_\lambda \leq \dim(V)$
+:::
 
 ## Eigenruimten van producten van lineaire afbeeldingen
 
+::: {.propositie nr="3.11"}
 Beschouw $\map{A} \in \Hom(V,W)$ en $\map{B} \in \Hom(W,V)$, dan is $\map{A}\map{B} \in \Hom(W,W)$ en $\map{B}\map{A} \in \Hom(V,V)$.
 
 * Elke eigenwaarde $\lambda\neq 0$ van $\map{B}\map{A}$ is ook een eigenwaarde van $\map{A}\map{B}$ (en vice versa)
-* Eigenruimte $W_\lambda$ van $\map{A}\map{B}$ komt overeen met $\map{A} V_\lambda$, en $\dim(W_\lambda) = \dim(V_\lambda)$, i.e. de restrictie van $\map{A}$ tot $V_\lambda$ is injectief
+* Eigenruimte $W_\lambda$ van $\map{A}\map{B}$ komt overeen met $\map{A} V_\lambda$, en $\dim(W_\lambda) = \dim(V_\lambda)$, d.w.z. de restrictie van $\map{A}$ tot $V_\lambda$ is injectief
   * $((\lambda^{-1}\map{B})\circ \map{A})\vv = \vv,\qquad \forall \vv \in V_\lambda$
   * $(\map{A} \circ (\lambda^{-1}\map{B}))\vw = \vw,\qquad \forall \vw \in W_\lambda$
+:::
 
 ## Karakteristieke veelterm
 
-Voor $V$ eindig-dimensionaal en $\map{A}\in \End(V)$
-$$k_{\map{A}}(z) = \det(z\idmap  - \map{A}) = z^n + c_{n-1} z^{n-1} + \ldots + c_0$$
+::: {.definitie nr="3.9"}
+Voor $V$ eindig-dimensionaal en $\map{A}\in \End(V)$ is de **karakteristieke veelterm**
+$$\boxed{k_{\map{A}}(z) = \det(z\idmap  - \map{A}) = z^n + c_{n-1} z^{n-1} + \ldots + c_0}$$
 
 met $c_{n-1} = - \tr(\map{A})$ en $c_0 = (-1)^n \det(\map{A})$.
+:::
 
-* Elke eigenwaarde is een nulpunt, elk nulpunt is een eigenwaarde
+::: {.opmerking nr="3.14"}
+Elke eigenwaarde is een nulpunt, elk nulpunt is een eigenwaarde
+:::
 
-* $k_{\map{A}} = (z - \lambda_1)^{q_{\lambda_1}} (z- \lambda_2)^{q_{\lambda_2}} \ldots (z-\lambda_m)^{q_{\lambda_m}}$
+## Karakteristieke veelterm
 
-  met $q_{\lambda}$ de **algebraische multipliciteit**
+::: {.opmerking nr="3.16"}
+$$k_{\map{A}}(z) = (z - \lambda_1)^{q_{\lambda_1}} (z- \lambda_2)^{q_{\lambda_2}} \ldots (z-\lambda_m)^{q_{\lambda_m}}$$
+met $q_{\lambda}$ de **algebraïsche multipliciteit**
+:::
 
-* $\tr(\map{A})= q_{\lambda_1} \lambda_1+ q_{\lambda_2} \lambda_2+ \cdots + q_{\lambda_m} \lambda_m = \sum_{\lambda \in \sigma_{\map{A}}} q_{\lambda} \lambda$
+::: {.opmerking nr="3.17"}
+$$\begin{aligned}
+\tr(\map{A}) &= q_{\lambda_1} \lambda_1+ q_{\lambda_2} \lambda_2+ \cdots + q_{\lambda_m} \lambda_m = \sum_{\lambda \in \sigma_{\map{A}}} q_{\lambda} \lambda\\
+\det(\map{A}) &=  \lambda_1^{q_{\lambda_1}}   \lambda_2^{q_{\lambda_2}}  \cdots \lambda_m^{q_{\lambda_m} } = \prod_{\lambda \in \sigma_{\map{A}}}  \lambda^{q_{\lambda}}
+\end{aligned}$$
+:::
 
-  $\det(\map{A})=  \lambda_1^{q_{\lambda_1}}   \lambda_2^{q_{\lambda_2}}  \cdots \lambda_m^{q_{\lambda_m} } = \prod_{\lambda \in \sigma_{\map{A}}}  \lambda^{q_{\lambda}}$
+## Companion matrix
 
-## Companian matrix
+Gegeven een veelterm $p(z) = z^n + p_{n-1} z^{n-1} + \ldots + p_0 \in \bbF[z]$, construeer een matrix $\mat{A} \in \bbF^{n \times n}$ zodat $p(z) = k_{\mat{A}}(z)$?
 
-Gegeven een veelterm $p(z) = z^n + p_{n-1} z^{n-1} + \ldots + p_0 \in \bbF[z]$, construeer een matrix $\mat{A} \in \bbF^n$ zodat $p(z) = k_{\mat{A}}(z)$?
-
-* **Companion matrix** 
+::: {.propositie nr="3.12"}
+**Companion matrix**
 $$	\mat{C}_p = \begin{bmatrix}
 		0 & 1 & 0 & \ldots & 0  & 0 & 0\\
 		0 & 0 & 1 &\ldots & 0  & 0 & 0\\
@@ -184,294 +256,325 @@ $$	\mat{C}_p = \begin{bmatrix}
 		-p_0 & -p_1 & -p_2& \ldots & -p_{n-3} & -p_{n-2} & -p_{n-1}
 	\end{bmatrix}
 $$
+:::
 
+## Stelling van Cayley-Hamilton
 
-## Stelling van Caley - Hamilton
+::: {.stelling nr="3.13" title="Cayley-Hamilton"}
+De karakteristieke veelterm $k_{\map{A}}(z)$ annihileert $\map{A}$.
+:::
 
-* De karakteristieke veelterm $k_{\map{A}}(z)$ annihileert $\map{A}$.
+::: {.opmerking nr="3.20"}
+$\Rightarrow k_{\map{A}}(z)= m_{\map{A}}(z) q(z)$ met bovendien: $k_{\map{A}}(z)$ en $m_{\map{A}}(z)$ hebben dezelfde nulpunten
+$$\Rightarrow k_{\map{A}}(z) = \prod_{\lambda \in \sigma_{\map{A}}}(z - \lambda)^{q_\lambda}, \quad m_{\map{A}}(z) = \prod_{\lambda \in \sigma_{\map{A}}}(z - \lambda)^{s_\lambda} \quad \text{met } s_\lambda \leq q_\lambda$$
+:::
 
-  $\Rightarrow k_{\map{A}}(z)= m_{\map{A}}(z) q(z)$ met bovendien: $k_{\map{A}}(z)$ en $m_{\map{A}}(z)$ hebben dezelfde nulpunten
+## Stelling van Cayley-Hamilton: toepassingen
 
-  $\Rightarrow k_{\map{A}}(z) = \prod_{\lambda \in \sigma_{\map{A}}}(z - \lambda)^{q_\lambda}$, $m_{\map{A}}(z) = \prod_{\lambda \in \sigma_{\map{A}}}(z - \lambda)^{s_\lambda}$ met $s_\lambda \leq q_\lambda$
-
-* Toepassingen: 
-  
-  $\map{A}^n = - c_{n-1} \map{A}^{n-1} - \ldots - c_1 \map{A} - c_0 \idmap$
-
-  en als $c_0 = (-1)^n \det(\map{A}) \neq 0$:
-
-  $\map{A}^{-1} = \frac{(-1)^{n-1}}{\det(\map{A})} \left(\map{A}^{n-1} + c_{n-1} \map{A}^{n-2} + \ldots + c_1 \idmap\right)$
-
+::: {.opmerking nr="3.22"}
+Toepassingen:
+$$\map{A}^n = - c_{n-1} \map{A}^{n-1} - \ldots - c_1 \map{A} - c_0 \idmap$$
+en als $c_0 = (-1)^n \det(\map{A}) \neq 0$:
+$$\map{A}^{-1} = \frac{(-1)^{n-1}}{\det(\map{A})} \left(\map{A}^{n-1} + c_{n-1} \map{A}^{n-2} + \ldots + c_1 \idmap\right)$$
+:::
 
 ## Voorbeelden van karakteristieke en minimaalveelterm
 
-* $\mat{A} = \begin{bmatrix} 1 & 0 & 0 & 0\\ 0 & 1 & 0 & 0 \\ 0 & 0 & 0 & 0 \\ 0 & 0 & 0 & 0 \end{bmatrix}$
+::: {.voorbeeld nr="3.8"}
+$\mat{A} = \begin{bmatrix} 1 & 0 & 0 & 0\\ 0 & 1 & 0 & 0 \\ 0 & 0 & 0 & 0 \\ 0 & 0 & 0 & 0 \end{bmatrix}$
 
-  $\rightarrow m_{\mat{A}}(z) = z(z- 1)$ en $k_{\mat{A}}(z) = z^2 (z-1)^2$
+$\rightarrow m_{\mat{A}}(z) = z(z- 1)$ en $k_{\mat{A}}(z) = z^2 (z-1)^2$
+:::
 
-* $\mat{A} = \begin{bmatrix} 1 & c \\ 0 & 1 \end{bmatrix}$
+::: {.voorbeeld nr="3.9"}
+$\mat{A} = \begin{bmatrix} 1 & c \\ 0 & 1 \end{bmatrix}$
 
-  $\rightarrow k_{\mat{A}}(z) = m_{\mat{A}}(z) = (z- 1)^2$.
+$\rightarrow k_{\mat{A}}(z) = m_{\mat{A}}(z) = (z- 1)^2$.
+:::
 
 ## Diagonalisatie
 
+::: {.definitie nr="3.10"}
 * $\map{A} \in \End(V)$ is **diagonaliseerbaar** als
+  $$\boxed{\bigoplus_{\lambda \in \sigma_{\map{A}}} V_\lambda = V \Leftrightarrow \sum_{\lambda \in \sigma_{\map{A}}} r_\lambda = \dim(V)}$$
+* $\sum_{\lambda \in \sigma_{\map{A}}} r_\lambda < \dim(V)$: $\map{A}$ is niet-diagonaliseerbaar of **defect**
+:::
 
-  $$\bigoplus_{\lambda \in \sigma_{\map{A}}} V_\lambda = V \Leftrightarrow \sum_{\lambda \in \sigma_{\map{A}}} r_\lambda = \dim(V)$$
+::: {.opmerking nr="3.23"}
+Er bestaat een basis van eigenvectoren
+:::
 
-* $\sum_{\lambda \in \sigma_{\map{A}}} r_\lambda < \dim(V)$: $\map{A}$ is niet-diagonaliseerbaar of *defect*
-
-* Er bestaat een basis van eigenvectoren
-
-* Matrixrepresentatie: er bestaat een basistransformatie $\mat{V}$ naar deze nieuwe basis van eigenvectoren zodat
-
-  $\mat{A} = \mat{V}\mat{D} \mat{V}^{-1} \quad \Leftrightarrow \quad \mat{A} \mat{V} = \mat{V} \mat{D}$ met
-
-  $\mat{D} = \text{diag}(\begin{bmatrix} \lambda_{i_1} & \lambda_{i_2} & \cdots & \lambda_{i_n} \end{bmatrix})$
+::: {.opmerking nr="3.24"}
+Matrixrepresentatie: er bestaat een basistransformatie $\mat{V}$ naar deze nieuwe basis van eigenvectoren zodat
+$$\mat{A} = \mat{V}\mat{D} \mat{V}^{-1} \quad \Leftrightarrow \quad \mat{A} \mat{V} = \mat{V} \mat{D} \quad \text{met} \quad \mat{D} = \text{diag}(\begin{bmatrix} \lambda_{i_1} & \lambda_{i_2} & \cdots & \lambda_{i_n} \end{bmatrix})$$
+:::
 
 ## Diagonalisatie: voorbeelden
 
-* $\underbrace{\begin{bmatrix} 0 & -1 \\ 1 & 0 \end{bmatrix}}_{\mat{A}}\underbrace{\begin{bmatrix} 1 & 1 \\ -\irm & + \irm \end{bmatrix}}_{\mat{V}} = \underbrace{\begin{bmatrix} 1 & 1 \\ -\irm & +\irm \end{bmatrix}}_{\mat{V}} \underbrace{\begin{bmatrix} \irm & 0 \\ 0 & -\irm \end{bmatrix}}_{\mat{D}}$
+::: {.voorbeeld nr="3.10"}
+$\underbrace{\begin{bmatrix} 0 & -1 \\ 1 & 0 \end{bmatrix}}_{\mat{A}}\underbrace{\begin{bmatrix} 1 & 1 \\ -\irm & + \irm \end{bmatrix}}_{\mat{V}} = \underbrace{\begin{bmatrix} 1 & 1 \\ -\irm & +\irm \end{bmatrix}}_{\mat{V}} \underbrace{\begin{bmatrix} \irm & 0 \\ 0 & -\irm \end{bmatrix}}_{\mat{D}}$
+:::
 
-* $\mat{A} = \begin{bmatrix} 1 & c \\ 0 & 1 \end{bmatrix}$: $m_{\mat{A}}(z)=(z-1)^2$
+::: {.voorbeeld nr="3.11"}
+$\mat{A} = \begin{bmatrix} 1 & c \\ 0 & 1 \end{bmatrix}$: $m_{\mat{A}}(z)=(z-1)^2$
 
-  $\Rightarrow$ niet diagonaliseerbaar: $\sigma_{\mat{A}} = \{1\}$ met $r_1 = 1 < q_1=2$
+$\Rightarrow$ niet diagonaliseerbaar: $\sigma_{\mat{A}} = \{1\}$ met $r_1 = 1 < q_1=2$
+:::
 
 ## Diagonalisatie en minimaalveelterm
 
-* Stelling: $\map{A} \in \End(V)$ is **diagonaliseerbaar** als en slechts als $s_{\lambda} =1$ voor alle eigenwaarden $\lambda \in \sigma_{\map{A}}$, of dus
-
-  $$m_{\map{A}}(z) = \prod_{\lambda \in \sigma_{\map{A}}} (z-\lambda)$$
-
-
+::: {.propositie nr="3.14"}
+$\map{A} \in \End(V)$ is **diagonaliseerbaar** als en slechts als $s_{\lambda} =1$ voor alle eigenwaarden $\lambda \in \sigma_{\map{A}}$, of dus
+$$m_{\map{A}}(z) = \prod_{\lambda \in \sigma_{\map{A}}} (z-\lambda)$$
+:::
 
 Centrale grootheid in het bewijs: spectrale projector
 
-
-* $\map{P}_\lambda = \prod_{\substack{\lambda'\in\sigma_{\map{A}}\\\lambda\neq \lambda'}} \frac{(\map{A} - \lambda')}{(\lambda - \lambda')}$
-
+::: {.opmerking nr="3.28"}
+$$\map{P}_\lambda = \prod_{\substack{\lambda'\in\sigma_{\map{A}}\\\lambda\neq \lambda'}} \frac{(\map{A} - \lambda')}{(\lambda - \lambda')}$$
+:::
 
 ## Spectrale decompositie
 
 $\map{A}$ diagonaliseerbaar: $\bigoplus_{\lambda \in \sigma_{\map{A}}} V_\lambda = V$
 
-* **spectrale projector** $\map{P}_\lambda$ op $V_\lambda$ parallel met $\bigoplus_{\lambda' \neq \lambda} V_{\lambda'}$
-
-* eigenschappen:
+::: {.definitie nr="3.11"}
+* **Spectrale projector** $\map{P}_\lambda$ op $V_\lambda$ parallel met $\bigoplus_{\lambda' \neq \lambda} V_{\lambda'}$
+* Eigenschappen:
   * $\map{P}_\lambda \map{P}_{\lambda'} = \delta_{\lambda,\lambda'} \map{P}_\lambda$
   * $\sum_{\lambda \in \sigma_{\map{A}}} \map{P}_\lambda = \idmap_V$ (**resolutie van de identiteit**)
   * $\map{A} \map{P}_\lambda = \map{P}_\lambda \map{A} = \lambda \map{P}_\lambda$
+:::
 
-* spectrale decompositie: $\map{A} = \sum_{\lambda \in \sigma_{\map{A}}} \lambda \map{P}_\lambda$
+## Spectrale decompositie
 
-  (diagonaalvorm in operatornotatie)
+::: {.opmerking nr="3.29"}
+**Spectrale decompositie** (diagonaalvorm in operatornotatie):
+$$\boxed{\map{A} = \sum_{\lambda \in \sigma_{\map{A}}} \lambda \map{P}_\lambda}$$
+:::
 
-  $\Rightarrow p(\map{A}) = \sum p(\lambda) \map{P}_\lambda,\quad \map{A}^{-1} = \sum \lambda^{-1} \map{P}_\lambda$ (als $0\not\in \sigma_{\map{A}}$)
+::: {.opmerking nr="3.30"}
+$\Rightarrow p(\map{A}) = \sum p(\lambda) \map{P}_\lambda,\quad \map{A}^{-1} = \sum \lambda^{-1} \map{P}_\lambda$ (als $0\not\in \sigma_{\map{A}}$)
+:::
 
 ## Spectrale decompositie van commuterende operatoren
 
+::: {.stelling nr="3.17"}
 Diagonaliseerbare operatoren $\map{A},\map{B} \in \End(V)$ die bovendien commuteren, d.w.z.
+$$\commutator{\map{A}}{\map{B}}=\map{A}\map{B} - \map{B}\map{A}=\zeromap$$
+hebben een gezamenlijke spectrale decompositie
 
-$\commutator{\map{A}}{\map{B}}=\map{A}\map{B} - \map{B}\map{A}=\zeromap$
-
-hebben een gezamelijke spectrale decompositie
-
-\begin{align}
+\begin{align*}
 	\map{P}_{i} \map{P}_j &= \delta_{i,j} \map{P}_i,&\sum_{i\in I} \map{P}_i = \idmap_V\\
 	\map{A} &= \sum_{i\in I} \lambda_{i} \map{P}_i&\map{B} = \sum_{i\in I} \mu_{i} \map{P}_i
-\end{align}
+\end{align*}
+:::
 
 # Veralgemeende eigenruimten en de Jordan normaalvorm
 ## Invariante deelruimten
 
-Voor $\map{A}\in \End(V)$, een invariante deelruimte is een deelruimte $U \subspace V$ waarvoor $\map{A} U = \{ \map{A} \vu | \vu \in U\} \subspace U$.
+::: {.definitie nr="3.12"}
+Voor $\map{A}\in \End(V)$ is een **invariante deelruimte** een deelruimte $U \subspace V$ waarvoor
+$$\map{A} U = \{ \map{A} \vu | \vu \in U\} \subspace U$$
+:::
 
-* De restrictie van $\map{A}$ tot $U$, genoteerd als $\left.\map{A}\right|_{U}$, kan geïnterproteerd worden als een lineaire operator op $U$
+* De restrictie van $\map{A}$ tot $U$, genoteerd als $\left.\map{A}\right|_{U}$, kan geïnterpreteerd worden als een lineaire operator op $U$
 
 * Gegeven een basis $B_U = \{\vu_1,\ldots,\vu_k\}$ voor $U$, die uitgebreid wordt tot een volledige basis $B_V = \{\vu_1, \ldots, \vu_k, \vu_{k+1}, \ldots, \vu_n \}$ voor $V$, dan geldt:
-
-  $\mat{A} = \Phi_{B_V} (\map{A}) = \begin{bmatrix}
+  $$\mat{A} = \Phi_{B_V} (\map{A}) = \begin{bmatrix}
 		\mat{A}_U & \cdots\\ \zeromat & \ddots
-	\end{bmatrix}$
-
-  met $\mat{A}_U = \Phi_{B_U}\left(\left.\map{A}\right|_{U}\right)$.
+	\end{bmatrix} \quad \text{met} \quad \mat{A}_U = \Phi_{B_U}\left(\left.\map{A}\right|_{U}\right)$$
 
 ## Invariante deelruimten
 
-* Als we een complement $U^\text{c}$ voor $U$ kunnen kiezen (met dus $V = U \oplus U^\text{c}$) die zelf ook een invariante deelruimte is ten opzichte van $\map{A}$, dan krijgen we
-
-  $\mat{A} = \Phi_{B_V} (\map{A}) = \begin{bmatrix}
+* Als we een complement $U^\text{c}$ voor $U$ kunnen kiezen (met dus $V = U \oplus U^\text{c}$) die zelf ook een invariante deelruimte is ten opzichte van $\map{A}$, dan krijgen we de blokdiagonaalmatrix
+  $$\mat{A} = \Phi_{B_V} (\map{A}) = \begin{bmatrix}
 		\mat{A}_U & \zeromat \\ \zeromat & \mat{A}_{U^\text{c}}
-	\end{bmatrix}$ (blokdiagonaalmatrix)
-
+	\end{bmatrix}$$
   met dus $B_V = B_U \cup B_{U^{\text{c}}}$.
 
 * Notatie: $\mat{A} = \mat{A}_U \oplus \mat{A}_{U^\text{c}}$ (directe som van matrices)
 
-* Directe som van operatoren: gegeven $\map{A}_i \in \End(V_i)$ voor $i=1,2$, we definiëren $\map{A} = \map{A}_1 \oplus \map{A}_2 \in \End(V_1 \oplus V_2)$ via de eigenschap dat $\left.\map{A}\right|_{V_i} = \map{A}_i$ voor $i=1,2$. 
+::: {.definitie nr="3.13"}
+**Directe som van operatoren**: gegeven $\map{A}_i \in \End(V_i)$ voor $i=1,2$, we definiëren $\map{A} = \map{A}_1 \oplus \map{A}_2 \in \End(V_1 \oplus V_2)$ via de eigenschap dat $\left.\map{A}\right|_{V_i} = \map{A}_i$ voor $i=1,2$.
+:::
 
 ## Invariante deelruimten: voorbeelden en eigenschappen
 
+::: {.voorbeeld nr="3.12"}
 Invariante deelruimte van een gegeven operator $\map{A}\in\End(V)$
 
 * Triviaal: $\{\zerovec\}$ en $V$
 * Eigenvector $\bbF\vv_{\lambda} = \{a \vv_{\lambda}; a \in \bbF\}$; eigenruimte $V_\lambda$
 * $\im(\map{A})$: $\map{A} \im(\map{A}) \subspace \im(\map{A})$
 * $\ker(\map{A})$: $\map{A} \ker(\map{A}) = \{0\} \subspace \ker(\map{A})$
+:::
 
 ## Invariante deelruimten {.scrollable}
 
-* $\map{A}$ en $\map{A} + a \idmap$ hebben dezelfde invariante deelruimten
+::: {.lemma nr="3.18"}
+$\map{A}$ en $\map{A} + a \idmap$ hebben dezelfde invariante deelruimten
+:::
 
-* Twee reeksen van invariante deelruimten:
-  * $\{\zerovec\} = \ker((\map{A}-\scalara\idmap)^0) \subspace	\ker(\map{A}-\scalara\idmap) \subspace$
-    
-    $\qquad\qquad\ker((\map{A}-\scalara\idmap)^2) \subspace \ldots \subspace \ker((\map{A}-\scalara\idmap)^k) \subspace \ldots$
+::: {.propositie nr="3.19"}
+Twee reeksen van invariante deelruimten:
+$$\begin{aligned}
+\{\zerovec\} = \ker((\map{A}-\scalara\idmap)^0) &\subspace	\ker(\map{A}-\scalara\idmap) \subspace \ker((\map{A}-\scalara\idmap)^2) \subspace \ldots\\
+&\subspace \ker((\map{A}-\scalara\idmap)^k) \subspace \ldots\\
+V = \im((\map{A}-\scalara\idmap)^0) &\supspace 	\im(\map{A}-\scalara\idmap) \supspace \im((\map{A}-\scalara\idmap)^2) \supspace \ldots\\
+&\supspace \im((\map{A}-\scalara\idmap)^k) \supspace \ldots
+\end{aligned}$$
 
-  * $V = \im((\map{A}-\scalara\idmap)^0) \supspace 	\im(\map{A}-\scalara\idmap) \supspace$
-    
-    $\qquad\qquad\im((\map{A}-\scalara\idmap)^2) \supspace \ldots \supspace \im((\map{A}-\scalara\idmap)^k) \supspace \ldots$
+Dimensie van deze deelruimten is monotoon stijgend (strikte relatie, eigenlijke deelruimten) in de eerste reeks, en monotoon dalend in de tweede, tot een bepaalde index $k=s$, waar beide reeksen stabiliseren:
 
-  Dimensie van deze deelruimten is monotoon stijgend (strikte relatie, eigenlijke deelruimten) in de eerste reeks, en monotoon dalend in de tweede, tot een bepaalde index $k=s$, waar beide reeksen stabiliseren:
+* $\ker((\map{A}-\scalara\idmap)^s) = \ker((\map{A}-\scalara\idmap)^{s+1})= \ldots$
+* $\im((\map{A}-\scalara\idmap)^s) = \im((\map{A}-\scalara\idmap)^{s+1})= \ldots$
 
-  * $\ker((\map{A}-\scalara\idmap)^s) = \ker((\map{A}-\scalara\idmap)^{s+1})= \ldots$
-  * $\im((\map{A}-\scalara\idmap)^s) = \im((\map{A}-\scalara\idmap)^{s+1})= \ldots$
-
-  Er geldt dan ook $V = \ker((\map{A}-\scalara\idmap)^s) \oplus \im((\map{A}-\scalara\idmap)^s)$
-
-## Veralgemeende eigenruimten: {.scrollable}
-
-Gegeven een eigenwaarde $\lambda \in \sigma_{\map{A}}$, dan bestaat er een $s$ zodat
-
-$$V = \underbrace{\ker((\map{A}-\lambda\idmap)^s)}_{\text{veralgemeende eigenruimte $U_\lambda$}} \oplus \underbrace{\im((\map{A}-\lambda\idmap)^s)}_{\text{complement $U_\lambda^{\text{c}}$}}$$
-
-met $U_\lambda$ en $U_\lambda^{\text{c}}$ beide invariante deelruimten van $\map{A}$
-
-* Per constructie is $\map{A}|_{U_\lambda} = \lambda \idmap_{U_\lambda} + \map{N}$ voor een nilpotente operator $\map{N}$ met index $s$
-
-  $\Rightarrow$ $m_{\map{A}|_{U_\lambda}}(z) = (z-\lambda)^s$ en $k_{\map{A}|_{U_\lambda}}(z) = (z-\lambda)^{\dim(U_\lambda)}$
-* Per constructie is $\map{A}|_{U_{\lambda}^{\text{c}}}-\lambda \idmap_{U_\lambda^{\text{c}}}$ injectief/inverteerbaar, zodat $\map{A}|_{U_{\lambda}^{\text{c}}}$ geen eigenwaarden $\lambda$ kan hebben.
-
-  $\Rightarrow$ $m_{\map{A}}(z) = m_{\map{A}|_{U_\lambda}}(z) m_{\map{A}|_{U_\lambda^{\text{c}}}}(z)$ en $k_{\map{A}}(z) = k_{\map{A}|_{U_\lambda}}(z) \underbrace{k_{\map{A}|_{U_\lambda^{\text{c}}}}(z)}_{\text{geen nulpunten $\lambda$}}$
-
-$\Rightarrow$ $\dim(U_\lambda) = q_\lambda$ en $s = s_\lambda$ (macht van $(z-\lambda)$ in $m_{\map{A}}(z)$)
-
-
-## Veralgemeende eigenruimten: voorbeeld {.scrollable}
-
-$p(z) = (z-1)(z+1)^2 = z^3 + z^2 - z - 1 \Rightarrow \mat{C}_p = \begin{bmatrix} 0 & 1 & 0 \\ 0 & 0 & 1 \\ 1 & 1 & -1 \end{bmatrix}$:
-
-* vanwege de constructie: $\sigma_{\mat{C}_p} = \{-1, +1\}$ met $q_{-1} = 2$ en $q_{+1} = 1$
-* $\mat{C}_p \vv_\lambda = \lambda \vv_\lambda \Rightarrow \vec{v}_\lambda = \scalara \begin{bmatrix} 1 \\ \lambda \\ \lambda^2 \end{bmatrix} \Rightarrow r_{-1} = r_{+1} = 1$
-* $\vec{v}_{+1} = (1,1,1)$: $V_{+1} = U_{+1} = \bbF \vec{v}_{+1}$
-
-* $\vec{v}_{-1} = (1,-1,1)$: $V_{-1} = \bbF \vec{v}_{-1}$
-* $U_{-1} = \ker((\mat{C}_p - (-1) \idmat)^2) = \ker\left(\begin{bmatrix}
-		1 & 1 & 0 \\ 0 & 1 & 1 \\ 1 & 1 & 0 
-	\end{bmatrix}^2\right) = \ker\left(\begin{bmatrix} 1 & 2 & 1 \\ 1 & 2 & 1 \\ 1 & 2 & 1 \end{bmatrix}\right)$
-
-## Veralgemeende eigenruimten: voorbeeld {.scrollable}
-
-$p(z) = (z-1)(z+1)^2 = z^3 + z^2 - z - 1 \Rightarrow \mat{C}_p = \begin{bmatrix} 0 & 1 & 0 \\ 0 & 0 & 1 \\ 1 & 1 & -1 \end{bmatrix}$:
-
-* $U_{-1} = \ker((\mat{C}_p - (-1) \idmat)^2) = \ker\left(\begin{bmatrix}
-		1 & 1 & 0 \\ 0 & 1 & 1 \\ 1 & 1 & 0 
-	\end{bmatrix}^2\right) = \ker\left(\begin{bmatrix} 1 & 2 & 1 \\ 1 & 2 & 1 \\ 1 & 2 & 1 \end{bmatrix}\right)$
-
-* basis voor $U_{-1}$: $\{\vec{v}_{-1}=(+1,-1,+1), \vec{w}_{-1} = (1, 0, -1)\}$
-* $\mat{C}_p \begin{bmatrix} 1 & 1\\ -1 & 0 \\ 1 & -1\end{bmatrix} = \begin{bmatrix} -1 & 0 \\ 1 & -1 \\ -1 & 2 \end{bmatrix}=\begin{bmatrix} 1 & 1\\ -1 & 0 \\ 1 & -1\end{bmatrix} \underbrace{\begin{bmatrix} -1 & 1 \\ 0 & -1\end{bmatrix}}_{\left.\mat{C}_p\right|_{U_{-1}} = (-1) \idmat + \mat{N}}$
+Er geldt dan ook $V = \ker((\map{A}-\scalara\idmap)^s) \oplus \im((\map{A}-\scalara\idmap)^s)$
+:::
 
 ## Veralgemeende eigenruimten
 
+::: {.definitie nr="3.14"}
+Gegeven een eigenwaarde $\lambda \in \sigma_{\map{A}}$, dan bestaat er een $s$ zodat
+$$V = \underbrace{\ker((\map{A}-\lambda\idmap)^s)}_{\text{\textbf{veralgemeende eigenruimte} $U_\lambda$}} \oplus \underbrace{\im((\map{A}-\lambda\idmap)^s)}_{\text{complement $U_\lambda^{\text{c}}$}}$$
+
+met $U_\lambda$ en $U_\lambda^{\text{c}}$ beide invariante deelruimten van $\map{A}$
+:::
+
+* Per constructie is $\map{A}|_{U_\lambda} = \lambda \idmap_{U_\lambda} + \map{N}$ voor een nilpotente operator $\map{N}$ met index $s$
+  $$\Rightarrow m_{\map{A}|_{U_\lambda}}(z) = (z-\lambda)^s \quad \text{en} \quad k_{\map{A}|_{U_\lambda}}(z) = (z-\lambda)^{\dim(U_\lambda)}$$
+
+## Veralgemeende eigenruimten
+
+* Per constructie is $\map{A}|_{U_{\lambda}^{\text{c}}}-\lambda \idmap_{U_\lambda^{\text{c}}}$ injectief/inverteerbaar, zodat $\map{A}|_{U_{\lambda}^{\text{c}}}$ geen eigenwaarden $\lambda$ kan hebben.
+  $$\begin{aligned}
+  \Rightarrow m_{\map{A}}(z) &= m_{\map{A}|_{U_\lambda}}(z) m_{\map{A}|_{U_\lambda^{\text{c}}}}(z)\\
+  k_{\map{A}}(z) &= k_{\map{A}|_{U_\lambda}}(z) \underbrace{k_{\map{A}|_{U_\lambda^{\text{c}}}}(z)}_{\text{geen nulpunten $\lambda$}}
+  \end{aligned}$$
+
+$\Rightarrow$ $\dim(U_\lambda) = q_\lambda$ en $s = s_\lambda$ (macht van $(z-\lambda)$ in $m_{\map{A}}(z)$)
+
+## Veralgemeende eigenruimten: voorbeeld {.scrollable}
+
+::: {.voorbeeld nr="3.13"}
+$p(z) = (z-1)(z+1)^2 = z^3 + z^2 - z - 1 \Rightarrow \mat{C}_p = \begin{bmatrix} 0 & 1 & 0 \\ 0 & 0 & 1 \\ 1 & 1 & -1 \end{bmatrix}$:
+
+* Vanwege de constructie: $\sigma_{\mat{C}_p} = \{-1, +1\}$ met $q_{-1} = 2$ en $q_{+1} = 1$
+* $\mat{C}_p \vv_\lambda = \lambda \vv_\lambda \Rightarrow \vec{v}_\lambda = \scalara \begin{bmatrix} 1 \\ \lambda \\ \lambda^2 \end{bmatrix} \Rightarrow r_{-1} = r_{+1} = 1$
+* $\vec{v}_{+1} = (1,1,1)$: $V_{+1} = U_{+1} = \bbF \vec{v}_{+1}$
+* $\vec{v}_{-1} = (1,-1,1)$: $V_{-1} = \bbF \vec{v}_{-1}$
+* $U_{-1} = \ker((\mat{C}_p - (-1) \idmat)^2) = \ker\left(\begin{bmatrix}
+		1 & 1 & 0 \\ 0 & 1 & 1 \\ 1 & 1 & 0
+	\end{bmatrix}^2\right) = \ker\left(\begin{bmatrix} 1 & 2 & 1 \\ 1 & 2 & 1 \\ 1 & 2 & 1 \end{bmatrix}\right)$
+:::
+
+## Veralgemeende eigenruimten: voorbeeld {.scrollable}
+
+::: {.voorbeeld nr="3.13"}
+$p(z) = (z-1)(z+1)^2 = z^3 + z^2 - z - 1 \Rightarrow \mat{C}_p = \begin{bmatrix} 0 & 1 & 0 \\ 0 & 0 & 1 \\ 1 & 1 & -1 \end{bmatrix}$:
+
+* $U_{-1} = \ker((\mat{C}_p - (-1) \idmat)^2) = \ker\left(\begin{bmatrix}
+		1 & 1 & 0 \\ 0 & 1 & 1 \\ 1 & 1 & 0
+	\end{bmatrix}^2\right) = \ker\left(\begin{bmatrix} 1 & 2 & 1 \\ 1 & 2 & 1 \\ 1 & 2 & 1 \end{bmatrix}\right)$
+* Basis voor $U_{-1}$: $\{\vec{v}_{-1}=(+1,-1,+1), \vec{w}_{-1} = (1, 0, -1)\}$
+* $\mat{C}_p \begin{bmatrix} 1 & 1\\ -1 & 0 \\ 1 & -1\end{bmatrix} = \begin{bmatrix} -1 & 0 \\ 1 & -1 \\ -1 & 2 \end{bmatrix}=\begin{bmatrix} 1 & 1\\ -1 & 0 \\ 1 & -1\end{bmatrix} \underbrace{\begin{bmatrix} -1 & 1 \\ 0 & -1\end{bmatrix}}_{\left.\mat{C}_p\right|_{U_{-1}} = (-1) \idmat + \mat{N}}$
+:::
+
+## Veralgemeende eigenruimten
+
+::: {.stelling nr="3.20"}
 * We kunnen nu $V$ volledig ontbinden als
-
-  $V = U_{\lambda_1} \oplus U_{\lambda_1}^{\text{c}} = U_{\lambda_1} \oplus (U_{\lambda_2} \oplus \cdots) = \bigoplus_{\lambda \in \sigma_{\map{A}}} U_\lambda$
-
+  $$V = U_{\lambda_1} \oplus U_{\lambda_1}^{\text{c}} = U_{\lambda_1} \oplus (U_{\lambda_2} \oplus \cdots) = \bigoplus_{\lambda \in \sigma_{\map{A}}} U_\lambda$$
 * Elke deelruimte in deze ontbinding is een invariante deelruimte van $\map{A}$, en er geldt
-
   $$\map{A}|_{U_\lambda} = \lambda \idmap_{U_\lambda} + \map{N}_\lambda$$
+  met $(\map{N}_\lambda)^{s_\lambda} =\zeromap$ (nilpotent met index $s_\lambda$)
+:::
 
-  met $(\map{N}_\lambda)^{s_\lambda} =\zeromap$ (nilpotent met index $s^\lambda$)
-
-* Als alle $s_\lambda=1$ $\Leftrightarrow$ alle $N_\lambda=\zeromap$ $\Rightarrow$ diagonaalvorm
+* Als alle $s_\lambda=1$ $\Leftrightarrow$ alle $\map{N}_\lambda=\zeromap$ $\Rightarrow$ diagonaalvorm
 
 ## Jordan normaalvorm (geen bewijzen) {.scrollable}
 
 * We kunnen een specifieke basis kiezen voor $U_\lambda$ zodat $\map{N}_\lambda$ een canonische vorm / normaalvorm aanneemt
 
+::: {.propositie nr="3.21"}
 * Beschouw de $k \times k$ matrix $\mat{N}_k = \begin{bmatrix} 0 & 1 & 0 & \cdots & 0 & 0\\ 0 & 0 & 1 & \cdots & 0 & 0 \\
  	\vdots & \vdots & \vdots & \ddots & \vdots & \vdots\\
  	0 & 0 & 0 & \cdots & 0 & 1\\
- 	0 & 0 & 0 & \cdots & 0 & 0 
+ 	0 & 0 & 0 & \cdots & 0 & 0
  \end{bmatrix}$
 
   $\Rightarrow$ nilpotent met index $k$
 
 * Gegeven $\map{N}$ met $\map{N}^s=\zeromap$, er bestaat een basis $B$ zodat:
-
   $$\mat{N} = \Phi_B(\map{N}) = \bigoplus_{k=1}^s \bigoplus_{i=1}^{p_k} \mat{N}_k$$
-
   met $p_k \geq 0$ het aantal keer dat er een blok met index $k$ voorkomt, en dus $p_s \geq 1$.
+:::
 
-## Jordan normaalvorm (geen bewijzen) {.scrollable}
+## Jordan normaalvorm (geen bewijzen)
 
-* Jordan normaalvorm / canonische vorm: er bestaat een basis $B$ zodat
+::: {.stelling nr="3.22" title="Jordan-decompositie"}
+Jordan normaalvorm / canonische vorm: er bestaat een basis $B$ zodat
+$$\boxed{\mat{J}_{\map{A}}= \Phi_B(\map{A}) = \bigoplus_{\lambda \in \sigma_{\map{A}}} \bigoplus_{k=1}^{s_\lambda} \bigoplus_{i=1}^{p_{\lambda,k}} \mat{J}_k(\lambda)}$$
+met $J_k(\lambda) = \lambda \idmat_{k} + \mat{N}_k$ (Jordan-blokken)
+en $p_{\lambda,k} \geq 0$ voor $k=1,\ldots,s_\lambda-1$ en $p_{\lambda,s_\lambda} > 0$
+:::
 
-  $$\mat{J}_{\map{A}}= \Phi_B(\map{A}) = \bigoplus_{\lambda \in \sigma_{\map{A}}} \bigoplus_{k=1}^{s_\lambda} \bigoplus_{i=1}^{p_{\lambda,k}} \mat{J}_k(\lambda)$$
-  
-  met $J_k(\lambda) = \lambda \idmat_{k} + \mat{N}_k$ (Jordan-blokken)
-  
-  en $p_{\lambda,k} \geq 0$ voor $k=1,\ldots,s_\lambda-1$ en $p_{\lambda,s_\lambda} > 0$
+## Jordan normaalvorm (geen bewijzen)
 
-* Per Jordan-blok is er 1 eigenvector: $r_\lambda = \sum_{k=1}^{s_\lambda} p_{\lambda,k}$ en $q_\lambda = \sum_{k=1}^{s_\lambda} k p_{\lambda,k}$
+::: {.opmerking nr="3.41"}
+Per Jordan-blok is er 1 eigenvector: $r_\lambda = \sum_{k=1}^{s_\lambda} p_{\lambda,k}$ en $q_\lambda = \sum_{k=1}^{s_\lambda} k p_{\lambda,k}$
+:::
 
-* Jordan decompositie: er bestaat een basistransformatie $\mat{V} \in \GL(n,\bbC)$ zodat
-
+* Jordan-decompositie: er bestaat een basistransformatie $\mat{V} \in \GL(n,\bbC)$ zodat
   $$\mat{A}= \mat{V} \mat{J}_\mat{A} \mat{V}^{-1} = \mat{V} \left[\bigoplus_{\lambda \in \sigma_{\mat{A}}} \bigoplus_{k=1}^{s_\lambda} \bigoplus_{i=1}^{p^{(\lambda)}_{k}} \mat{J}_k(\lambda) \right]\mat{V}^{-1}$$
-
 
 ## Companion matrix herbekeken {.scrollable}
 
+::: {.propositie nr="3.23"}
 Voor een companion matrix $\mat{C} \in \bbF^{n \times n}$ met (unieke) eigenwaarden ${\lambda_1,\lambda_2,\cdots,\lambda_m}$ geldt
 
 * $r_\lambda=1$ met $\vec{v}_\lambda = (1,\lambda,\ldots,\lambda^{n-1})$; $s_\lambda=q_\lambda$: 1 Jordan-blok per eigenwaarde
-* als $m = n$ (alle $q_\lambda=1$, alle eigenwaarden verschillend): diagonalisatie van $\mat{C}$ via
+:::
 
-  $\mat{V}(\lambda_1,\ldots,\lambda_n) = \begin{bmatrix} 1 & 1 & 1 &\dots & 1\\
+::: {.opmerking nr="3.44"}
+Als $m = n$ (alle $q_\lambda=1$, alle eigenwaarden verschillend): diagonalisatie van $\mat{C}$ via de **Vandermonde matrix**
+$$\mat{V}(\lambda_1,\ldots,\lambda_n) = \begin{bmatrix} 1 & 1 & 1 &\dots & 1\\
  \lambda_1 & \lambda_2 & \lambda_3 & \dots & \lambda_n\\
  \lambda_1^2 & \lambda_2^2 & \lambda_3^2 & \dots & \lambda_n^2\\
  \vdots & \vdots & \vdots & \ddots & \vdots\\
  \lambda_1^{n-1} & \lambda_2^{n-1} & \lambda_3^{n-1} &\dots & \lambda_n^{n-1}
- \end{bmatrix}$ (**Vandermonde matrix**)
+ \end{bmatrix}$$
+:::
 
-* $q_\lambda = s_\lambda > 1$: Jordan-basisvectoren voor $k=1,\ldots,q_\lambda$:
+## Companion matrix herbekeken
 
-  $(\vec{u}_{\lambda,k})^i = \frac{1}{k!}\frac{\drm^k }{\drm \lambda^k} \lambda^{i-1} = \begin{cases} 0,& i \leq k \\ {i-1 \choose k} \lambda^{i-1-k},& i > k\end{cases}\qquad (\text{voor $i=1,\ldots,n$})$
-
+* $q_\lambda = s_\lambda > 1$: Jordan-basisvectoren voor $k=0,\ldots,q_\lambda-1$:
+  $$(\vec{u}_{\lambda,k})^i = \frac{1}{k!}\frac{\drm^k }{\drm \lambda^k} \lambda^{i-1} = \begin{cases} 0,& i \leq k \\ {i-1 \choose k} \lambda^{i-1-k},& i > k\end{cases}\qquad (\text{voor $i=1,\ldots,n$})$$
   (afgeleiden als gevolg van limiet van samenvallende eigenwaarden)
 
 ## Sensitiviteit van eigenwaarden en eigenruimten
 
-* sensitiviteitsanalyse $\approx$ perturbatietheorie
+* Sensitiviteitsanalyse $\approx$ perturbatietheorie
 * Hoe sterk verandert de eigenwaardedecompositie of Jordandecompositie van een matrix bij een kleine variatie in de matrixcomponenten? Is er een notie van "continuïteit" of "gladheid"?
-* moeilijk en uitgebreid onderwerp waarvoor we nog niet alle gereedschappen en concepten ter beschikking hebben (normen, hermitische matrices, …)
+* Moeilijk en uitgebreid onderwerp waarvoor we nog niet alle gereedschappen en concepten ter beschikking hebben (normen, hermitische matrices, …)
 
 ## Sensitiviteit van eigenwaarden en eigenruimten
 
 * Voorbeeld 1: $\mat{A}_1(\eps)	= \begin{bmatrix}
-	 0 & 1\\ \eps & 0	
+	 0 & 1\\ \eps & 0
 	\end{bmatrix}$
 
-  * $\eps = 0$: $\sigma_{\mat{A}}=\{0\}$ met $q_0 = s_0 = 2$, $r_0=1$: 1 Jordan blok
+  * $\eps = 0$: $\sigma_{\mat{A}}=\{0\}$ met $q_0 = s_0 = 2$, $r_0=1$: 1 Jordan-blok
   * $\eps > 0$: $\sigma_{\mat{A}}=\{+\sqrt{\eps},-\sqrt{\eps}\}$ en $\mat{V}(\eps) = \begin{bmatrix}
 		1 & 1 \\ +\sqrt{\eps} & -\sqrt{\eps}
 	\end{bmatrix}$
 
 * Voorbeeld 2: $\mat{A}_2(\eps)	= \begin{bmatrix}
-	 0 & 1\\ 0 & \eps	
+	 0 & 1\\ 0 & \eps
 	\end{bmatrix}$
 
-  * $\eps = 0$: $\sigma_{\mat{A}}=\{0\}$ met $q_0 = s_0 = 2$, $r_0=1$: 1 Jordan blok
+  * $\eps = 0$: $\sigma_{\mat{A}}=\{0\}$ met $q_0 = s_0 = 2$, $r_0=1$: 1 Jordan-blok
   * $\eps > 0$: $\sigma_{\mat{A}}=\{0,\eps\}$ met $\mat{V}(\eps) = \begin{bmatrix}
 		1 & 1 \\ 0 & \eps
 	\end{bmatrix}$
@@ -482,7 +585,9 @@ Problemen omdat $\GL(V)$ niet compact is: limieten van inverteerbare matrices ku
 
 * $\mat{A} \vec{v} = \lambda \vec{v} \Rightarrow \conj{\mat{A}} \conj{\vec{v}} = \conj{\lambda} \conj{\vec{v}}$
   * $\mat{A}$ reëel: voor elke $\lambda \in \bbC$ is ook $\conj{\lambda}$ een eigenwaarde (complex toegevoegde paren), bijbehorende eigenvectoren zijn ook complex toegevoegd
-  * $\mat{A}$ reëel en $\lambda$ reëel: zowel $\vec{v}$ als $\conj{\vec{v}}$ zijn eigenvectoren, en dus ook de reële combinaties $\real(\vec{v}) = (\vec{v}+\conj{\vec{v}})/2$ en $\imag(\vec{v}) = (\vec{v}+\conj{\vec{v}})/(2\irm)$ (minstens 1 van beide is niet nul)
+  * $\mat{A}$ reëel en $\lambda$ reëel: zowel $\vec{v}$ als $\conj{\vec{v}}$ zijn eigenvectoren, en dus ook de reële combinaties
+    $$\real(\vec{v}) = (\vec{v}+\conj{\vec{v}})/2 \quad \text{en} \quad \imag(\vec{v}) = (\vec{v}-\conj{\vec{v}})/(2\irm)$$
+    (minstens 1 van beide is niet nul)
 
     $\Rightarrow$ eigenvectoren horende bij reële eigenwaarden kunnen reëel worden gekozen
 
@@ -491,16 +596,15 @@ Problemen omdat $\GL(V)$ niet compact is: limieten van inverteerbare matrices ku
 * $\mat{A}$ en $\mat{A}^\transpose$ hebben dezelfde karakteristieke veelterm (en minimaalveelterm)
 
 * Voor elke eigenwaarde $\lambda$ van $\mat{A}$ bestaan er ook "linkse" eigenvectoren
-
-  $\vec{w}^\transpose \mat{A} = \lambda \vec{w}^\transpose \iff \mat{A}^\transpose \vec{w} = \lambda \vec{w}$
+  $$\vec{w}^\transpose \mat{A} = \lambda \vec{w}^\transpose \iff \mat{A}^\transpose \vec{w} = \lambda \vec{w}$$
 
   * Intrinsieke betekenis:
-  
+
     als $\mat{A} = \Phi_B(\map{A})$ voor een basis $B=\{\ve_1,\ldots,\ve_n\}$, beschouw dan duale basis $B^\ast=\{\varepsilon^1,\ldots,\varepsilon^n\}$ met $\varepsilon^i[\ve_j] = \delta^i_{\ j}$:
 
     $\omega = w_i \varepsilon^i$ voldoet aan $\map{A}^\ast(\omega) = \lambda \omega$
 
-## Verwante eigenwaardenproblemen
+## Verwante eigenwaardenproblemen {.scrollable}
 
 Stel $\map{A}^\ast(\omega') = \lambda' \omega'$ en $\map{A}\vv = \lambda \vv$:
 
@@ -508,9 +612,11 @@ Stel $\map{A}^\ast(\omega') = \lambda' \omega'$ en $\map{A}\vv = \lambda \vv$:
 
 * $\lambda \neq \lambda' \Rightarrow \omega'[\vv] = 0$
 
-* $\lambda = \lambda'$ : $\omega[\vv] \neq 0$? 
+* $\lambda = \lambda'$ : $\omega[\vv] \neq 0$?
 
-* Uit Jordan-decompositie $\mat{J}_{\mat{A}} = \bigoplus_{\lambda \in \sigma_{\map{A}}} \bigoplus_{k=1}^{s_\lambda} \bigoplus_{i=1}^{p^{(\lambda)}_{k-1}} \mat{J}^{(k)}(\lambda)$ leren we dat elke Jordan-blok één rechtse eigenvector oplevert (de basisvector geassocieerd met de eerste kolom van het blok), en één linkse eigenvector (de basisvector geassocieerd met de laatste rij van het blok)
+* Uit Jordan-decompositie
+  $$\mat{J}_{\mat{A}} = \bigoplus_{\lambda \in \sigma_{\map{A}}} \bigoplus_{k=1}^{s_\lambda} \bigoplus_{i=1}^{p^{(\lambda)}_{k-1}} \mat{J}^{(k)}(\lambda)$$
+  leren we dat elk Jordan-blok één rechtse eigenvector oplevert (de basisvector geassocieerd met de eerste kolom van het blok), en één linkse eigenvector (de basisvector geassocieerd met de laatste rij van het blok)
 
   $\Rightarrow \omega[\vv] \neq 0$ enkel als ze horen bij een Jordan-blok van grootte $1$
 
@@ -524,7 +630,7 @@ Stel $\map{A}^\ast(\omega') = \lambda' \omega'$ en $\map{A}\vv = \lambda \vv$:
 
 * Andere functies $f$ van $\map{A} \in \End(V)$?
 
-  Hoe definieren we $f(\map{A})$?
+  Hoe definiëren we $f(\map{A})$?
 
 ## Functies van lineaire operatoren: verwachtingen
 
@@ -542,92 +648,106 @@ Stel $\map{A}^\ast(\omega') = \lambda' \omega'$ en $\map{A}\vv = \lambda \vv$:
 
 ## Functies van lineaire operatoren: definitie 1
 
-* Als $\map{A}$ diagonaliseerbaar is, definitie van $f(\map{A})$ via diagonaalvorm / spectrale decompositie:
+::: {.definitie nr="3.16"}
+Als $\map{A}$ diagonaliseerbaar is, definitie van $f(\map{A})$ via diagonaalvorm / spectrale decompositie:
+$$\boxed{\map{A} = \sum_{\lambda} \lambda \map{P}_\lambda \Rightarrow f(\map{A}) = \sum_\lambda f(\lambda) \map{P}_\lambda}$$
+:::
 
-  $$\map{A} = \sum_{\lambda} \lambda \map{P}_\lambda \Rightarrow f(\map{A}) = \sum_\lambda f(\lambda) \map{P}_\lambda$$
-
-* Voorbeeld:
-
-  $\mat{A} = \begin{bmatrix}
+::: {.voorbeeld nr="3.14"}
+$$\mat{A} = \begin{bmatrix}
 		0 & -\theta\\ \theta & 0
-	\end{bmatrix} = \underbrace{\begin{bmatrix} 1 & 1 \\ -\irm & +\irm\end{bmatrix}}_{\mat{V}} \underbrace{\begin{bmatrix} \irm\theta & 0 \\ 0 & -\irm\theta\end{bmatrix}}_{\mat{D}}  \underbrace{\begin{bmatrix} \frac{1}{2} & +\frac{\irm}{2} \\ \frac{1}{2} & -\frac{\irm}{2}\end{bmatrix}}_{\mat{V}^{-1}}$
-
-  $\exp(\mat{A}) = \begin{bmatrix} 1 & 1 \\ -\irm & +\irm\end{bmatrix} \begin{bmatrix} \erm^{\irm \theta } & 0 \\ 0 & \erm^{-\irm \theta} \end{bmatrix}  \begin{bmatrix} \frac{1}{2} & +\frac{\irm}{2} \\ \frac{1}{2} & -\frac{\irm}{2}\end{bmatrix} = \begin{bmatrix}
+	\end{bmatrix} = \underbrace{\begin{bmatrix} 1 & 1 \\ -\irm & +\irm\end{bmatrix}}_{\mat{V}} \underbrace{\begin{bmatrix} \irm\theta & 0 \\ 0 & -\irm\theta\end{bmatrix}}_{\mat{D}}  \underbrace{\begin{bmatrix} \frac{1}{2} & +\frac{\irm}{2} \\ \frac{1}{2} & -\frac{\irm}{2}\end{bmatrix}}_{\mat{V}^{-1}}$$
+$$\exp(\mat{A}) = \begin{bmatrix} 1 & 1 \\ -\irm & +\irm\end{bmatrix} \begin{bmatrix} \erm^{\irm \theta } & 0 \\ 0 & \erm^{-\irm \theta} \end{bmatrix}  \begin{bmatrix} \frac{1}{2} & +\frac{\irm}{2} \\ \frac{1}{2} & -\frac{\irm}{2}\end{bmatrix} = \begin{bmatrix}
 			\cos(\theta) & -\sin(\theta) \\ \sin(\theta) & \cos(\theta)
-		\end{bmatrix}$
+		\end{bmatrix}$$
+:::
 
-## Functies van lineaire operatoren: definitie 2 {.scrollable}
+## Functies van lineaire operatoren: definitie 2
 
+::: {.definitie}
 Als $f(z) = \sum_{n=0}^{+\infty} f_n z^n$ een Taylorreeks rond $z=0$ (Maclaurin reeks) heeft:
-
 $$f(\map{A}) = \sum_{n=0}^{+\infty} f_n \map{A}^n$$
+:::
 
 Betekenis van een reeks van een operator? Convergentie? Zie Hoofdstuk 4
 
+## Functies van lineaire operatoren: definitie 2 {.scrollable}
+
 * Voorbeeld: $f(z)=\exp(z)=\sum_{n=0}^{+\infty} \frac{1}{n!} z^n$
-
-  $\mat{A}^{2n+1} = (-1)^{n} \begin{bmatrix}
+  $$\mat{A}^{2n+1} = (-1)^{n} \begin{bmatrix}
 		0 & -\theta^{2n+1}\\ \theta^{2n+1} & 0
-	\end{bmatrix}$ en $\mat{A}^{2n} = (-1)^n \begin{bmatrix}
+	\end{bmatrix} \quad \text{en} \quad \mat{A}^{2n} = (-1)^n \begin{bmatrix}
 		\theta^{2n} & 0\\ 0 & \theta^{2n}
-	\end{bmatrix}$ voor alle $n\in \bbN$
-
-  $f(\mat{A}) = \sum_{n=0}^{+\infty} \frac{(-1)^n}{(2n)!} \begin{bmatrix}
+	\end{bmatrix}$$
+  voor alle $n\in \bbN$
+  $$\begin{aligned}
+  f(\mat{A}) &= \sum_{n=0}^{+\infty} \frac{(-1)^n}{(2n)!} \begin{bmatrix}
 		\theta^{2n} & 0\\ 0 & \theta^{2n}
 	\end{bmatrix} + \sum_{n=0}^{+\infty} \frac{(-1)^n}{(2n+1)!}\begin{bmatrix}
 		0 & -\theta^{2n+1}\\ \theta^{2n+1} & 0
-	\end{bmatrix}$
-  
-  $\qquad = \begin{bmatrix}
+	\end{bmatrix}\\
+  &= \begin{bmatrix}
 			\cos(\theta) & -\sin(\theta) \\ \sin(\theta) & \cos(\theta)
-		\end{bmatrix}$
+		\end{bmatrix}
+  \end{aligned}$$
 
 ## Functies van lineaire operatoren: definitie 3 {.scrollable}
 
-Via Jordan-decompositie: $f(\mat{A}) = \mat{V} \left[\bigoplus_{\lambda \in \sigma_{\mat{A}}} \bigoplus_{k=1}^{s_\lambda} \bigoplus_{i=1}^{p^{(\lambda)}_{k}} f\left(\mat{J}_k(\lambda)\right) \right]\mat{V}^{-1}$
+::: {.definitie}
+Via Jordan-decompositie:
+$$f(\mat{A}) = \mat{V} \left[\bigoplus_{\lambda \in \sigma_{\mat{A}}} \bigoplus_{k=1}^{s_\lambda} \bigoplus_{i=1}^{p^{(\lambda)}_{k}} f\left(\mat{J}_k(\lambda)\right) \right]\mat{V}^{-1}$$
+:::
 
-* functie van een Jordan-blok $J_k(\lambda)$: voldoende dat $f$ een Taylorreeks rond $z=\lambda$ heeft met eindige convergentieradius $a$:
+* Functie van een Jordan-blok $J_k(\lambda)$: voldoende dat $f$ een Taylorreeks rond $z=\lambda$ heeft met eindige convergentieradius $a$:
+  $$f(z) = \sum_{n=0}^{+\infty} \frac{f^{(n)}(\lambda)}{n!} (z - \lambda)^n, \qquad \forall z\ \text{met}\ |z - \lambda| < a,\ \text{voor een $a > 0$}$$
 
-  * $f(z) = \sum_{n=0}^{+\infty} \frac{f^{(n)}(\lambda)}{n!} (z - \lambda)^n, \qquad \forall z\ \text{met}\ |z - \lambda| < a,\ \text{voor een $a > 0$}$
+## Functies van lineaire operatoren: definitie 3 {.scrollable}
 
-  * $f(J_k(\lambda)) = \sum_{n=0}^{+\infty} \frac{f^{(n)}(\lambda)}{n!} (J_k(\lambda) - \lambda\idmat_k)^n = \sum_{n=0}^{+\infty} \frac{f^{(n)}(\lambda)}{n!} (\mat{N}_k)^n = \sum_{n=0}^{k-1} \frac{f^{(n)}(\lambda)}{n!} (\mat{N}_k)^n$
+$$\begin{aligned}
+f(J_k(\lambda)) &= \sum_{n=0}^{+\infty} \frac{f^{(n)}(\lambda)}{n!} (J_k(\lambda) - \lambda\idmat_k)^n\\
+&= \sum_{n=0}^{+\infty} \frac{f^{(n)}(\lambda)}{n!} (\mat{N}_k)^n = \sum_{n=0}^{k-1} \frac{f^{(n)}(\lambda)}{n!} (\mat{N}_k)^n
+\end{aligned}$$
 
-::: {.r-fit-text}
-  $\Rightarrow f(\mat{J}^{(k)}(\lambda)) = \begin{bmatrix}
+$$\Rightarrow f(\mat{J}^{(k)}(\lambda)) = \begin{bmatrix}
  f(\lambda) & f^{(1)}(\lambda) & \frac{f^{(2)}(\lambda)}{2} & \frac{f^{(3)}(\lambda)}{3!} & \cdots &   	\frac{f^{(k-1)}(\lambda)}{(k-1)!}\\
 0 & f(\lambda) & f^{(1)}(\lambda) & \frac{f^{(2)}(\lambda)}{2} & \cdots &   	\frac{f^{(k-2)}(\lambda)}{(k-2)!}\\
 0 & 0 & f(\lambda) & f^{(1)}(\lambda) & \cdots &   	\frac{f^{(k-3)}(\lambda)}{(k-3)!}\\
 0 & 0 & 0 & f(\lambda) & \cdots &   	\frac{f^{(k-4)}(\lambda)}{(k-4)!}\\
-  	\vdots & \vdots & \vdots & \vdots & \ddots & \vdots & \vdots\\
-  	0 & 0 & 0 & 0 & \cdots & 0 & f(\lambda)
- \end{bmatrix}$
+  	\vdots & \vdots & \vdots & \vdots & \ddots & \vdots\\
+  	0 & 0 & 0 & 0 & \cdots & f(\lambda)
+ \end{bmatrix}$$
 
-:::
+## Exponentiële functie {.scrollable}
 
-## Exponentiële functie {.r-fit-text}
-
-$\exp(t J^{(k)}(\lambda)) = e^{t \lambda} \left(\idmat + t \mat{N}_k + \frac{t^2}{2} \big(\mat{N}_k\big)^2 + \ldots \right)
-	\\
-  = e^{t \lambda} \begin{bmatrix}
+$$\begin{aligned}
+\exp(t J^{(k)}(\lambda)) &= e^{t \lambda} \left(\idmat + t \mat{N}_k + \frac{t^2}{2} \big(\mat{N}_k\big)^2 + \ldots \right)\\
+  &= e^{t \lambda} \begin{bmatrix}
 1 & t & \frac{t^2}{2} & \frac{t^3}{3!} & \cdots &   	\frac{t^{k-1}}{(k-1)!}\\
 0 & 1 & t & \frac{t^2}{2} & \cdots &   	\frac{t^{k-2}}{(k-2)!}\\
 0 & 0 & 1 & t & \cdots &   	\frac{t^{k-3}}{(k-3)!}\\
 0 & 0 & 0 & 1 & \cdots &   	\frac{t^{k-4}}{(k-4)!}\\
-  	\vdots & \vdots & \vdots & \vdots & \ddots & \vdots & \vdots\\
+  	\vdots & \vdots & \vdots & \vdots & \ddots & \vdots\\
   	0 & 0 & 0 & 0 & \cdots & 1
- \end{bmatrix}$
+ \end{bmatrix}
+\end{aligned}$$
 
 ## Exponentiële functie: eigenschappen
 
 * $\exp(\map{A})$ is goed gedefinieerd en uniek
 
-* exponentiële van reële matrix is reëel
+* Exponentiële van reële matrix is reëel
 
-* $\erm^{t_1 \map{A}} \erm^{t_2\map{A}} = \erm^{(t_1 + t_2)\map{A}}$ en $(\exp(\map{A}))^{-1} = \exp(-\map{A})$
+::: {.opmerking nr="3.46"}
+$\erm^{t_1 \map{A}} \erm^{t_2\map{A}} = \erm^{(t_1 + t_2)\map{A}}$ en $(\exp(\map{A}))^{-1} = \exp(-\map{A})$
+:::
 
-* $\det(\exp(\map{A})) = \exp(\tr(\map{A}))$
+::: {.opmerking nr="3.47"}
+$\det(\exp(\map{A})) = \exp(\tr(\map{A}))$
+:::
 
-* $\frac{\drm\ }{\drm t} \erm^{t\map{A}} = \map{A} \erm^{t \map{A}} = \erm^{t\map{A}} \map{A}$
+::: {.opmerking nr="3.48"}
+$\frac{\drm\ }{\drm t} \erm^{t\map{A}} = \map{A} \erm^{t \map{A}} = \erm^{t\map{A}} \map{A}$
+:::
 
 Maar niet:
 
@@ -637,18 +757,18 @@ Maar niet:
 
 ## Exponentiële functie: eigenschappen
 
-* **Baker-Campbell-Haussdorf formule**: $e^{t\map{A}} e^{t\map{B}} = e^{\map{C}}$ met
-  $\map{C} = t(\map{A} + \map{B}) + \frac{t^2}{2} \commutator{\map{A}}{\map{B}} +$
-  
-  $\qquad \frac{t^3}{12} \commutator{\map{A}}{\commutator{\map{A}}{\map{B}}}- \frac{t^3}{12} \commutator{\map{B}}{\commutator{\map{A}}{\map{B}}}+\order(t^4)$
-
+::: {.opmerking nr="3.49"}
+* **Baker-Campbell-Hausdorff formule**: $e^{t\map{A}} e^{t\map{B}} = e^{\map{C}}$ met
+  $$\map{C} = t(\map{A} + \map{B}) + \frac{t^2}{2} \commutator{\map{A}}{\map{B}} + \frac{t^3}{12} \commutator{\map{A}}{\commutator{\map{A}}{\map{B}}}- \frac{t^3}{12} \commutator{\map{B}}{\commutator{\map{A}}{\map{B}}}+\order(t^4)$$
 * **Zassenhaus formule**
+  $$e^{t(\map{A}+\map{B})} = e^{t\map{A}} e^{t\map{B}} e^{-\frac{t^2}{2} \commutator{\map{A}} {\map{B}}}e^{\frac{t^3}{6}\left(2 \commutator{\map{B}}{\commutator{\map{A}}{\map{B}}}+ \commutator{\map{A}}{\commutator{\map{A}}{\map{B}}}\right)}\cdots$$
+:::
 
-  $e^{t(\map{A}+\map{B})} = e^{t\map{A}} e^{t\map{B}} e^{-\frac{t^2}{2} \commutator{\map{A}} {\map{B}}}e^{\frac{t^3}{6}\left(2 \commutator{\map{B}}{\commutator{\map{A}}{\map{B}}}+ \commutator{\map{A}}{\commutator{\map{A}}{\map{B}}}\right)}\cdots$
+::: {.bewijs}
+Door uitwerking van de Taylorreeks en vergelijken van de machten in $t$
+:::
 
-Bewijs: door uitwerking van de Taylorreeks en vergelijken van de machten in $t$
-
-## Logaritmische functie en machten
+## Logaritmische functie en machten {.scrollable}
 
 $f(z) = \log(z)$ of $f(z)=z^{\alpha}$ met $\alpha \not\in\bbN$: geen Taylorreeks rond $z=0$
 
@@ -657,10 +777,10 @@ $f(z) = \log(z)$ of $f(z)=z^{\alpha}$ met $\alpha \not\in\bbN$: geen Taylorreeks
 	&= \log(\lambda) + \sum_{n=1}^{+\infty} (-1)^{n+1} \frac{(z-\lambda)^n}{n\lambda^n}
 \end{align*}
 
-\begin{equation}
-	z^\alpha = \lambda^\alpha\left(1 + \frac{z-\lambda}{\lambda}\right)^\alpha = \lambda^\alpha \sum_{n=0}^{+\infty} \frac{\alpha (\alpha-1) 
+\begin{equation*}
+	z^\alpha = \lambda^\alpha\left(1 + \frac{z-\lambda}{\lambda}\right)^\alpha = \lambda^\alpha \sum_{n=0}^{+\infty} \frac{\alpha (\alpha-1)
 	\cdots (\alpha - n + 1)}{n!}\left(\frac{z-\lambda}{\lambda}\right)^n
-\end{equation}
+\end{equation*}
 
 Voor de definitie van $\log(\lambda)$ of $\lambda^{\alpha}$: meerdere keuzes (vertakkingslijnen in complexe analyse)
 
@@ -670,7 +790,7 @@ $\Rightarrow$ typisch niet uniek (meerdere $\map{B}$ voldoen aan $\map{A}=\exp(\
 
 * Voorbeeld: $J_3(\lambda)^{1/2}=\begin{bmatrix}
 		\lambda & 1 & 0\\ 0 & \lambda & 1 \\ 0 & 0 & \lambda
-	\end{bmatrix}^{1/2} = \begin{bmatrix} \sqrt{\lambda} & \frac{1}{2\sqrt{\lambda}} & -\frac{1}{4 \lambda^{3/2}}\\ 0 & \sqrt{\lambda}  & \frac{1}{2\sqrt{\lambda}} \\ 0 & 0 & \sqrt{\lambda}\end{bmatrix}$
+	\end{bmatrix}^{1/2} = \begin{bmatrix} \sqrt{\lambda} & \frac{1}{2\sqrt{\lambda}} & -\frac{1}{8 \lambda^{3/2}}\\ 0 & \sqrt{\lambda}  & \frac{1}{2\sqrt{\lambda}} \\ 0 & 0 & \sqrt{\lambda}\end{bmatrix}$
 
 # Toepassing: lineaire dynamische systemen
 
@@ -678,116 +798,139 @@ $\Rightarrow$ typisch niet uniek (meerdere $\map{B}$ voldoen aan $\map{A}=\exp(\
 
 ## Dynamische systemen
 
-Een **dynamisch systeem** is een algemene naam voor de wiskundige modellering van een tijdsafhankelijk fenomeen of process van natuurlijke of menselijke origine (fysisch, chemisch, biologisch, ecologisch, economisch, sociaal, …). 
+Een **dynamisch systeem** is een algemene naam voor de wiskundige modellering van een tijdsafhankelijk fenomeen of proces van natuurlijke of menselijke origine (fysisch, chemisch, biologisch, ecologisch, economisch, sociaal, …).
 
 ## Dynamische systemen
 
-Ingrediënten van een (deterministisch en autonoom/translatie-invariant) dynamisch systeem:
+::: {.definitie nr="3.17"}
+Ingrediënten van een (deterministisch en autonoom/translatie-invariant) **dynamisch systeem**:
 
 * Toestandsruimte / configuratieruimte $S$: verzameling van toestanden waarin het systeem zich op bepaald tijdstip kan bevinden
-* Verzameling $T$ van tijdstippen $t$ waarover het systemen kan worden geëvolueerd, waarbij tijdstippen kunnen worden opgeteld: $t_1 + t_2 \in T$ voor alle $t_1,t_2 \in T$
+* Verzameling $T$ van tijdstippen $t$ waarover het systeem kan worden geëvolueerd, waarbij tijdstippen kunnen worden opgeteld: $t_1 + t_2 \in T$ voor alle $t_1,t_2 \in T$
 
-  $(T,+)$ is een abelse monoïde; inverse evolutie moet niet bestaan
+  $(T,+)$ is een Abelse monoïde; inverse evolutie moet niet bestaan
 
 * Evolutieregel $\Phi_t:S\to S$ voor alle $t \in T$ zodat $\Phi_{t_1} \circ \Phi_{t_2} = \Phi_{t_1 + t_2}$ en $\Phi_0 = \id_S$
+:::
 
 ## Dynamische systemen
 
 * In deze cursus: $S$ is vectorruimte
 * Evolutieregel vaak geschreven als $\Phi:T \times S \to S$
 * Opsplitsing in:
-  * $T = (\bbR_{\geq 0},+)$: continue (tijd) dynamisch systemen
-  * $T = (\bbN, +)$: discrete (tijd) dynamisch systemen
+  * $T = (\bbR_{\geq 0},+)$: continue (tijd) dynamische systemen
+  * $T = (\bbN, +)$: discrete (tijd) dynamische systemen
 * Algemene concepten:
-  * 'fixpunt', vast punt of evenwichtspunt $x^\ast$: $\Phi(t,x^\ast) = x^\ast, \forall t \in T$
-  * traject $\gamma_x: T\to S : t \mapsto \Phi(t,x)$; baan $O_x = \gamma_x(T)$
+
+  ::: {.definitie nr="3.18"}
+  **Fixpunt**, vast punt of evenwichtspunt $x^\ast$: $\Phi(t,x^\ast) = x^\ast, \forall t \in T$
+  :::
+
+  ::: {.definitie nr="3.19"}
+  **Traject** $\gamma_x: T\to S : t \mapsto \Phi(t,x)$; **baan** $O_x = \gamma_x(T)$
+  :::
 
 ## Discreet dynamisch systeem
 
-$\Phi_n(x) = (\Phi_{n-1} \circ \phi)(x) = \underbrace{\phi \circ \phi \circ \cdots \circ \phi}_{\text{$n$ times}}(x) = \phi^n(x)$
+$$\Phi_n(x) = (\Phi_{n-1} \circ \phi)(x) = \underbrace{\phi \circ \phi \circ \cdots \circ \phi}_{\text{$n$ keer}}(x) = \phi^n(x)$$
 
-  met $\phi = \Phi_1$
+met $\phi = \Phi_1$
 
-$\Rightarrow \vec{x}_{n+1} = \phi(x_{n})$ : recurrentierelatie, iteratief process
+$\Rightarrow \vec{x}_{n+1} = \phi(x_{n})$ : recurrentierelatie, iteratief proces
 
 ## Discreet dynamisch systeem
 
 Beschouw nu $S = \bbR^m$: $\vec{x}$, $\vec{\phi}$, \ldots
 
 * Evenwichtspunt: $\vec{\phi}(\vec{x}^\ast) = \vec{x}^\ast$
-* Affien: $\vec{\phi}(\vec{x}) = \mat{A}\vec{x}+\vec{b}$; linear: $\vec{\phi}(\vec{x}) = \mat{A}\vec{x}$
-* Typische dynamische systemen zijn niet linear:
+
+::: {.definitie nr="3.20"}
+**Affien**: $\vec{\phi}(\vec{x}) = \mat{A}\vec{x}+\vec{b}$; **lineair**: $\vec{\phi}(\vec{x}) = \mat{A}\vec{x}$
+:::
+
+* Typische dynamische systemen zijn niet lineair:
 
   $\Rightarrow$ linearisatie rond evenwichtspunt
+  $$\vec{\phi}(\vec{x}^\ast + \vec{y}_n) \approx \underbrace{\vec{\phi}(\vec{x}^\ast)}_{= \vec{x}^\ast} + \underbrace{\sum_{j=1}^{m}\frac{\partial \vec{\phi}}{\partial x^j}(\vec{x}^\ast) (\vec{y}_n)^j}_{=\mat{J}_{\vec{\phi}}(\vec{x}^\ast) \vec{y}_n}+ \order(\vec{y}^2)$$
 
-  $\vec{\phi}(\vec{x}_\ast + \vec{y}_n) \approx \underbrace{\vec{\phi}(\vec{x}^\ast)}_{= \vec{x}^\ast} + \underbrace{\sum_{j=1}^{n}\frac{\partial \vec{\phi}}{\partial x^j}(\vec{x}^\ast) (\vec{y}_n)^j}_{=\mat{J}_{\vec{\phi}}(\vec{x}^\ast) \vec{y}_n}+ \order(\vec{y}^2)$
-
-  $\Rightarrow$ eigenschappen van $\mat{J}_{\varphi}(\vec{x}^\ast)$ bepalen gedrag rond en stabiliteit van $\vec{x}^\ast$
+  $\Rightarrow$ eigenschappen van $\mat{J}_{\vec{\phi}}(\vec{x}^\ast)$ bepalen gedrag rond en stabiliteit van $\vec{x}^\ast$
 
 ## Discreet dynamisch systeem
 
-$\vec{x}_n = \mat{A} \vec{x}_{n-1} \Rightarrow \vec{x}_n = \mat{A}^n \vec{x}_0$
+$$\vec{x}_n = \mat{A} \vec{x}_{n-1} \Rightarrow \vec{x}_n = \mat{A}^n \vec{x}_0$$
 
 Perturbaties rond $\vec{x}^\ast=\vec{0}$ bepaald door eigenwaarden (Jordan-decompositie) van $\mat{A}$:
 
-* $\abs{\lambda}$ > 1: afstand tot evenwichtspunt neemt exponentieel toe
-* alle $\abs{\lambda} < 1$: perturbaties rond evenwicht convergeren terug naar evenwichtspunt $\Rightarrow$ stabiliteit
-* $\lambda = \exp(\irm 2\pi/p)$ periodieke oplossingen met periode $p$
+* $\abs{\lambda} > 1$: afstand tot evenwichtspunt neemt exponentieel toe
+* Alle $\abs{\lambda} < 1$: perturbaties rond evenwicht convergeren terug naar evenwichtspunt $\Rightarrow$ stabiliteit
+* $\lambda = \exp(\irm 2\pi/p)$: periodieke oplossingen met periode $p$
 
 ## Recurrentierelaties
 
 * Dynamisch systeem: $\vec{x}_{n+1}= \vec{\phi}(\vec{x}_n)$
-* Meer algemeen: $\vec{x}_{n+1}= \vec{\phi}(n, \vec{x}_n)$
 
-  Niet autonoom / tijdshomogeen / translatie-invariant
+::: {.definitie nr="3.21"}
+Meer algemeen:
+$$\vec{x}_{n+1}= \vec{\phi}(n, \vec{x}_n)$$
+Niet autonoom / tijdshomogeen / translatie-invariant
+:::
 
-* Hogere orde (maar autonoom): $\vec{x}_{n+k} = \vec{\phi}(\vec{x}_{n}, \dots, \vec{x}_{n+k-2}, \vec{x}_{n+k-1})$
+::: {.definitie nr="3.22"}
+Hogere orde (maar autonoom): $\vec{x}_{n+k} = \vec{\phi}(\vec{x}_{n}, \dots, \vec{x}_{n+k-2}, \vec{x}_{n+k-1})$
+kan omgezet worden in een eerste orde relatie voor $\vec{y}_{n} = (\vec{x}_{n}, \dots, \vec{x}_{n+k-2}, \vec{x}_{n+k-1}) \in \bbR^{km}$
 
-  kan omgezet worden in een eerste orde relatie voor $\vec{y}_{n} = (\vec{x}_{n}, \dots, \vec{x}_{n+k-2}, \vec{x}_{n+k-1}) \in \bbR^{km}$
-
-  \begin{align*}\small
+\begin{align*}\small
  	\vec{y}_{n+1} = \vec{\psi}(\vec{y}_n) &= \vec{\psi}(\vec{x}_{n}, \dots, \vec{x}_{n+k-2}, \vec{x}_{n+k-1})  \\
  	&= (\vec{x}_{n+1}, \dots, \vec{x}_{n+k-1}, \vec{\phi}(\vec{x}_{n}, \dots, \vec{x}_{n+k-2}, \vec{x}_{n+k-1}))
 \end{align*}
+:::
 
 ## Recurrentierelaties {.scrollable}
 
-$$\vec{x}_{n+k} = \mat{A}_{0} \vec{x}_{n} + \mat{A}_{1} \vec{x}_{n+1} + \dots + \mat{A}_{k-2} \vec{x}_{n+k-2} + \mat{A}_{k-1} \vec{x}_{n_k-1}$$
+$$\vec{x}_{n+k} = \mat{A}_{0} \vec{x}_{n} + \mat{A}_{1} \vec{x}_{n+1} + \dots + \mat{A}_{k-2} \vec{x}_{n+k-2} + \mat{A}_{k-1} \vec{x}_{n+k-1}$$
 
-\begin{equation}
+\begin{equation*}
 \Rightarrow \vec{y}_{n+1} = \begin{bmatrix}
-		\vec{x}_{n+1} \\ \vec{x}_{n+2} \\ \dots \\ \vec{x}_{n+k-1} \\ \vec{x}_{n+k}
+		\vec{x}_{n+1} \\ \vec{x}_{n+2} \\ \vdots \\ \vec{x}_{n+k-1} \\ \vec{x}_{n+k}
 	\end{bmatrix} = \begin{bmatrix} \zeromat & \idmat & \dots & \zeromat & \zeromat \\
  \zeromat & \zeromat & \dots & \zeromat & \zeromat\\
  \vdots & \vdots & \ddots & \vdots & \vdots\\
  \zeromat & \zeromat & \dots & \zeromat & \idmat\\
  \mat{A}_{0} & \mat{A}_{1} & \dots & \mat{A}_{k-2} & \mat{A}_{k-1}
  \end{bmatrix}\begin{bmatrix}
-		\vec{x}_{n} \\ \vec{x}_{n+1} \\ \dots \\ \vec{x}_{n+k-2} \\ \vec{x}_{n+k-1}
+		\vec{x}_{n} \\ \vec{x}_{n+1} \\ \vdots \\ \vec{x}_{n+k-2} \\ \vec{x}_{n+k-1}
 	\end{bmatrix}.
-\end{equation}
+\end{equation*}
 
-Voor $k=1$ ($x_n$ scalair): $y_{n+1} = \mat{C} \vec{y}_n = \mat{C}^{n+1}\vec{y}_0$ met $\mat{C}$ een companion matrix
+Voor $m=1$ ($x_n$ scalair): $y_{n+1} = \mat{C} \vec{y}_n = \mat{C}^{n+1}\vec{y}_0$ met $\mat{C}$ een companion matrix
 
-  * Algemene oplossing is een lineaire combinatie van elementaire oplossingen $x_n = n^j \lambda^n$ voor $\lambda$ een nulpunt van de bijbehorende polynoom en $j=0,1,\ldots,q-1$ met $q$ de algebraïsche multipliciteit van $\lambda$.
+## Recurrentierelaties
 
-  * Polynoom voor $\lambda$ kan gevonden worden door oplossingen $x_n=\lambda^n$ in te vullen in de recurrentierelatie
+::: {.stelling nr="3.24"}
+Algemene oplossing is een lineaire combinatie van elementaire oplossingen $x_n = n^j \lambda^n$ voor $\lambda$ een nulpunt van de bijbehorende polynoom en $j=0,1,\ldots,q-1$ met $q$ de algebraïsche multipliciteit van $\lambda$.
+:::
 
-  * Lineaire combinatie vinden door te "matchen" met beginvoorwaarden $x_0,\ldots,x_{k-1}$. 
+::: {.opmerking nr="3.55"}
+Polynoom voor $\lambda$ kan gevonden worden door oplossingen $x_n=\lambda^n$ in te vullen in de recurrentierelatie
+:::
+
+* Lineaire combinatie vinden door te "matchen" met beginvoorwaarden $x_0,\ldots,x_{k-1}$.
 
 ## Recurrentierelatie: voorbeeld
 
+::: {.voorbeeld nr="3.15"}
 Bekendste voorbeeld: Fibonacci
 
 $x_{n+2} = x_{n} + x_{n+1}$
 
 $\Rightarrow \lambda^2 = \lambda + 1$
 
-$\Rightarrow: \lambda = \frac{1\pm \sqrt{5}}{2}$
+$\Rightarrow \lambda = \frac{1\pm \sqrt{5}}{2}$
 
 $x_0 = 0, x_1 = 1 \Rightarrow (x_n)_{n \in \bbN} = (0,1,1,2,3,5,8,13,\ldots)$
 
 $\Rightarrow x_n = \frac{1}{\sqrt{5}} \left[\left(\frac{1 + \sqrt{5}}{2}\right)^n - \left(\frac{1 - \sqrt{5}}{2}\right)^n\right]$
+:::
 
 ## Continue dynamische systemen
 
@@ -796,9 +939,11 @@ Er is geen "kleinste eenheid van evolutie"
 $\dot{\vec{x}}(t) = \vec{\varphi}(\vec{x}(t))$ (eerste orde differentiaalvergelijking)
 
 * Evenwichtspunt $\vec{\varphi}(\vec{x}^\ast) = \vec{0}$
-* Linearisatie rond evenwichtspunt
 
-  $\vec{\varphi}(\vec{x}_\ast + \vec{y}(t)) \approx \underbrace{\vec{\phi}(\vec{x}^\ast)}_{=\vec{0}} + \underbrace{\sum_{j=1}^{n}\frac{\partial \vec{\varphi}}{\partial x^j}(\vec{x}^\ast) (\vec{y}(t))^j}_{=\mat{J}_{\vec{\phi}}(\vec{x}^\ast) \vec{y}(t)}+ \order(\vec{y}^2)$
+::: {.opmerking nr="3.59"}
+Linearisatie rond evenwichtspunt
+$$\vec{\varphi}(\vec{x}^\ast + \vec{y}(t)) \approx \underbrace{\vec{\varphi}(\vec{x}^\ast)}_{=\vec{0}} + \underbrace{\sum_{j=1}^{m}\frac{\partial \vec{\varphi}}{\partial x^j}(\vec{x}^\ast) (\vec{y}(t))^j}_{=\mat{J}_{\vec{\varphi}}(\vec{x}^\ast) \vec{y}(t)}+ \order(\vec{y}^2)$$
+:::
 
 ## Continue dynamische systemen
 
@@ -814,20 +959,25 @@ $\dot{\vec{x}}(t) = \vec{\varphi}(\vec{x}(t))$ (eerste orde differentiaalvergeli
 
 ## Hogere orde differentiaalvergelijkingen {.scrollable}
 
-* $\vec{x}^{(k)}(t) = \vec{\varphi}(t, \vec{x}(t), \dot{\vec{x}(t)},\ldots, \vec{x}^{(k-1)}(t))$
+::: {.definitie nr="3.24"}
+$$\vec{x}^{(k)}(t) = \vec{\varphi}(t, \vec{x}(t), \dot{\vec{x}}(t),\ldots, \vec{x}^{(k-1)}(t))$$
+Herleidbaar naar eerste orde differentiaalvergelijking voor $\vec{y}(t) = (\vec{x}(t), \dot{\vec{x}}(t), \ddot{\vec{x}}(t), \dots, \vec{x}^{(k-1)}(t))$
+:::
 
-  Herleidbaar naar eerste orde differentiaalvergelijking voor $\vec{y}(t) = (\vec{x}(t), \dot{\vec{x}}(t), \ddot{\vec{x}}(t), \dots, \vec{x}^{(k-1)}(t))$
-
-* Voor $k=1$ ($x(t)$ scalair):
-
-  $x^{(k)}(t) = a_{0} x(t) + a_{1} \dot{x}(t) + \dots + a_{k-2} x^{(k-2)}(t) + a_{k-1} x^{(k-1)}(t)$
+* Voor $m=1$ ($x(t)$ scalair):
+  $$x^{(k)}(t) = a_{0} x(t) + a_{1} \dot{x}(t) + \dots + a_{k-2} x^{(k-2)}(t) + a_{k-1} x^{(k-1)}(t)$$
 
   $\Rightarrow \dot{\vec{y}}(t) = \mat{C} \vec{y}(t)$ met $\mat{C}$ een companion matrix
 
-  * Algemene oplossing is een lineaire combinatie van elementaire oplossingen $x(t) = t^j \erm^{\lambda t}$ voor $\lambda$ een nulpunt van de bijbehorende polynoom en $j=0,1,\ldots,q-1$ met $q$ de algebraïsche multipliciteit van $\lambda$
+  ::: {.stelling nr="3.25"}
+  Algemene oplossing is een lineaire combinatie van elementaire oplossingen $x(t) = t^j \erm^{\lambda t}$ voor $\lambda$ een nulpunt van de bijbehorende polynoom en $j=0,1,\ldots,q-1$ met $q$ de algebraïsche multipliciteit van $\lambda$
+  :::
 
-  * Polynoom voor $\lambda$ kan gevonden worden door oplossingen $x(t)=\erm^{\lambda t}$ in te vullen in de recurrentierelatie
+## Hogere orde differentiaalvergelijkingen
 
-  * Lineaire combinatie vinden door te "matchen" met beginvoorwaarden $x(0),\dot{x}(0),\ldots,x^{(k-1)}(0)$. 
+::: {.opmerking nr="3.62"}
+Polynoom voor $\lambda$ kan gevonden worden door oplossingen $x(t)=\erm^{\lambda t}$ in te vullen in de differentiaalvergelijking
+:::
 
+* Lineaire combinatie vinden door te "matchen" met beginvoorwaarden $x(0),\dot{x}(0),\ldots,x^{(k-1)}(0)$.
 
