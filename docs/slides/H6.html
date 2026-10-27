@@ -75,6 +75,49 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script>window.backupDefine = window.define; window.define = undefined;</script><script src="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.js"></script>
+  <script>document.addEventListener("DOMContentLoaded", function () {
+ var mathElements = document.getElementsByClassName("math");
+ var macros = [];
+ for (var i = 0; i < mathElements.length; i++) {
+  var texText = mathElements[i].firstChild;
+  if (mathElements[i].tagName == "SPAN") {
+   katex.render(texText.data, mathElements[i], {
+    displayMode: mathElements[i].classList.contains('display'),
+    throwOnError: false,
+    macros: macros,
+    fleqn: false
+   });
+}}});
+  </script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css">
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -155,7 +198,64 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Op deze pagina</h2>
    
   <ul>
-  <li><a href="#multilineaire-algebra" id="toc-multilineaire-algebra" class="nav-link active" data-scroll-target="#multilineaire-algebra">Multilineaire algebra</a></li>
+  <li><a href="#doel-van-dit-hoofdstuk" id="toc-doel-van-dit-hoofdstuk" class="nav-link active" data-scroll-target="#doel-van-dit-hoofdstuk">Doel van dit hoofdstuk</a></li>
+  <li><a href="#terugblik-h1-h2-en-h5" id="toc-terugblik-h1-h2-en-h5" class="nav-link" data-scroll-target="#terugblik-h1-h2-en-h5">Terugblik: H1, H2 en H5</a>
+  <ul class="collapse">
+  <li><a href="#terugblik-constructies-uit-h1-en-h2" id="toc-terugblik-constructies-uit-h1-en-h2" class="nav-link" data-scroll-target="#terugblik-constructies-uit-h1-en-h2">Terugblik: constructies uit H1 en H2</a></li>
+  <li><a href="#terugblik-duale-ruimte-en-basistransformaties" id="toc-terugblik-duale-ruimte-en-basistransformaties" class="nav-link" data-scroll-target="#terugblik-duale-ruimte-en-basistransformaties">Terugblik: duale ruimte en basistransformaties</a></li>
+  <li><a href="#terugblik-inwendig-product-uit-h5" id="toc-terugblik-inwendig-product-uit-h5" class="nav-link" data-scroll-target="#terugblik-inwendig-product-uit-h5">Terugblik: inwendig product uit H5</a></li>
+  </ul></li>
+  <li><a href="#tensorproduct-van-vectorruimten" id="toc-tensorproduct-van-vectorruimten" class="nav-link" data-scroll-target="#tensorproduct-van-vectorruimten">Tensorproduct van vectorruimten</a>
+  <ul class="collapse">
+  <li><a href="#bilineaire-afbeeldingen-opnieuw" id="toc-bilineaire-afbeeldingen-opnieuw" class="nav-link" data-scroll-target="#bilineaire-afbeeldingen-opnieuw">Bilineaire afbeeldingen, opnieuw</a></li>
+  <li><a href="#een-andere-vectorruimtestructuur" id="toc-een-andere-vectorruimtestructuur" class="nav-link" data-scroll-target="#een-andere-vectorruimtestructuur">Een andere vectorruimtestructuur</a></li>
+  <li><a href="#tensorproduct-definitie" id="toc-tensorproduct-definitie" class="nav-link" data-scroll-target="#tensorproduct-definitie">Tensorproduct: definitie</a></li>
+  <li><a href="#tensoren" id="toc-tensoren" class="nav-link" data-scroll-target="#tensoren">Tensoren</a></li>
+  <li><a href="#terug-naar-bilineaire-afbeeldingen" id="toc-terug-naar-bilineaire-afbeeldingen" class="nav-link" data-scroll-target="#terug-naar-bilineaire-afbeeldingen">Terug naar bilineaire afbeeldingen</a></li>
+  <li><a href="#universele-eigenschap" id="toc-universele-eigenschap" class="nav-link" data-scroll-target="#universele-eigenschap">Universele eigenschap</a></li>
+  <li><a href="#uniciteit" id="toc-uniciteit" class="nav-link" data-scroll-target="#uniciteit">Uniciteit</a></li>
+  <li><a href="#universele-eigenschap-toepassing" id="toc-universele-eigenschap-toepassing" class="nav-link" data-scroll-target="#universele-eigenschap-toepassing">Universele eigenschap: toepassing</a></li>
+  <li><a href="#bestaan-formele-definitie" id="toc-bestaan-formele-definitie" class="nav-link" data-scroll-target="#bestaan-formele-definitie">Bestaan: formele definitie</a></li>
+  <li><a href="#formele-definitie-het-idee" id="toc-formele-definitie-het-idee" class="nav-link" data-scroll-target="#formele-definitie-het-idee">Formele definitie: het idee</a></li>
+  <li><a href="#formele-definitie-universele-eigenschap" id="toc-formele-definitie-universele-eigenschap" class="nav-link" data-scroll-target="#formele-definitie-universele-eigenschap">Formele definitie: universele eigenschap</a></li>
+  <li><a href="#tensorproduct-van-lineaire-afbeeldingen" id="toc-tensorproduct-van-lineaire-afbeeldingen" class="nav-link" data-scroll-target="#tensorproduct-van-lineaire-afbeeldingen">Tensorproduct van lineaire afbeeldingen</a></li>
+  <li><a href="#kronecker-product" id="toc-kronecker-product" class="nav-link" data-scroll-target="#kronecker-product">Kronecker product</a></li>
+  <li><a href="#multilineaire-afbeeldingen" id="toc-multilineaire-afbeeldingen" class="nav-link" data-scroll-target="#multilineaire-afbeeldingen">Multilineaire afbeeldingen</a></li>
+  <li><a href="#orde-van-een-tensor" id="toc-orde-van-een-tensor" class="nav-link" data-scroll-target="#orde-van-een-tensor">Orde van een tensor</a></li>
+  <li><a href="#lineaire-afbeelding-als-bilineaire-vorm" id="toc-lineaire-afbeelding-als-bilineaire-vorm" class="nav-link" data-scroll-target="#lineaire-afbeelding-als-bilineaire-vorm">Lineaire afbeelding als bilineaire vorm</a></li>
+  <li><a href="#lineaire-afbeelding-als-tensor" id="toc-lineaire-afbeelding-als-tensor" class="nav-link" data-scroll-target="#lineaire-afbeelding-als-tensor">Lineaire afbeelding als tensor</a></li>
+  <li><a href="#identiteit-natuurlijke-paring-en-trace" id="toc-identiteit-natuurlijke-paring-en-trace" class="nav-link" data-scroll-target="#identiteit-natuurlijke-paring-en-trace">Identiteit, natuurlijke paring en trace</a></li>
+  <li><a href="#bra-ketnotatie" id="toc-bra-ketnotatie" class="nav-link" data-scroll-target="#bra-ketnotatie">Bra-ketnotatie</a></li>
+  <li><a href="#indexnotatie" id="toc-indexnotatie" class="nav-link" data-scroll-target="#indexnotatie">Indexnotatie</a></li>
+  <li><a href="#tensoroperaties" id="toc-tensoroperaties" class="nav-link" data-scroll-target="#tensoroperaties">Tensoroperaties</a></li>
+  <li><a href="#tensordiagrammen" id="toc-tensordiagrammen" class="nav-link" data-scroll-target="#tensordiagrammen">Tensordiagrammen</a></li>
+  <li><a href="#basistransformaties-van-tensoren" id="toc-basistransformaties-van-tensoren" class="nav-link" data-scroll-target="#basistransformaties-van-tensoren">Basistransformaties van tensoren</a></li>
+  </ul></li>
+  <li><a href="#tensoren-in-inwendig-productruimten" id="toc-tensoren-in-inwendig-productruimten" class="nav-link" data-scroll-target="#tensoren-in-inwendig-productruimten">Tensoren in inwendig productruimten</a>
+  <ul class="collapse">
+  <li><a href="#inwendig-product-op-een-tensorproduct" id="toc-inwendig-product-op-een-tensorproduct" class="nav-link" data-scroll-target="#inwendig-product-op-een-tensorproduct">Inwendig product op een tensorproduct</a></li>
+  <li><a href="#inwendig-product-zonder-basis" id="toc-inwendig-product-zonder-basis" class="nav-link" data-scroll-target="#inwendig-product-zonder-basis">Inwendig product: zonder basis</a></li>
+  <li><a href="#indices-verhogen-en-verlagen" id="toc-indices-verhogen-en-verlagen" class="nav-link" data-scroll-target="#indices-verhogen-en-verlagen">Indices verhogen en verlagen</a></li>
+  <li><a href="#tensorproduct-van-hilbertruimten" id="toc-tensorproduct-van-hilbertruimten" class="nav-link" data-scroll-target="#tensorproduct-van-hilbertruimten">Tensorproduct van Hilbertruimten</a></li>
+  <li><a href="#voorbeeld-functies-van-twee-variabelen" id="toc-voorbeeld-functies-van-twee-variabelen" class="nav-link" data-scroll-target="#voorbeeld-functies-van-twee-variabelen">Voorbeeld: functies van twee variabelen</a></li>
+  <li><a href="#voorbeeld-6.1-fourierbasis" id="toc-voorbeeld-6.1-fourierbasis" class="nav-link" data-scroll-target="#voorbeeld-6.1-fourierbasis">Voorbeeld 6.1: Fourierbasis</a></li>
+  </ul></li>
+  <li><a href="#tensoralgebra-en-exterieure-producten" id="toc-tensoralgebra-en-exterieure-producten" class="nav-link" data-scroll-target="#tensoralgebra-en-exterieure-producten">Tensoralgebra en exterieure producten</a>
+  <ul class="collapse">
+  <li><a href="#tensoren-van-type-p-q" id="toc-tensoren-van-type-p-q" class="nav-link" data-scroll-target="#tensoren-van-type-p-q">Tensoren van type <span class="math inline">(p, q)</span></a></li>
+  <li><a href="#tensoralgebra" id="toc-tensoralgebra" class="nav-link" data-scroll-target="#tensoralgebra">Tensoralgebra</a></li>
+  <li><a href="#symmetrie-onder-indexpermutatie" id="toc-symmetrie-onder-indexpermutatie" class="nav-link" data-scroll-target="#symmetrie-onder-indexpermutatie">Symmetrie onder indexpermutatie</a></li>
+  <li><a href="#symmetrie-onder-indexpermutatie-voorbeeld" id="toc-symmetrie-onder-indexpermutatie-voorbeeld" class="nav-link" data-scroll-target="#symmetrie-onder-indexpermutatie-voorbeeld">Symmetrie onder indexpermutatie: voorbeeld</a></li>
+  <li><a href="#symmetrie-onder-indexpermutatie-1" id="toc-symmetrie-onder-indexpermutatie-1" class="nav-link" data-scroll-target="#symmetrie-onder-indexpermutatie-1">Symmetrie onder indexpermutatie</a></li>
+  <li><a href="#antisymmetrische-tensoren" id="toc-antisymmetrische-tensoren" class="nav-link" data-scroll-target="#antisymmetrische-tensoren">Antisymmetrische tensoren</a></li>
+  <li><a href="#antisymmetrisatie" id="toc-antisymmetrisatie" class="nav-link" data-scroll-target="#antisymmetrisatie">Antisymmetrisatie</a></li>
+  <li><a href="#wedge-product" id="toc-wedge-product" class="nav-link" data-scroll-target="#wedge-product">Wedge product</a></li>
+  <li><a href="#wedge-product-van-vectoren" id="toc-wedge-product-van-vectoren" class="nav-link" data-scroll-target="#wedge-product-van-vectoren">Wedge product van vectoren</a></li>
+  <li><a href="#basis-van-lambdapv" id="toc-basis-van-lambdapv" class="nav-link" data-scroll-target="#basis-van-lambdapv">Basis van <span class="math inline">\Lambda^p(V)</span></a></li>
+  <li><a href="#wedge-product-en-inwendig-product" id="toc-wedge-product-en-inwendig-product" class="nav-link" data-scroll-target="#wedge-product-en-inwendig-product">Wedge product en inwendig product</a></li>
+  <li><a href="#wedge-product-volume-en-oriëntatie" id="toc-wedge-product-volume-en-oriëntatie" class="nav-link" data-scroll-target="#wedge-product-volume-en-oriëntatie">Wedge product: volume en oriëntatie</a></li>
+  <li><a href="#exterieure-algebra" id="toc-exterieure-algebra" class="nav-link" data-scroll-target="#exterieure-algebra">Exterieure algebra</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -204,11 +304,753 @@ ul.task-list li input[type="checkbox"] {
 <p>% RELATIONS </p>
 <p>$$</p>
 </div>
-<section id="multilineaire-algebra" class="level2">
-<h2 class="anchored" data-anchor-id="multilineaire-algebra">Multilineaire algebra</h2>
-<p>Nog te schrijven.</p>
+<section id="doel-van-dit-hoofdstuk" class="level2">
+<h2 class="anchored" data-anchor-id="doel-van-dit-hoofdstuk">Doel van dit hoofdstuk</h2>
+<p>Bilineaire afbeeldingen zijn <strong>lineair in elk argument apart</strong>, maar niet lineair op <span class="math inline">V_1 \times V_2</span>: <span class="math display">B(a {v}_1, a {v}_2) = a^2 B({v}_1, {v}_2)</span></p>
+<ul>
+<li><span class="math inline">\Rightarrow</span> nieuwe vectorruimte <span class="math inline">V_1 \otimes V_2</span> waarop <span class="math inline">B</span> wél lineair is: het <strong>tensorproduct</strong></li>
+<li><span class="math inline">\Rightarrow</span> vectoren, functionalen, lineaire afbeeldingen, bilineaire vormen: allemaal <strong>tensoren</strong></li>
+</ul>
+<p><br></p>
+<ul>
+<li><strong>Tensorproduct</strong>: definitie en universele eigenschap</li>
+<li><strong>Indexnotatie</strong>: contractie en basistransformaties</li>
+<li><strong>Inwendig product</strong> op <span class="math inline">V \otimes W</span></li>
+<li><strong>Antisymmetrie</strong>: wedge product en determinant</li>
+</ul>
+</section>
+<section id="terugblik-h1-h2-en-h5" class="level1">
+<h1>Terugblik: H1, H2 en H5</h1>
+<section id="terugblik-constructies-uit-h1-en-h2" class="level2">
+<h2 class="anchored" data-anchor-id="terugblik-constructies-uit-h1-en-h2">Terugblik: constructies uit H1 en H2</h2>
+<ul>
+<li><strong>Vrije vectorruimte</strong> <span class="math inline">{\mathbb{F}}S</span>: formele lineaire combinaties van de elementen van <span class="math inline">S</span>
+<ul>
+<li>elk element van <span class="math inline">S</span> is een basisvector, ook als <span class="math inline">S</span> zelf een vectorruimte is</li>
+</ul></li>
+<li><strong>Quotiëntruimte</strong> <span class="math inline">V / W</span>: equivalentieklassen <span class="math inline">{v}+ W</span>
+<ul>
+<li>elementen die verschillen met een element van <span class="math inline">W</span> worden gelijk</li>
+</ul></li>
+<li><strong>Permutaties</strong> <span class="math inline">\sigma \in S_n</span> met <span class="math inline">\mathop{\mathrm{sgn}}(\sigma) = (-1)^{P(\sigma)}</span>
+<ul>
+<li><strong>Leibniz</strong>: <span class="math inline">\det({\mathsf{A}}) = \sum_{\sigma \in S_n} \mathop{\mathrm{sgn}}(\sigma) A^1_{\ \sigma(1)} \cdots A^n_{\ \sigma(n)}</span></li>
+</ul></li>
+<li><strong>Directe som</strong> <span class="math inline">V \oplus W</span>: <span class="math inline">\mathop{\mathrm{dim}}(V \oplus W) = \mathop{\mathrm{dim}}V + \mathop{\mathrm{dim}}W</span></li>
+</ul>
+</section>
+<section id="terugblik-duale-ruimte-en-basistransformaties" class="level2">
+<h2 class="anchored" data-anchor-id="terugblik-duale-ruimte-en-basistransformaties">Terugblik: duale ruimte en basistransformaties</h2>
+<ul>
+<li><strong>Duale ruimte</strong> <span class="math inline">V^\ast = \mathop{\mathrm{Hom}}(V, {\mathbb{F}})</span>, <strong>duale basis</strong> <span class="math inline">{\varepsilon}^i[{e}_j] = \delta^i_{\ j}</span>
+<ul>
+<li><span class="math inline">\xi = \xi_i {\varepsilon}^i</span> met <span class="math inline">\xi_i = \xi[{e}_i]</span>, <span class="math inline">\xi[{v}] = \xi_i v^i</span></li>
+</ul></li>
+<li><strong>Lineaire afbeelding</strong>: <span class="math inline">{\hat{A}} {e}_j = A^i_{\ j} {f}_i</span>, <span class="math inline">A^i_{\ j} = \varphi^i[{\hat{A}} {e}_j]</span></li>
+<li><strong>Basistransformatie</strong>: vectoren en duale vectoren transformeren tegengesteld
+<ul>
+<li><span class="math inline">\tilde{v}^i = [{\mathsf{T}}]^i_{\ j} v^j</span>, <span class="math inline">\tilde{\xi}_i = [{\mathsf{T}}^{-{\mathsf{T}}}]_i^{\ j} \xi_j</span></li>
+<li>index boven: <strong>contravariant</strong>; index onder: <strong>covariant</strong></li>
+</ul></li>
+<li><strong>Bilineaire vorm</strong>: <span class="math inline">B({v}, {w}) = v^i B_{ij} w^j</span>, twee onderindices</li>
+</ul>
+</section>
+<section id="terugblik-inwendig-product-uit-h5" class="level2">
+<h2 class="anchored" data-anchor-id="terugblik-inwendig-product-uit-h5">Terugblik: inwendig product uit H5</h2>
+<ul>
+<li><strong>Metriek</strong> <span class="math inline">g_{ij} = {\left\langle{e}_i,{e}_j\right\rangle}</span>, inverse <span class="math inline">g^{ij} = ({\mathsf{g}}^{-1})^{ij}</span>
+<ul>
+<li><strong>indices verlagen en verhogen</strong>: <span class="math inline">v_j = \overline{v^i} g_{ij}</span>, <span class="math inline">v^j = \overline{v_i g^{ij}}</span></li>
+</ul></li>
+<li><strong>Orthonormale basis</strong>: <span class="math inline">g_{ij} = \delta_{ij}</span></li>
+<li><strong>Hilbertruimte</strong>: metrisch compleet
+<ul>
+<li>separabel en oneindig-dimensionaal: aftelbare orthonormale basis, <span class="math inline">V \cong \ell^2</span></li>
+<li>vb.: Fourierreeks in <span class="math inline">L^2([0, L])</span></li>
+</ul></li>
+</ul>
+</section>
+</section>
+<section id="tensorproduct-van-vectorruimten" class="level1">
+<h1>Tensorproduct van vectorruimten</h1>
+<section id="bilineaire-afbeeldingen-opnieuw" class="level2">
+<h2 class="anchored" data-anchor-id="bilineaire-afbeeldingen-opnieuw">Bilineaire afbeeldingen, opnieuw</h2>
+<p><span class="math inline">V_1</span>, <span class="math inline">V_2</span> eindig-dimensionaal met basissen <span class="math inline">\{{e}_1, \ldots, {e}_{n_1}\}</span> en <span class="math inline">\{{f}_1, \ldots, {f}_{n_2}\}</span></p>
+<p>. . .</p>
+<ul>
+<li><strong>Bilineaire vorm</strong> <span class="math inline">B : V_1 \times V_2 \to {\mathbb{F}}</span>: bepaald door <span class="math inline">B({e}_i, {f}_j) = B_{ij}</span>, een <span class="math inline">(n_1 \times n_2)</span>-matrix <span class="math inline">{\mathsf{B}}</span>
+<ul>
+<li>bilineaire vormen vormen een <strong>vectorruimte</strong>, van dimensie <span class="math inline">n_1 n_2</span></li>
+<li>vgl. de duale ruimte <span class="math inline">V^\ast = \mathop{\mathrm{Hom}}(V, {\mathbb{F}})</span>, met <span class="math inline">\mathop{\mathrm{dim}}V^\ast = \mathop{\mathrm{dim}}V</span></li>
+</ul></li>
+<li><strong>Vraag</strong>: zijn de bilineaire vormen op <span class="math inline">V_1 \times V_2</span> precies de functionalen <span class="math inline">W^\ast</span> op een nieuwe vectorruimte <span class="math inline">W</span>, met <span class="math inline">\mathop{\mathrm{dim}}W = n_1 n_2</span>?</li>
+</ul>
+<p>. . .</p>
+<ul>
+<li>Niet de directe som <span class="math inline">V_1 \oplus V_2</span>:
+<ul>
+<li><span class="math inline">\mathop{\mathrm{dim}}(V_1 \oplus V_2) = n_1 + n_2</span></li>
+<li><span class="math inline">a({v}_1, {v}_2) = (a {v}_1, a {v}_2)</span>, maar <span class="math inline">B(a {v}_1, a {v}_2) = a^2 B({v}_1, {v}_2)</span>: <span class="math inline">B</span> is niet lineair op <span class="math inline">V_1 \oplus V_2</span></li>
+</ul></li>
+</ul>
+</section>
+<section id="een-andere-vectorruimtestructuur" class="level2">
+<h2 class="anchored" data-anchor-id="een-andere-vectorruimtestructuur">Een andere vectorruimtestructuur</h2>
+<p>Bilineair: <span class="math inline">B(a {v}_1, {v}_2) = B({v}_1, a {v}_2) = a B({v}_1, {v}_2)</span>, en zo ook voor sommen</p>
+<ul>
+<li>Identificeer daarom <span class="math display">a({v}_1, {v}_2) \sim (a {v}_1, {v}_2) \sim ({v}_1, a {v}_2)</span> <span class="math display">({v}_1 + {v}'_1, {v}_2) \sim ({v}_1, {v}_2) + ({v}'_1, {v}_2), \qquad ({v}_1, {v}_2 + {v}'_2) \sim ({v}_1, {v}_2) + ({v}_1, {v}'_2)</span></li>
+<li>Met <span class="math inline">{v}_1 = v_1^i {e}_i</span> en <span class="math inline">{v}_2 = v_2^j {f}_j</span> volgt <span class="math display">({v}_1, {v}_2) \sim v_1^i v_2^j ({e}_i, {f}_j)</span>
+<ul>
+<li>de koppels <span class="math inline">({e}_i, {f}_j)</span> werken als <strong>basis</strong>: we noteren ze <span class="math inline">{e}_i \otimes {f}_j</span></li>
+<li><span class="math inline">n_1 n_2</span> basisvectoren: precies de gezochte dimensie</li>
+</ul></li>
+</ul>
+</section>
+<section id="tensorproduct-definitie" class="level2 smaller scrollable">
+<h2 class="smaller scrollable anchored" data-anchor-id="tensorproduct-definitie">Tensorproduct: definitie</h2>
+<div class="vfr-box vfr-definitie">
+<p><span class="vfr-box-label"><strong>Definitie 6.0 (Tensorproduct).</strong></span> Het <strong>tensorproduct</strong> van <span class="math inline">V_1</span> en <span class="math inline">V_2</span> is de vectorruimte <span class="math display">\boxed{V_1 \otimes V_2 = {\mathbb{F}}\{{e}_i \otimes {f}_j \mid i = 1, \ldots, n_1;\ j = 1, \ldots, n_2\}}</span> met <span class="math inline">\mathop{\mathrm{dim}}(V_1 \otimes V_2) = n_1 n_2</span></p>
+<ul>
+<li><strong>Vectorruimte</strong>: elementen <span class="math inline">T = T^{ij} {e}_i \otimes {f}_j</span> <span class="math display">a T + S = (a T^{ij} + S^{ij}) {e}_i \otimes {f}_j</span></li>
+<li><strong>Product</strong> <span class="math inline">\otimes : V_1 \times V_2 \to V_1 \otimes V_2</span>, <span class="math inline">{v}_1 \otimes {v}_2 = v_1^i v_2^j {e}_i \otimes {f}_j</span>, “rekent” als een product: <span class="math display">(a {v}_1) \otimes {v}_2 = {v}_1 \otimes (a {v}_2) = a ({v}_1 \otimes {v}_2)</span> <span class="math display">\begin{aligned} ({v}_1 + {v}'_1) \otimes {v}_2 &amp;= {v}_1 \otimes {v}_2 + {v}'_1 \otimes {v}_2 \\ {v}_1 \otimes ({v}_2 + {v}'_2) &amp;= {v}_1 \otimes {v}_2 + {v}_1 \otimes {v}'_2 \end{aligned}</span></li>
+</ul>
+</div>
+</section>
+<section id="tensoren" class="level2">
+<h2 class="anchored" data-anchor-id="tensoren">Tensoren</h2>
+<p>Geen één-op-één verband tussen <span class="math inline">V_1 \times V_2</span> en <span class="math inline">V_1 \otimes V_2</span>:</p>
+<ul>
+<li>Elk koppel <span class="math inline">({v}_1, {v}_2)</span> geeft een product <span class="math inline">{v}_1 \otimes {v}_2</span></li>
+<li>Maar <span class="math inline">V_1 \otimes V_2</span> bevat ook <strong>sommen</strong> van zulke producten: <span class="math display">T = T^{ij} {e}_i \otimes {f}_j</span>
+<ul>
+<li>zulke elementen heten <strong>tensoren</strong>: twee bovenindices (contravariant)</li>
+<li>coëfficiënten in een matrix <span class="math inline">{\mathsf{T}} = [T^{ij}]</span></li>
+<li>niet elke tensor is van de vorm <span class="math inline">{v}_1 \otimes {v}_2</span></li>
+</ul></li>
+<li><strong>Outer product</strong>: <span class="math inline">T^{ij} = v_1^i v_2^j</span>, of <span class="math inline">{\mathsf{T}} = \boldsymbol{v}_1 \boldsymbol{v}_2^{\mathsf{T}}</span></li>
+</ul>
+</section>
+<section id="terug-naar-bilineaire-afbeeldingen" class="level2">
+<h2 class="anchored" data-anchor-id="terug-naar-bilineaire-afbeeldingen">Terug naar bilineaire afbeeldingen</h2>
+<ul>
+<li>Bilineaire vorm <span class="math inline">B</span> <span class="math inline">\leftrightarrow</span> functionaal <span class="math inline">\beta \in (V_1 \otimes V_2)^\ast</span> met <span class="math inline">\beta[{v}_1 \otimes {v}_2] = B({v}_1, {v}_2)</span>
+<ul>
+<li>lineair uitgebreid naar elke tensor: <span class="math display">\boxed{\beta[T^{ij} {e}_i \otimes {f}_j] = T^{ij} \beta[{e}_i \otimes {f}_j] = T^{ij} B_{ij}}</span></li>
+<li>volledig bepaald door <span class="math inline">\beta[{e}_i \otimes {f}_j] = B({e}_i, {f}_j) = B_{ij}</span></li>
+</ul></li>
+<li>Algemener: bilineaire <span class="math inline">\psi : V_1 \times V_2 \to V_3</span> geeft een unieke lineaire <span class="math inline">{\hat{\psi}} : V_1 \otimes V_2 \to V_3</span> met <span class="math display">\psi({v}_1, {v}_2) = {\hat{\psi}}({v}_1 \otimes {v}_2)</span>
+<ul>
+<li>dit is de <strong>universele eigenschap</strong> van het tensorproduct</li>
+<li>formele definitie: zonder te verwijzen naar een basis</li>
+</ul></li>
+</ul>
+</section>
+<section id="universele-eigenschap" class="level2 smaller scrollable">
+<h2 class="smaller scrollable anchored" data-anchor-id="universele-eigenschap">Universele eigenschap</h2>
+<p>Wat het tensorproduct moet doen, zonder naar een basis te verwijzen:</p>
+<div class="vfr-box vfr-definitie">
+<p><span class="vfr-box-label"><strong>Definitie 6.2.</strong></span> Het <strong>tensorproduct</strong> van <span class="math inline">V_1</span> en <span class="math inline">V_2</span> is een paar <span class="math inline">(W, \chi)</span>, met <span class="math inline">W</span> een vectorruimte en <span class="math inline">\chi : V_1 \times V_2 \to W</span> bilineair, zodat elke bilineaire <span class="math inline">\psi : V_1 \times V_2 \to V_3</span> een unieke ontbinding heeft <span class="math display">\boxed{\psi = {\hat{\psi}} \circ \chi, \quad {\hat{\psi}} \in \mathop{\mathrm{Hom}}(W, V_3)}</span></p>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/fig-universal-property.svg" class="quarto-figure quarto-figure-center figure-img" height="170"></p>
+</figure>
+</div>
+<p>Met Def 6.0: <span class="math inline">W = V_1 \otimes V_2</span> en <span class="math inline">\chi({v}_1, {v}_2) = {v}_1 \otimes {v}_2</span>; <span class="math inline">{\hat{\psi}}</span> ligt vast door <span class="math inline">{\hat{\psi}}({e}_i \otimes {f}_j) = \psi({e}_i, {f}_j)</span></p>
+</section>
+<section id="uniciteit" class="level2">
+<h2 class="anchored" data-anchor-id="uniciteit">Uniciteit</h2>
+<div class="vfr-box vfr-propositie">
+<p><span class="vfr-box-label"><strong>Propositie 6.1.</strong></span> Voldoen <span class="math inline">(W, \chi)</span> en <span class="math inline">(W', \chi')</span> beide, dan bestaat er een isomorfisme <span class="math inline">{\hat{\phi}} \in \mathop{\mathrm{Hom}}(W, W')</span> met <span class="math inline">\chi' = {\hat{\phi}} \circ \chi</span>, dus <span class="math inline">W \cong W'</span></p>
+</div>
+<ul>
+<li><strong>Bewijs</strong>: de universele eigenschap twee keer toepassen
+<ul>
+<li><span class="math inline">\chi'</span> is bilineair, dus <span class="math inline">\chi' = {\hat{\phi}} \circ \chi</span> voor een lineaire <span class="math inline">{\hat{\phi}} : W \to W'</span></li>
+<li>omgekeerd <span class="math inline">\chi = {\hat{\phi}}' \circ \chi'</span>, en dan volgt <span class="math inline">{\hat{\phi}}' = {\hat{\phi}}^{-1}</span></li>
+</ul></li>
+<li><strong>Gevolg</strong>: Def 6.0 hangt niet af van de basis
+<ul>
+<li>andere basissen: dezelfde universele eigenschap, dus een isomorfe ruimte</li>
+</ul></li>
+<li>Het tensorproduct is dus “het” tensorproduct, op isomorfisme na</li>
+</ul>
+</section>
+<section id="universele-eigenschap-toepassing" class="level2">
+<h2 class="anchored" data-anchor-id="universele-eigenschap-toepassing">Universele eigenschap: toepassing</h2>
+<div class="vfr-box vfr-opmerking">
+<p><span class="vfr-box-label"><strong>Opmerking 6.2.</strong></span> <span class="math inline">V_1 \otimes V_2 \cong V_2 \otimes V_1</span>: universele eigenschap op <span class="math inline">({v}_1, {v}_2) \mapsto {v}_2 \otimes {v}_1</span>, en omgekeerd</p>
+</div>
+<div class="vfr-box vfr-opmerking">
+<p><span class="vfr-box-label"><strong>Opmerking 6.3.</strong></span> In een basis: <span class="math inline">T^{ij} {e}_i \otimes {f}_j \mapsto T^{ij} {f}_j \otimes {e}_i = ({\mathsf{T}}^{\mathsf{T}})^{ji} {f}_j \otimes {e}_i</span>: de getransponeerde</p>
+</div>
+<ul>
+<li>Verschillende ruimten, wel isomorf</li>
+</ul>
+</section>
+<section id="bestaan-formele-definitie" class="level2">
+<h2 class="anchored" data-anchor-id="bestaan-formele-definitie">Bestaan: formele definitie</h2>
+<p><strong>Vraag</strong>: kunnen we zo’n ruimte <em>construeren</em> zonder naar een basis te verwijzen?</p>
+<div class="vfr-box vfr-definitie">
+<p><span class="vfr-box-label"><strong>Definitie 6.1 (Tensorproduct).</strong></span> Voor vectorruimten <span class="math inline">V_1</span>, <span class="math inline">V_2</span> over <span class="math inline">{\mathbb{F}}</span> is de <strong>tensorproductruimte</strong> <span class="math display">\boxed{V_1 \otimes V_2 = {\mathbb{F}}(V_1 \times V_2) / {\mathbb{F}}(S_1 \cup S_2)}</span> met <span class="math display">\begin{aligned}
+S_1 &amp;= \{(a {v}_1 + b {w}_1, {v}_2) - a({v}_1, {v}_2) - b({w}_1, {v}_2)\} \\
+S_2 &amp;= \{({v}_1, a {v}_2 + b {w}_2) - a({v}_1, {v}_2) - b({v}_1, {w}_2)\}
+\end{aligned}</span> voor alle <span class="math inline">a, b \in {\mathbb{F}}</span>, <span class="math inline">{v}_1, {w}_1 \in V_1</span>, <span class="math inline">{v}_2, {w}_2 \in V_2</span>.</p>
+</div>
+</section>
+<section id="formele-definitie-het-idee" class="level2 smaller scrollable">
+<h2 class="smaller scrollable anchored" data-anchor-id="formele-definitie-het-idee">Formele definitie: het idee</h2>
+<div class="vfr-box vfr-opmerking">
+<p><span class="vfr-box-label"><strong>Opmerking 6.1.</strong></span> De equivalentieklasse van <span class="math inline">({v}_1, {v}_2)</span> noteren we <span class="math inline">{v}_1 \otimes {v}_2</span>.</p>
+<ul>
+<li>Elk element van <span class="math inline">V_1 \otimes V_2</span> is een eindige som <span class="math inline">\sum_{i=1}^n {v}_1^{(i)} \otimes {v}_2^{(i)}</span></li>
+<li>Deze ontbinding is niet uniek</li>
+</ul>
+</div>
+<p>Begin <em>zonder</em> enig verband, en leg precies de bilineariteit op, en niets meer:</p>
+<ul>
+<li><span class="math inline">{\mathbb{F}}(V_1 \times V_2)</span>: vrije vectorruimte, <em>elk</em> koppel <span class="math inline">({v}_1, {v}_2)</span> is een basisvector
+<ul>
+<li>overaftelbare basis, al voor <span class="math inline">V_1 = V_2 = {\mathbb{F}}^1</span></li>
+<li>geen enkel verband tussen <span class="math inline">(a {v}_1, {v}_2)</span>, <span class="math inline">({v}_1, a {v}_2)</span> en <span class="math inline">a({v}_1, {v}_2)</span></li>
+</ul></li>
+<li>Quotiënt met <span class="math inline">{\mathbb{F}}(S_1 \cup S_2)</span>: elementen van <span class="math inline">S_1 \cup S_2</span> worden de nulvector <span class="math display">\begin{aligned} (a {v}_1 + b {w}_1) \otimes {v}_2 &amp;= a\, {v}_1 \otimes {v}_2 + b\, {w}_1 \otimes {v}_2 \\ {v}_1 \otimes (a {v}_2 + b {w}_2) &amp;= a\, {v}_1 \otimes {v}_2 + b\, {v}_1 \otimes {w}_2 \end{aligned}</span></li>
+</ul>
+<p><span style="font-size: 0.8em; color: gray;">Def 6.1: <span class="math inline">S_1 = \{(a {v}_1 + b {w}_1, {v}_2) - a({v}_1, {v}_2) - b({w}_1, {v}_2)\}</span>, <span class="math inline">S_2 = \{({v}_1, a {v}_2 + b {w}_2) - a({v}_1, {v}_2) - b({v}_1, {w}_2)\}</span></span></p>
+</section>
+<section id="formele-definitie-universele-eigenschap" class="level2 smaller scrollable">
+<h2 class="smaller scrollable anchored" data-anchor-id="formele-definitie-universele-eigenschap">Formele definitie: universele eigenschap</h2>
+<p>Def 6.1 voldoet aan Def 6.2, met <span class="math inline">\chi({v}_1, {v}_2) = {v}_1 \otimes {v}_2</span>. Gegeven <span class="math inline">\psi : V_1 \times V_2 \to V_3</span> bilineair:</p>
+<ol type="1">
+<li><strong>Lineair uitbreiden</strong>: de koppels zijn een basis van <span class="math inline">{\mathbb{F}}(V_1 \times V_2)</span>; met <span class="math inline">{x}_k \in V_1</span>, <span class="math inline">{y}_k \in V_2</span>: <span class="math display">{\hat{\Psi}}\Big(\sum_k a_k ({x}_k, {y}_k)\Big) = \sum_k a_k \psi({x}_k, {y}_k) \in V_3</span></li>
+<li><strong>Nul op de relaties</strong>, want <span class="math inline">\psi</span> is bilineair: <span class="math display">\begin{aligned}
+&amp;{\hat{\Psi}}\big((a {v}_1 + b {w}_1, {v}_2) - a({v}_1, {v}_2) - b({w}_1, {v}_2)\big) \\
+&amp;\quad = \psi(a {v}_1 + b {w}_1, {v}_2) - a \psi({v}_1, {v}_2) - b \psi({w}_1, {v}_2) = {o}
+\end{aligned}</span> idem voor <span class="math inline">S_2</span>, dus <span class="math inline">{\mathbb{F}}(S_1 \cup S_2) \subseteq \mathop{\mathrm{ker}}({\hat{\Psi}})</span></li>
+<li><strong>Naar het quotiënt</strong>: <span class="math inline">{\hat{\Psi}}</span> is constant op elke equivalentieklasse <span class="math display">{\hat{\psi}}({v}_1 \otimes {v}_2) = \psi({v}_1, {v}_2), \qquad \text{dus } \psi = {\hat{\psi}} \circ \chi</span></li>
+<li><strong>Uniek</strong>: de <span class="math inline">{v}_1 \otimes {v}_2</span> spannen <span class="math inline">V_1 \otimes V_2</span> op (Opm 6.1)</li>
+</ol>
+</section>
+<section id="tensorproduct-van-lineaire-afbeeldingen" class="level2 smaller scrollable">
+<h2 class="smaller scrollable anchored" data-anchor-id="tensorproduct-van-lineaire-afbeeldingen">Tensorproduct van lineaire afbeeldingen</h2>
+<div class="vfr-box vfr-definitie">
+<p><span class="vfr-box-label"><strong>Definitie 6.3.</strong></span> Voor <span class="math inline">{\hat{A}}_1 \in \mathop{\mathrm{Hom}}(V_1, W_1)</span> en <span class="math inline">{\hat{A}}_2 \in \mathop{\mathrm{Hom}}(V_2, W_2)</span> is <span class="math inline">{\hat{A}}_1 \otimes {\hat{A}}_2 \in \mathop{\mathrm{Hom}}(V_1 \otimes V_2, W_1 \otimes W_2)</span> de lineaire afbeelding die via de universele eigenschap hoort bij de bilineaire afbeelding <span class="math display">({v}_1, {v}_2) \mapsto ({\hat{A}}_1 {v}_1) \otimes ({\hat{A}}_2 {v}_2)</span></p>
+</div>
+<ul>
+<li>Basissen <span class="math inline">\{{e}_k\} \subset V_1</span>, <span class="math inline">\{{f}_l\} \subset V_2</span>, <span class="math inline">\{{g}_i\} \subset W_1</span>, <span class="math inline">\{{h}_j\} \subset W_2</span>; op de productbasis: <span class="math display">({\hat{A}}_1 \otimes {\hat{A}}_2)({e}_k \otimes {f}_l) = ({\hat{A}}_1 {e}_k) \otimes ({\hat{A}}_2 {f}_l) = (A_1)^i_{\ k} (A_2)^j_{\ l}\, {g}_i \otimes {h}_j</span></li>
+<li>Tensor als vector: <span class="math inline">T^{kl} = T^K</span> met <span class="math inline">K = (k-1) n_2 + l</span> (matrix “afvlakken”)</li>
+<li>Matrixvoorstelling van <span class="math inline">{\hat{A}} = {\hat{A}}_1 \otimes {\hat{A}}_2</span>, van grootte <span class="math inline">m_1 m_2 \times n_1 n_2</span>: <span class="math display">\boxed{({\mathsf{A}})^I_{\ K} = A^{(i,j)}_{\ \ (k,l)} = ({\mathsf{A}}_1)^i_{\ k} ({\mathsf{A}}_2)^j_{\ l}}</span> <span class="math display">I = (i-1) m_2 + j, \quad K = (k-1) n_2 + l, \qquad n_i = \mathop{\mathrm{dim}}V_i, \quad m_i = \mathop{\mathrm{dim}}W_i</span></li>
+</ul>
+</section>
+<section id="kronecker-product" class="level2 smaller scrollable">
+<h2 class="smaller scrollable anchored" data-anchor-id="kronecker-product">Kronecker product</h2>
+<div class="vfr-box vfr-opmerking">
+<p><span class="vfr-box-label"><strong>Opmerking 6.4.</strong></span> Voor matrices: <strong>Kronecker product</strong> of <strong>(matrix) direct product</strong>, in blokvorm <span class="math display">{\mathsf{A}}_1 \otimes {\mathsf{A}}_2 = \begin{bmatrix}
+({\mathsf{A}}_1)^1_{\ 1} {\mathsf{A}}_2 &amp; ({\mathsf{A}}_1)^1_{\ 2} {\mathsf{A}}_2 &amp; \cdots &amp; ({\mathsf{A}}_1)^1_{\ n_1} {\mathsf{A}}_2 \\
+({\mathsf{A}}_1)^2_{\ 1} {\mathsf{A}}_2 &amp; ({\mathsf{A}}_1)^2_{\ 2} {\mathsf{A}}_2 &amp; \cdots &amp; ({\mathsf{A}}_1)^2_{\ n_1} {\mathsf{A}}_2 \\
+\vdots &amp; \vdots &amp; \ddots &amp; \vdots \\
+({\mathsf{A}}_1)^{m_1}_{\ 1} {\mathsf{A}}_2 &amp; ({\mathsf{A}}_1)^{m_1}_{\ 2} {\mathsf{A}}_2 &amp; \cdots &amp; ({\mathsf{A}}_1)^{m_1}_{\ n_1} {\mathsf{A}}_2
+\end{bmatrix}</span></p>
+</div>
+<div class="vfr-box vfr-opmerking">
+<p><span class="vfr-box-label"><strong>Opmerking 6.5.</strong></span> In Python (NumPy), MATLAB en Julia: <code>kron</code></p>
+</div>
+<div class="vfr-box vfr-voorbeeld">
+<p><span class="vfr-box-label"><strong>Voorbeeld.</strong></span> <span class="math inline">\begin{bmatrix} 1 &amp; 2 \\ 3 &amp; 4 \end{bmatrix} \otimes \begin{bmatrix} 0 &amp; 1 \\ 1 &amp; 0 \end{bmatrix} = \begin{bmatrix} 0 &amp; 1 &amp; 0 &amp; 2 \\ 1 &amp; 0 &amp; 2 &amp; 0 \\ 0 &amp; 3 &amp; 0 &amp; 4 \\ 3 &amp; 0 &amp; 4 &amp; 0 \end{bmatrix}</span></p>
+</div>
+</section>
+<section id="multilineaire-afbeeldingen" class="level2 smaller scrollable">
+<h2 class="smaller scrollable anchored" data-anchor-id="multilineaire-afbeeldingen">Multilineaire afbeeldingen</h2>
+<ul>
+<li><strong>Multilineaire afbeelding</strong> <span class="math inline">M : V_1 \times \cdots \times V_N \to W</span>: lineair in elk argument apart
+<ul>
+<li>coëfficiënten <span class="math inline">M^i_{\ j_1 j_2 \ldots j_N}</span>; <strong><span class="math inline">N</span>-vorm</strong>: <span class="math inline">V^{\times N} \to {\mathbb{F}}</span> (vgl. 1-vorm = functionaal)</li>
+</ul></li>
+<li>Verwacht, zoals bij bilineair: <span class="math inline">M \leftrightarrow {\hat{M}} \in \mathop{\mathrm{Hom}}(V_1 \otimes \cdots \otimes V_N, W)</span>
+<ul>
+<li>maar wat is een tensorproduct van meer dan twee ruimten?</li>
+</ul></li>
+</ul>
+<div class="vfr-box vfr-propositie">
+<p><span class="vfr-box-label"><strong>Propositie 6.2.</strong></span> <span class="math inline">(U \otimes V) \otimes W</span> en <span class="math inline">U \otimes (V \otimes W)</span> zijn isomorf</p>
+</div>
+<div class="vfr-box vfr-opmerking">
+<p><span class="vfr-box-label"><strong>Opmerking 6.6.</strong></span> In de praktijk: tensorproduct associatief, we schrijven <span class="math inline">U \otimes V \otimes W</span></p>
+</div>
+<div class="vfr-box vfr-opmerking">
+<p><span class="vfr-box-label"><strong>Opmerking 6.7.</strong></span> Eindig-dimensionaal, met basissen <span class="math inline">\{{e}_i\}</span>, <span class="math inline">\{{f}_j\}</span>, <span class="math inline">\{{g}_k\}</span> van <span class="math inline">U</span>, <span class="math inline">V</span>, <span class="math inline">W</span>: <span class="math display">T = T^{ijk}\, {e}_i \otimes {f}_j \otimes {g}_k \in U \otimes V \otimes W</span></p>
+</div>
+</section>
+<section id="orde-van-een-tensor" class="level2 smaller scrollable">
+<h2 class="smaller scrollable anchored" data-anchor-id="orde-van-een-tensor">Orde van een tensor</h2>
+<div class="vfr-box vfr-definitie">
+<p><span class="vfr-box-label"><strong>Definitie 6.4.</strong></span> Een tensor <span class="math inline">T \in V_1 \otimes \cdots \otimes V_N</span> heeft coëfficiënten <span class="math inline">T^{i_1 i_2 \ldots i_N}</span> met <span class="math inline">N</span> indices: de <strong>orde</strong>, <strong>graad</strong>, <strong>rang</strong> of <strong>dimensionaliteit</strong> van de tensor</p>
+</div>
+<div class="vfr-box vfr-opmerking">
+<p><span class="vfr-box-label"><strong>Opmerking 6.9.</strong></span> Programmeertalen: <strong>multidimensionale array</strong>; aantal indices <code>ndim</code> (NumPy), <code>ndims</code> (Julia, MATLAB)</p>
+</div>
+<ul>
+<li><strong>Scalairen</strong>: <span class="math inline">{\mathbb{F}}\times V \to V : (a, {v}) \mapsto a {v}</span> is bilineair
+<ul>
+<li>via de universele eigenschap: lineaire, bijectieve <span class="math inline">{\hat{L}} : {\mathbb{F}}\otimes V \to V</span>, <span class="math inline">a \otimes {v}\mapsto a {v}</span></li>
+<li>dus <span class="math inline">{\mathbb{F}}\otimes V \cong V</span>: we schrijven <span class="math inline">{\mathbb{F}}\otimes V = V</span></li>
+<li>op een computer niet onzichtbaar: een index van dimensie 1 verandert de orde</li>
+</ul></li>
+</ul>
+</section>
+<section id="lineaire-afbeelding-als-bilineaire-vorm" class="level2 smaller scrollable">
+<h2 class="smaller scrollable anchored" data-anchor-id="lineaire-afbeelding-als-bilineaire-vorm">Lineaire afbeelding als bilineaire vorm</h2>
+<p><span class="math inline">{\hat{A}} \in \mathop{\mathrm{Hom}}(V, W)</span>; basissen <span class="math inline">\{{e}_j\}</span> van <span class="math inline">V</span> en <span class="math inline">\{{f}_i\}</span> van <span class="math inline">W</span>, duale basissen <span class="math inline">\{{\varepsilon}^j\}</span> en <span class="math inline">\{\varphi^i\}</span></p>
+<ul>
+<li>Met inwendig product (H5): sesquilineaire vorm <span class="math inline">({w}, {v}) \mapsto {\left\langle{w},{\hat{A}} {v}\right\rangle}</span> op <span class="math inline">W \times V</span></li>
+<li><em>Zonder</em> inwendig product: een bilineaire vorm op <span class="math inline">W^\ast \times V</span> <span class="math display">\boxed{A(\xi, {v}) = \xi[{\hat{A}} {v}]}</span>
+<ul>
+<li>via de universele eigenschap: lineaire functionaal <span class="math inline">\xi \otimes {v}\mapsto \xi[{\hat{A}} {v}]</span> op <span class="math inline">W^\ast \otimes V</span></li>
+<li>een element van <span class="math inline">\mathop{\mathrm{Hom}}(W^\ast \otimes V, {\mathbb{F}}) = (W^\ast \otimes V)^\ast</span></li>
+<li>coëfficiënten: <span class="math inline">A(\varphi^i, {e}_j) = \varphi^i[{\hat{A}} {e}_j] = A^i_{\ j}</span></li>
+<li>dezelfde getallen als in de matrix van <span class="math inline">{\hat{A}}</span>: <span class="math inline">{\hat{A}} {e}_j = A^i_{\ j} {f}_i</span></li>
+</ul></li>
+</ul>
+</section>
+<section id="lineaire-afbeelding-als-tensor" class="level2">
+<h2 class="anchored" data-anchor-id="lineaire-afbeelding-als-tensor">Lineaire afbeelding als tensor</h2>
+<ul>
+<li>Met dezelfde coëfficiënten: <span class="math inline">{\hat{A}} \cong A^i_{\ j} {f}_i \otimes {\varepsilon}^j \in W \otimes V^\ast</span></li>
+<li><strong>Werking</strong>: de <span class="math inline">V^\ast</span>-factor “eet” de vector (contractie) <span class="math display">({f}_i \otimes {\varepsilon}^j)({v}) = {f}_i\, {\varepsilon}^j[{v}] = v^j {f}_i \qquad \Rightarrow \qquad (A^i_{\ j} {f}_i \otimes {\varepsilon}^j)({v}) = A^i_{\ j} v^j {f}_i = {\hat{A}} {v}</span></li>
+<li><strong>Rang 1</strong>: <span class="math inline">{w}\otimes \xi</span> werkt als <span class="math inline">{v}\mapsto {w}\, \xi[{v}]</span>; matrix <span class="math inline">\boldsymbol{w} \boldsymbol{\xi}^{\mathsf{T}}</span> (outer product)</li>
+</ul>
+<p><span class="math display">\boxed{\mathop{\mathrm{Hom}}(V, W) \cong \mathop{\mathrm{Hom}}(W^\ast \otimes V, {\mathbb{F}}) \cong \mathop{\mathrm{Hom}}({\mathbb{F}}, W \otimes V^\ast) \cong W \otimes V^\ast}</span></p>
+<ul>
+<li>Afbeelding, bilineaire vorm, tensor: dezelfde coëfficiënten <span class="math inline">A^i_{\ j}</span></li>
+</ul>
+</section>
+<section id="identiteit-natuurlijke-paring-en-trace" class="level2">
+<h2 class="anchored" data-anchor-id="identiteit-natuurlijke-paring-en-trace">Identiteit, natuurlijke paring en trace</h2>
+<p><span class="math inline">V = W</span>: <span class="math inline">\mathop{\mathrm{Hom}}(V, V) \cong V \otimes V^\ast \cong \mathop{\mathrm{Hom}}(V^\ast \otimes V, {\mathbb{F}})</span></p>
+<ul>
+<li><strong>Identiteit</strong>: <span class="math inline">{\hat{1}}_V \cong \delta^i_{\ j} {e}_i \otimes {\varepsilon}^j = {e}_i \otimes {\varepsilon}^i</span> (in elke basis hetzelfde element)</li>
+<li>Als functionaal op <span class="math inline">V^\ast \otimes V</span>: de <strong>natuurlijke paring</strong> of <strong>evaluatie</strong> <span class="math display">\boxed{{\varepsilon}^i \otimes {e}_j \mapsto {\varepsilon}^i[{e}_j] = \delta^i_{\ j}, \qquad \xi \otimes {v}\mapsto \xi[{v}]}</span>
+<ul>
+<li>gebruikt geen basis en geen inwendig product</li>
+</ul></li>
+<li><strong>Trace</strong>: de paring toegepast op <span class="math inline">{\hat{A}} \in V \otimes V^\ast</span>: <span class="math inline">\mathop{\mathrm{tr}}{\hat{A}} = A^i_{\ j} \delta^j_{\ i} = A^i_{\ i}</span></li>
+<li><strong>Samenstellen</strong>: <span class="math inline">({\hat{A}} {\hat{B}})^i_{\ k} = A^i_{\ j} B^j_{\ k}</span>: de paring van de middelste factoren</li>
+</ul>
+</section>
+<section id="bra-ketnotatie" class="level2 smaller scrollable">
+<h2 class="smaller scrollable anchored" data-anchor-id="bra-ketnotatie">Bra-ketnotatie</h2>
+<p>Kwantummechanica, Hilbertruimte <span class="math inline">\mathcal{H}</span>: de Dirac-notatie maakt deze constructies zichtbaar</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 23%">
+<col style="width: 38%">
+<col style="width: 38%">
+</colgroup>
+<thead>
+<tr class="header">
+<th></th>
+<th style="text-align: center;"><strong>wiskunde</strong></th>
+<th style="text-align: center;"><strong>bra-ket</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>vector</td>
+<td style="text-align: center;"><span class="math inline">{v}\in \mathcal{H}</span></td>
+<td style="text-align: center;"><span class="math inline">\lvert v \rangle</span> (ket)</td>
+</tr>
+<tr class="even">
+<td>functionaal</td>
+<td style="text-align: center;"><span class="math inline">\xi \in \mathcal{H}^\ast</span></td>
+<td style="text-align: center;"><span class="math inline">\langle \xi \rvert</span> (bra)</td>
+</tr>
+<tr class="odd">
+<td>natuurlijke paring</td>
+<td style="text-align: center;"><span class="math inline">\xi[{v}]</span></td>
+<td style="text-align: center;"><span class="math inline">\langle \xi \vert v \rangle</span></td>
+</tr>
+<tr class="even">
+<td>tensor in <span class="math inline">\mathcal{H} \otimes \mathcal{H}^\ast</span></td>
+<td style="text-align: center;"><span class="math inline">{w}\otimes \xi</span></td>
+<td style="text-align: center;"><span class="math inline">\lvert w \rangle \langle \xi \rvert</span></td>
+</tr>
+<tr class="odd">
+<td>werking: contractie</td>
+<td style="text-align: center;"><span class="math inline">{w}\, \xi[{v}]</span></td>
+<td style="text-align: center;"><span class="math inline">\lvert w \rangle \langle \xi \vert v \rangle</span></td>
+</tr>
+<tr class="even">
+<td>bilineaire vorm (matrixelement)</td>
+<td style="text-align: center;"><span class="math inline">\xi[{\hat{A}} {v}]</span></td>
+<td style="text-align: center;"><span class="math inline">\langle \xi \vert {\hat{A}} \vert v \rangle</span></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>Riesz</strong> (5.27): elke bra is <span class="math inline">\langle v \rvert = {\left\langle{v},\cdot\right\rangle}</span>, antilineair in <span class="math inline">{v}</span>; zo wordt <span class="math inline">\langle w \vert v \rangle = {\left\langle{w},{v}\right\rangle}</span></li>
+<li>Een bra naast een ket sluit het haakje: <strong>contractie</strong>, een getal</li>
+</ul>
+</section>
+<section id="indexnotatie" class="level2">
+<h2 class="anchored" data-anchor-id="indexnotatie">Indexnotatie</h2>
+<ul>
+<li>Algemeen, met associativiteit en <span class="math inline">V_1 \otimes V_2 \cong V_2 \otimes V_1</span>: <span class="math display">\begin{aligned}
+V_1 \otimes \cdots \otimes V_N &amp;\cong \mathop{\mathrm{Hom}}(V_1^\ast \otimes \cdots \otimes V_N^\ast, {\mathbb{F}}) \\
+&amp;\cong \mathop{\mathrm{Hom}}(V_{\sigma_1}^\ast \otimes \cdots \otimes V_{\sigma_k}^\ast, V_{\sigma_{k+1}} \otimes \cdots \otimes V_{\sigma_N})
+\end{aligned}</span>
+<ul>
+<li><em>één tensor, veel interpretaties als multilineaire afbeelding</em></li>
+</ul></li>
+<li>Vaak één primaire ruimte <span class="math inline">V</span> (ruimte, ruimtetijd, raakruimte): factoren <span class="math inline">V</span> en <span class="math inline">V^\ast</span>
+<ul>
+<li>index <strong>boven</strong> voor <span class="math inline">V</span> (contravariant), <strong>onder</strong> voor <span class="math inline">V^\ast</span> (covariant)</li>
+<li>vb. <span class="math inline">T \in V \otimes V^\ast \otimes V^\ast \otimes V</span>: coëfficiënten <span class="math inline">T^{i\ \ \ l}_{\ jk}</span></li>
+</ul></li>
+<li><strong>(Abstracte) indexnotatie</strong>: indices als plaatshouders, niet als getallen</li>
+</ul>
+</section>
+<section id="tensoroperaties" class="level2">
+<h2 class="anchored" data-anchor-id="tensoroperaties">Tensoroperaties</h2>
+<p><span class="math inline">T^{i\ \ \ l}_{\ jk} \in V \otimes V^\ast \otimes V^\ast \otimes V</span> en <span class="math inline">S_i^{\ jk} \in V^\ast \otimes V \otimes V</span>:</p>
+<ul>
+<li><strong>Indexpermutatie</strong>: indices herschikken, met behoud van boven/onder <span class="math display">U_{j\ \ k}^{\ l\ \ i} = T^{i\ \ \ l}_{\ jk} \quad \text{(orde 2: transponeren)}</span></li>
+<li><strong>Tensorproduct</strong> (outer product): <span class="math inline">U^{i\ \ \ l\ \ np}_{\ jk\ m} = T^{i\ \ \ l}_{\ jk} S_m^{\ np}</span></li>
+<li><strong>Contractie</strong>: een boven- en een onderindex gelijkstellen en sommeren (natuurlijke paring)
+<ul>
+<li>binnen één tensor (veralgemeende trace): <span class="math inline">V^i_{\ j} = T^{i\ \ \ k}_{\ jk}</span></li>
+<li>tussen tensoren: <span class="math inline">W^{i\ n}_{\ j} = T^{i\ \ \ l}_{\ jk} S_l^{\ nk}</span></li>
+<li>oorsprong van Einsteins sommatieconventie</li>
+</ul></li>
+</ul>
+</section>
+<section id="tensordiagrammen" class="level2">
+<h2 class="anchored" data-anchor-id="tensordiagrammen">Tensordiagrammen</h2>
+<p>Grafische indexnotatie (Penrose; <em>niet in de cursus</em>): elke index is een <strong>beentje</strong></p>
+<ul>
+<li>beentje omlaag: index boven (<span class="math inline">V</span>); beentje omhoog: index onder (<span class="math inline">V^\ast</span>)</li>
+<li>beentjes verbinden = contractie (boven met onder); invoer boven, uitvoer onder</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/fig-tensor-diagrams.svg" class="quarto-figure quarto-figure-center figure-img" height="380"></p>
+</figure>
+</div>
+</section>
+<section id="basistransformaties-van-tensoren" class="level2">
+<h2 class="anchored" data-anchor-id="basistransformaties-van-tensoren">Basistransformaties van tensoren</h2>
+<p>Basis <span class="math inline">\{{e}_i\} \to \{\tilde{{e}}_i\}</span> met <span class="math inline">{e}_j = \tilde{{e}}_i L^i_{\ j}</span>:</p>
+<ul>
+<li>vector: <span class="math inline">\tilde{v}^i = L^i_{\ j} v^j</span>; duale vector: <span class="math inline">\tilde{\chi}_i = ({\mathsf{L}}^{-1})^j_{\ i} \chi_j</span></li>
+<li>tensor: elke index transformeert volgens zijn positie <span class="math display">\boxed{\tilde{T}^{i\ \ \ l}_{\ jk} = ({\mathsf{L}})^i_{\ i'} ({\mathsf{L}}^{-1})^{j'}_{\ j} ({\mathsf{L}}^{-1})^{k'}_{\ k} ({\mathsf{L}})^l_{\ l'} T^{i'\ \ \ \ l'}_{\ j'k'}}</span></li>
+<li>contractie van een boven- met een onderindex: basisonafhankelijk
+<ul>
+<li>vb. <span class="math inline">\xi[{v}] = \xi_i v^i</span>, trace <span class="math inline">A^i_{\ i}</span></li>
+</ul></li>
+</ul>
+</section>
+</section>
+<section id="tensoren-in-inwendig-productruimten" class="level1">
+<h1>Tensoren in inwendig productruimten</h1>
+<section id="inwendig-product-op-een-tensorproduct" class="level2 smaller scrollable">
+<h2 class="smaller scrollable anchored" data-anchor-id="inwendig-product-op-een-tensorproduct">Inwendig product op een tensorproduct</h2>
+<p>Basissen <span class="math inline">\{{e}_i\}</span> van <span class="math inline">V</span>, <span class="math inline">\{{f}_j\}</span> van <span class="math inline">W</span>; metrieken <span class="math inline">g_{ik} = {\left\langle{e}_i,{e}_k\right\rangle}_V</span>, <span class="math inline">h_{jl} = {\left\langle{f}_j,{f}_l\right\rangle}_W</span></p>
+<ul>
+<li><strong>Intuïtief</strong>: metriek op <span class="math inline">V \otimes W</span>: <span class="math inline">{\left\langle{e}_i \otimes {f}_j,{e}_k \otimes {f}_l\right\rangle} = g_{ik} h_{jl}</span>, dus <span class="math display">{\left\langle S,T\right\rangle}_{V \otimes W} = \overline{S^{ij}} g_{ik} h_{jl} T^{kl}</span>
+<ul>
+<li>metriek <span class="math inline">{\mathsf{g}} \otimes {\mathsf{h}}</span> (Kronecker): positief definiet, eigenwaarden <span class="math inline">\lambda_i \mu_j &gt; 0</span></li>
+</ul></li>
+<li><strong>Orthonormale basissen</strong>: <span class="math inline">g_{ik} = \delta_{ik}</span>, <span class="math inline">h_{jl} = \delta_{jl}</span> <span class="math display">{\left\langle S,T\right\rangle}_{V \otimes W} = \sum_{i,j} \overline{S^{ij}} T^{ij}, \qquad {\left\lVert T\right\rVert}^2 = \sum_{i,j} {\left\lvert T^{ij}\right\rvert}^2</span>
+<ul>
+<li><span class="math inline">{\left\lVert T\right\rVert}</span> is de Hilbert-Schmidt-norm van <span class="math inline">{\mathsf{T}}</span> (H5)</li>
+</ul></li>
+<li>Op producttensoren, zonder basis: <span class="math display">\boxed{{\left\langle{v}\otimes {w},{v}' \otimes {w}'\right\rangle}_{V \otimes W} = {\left\langle{v},{v}'\right\rangle}_V {\left\langle{w},{w}'\right\rangle}_W}</span></li>
+</ul>
+</section>
+<section id="inwendig-product-zonder-basis" class="level2 smaller scrollable">
+<h2 class="smaller scrollable anchored" data-anchor-id="inwendig-product-zonder-basis">Inwendig product: zonder basis</h2>
+<p>Zoals Def 6.1 voor Def 6.0: dezelfde definitie, zonder naar een basis te verwijzen</p>
+<ul>
+<li>Definieer <span class="math inline">{\left\langle({v}, {w}),({v}', {w}')\right\rangle} = {\left\langle{v},{v}'\right\rangle}_V {\left\langle{w},{w}'\right\rangle}_W</span> op <span class="math inline">{\mathbb{F}}(V \times W)</span>, (anti)lineair uitgebreid
+<ul>
+<li>ontaard: de nulruimte is precies <span class="math inline">{\mathbb{F}}(S_1 \cup S_2)</span> <span class="math inline">\to</span> welgedefinieerd op het quotiënt <span class="math inline">V \otimes W</span></li>
+</ul></li>
+<li><strong>Positief definiet</strong>: <span class="math inline">T = \sum_{i=1}^n {v}_i \otimes {w}_i</span>; Gram-Schmidt geeft orthonormale <span class="math inline">\{{e}_k\}</span>, <span class="math inline">\{{f}_k\}</span>: <span class="math display">{\left\langle T,T\right\rangle} = \sum_{i,j,k,l} \overline{T^{ij}} T^{kl} {\left\langle{e}_i,{e}_k\right\rangle} {\left\langle{f}_j,{f}_l\right\rangle} = \sum_{i,j} {\left\lvert T^{ij}\right\rvert}^2 &gt; 0</span>
+<ul>
+<li>dat is de intuïtieve formule, met orthonormale stelsels die van <span class="math inline">T</span> afhangen</li>
+<li>werkt ook in oneindige dimensie: elke <span class="math inline">T</span> is een <em>eindige</em> som</li>
+</ul></li>
+<li>Gevolg: de intuïtieve formule hangt niet af van de gekozen orthonormale basissen</li>
+</ul>
+</section>
+<section id="indices-verhogen-en-verlagen" class="level2 smaller scrollable">
+<h2 class="smaller scrollable anchored" data-anchor-id="indices-verhogen-en-verlagen">Indices verhogen en verlagen</h2>
+<p>Reële <span class="math inline">V</span>, eindig-dimensionaal, metriek <span class="math inline">{\mathsf{g}}</span> (niet noodzakelijk orthonormaal):</p>
+<ul>
+<li><span class="math inline">v_i = g_{ij} v^j</span>, <span class="math inline">v^i = g^{ij} v_j</span>: elke index van een tensor kan omhoog of omlaag
+<ul>
+<li>vb. <span class="math inline">T^{ij}_{\ \ kl} = g^{jj'} g_{ll'} T^{i\ \ \ \ l'}_{\ j'k}</span>, met hetzelfde symbool</li>
+</ul></li>
+<li>Inwendig product door contractie: <span class="math display">{\left\langle T,\tilde{T}\right\rangle} = T^{i\ \ \ l}_{\ jk} \tilde{T}^{i'\ \ \ \ l'}_{\ j'k'} g_{ii'} g^{jj'} g^{kk'} g_{ll'} = T_{ijkl} \tilde{T}^{ijkl}</span></li>
+<li>Lineaire afbeelding <span class="math inline">A^i_{\ j}</span> <span class="math inline">\leftrightarrow</span> bilineaire vorm <span class="math inline">A_{ij} = g_{ik} A^k_{\ j}</span> (H5)</li>
+<li>Orthonormale basis, <span class="math inline">g_{ij} = \delta_{ij}</span>: verhogen en verlagen verandert niets
+<ul>
+<li><strong>Cartesische tensoren</strong>: enkel onderindices; basistransformaties zijn orthogonaal</li>
+</ul></li>
+</ul>
+</section>
+<section id="tensorproduct-van-hilbertruimten" class="level2 smaller scrollable">
+<h2 class="smaller scrollable anchored" data-anchor-id="tensorproduct-van-hilbertruimten">Tensorproduct van Hilbertruimten</h2>
+<ul>
+<li><span class="math inline">V \otimes W</span> bevat enkel <em>eindige</em> sommen <span class="math inline">\sum_{i=1}^n {v}_i \otimes {w}_i</span>: niet compleet
+<ul>
+<li>Cauchy-rijen <span class="math inline">T^{(k)} = \sum_{i=1}^{n_k} {v}_i^{(k)} \otimes {w}_i^{(k)}</span> met een limiet die geen eindige som is</li>
+</ul></li>
+<li><strong>Definitie</strong> voor Hilbertruimten: de completering <span class="math display">\boxed{V \otimes W = \overline{{\mathbb{F}}(V \times W) / {\mathbb{F}}(S_1 \cup S_2)}}</span>
+<ul>
+<li>orthonormale basissen <span class="math inline">\{{e}_m\}</span>, <span class="math inline">\{{f}_n\}</span> <span class="math inline">\Rightarrow</span> orthonormale basis <span class="math inline">\{{e}_m \otimes {f}_n \mid m, n \in {\mathbb{N}}\}</span></li>
+</ul></li>
+</ul>
+<div class="vfr-box vfr-opmerking">
+<p><span class="vfr-box-label"><strong>Opmerking 6.10.</strong></span> Zonder norm kan dit niet: functies op <span class="math inline">{\mathbb{R}}^2</span> zijn geen eindige sommen <span class="math inline">g(x) h(y)</span>, en er is geen limiet</p>
+</div>
+<div class="vfr-box vfr-opmerking">
+<p><span class="vfr-box-label"><strong>Opmerking 6.11.</strong></span> Kwantummechanica, samengesteld systeem: <span class="math inline">\mathcal{H}_{AB} = \mathcal{H}_A \otimes \mathcal{H}_B</span></p>
+</div>
+</section>
+<section id="voorbeeld-functies-van-twee-variabelen" class="level2 smaller scrollable">
+<h2 class="smaller scrollable anchored" data-anchor-id="voorbeeld-functies-van-twee-variabelen">Voorbeeld: functies van twee variabelen</h2>
+<div class="vfr-box vfr-voorbeeld">
+<p><span class="vfr-box-label"><strong>Voorbeeld 6.1.</strong></span> <span class="math inline">V = L^2([0, L_x])</span> (functies <span class="math inline">g(x)</span>), <span class="math inline">W = L^2([0, L_y])</span> (functies <span class="math inline">h(y)</span>)</p>
+</div>
+<ul>
+<li><strong>Product</strong>: <span class="math inline">g \otimes h</span> is de functie <span class="math inline">f(x, y) = g(x) h(y)</span> op de rechthoek <span class="math inline">R = [0, L_x] \times [0, L_y]</span>
+<ul>
+<li>kwadratisch integreerbaar, en het inwendig product klopt: <span class="math display">\iint_R \overline{g(x) h(y)}\, g'(x) h'(y)\, {\mathrm{d}}x\, {\mathrm{d}}y = {\left\langle g,g'\right\rangle} {\left\langle h,h'\right\rangle} = {\left\langle g \otimes h,g' \otimes h'\right\rangle}</span></li>
+</ul></li>
+<li><strong>Algebraïsch</strong> <span class="math inline">V \otimes W</span>: eindige sommen <span class="math inline">\sum_{k=1}^n g_k(x) h_k(y)</span>
+<ul>
+<li>vgl. matrices: een “matrix” <span class="math inline">f(x, y)</span> van eindige rang</li>
+<li>niet alle functies: <span class="math inline">{\mathrm{e}}^{-(x-y)^2} = \sum_{n=0}^\infty \frac{2^n}{n!} (x^n {\mathrm{e}}^{-x^2})(y^n {\mathrm{e}}^{-y^2})</span> vraagt oneindig veel termen</li>
+</ul></li>
+<li><strong>Hilbert</strong> <span class="math inline">V \otimes W</span> (completering): alle limieten van zulke sommen <span class="math display">\boxed{L^2([0, L_x]) \otimes L^2([0, L_y]) = L^2([0, L_x] \times [0, L_y])}</span></li>
+</ul>
+</section>
+<section id="voorbeeld-6.1-fourierbasis" class="level2 smaller scrollable">
+<h2 class="smaller scrollable anchored" data-anchor-id="voorbeeld-6.1-fourierbasis">Voorbeeld 6.1: Fourierbasis</h2>
+<ul>
+<li>Orthonormale basissen (H5): <span class="math inline">e_k(x) = \frac{1}{\sqrt{L_x}} {\mathrm{e}}^{{\mathrm{i}}2\pi k x / L_x}</span>, <span class="math inline">f_l(y) = \frac{1}{\sqrt{L_y}} {\mathrm{e}}^{{\mathrm{i}}2\pi l y / L_y}</span>, <span class="math inline">k, l \in {\mathbb{Z}}</span></li>
+<li>Basis van het tensorproduct: <span class="math inline">e_k \otimes f_l</span>, de <strong>tweedimensionale Fourierfuncties</strong> <span class="math display">(e_k \otimes f_l)(x, y) = \frac{1}{\sqrt{L_x L_y}} {\mathrm{e}}^{{\mathrm{i}}2\pi (k x / L_x + l y / L_y)}</span></li>
+<li><strong>Expansie</strong> (Stelling 5.23): elke <span class="math inline">f \in L^2(R)</span> is <span class="math display">f = \sum_{k,l=-\infty}^{+\infty} F_{kl}\, e_k \otimes f_l, \qquad F_{kl} = {\left\langle e_k \otimes f_l,f\right\rangle}</span>
+<ul>
+<li>gelijkheid in de 2-norm; <span class="math inline">\sum_{k,l} {\left\lvert F_{kl}\right\rvert}^2 = {\left\lVert f\right\rVert}^2</span>: een “oneindige matrix” <span class="math inline">F_{kl}</span></li>
+</ul></li>
+<li>Afgeknot tot <span class="math inline">{\left\lvert k\right\rvert}, {\left\lvert l\right\rvert} \leq N</span>: een <em>eindige</em> som van producten <span class="math inline">\to</span> die zijn dicht in <span class="math inline">L^2(R)</span></li>
+</ul>
+</section>
+</section>
+<section id="tensoralgebra-en-exterieure-producten" class="level1">
+<h1>Tensoralgebra en exterieure producten</h1>
+<section id="tensoren-van-type-p-q" class="level2 smaller scrollable">
+<h2 class="smaller scrollable anchored" data-anchor-id="tensoren-van-type-p-q">Tensoren van type <span class="math inline">(p, q)</span></h2>
+<p>Eén primaire ruimte <span class="math inline">V</span>: <span class="math inline">V^{\otimes k} = V \otimes \cdots \otimes V</span> (<span class="math inline">k</span> keer), <span class="math inline">V^{\otimes 0} = {\mathbb{F}}</span></p>
+<ul>
+<li>Algemeen, factoren herschikt: <span class="math display">\boxed{\mathcal{T}^p_{\ q}(V) = V^{\otimes p} \otimes (V^\ast)^{\otimes q}}</span>
+<ul>
+<li><strong>contravariante graad</strong> <span class="math inline">p</span>, <strong>covariante graad</strong> <span class="math inline">q</span></li>
+<li>vector <span class="math inline">(1, 0)</span>, duale vector <span class="math inline">(0, 1)</span>, lineaire afbeelding <span class="math inline">(1, 1)</span>, bilineaire vorm <span class="math inline">(0, 2)</span></li>
+</ul></li>
+<li><span class="math inline">(p, q)</span>-tensor <span class="math inline">\leftrightarrow</span> multilineaire vorm op <span class="math inline">(V^\ast)^{\times p} \times V^{\times q}</span></li>
+</ul>
+<div class="vfr-box vfr-opmerking">
+<p><span class="vfr-box-label"><strong>Opmerking 6.12.</strong></span> In een basis: <span class="math inline">t^{i_1 \ldots i_p}_{\qquad j_1 \ldots j_q}\, {e}_{i_1} \otimes \cdots \otimes {e}_{i_p} \otimes {\varepsilon}^{j_1} \otimes \cdots \otimes {\varepsilon}^{j_q}</span></p>
+</div>
+<div class="vfr-box vfr-opmerking">
+<p><span class="vfr-box-label"><strong>Opmerking 6.13.</strong></span> <span class="math inline">\mathcal{T}^p_{\ q}(V)^\ast \cong \mathcal{T}^p_{\ q}(V^\ast) \cong \mathcal{T}^q_{\ p}(V)</span>: volledige contractie geeft een scalair</p>
+</div>
+</section>
+<section id="tensoralgebra" class="level2 smaller scrollable">
+<h2 class="smaller scrollable anchored" data-anchor-id="tensoralgebra">Tensoralgebra</h2>
+<ul>
+<li><span class="math inline">\otimes : V^{\otimes k} \times V^{\otimes l} \to V^{\otimes (k+l)}</span>: bilineair, associatief, <span class="math inline">1 \otimes T = T</span> voor <span class="math inline">1 \in {\mathbb{F}}</span>
+<ul>
+<li>maar geen product <em>binnen</em> één ruimte</li>
+</ul></li>
+<li><strong>Tensoralgebra</strong>: directe som van alle graden <span class="math display">\boxed{\mathcal{T}(V) = \bigoplus_{k=0}^{+\infty} V^{\otimes k} = {\mathbb{F}}\oplus V \oplus V^{\otimes 2} \oplus \cdots}</span>
+<ul>
+<li><span class="math inline">\otimes</span> maakt <span class="math inline">\mathcal{T}(V)</span> tot een associatieve algebra met eenheid <span class="math inline">1 \in {\mathbb{F}}= V^{\otimes 0}</span></li>
+<li>elementen <span class="math inline">t_{(0)} + t_{(1)}^i {e}_i + t_{(2)}^{ij} {e}_i \otimes {e}_j + \cdots</span> (formele som)</li>
+<li><strong>homogeen</strong> element: in één <span class="math inline">V^{\otimes k}</span></li>
+</ul></li>
+</ul>
+<div class="vfr-box vfr-opmerking">
+<p><span class="vfr-box-label"><strong>Opmerking 6.14.</strong></span> Een ruimte die zo ontbindt in componenten met een (gehele) index heet een <em>graded vector space</em></p>
+</div>
+</section>
+<section id="symmetrie-onder-indexpermutatie" class="level2 smaller scrollable">
+<h2 class="smaller scrollable anchored" data-anchor-id="symmetrie-onder-indexpermutatie">Symmetrie onder indexpermutatie</h2>
+<ul>
+<li><span class="math inline">V \otimes W \cong W \otimes V</span>, maar <span class="math inline">\otimes</span> is niet commutatief: <span class="math inline">{v}\otimes {w}\neq {w}\otimes {v}</span></li>
+<li>Orde 2: symmetrisch en antisymmetrisch deel, zoals bij matrices: <span class="math display">{\mathsf{T}} = \underbrace{\frac{{\mathsf{T}} + {\mathsf{T}}^{\mathsf{T}}}{2}}_{\mathcal{S}{\mathsf{T}}} + \underbrace{\frac{{\mathsf{T}} - {\mathsf{T}}^{\mathsf{T}}}{2}}_{\mathcal{A}{\mathsf{T}}}</span></li>
+<li>Orde <span class="math inline">p</span>: <span class="math inline">\sigma \in S_p</span> herschikt de factoren: de factor op plaats <span class="math inline">m</span> gaat naar plaats <span class="math inline">\sigma(m)</span> <span class="math display">\sigma \triangleright T = T^{i_1 \ldots i_p}\, {e}_{i_{\sigma^{-1}(1)}} \otimes \cdots \otimes {e}_{i_{\sigma^{-1}(p)}}</span>
+<ul>
+<li>in componenten: <span class="math display">\boxed{(\sigma \triangleright T)^{j_1 j_2 \ldots j_p} = T^{j_{\sigma(1)} j_{\sigma(2)} \ldots j_{\sigma(p)}}}</span></li>
+<li>representatie van <span class="math inline">S_p</span>: <span class="math inline">\sigma \triangleright (\tau \triangleright T) = (\sigma \circ \tau) \triangleright T</span></li>
+</ul></li>
+</ul>
+</section>
+<section id="symmetrie-onder-indexpermutatie-voorbeeld" class="level2">
+<h2 class="anchored" data-anchor-id="symmetrie-onder-indexpermutatie-voorbeeld">Symmetrie onder indexpermutatie: voorbeeld</h2>
+<p><span class="math inline">p = 3</span> en de cyclische permutatie <span class="math inline">\sigma</span>:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: center;">plaats <span class="math inline">m</span></th>
+<th style="text-align: center;"><span class="math inline">1</span></th>
+<th style="text-align: center;"><span class="math inline">2</span></th>
+<th style="text-align: center;"><span class="math inline">3</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;"><span class="math inline">\sigma(m)</span></td>
+<td style="text-align: center;"><span class="math inline">2</span></td>
+<td style="text-align: center;"><span class="math inline">3</span></td>
+<td style="text-align: center;"><span class="math inline">1</span></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>Op een product</strong>: <span class="math inline">{u}</span> gaat van plaats 1 naar 2, <span class="math inline">{v}</span> van 2 naar 3, <span class="math inline">{w}</span> van 3 naar 1 <span class="math display">\sigma \triangleright ({u}\otimes {v}\otimes {w}) = {w}\otimes {u}\otimes {v}</span></li>
+<li><strong>In componenten</strong>: <span class="math inline">(\sigma \triangleright T)^{j_1 j_2 j_3} = T^{j_{\sigma(1)} j_{\sigma(2)} j_{\sigma(3)}} = T^{j_2 j_3 j_1}</span>
+<ul>
+<li>controle met <span class="math inline">T = {u}\otimes {v}\otimes {w}</span>, dus <span class="math inline">T^{ijk} = u^i v^j w^k</span>: <span class="math display">T^{j_2 j_3 j_1} = u^{j_2} v^{j_3} w^{j_1} = w^{j_1} u^{j_2} v^{j_3}: \quad \text{de coëfficiënten van } {w}\otimes {u}\otimes {v}</span></li>
+</ul></li>
+</ul>
+</section>
+<section id="symmetrie-onder-indexpermutatie-1" class="level2 smaller scrollable">
+<h2 class="smaller scrollable anchored" data-anchor-id="symmetrie-onder-indexpermutatie-1">Symmetrie onder indexpermutatie</h2>
+<div class="vfr-box vfr-opmerking">
+<p><span class="vfr-box-label"><strong>Opmerking 6.15.</strong></span> <span class="math inline">{\hat{G}} \in \mathop{\mathrm{GL}}(V)</span> werkt op <span class="math inline">V^{\otimes p}</span> als <span class="math inline">{\hat{G}}^{\otimes p}</span>: <span class="math display">\begin{aligned}
+{\hat{G}}^{\otimes p} T &amp;= T^{i_1 \ldots i_p} ({\hat{G}} {e}_{i_1}) \otimes \cdots \otimes ({\hat{G}} {e}_{i_p}) \\
+({\hat{G}}^{\otimes p} T)^{j_1 \ldots j_p} &amp;= G^{j_1}_{\ i_1} \cdots G^{j_p}_{\ i_p} T^{i_1 \ldots i_p}
+\end{aligned}</span> een representatie van <span class="math inline">\mathop{\mathrm{GL}}(V)</span> op <span class="math inline">V^{\otimes p}</span></p>
+</div>
+<div class="vfr-box vfr-opmerking">
+<p><span class="vfr-box-label"><strong>Opmerking 6.16.</strong></span> Beide acties commuteren: <span class="math inline">\sigma \triangleright ({\hat{G}}^{\otimes p} T) = {\hat{G}}^{\otimes p}(\sigma \triangleright T)</span></p>
+<ul>
+<li>Deelruimten invariant onder <span class="math inline">S_p</span> zijn ook invariant onder <span class="math inline">\mathop{\mathrm{GL}}(V)</span>: <em>Schur-Weyl-dualiteit</em></li>
+</ul>
+</div>
+</section>
+<section id="antisymmetrische-tensoren" class="level2">
+<h2 class="anchored" data-anchor-id="antisymmetrische-tensoren">Antisymmetrische tensoren</h2>
+<div class="vfr-box vfr-definitie">
+<p><span class="vfr-box-label"><strong>Definitie 6.5.</strong></span> De <strong>totaal antisymmetrische deelruimte</strong> <span class="math inline">\Lambda^p(V)</span> van <span class="math inline">V^{\otimes p}</span> bevat de tensoren met <span class="math display">\boxed{\sigma \triangleright T = \mathop{\mathrm{sgn}}(\sigma) T \quad \forall \sigma \in S_p}</span></p>
+</div>
+<div class="vfr-box vfr-opmerking">
+<p><span class="vfr-box-label"><strong>Opmerking 6.17.</strong></span> <span class="math inline">\Lambda^0(V) = {\mathbb{F}}</span> en <span class="math inline">\Lambda^1(V) = V</span></p>
+</div>
+<ul>
+<li>Voorbeelden: <span class="math inline">{v}\otimes {w}- {w}\otimes {v}\in \Lambda^2(V)</span>; antisymmetrische matrices <span class="math inline">{\mathsf{T}}^{\mathsf{T}}= -{\mathsf{T}}</span></li>
+</ul>
+</section>
+<section id="antisymmetrisatie" class="level2 smaller scrollable">
+<h2 class="smaller scrollable anchored" data-anchor-id="antisymmetrisatie">Antisymmetrisatie</h2>
+<div class="vfr-box vfr-definitie">
+<p><span class="vfr-box-label"><strong>Definitie 6.6.</strong></span> <strong>Antisymmetrisatie-operator</strong> <span class="math inline">\mathcal{A} \in \mathop{\mathrm{End}}(V^{\otimes p})</span>, een projector met <span class="math inline">\mathop{\mathrm{im}}(\mathcal{A}) = \Lambda^p(V)</span>: <span class="math display">\boxed{\mathcal{A} T = \frac{1}{p!} \sum_{\sigma \in S_p} \mathop{\mathrm{sgn}}(\sigma) (\sigma \triangleright T)}</span></p>
+</div>
+<ul>
+<li><strong>Vb.</strong> <span class="math inline">p = 2</span>: <span class="math inline">\mathcal{A}({v}\otimes {w}) = \frac{1}{2}({v}\otimes {w}- {w}\otimes {v})</span>, voor matrices <span class="math inline">\frac{1}{2}({\mathsf{T}} - {\mathsf{T}}^{\mathsf{T}})</span></li>
+<li><strong>Eigenschappen</strong>: <span class="math inline">\mathcal{A} T</span> is antisymmetrisch, <span class="math inline">T \in \Lambda^p(V) \Rightarrow \mathcal{A} T = T</span>, dus <span class="math inline">\mathcal{A}^2 = \mathcal{A}</span>
+<ul>
+<li>bewijs: <span class="math inline">\tau \circ \sigma</span> doorloopt <span class="math inline">S_p</span> (vaste <span class="math inline">\tau</span>), <span class="math inline">\mathop{\mathrm{sgn}}(\sigma) = \mathop{\mathrm{sgn}}(\tau) \mathop{\mathrm{sgn}}(\tau \circ \sigma)</span>: <span class="math display">\tau \triangleright \mathcal{A} T = \frac{1}{p!} \sum_\sigma \mathop{\mathrm{sgn}}(\sigma) (\tau \circ \sigma) \triangleright T = \mathop{\mathrm{sgn}}(\tau) \mathcal{A} T</span></li>
+</ul></li>
+</ul>
+<div class="vfr-box vfr-opmerking">
+<p><span class="vfr-box-label"><strong>Opmerking 6.18.</strong></span> Voor elke <span class="math inline">p</span> een eigen <span class="math inline">\mathcal{A}</span>; we gebruiken hetzelfde symbool</p>
+</div>
+</section>
+<section id="wedge-product" class="level2 smaller scrollable">
+<h2 class="smaller scrollable anchored" data-anchor-id="wedge-product">Wedge product</h2>
+<ul>
+<li><span class="math inline">\mathcal{A}(T \otimes S) = \mathcal{A}((\mathcal{A} T) \otimes S) = \mathcal{A}(T \otimes (\mathcal{A} S))</span> <span class="math inline">\to</span> product direct tussen de <span class="math inline">\Lambda^p</span></li>
+</ul>
+<div class="vfr-box vfr-definitie">
+<p><span class="vfr-box-label"><strong>Definitie 6.7.</strong></span> Het <strong>wedge product</strong> of <strong>exterieur product</strong> <span class="math inline">\wedge : \Lambda^p(V) \times \Lambda^q(V) \to \Lambda^{p+q}(V)</span>: <span class="math display">\boxed{T \wedge S = \sqrt{\frac{(p+q)!}{p!\, q!}}\, \mathcal{A}(T \otimes S)}</span></p>
+</div>
+<div class="vfr-box vfr-opmerking">
+<p><span class="vfr-box-label"><strong>Opmerking 6.19.</strong></span> Bilineair, associatief en alternerend (antisymmetrisch)</p>
+</div>
+<div class="vfr-box vfr-opmerking">
+<p><span class="vfr-box-label"><strong>Opmerking 6.20.</strong></span> De factor is een conventie (<span class="math inline">1</span>, <span class="math inline">\frac{(p+q)!}{p!\, q!}</span> of deze): met deze keuze komt het inwendig product van de tensorruimte overeen met dat van de exterieure algebra</p>
+</div>
+</section>
+<section id="wedge-product-van-vectoren" class="level2">
+<h2 class="anchored" data-anchor-id="wedge-product-van-vectoren">Wedge product van vectoren</h2>
+<p><span class="math display">\begin{aligned}
+{v}_1 \wedge {v}_2 &amp;= \frac{1}{\sqrt{2}} ({v}_1 \otimes {v}_2 - {v}_2 \otimes {v}_1) \\
+{v}_1 \wedge {v}_2 \wedge {v}_3 &amp;= \frac{1}{\sqrt{6}} ({v}_1 \otimes {v}_2 \otimes {v}_3 - {v}_2 \otimes {v}_1 \otimes {v}_3 + {v}_2 \otimes {v}_3 \otimes {v}_1 \\
+&amp;\qquad\quad - {v}_1 \otimes {v}_3 \otimes {v}_2 + {v}_3 \otimes {v}_1 \otimes {v}_2 - {v}_3 \otimes {v}_2 \otimes {v}_1)
+\end{aligned}</span></p>
+<p><span class="math display">\boxed{{v}_1 \wedge {v}_2 \wedge \cdots \wedge {v}_p = \frac{1}{\sqrt{p!}} \sum_{\sigma \in S_p} \mathop{\mathrm{sgn}}(\sigma)\, {v}_{\sigma(1)} \otimes {v}_{\sigma(2)} \otimes \cdots \otimes {v}_{\sigma(p)}}</span></p>
+<ul>
+<li><span class="math inline">{v}_2 \wedge {v}_1 = -{v}_1 \wedge {v}_2</span>, dus <span class="math inline">{v}\wedge {v}= 0</span>; lineair afhankelijk <span class="math inline">\Rightarrow</span> <span class="math inline">{v}_1 \wedge \cdots \wedge {v}_p = 0</span></li>
+</ul>
+</section>
+<section id="basis-van-lambdapv" class="level2 smaller scrollable">
+<h2 class="smaller scrollable anchored" data-anchor-id="basis-van-lambdapv">Basis van <span class="math inline">\Lambda^p(V)</span></h2>
+<p><span class="math inline">\mathop{\mathrm{dim}}V = n</span>, geordende basis <span class="math inline">\{{e}_1, \ldots, {e}_n\}</span>: <span class="math display">B_{\Lambda^p(V)} = \{{e}_{i_1} \wedge {e}_{i_2} \wedge \cdots \wedge {e}_{i_p} \mid 1 \leq i_1 &lt; i_2 &lt; \cdots &lt; i_p \leq n\}</span></p>
+<ul>
+<li><span class="math inline">\Lambda^0</span>: <span class="math inline">\{1\}</span>, <span class="math inline">\Lambda^1</span>: <span class="math inline">\{{e}_i\}</span>, <span class="math inline">\Lambda^2</span>: <span class="math inline">\{{e}_i \wedge {e}_j \mid i &lt; j\}</span>, …, <span class="math inline">\Lambda^n</span>: <span class="math inline">\{{e}_1 \wedge \cdots \wedge {e}_n\}</span> <span class="math display">\boxed{\mathop{\mathrm{dim}}\Lambda^p(V) = \binom{n}{p} = \frac{n!}{p!(n-p)!}}</span>
+<ul>
+<li><span class="math inline">\mathop{\mathrm{dim}}\Lambda^n(V) = 1</span>; <span class="math inline">p &gt; n</span>: geen niet-nul antisymmetrische tensoren</li>
+</ul></li>
+</ul>
+<div class="vfr-box vfr-opmerking">
+<p><span class="vfr-box-label"><strong>Opmerking 6.21.</strong></span> Basisonafhankelijke <strong>determinant</strong>: voor <span class="math inline">T \in \Lambda^n(V)</span> is <span class="math inline">{\hat{A}}^{\otimes n} T = \det({\hat{A}}) T</span>, want <span class="math display">{\hat{A}}^{\otimes n}({e}_1 \wedge \cdots \wedge {e}_n) = ({\hat{A}} {e}_1) \wedge \cdots \wedge ({\hat{A}} {e}_n) = \det({\hat{A}})\, {e}_1 \wedge \cdots \wedge {e}_n</span></p>
+</div>
+<p><span style="font-size: 0.8em; color: gray;">Leibniz (H2, Def 2.11): <span class="math inline">\det({\mathsf{A}}) = \sum_{\sigma \in S_n} \mathop{\mathrm{sgn}}(\sigma) A^1_{\ \sigma(1)} A^2_{\ \sigma(2)} \cdots A^n_{\ \sigma(n)}</span></span></p>
+</section>
+<section id="wedge-product-en-inwendig-product" class="level2">
+<h2 class="anchored" data-anchor-id="wedge-product-en-inwendig-product">Wedge product en inwendig product</h2>
+<div class="vfr-box vfr-propositie">
+<p><span class="vfr-box-label"><strong>Propositie 6.3.</strong></span> Voor een inwendig productruimte <span class="math inline">V</span> en <span class="math inline">{v}_i, {w}_i \in V</span>: <span class="math display">{\left\langle{w}_1 \wedge \cdots \wedge {w}_p,{v}_1 \wedge \cdots \wedge {v}_p\right\rangle} = \det \begin{bmatrix} {\left\langle{w}_1,{v}_1\right\rangle} &amp; \cdots &amp; {\left\langle{w}_1,{v}_p\right\rangle} \\ \vdots &amp; \ddots &amp; \vdots \\ {\left\langle{w}_p,{v}_1\right\rangle} &amp; \cdots &amp; {\left\langle{w}_p,{v}_p\right\rangle} \end{bmatrix}</span></p>
+</div>
+<div class="vfr-box vfr-voorbeeld">
+<p><span class="vfr-box-label"><strong>Voorbeeld 6.2.</strong></span> <span class="math inline">V = {\mathbb{R}}^n</span>: <span class="math display">{\left\lVert\boldsymbol{v}_1 \wedge \boldsymbol{v}_2\right\rVert} = \sqrt{{\left\lVert\boldsymbol{v}_1\right\rVert}^2 {\left\lVert\boldsymbol{v}_2\right\rVert}^2 - {\left\lvert{\left\langle\boldsymbol{v}_1,\boldsymbol{v}_2\right\rangle}\right\rvert}^2} = {\left\lVert\boldsymbol{v}_1\right\rVert} {\left\lVert\boldsymbol{v}_2\right\rVert} {\left\lvert\sin(\theta)\right\rvert}</span> de oppervlakte van het parallellogram opgespannen door <span class="math inline">\boldsymbol{v}_1</span> en <span class="math inline">\boldsymbol{v}_2</span></p>
+</div>
+</section>
+<section id="wedge-product-volume-en-oriëntatie" class="level2">
+<h2 class="anchored" data-anchor-id="wedge-product-volume-en-oriëntatie">Wedge product: volume en oriëntatie</h2>
+<ul>
+<li><span class="math inline">{\left\lVert{v}_1 \wedge \cdots \wedge {v}_p\right\rVert}</span> = <strong>volume</strong> van het <span class="math inline">p</span>-dimensionale parallellepipedum
+<ul>
+<li>basis voor integralen in hogere dimensie (differentiaalmeetkunde)</li>
+</ul></li>
+<li>Volgorde telt: <strong>oriëntatie</strong>, het georiënteerde volume</li>
+<li>Orthonormale basis van <span class="math inline">V</span> <span class="math inline">\Rightarrow</span> <span class="math inline">B_{\Lambda^p(V)}</span> is orthonormaal</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/fig-wedge-area.svg" class="quarto-figure quarto-figure-center figure-img" height="260"></p>
+</figure>
+</div>
+</section>
+<section id="exterieure-algebra" class="level2">
+<h2 class="anchored" data-anchor-id="exterieure-algebra">Exterieure algebra</h2>
+<div class="vfr-box vfr-definitie">
+<p><span class="vfr-box-label"><strong>Definitie 6.8.</strong></span> Voor eindig-dimensionale <span class="math inline">V</span> is <span class="math display">\boxed{\Lambda(V) = \bigoplus_{p=0}^{\mathop{\mathrm{dim}}V} \Lambda^p(V)}</span> met het wedge product een associatieve algebra: de <strong>exterieure algebra</strong> of <strong>Grassmann-algebra</strong>. Elementen: <em>multivectoren</em>; homogeen in <span class="math inline">\Lambda^p(V)</span>: <em><span class="math inline">p</span>-vectoren</em>.</p>
+<ul>
+<li><span class="math inline">\Lambda(V)</span> is een deelruimte van <span class="math inline">\mathcal{T}(V)</span> met <span class="math inline">\mathop{\mathrm{dim}}\Lambda(V) = \sum_{p=0}^n \binom{n}{p} = 2^n</span></li>
+<li>Met inwendig product op <span class="math inline">V</span>: de <span class="math inline">\Lambda^p(V)</span> zijn onderling orthogonaal</li>
+</ul>
+</div>
+<div class="vfr-box vfr-opmerking">
+<p><span class="vfr-box-label"><strong>Opmerking 6.22.</strong></span> Fysica: identiek aan de <em>Fock-ruimte</em> voor fermionische veeldeeltjessystemen</p>
+</div>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
