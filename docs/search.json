@@ -2961,11 +2961,326 @@
     "text": "$$ % Math operators % % \n% VECTORS % specifically for vectors in F^n \n% MATRICES \n% SCALARS \n% LINEAR MAPS \n% FIELDS \n% RELATIONS \n$$"
   },
   {
-    "objectID": "slides/H6.html#multilineaire-algebra",
-    "href": "slides/H6.html#multilineaire-algebra",
+    "objectID": "slides/H6.html#doel-van-dit-hoofdstuk",
+    "href": "slides/H6.html#doel-van-dit-hoofdstuk",
     "title": "Hoofdstuk 6 - Multilineaire algebra",
-    "section": "Multilineaire algebra",
-    "text": "Multilineaire algebra\nNog te schrijven."
+    "section": "Doel van dit hoofdstuk",
+    "text": "Doel van dit hoofdstuk\nBilineaire afbeeldingen zijn lineair in elk argument apart, maar niet lineair op V_1 \\times V_2: B(a {v}_1, a {v}_2) = a^2 B({v}_1, {v}_2)\n\n\\Rightarrow nieuwe vectorruimte V_1 \\otimes V_2 waarop B wél lineair is: het tensorproduct\n\\Rightarrow vectoren, functionalen, lineaire afbeeldingen, bilineaire vormen: allemaal tensoren\n\n\n\nTensorproduct: definitie en universele eigenschap\nIndexnotatie: contractie en basistransformaties\nInwendig product op V \\otimes W\nAntisymmetrie: wedge product en determinant"
+  },
+  {
+    "objectID": "slides/H6.html#terugblik-constructies-uit-h1-en-h2",
+    "href": "slides/H6.html#terugblik-constructies-uit-h1-en-h2",
+    "title": "Hoofdstuk 6 - Multilineaire algebra",
+    "section": "Terugblik: constructies uit H1 en H2",
+    "text": "Terugblik: constructies uit H1 en H2\n\nVrije vectorruimte {\\mathbb{F}}S: formele lineaire combinaties van de elementen van S\n\nelk element van S is een basisvector, ook als S zelf een vectorruimte is\n\nQuotiëntruimte V / W: equivalentieklassen {v}+ W\n\nelementen die verschillen met een element van W worden gelijk\n\nPermutaties \\sigma \\in S_n met \\mathop{\\mathrm{sgn}}(\\sigma) = (-1)^{P(\\sigma)}\n\nLeibniz: \\det({\\mathsf{A}}) = \\sum_{\\sigma \\in S_n} \\mathop{\\mathrm{sgn}}(\\sigma) A^1_{\\ \\sigma(1)} \\cdots A^n_{\\ \\sigma(n)}\n\nDirecte som V \\oplus W: \\mathop{\\mathrm{dim}}(V \\oplus W) = \\mathop{\\mathrm{dim}}V + \\mathop{\\mathrm{dim}}W"
+  },
+  {
+    "objectID": "slides/H6.html#terugblik-duale-ruimte-en-basistransformaties",
+    "href": "slides/H6.html#terugblik-duale-ruimte-en-basistransformaties",
+    "title": "Hoofdstuk 6 - Multilineaire algebra",
+    "section": "Terugblik: duale ruimte en basistransformaties",
+    "text": "Terugblik: duale ruimte en basistransformaties\n\nDuale ruimte V^\\ast = \\mathop{\\mathrm{Hom}}(V, {\\mathbb{F}}), duale basis {\\varepsilon}^i[{e}_j] = \\delta^i_{\\ j}\n\n\\xi = \\xi_i {\\varepsilon}^i met \\xi_i = \\xi[{e}_i], \\xi[{v}] = \\xi_i v^i\n\nLineaire afbeelding: {\\hat{A}} {e}_j = A^i_{\\ j} {f}_i, A^i_{\\ j} = \\varphi^i[{\\hat{A}} {e}_j]\nBasistransformatie: vectoren en duale vectoren transformeren tegengesteld\n\n\\tilde{v}^i = [{\\mathsf{T}}]^i_{\\ j} v^j, \\tilde{\\xi}_i = [{\\mathsf{T}}^{-{\\mathsf{T}}}]_i^{\\ j} \\xi_j\nindex boven: contravariant; index onder: covariant\n\nBilineaire vorm: B({v}, {w}) = v^i B_{ij} w^j, twee onderindices"
+  },
+  {
+    "objectID": "slides/H6.html#terugblik-inwendig-product-uit-h5",
+    "href": "slides/H6.html#terugblik-inwendig-product-uit-h5",
+    "title": "Hoofdstuk 6 - Multilineaire algebra",
+    "section": "Terugblik: inwendig product uit H5",
+    "text": "Terugblik: inwendig product uit H5\n\nMetriek g_{ij} = {\\left\\langle{e}_i,{e}_j\\right\\rangle}, inverse g^{ij} = ({\\mathsf{g}}^{-1})^{ij}\n\nindices verlagen en verhogen: v_j = \\overline{v^i} g_{ij}, v^j = \\overline{v_i g^{ij}}\n\nOrthonormale basis: g_{ij} = \\delta_{ij}\nHilbertruimte: metrisch compleet\n\nseparabel en oneindig-dimensionaal: aftelbare orthonormale basis, V \\cong \\ell^2\nvb.: Fourierreeks in L^2([0, L])"
+  },
+  {
+    "objectID": "slides/H6.html#bilineaire-afbeeldingen-opnieuw",
+    "href": "slides/H6.html#bilineaire-afbeeldingen-opnieuw",
+    "title": "Hoofdstuk 6 - Multilineaire algebra",
+    "section": "Bilineaire afbeeldingen, opnieuw",
+    "text": "Bilineaire afbeeldingen, opnieuw\nV_1, V_2 eindig-dimensionaal met basissen \\{{e}_1, \\ldots, {e}_{n_1}\\} en \\{{f}_1, \\ldots, {f}_{n_2}\\}\n. . .\n\nBilineaire vorm B : V_1 \\times V_2 \\to {\\mathbb{F}}: bepaald door B({e}_i, {f}_j) = B_{ij}, een (n_1 \\times n_2)-matrix {\\mathsf{B}}\n\nbilineaire vormen vormen een vectorruimte, van dimensie n_1 n_2\nvgl. de duale ruimte V^\\ast = \\mathop{\\mathrm{Hom}}(V, {\\mathbb{F}}), met \\mathop{\\mathrm{dim}}V^\\ast = \\mathop{\\mathrm{dim}}V\n\nVraag: zijn de bilineaire vormen op V_1 \\times V_2 precies de functionalen W^\\ast op een nieuwe vectorruimte W, met \\mathop{\\mathrm{dim}}W = n_1 n_2?\n\n. . .\n\nNiet de directe som V_1 \\oplus V_2:\n\n\\mathop{\\mathrm{dim}}(V_1 \\oplus V_2) = n_1 + n_2\na({v}_1, {v}_2) = (a {v}_1, a {v}_2), maar B(a {v}_1, a {v}_2) = a^2 B({v}_1, {v}_2): B is niet lineair op V_1 \\oplus V_2"
+  },
+  {
+    "objectID": "slides/H6.html#een-andere-vectorruimtestructuur",
+    "href": "slides/H6.html#een-andere-vectorruimtestructuur",
+    "title": "Hoofdstuk 6 - Multilineaire algebra",
+    "section": "Een andere vectorruimtestructuur",
+    "text": "Een andere vectorruimtestructuur\nBilineair: B(a {v}_1, {v}_2) = B({v}_1, a {v}_2) = a B({v}_1, {v}_2), en zo ook voor sommen\n\nIdentificeer daarom a({v}_1, {v}_2) \\sim (a {v}_1, {v}_2) \\sim ({v}_1, a {v}_2) ({v}_1 + {v}'_1, {v}_2) \\sim ({v}_1, {v}_2) + ({v}'_1, {v}_2), \\qquad ({v}_1, {v}_2 + {v}'_2) \\sim ({v}_1, {v}_2) + ({v}_1, {v}'_2)\nMet {v}_1 = v_1^i {e}_i en {v}_2 = v_2^j {f}_j volgt ({v}_1, {v}_2) \\sim v_1^i v_2^j ({e}_i, {f}_j)\n\nde koppels ({e}_i, {f}_j) werken als basis: we noteren ze {e}_i \\otimes {f}_j\nn_1 n_2 basisvectoren: precies de gezochte dimensie"
+  },
+  {
+    "objectID": "slides/H6.html#tensorproduct-definitie",
+    "href": "slides/H6.html#tensorproduct-definitie",
+    "title": "Hoofdstuk 6 - Multilineaire algebra",
+    "section": "Tensorproduct: definitie",
+    "text": "Tensorproduct: definitie\n\nDefinitie 6.0 (Tensorproduct). Het tensorproduct van V_1 en V_2 is de vectorruimte \\boxed{V_1 \\otimes V_2 = {\\mathbb{F}}\\{{e}_i \\otimes {f}_j \\mid i = 1, \\ldots, n_1;\\ j = 1, \\ldots, n_2\\}} met \\mathop{\\mathrm{dim}}(V_1 \\otimes V_2) = n_1 n_2\n\nVectorruimte: elementen T = T^{ij} {e}_i \\otimes {f}_j a T + S = (a T^{ij} + S^{ij}) {e}_i \\otimes {f}_j\nProduct \\otimes : V_1 \\times V_2 \\to V_1 \\otimes V_2, {v}_1 \\otimes {v}_2 = v_1^i v_2^j {e}_i \\otimes {f}_j, “rekent” als een product: (a {v}_1) \\otimes {v}_2 = {v}_1 \\otimes (a {v}_2) = a ({v}_1 \\otimes {v}_2) \\begin{aligned} ({v}_1 + {v}'_1) \\otimes {v}_2 &= {v}_1 \\otimes {v}_2 + {v}'_1 \\otimes {v}_2 \\\\ {v}_1 \\otimes ({v}_2 + {v}'_2) &= {v}_1 \\otimes {v}_2 + {v}_1 \\otimes {v}'_2 \\end{aligned}"
+  },
+  {
+    "objectID": "slides/H6.html#tensoren",
+    "href": "slides/H6.html#tensoren",
+    "title": "Hoofdstuk 6 - Multilineaire algebra",
+    "section": "Tensoren",
+    "text": "Tensoren\nGeen één-op-één verband tussen V_1 \\times V_2 en V_1 \\otimes V_2:\n\nElk koppel ({v}_1, {v}_2) geeft een product {v}_1 \\otimes {v}_2\nMaar V_1 \\otimes V_2 bevat ook sommen van zulke producten: T = T^{ij} {e}_i \\otimes {f}_j\n\nzulke elementen heten tensoren: twee bovenindices (contravariant)\ncoëfficiënten in een matrix {\\mathsf{T}} = [T^{ij}]\nniet elke tensor is van de vorm {v}_1 \\otimes {v}_2\n\nOuter product: T^{ij} = v_1^i v_2^j, of {\\mathsf{T}} = \\boldsymbol{v}_1 \\boldsymbol{v}_2^{\\mathsf{T}}"
+  },
+  {
+    "objectID": "slides/H6.html#terug-naar-bilineaire-afbeeldingen",
+    "href": "slides/H6.html#terug-naar-bilineaire-afbeeldingen",
+    "title": "Hoofdstuk 6 - Multilineaire algebra",
+    "section": "Terug naar bilineaire afbeeldingen",
+    "text": "Terug naar bilineaire afbeeldingen\n\nBilineaire vorm B \\leftrightarrow functionaal \\beta \\in (V_1 \\otimes V_2)^\\ast met \\beta[{v}_1 \\otimes {v}_2] = B({v}_1, {v}_2)\n\nlineair uitgebreid naar elke tensor: \\boxed{\\beta[T^{ij} {e}_i \\otimes {f}_j] = T^{ij} \\beta[{e}_i \\otimes {f}_j] = T^{ij} B_{ij}}\nvolledig bepaald door \\beta[{e}_i \\otimes {f}_j] = B({e}_i, {f}_j) = B_{ij}\n\nAlgemener: bilineaire \\psi : V_1 \\times V_2 \\to V_3 geeft een unieke lineaire {\\hat{\\psi}} : V_1 \\otimes V_2 \\to V_3 met \\psi({v}_1, {v}_2) = {\\hat{\\psi}}({v}_1 \\otimes {v}_2)\n\ndit is de universele eigenschap van het tensorproduct\nformele definitie: zonder te verwijzen naar een basis"
+  },
+  {
+    "objectID": "slides/H6.html#universele-eigenschap",
+    "href": "slides/H6.html#universele-eigenschap",
+    "title": "Hoofdstuk 6 - Multilineaire algebra",
+    "section": "Universele eigenschap",
+    "text": "Universele eigenschap\nWat het tensorproduct moet doen, zonder naar een basis te verwijzen:\n\nDefinitie 6.2. Het tensorproduct van V_1 en V_2 is een paar (W, \\chi), met W een vectorruimte en \\chi : V_1 \\times V_2 \\to W bilineair, zodat elke bilineaire \\psi : V_1 \\times V_2 \\to V_3 een unieke ontbinding heeft \\boxed{\\psi = {\\hat{\\psi}} \\circ \\chi, \\quad {\\hat{\\psi}} \\in \\mathop{\\mathrm{Hom}}(W, V_3)}\n\n\n\n\n\n\nMet Def 6.0: W = V_1 \\otimes V_2 en \\chi({v}_1, {v}_2) = {v}_1 \\otimes {v}_2; {\\hat{\\psi}} ligt vast door {\\hat{\\psi}}({e}_i \\otimes {f}_j) = \\psi({e}_i, {f}_j)"
+  },
+  {
+    "objectID": "slides/H6.html#uniciteit",
+    "href": "slides/H6.html#uniciteit",
+    "title": "Hoofdstuk 6 - Multilineaire algebra",
+    "section": "Uniciteit",
+    "text": "Uniciteit\n\nPropositie 6.1. Voldoen (W, \\chi) en (W', \\chi') beide, dan bestaat er een isomorfisme {\\hat{\\phi}} \\in \\mathop{\\mathrm{Hom}}(W, W') met \\chi' = {\\hat{\\phi}} \\circ \\chi, dus W \\cong W'\n\n\nBewijs: de universele eigenschap twee keer toepassen\n\n\\chi' is bilineair, dus \\chi' = {\\hat{\\phi}} \\circ \\chi voor een lineaire {\\hat{\\phi}} : W \\to W'\nomgekeerd \\chi = {\\hat{\\phi}}' \\circ \\chi', en dan volgt {\\hat{\\phi}}' = {\\hat{\\phi}}^{-1}\n\nGevolg: Def 6.0 hangt niet af van de basis\n\nandere basissen: dezelfde universele eigenschap, dus een isomorfe ruimte\n\nHet tensorproduct is dus “het” tensorproduct, op isomorfisme na"
+  },
+  {
+    "objectID": "slides/H6.html#universele-eigenschap-toepassing",
+    "href": "slides/H6.html#universele-eigenschap-toepassing",
+    "title": "Hoofdstuk 6 - Multilineaire algebra",
+    "section": "Universele eigenschap: toepassing",
+    "text": "Universele eigenschap: toepassing\n\nOpmerking 6.2. V_1 \\otimes V_2 \\cong V_2 \\otimes V_1: universele eigenschap op ({v}_1, {v}_2) \\mapsto {v}_2 \\otimes {v}_1, en omgekeerd\n\n\nOpmerking 6.3. In een basis: T^{ij} {e}_i \\otimes {f}_j \\mapsto T^{ij} {f}_j \\otimes {e}_i = ({\\mathsf{T}}^{\\mathsf{T}})^{ji} {f}_j \\otimes {e}_i: de getransponeerde\n\n\nVerschillende ruimten, wel isomorf"
+  },
+  {
+    "objectID": "slides/H6.html#bestaan-formele-definitie",
+    "href": "slides/H6.html#bestaan-formele-definitie",
+    "title": "Hoofdstuk 6 - Multilineaire algebra",
+    "section": "Bestaan: formele definitie",
+    "text": "Bestaan: formele definitie\nVraag: kunnen we zo’n ruimte construeren zonder naar een basis te verwijzen?\n\nDefinitie 6.1 (Tensorproduct). Voor vectorruimten V_1, V_2 over {\\mathbb{F}} is de tensorproductruimte \\boxed{V_1 \\otimes V_2 = {\\mathbb{F}}(V_1 \\times V_2) / {\\mathbb{F}}(S_1 \\cup S_2)} met \\begin{aligned}\nS_1 &= \\{(a {v}_1 + b {w}_1, {v}_2) - a({v}_1, {v}_2) - b({w}_1, {v}_2)\\} \\\\\nS_2 &= \\{({v}_1, a {v}_2 + b {w}_2) - a({v}_1, {v}_2) - b({v}_1, {w}_2)\\}\n\\end{aligned} voor alle a, b \\in {\\mathbb{F}}, {v}_1, {w}_1 \\in V_1, {v}_2, {w}_2 \\in V_2."
+  },
+  {
+    "objectID": "slides/H6.html#formele-definitie-het-idee",
+    "href": "slides/H6.html#formele-definitie-het-idee",
+    "title": "Hoofdstuk 6 - Multilineaire algebra",
+    "section": "Formele definitie: het idee",
+    "text": "Formele definitie: het idee\n\nOpmerking 6.1. De equivalentieklasse van ({v}_1, {v}_2) noteren we {v}_1 \\otimes {v}_2.\n\nElk element van V_1 \\otimes V_2 is een eindige som \\sum_{i=1}^n {v}_1^{(i)} \\otimes {v}_2^{(i)}\nDeze ontbinding is niet uniek\n\n\nBegin zonder enig verband, en leg precies de bilineariteit op, en niets meer:\n\n{\\mathbb{F}}(V_1 \\times V_2): vrije vectorruimte, elk koppel ({v}_1, {v}_2) is een basisvector\n\noveraftelbare basis, al voor V_1 = V_2 = {\\mathbb{F}}^1\ngeen enkel verband tussen (a {v}_1, {v}_2), ({v}_1, a {v}_2) en a({v}_1, {v}_2)\n\nQuotiënt met {\\mathbb{F}}(S_1 \\cup S_2): elementen van S_1 \\cup S_2 worden de nulvector \\begin{aligned} (a {v}_1 + b {w}_1) \\otimes {v}_2 &= a\\, {v}_1 \\otimes {v}_2 + b\\, {w}_1 \\otimes {v}_2 \\\\ {v}_1 \\otimes (a {v}_2 + b {w}_2) &= a\\, {v}_1 \\otimes {v}_2 + b\\, {v}_1 \\otimes {w}_2 \\end{aligned}\n\nDef 6.1: S_1 = \\{(a {v}_1 + b {w}_1, {v}_2) - a({v}_1, {v}_2) - b({w}_1, {v}_2)\\}, S_2 = \\{({v}_1, a {v}_2 + b {w}_2) - a({v}_1, {v}_2) - b({v}_1, {w}_2)\\}"
+  },
+  {
+    "objectID": "slides/H6.html#formele-definitie-universele-eigenschap",
+    "href": "slides/H6.html#formele-definitie-universele-eigenschap",
+    "title": "Hoofdstuk 6 - Multilineaire algebra",
+    "section": "Formele definitie: universele eigenschap",
+    "text": "Formele definitie: universele eigenschap\nDef 6.1 voldoet aan Def 6.2, met \\chi({v}_1, {v}_2) = {v}_1 \\otimes {v}_2. Gegeven \\psi : V_1 \\times V_2 \\to V_3 bilineair:\n\nLineair uitbreiden: de koppels zijn een basis van {\\mathbb{F}}(V_1 \\times V_2); met {x}_k \\in V_1, {y}_k \\in V_2: {\\hat{\\Psi}}\\Big(\\sum_k a_k ({x}_k, {y}_k)\\Big) = \\sum_k a_k \\psi({x}_k, {y}_k) \\in V_3\nNul op de relaties, want \\psi is bilineair: \\begin{aligned}\n&{\\hat{\\Psi}}\\big((a {v}_1 + b {w}_1, {v}_2) - a({v}_1, {v}_2) - b({w}_1, {v}_2)\\big) \\\\\n&\\quad = \\psi(a {v}_1 + b {w}_1, {v}_2) - a \\psi({v}_1, {v}_2) - b \\psi({w}_1, {v}_2) = {o}\n\\end{aligned} idem voor S_2, dus {\\mathbb{F}}(S_1 \\cup S_2) \\subseteq \\mathop{\\mathrm{ker}}({\\hat{\\Psi}})\nNaar het quotiënt: {\\hat{\\Psi}} is constant op elke equivalentieklasse {\\hat{\\psi}}({v}_1 \\otimes {v}_2) = \\psi({v}_1, {v}_2), \\qquad \\text{dus } \\psi = {\\hat{\\psi}} \\circ \\chi\nUniek: de {v}_1 \\otimes {v}_2 spannen V_1 \\otimes V_2 op (Opm 6.1)"
+  },
+  {
+    "objectID": "slides/H6.html#tensorproduct-van-lineaire-afbeeldingen",
+    "href": "slides/H6.html#tensorproduct-van-lineaire-afbeeldingen",
+    "title": "Hoofdstuk 6 - Multilineaire algebra",
+    "section": "Tensorproduct van lineaire afbeeldingen",
+    "text": "Tensorproduct van lineaire afbeeldingen\n\nDefinitie 6.3. Voor {\\hat{A}}_1 \\in \\mathop{\\mathrm{Hom}}(V_1, W_1) en {\\hat{A}}_2 \\in \\mathop{\\mathrm{Hom}}(V_2, W_2) is {\\hat{A}}_1 \\otimes {\\hat{A}}_2 \\in \\mathop{\\mathrm{Hom}}(V_1 \\otimes V_2, W_1 \\otimes W_2) de lineaire afbeelding die via de universele eigenschap hoort bij de bilineaire afbeelding ({v}_1, {v}_2) \\mapsto ({\\hat{A}}_1 {v}_1) \\otimes ({\\hat{A}}_2 {v}_2)\n\n\nBasissen \\{{e}_k\\} \\subset V_1, \\{{f}_l\\} \\subset V_2, \\{{g}_i\\} \\subset W_1, \\{{h}_j\\} \\subset W_2; op de productbasis: ({\\hat{A}}_1 \\otimes {\\hat{A}}_2)({e}_k \\otimes {f}_l) = ({\\hat{A}}_1 {e}_k) \\otimes ({\\hat{A}}_2 {f}_l) = (A_1)^i_{\\ k} (A_2)^j_{\\ l}\\, {g}_i \\otimes {h}_j\nTensor als vector: T^{kl} = T^K met K = (k-1) n_2 + l (matrix “afvlakken”)\nMatrixvoorstelling van {\\hat{A}} = {\\hat{A}}_1 \\otimes {\\hat{A}}_2, van grootte m_1 m_2 \\times n_1 n_2: \\boxed{({\\mathsf{A}})^I_{\\ K} = A^{(i,j)}_{\\ \\ (k,l)} = ({\\mathsf{A}}_1)^i_{\\ k} ({\\mathsf{A}}_2)^j_{\\ l}} I = (i-1) m_2 + j, \\quad K = (k-1) n_2 + l, \\qquad n_i = \\mathop{\\mathrm{dim}}V_i, \\quad m_i = \\mathop{\\mathrm{dim}}W_i"
+  },
+  {
+    "objectID": "slides/H6.html#kronecker-product",
+    "href": "slides/H6.html#kronecker-product",
+    "title": "Hoofdstuk 6 - Multilineaire algebra",
+    "section": "Kronecker product",
+    "text": "Kronecker product\n\nOpmerking 6.4. Voor matrices: Kronecker product of (matrix) direct product, in blokvorm {\\mathsf{A}}_1 \\otimes {\\mathsf{A}}_2 = \\begin{bmatrix}\n({\\mathsf{A}}_1)^1_{\\ 1} {\\mathsf{A}}_2 & ({\\mathsf{A}}_1)^1_{\\ 2} {\\mathsf{A}}_2 & \\cdots & ({\\mathsf{A}}_1)^1_{\\ n_1} {\\mathsf{A}}_2 \\\\\n({\\mathsf{A}}_1)^2_{\\ 1} {\\mathsf{A}}_2 & ({\\mathsf{A}}_1)^2_{\\ 2} {\\mathsf{A}}_2 & \\cdots & ({\\mathsf{A}}_1)^2_{\\ n_1} {\\mathsf{A}}_2 \\\\\n\\vdots & \\vdots & \\ddots & \\vdots \\\\\n({\\mathsf{A}}_1)^{m_1}_{\\ 1} {\\mathsf{A}}_2 & ({\\mathsf{A}}_1)^{m_1}_{\\ 2} {\\mathsf{A}}_2 & \\cdots & ({\\mathsf{A}}_1)^{m_1}_{\\ n_1} {\\mathsf{A}}_2\n\\end{bmatrix}\n\n\nOpmerking 6.5. In Python (NumPy), MATLAB en Julia: kron\n\n\nVoorbeeld. \\begin{bmatrix} 1 & 2 \\\\ 3 & 4 \\end{bmatrix} \\otimes \\begin{bmatrix} 0 & 1 \\\\ 1 & 0 \\end{bmatrix} = \\begin{bmatrix} 0 & 1 & 0 & 2 \\\\ 1 & 0 & 2 & 0 \\\\ 0 & 3 & 0 & 4 \\\\ 3 & 0 & 4 & 0 \\end{bmatrix}"
+  },
+  {
+    "objectID": "slides/H6.html#multilineaire-afbeeldingen",
+    "href": "slides/H6.html#multilineaire-afbeeldingen",
+    "title": "Hoofdstuk 6 - Multilineaire algebra",
+    "section": "Multilineaire afbeeldingen",
+    "text": "Multilineaire afbeeldingen\n\nMultilineaire afbeelding M : V_1 \\times \\cdots \\times V_N \\to W: lineair in elk argument apart\n\ncoëfficiënten M^i_{\\ j_1 j_2 \\ldots j_N}; N-vorm: V^{\\times N} \\to {\\mathbb{F}} (vgl. 1-vorm = functionaal)\n\nVerwacht, zoals bij bilineair: M \\leftrightarrow {\\hat{M}} \\in \\mathop{\\mathrm{Hom}}(V_1 \\otimes \\cdots \\otimes V_N, W)\n\nmaar wat is een tensorproduct van meer dan twee ruimten?\n\n\n\nPropositie 6.2. (U \\otimes V) \\otimes W en U \\otimes (V \\otimes W) zijn isomorf\n\n\nOpmerking 6.6. In de praktijk: tensorproduct associatief, we schrijven U \\otimes V \\otimes W\n\n\nOpmerking 6.7. Eindig-dimensionaal, met basissen \\{{e}_i\\}, \\{{f}_j\\}, \\{{g}_k\\} van U, V, W: T = T^{ijk}\\, {e}_i \\otimes {f}_j \\otimes {g}_k \\in U \\otimes V \\otimes W"
+  },
+  {
+    "objectID": "slides/H6.html#orde-van-een-tensor",
+    "href": "slides/H6.html#orde-van-een-tensor",
+    "title": "Hoofdstuk 6 - Multilineaire algebra",
+    "section": "Orde van een tensor",
+    "text": "Orde van een tensor\n\nDefinitie 6.4. Een tensor T \\in V_1 \\otimes \\cdots \\otimes V_N heeft coëfficiënten T^{i_1 i_2 \\ldots i_N} met N indices: de orde, graad, rang of dimensionaliteit van de tensor\n\n\nOpmerking 6.9. Programmeertalen: multidimensionale array; aantal indices ndim (NumPy), ndims (Julia, MATLAB)\n\n\nScalairen: {\\mathbb{F}}\\times V \\to V : (a, {v}) \\mapsto a {v} is bilineair\n\nvia de universele eigenschap: lineaire, bijectieve {\\hat{L}} : {\\mathbb{F}}\\otimes V \\to V, a \\otimes {v}\\mapsto a {v}\ndus {\\mathbb{F}}\\otimes V \\cong V: we schrijven {\\mathbb{F}}\\otimes V = V\nop een computer niet onzichtbaar: een index van dimensie 1 verandert de orde"
+  },
+  {
+    "objectID": "slides/H6.html#lineaire-afbeelding-als-bilineaire-vorm",
+    "href": "slides/H6.html#lineaire-afbeelding-als-bilineaire-vorm",
+    "title": "Hoofdstuk 6 - Multilineaire algebra",
+    "section": "Lineaire afbeelding als bilineaire vorm",
+    "text": "Lineaire afbeelding als bilineaire vorm\n{\\hat{A}} \\in \\mathop{\\mathrm{Hom}}(V, W); basissen \\{{e}_j\\} van V en \\{{f}_i\\} van W, duale basissen \\{{\\varepsilon}^j\\} en \\{\\varphi^i\\}\n\nMet inwendig product (H5): sesquilineaire vorm ({w}, {v}) \\mapsto {\\left\\langle{w},{\\hat{A}} {v}\\right\\rangle} op W \\times V\nZonder inwendig product: een bilineaire vorm op W^\\ast \\times V \\boxed{A(\\xi, {v}) = \\xi[{\\hat{A}} {v}]}\n\nvia de universele eigenschap: lineaire functionaal \\xi \\otimes {v}\\mapsto \\xi[{\\hat{A}} {v}] op W^\\ast \\otimes V\neen element van \\mathop{\\mathrm{Hom}}(W^\\ast \\otimes V, {\\mathbb{F}}) = (W^\\ast \\otimes V)^\\ast\ncoëfficiënten: A(\\varphi^i, {e}_j) = \\varphi^i[{\\hat{A}} {e}_j] = A^i_{\\ j}\ndezelfde getallen als in de matrix van {\\hat{A}}: {\\hat{A}} {e}_j = A^i_{\\ j} {f}_i"
+  },
+  {
+    "objectID": "slides/H6.html#lineaire-afbeelding-als-tensor",
+    "href": "slides/H6.html#lineaire-afbeelding-als-tensor",
+    "title": "Hoofdstuk 6 - Multilineaire algebra",
+    "section": "Lineaire afbeelding als tensor",
+    "text": "Lineaire afbeelding als tensor\n\nMet dezelfde coëfficiënten: {\\hat{A}} \\cong A^i_{\\ j} {f}_i \\otimes {\\varepsilon}^j \\in W \\otimes V^\\ast\nWerking: de V^\\ast-factor “eet” de vector (contractie) ({f}_i \\otimes {\\varepsilon}^j)({v}) = {f}_i\\, {\\varepsilon}^j[{v}] = v^j {f}_i \\qquad \\Rightarrow \\qquad (A^i_{\\ j} {f}_i \\otimes {\\varepsilon}^j)({v}) = A^i_{\\ j} v^j {f}_i = {\\hat{A}} {v}\nRang 1: {w}\\otimes \\xi werkt als {v}\\mapsto {w}\\, \\xi[{v}]; matrix \\boldsymbol{w} \\boldsymbol{\\xi}^{\\mathsf{T}} (outer product)\n\n\\boxed{\\mathop{\\mathrm{Hom}}(V, W) \\cong \\mathop{\\mathrm{Hom}}(W^\\ast \\otimes V, {\\mathbb{F}}) \\cong \\mathop{\\mathrm{Hom}}({\\mathbb{F}}, W \\otimes V^\\ast) \\cong W \\otimes V^\\ast}\n\nAfbeelding, bilineaire vorm, tensor: dezelfde coëfficiënten A^i_{\\ j}"
+  },
+  {
+    "objectID": "slides/H6.html#identiteit-natuurlijke-paring-en-trace",
+    "href": "slides/H6.html#identiteit-natuurlijke-paring-en-trace",
+    "title": "Hoofdstuk 6 - Multilineaire algebra",
+    "section": "Identiteit, natuurlijke paring en trace",
+    "text": "Identiteit, natuurlijke paring en trace\nV = W: \\mathop{\\mathrm{Hom}}(V, V) \\cong V \\otimes V^\\ast \\cong \\mathop{\\mathrm{Hom}}(V^\\ast \\otimes V, {\\mathbb{F}})\n\nIdentiteit: {\\hat{1}}_V \\cong \\delta^i_{\\ j} {e}_i \\otimes {\\varepsilon}^j = {e}_i \\otimes {\\varepsilon}^i (in elke basis hetzelfde element)\nAls functionaal op V^\\ast \\otimes V: de natuurlijke paring of evaluatie \\boxed{{\\varepsilon}^i \\otimes {e}_j \\mapsto {\\varepsilon}^i[{e}_j] = \\delta^i_{\\ j}, \\qquad \\xi \\otimes {v}\\mapsto \\xi[{v}]}\n\ngebruikt geen basis en geen inwendig product\n\nTrace: de paring toegepast op {\\hat{A}} \\in V \\otimes V^\\ast: \\mathop{\\mathrm{tr}}{\\hat{A}} = A^i_{\\ j} \\delta^j_{\\ i} = A^i_{\\ i}\nSamenstellen: ({\\hat{A}} {\\hat{B}})^i_{\\ k} = A^i_{\\ j} B^j_{\\ k}: de paring van de middelste factoren"
+  },
+  {
+    "objectID": "slides/H6.html#bra-ketnotatie",
+    "href": "slides/H6.html#bra-ketnotatie",
+    "title": "Hoofdstuk 6 - Multilineaire algebra",
+    "section": "Bra-ketnotatie",
+    "text": "Bra-ketnotatie\nKwantummechanica, Hilbertruimte \\mathcal{H}: de Dirac-notatie maakt deze constructies zichtbaar\n\n\n\n\n\n\n\n\n\nwiskunde\nbra-ket\n\n\n\n\nvector\n{v}\\in \\mathcal{H}\n\\lvert v \\rangle (ket)\n\n\nfunctionaal\n\\xi \\in \\mathcal{H}^\\ast\n\\langle \\xi \\rvert (bra)\n\n\nnatuurlijke paring\n\\xi[{v}]\n\\langle \\xi \\vert v \\rangle\n\n\ntensor in \\mathcal{H} \\otimes \\mathcal{H}^\\ast\n{w}\\otimes \\xi\n\\lvert w \\rangle \\langle \\xi \\rvert\n\n\nwerking: contractie\n{w}\\, \\xi[{v}]\n\\lvert w \\rangle \\langle \\xi \\vert v \\rangle\n\n\nbilineaire vorm (matrixelement)\n\\xi[{\\hat{A}} {v}]\n\\langle \\xi \\vert {\\hat{A}} \\vert v \\rangle\n\n\n\n\nRiesz (5.27): elke bra is \\langle v \\rvert = {\\left\\langle{v},\\cdot\\right\\rangle}, antilineair in {v}; zo wordt \\langle w \\vert v \\rangle = {\\left\\langle{w},{v}\\right\\rangle}\nEen bra naast een ket sluit het haakje: contractie, een getal"
+  },
+  {
+    "objectID": "slides/H6.html#indexnotatie",
+    "href": "slides/H6.html#indexnotatie",
+    "title": "Hoofdstuk 6 - Multilineaire algebra",
+    "section": "Indexnotatie",
+    "text": "Indexnotatie\n\nAlgemeen, met associativiteit en V_1 \\otimes V_2 \\cong V_2 \\otimes V_1: \\begin{aligned}\nV_1 \\otimes \\cdots \\otimes V_N &\\cong \\mathop{\\mathrm{Hom}}(V_1^\\ast \\otimes \\cdots \\otimes V_N^\\ast, {\\mathbb{F}}) \\\\\n&\\cong \\mathop{\\mathrm{Hom}}(V_{\\sigma_1}^\\ast \\otimes \\cdots \\otimes V_{\\sigma_k}^\\ast, V_{\\sigma_{k+1}} \\otimes \\cdots \\otimes V_{\\sigma_N})\n\\end{aligned}\n\néén tensor, veel interpretaties als multilineaire afbeelding\n\nVaak één primaire ruimte V (ruimte, ruimtetijd, raakruimte): factoren V en V^\\ast\n\nindex boven voor V (contravariant), onder voor V^\\ast (covariant)\nvb. T \\in V \\otimes V^\\ast \\otimes V^\\ast \\otimes V: coëfficiënten T^{i\\ \\ \\ l}_{\\ jk}\n\n(Abstracte) indexnotatie: indices als plaatshouders, niet als getallen"
+  },
+  {
+    "objectID": "slides/H6.html#tensoroperaties",
+    "href": "slides/H6.html#tensoroperaties",
+    "title": "Hoofdstuk 6 - Multilineaire algebra",
+    "section": "Tensoroperaties",
+    "text": "Tensoroperaties\nT^{i\\ \\ \\ l}_{\\ jk} \\in V \\otimes V^\\ast \\otimes V^\\ast \\otimes V en S_i^{\\ jk} \\in V^\\ast \\otimes V \\otimes V:\n\nIndexpermutatie: indices herschikken, met behoud van boven/onder U_{j\\ \\ k}^{\\ l\\ \\ i} = T^{i\\ \\ \\ l}_{\\ jk} \\quad \\text{(orde 2: transponeren)}\nTensorproduct (outer product): U^{i\\ \\ \\ l\\ \\ np}_{\\ jk\\ m} = T^{i\\ \\ \\ l}_{\\ jk} S_m^{\\ np}\nContractie: een boven- en een onderindex gelijkstellen en sommeren (natuurlijke paring)\n\nbinnen één tensor (veralgemeende trace): V^i_{\\ j} = T^{i\\ \\ \\ k}_{\\ jk}\ntussen tensoren: W^{i\\ n}_{\\ j} = T^{i\\ \\ \\ l}_{\\ jk} S_l^{\\ nk}\noorsprong van Einsteins sommatieconventie"
+  },
+  {
+    "objectID": "slides/H6.html#tensordiagrammen",
+    "href": "slides/H6.html#tensordiagrammen",
+    "title": "Hoofdstuk 6 - Multilineaire algebra",
+    "section": "Tensordiagrammen",
+    "text": "Tensordiagrammen\nGrafische indexnotatie (Penrose; niet in de cursus): elke index is een beentje\n\nbeentje omlaag: index boven (V); beentje omhoog: index onder (V^\\ast)\nbeentjes verbinden = contractie (boven met onder); invoer boven, uitvoer onder"
+  },
+  {
+    "objectID": "slides/H6.html#basistransformaties-van-tensoren",
+    "href": "slides/H6.html#basistransformaties-van-tensoren",
+    "title": "Hoofdstuk 6 - Multilineaire algebra",
+    "section": "Basistransformaties van tensoren",
+    "text": "Basistransformaties van tensoren\nBasis \\{{e}_i\\} \\to \\{\\tilde{{e}}_i\\} met {e}_j = \\tilde{{e}}_i L^i_{\\ j}:\n\nvector: \\tilde{v}^i = L^i_{\\ j} v^j; duale vector: \\tilde{\\chi}_i = ({\\mathsf{L}}^{-1})^j_{\\ i} \\chi_j\ntensor: elke index transformeert volgens zijn positie \\boxed{\\tilde{T}^{i\\ \\ \\ l}_{\\ jk} = ({\\mathsf{L}})^i_{\\ i'} ({\\mathsf{L}}^{-1})^{j'}_{\\ j} ({\\mathsf{L}}^{-1})^{k'}_{\\ k} ({\\mathsf{L}})^l_{\\ l'} T^{i'\\ \\ \\ \\ l'}_{\\ j'k'}}\ncontractie van een boven- met een onderindex: basisonafhankelijk\n\nvb. \\xi[{v}] = \\xi_i v^i, trace A^i_{\\ i}"
+  },
+  {
+    "objectID": "slides/H6.html#inwendig-product-op-een-tensorproduct",
+    "href": "slides/H6.html#inwendig-product-op-een-tensorproduct",
+    "title": "Hoofdstuk 6 - Multilineaire algebra",
+    "section": "Inwendig product op een tensorproduct",
+    "text": "Inwendig product op een tensorproduct\nBasissen \\{{e}_i\\} van V, \\{{f}_j\\} van W; metrieken g_{ik} = {\\left\\langle{e}_i,{e}_k\\right\\rangle}_V, h_{jl} = {\\left\\langle{f}_j,{f}_l\\right\\rangle}_W\n\nIntuïtief: metriek op V \\otimes W: {\\left\\langle{e}_i \\otimes {f}_j,{e}_k \\otimes {f}_l\\right\\rangle} = g_{ik} h_{jl}, dus {\\left\\langle S,T\\right\\rangle}_{V \\otimes W} = \\overline{S^{ij}} g_{ik} h_{jl} T^{kl}\n\nmetriek {\\mathsf{g}} \\otimes {\\mathsf{h}} (Kronecker): positief definiet, eigenwaarden \\lambda_i \\mu_j &gt; 0\n\nOrthonormale basissen: g_{ik} = \\delta_{ik}, h_{jl} = \\delta_{jl} {\\left\\langle S,T\\right\\rangle}_{V \\otimes W} = \\sum_{i,j} \\overline{S^{ij}} T^{ij}, \\qquad {\\left\\lVert T\\right\\rVert}^2 = \\sum_{i,j} {\\left\\lvert T^{ij}\\right\\rvert}^2\n\n{\\left\\lVert T\\right\\rVert} is de Hilbert-Schmidt-norm van {\\mathsf{T}} (H5)\n\nOp producttensoren, zonder basis: \\boxed{{\\left\\langle{v}\\otimes {w},{v}' \\otimes {w}'\\right\\rangle}_{V \\otimes W} = {\\left\\langle{v},{v}'\\right\\rangle}_V {\\left\\langle{w},{w}'\\right\\rangle}_W}"
+  },
+  {
+    "objectID": "slides/H6.html#inwendig-product-zonder-basis",
+    "href": "slides/H6.html#inwendig-product-zonder-basis",
+    "title": "Hoofdstuk 6 - Multilineaire algebra",
+    "section": "Inwendig product: zonder basis",
+    "text": "Inwendig product: zonder basis\nZoals Def 6.1 voor Def 6.0: dezelfde definitie, zonder naar een basis te verwijzen\n\nDefinieer {\\left\\langle({v}, {w}),({v}', {w}')\\right\\rangle} = {\\left\\langle{v},{v}'\\right\\rangle}_V {\\left\\langle{w},{w}'\\right\\rangle}_W op {\\mathbb{F}}(V \\times W), (anti)lineair uitgebreid\n\nontaard: de nulruimte is precies {\\mathbb{F}}(S_1 \\cup S_2) \\to welgedefinieerd op het quotiënt V \\otimes W\n\nPositief definiet: T = \\sum_{i=1}^n {v}_i \\otimes {w}_i; Gram-Schmidt geeft orthonormale \\{{e}_k\\}, \\{{f}_k\\}: {\\left\\langle T,T\\right\\rangle} = \\sum_{i,j,k,l} \\overline{T^{ij}} T^{kl} {\\left\\langle{e}_i,{e}_k\\right\\rangle} {\\left\\langle{f}_j,{f}_l\\right\\rangle} = \\sum_{i,j} {\\left\\lvert T^{ij}\\right\\rvert}^2 &gt; 0\n\ndat is de intuïtieve formule, met orthonormale stelsels die van T afhangen\nwerkt ook in oneindige dimensie: elke T is een eindige som\n\nGevolg: de intuïtieve formule hangt niet af van de gekozen orthonormale basissen"
+  },
+  {
+    "objectID": "slides/H6.html#indices-verhogen-en-verlagen",
+    "href": "slides/H6.html#indices-verhogen-en-verlagen",
+    "title": "Hoofdstuk 6 - Multilineaire algebra",
+    "section": "Indices verhogen en verlagen",
+    "text": "Indices verhogen en verlagen\nReële V, eindig-dimensionaal, metriek {\\mathsf{g}} (niet noodzakelijk orthonormaal):\n\nv_i = g_{ij} v^j, v^i = g^{ij} v_j: elke index van een tensor kan omhoog of omlaag\n\nvb. T^{ij}_{\\ \\ kl} = g^{jj'} g_{ll'} T^{i\\ \\ \\ \\ l'}_{\\ j'k}, met hetzelfde symbool\n\nInwendig product door contractie: {\\left\\langle T,\\tilde{T}\\right\\rangle} = T^{i\\ \\ \\ l}_{\\ jk} \\tilde{T}^{i'\\ \\ \\ \\ l'}_{\\ j'k'} g_{ii'} g^{jj'} g^{kk'} g_{ll'} = T_{ijkl} \\tilde{T}^{ijkl}\nLineaire afbeelding A^i_{\\ j} \\leftrightarrow bilineaire vorm A_{ij} = g_{ik} A^k_{\\ j} (H5)\nOrthonormale basis, g_{ij} = \\delta_{ij}: verhogen en verlagen verandert niets\n\nCartesische tensoren: enkel onderindices; basistransformaties zijn orthogonaal"
+  },
+  {
+    "objectID": "slides/H6.html#tensorproduct-van-hilbertruimten",
+    "href": "slides/H6.html#tensorproduct-van-hilbertruimten",
+    "title": "Hoofdstuk 6 - Multilineaire algebra",
+    "section": "Tensorproduct van Hilbertruimten",
+    "text": "Tensorproduct van Hilbertruimten\n\nV \\otimes W bevat enkel eindige sommen \\sum_{i=1}^n {v}_i \\otimes {w}_i: niet compleet\n\nCauchy-rijen T^{(k)} = \\sum_{i=1}^{n_k} {v}_i^{(k)} \\otimes {w}_i^{(k)} met een limiet die geen eindige som is\n\nDefinitie voor Hilbertruimten: de completering \\boxed{V \\otimes W = \\overline{{\\mathbb{F}}(V \\times W) / {\\mathbb{F}}(S_1 \\cup S_2)}}\n\northonormale basissen \\{{e}_m\\}, \\{{f}_n\\} \\Rightarrow orthonormale basis \\{{e}_m \\otimes {f}_n \\mid m, n \\in {\\mathbb{N}}\\}\n\n\n\nOpmerking 6.10. Zonder norm kan dit niet: functies op {\\mathbb{R}}^2 zijn geen eindige sommen g(x) h(y), en er is geen limiet\n\n\nOpmerking 6.11. Kwantummechanica, samengesteld systeem: \\mathcal{H}_{AB} = \\mathcal{H}_A \\otimes \\mathcal{H}_B"
+  },
+  {
+    "objectID": "slides/H6.html#voorbeeld-functies-van-twee-variabelen",
+    "href": "slides/H6.html#voorbeeld-functies-van-twee-variabelen",
+    "title": "Hoofdstuk 6 - Multilineaire algebra",
+    "section": "Voorbeeld: functies van twee variabelen",
+    "text": "Voorbeeld: functies van twee variabelen\n\nVoorbeeld 6.1. V = L^2([0, L_x]) (functies g(x)), W = L^2([0, L_y]) (functies h(y))\n\n\nProduct: g \\otimes h is de functie f(x, y) = g(x) h(y) op de rechthoek R = [0, L_x] \\times [0, L_y]\n\nkwadratisch integreerbaar, en het inwendig product klopt: \\iint_R \\overline{g(x) h(y)}\\, g'(x) h'(y)\\, {\\mathrm{d}}x\\, {\\mathrm{d}}y = {\\left\\langle g,g'\\right\\rangle} {\\left\\langle h,h'\\right\\rangle} = {\\left\\langle g \\otimes h,g' \\otimes h'\\right\\rangle}\n\nAlgebraïsch V \\otimes W: eindige sommen \\sum_{k=1}^n g_k(x) h_k(y)\n\nvgl. matrices: een “matrix” f(x, y) van eindige rang\nniet alle functies: {\\mathrm{e}}^{-(x-y)^2} = \\sum_{n=0}^\\infty \\frac{2^n}{n!} (x^n {\\mathrm{e}}^{-x^2})(y^n {\\mathrm{e}}^{-y^2}) vraagt oneindig veel termen\n\nHilbert V \\otimes W (completering): alle limieten van zulke sommen \\boxed{L^2([0, L_x]) \\otimes L^2([0, L_y]) = L^2([0, L_x] \\times [0, L_y])}"
+  },
+  {
+    "objectID": "slides/H6.html#voorbeeld-6.1-fourierbasis",
+    "href": "slides/H6.html#voorbeeld-6.1-fourierbasis",
+    "title": "Hoofdstuk 6 - Multilineaire algebra",
+    "section": "Voorbeeld 6.1: Fourierbasis",
+    "text": "Voorbeeld 6.1: Fourierbasis\n\nOrthonormale basissen (H5): e_k(x) = \\frac{1}{\\sqrt{L_x}} {\\mathrm{e}}^{{\\mathrm{i}}2\\pi k x / L_x}, f_l(y) = \\frac{1}{\\sqrt{L_y}} {\\mathrm{e}}^{{\\mathrm{i}}2\\pi l y / L_y}, k, l \\in {\\mathbb{Z}}\nBasis van het tensorproduct: e_k \\otimes f_l, de tweedimensionale Fourierfuncties (e_k \\otimes f_l)(x, y) = \\frac{1}{\\sqrt{L_x L_y}} {\\mathrm{e}}^{{\\mathrm{i}}2\\pi (k x / L_x + l y / L_y)}\nExpansie (Stelling 5.23): elke f \\in L^2(R) is f = \\sum_{k,l=-\\infty}^{+\\infty} F_{kl}\\, e_k \\otimes f_l, \\qquad F_{kl} = {\\left\\langle e_k \\otimes f_l,f\\right\\rangle}\n\ngelijkheid in de 2-norm; \\sum_{k,l} {\\left\\lvert F_{kl}\\right\\rvert}^2 = {\\left\\lVert f\\right\\rVert}^2: een “oneindige matrix” F_{kl}\n\nAfgeknot tot {\\left\\lvert k\\right\\rvert}, {\\left\\lvert l\\right\\rvert} \\leq N: een eindige som van producten \\to die zijn dicht in L^2(R)"
+  },
+  {
+    "objectID": "slides/H6.html#tensoren-van-type-p-q",
+    "href": "slides/H6.html#tensoren-van-type-p-q",
+    "title": "Hoofdstuk 6 - Multilineaire algebra",
+    "section": "Tensoren van type (p, q)",
+    "text": "Tensoren van type (p, q)\nEén primaire ruimte V: V^{\\otimes k} = V \\otimes \\cdots \\otimes V (k keer), V^{\\otimes 0} = {\\mathbb{F}}\n\nAlgemeen, factoren herschikt: \\boxed{\\mathcal{T}^p_{\\ q}(V) = V^{\\otimes p} \\otimes (V^\\ast)^{\\otimes q}}\n\ncontravariante graad p, covariante graad q\nvector (1, 0), duale vector (0, 1), lineaire afbeelding (1, 1), bilineaire vorm (0, 2)\n\n(p, q)-tensor \\leftrightarrow multilineaire vorm op (V^\\ast)^{\\times p} \\times V^{\\times q}\n\n\nOpmerking 6.12. In een basis: t^{i_1 \\ldots i_p}_{\\qquad j_1 \\ldots j_q}\\, {e}_{i_1} \\otimes \\cdots \\otimes {e}_{i_p} \\otimes {\\varepsilon}^{j_1} \\otimes \\cdots \\otimes {\\varepsilon}^{j_q}\n\n\nOpmerking 6.13. \\mathcal{T}^p_{\\ q}(V)^\\ast \\cong \\mathcal{T}^p_{\\ q}(V^\\ast) \\cong \\mathcal{T}^q_{\\ p}(V): volledige contractie geeft een scalair"
+  },
+  {
+    "objectID": "slides/H6.html#tensoralgebra",
+    "href": "slides/H6.html#tensoralgebra",
+    "title": "Hoofdstuk 6 - Multilineaire algebra",
+    "section": "Tensoralgebra",
+    "text": "Tensoralgebra\n\n\\otimes : V^{\\otimes k} \\times V^{\\otimes l} \\to V^{\\otimes (k+l)}: bilineair, associatief, 1 \\otimes T = T voor 1 \\in {\\mathbb{F}}\n\nmaar geen product binnen één ruimte\n\nTensoralgebra: directe som van alle graden \\boxed{\\mathcal{T}(V) = \\bigoplus_{k=0}^{+\\infty} V^{\\otimes k} = {\\mathbb{F}}\\oplus V \\oplus V^{\\otimes 2} \\oplus \\cdots}\n\n\\otimes maakt \\mathcal{T}(V) tot een associatieve algebra met eenheid 1 \\in {\\mathbb{F}}= V^{\\otimes 0}\nelementen t_{(0)} + t_{(1)}^i {e}_i + t_{(2)}^{ij} {e}_i \\otimes {e}_j + \\cdots (formele som)\nhomogeen element: in één V^{\\otimes k}\n\n\n\nOpmerking 6.14. Een ruimte die zo ontbindt in componenten met een (gehele) index heet een graded vector space"
+  },
+  {
+    "objectID": "slides/H6.html#symmetrie-onder-indexpermutatie",
+    "href": "slides/H6.html#symmetrie-onder-indexpermutatie",
+    "title": "Hoofdstuk 6 - Multilineaire algebra",
+    "section": "Symmetrie onder indexpermutatie",
+    "text": "Symmetrie onder indexpermutatie\n\nV \\otimes W \\cong W \\otimes V, maar \\otimes is niet commutatief: {v}\\otimes {w}\\neq {w}\\otimes {v}\nOrde 2: symmetrisch en antisymmetrisch deel, zoals bij matrices: {\\mathsf{T}} = \\underbrace{\\frac{{\\mathsf{T}} + {\\mathsf{T}}^{\\mathsf{T}}}{2}}_{\\mathcal{S}{\\mathsf{T}}} + \\underbrace{\\frac{{\\mathsf{T}} - {\\mathsf{T}}^{\\mathsf{T}}}{2}}_{\\mathcal{A}{\\mathsf{T}}}\nOrde p: \\sigma \\in S_p herschikt de factoren: de factor op plaats m gaat naar plaats \\sigma(m) \\sigma \\triangleright T = T^{i_1 \\ldots i_p}\\, {e}_{i_{\\sigma^{-1}(1)}} \\otimes \\cdots \\otimes {e}_{i_{\\sigma^{-1}(p)}}\n\nin componenten: \\boxed{(\\sigma \\triangleright T)^{j_1 j_2 \\ldots j_p} = T^{j_{\\sigma(1)} j_{\\sigma(2)} \\ldots j_{\\sigma(p)}}}\nrepresentatie van S_p: \\sigma \\triangleright (\\tau \\triangleright T) = (\\sigma \\circ \\tau) \\triangleright T"
+  },
+  {
+    "objectID": "slides/H6.html#symmetrie-onder-indexpermutatie-voorbeeld",
+    "href": "slides/H6.html#symmetrie-onder-indexpermutatie-voorbeeld",
+    "title": "Hoofdstuk 6 - Multilineaire algebra",
+    "section": "Symmetrie onder indexpermutatie: voorbeeld",
+    "text": "Symmetrie onder indexpermutatie: voorbeeld\np = 3 en de cyclische permutatie \\sigma:\n\n\n\nplaats m\n1\n2\n3\n\n\n\n\n\\sigma(m)\n2\n3\n1\n\n\n\n\nOp een product: {u} gaat van plaats 1 naar 2, {v} van 2 naar 3, {w} van 3 naar 1 \\sigma \\triangleright ({u}\\otimes {v}\\otimes {w}) = {w}\\otimes {u}\\otimes {v}\nIn componenten: (\\sigma \\triangleright T)^{j_1 j_2 j_3} = T^{j_{\\sigma(1)} j_{\\sigma(2)} j_{\\sigma(3)}} = T^{j_2 j_3 j_1}\n\ncontrole met T = {u}\\otimes {v}\\otimes {w}, dus T^{ijk} = u^i v^j w^k: T^{j_2 j_3 j_1} = u^{j_2} v^{j_3} w^{j_1} = w^{j_1} u^{j_2} v^{j_3}: \\quad \\text{de coëfficiënten van } {w}\\otimes {u}\\otimes {v}"
+  },
+  {
+    "objectID": "slides/H6.html#symmetrie-onder-indexpermutatie-1",
+    "href": "slides/H6.html#symmetrie-onder-indexpermutatie-1",
+    "title": "Hoofdstuk 6 - Multilineaire algebra",
+    "section": "Symmetrie onder indexpermutatie",
+    "text": "Symmetrie onder indexpermutatie\n\nOpmerking 6.15. {\\hat{G}} \\in \\mathop{\\mathrm{GL}}(V) werkt op V^{\\otimes p} als {\\hat{G}}^{\\otimes p}: \\begin{aligned}\n{\\hat{G}}^{\\otimes p} T &= T^{i_1 \\ldots i_p} ({\\hat{G}} {e}_{i_1}) \\otimes \\cdots \\otimes ({\\hat{G}} {e}_{i_p}) \\\\\n({\\hat{G}}^{\\otimes p} T)^{j_1 \\ldots j_p} &= G^{j_1}_{\\ i_1} \\cdots G^{j_p}_{\\ i_p} T^{i_1 \\ldots i_p}\n\\end{aligned} een representatie van \\mathop{\\mathrm{GL}}(V) op V^{\\otimes p}\n\n\nOpmerking 6.16. Beide acties commuteren: \\sigma \\triangleright ({\\hat{G}}^{\\otimes p} T) = {\\hat{G}}^{\\otimes p}(\\sigma \\triangleright T)\n\nDeelruimten invariant onder S_p zijn ook invariant onder \\mathop{\\mathrm{GL}}(V): Schur-Weyl-dualiteit"
+  },
+  {
+    "objectID": "slides/H6.html#antisymmetrische-tensoren",
+    "href": "slides/H6.html#antisymmetrische-tensoren",
+    "title": "Hoofdstuk 6 - Multilineaire algebra",
+    "section": "Antisymmetrische tensoren",
+    "text": "Antisymmetrische tensoren\n\nDefinitie 6.5. De totaal antisymmetrische deelruimte \\Lambda^p(V) van V^{\\otimes p} bevat de tensoren met \\boxed{\\sigma \\triangleright T = \\mathop{\\mathrm{sgn}}(\\sigma) T \\quad \\forall \\sigma \\in S_p}\n\n\nOpmerking 6.17. \\Lambda^0(V) = {\\mathbb{F}} en \\Lambda^1(V) = V\n\n\nVoorbeelden: {v}\\otimes {w}- {w}\\otimes {v}\\in \\Lambda^2(V); antisymmetrische matrices {\\mathsf{T}}^{\\mathsf{T}}= -{\\mathsf{T}}"
+  },
+  {
+    "objectID": "slides/H6.html#antisymmetrisatie",
+    "href": "slides/H6.html#antisymmetrisatie",
+    "title": "Hoofdstuk 6 - Multilineaire algebra",
+    "section": "Antisymmetrisatie",
+    "text": "Antisymmetrisatie\n\nDefinitie 6.6. Antisymmetrisatie-operator \\mathcal{A} \\in \\mathop{\\mathrm{End}}(V^{\\otimes p}), een projector met \\mathop{\\mathrm{im}}(\\mathcal{A}) = \\Lambda^p(V): \\boxed{\\mathcal{A} T = \\frac{1}{p!} \\sum_{\\sigma \\in S_p} \\mathop{\\mathrm{sgn}}(\\sigma) (\\sigma \\triangleright T)}\n\n\nVb. p = 2: \\mathcal{A}({v}\\otimes {w}) = \\frac{1}{2}({v}\\otimes {w}- {w}\\otimes {v}), voor matrices \\frac{1}{2}({\\mathsf{T}} - {\\mathsf{T}}^{\\mathsf{T}})\nEigenschappen: \\mathcal{A} T is antisymmetrisch, T \\in \\Lambda^p(V) \\Rightarrow \\mathcal{A} T = T, dus \\mathcal{A}^2 = \\mathcal{A}\n\nbewijs: \\tau \\circ \\sigma doorloopt S_p (vaste \\tau), \\mathop{\\mathrm{sgn}}(\\sigma) = \\mathop{\\mathrm{sgn}}(\\tau) \\mathop{\\mathrm{sgn}}(\\tau \\circ \\sigma): \\tau \\triangleright \\mathcal{A} T = \\frac{1}{p!} \\sum_\\sigma \\mathop{\\mathrm{sgn}}(\\sigma) (\\tau \\circ \\sigma) \\triangleright T = \\mathop{\\mathrm{sgn}}(\\tau) \\mathcal{A} T\n\n\n\nOpmerking 6.18. Voor elke p een eigen \\mathcal{A}; we gebruiken hetzelfde symbool"
+  },
+  {
+    "objectID": "slides/H6.html#wedge-product",
+    "href": "slides/H6.html#wedge-product",
+    "title": "Hoofdstuk 6 - Multilineaire algebra",
+    "section": "Wedge product",
+    "text": "Wedge product\n\n\\mathcal{A}(T \\otimes S) = \\mathcal{A}((\\mathcal{A} T) \\otimes S) = \\mathcal{A}(T \\otimes (\\mathcal{A} S)) \\to product direct tussen de \\Lambda^p\n\n\nDefinitie 6.7. Het wedge product of exterieur product \\wedge : \\Lambda^p(V) \\times \\Lambda^q(V) \\to \\Lambda^{p+q}(V): \\boxed{T \\wedge S = \\sqrt{\\frac{(p+q)!}{p!\\, q!}}\\, \\mathcal{A}(T \\otimes S)}\n\n\nOpmerking 6.19. Bilineair, associatief en alternerend (antisymmetrisch)\n\n\nOpmerking 6.20. De factor is een conventie (1, \\frac{(p+q)!}{p!\\, q!} of deze): met deze keuze komt het inwendig product van de tensorruimte overeen met dat van de exterieure algebra"
+  },
+  {
+    "objectID": "slides/H6.html#wedge-product-van-vectoren",
+    "href": "slides/H6.html#wedge-product-van-vectoren",
+    "title": "Hoofdstuk 6 - Multilineaire algebra",
+    "section": "Wedge product van vectoren",
+    "text": "Wedge product van vectoren\n\\begin{aligned}\n{v}_1 \\wedge {v}_2 &= \\frac{1}{\\sqrt{2}} ({v}_1 \\otimes {v}_2 - {v}_2 \\otimes {v}_1) \\\\\n{v}_1 \\wedge {v}_2 \\wedge {v}_3 &= \\frac{1}{\\sqrt{6}} ({v}_1 \\otimes {v}_2 \\otimes {v}_3 - {v}_2 \\otimes {v}_1 \\otimes {v}_3 + {v}_2 \\otimes {v}_3 \\otimes {v}_1 \\\\\n&\\qquad\\quad - {v}_1 \\otimes {v}_3 \\otimes {v}_2 + {v}_3 \\otimes {v}_1 \\otimes {v}_2 - {v}_3 \\otimes {v}_2 \\otimes {v}_1)\n\\end{aligned}\n\\boxed{{v}_1 \\wedge {v}_2 \\wedge \\cdots \\wedge {v}_p = \\frac{1}{\\sqrt{p!}} \\sum_{\\sigma \\in S_p} \\mathop{\\mathrm{sgn}}(\\sigma)\\, {v}_{\\sigma(1)} \\otimes {v}_{\\sigma(2)} \\otimes \\cdots \\otimes {v}_{\\sigma(p)}}\n\n{v}_2 \\wedge {v}_1 = -{v}_1 \\wedge {v}_2, dus {v}\\wedge {v}= 0; lineair afhankelijk \\Rightarrow {v}_1 \\wedge \\cdots \\wedge {v}_p = 0"
+  },
+  {
+    "objectID": "slides/H6.html#basis-van-lambdapv",
+    "href": "slides/H6.html#basis-van-lambdapv",
+    "title": "Hoofdstuk 6 - Multilineaire algebra",
+    "section": "Basis van \\Lambda^p(V)",
+    "text": "Basis van \\Lambda^p(V)\n\\mathop{\\mathrm{dim}}V = n, geordende basis \\{{e}_1, \\ldots, {e}_n\\}: B_{\\Lambda^p(V)} = \\{{e}_{i_1} \\wedge {e}_{i_2} \\wedge \\cdots \\wedge {e}_{i_p} \\mid 1 \\leq i_1 &lt; i_2 &lt; \\cdots &lt; i_p \\leq n\\}\n\n\\Lambda^0: \\{1\\}, \\Lambda^1: \\{{e}_i\\}, \\Lambda^2: \\{{e}_i \\wedge {e}_j \\mid i &lt; j\\}, …, \\Lambda^n: \\{{e}_1 \\wedge \\cdots \\wedge {e}_n\\} \\boxed{\\mathop{\\mathrm{dim}}\\Lambda^p(V) = \\binom{n}{p} = \\frac{n!}{p!(n-p)!}}\n\n\\mathop{\\mathrm{dim}}\\Lambda^n(V) = 1; p &gt; n: geen niet-nul antisymmetrische tensoren\n\n\n\nOpmerking 6.21. Basisonafhankelijke determinant: voor T \\in \\Lambda^n(V) is {\\hat{A}}^{\\otimes n} T = \\det({\\hat{A}}) T, want {\\hat{A}}^{\\otimes n}({e}_1 \\wedge \\cdots \\wedge {e}_n) = ({\\hat{A}} {e}_1) \\wedge \\cdots \\wedge ({\\hat{A}} {e}_n) = \\det({\\hat{A}})\\, {e}_1 \\wedge \\cdots \\wedge {e}_n\n\nLeibniz (H2, Def 2.11): \\det({\\mathsf{A}}) = \\sum_{\\sigma \\in S_n} \\mathop{\\mathrm{sgn}}(\\sigma) A^1_{\\ \\sigma(1)} A^2_{\\ \\sigma(2)} \\cdots A^n_{\\ \\sigma(n)}"
+  },
+  {
+    "objectID": "slides/H6.html#wedge-product-en-inwendig-product",
+    "href": "slides/H6.html#wedge-product-en-inwendig-product",
+    "title": "Hoofdstuk 6 - Multilineaire algebra",
+    "section": "Wedge product en inwendig product",
+    "text": "Wedge product en inwendig product\n\nPropositie 6.3. Voor een inwendig productruimte V en {v}_i, {w}_i \\in V: {\\left\\langle{w}_1 \\wedge \\cdots \\wedge {w}_p,{v}_1 \\wedge \\cdots \\wedge {v}_p\\right\\rangle} = \\det \\begin{bmatrix} {\\left\\langle{w}_1,{v}_1\\right\\rangle} & \\cdots & {\\left\\langle{w}_1,{v}_p\\right\\rangle} \\\\ \\vdots & \\ddots & \\vdots \\\\ {\\left\\langle{w}_p,{v}_1\\right\\rangle} & \\cdots & {\\left\\langle{w}_p,{v}_p\\right\\rangle} \\end{bmatrix}\n\n\nVoorbeeld 6.2. V = {\\mathbb{R}}^n: {\\left\\lVert\\boldsymbol{v}_1 \\wedge \\boldsymbol{v}_2\\right\\rVert} = \\sqrt{{\\left\\lVert\\boldsymbol{v}_1\\right\\rVert}^2 {\\left\\lVert\\boldsymbol{v}_2\\right\\rVert}^2 - {\\left\\lvert{\\left\\langle\\boldsymbol{v}_1,\\boldsymbol{v}_2\\right\\rangle}\\right\\rvert}^2} = {\\left\\lVert\\boldsymbol{v}_1\\right\\rVert} {\\left\\lVert\\boldsymbol{v}_2\\right\\rVert} {\\left\\lvert\\sin(\\theta)\\right\\rvert} de oppervlakte van het parallellogram opgespannen door \\boldsymbol{v}_1 en \\boldsymbol{v}_2"
+  },
+  {
+    "objectID": "slides/H6.html#wedge-product-volume-en-oriëntatie",
+    "href": "slides/H6.html#wedge-product-volume-en-oriëntatie",
+    "title": "Hoofdstuk 6 - Multilineaire algebra",
+    "section": "Wedge product: volume en oriëntatie",
+    "text": "Wedge product: volume en oriëntatie\n\n{\\left\\lVert{v}_1 \\wedge \\cdots \\wedge {v}_p\\right\\rVert} = volume van het p-dimensionale parallellepipedum\n\nbasis voor integralen in hogere dimensie (differentiaalmeetkunde)\n\nVolgorde telt: oriëntatie, het georiënteerde volume\nOrthonormale basis van V \\Rightarrow B_{\\Lambda^p(V)} is orthonormaal"
+  },
+  {
+    "objectID": "slides/H6.html#exterieure-algebra",
+    "href": "slides/H6.html#exterieure-algebra",
+    "title": "Hoofdstuk 6 - Multilineaire algebra",
+    "section": "Exterieure algebra",
+    "text": "Exterieure algebra\n\nDefinitie 6.8. Voor eindig-dimensionale V is \\boxed{\\Lambda(V) = \\bigoplus_{p=0}^{\\mathop{\\mathrm{dim}}V} \\Lambda^p(V)} met het wedge product een associatieve algebra: de exterieure algebra of Grassmann-algebra. Elementen: multivectoren; homogeen in \\Lambda^p(V): p-vectoren.\n\n\\Lambda(V) is een deelruimte van \\mathcal{T}(V) met \\mathop{\\mathrm{dim}}\\Lambda(V) = \\sum_{p=0}^n \\binom{n}{p} = 2^n\nMet inwendig product op V: de \\Lambda^p(V) zijn onderling orthogonaal\n\n\n\nOpmerking 6.22. Fysica: identiek aan de Fock-ruimte voor fermionische veeldeeltjessystemen"
   },
   {
     "objectID": "slides/H1.html",
