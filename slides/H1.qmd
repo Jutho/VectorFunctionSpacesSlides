@@ -17,24 +17,24 @@ date: "09/21/2026"
 
 * Weinig voorbeelden om beknopt te blijven
 
-## Doel van dit hoofdstuk {.scrollable}
+## Doel van dit hoofdstuk
 
-![](algebraicstructures.svg){.nostretch fig-align="center" width="700px"}
+![](algebraicstructures.svg){.nostretch fig-align="center" width="620px"}
 
 # Verzamelingen en afbeeldingen
 
 ## Verzamelingen
 
-* verzameling met hoofdletters $A, B, \ldots$ 
-* elementen $a, b, c \in A$ met kleine letters
-* deelverzameling $B \subseteq A$
-* unie $A \cup B$, doorsnede $A \cap B$, verschil $A \setminus B$
-* complement van een deelverzameling $B \subseteq A$: $B^{\text{c}} = \{ a \in A | a \not\in B\}$
+* Verzameling met hoofdletters $A, B, \ldots$ 
+* Elementen $a, b, c \in A$ met kleine letters
+* Deelverzameling $B \subseteq A$
+* Unie $A \cup B$, doorsnede $A \cap B$, verschil $A \setminus B$
+* Complement van een deelverzameling $B \subseteq A$: $B^{\text{c}} = \{ a \in A | a \not\in B\}$
 * Cartesisch product $A \times B = \{(a,b); \forall a \in A, \forall b \in B \}$
 
 ## Verzamelingen
 
-* belangrijkste verzamelingen:
+* Belangrijkste verzamelingen:
   * lege verzameling $\{\}$
   * natuurlijke getallen $\bbN = \{0,1,2,\ldots\}$, $\bbN_0 = \bbN \setminus \{0\}$
   * gehele getallen $\bbZ$
@@ -43,7 +43,6 @@ date: "09/21/2026"
   * niet-negatieve getallen $\bbR_{\geq 0}$, positieve getallen $\bbR_{>0}$
   * $\overline{\bbR} = \bbR \cup \{-\infty,+\infty\}$
   * complexe getallen $\bbC$
-
 
 ## Afbeeldingen
 
@@ -54,19 +53,19 @@ date: "09/21/2026"
   - invers beeld (preimage) van $D \subseteq B$:
    $\varphi^{-1}(D) = \{a \in A | \varphi(a) \in D\}$
 
-* compositie $\varphi \circ \psi$, identiteitsafbeelding $\id_A$
+* Compositie $\varphi \circ \psi$, identiteitsafbeelding $\id_A$
 
 ## Afbeeldingen
 
-* injectief: elk element $b \in B$ is het beeld van ten hoogste één $a \in A$, of dus $\varphi^{-1}(\{b\})$ bevat 0 of 1 elementen
-* surjectief: elk element $b \in B$ is het beeld van minstens één $a \in A$, of dus $\varphi(A) = B$
-* bijectief: injectief en surjectief, elk element $b \in B$ is het beeld van exact één $a \in A$
+* **Injectief**: elk element $b \in B$ is het beeld van ten hoogste één $a \in A$, of dus $\varphi^{-1}(\{b\})$ bevat 0 of 1 elementen
+* **Surjectief**: elk element $b \in B$ is het beeld van minstens één $a \in A$, of dus $\varphi(A) = B$
+* **Bijectief**: injectief en surjectief, elk element $b \in B$ is het beeld van exact één $a \in A$
   - inverse afbeelding $a = \varphi^{-1}(b)$
   - $\varphi^{-1} \circ \varphi = \id_A$, $\varphi \circ \varphi^{-1} = \id_B$
 
 ## Kardinaliteit
 
-Kardinaliteit = aantal elementen in een verzameling
+**Kardinaliteit** = aantal elementen in een verzameling
 
 Notatie: $\vert A \vert$ of $\# A$
 
@@ -83,52 +82,68 @@ Notatie: $\vert A \vert$ of $\# A$
   $\vert A \vert \leq \vert B \vert \Leftrightarrow$ er bestaat een injectieve afbeelding van $A$ naar $B$
 
 ## Relaties
-Relatie tussen elementen $a \in A$ en $b \in B$ = deelverzameling van koppels $(a,b) \in A \times B$
+
+**Relatie** tussen elementen $a \in A$ en $b \in B$ = deelverzameling van koppels $(a,b) \in A \times B$
 
 ## Relaties
+
 1.  Equivalentierelatie $\sim$ tussen elementen $a, b, c \in A$
-    * Definitie
-      - reflexiviteit: $a \sim a$ voor alle $a \in A$
-      - symmetrie: $a \sim b$ impliceert $b \sim a$
-      - transitiviteit: $a \sim b$ en $b \sim c$ impliceert $a \sim c$
+
+    ::: {.definitie nr="1.2"}
+    Een **equivalentierelatie** voldoet aan
+
+    - reflexiviteit: $a \sim a$ voor alle $a \in A$
+    - symmetrie: $a \sim b$ impliceert $b \sim a$
+    - transitiviteit: $a \sim b$ en $b \sim c$ impliceert $a \sim c$
+    :::
+
     * Equivalentieklasse $[a] = \{b \in A | b \sim a\}$
       - verschillende equivalentieklassen zijn disjunct: $\lnot(a \sim b) \Rightarrow [a] \cap [b] = \{\}$
       - equivalentieklassen partitioneren $A$
-      - quotiëntverzameling $A/
-      \sim$ = verzameling van equivalentieklassen 
+      - quotiëntverzameling $A/\sim$ = verzameling van equivalentieklassen 
 
 ## Relaties
 
 1.  Equivalentierelatie $\sim$ tussen elementen $a, b, c \in A$
-    * Voorbeeld (dat vaak terugkomt):
-      
-      $\forall a,b \in \bbZ$, $a \sim b \Leftrightarrow (b-a) \in n \bbZ$
 
-      $[a] = \{ b \in \bbZ | b \mod n = a\}$
+    ::: {.voorbeeld nr="1.2"}
+    Dat vaak terugkomt: voor $a,b \in \bbZ$
+    $$a \sim b \quad \Leftrightarrow \quad b-a \in n \bbZ$$
 
-      $\bbZ / \sim = \bbZ / (n \bbZ)$
-      
-      in fysica: $\bbZ_n$: gehele getallen modulo $n$
+    * equivalentieklassen: $[a] = \{ b \in \bbZ | b \bmod n = a\}$
+    * quotiëntverzameling: $\bbZ / \sim\, = \bbZ / (n \bbZ)$
+    * in fysica: $\bbZ_n$, de gehele getallen modulo $n$
+    :::
 
 ## Relaties
+
 2.  Partiële orde relatie $a \preccurlyeq b$ tussen elementen $a, b \in A$
-    * Definitie
-      - reflexiviteit: $a \preccurlyeq a$ voor alle $a \in A$
-      - anitsymmetrie: $a \preccurlyeq b \land b \preccurlyeq a$ impliceert $a=b$
-      - transitiviteit: $a \preccurlyeq b$ en $b \preccurlyeq c$ impliceert $a \preccurlyeq c$
+
+    ::: {.definitie nr="1.3"}
+    Een **partiële orde** voldoet aan
+
+    - reflexiviteit: $a \preccurlyeq a$ voor alle $a \in A$
+    - antisymmetrie: $a \preccurlyeq b \land b \preccurlyeq a$ impliceert $a=b$
+    - transitiviteit: $a \preccurlyeq b$ en $b \preccurlyeq c$ impliceert $a \preccurlyeq c$
+    :::
+
     * Eigenschappen:
-      - grootste element $a$: $b \preccurlyeq a$ voor alle $b \in A$
-      
-        (uniek maar hoeft niet te bestaan)
-      - maximaal element $a$: $a \preccurlyeq b$ impliceert $b = a$
-        
-        (niet uniek)
+
+      ::: {.definitie nr="1.4"}
+      **Grootste element** $a$: $b \preccurlyeq a$ voor alle $b \in A$ (uniek maar hoeft niet te bestaan)
+      :::
+
+      ::: {.definitie nr="1.6"}
+      **Maximaal element** $a$: $a \preccurlyeq b$ impliceert $b = a$ (niet uniek)
+      :::
 
 # Groepen, ringen en velden
 
-## Bineaire operatie
+## Binaire operatie
 
-Een afbeelding $\cdot: A \times A \to A: (a,b) \mapsto a \cdot b$ 
+::: {.definitie nr="1.7"}
+Een **binaire operatie** is een afbeelding $\cdot: A \times A \to A: (a,b) \mapsto a \cdot b$ 
+:::
 
 Mogelijke eigenschappen ($\forall a, b, c \in A$)
 
@@ -139,9 +154,11 @@ Mogelijke eigenschappen ($\forall a, b, c \in A$)
 
 ## Groep
 
-Een groep $(G, \cdot)$ is een verzameling $G$ met een associatieve binaire operatie $\cdot$ die een neutraal element en inverses heeft.
+::: {.definitie nr="1.8"}
+Een **groep** $(G, \cdot)$ is een verzameling $G$ met een associatieve binaire operatie $\cdot$ die een neutraal element en inverses heeft.
 
-Indien de groepsoperatie ook commutatief is wordt de groep meestal een Abelse groep genoemd en de operatie meestal genoteerd als $+$
+Indien de groepsoperatie ook commutatief is wordt de groep meestal een **Abelse groep** genoemd en de operatie meestal genoteerd als $+$
+:::
 
 * Voorbeelden: $(\bbZ, +)$, $(\bbZ_n, +_{\bmod n})$
 * Groepen in de fysica: symmetrieën
@@ -151,185 +168,236 @@ Indien de groepsoperatie ook commutatief is wordt de groep meestal een Abelse gr
 
 ## Homomorfisme
 
-Homomorfisme = structuurbewarende afbeelding
+**Homomorfisme** = structuurbewarende afbeelding
 
-Groepshomomorfisme $\varphi$ van $(G, \cdot)$ naar $(H, \circ)$:
-$\varphi(g_1 \cdot g_2) = \varphi(g_1) \circ \varphi(g_2)$
+::: {.definitie nr="1.10"}
+**Groepshomomorfisme** $\varphi$ van $(G, \cdot)$ naar $(H, \circ)$:
+$$\boxed{\varphi(g_1 \cdot g_2) = \varphi(g_1) \circ \varphi(g_2)}$$
+:::
 
 Bijkomende terminologie:
 
-* Endomorphisme: homorphisme van structuur naar zichzelf
-* Isomorphisme: bijectief homomorfisme (notatie vaak $\phi$)
-* Automorphisme: bijectief endomorfisme
+* **Endomorfisme**: homomorfisme van een structuur naar zichzelf
+* **Isomorfisme**: bijectief homomorfisme (notatie vaak $\phi$)
+* **Automorfisme**: bijectief endomorfisme
 
-## Automorfismegroep:
+## Automorfismegroep
 
+::: {.definitie nr="1.11"}
 Voor elke verzameling $A$, met eventuele structuur (groep, partiële order, ring, veld, vectorruimte, …):
 
-De verzameling $\Aut(A)$ van alle mogelijke automorfismen van $A$ met als binaire operatie $\circ$ (compositie) heeft associativiteit, neutraal element $\id_A$ and inverses
+De verzameling $\Aut(A)$ van alle mogelijke automorfismen van $A$ met als binaire operatie $\circ$ (compositie) heeft associativiteit, neutraal element $\id_A$ en inverses
 
-$\Rightarrow (\Aut(A), \circ)$ is een groep: automorfismegroep van $A$ !
+$\Rightarrow (\Aut(A), \circ)$ is een groep: de **automorfismegroep** van $A$
+:::
 
-Voorbeeld:
-
+::: {.voorbeeld nr="1.10" title="Permutatiegroep"}
 * $I_n = \{1,\ldots,n\}$ zonder extra structuur
 * $\Rightarrow \Aut(I_n) = S_n$, de permutatiegroep van $n$ elementen
+:::
 
-## Voorbeelden van homomorfismen
+## Voorbeelden van homomorfismen {.scrollable}
 
-* Triviaal homomorfise van elke groep $(G,\cdot)$ naar triviale groep $(\{e\},\cdot)$: $\forall g \in G: \varphi(g) = e$.
+* Triviaal homomorfisme van elke groep $(G,\cdot)$ naar triviale groep $(\{e\},\cdot)$: $\forall g \in G: \varphi(g) = e$.
 
+::: {.voorbeeld nr="1.9"}
 * Met behulp van:
   * Groep 1: $\bbZ_n = \{0,1,\ldots,n-1\}$ met $+$ modulo $n$
   * Groep 2: $C_n = \{\omega^k ; k=0,\ldots, n-1\}$ met $\omega = \erm^{\irm \frac{2\pi}{n}}$ en vermenigvuldiging (cyclische groep)
-
-* Isomorphisme: $k \in \bbZ_n \mapsto \omega^k \in C_n$
+* Isomorfisme: $k \in \bbZ_n \mapsto \omega^k \in C_n$
   
   $\Rightarrow$ isomorfisme $\bbZ_n \cong C_n$
+:::
 
-* Surjectief homomorphisme: $a \in C_{2n} \mapsto a^2 \in C_{n}$
-
-* Injectief homomorphisme: $k \in \bbZ_{n} \mapsto 2k \in \bbZ_{2n}$
+* Surjectief homomorfisme: $a \in C_{2n} \mapsto a^2 \in C_{n}$
+* Injectief homomorfisme: $k \in \bbZ_{n} \mapsto 2k \in \bbZ_{2n}$
 
 ## Voorbeelden van homomorfismen
 
+::: {.voorbeeld nr="1.11"}
 Van permutatiegroep $S_n$ naar $\bbZ_2$:
 
-* Ontbind een willekeure permutatie $\sigma \in S_n$ als een samenstelling van elementaire transposities $\tau_{i,j}$
+* Ontbind een willekeurige permutatie $\sigma \in S_n$ als een samenstelling van elementaire transposities $\tau_{i,j}$
 * Aantal transposities modulo 2 hangt niet af van gekozen ontbinding: pariteit $P(\sigma) \in \bbZ_2$
 * $\sgn(\sigma) = (-1)^{P(\sigma)} \in C_2$
+:::
 
 ## Groepsacties
 
-* Gegeven een verzameling $A$ (configuratieruimte van een fysisch systeem), beschrijf hoe elementen $g$ van een groep $G$ (symmetrietransformaties) inwerkt op de elementen $a \in A$ en ze transformeert naar nieuwe elementen $b \in A$
+* Gegeven een verzameling $A$ (configuratieruimte van een fysisch systeem), beschrijf hoe elementen $g$ van een groep $G$ (symmetrietransformaties) inwerken op de elementen $a \in A$ en ze transformeert naar nieuwe elementen $b \in A$
 
-* Met elke $g \in G$ moeten we dus een afbeelding $A \to A$ associeren, meer bepaald een automorphisme.
+::: {.definitie nr="1.12"}
+Met elke $g \in G$ moeten we dus een afbeelding $A \to A$ associeren, meer bepaald een automorfisme:
 
-  $\Rightarrow$ groepsactie is homomorphisme van $G$ naar $\Aut(A)$
+$\Rightarrow$ een **groepsactie** is een homomorfisme van $G$ naar $\Aut(A)$
+:::
 
 * Wanneer $A$ een (eindig-dimensionale) vectorruimte is, is $\Aut(A)$ isomorf met de verzameling van inverteerbare matrices en wordt een groepsactie een **representatie** genoemd.
 
 ## Deelgroepen en kern
 
-* Deelgroep $H$: een deelverzameling $H \subseteq G$ die tevens nog steeds een groep is
-* Normale subgroep: een subgroep $N \subseteq G$ zodat $g n g^{-1} \in N$ voor alle $g \in G$ en $n \in N$
-* Voor een homomorphisme $\varphi:(G,\cdot) \to (H,\circ)$
-  - is het beeld $\varphi(G)$ een subgroep van $H$
-  - is het invers beeld $\varphi^{-1}(e_H)$ een normale subgroup van $G$, die de naam $\ker(\varphi)$ krijgt
+::: {.definitie}
+**Deelgroep** $H$: een deelverzameling $H \subseteq G$ die tevens nog steeds een groep is
+:::
+
+::: {.definitie nr="1.14"}
+**Normale deelgroep**: een deelgroep $N \subseteq G$ zodat $g n g^{-1} \in N$ voor alle $g \in G$ en $n \in N$
+:::
+
+* Voor een homomorfisme $\varphi:(G,\cdot) \to (H,\circ)$
+  - is het beeld $\varphi(G)$ een deelgroep van $H$
+  - is het invers beeld $\varphi^{-1}(e_H)$ een normale deelgroep van $G$: de **kern** $\ker(\varphi)$
   - $\ker(\varphi) = \{e_G\} \Leftrightarrow \varphi$ is injectief
 
-## Quotientgroep
+## Quotiëntgroep
 
-* Quotientgroup $G/N$ voor $N$ normale subgroep van $G$:
+::: {.propositie nr="1.3" title="Quotiëntgroep"}
+* **Quotiëntgroep** $G/N$ voor $N$ een normale deelgroep van $G$:
   - $g \sim h$ als $g^{-1} h \in N$, en dus ook $h g^{-1} \in N$
   - $[g] = \{g \cdot n, \forall n \in N\} = \{n'\cdot g, \forall n \in N\}$
   - $G/N$: groep van equivalentieklassen met operatie
-    
-    $[g_1] \cdot [g_2] = [g_1 \cdot g_2]$
-    
-    hangt niet af van gekozen representant:
-    $(g_1 \cdot n_1) \cdot (g_2 \cdot n_2) = (g_1 \cdot g_2) \cdot (g_2^{-1} \cdot n_1 \cdot g_2) \cdot n_2$
-    $= (g_1 \cdot g_2) \cdot n_1' \cdot n_2 = (g_1 \cdot g_2) \cdot n_3$
-
+    $$\boxed{[g_1] \cdot [g_2] = [g_1 \cdot g_2]}$$
+  - hangt niet af van de gekozen representant:
+    $$\begin{aligned}(g_1 \cdot n_1) \cdot (g_2 \cdot n_2) &= (g_1 \cdot g_2) \cdot (g_2^{-1} \cdot n_1 \cdot g_2) \cdot n_2 \\ &= (g_1 \cdot g_2) \cdot n_1' \cdot n_2 = (g_1 \cdot g_2) \cdot n_3\end{aligned}$$
+:::
 
 ## Ring
 
-Abelse groep $(R, +)$ met tweede binaire operatie $\cdot$ die associatief is en een neutraal element heeft, met bijkomende distributiviteitseigenschap:
+::: {.definitie nr="1.15"}
+Een **ring** is een Abelse groep $(R, +)$ met een tweede binaire operatie $\cdot$ die associatief is en een neutraal element heeft, met bijkomende distributiviteitseigenschap:
+$$a \cdot (b + c) = a\cdot b + a \cdot c, \quad (b+c) \cdot a = b \cdot a + c \cdot a$$
+:::
 
-$a \cdot (b + c) = a\cdot b + a \cdot c$; $(b+c) \cdot a = b \cdot a + c \cdot a$
+## Ring: voorbeelden
 
-Voorbeelden:
+::: {.voorbeeld nr="1.13"}
+$(\bbZ, +, \cdot)$ en $(\bbZ_n, +_{\bmod n}, \cdot_{\bmod n})$
+:::
 
-* $(\bbZ, +, \cdot)$ en $(\bbZ_n, +_{\bmod n}, \cdot_{\bmod n})$
-* triviale ring $(\{0=1\}, +, \cdot)$
-* $R[x]$: polynomen in $x$ met coefficienten uit ring $R$
-* $R^{n \times n}$: $n \times n$ matrices met elementen uit $R$
-  
-  (in dat geval is $\cdot$ niet commutatief)
+::: {.voorbeeld nr="1.14"}
+Triviale ring $(\{0=1\}, +, \cdot)$
+:::
+
+::: {.voorbeeld nr="1.16"}
+$R[x]$: polynomen in $x$ met coëfficiënten uit ring $R$
+:::
+
+::: {.voorbeeld nr="1.15"}
+$R^{n \times n}$: $n \times n$ matrices met elementen uit $R$ (in dat geval is $\cdot$ niet commutatief)
+:::
   
 ## Ring
 
 In een ring is er een neutraal element $0$ van $+$ en een neutraal element $1$ van $\cdot$. Verder kunnen er nog elementen zijn met een speciale rol:
 
-* Idempotent: $a \cdot a = a$
-* Nilpotent met index $p$: $a^p = 0$
-* Multiplicatief invers element: $a^{-1}$ zodat $a^{-1}\cdot a = a\cdot a^{-1} = 1$
-* Nuldeler: $a b = 0$ voor minstens 1 element $b \neq 0$.
+* **Idempotent**: $a \cdot a = a$
+* **Nilpotent** met index $p$: $a^p = 0$
+* **Multiplicatief invers element**: $a^{-1}$ zodat $a^{-1}\cdot a = a\cdot a^{-1} = 1$
+* **Nuldeler**: $a b = 0$ voor minstens één element $b \neq 0$
 
 ## Ring en veld
 
 * Het additief neutraal element $0$ heeft nooit een multiplicatief inverse
-* Een ring waarbij elk niet-$0$ element een multiplicatief inverse heeft: lichaam / delingsring
-* Een delingsring waarbij $\cdot$ commutatief is: **veld**
 
-Voorbeeld van velden: $\bbQ$, $\bbR$, $\bbC$, $\bbZ_p$ voor $p$ priem
+::: {.opmerking nr="1.12"}
+Een ring waarbij elk niet-$0$ element een multiplicatief inverse heeft: **lichaam** / **delingsring**
+:::
 
-Algebraisch gesloten veld: elke niet-constante veelterm heeft een nulpunt $\Rightarrow \bbC$
+::: {.definitie nr="1.16"}
+Een delingsring waarbij $\cdot$ commutatief is: **veld**
+:::
 
-Belangrijkste voorbeeld van delingsring: quaternionen $\bbH$
+Voorbeelden van velden: $\bbQ$, $\bbR$, $\bbC$, $\bbZ_p$ voor $p$ priem
+
+::: {.definitie nr="1.17"}
+**Algebraïsch gesloten veld**: elke niet-constante veelterm heeft een nulpunt $\Rightarrow \bbC$
+:::
+
+::: {.voorbeeld nr="1.18"}
+Belangrijkste voorbeeld van een delingsring: quaternionen $\bbH$
+:::
 
 # Vectorruimten
 
 ## Vectorruimte 
 
-Een vectorruimte $V=\{\zerovec_V, \vv,\vw,\ldots\}$ over een veld $\bbF=\{0,1,a,b,c,\ldots)$ (scalairen genoemd) is een abelse groep $(V,+)$ met een afbeelding $\bbF \times V \to V$ (vermenigvuldigen met scalairen), met als eigenschappen
+::: {.definitie nr="1.18"}
+Een **vectorruimte** $V=\{\zerovec_V, \vv,\vw,\ldots\}$ over een veld $\bbF=\{0,1,a,b,c,\ldots\}$ (scalairen genoemd) is een Abelse groep $(V,+)$ met een afbeelding $\bbF \times V \to V$ (vermenigvuldigen met scalairen), met als eigenschappen
 
 * $a(\vv + \vw) = a \vv + a \vw$
 * $(a+b) \vv = a \vv + b \vv$
 * $a (b \vv) = (a b) \vv$
-* $1 \vv = vv$
+* $1 \vv = \vv$
 
 Andere verwachte eigenschappen volgen, zoals $0 \vv = \zerovec_V$, $\ldots$
+:::
 
 $\bbF$ is typisch $\bbR$ of $\bbC$
 
 ## Voorbeelden
 
-* Triviale vector ruimte: $\{\zerovec\}$ (voor om het even welk veld)
-* $\bbF^n = \bbF \times \bbF \times \cdots \times \bbF$: n-tuples
-  - meestal voorgesteld als kolom
-  - elementen genoteerd in het vet: $\vec{v}\in \bbF^n$
-  - elementsgewijze optelling en vermenigvuldiging met scalairen
-  - in het bijzonder: $\bbF^1 \cong \bbF$ als veld over zichzelf
+::: {.voorbeeld nr="1.20"}
+Triviale vectorruimte: $\{\zerovec\}$ (voor om het even welk veld)
+:::
+
+::: {.voorbeeld nr="1.19"}
+$\bbF^n = \bbF \times \bbF \times \cdots \times \bbF$: $n$-tupels
+
+* meestal voorgesteld als kolom
+* elementen genoteerd in het vet: $\vec{v}\in \bbF^n$
+* elementsgewijze optelling en vermenigvuldiging met scalairen
+* in het bijzonder: $\bbF^1 \cong \bbF$ als veld over zichzelf
+:::
+
+## Voorbeelden
+
+::: {.voorbeeld nr="1.22"}
 * $\bbC$ als veld over $\bbR$: het complexe vlak
 * analoog: $\bbH$ als veld over $\bbR$, of over $\bbC$
-* $\bbF^{m\times n}$: $m \times n$ matrices, opnieuw met componentsgewijze optelling en vermenigvuldiging met scalairen (≠ matrixvermenigvuldiging)
+:::
+
+::: {.voorbeeld nr="1.23"}
+$\bbF^{m\times n}$: $m \times n$ matrices, opnieuw met componentsgewijze optelling en vermenigvuldiging met scalairen (≠ matrixvermenigvuldiging)
+:::
 
 ## Deelruimten
 
-* Deelverzameling $W$ van een vectorruimte $V$ die gesloten is onder vectoroptelling (=deelgroep) en vermenigvuldiging met scalairen
+::: {.definitie nr="1.19"}
+* **Deelruimte**: deelverzameling $W$ van een vectorruimte $V$ die gesloten is onder vectoroptelling (=deelgroep) en vermenigvuldiging met scalairen
 * Notatie: $W \subspace V$
 * Triviale deelruimte: $\{\zerovec_V\}$
 * Eigenlijke deelruimte: $W \neq \{\zerovec_V\}$ en $W \neq V$
+:::
 
 ## Meer voorbeelden
 
 * Vectorruimte $\bbF^{\mathcal{D}}$: functies van een bepaald domein $\mathcal{D}$ (bvb $\bbR$ of $\bbR^3$) naar $\bbF$
   - puntsgewijze optelling en vermenigvuldiging met scalairen
-* Voor $\mathcal{D} \subseteq \bbR^n$: Optelling en scalaire vermenigvuldiging behoudt de meeste analytische eigenschappen, dus interessante deelruimtes:
-  - Continue functies: $C(\mathcal{D},\bbF)$
+* Voor $\mathcal{D} \subseteq \bbR^n$: optelling en scalaire vermenigvuldiging behoudt de meeste analytische eigenschappen, dus interessante deelruimtes:
+  - continue functies: $C(\mathcal{D},\bbF)$
   - $k$-maal continue afleidbare functies: $C^k(\mathcal{D},\bbF)$
   - gladde functies: $C^{\infty}(\mathcal{D},\bbF)$
   - analytische functies $C^{\omega}(\mathcal{D},\bbF)$ (functies met convergerende Taylorreeks binnen $\mathcal{D}$)
 
-## Homomorfismen
+## Homomorfismen {.scrollable}
 
-Structuurbehoudende afbeelding tussen twee vectorruimten $V$ and $W$:
+::: {.definitie nr="1.20"}
+**Homomorfisme** van vectorruimten: structuurbehoudende afbeelding $\varphi:V\to W$ met
+$$\boxed{\varphi (a^1 \vv_1 + a^2 \vv_2) = a^1 \varphi(\vv_1) + a^2 \varphi(\vv_2)}$$
+:::
 
-$\varphi:V\to W$ met $\varphi (a^1 \vv_1 + a^2 \vv_2) = a^1 \varphi(\vv_1) + a^2 \varphi(\vv_2)$
-
-* vector-homomorfismen $\Hom(V,W)$:
+* Vector-homomorfismen $\Hom(V,W)$:
 
   **lineaire afbeeldingen** $\rightarrow$ Hoofdstuk 2
-* vector-endomorfismen $\End(V) = \Hom(V,V)$:
+* Vector-endomorfismen $\End(V) = \Hom(V,V)$:
 
   **lineaire operatoren** $\rightarrow$ Hoofdstuk 3
 
-* vector-isomorfismen:
+* Vector-isomorfismen:
 
   **lineaire transformaties**
 
-* vector-automorfismegroep $\GL(V)$:
+* Vector-automorfismegroep $\GL(V)$:
 
   **algemeen lineaire groep**
 
@@ -337,98 +405,144 @@ $\varphi:V\to W$ met $\varphi (a^1 \vv_1 + a^2 \vv_2) = a^1 \varphi(\vv_1) + a^2
 
 Gegeven een deelverzameling $S \subseteq V$ van een vectorruimte $V$ over $\bbF$ (dus niet noodzakelijk een deelruimte):
 
-* Een lineaire combinatie uit $S$ is elke vector $\vv = \sum_{i=1}^m a^i \vv_i$
-met $a^i \in \bbF$, $\vv_i \in S$ voor $i=1,\ldots,m$ voor een eindige integer $m$
+::: {.definitie nr="1.21"}
+Een **lineaire combinatie** uit $S$ is elke vector
+$$\vv = \sum_{i=1}^m a^i \vv_i \quad \text{met } a^i \in \bbF,\ \vv_i \in S$$
+voor een eindig getal $m$
+:::
 
-## Lineaire span en compleetheid
+## Lineaire span en compleetheid {.scrollable}
 
-* $\spanop(S)$ of $\bbF S$ is de verzameling van alle lineaire combinaties uit $S$; dit is een deelruimte: $\spanop(S) \subspace V$
+::: {.definitie nr="1.22"}
+De **span** $\spanop(S)$ of $\bbF S$ is de verzameling van alle lineaire combinaties uit $S$; dit is een deelruimte: $\spanop(S) \subspace V$
+:::
 
 * Deelruimte $W$ is **voortgebracht** door $S$ als $\spanop(S)=W$
-
 * $\spanop(\{\}) = \{\zerovec_V\}$
 
-* $S$ is **compleet** als $\spanop(S)=V$
+::: {.definitie nr="1.23"}
+$S$ is **compleet** als $\spanop(S)=V$
+:::
 
+::: {.definitie nr="1.24"}
 * Als de kleinste verzameling $S$ waarvoor $\spanop(S)=V$ een eindige kardinaliteit $|S|=n$ heeft, dan wordt $V$ een **$n$-dimensionale vectorruimte** genoemd: $\dim(V)=n$
-
 * Als er geen eindige verzameling $S$ bestaat waarvoor $\spanop(S)=V$, dan wordt $V$ een **oneindig-dimensionale vectorruimte** genoemd
+:::
 
 ## Lineaire onafhankelijkheid en basis
 
-* Een deelverzameling $S \subseteq V$ van een vectorruimte $V$ over $\bbF$ wordt **lineair onafhankelijk** genoemd als voor elke lineaire combinatie 
-$\sum_{i=1}^m a^i \vv_i$ geldt dat de vergelijking $\sum_{i=1}^m a^i \vv_i = \zerovec_V$ impliceert dat $a^i = 0$ voor $i=1,\ldots,m$.
+::: {.definitie nr="1.25"}
+Een deelverzameling $S \subseteq V$ van een vectorruimte $V$ over $\bbF$ wordt **lineair onafhankelijk** genoemd als voor elke lineaire combinatie $\sum_{i=1}^m a^i \vv_i$ geldt dat de vergelijking $\sum_{i=1}^m a^i \vv_i = \zerovec_V$ impliceert dat $a^i = 0$ voor $i=1,\ldots,m$.
+:::
 
-* Een verzameling $S$ die tegelijkertijd lineair onafhankelijk is en compleet is ($V$ voortbrengt) wordt een *basis* genoemd
+::: {.definitie nr="1.26"}
+Een verzameling $S$ die tegelijkertijd lineair onafhankelijk is en compleet is ($V$ voortbrengt) wordt een **basis** genoemd
+:::
 
-* Voorbeeld: $\{\vec{e}_i =(0,\ldots,\underbrace{0,1,0}_{\text{positie $i$}},\ldots,0); i=1,\ldots,n\}$ is een basis voor $\bbF^n$
+::: {.voorbeeld nr="1.26"}
+$\{\vec{e}_i =(0,\ldots,\underbrace{0,1,0}_{\text{positie $i$}},\ldots,0); i=1,\ldots,n\}$ is een basis voor $\bbF^n$
+:::
 
-## Basis: eigenschappen
+## Basis: eigenschappen {.scrollable}
 
-* Uit elke complete verzameling $S$ kunnen we een basis $B\subseteq S$ extraheren
+::: {.propositie nr="1.7"}
+Uit elke complete verzameling $S$ kunnen we een basis $B\subseteq S$ extraheren
+:::
 
-* Elke lineair onafhankelijke verzameling $S$ kunnen we uitbreiden tot een basis $B \supseteq S$
+::: {.propositie nr="1.9"}
+Elke lineair onafhankelijke verzameling $S$ kunnen we uitbreiden tot een basis $B \supseteq S$
+:::
 
-* Elke lineair onafhankelijke verzameling $S$ uit een $n$-dimensionale vectorruimte heeft ten hoogste $n$ elementen
+::: {.propositie nr="1.10"}
+Elke lineair onafhankelijke verzameling $S$ uit een $n$-dimensionale vectorruimte heeft ten hoogste $n$ elementen
+:::
 
-* Elke lineair onafhankelijke verzameling $S$ met $n$ elementen uit een $n$-dimensionale vectorruimte is een basis, en elke basis heeft exact $n$ elementen
+::: {.gevolg nr="1.11"}
+Elke lineair onafhankelijke verzameling $S$ met $n$ elementen uit een $n$-dimensionale vectorruimte is een basis, en elke basis heeft exact $n$ elementen
+:::
 
-* Elke vectorruimte (ook oneindig-dimensionale) hebben een basis (Hamel-basis), maar die is vaak niet constructief en niet praktisch
+::: {.propositie nr="1.8"}
+Elke vectorruimte (ook oneindig-dimensionale) hebben een basis (Hamel-basis), maar die is vaak niet constructief en niet praktisch
+:::
 
-## Coordinaten en indexnotatie
+## Coördinaten en indexnotatie
 
+::: {.definitie nr="1.27"}
 Gegeven een basis $B = \{\ve_i, i=1,\ldots,n\}$ voor een eindig-dimensionale vectorruimte:
 
 * Elke vector $\vv \in V$ kan 1-op-1 geassocieerd worden aan een $n$-tuple $\vec{v}=(v^1,\ldots,v^n) \in \bbF^n$ zodat
 
   $\vv = \sum_{i=1}^n v^i \ve_i =  v^i \ve_i$ (Einstein sommatie-conventie)
 
-* $\vec{v} = \phi_B(\vv)$ met $\phi_B:V \to \bbF^n$: coordinatenisomorfisme
+* $\vec{v} = \phi_B(\vv)$ met $\phi_B:V \to \bbF^n$: **coördinatenisomorfisme**
+:::
 
 * Elke $n$-dimensionale vectorruimte is isomorf met $\bbF^n$
 
-* Elke twee $n$-dimensionale vectorruimten zijn isomorf: $V \cong W$
+::: {.propositie nr="1.12"}
+Elke twee $n$-dimensionale vectorruimten zijn isomorf: $V \cong W$
+:::
 
 ## Indexnotatie
 
-* Coordinaten / componenten van een vector voorgesteld met contravariante index (bovenindex)
+* Coördinaten / componenten van een vector voorgesteld met contravariante index (bovenindex)
 
 * Einstein-sommatieconventie: elk symbool dat éénmaal als bovenindex (contravariant) en éénmaal als benedenindex (covariant) voorkomt impliceert een sommatie over zijn bereik
 
-* Kronecker-delta: $\delta^i_j = \begin{cases} 1, i=j\\ 0, i \neq j\end{cases}$
+::: {.definitie nr="1.28"}
+**Kronecker-delta**:
+$$\delta^i_j = \begin{cases} 1 & \text{als } i=j\\ 0 & \text{als } i \neq j\end{cases}$$
+:::
 
 ## Bewerkingen met deelruimten 
 
-* $W \subspace V$ impliceert $\dim(W) \leq \dim(V)$
-* Als $V$ eindig-dimensionaal is: 
+::: {.propositie nr="1.13"}
+$W \subspace V$ impliceert $\dim(W) \leq \dim(V)$
+:::
 
-  $\dim(W) = \dim(V)$ impliceert $W = V$
+::: {.propositie nr="1.14"}
+Als $V$ eindig-dimensionaal is: $\dim(W) = \dim(V)$ impliceert $W = V$
+:::
 
-## Bewerkingen met deelruimten 
+## Bewerkingen met deelruimten {.scrollable}
 
 Voor deelruimten $W_1,W_2 \subspace V$:
 
-* $(W_1 \cap W_2)$ is een deelruimte
-* $W_1 + W_2 = \bbF(W_1 \cup W_2)$ is een deelruimte:
-  * $\vv = \vw_1 + \vw_2$ voor een $\vw_1 \in W_1$ en $\vw_2 \in W_2$.
+::: {.propositie nr="1.15"}
+$(W_1 \cap W_2)$ is een deelruimte
+:::
 
-  * $\dim(W_1+W_2) = \dim(W_1) + \dim(W_2) - \dim(W_1 \cap W_2)$
+::: {.definitie nr="1.30"}
+De **som** $W_1 + W_2 = \bbF(W_1 \cup W_2)$ is een deelruimte:
 
-* als $W_1 \cap W_2 = \{\zerovec\}$: **(interne) directe som** $W_1 \oplus W_2$
-  * ontbinding $\vv = \vw_1 + \vw_2$ met $\vw_i \in W_i$ ($i=1,2$) is uniek
-  * $\dim(W_1 \oplus W_2) = \dim(W_1) + \dim(W_2)$
+* $\vv = \vw_1 + \vw_2$ voor een $\vw_1 \in W_1$ en $\vw_2 \in W_2$.
+* $\dim(W_1+W_2) = \dim(W_1) + \dim(W_2) - \dim(W_1 \cap W_2)$
+:::
+
+::: {.definitie nr="1.31"}
+Als $W_1 \cap W_2 = \{\zerovec\}$: **(interne) directe som** $W_1 \oplus W_2$
+
+* ontbinding $\vv = \vw_1 + \vw_2$ met $\vw_i \in W_i$ ($i=1,2$) is uniek
+* $\dim(W_1 \oplus W_2) = \dim(W_1) + \dim(W_2)$
+:::
 
 * $\bigoplus_{i=1}^n W_i$: vereist dat $W_{k+1} \cap \left(\bigoplus_{i=1}^{k} W_i\right) = \{\zerovec\}$ voor $k=1,2,\ldots,n-1$
   
 ## Bewerkingen met deelruimten 
 
-Voor vectorruimten $V_1$ en $V_2$: $V_1 \times V_2$ is vectorruimte
+::: {.propositie nr="1.18"}
+Voor vectorruimten $V_1$ en $V_2$ is $V_1 \times V_2$ een vectorruimte
 
 * Vectorstructuur:
   * $(\vv_1,\vv_2) + (\vw_1, \vw_2) = (\vv_1+\vw_1,\vv_2+\vw_2)$
   * $a (\vv_1, \vv_2)= (a \vv_1, a \vv_2)$
-* notatie: $V_1 \oplus V_2$, naam: **(externe) directe som**
-* $\vv_1 \mapsto (\vv_1,\zerovec_{V_2})$ en $\vv_2 \mapsto (\zerovec_{V_1},\vv_2)$ definiëren natuurlijke inbedding van $V_1$ en $V_2$ als deelruimten van $V_1 \oplus V_2$
+:::
+
+::: {.definitie nr="1.33"}
+Notatie: $V_1 \oplus V_2$, naam: **(externe) directe som**
+:::
+
+* $\vv_1 \mapsto (\vv_1,\zerovec_{V_2})$ en $\vv_2 \mapsto (\zerovec_{V_1},\vv_2)$ definiëren een natuurlijke inbedding van $V_1$ en $V_2$ als deelruimten van $V_1 \oplus V_2$
 
 $\Rightarrow$ geen onderscheid tussen interne en externe directe som
 
@@ -436,15 +550,21 @@ $\Rightarrow$ geen onderscheid tussen interne en externe directe som
 
 Gegeven een deelruimte $W \subseteq V$:
 
-* als $V = W \oplus U$, dan is $U$ een **complement** van $W$ in $V$
-  * keuze voor complement $U$ is niet uniek
-  * voor elke keuze geldt $\dim(U) = \dim(V) - \dim(W) = \codim(W)$
+::: {.definitie nr="1.32"}
+Als $V = W \oplus U$, dan is $U$ een **complement** van $W$ in $V$
 
-* **quotientruimte** $V/W$:
-  * equivalentierelatie $\vv_1 \sim \vv_2 \Leftrightarrow (\vv_2-\vv_1) \in W$
-  * $(W,+)$ is normale subgroup van $(V,+)$
-  * equivalentieklassen: $\vv+ W = \{\vv + \vw; \vw \in W\}$
-  * $\dim(V/W) = \dim(V) - \dim(W)$
+* keuze voor complement $U$ is niet uniek
+* voor elke keuze geldt $\dim(U) = \dim(V) - \dim(W) = \codim(W)$
+:::
+
+::: {.propositie nr="1.20"}
+**Quotiëntruimte** $V/W$:
+
+* equivalentierelatie $\vv_1 \sim \vv_2 \Leftrightarrow (\vv_2-\vv_1) \in W$
+* $(W,+)$ is een normale deelgroep van $(V,+)$
+* equivalentieklassen: $\vv+ W = \{\vv + \vw; \vw \in W\}$
+* $\dim(V/W) = \dim(V) - \dim(W)$
+:::
 
 <!-- ## Affiene ruimte
 
@@ -461,32 +581,37 @@ met bovendien:
 
 $A$ is zoals de vectorruimte $V$ die zijn oorsprong is vergeten -->
 
-# Algebras
+# Algebra's
 
-## Algebras
+## Algebra's
 
-Een vectorruimte $V$ met een binaire operatie $\odot: V \times V \mapsto V$
-die lineair is beide argumenten afzonderlijk (= bilineair)
+::: {.definitie nr="1.34"}
+Een **algebra** is een vectorruimte $V$ met een binaire operatie $\odot: V \times V \to V$
+die lineair is in beide argumenten afzonderlijk (= bilineair)
 
 * $(a^1 \vv_1 + a^2 \vv_2) \odot \vw = a^1 (\vv_1 \odot \vw) + a^2 (\vv_2 \odot \vw)$
 * $\vv \odot (b^1 \vw_1 + b^2 \vw_2) = b^1 (\vv \odot \vw_1) + b^2 (\vv \odot \vw_2)$
+:::
 
 Ten opzichte van een basis $B = \{\ve_1,\ldots,\ve_n\}$:
 
-$(v^i \ve_i) \odot (w^j \ve_j) = v^i w^j (\ve_i \odot \ve_j) = v^i v^j \underbrace{f_{ij}^k}_{\text{structuurconstanten}} \ve_k$
+$$(v^i \ve_i) \odot (w^j \ve_j) = v^i w^j (\ve_i \odot \ve_j) = v^i w^j \underbrace{f_{ij}^k}_{\text{structuurconstanten}} \ve_k$$
 
-## Algebras
+## Algebra's
 
-* Associatieve algebra $(V,\cdot)$:
+* **Associatieve algebra** $(V,\cdot)$:
   * $(\vu \cdot \vv) \cdot \vw = \vu \cdot (\vv \cdot \vw)$
   * vaak ook met een neutraal element
   * belangrijkste voorbeeld: vierkante matrices $\bbF^{n \times n}$
   <!-- * **commutator**: $[\vv,\vw] = \vv \cdot \vw - \vw \cdot \vv$ -->
 
-* Alternerend product: $\vv \odot \vv = 0 \Rightarrow \vv \odot \vw = -\vw \odot \vv$
-  * automatisch antisymmetrisch / anticommutatief
-  * veralgemening naar antisymmetrische multilineaire vormen (Hoofdstuk 6)
-  * voorbeeld: vectorproduct $\times$ op $\bbR^3$
+::: {.definitie nr="1.35"}
+**Alternerend product**: $\vv \odot \vv = 0 \Rightarrow \vv \odot \vw = -\vw \odot \vv$
+
+* automatisch antisymmetrisch / anticommutatief
+* veralgemening naar antisymmetrische multilineaire vormen (Hoofdstuk 6)
+* voorbeeld: vectorproduct $\times$ op $\bbR^3$
+:::
 
 <!-- * Lie-algebra: algebra met alternered product, genoteerd als $[\vv, \vw] = -[\vw,\vv]$ dat voldoet aan Jacobi-identiteit
 
@@ -497,6 +622,6 @@ $(v^i \ve_i) \odot (w^j \ve_j) = v^i w^j (\ve_i \odot \ve_j) = v^i v^j \underbra
 
 # Samenvatting
 
-## Samenvatting {.scrollable}
+## Samenvatting
 
-![](algebraicstructures.svg){.nostretch fig-align="center" width="700px"}
+![](algebraicstructures.svg){.nostretch fig-align="center" width="620px"}

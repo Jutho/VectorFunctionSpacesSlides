@@ -28,6 +28,41 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -201,51 +236,74 @@ window.Quarto = {
   <ul>
   <li><a href="#doel-van-dit-hoofdstuk" id="toc-doel-van-dit-hoofdstuk" class="nav-link active" data-scroll-target="#doel-van-dit-hoofdstuk">Doel van dit hoofdstuk</a></li>
   <li><a href="#doel-van-dit-hoofdstuk-1" id="toc-doel-van-dit-hoofdstuk-1" class="nav-link" data-scroll-target="#doel-van-dit-hoofdstuk-1">Doel van dit hoofdstuk</a></li>
+  <li><a href="#terugblik-h2h5" id="toc-terugblik-h2h5" class="nav-link" data-scroll-target="#terugblik-h2h5">Terugblik: H2–H5</a>
+  <ul class="collapse">
+  <li><a href="#terugblik-rang-en-eigenwaarden-h2h3" id="toc-terugblik-rang-en-eigenwaarden-h2h3" class="nav-link" data-scroll-target="#terugblik-rang-en-eigenwaarden-h2h3">Terugblik: rang en eigenwaarden (H2–H3)</a></li>
+  <li><a href="#terugblik-normen-h4" id="toc-terugblik-normen-h4" class="nav-link" data-scroll-target="#terugblik-normen-h4">Terugblik: normen (H4)</a></li>
+  <li><a href="#terugblik-inwendig-product-h5" id="toc-terugblik-inwendig-product-h5" class="nav-link" data-scroll-target="#terugblik-inwendig-product-h5">Terugblik: inwendig product (H5)</a></li>
+  </ul></li>
   <li><a href="#unitaire-en-orthogonale-groep" id="toc-unitaire-en-orthogonale-groep" class="nav-link" data-scroll-target="#unitaire-en-orthogonale-groep">Unitaire en orthogonale groep</a>
   <ul class="collapse">
   <li><a href="#unitaire-groep-en-speciaal-unitaire-groep" id="toc-unitaire-groep-en-speciaal-unitaire-groep" class="nav-link" data-scroll-target="#unitaire-groep-en-speciaal-unitaire-groep">Unitaire groep en speciaal unitaire groep</a></li>
+  <li><a href="#unitaire-groep-en-speciaal-unitaire-groep-1" id="toc-unitaire-groep-en-speciaal-unitaire-groep-1" class="nav-link" data-scroll-target="#unitaire-groep-en-speciaal-unitaire-groep-1">Unitaire groep en speciaal unitaire groep</a></li>
   <li><a href="#orthogonale-groep-en-speciaal-orthogonale-groep" id="toc-orthogonale-groep-en-speciaal-orthogonale-groep" class="nav-link" data-scroll-target="#orthogonale-groep-en-speciaal-orthogonale-groep">Orthogonale groep en speciaal orthogonale groep</a></li>
+  <li><a href="#orthogonale-groep-en-speciaal-orthogonale-groep-1" id="toc-orthogonale-groep-en-speciaal-orthogonale-groep-1" class="nav-link" data-scroll-target="#orthogonale-groep-en-speciaal-orthogonale-groep-1">Orthogonale groep en speciaal orthogonale groep</a></li>
   </ul></li>
   <li><a href="#elementaire-unitaire-transformaties" id="toc-elementaire-unitaire-transformaties" class="nav-link" data-scroll-target="#elementaire-unitaire-transformaties">Elementaire unitaire transformaties</a>
   <ul class="collapse">
   <li><a href="#permutatiematrices" id="toc-permutatiematrices" class="nav-link" data-scroll-target="#permutatiematrices">Permutatiematrices</a></li>
-  <li><a href="#givenstransformatie" id="toc-givenstransformatie" class="nav-link" data-scroll-target="#givenstransformatie">Givenstransformatie</a></li>
-  <li><a href="#householder-transformatie" id="toc-householder-transformatie" class="nav-link" data-scroll-target="#householder-transformatie">Householder transformatie</a></li>
   <li><a href="#discrete-fouriertransformatie" id="toc-discrete-fouriertransformatie" class="nav-link" data-scroll-target="#discrete-fouriertransformatie">Discrete Fouriertransformatie</a></li>
   <li><a href="#discrete-fouriertransformatie-1" id="toc-discrete-fouriertransformatie-1" class="nav-link" data-scroll-target="#discrete-fouriertransformatie-1">Discrete Fouriertransformatie</a></li>
+  <li><a href="#discrete-fouriertransformatie-2" id="toc-discrete-fouriertransformatie-2" class="nav-link" data-scroll-target="#discrete-fouriertransformatie-2">Discrete Fouriertransformatie</a></li>
+  <li><a href="#discrete-fouriertransformatie-circulante-matrices" id="toc-discrete-fouriertransformatie-circulante-matrices" class="nav-link" data-scroll-target="#discrete-fouriertransformatie-circulante-matrices">Discrete Fouriertransformatie: circulante matrices</a></li>
+  <li><a href="#givenstransformatie" id="toc-givenstransformatie" class="nav-link" data-scroll-target="#givenstransformatie">Givenstransformatie</a></li>
+  <li><a href="#householdertransformatie" id="toc-householdertransformatie" class="nav-link" data-scroll-target="#householdertransformatie">Householdertransformatie</a></li>
   </ul></li>
   <li><a href="#qr-decompositie-herbekeken" id="toc-qr-decompositie-herbekeken" class="nav-link" data-scroll-target="#qr-decompositie-herbekeken">QR decompositie herbekeken</a>
   <ul class="collapse">
-  <li><a href="#qr-decompositie-van-algemene-matrices" id="toc-qr-decompositie-van-algemene-matrices" class="nav-link" data-scroll-target="#qr-decompositie-van-algemene-matrices">QR decompositie van algemene matrices</a></li>
-  <li><a href="#qr-decompositie-van-algemene-matrices-1" id="toc-qr-decompositie-van-algemene-matrices-1" class="nav-link" data-scroll-target="#qr-decompositie-van-algemene-matrices-1">QR decompositie van algemene matrices</a></li>
+  <li><a href="#volledige-qr-decompositie" id="toc-volledige-qr-decompositie" class="nav-link" data-scroll-target="#volledige-qr-decompositie">Volledige QR decompositie</a></li>
+  <li><a href="#qr-decompositie-via-householder" id="toc-qr-decompositie-via-householder" class="nav-link" data-scroll-target="#qr-decompositie-via-householder">QR decompositie via Householder</a></li>
   </ul></li>
-  <li><a href="#schur-decompositie-en-machtmethode" id="toc-schur-decompositie-en-machtmethode" class="nav-link" data-scroll-target="#schur-decompositie-en-machtmethode">Schur decompositie en machtmethode</a>
+  <li><a href="#schur-decompositie-en-machtsmethode" id="toc-schur-decompositie-en-machtsmethode" class="nav-link" data-scroll-target="#schur-decompositie-en-machtsmethode">Schur decompositie en machtsmethode</a>
   <ul class="collapse">
   <li><a href="#schur-decompositie" id="toc-schur-decompositie" class="nav-link" data-scroll-target="#schur-decompositie">Schur decompositie</a></li>
+  <li><a href="#schur-decompositie-1" id="toc-schur-decompositie-1" class="nav-link" data-scroll-target="#schur-decompositie-1">Schur decompositie</a></li>
   <li><a href="#schur-decompositie-van-normale-matrices" id="toc-schur-decompositie-van-normale-matrices" class="nav-link" data-scroll-target="#schur-decompositie-van-normale-matrices">Schur decompositie van normale matrices</a></li>
+  <li><a href="#schur-decompositie-van-normale-matrices-1" id="toc-schur-decompositie-van-normale-matrices-1" class="nav-link" data-scroll-target="#schur-decompositie-van-normale-matrices-1">Schur decompositie van normale matrices</a></li>
   <li><a href="#machtsmethode" id="toc-machtsmethode" class="nav-link" data-scroll-target="#machtsmethode">Machtsmethode</a></li>
+  <li><a href="#machtsmethode-1" id="toc-machtsmethode-1" class="nav-link" data-scroll-target="#machtsmethode-1">Machtsmethode</a></li>
+  <li><a href="#machtsmethode-2" id="toc-machtsmethode-2" class="nav-link" data-scroll-target="#machtsmethode-2">Machtsmethode</a></li>
   <li><a href="#deelruimte-iteratie" id="toc-deelruimte-iteratie" class="nav-link" data-scroll-target="#deelruimte-iteratie">Deelruimte-iteratie</a></li>
   <li><a href="#qr-iteratie" id="toc-qr-iteratie" class="nav-link" data-scroll-target="#qr-iteratie">QR-iteratie</a></li>
+  </ul></li>
+  <li><a href="#singuliere-waardendecompositie-en-polaire-decompositie" id="toc-singuliere-waardendecompositie-en-polaire-decompositie" class="nav-link" data-scroll-target="#singuliere-waardendecompositie-en-polaire-decompositie">Singuliere waardendecompositie en polaire decompositie</a>
+  <ul class="collapse">
+  <li><a href="#unitaire-equivalentie" id="toc-unitaire-equivalentie" class="nav-link" data-scroll-target="#unitaire-equivalentie">Unitaire equivalentie</a></li>
+  <li><a href="#singuliere-waardendecompositie" id="toc-singuliere-waardendecompositie" class="nav-link" data-scroll-target="#singuliere-waardendecompositie">Singuliere waardendecompositie</a></li>
+  <li><a href="#singuliere-waardendecompositie-eigenschappen" id="toc-singuliere-waardendecompositie-eigenschappen" class="nav-link" data-scroll-target="#singuliere-waardendecompositie-eigenschappen">Singuliere waardendecompositie: eigenschappen</a></li>
+  <li><a href="#singuliere-waardendecompositie-eigenschappen-1" id="toc-singuliere-waardendecompositie-eigenschappen-1" class="nav-link" data-scroll-target="#singuliere-waardendecompositie-eigenschappen-1">Singuliere waardendecompositie: eigenschappen</a></li>
+  <li><a href="#singuliere-waardendecompositie-algoritme" id="toc-singuliere-waardendecompositie-algoritme" class="nav-link" data-scroll-target="#singuliere-waardendecompositie-algoritme">Singuliere waardendecompositie: algoritme</a></li>
+  <li><a href="#singuliere-waardendecompositie-varianten" id="toc-singuliere-waardendecompositie-varianten" class="nav-link" data-scroll-target="#singuliere-waardendecompositie-varianten">Singuliere waardendecompositie: varianten</a></li>
+  <li><a href="#singuliere-waardendecompositie-varianten-1" id="toc-singuliere-waardendecompositie-varianten-1" class="nav-link" data-scroll-target="#singuliere-waardendecompositie-varianten-1">Singuliere waardendecompositie: varianten</a></li>
+  <li><a href="#verband-met-rang-norm-en-conditiegetal" id="toc-verband-met-rang-norm-en-conditiegetal" class="nav-link" data-scroll-target="#verband-met-rang-norm-en-conditiegetal">Verband met rang, norm en conditiegetal</a></li>
+  <li><a href="#verband-met-rang-norm-en-conditiegetal-1" id="toc-verband-met-rang-norm-en-conditiegetal-1" class="nav-link" data-scroll-target="#verband-met-rang-norm-en-conditiegetal-1">Verband met rang, norm en conditiegetal</a></li>
+  <li><a href="#kleinste-kwadratenoplossing" id="toc-kleinste-kwadratenoplossing" class="nav-link" data-scroll-target="#kleinste-kwadratenoplossing">Kleinste kwadratenoplossing</a></li>
+  <li><a href="#moore-penrose-pseudo-inverse" id="toc-moore-penrose-pseudo-inverse" class="nav-link" data-scroll-target="#moore-penrose-pseudo-inverse">Moore-Penrose pseudo-inverse</a></li>
+  <li><a href="#moore-penrose-pseudo-inverse-1" id="toc-moore-penrose-pseudo-inverse-1" class="nav-link" data-scroll-target="#moore-penrose-pseudo-inverse-1">Moore-Penrose pseudo-inverse</a></li>
+  <li><a href="#laagste-rang-benadering" id="toc-laagste-rang-benadering" class="nav-link" data-scroll-target="#laagste-rang-benadering">Laagste rang benadering</a></li>
+  <li><a href="#laagste-rang-benadering-in-python" id="toc-laagste-rang-benadering-in-python" class="nav-link" data-scroll-target="#laagste-rang-benadering-in-python">Laagste rang benadering: in Python</a></li>
+  <li><a href="#laagste-rang-benadering-voorbeeld" id="toc-laagste-rang-benadering-voorbeeld" class="nav-link" data-scroll-target="#laagste-rang-benadering-voorbeeld">Laagste rang benadering: voorbeeld</a></li>
+  <li><a href="#laagste-rang-benadering-singuliere-waarden" id="toc-laagste-rang-benadering-singuliere-waarden" class="nav-link" data-scroll-target="#laagste-rang-benadering-singuliere-waarden">Laagste rang benadering: singuliere waarden</a></li>
+  <li><a href="#polaire-decompositie-en-isometrische-benadering" id="toc-polaire-decompositie-en-isometrische-benadering" class="nav-link" data-scroll-target="#polaire-decompositie-en-isometrische-benadering">Polaire decompositie en isometrische benadering</a></li>
+  <li><a href="#isometrische-benadering" id="toc-isometrische-benadering" class="nav-link" data-scroll-target="#isometrische-benadering">Isometrische benadering</a></li>
   </ul></li>
   <li><a href="#bilineaire-en-kwadratische-vormen-herbekeken" id="toc-bilineaire-en-kwadratische-vormen-herbekeken" class="nav-link" data-scroll-target="#bilineaire-en-kwadratische-vormen-herbekeken">Bilineaire en kwadratische vormen herbekeken</a>
   <ul class="collapse">
   <li><a href="#matrixcongruentie" id="toc-matrixcongruentie" class="nav-link" data-scroll-target="#matrixcongruentie">Matrixcongruentie</a></li>
   <li><a href="#kwadratische-en-symmetrische-bilineaire-vormen" id="toc-kwadratische-en-symmetrische-bilineaire-vormen" class="nav-link" data-scroll-target="#kwadratische-en-symmetrische-bilineaire-vormen">Kwadratische en symmetrische bilineaire vormen</a></li>
-  <li><a href="#kwadratische-en-symmetrische-bilineaire-vormen-1" id="toc-kwadratische-en-symmetrische-bilineaire-vormen-1" class="nav-link" data-scroll-target="#kwadratische-en-symmetrische-bilineaire-vormen-1">Kwadratische en symmetrische bilineaire vormen</a></li>
-  <li><a href="#kwadratische-en-symmetrische-bilineaire-vormen-2" id="toc-kwadratische-en-symmetrische-bilineaire-vormen-2" class="nav-link" data-scroll-target="#kwadratische-en-symmetrische-bilineaire-vormen-2">Kwadratische en symmetrische bilineaire vormen</a></li>
-  <li><a href="#kwadratische-en-symmetrische-bilineaire-vormen-3" id="toc-kwadratische-en-symmetrische-bilineaire-vormen-3" class="nav-link" data-scroll-target="#kwadratische-en-symmetrische-bilineaire-vormen-3">Kwadratische en symmetrische bilineaire vormen</a></li>
-  </ul></li>
-  <li><a href="#singulaire-waardendecompositie-en-polaire-decompositie" id="toc-singulaire-waardendecompositie-en-polaire-decompositie" class="nav-link" data-scroll-target="#singulaire-waardendecompositie-en-polaire-decompositie">Singulaire waardendecompositie en polaire decompositie</a>
-  <ul class="collapse">
-  <li><a href="#unitaire-equivalentie" id="toc-unitaire-equivalentie" class="nav-link" data-scroll-target="#unitaire-equivalentie">Unitaire equivalentie</a></li>
-  <li><a href="#singuliere-waardendecompositie" id="toc-singuliere-waardendecompositie" class="nav-link" data-scroll-target="#singuliere-waardendecompositie">Singuliere waardendecompositie</a></li>
-  <li><a href="#singuliere-waardendecompositie-1" id="toc-singuliere-waardendecompositie-1" class="nav-link" data-scroll-target="#singuliere-waardendecompositie-1">Singuliere waardendecompositie</a></li>
-  <li><a href="#singuliere-waardendecompositie-eigenschappen" id="toc-singuliere-waardendecompositie-eigenschappen" class="nav-link" data-scroll-target="#singuliere-waardendecompositie-eigenschappen">Singuliere waardendecompositie: eigenschappen</a></li>
-  <li><a href="#singuliere-waardendecompositie-algoritme" id="toc-singuliere-waardendecompositie-algoritme" class="nav-link" data-scroll-target="#singuliere-waardendecompositie-algoritme">Singuliere waardendecompositie: Algoritme</a></li>
-  <li><a href="#verband-met-rang-norm-en-conditiegetal" id="toc-verband-met-rang-norm-en-conditiegetal" class="nav-link" data-scroll-target="#verband-met-rang-norm-en-conditiegetal">Verband met rang, norm en conditiegetal:</a></li>
-  <li><a href="#kleinste-kwadratenoplossing" id="toc-kleinste-kwadratenoplossing" class="nav-link" data-scroll-target="#kleinste-kwadratenoplossing">Kleinste kwadratenoplossing</a></li>
-  <li><a href="#laagste-rang-benadering" id="toc-laagste-rang-benadering" class="nav-link" data-scroll-target="#laagste-rang-benadering">Laagste rang benadering</a></li>
-  <li><a href="#polaire-decompositie-en-isometrische-benadering" id="toc-polaire-decompositie-en-isometrische-benadering" class="nav-link" data-scroll-target="#polaire-decompositie-en-isometrische-benadering">Polaire decompositie en isometrische benadering</a></li>
+  <li><a href="#kwadratische-en-symmetrische-bilineaire-vormen-signatuur" id="toc-kwadratische-en-symmetrische-bilineaire-vormen-signatuur" class="nav-link" data-scroll-target="#kwadratische-en-symmetrische-bilineaire-vormen-signatuur">Kwadratische en symmetrische bilineaire vormen: signatuur</a></li>
+  <li><a href="#kwadratische-en-symmetrische-bilineaire-vormen-traagheidswet" id="toc-kwadratische-en-symmetrische-bilineaire-vormen-traagheidswet" class="nav-link" data-scroll-target="#kwadratische-en-symmetrische-bilineaire-vormen-traagheidswet">Kwadratische en symmetrische bilineaire vormen: traagheidswet</a></li>
+  <li><a href="#kwadratische-en-symmetrische-bilineaire-vormen-algoritme" id="toc-kwadratische-en-symmetrische-bilineaire-vormen-algoritme" class="nav-link" data-scroll-target="#kwadratische-en-symmetrische-bilineaire-vormen-algoritme">Kwadratische en symmetrische bilineaire vormen: algoritme</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -297,71 +355,176 @@ window.Quarto = {
 <p>% RELATIONS </p>
 <p>$$</p>
 </div>
+<p><strong>Unitaire</strong> matrices bewaren lengtes en hoeken: <span class="math display">{\left\lVert{\mathsf{U}}{x}\right\rVert} = {\left\lVert{x}\right\rVert}, \quad {\left\langle{\mathsf{U}}{x},{\mathsf{U}}{y}\right\rangle} = {\left\langle{x},{y}\right\rangle}, \quad \kappa({\mathsf{U}}) = 1</span></p>
 <ul>
-<li>Overzicht van belangrijkste algoritmen, matrixdecomposities en toepassingen gebaseerd op unitaire transformaties</li>
-<li>Elementaire unitaire transformaties = bouwstenen
-<ul>
-<li>permutaties,</li>
-<li>Givens &amp; Householder transformaties</li>
-<li>discrete Fouriertransformatie</li>
-</ul></li>
-<li>QR decompositie</li>
+<li><span class="math inline">\Rightarrow</span> afrondingsfouten worden niet versterkt: <strong>stabiele algoritmen</strong></li>
+<li><span class="math inline">\Rightarrow</span> ze zetten een orthonormale basis om in een orthonormale basis</li>
 </ul>
+<p>Hoe ver kun je een matrix vereenvoudigen met <strong>enkel unitaire</strong> transformaties?</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 38%">
+<col style="width: 32%">
+<col style="width: 30%">
+</colgroup>
+<thead>
+<tr class="header">
+<th><strong>transformatie</strong></th>
+<th><strong>canonische vorm</strong></th>
+<th><strong>waarvoor</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>gelijkvormig: <span class="math inline">{\mathsf{V}}^{-1}{\mathsf{A}}{\mathsf{V}}</span></td>
+<td>Jordan (H3)</td>
+<td>numeriek instabiel</td>
+</tr>
+<tr class="even">
+<td>unitair gelijkvormig: <span class="math inline">{\mathsf{Z}}^{\mathsf{H}}{\mathsf{A}}{\mathsf{Z}}</span></td>
+<td>Schur: bovendriehoeks</td>
+<td>eigenwaarden</td>
+</tr>
+<tr class="odd">
+<td>unitair equivalent: <span class="math inline">{\mathsf{U}}^{\mathsf{H}}{\mathsf{A}}{\mathsf{V}}</span></td>
+<td>SVD: diagonaal, <span class="math inline">\sigma_i \geq 0</span></td>
+<td>rang, normen, benaderingen</td>
+</tr>
+</tbody>
+</table>
 </section>
 <section id="doel-van-dit-hoofdstuk-1" class="level2">
 <h2 class="anchored" data-anchor-id="doel-van-dit-hoofdstuk-1">Doel van dit hoofdstuk</h2>
+<p><strong>Algoritmen</strong>, <strong>decomposities</strong> en <strong>toepassingen</strong> van unitaire transformaties</p>
+<p><br></p>
 <ul>
-<li><p>Unitaire gelijkvormigheid: Schur triangulatie</p>
-<p>(basis voor eigenwaardeproblemen)</p></li>
-<li><p>Canonische vorm voor bilineaire vormen:</p>
-<p>traagheidswet van Sylvester</p></li>
-<li><p>Unitaire equivalentie: singuliere waardendecompositie</p>
+<li><strong>Elementaire unitaire transformaties</strong>
 <ul>
-<li>kleinste kwadratenoplossing / Moore-Penrose inverse</li>
-<li>normen voor matrices</li>
-<li>lage-rang benaderingen</li>
+<li>permutaties, discrete Fouriertransformatie, Givens, Householder</li>
 </ul></li>
+<li><strong>QR decompositie</strong></li>
+<li><strong>Unitaire gelijkvormigheid</strong>: Schur triangulatie
+<ul>
+<li>basis voor eigenwaardeproblemen</li>
+</ul></li>
+<li><strong>Unitaire equivalentie</strong>: singuliere waardendecompositie (SVD)
+<ul>
+<li>kleinste kwadraten, Moore-Penrose inverse</li>
+<li>matrixnormen, lage-rang benaderingen</li>
+</ul></li>
+<li><strong>Bilineaire vormen</strong>: traagheidswet van Sylvester</li>
 </ul>
+</section>
+<section id="terugblik-h2h5" class="level1">
+<h1>Terugblik: H2–H5</h1>
+<p>wat we nodig hebben</p>
+<section id="terugblik-rang-en-eigenwaarden-h2h3" class="level2">
+<h2 class="anchored" data-anchor-id="terugblik-rang-en-eigenwaarden-h2h3">Terugblik: rang en eigenwaarden (H2–H3)</h2>
+<ul>
+<li><p><strong>Rang</strong>: <span class="math inline">\mathop{\mathrm{rank}}({\mathsf{A}}) = \mathop{\mathrm{dim}}\mathop{\mathrm{im}}({\mathsf{A}})</span></p>
+<ul>
+<li>rang-nulliteit: <span class="math inline">n = \mathop{\mathrm{rank}}({\mathsf{A}}) + \mathop{\mathrm{dim}}\mathop{\mathrm{ker}}({\mathsf{A}})</span> <span style="color: grey; font-size: 80%">(St 2.11)</span></li>
+</ul></li>
+<li><p><strong>Gelijkvormig</strong>: <span class="math inline">{\mathsf{T}}^{-1}{\mathsf{A}}{\mathsf{T}}</span> heeft dezelfde eigenwaarden <span style="color: grey; font-size: 80%">(Def 2.17)</span></p></li>
+<li><p><strong>Multipliciteit</strong> van eigenwaarde <span class="math inline">\lambda</span>:</p>
+<ul>
+<li>algebraïsch: <span class="math inline">q_\lambda</span> = multipliciteit als nulpunt van <span class="math inline">\det({\mathsf{A}} - \lambda{\mathsf{I}})</span></li>
+<li>meetkundig: <span class="math inline">r_\lambda = \mathop{\mathrm{dim}}\mathop{\mathrm{ker}}({\mathsf{A}} - \lambda{\mathsf{I}}) \leq q_\lambda</span></li>
+<li>diagonaliseerbaar <span class="math inline">\Leftrightarrow</span> <span class="math inline">r_\lambda = q_\lambda</span> voor alle <span class="math inline">\lambda</span></li>
+</ul></li>
+<li><p><span class="math inline">{\mathsf{A}}{\mathsf{B}}</span> en <span class="math inline">{\mathsf{B}}{\mathsf{A}}</span> hebben dezelfde eigenwaarden <span class="math inline">\neq 0</span> <span style="color: grey; font-size: 80%">(Prop 3.11)</span></p></li>
+</ul>
+</section>
+<section id="terugblik-normen-h4" class="level2 scrollable">
+<h2 class="scrollable anchored" data-anchor-id="terugblik-normen-h4">Terugblik: normen (H4)</h2>
+<ul>
+<li><strong>Geïnduceerde norm</strong> <span style="color: grey; font-size: 80%">(Prop 4.18)</span> <span class="math display">{\left\lVert{\mathsf{A}}\right\rVert} = \sup_{{x}\neq 0} \frac{{\left\lVert{\mathsf{A}}{x}\right\rVert}}{{\left\lVert{x}\right\rVert}} \geq \rho_{{\mathsf{A}}}</span></li>
+<li><strong>Gelfand</strong> <span style="color: grey; font-size: 80%">(Prop 4.19)</span> <span class="math display">\rho_{{\mathsf{A}}} = \lim_{k \to \infty} {\left\lVert{\mathsf{A}}^k\right\rVert}^{1/k}</span></li>
+<li><strong>Frobenius</strong> <span style="color: grey; font-size: 80%">(Prop 4.17)</span> <span class="math display">{\left\lVert{\mathsf{A}}\right\rVert}_{\text{F}} = \sqrt{\mathop{\mathrm{tr}}({\mathsf{A}}^{\mathsf{H}}{\mathsf{A}})}</span></li>
+<li><strong>Conditiegetal</strong>: versterkt relatieve fouten <span class="math display">\kappa({\mathsf{A}}) = {\left\lVert{\mathsf{A}}\right\rVert}{\left\lVert{\mathsf{A}}^{-1}\right\rVert}, \qquad \frac{{\left\lVert\Delta{x}\right\rVert}}{{\left\lVert{x}\right\rVert}} \leq \kappa({\mathsf{A}})\frac{{\left\lVert\Delta{y}\right\rVert}}{{\left\lVert{y}\right\rVert}}</span></li>
+</ul>
+</section>
+<section id="terugblik-inwendig-product-h5" class="level2">
+<h2 class="anchored" data-anchor-id="terugblik-inwendig-product-h5">Terugblik: inwendig product (H5)</h2>
+<ul>
+<li><p><strong>Isometrie</strong>: <span class="math inline">{\mathsf{Q}}^{\mathsf{H}}{\mathsf{Q}} = {\mathsf{I}}</span> <span style="color: grey; font-size: 80%">(Prop 5.31)</span></p></li>
+<li><p><strong>Unitair</strong>: ook <span class="math inline">{\mathsf{U}}{\mathsf{U}}^{\mathsf{H}}= {\mathsf{I}}</span> <span style="color: grey; font-size: 80%">(Prop 5.32)</span></p></li>
+<li><p><strong>Normaal</strong>: <span class="math inline">{\mathsf{A}}^{\mathsf{H}}{\mathsf{A}} = {\mathsf{A}}{\mathsf{A}}^{\mathsf{H}}</span>, bv. hermitisch of unitair <span style="color: grey; font-size: 80%">(Def 5.24)</span></p>
+<ul>
+<li>eigenvectoren bij verschillende eigenwaarden zijn orthogonaal <span style="color: grey; font-size: 80%">(Prop 5.35)</span></li>
+<li><span class="math inline">{\left\lVert{\mathsf{A}}\right\rVert}_2 = \rho_{{\mathsf{A}}}</span> <span style="color: grey; font-size: 80%">(Prop 5.37)</span></li>
+</ul></li>
+<li><p><strong>QR via Gram-Schmidt</strong>: <span class="math inline">{\mathsf{A}} = {\mathsf{Q}}{\mathsf{R}}</span>, <span class="math inline">{\mathsf{Q}}^{\mathsf{H}}{\mathsf{Q}} = {\mathsf{I}}</span>, <span class="math inline">{\mathsf{R}}</span> bovendriehoeks <span style="color: grey; font-size: 80%">(Def 5.21)</span></p></li>
+<li><p><strong>Kleinste kwadraten</strong>, <span class="math inline">{\mathsf{A}}</span> met volle kolomrang <span style="color: grey; font-size: 80%">(Def 5.26–5.27)</span> <span class="math display">{x}^\ast = \mathop{\mathrm{arg\ min}}_{{x}} {\left\lVert{\mathsf{A}}{x}- {y}\right\rVert}_2 = {\mathsf{R}}^{-1}{\mathsf{Q}}^{\mathsf{H}}{y}= {\mathsf{A}}^+{y}</span></p></li>
+</ul>
+</section>
 </section>
 <section id="unitaire-en-orthogonale-groep" class="level1">
 <h1>Unitaire en orthogonale groep</h1>
 <section id="unitaire-groep-en-speciaal-unitaire-groep" class="level2 smaller scrollable">
 <h2 class="smaller scrollable anchored" data-anchor-id="unitaire-groep-en-speciaal-unitaire-groep">Unitaire groep en speciaal unitaire groep</h2>
+<div class="vfr-box vfr-definitie">
+<p><span class="vfr-box-label"><strong>Definitie 7.1.</strong></span> <strong>Unitaire groep</strong>: <span class="math display">\boxed{\mathop{\mathrm{U}}(n) = \{{\mathsf{U}}\in{\mathbb{C}}^{n\times n} \mid {\mathsf{U}}^{\mathsf{H}}{\mathsf{U}} = {\mathsf{I}}_n = {\mathsf{U}}{\mathsf{U}}^{\mathsf{H}}\}}</span></p>
+</div>
 <ul>
-<li><p>unitaire groep: <span class="math inline">\mathop{\mathrm{U}}(n) = \{{\mathsf{U}}\in{\mathbb{C}}^{n\times n} | {\mathsf{U}}^{\mathsf{H}}{\mathsf{U}} = {\mathsf{I}}_n = {\mathsf{U}}{\mathsf{U}}^{\mathsf{H}}\}</span></p>
+<li><span class="math inline">{\left\lvert\det({\mathsf{U}})\right\rvert} = 1 \implies \det({\mathsf{U}}) \in \mathop{\mathrm{U}}(1)</span></li>
+<li>Deelgroep: <strong>speciaal unitaire groep</strong> <span class="math inline">\mathop{\mathrm{SU}}(n) = \{{\mathsf{U}}\in \mathop{\mathrm{U}}(n) \mid \det({\mathsf{U}})=1\}</span></li>
+</ul>
+<div class="vfr-box vfr-opmerking">
+<p><span class="vfr-box-label"><strong>Opmerking 7.1.</strong></span> <span class="math inline">\mathop{\mathrm{U}}(n)</span> is een gesloten en begrensde deelverzameling van <span class="math inline">{\mathbb{C}}^{n \times n}</span> (geen deelruimte)<br>
+<span class="math inline">\Rightarrow</span> unitaire matrices kunnen niet divergeren: belangrijk voor numerieke stabiliteit</p>
+</div>
+<div class="vfr-box vfr-opmerking">
+<p><span class="vfr-box-label"><strong>Opmerking 7.2.</strong></span> <span class="math inline">{\mathsf{U}}</span> is normaal <span class="math inline">\Rightarrow</span> diagonaliseerbaar met orthonormale eigenvectoren;<br>
+<span class="math inline">{\mathsf{U}}\boldsymbol{v} = \lambda\boldsymbol{v}</span> <span class="math inline">\Rightarrow</span> <span class="math inline">{\left\lvert\lambda\right\rvert} = 1</span>, dus <span class="math inline">\lambda \in \mathop{\mathrm{U}}(1)</span></p>
+</div>
+</section>
+<section id="unitaire-groep-en-speciaal-unitaire-groep-1" class="level2 smaller scrollable">
+<h2 class="smaller scrollable anchored" data-anchor-id="unitaire-groep-en-speciaal-unitaire-groep-1">Unitaire groep en speciaal unitaire groep</h2>
+<p><strong>Exponentiële parametrisatie</strong>: <span class="math display">\boxed{{\mathsf{U}}(t) = \exp(t{\mathsf{A}}) \in \mathop{\mathrm{U}}(n) \quad\Leftrightarrow\quad {\mathsf{A}} = -{\mathsf{A}}^{\mathsf{H}}}</span></p>
 <ul>
-<li><p>compacte deelverzameling van <span class="math inline">{\mathbb{C}}^{n \times n}</span> (geen deelruimte)</p>
-<p><span class="math inline">\Rightarrow</span> belangrijk voor numerieke stabiliteit</p></li>
-<li><p><span class="math inline">{\left\lvert\det({\mathsf{U}})\right\rvert} = 1 \implies \det({\mathsf{U}}) \in \mathop{\mathrm{U}}(1)</span></p></li>
-<li><p>deelgroep: <span class="math inline">\mathop{\mathrm{SU}}(n) = \{{\mathsf{U}}\in \mathop{\mathrm{U}}(n) | \det({\mathsf{U}})=1\}</span></p></li>
-<li><p><span class="math inline">{\mathsf{U}}(t) = \exp(t{\mathsf{A}}) \in \mathop{\mathrm{U}}(n) \iff {\mathsf{A}} = -{\mathsf{A}}^{\mathsf{H}}</span></p>
-<ul>
-<li><span class="math inline">\frac{{\mathrm{d}}\ }{{\mathrm{d}}t}{\mathsf{U}}(t) = {\mathsf{A}}{\mathsf{U}}(t)</span> met <span class="math inline">{\mathsf{U}}(0) = {\mathsf{I}}_n</span></li>
+<li>oplossing van <span class="math inline">\frac{{\mathrm{d}}\ }{{\mathrm{d}}t}{\mathsf{U}}(t) = {\mathsf{A}}{\mathsf{U}}(t)</span> met <span class="math inline">{\mathsf{U}}(0) = {\mathsf{I}}_n</span></li>
 <li>vaak <span class="math inline">{\mathsf{A}} = {\mathrm{i}}{\mathsf{H}}</span> met <span class="math inline">{\mathsf{H}} = {\mathsf{H}}^{\mathsf{H}}</span></li>
 <li><span class="math inline">{\mathsf{A}}</span> of <span class="math inline">{\mathsf{H}}</span> geparameteriseerd door <span class="math inline">n^2</span> reële getallen</li>
 <li><span class="math inline">{\mathsf{U}}(t) \in \mathop{\mathrm{SU}}(n) \iff \mathop{\mathrm{tr}}({\mathsf{A}})=0</span>: <span class="math inline">n^2-1</span> reële getallen</li>
-</ul></li>
-<li><p><span class="math inline">\mathop{\mathrm{U}}(n)</span> is samenhangend:</p>
+</ul>
+<p><br></p>
+<p><strong><span class="math inline">\mathop{\mathrm{U}}(n)</span> is samenhangend</strong>: elke twee elementen verbonden door een continu pad in <span class="math inline">\mathop{\mathrm{U}}(n)</span></p>
 <ul>
-<li>continu pad <span class="math inline">{\mathsf{U}}(t)=\exp(t {\mathsf{A}})</span> verbind <span class="math inline">{\mathsf{U}}(0)={\mathsf{I}}_n</span> met <span class="math inline">{\mathsf{U}}(1)= {\mathsf{U}}</span>, via keuze <span class="math inline">{\mathsf{A}}=\log({\mathsf{U}})</span> (bestaat steeds, maar niet uniek)</li>
-</ul></li>
-</ul></li>
+<li>continu pad <span class="math inline">{\mathsf{U}}(t)=\exp(t {\mathsf{A}})</span> verbindt <span class="math inline">{\mathsf{U}}(0)={\mathsf{I}}_n</span> met <span class="math inline">{\mathsf{U}}(1)= {\mathsf{U}}</span></li>
+<li>via de keuze <span class="math inline">{\mathsf{A}}=\log({\mathsf{U}})</span>: bestaat steeds, maar niet uniek</li>
 </ul>
 </section>
 <section id="orthogonale-groep-en-speciaal-orthogonale-groep" class="level2 smaller">
 <h2 class="smaller anchored" data-anchor-id="orthogonale-groep-en-speciaal-orthogonale-groep">Orthogonale groep en speciaal orthogonale groep</h2>
+<div class="vfr-box vfr-definitie">
+<p><span class="vfr-box-label"><strong>Definitie 7.2.</strong></span> <strong>Orthogonale groep</strong>: <span class="math display">\boxed{\mathop{\mathrm{O}}(n) = \{{\mathsf{O}}\in{\mathbb{R}}^{n\times n} \mid {\mathsf{O}}^{\mathsf{T}}{\mathsf{O}} = {\mathsf{I}}_n = {\mathsf{O}}{\mathsf{O}}^{\mathsf{T}}\} = \mathop{\mathrm{U}}(n) \cap {\mathbb{R}}^{n \times n}}</span></p>
+</div>
 <ul>
-<li><p>orthogonale groep: <span class="math inline">\mathop{\mathrm{O}}(n) = \{{\mathsf{O}}\in{\mathbb{R}}^{n\times n} | {\mathsf{O}}^{\mathsf{T}}{\mathsf{O}} = {\mathsf{I}}_n = {\mathsf{O}}{\mathsf{O}}^{\mathsf{H}}\} = \mathop{\mathrm{U}}(n) \cap {\mathbb{R}}^{n \times n}</span></p>
-<ul>
-<li><span class="math inline">\det({\mathsf{O}}) = \pm 1 \implies \mathop{\mathrm{O}}(n)</span> niet samenhangend</li>
-<li>deelgroep: <span class="math inline">\mathop{\mathrm{SO}}(n) = \{{\mathsf{O}}\in \mathop{\mathrm{O}}(n) | \det({\mathsf{O}})=1\}</span>: “rotaties”</li>
-<li><span class="math inline">{\mathsf{O}}(t) = \exp(t{\mathsf{A}})</span> met <span class="math inline">{\mathsf{A}} = -{\mathsf{A}}^{\mathsf{T}}</span> <span class="math inline">\implies {\mathsf{O}}(t) \in \mathop{\mathrm{SO}}(n)</span>
-<ul>
-<li><span class="math inline">{\mathsf{O}} \in \mathop{\mathrm{O}}(n)</span> met <span class="math inline">\det({\mathsf{O}})=-1</span> kan niet worden verbonden via continu pad met <span class="math inline">{\mathsf{I}}_n</span>, wel met elke andere orthogonale matrix <span class="math inline">{\mathsf{\tilde{O}}}</span> met <span class="math inline">\det({\mathsf{\tilde{O}}})=-1</span></li>
-<li><span class="math inline">\det(-{\mathsf{I}}_n)= (-1)^n</span></li>
-</ul></li>
-</ul></li>
+<li>Deelgroep: <strong>speciaal orthogonale groep</strong> <span class="math inline">\mathop{\mathrm{SO}}(n) = \{{\mathsf{O}}\in \mathop{\mathrm{O}}(n) \mid \det({\mathsf{O}})=1\}</span>: “rotaties”</li>
 </ul>
+<div class="vfr-box vfr-opmerking">
+<p><span class="vfr-box-label"><strong>Opmerking 7.3.</strong></span> <span class="math inline">\mathop{\mathrm{O}}(n)</span> is gesloten en begrensd, maar <span class="math inline">\det({\mathsf{O}}) = \pm 1</span> <span class="math inline">\implies</span> <span class="math inline">\mathop{\mathrm{O}}(n)</span> niet samenhangend</p>
+</div>
+<div class="vfr-box vfr-opmerking">
+<p><span class="vfr-box-label"><strong>Opmerking 7.4.</strong></span> <span class="math inline">{\mathsf{O}}(t) = \exp(t{\mathsf{A}})</span> met <span class="math inline">{\mathsf{A}} = -{\mathsf{A}}^{\mathsf{T}}</span> <span class="math inline">\implies {\mathsf{O}}(t) \in \mathop{\mathrm{SO}}(n)</span>:<br>
+<span class="math inline">\mathop{\mathrm{SO}}(n)</span> is het samenhangende deel dat <span class="math inline">{\mathsf{I}}_n</span> bevat</p>
+</div>
+</section>
+<section id="orthogonale-groep-en-speciaal-orthogonale-groep-1" class="level2 smaller">
+<h2 class="smaller anchored" data-anchor-id="orthogonale-groep-en-speciaal-orthogonale-groep-1">Orthogonale groep en speciaal orthogonale groep</h2>
+<div class="vfr-box vfr-opmerking">
+<p><span class="vfr-box-label"><strong>Opmerking 7.5.</strong></span> <span class="math inline">\det({\mathsf{O}}) = -1</span>: rotatie met een spiegeling erbij, bv.<br>
+<span class="math inline">{\mathsf{O}} = \mathrm{diag}(-1, +1, \ldots, +1)</span><br>
+niet via een continu pad verbonden met <span class="math inline">{\mathsf{I}}_n</span>, wel met elke andere <span class="math inline">\tilde{{\mathsf{O}}}</span> met <span class="math inline">\det(\tilde{{\mathsf{O}}})=-1</span></p>
+</div>
+<div class="vfr-box vfr-opmerking">
+<p><span class="vfr-box-label"><strong>Opmerking 7.6.</strong></span> <span class="math inline">\det(-{\mathsf{I}}_n)= (-1)^n</span>: puntspiegeling <span class="math inline">-{\mathsf{I}}_n</span> is een rotatie als <span class="math inline">n</span> even is</p>
+</div>
+<div style="text-align: center">
+<p><img src="figures/fig-orthogonal-group.svg" height="200"></p>
+<p><span style="color: grey; font-size: 70%">werking op het vlak: geen continue rotatie brengt F naar zijn spiegelbeeld</span></p>
+</div>
 </section>
 </section>
 <section id="elementaire-unitaire-transformaties" class="level1">
@@ -369,464 +532,740 @@ window.Quarto = {
 <section id="permutatiematrices" class="level2">
 <h2 class="anchored" data-anchor-id="permutatiematrices">Permutatiematrices</h2>
 <p>Permutatie van <span class="math inline">n</span> elementen: <span class="math inline">\sigma \in S_n</span></p>
-<p>Permutatiematrix <span class="math inline">{\mathsf{P}}(\sigma)</span>: <span class="math inline">({\mathsf{P}}(\sigma))^i_{\ j} = \delta^i_{\sigma(j)}</span></p>
-<p><span class="math inline">\Rightarrow</span> <span class="math inline">{\mathsf{P}}(\sigma) \in \mathop{\mathrm{O}}(n)</span>: <span class="math inline">{\mathsf{P}}(\sigma)^{\mathsf{T}}= {\mathsf{P}}(\sigma)^{-1} = {\mathsf{P}}(\sigma^{-1})</span></p>
-<p>Elke orthogonale/unitaire matrix met enkel 0 en 1 als elementen is een permutatiematrix (exact één element 1 in elke rij en elke kolom)</p>
-</section>
-<section id="givenstransformatie" class="level2 smaller scrollable">
-<h2 class="smaller scrollable anchored" data-anchor-id="givenstransformatie">Givenstransformatie</h2>
-<p><span class="math inline">{\mathsf{G}} \in {\mathbb{F}}^{n \times n}</span> met</p>
-<p><span class="math display">\begin{align}
-    G^k_{\ k} &amp;= 1\ \text{for}\ k\neq i, k\neq j, &amp; G^{i}_{\ i} &amp;= G^j_{\ j} = c,&amp; G^{j}_{\ i} &amp;= {\overline{s}}, &amp;G^{i}_{\ j} &amp;= -s
-\end{align}</span></p>
-<p>en <span class="math inline">1 \leq i &lt; j \leq n</span> en <span class="math inline">{\left\lvert c\right\rvert}^2 + {\left\lvert s\right\rvert}^2 = 1</span></p>
-<ul>
-<li><p>Interpretatie <span class="math inline">{\mathbb{F}}={\mathbb{R}}</span>:</p>
-<p>rotatie in het vlak opgespannen door coördinaatassen <span class="math inline">i</span> en <span class="math inline">j</span></p></li>
-<li><p>Voornaamste toepassing:</p>
-<p>basistransformatie zodat een specifiek element uit een vector nul wordt</p>
-<p>voor rij <span class="math inline">i</span> en rij <span class="math inline">j</span> krijgen we <span class="math display">\begin{align}
-\begin{bmatrix} a^i = a\\ a^j = b \end{bmatrix} = \begin{bmatrix} c &amp; -s \\ {\overline{s}} &amp; c \end{bmatrix} \begin{bmatrix} r \\ 0 \end{bmatrix}
-\end{align}</span></p>
-<p>met bijvoorbeeld (niet volledig uniek: hier keuze <span class="math inline">c &gt; 0</span>) <span class="math display">\begin{align}
-c &amp;= \frac{{\left\lvert a\right\rvert}}{\sqrt{{\left\lvert a\right\rvert}^2+{\left\lvert b\right\rvert}^2}}, &amp;s &amp;= \frac{a}{{\left\lvert a\right\rvert}} \frac{ {\overline{b}}}{\sqrt{{\left\lvert a\right\rvert}^2+{\left\lvert b\right\rvert}^2}}, &amp;r &amp;= \frac{a}{{\left\lvert a\right\rvert}} \sqrt{{\left\lvert a\right\rvert}^2+{\left\lvert b\right\rvert}^2}
-\end{align}</span></p>
-<p>en <span class="math inline">r = \frac{a}{{\left\lvert a\right\rvert}} \sqrt{{\left\lvert a\right\rvert}^2+{\left\lvert b\right\rvert}^2}</span></p></li>
-</ul>
-</section>
-<section id="householder-transformatie" class="level2 smaller scrollable">
-<h2 class="smaller scrollable anchored" data-anchor-id="householder-transformatie">Householder transformatie</h2>
-<p><span class="math inline">{\mathsf{H}}\in{\mathbb{F}}^{n \times n}</span> op basis van <span class="math inline">\boldsymbol{v} \in {\mathbb{F}}^n</span>:</p>
-<p><span class="math display">{\mathsf{H}} = {\mathsf{I}}_n - \frac{2}{\boldsymbol{v}^{\mathsf{H}}\boldsymbol{v}}\boldsymbol{v}\boldsymbol{v}^{\mathsf{H}}</span></p>
-<p><span class="math inline">\Rightarrow {\mathsf{H}}^{\mathsf{H}}= {\mathsf{H}}^{-1} = {\mathsf{H}}</span></p>
-<ul>
-<li><p>Interpretatie voor <span class="math inline">{\mathbb{F}}= {\mathbb{R}}</span>:</p>
-<p>spiegeling omheen het (hyper)vlak (codimensie 1) loodrecht op <span class="math inline">\boldsymbol{v}</span> (<span class="math inline">\det{{\mathsf{H}}}=-1</span>)</p></li>
-<li><p>Voornaamste toepassing:</p>
-<p>basistransformatie zodat op één na alle elementen uit een vector <span class="math inline">\boldsymbol{w}=(w^1,\ldots,w^n)</span> op nul worden afgebeeld</p>
-<p><span class="math display">{\mathsf{H}} \boldsymbol{w} = \boldsymbol{w} - \frac{2\boldsymbol{v}^{\mathsf{H}}\boldsymbol{w}}{\boldsymbol{v}^{\mathsf{H}}\boldsymbol{v}} \boldsymbol{v} = {\mathrm{e}}^{{\mathrm{i}}\theta} {\left\lVert\boldsymbol{w}\right\rVert} \boldsymbol{e}_1\quad\text{(norm moet behouden blijven)}</span></p>
-<p>Oplossing (niet uniek): <span class="math inline">\boldsymbol{v} = \boldsymbol{w} + \alpha \boldsymbol{e}_1</span> met <span class="math inline">\alpha =\pm \frac{w^1}{{\left\lvert w^1\right\rvert}}{\left\lVert w\right\rVert}</span></p>
-<p><span class="math inline">\Rightarrow {\mathsf{H}}\boldsymbol{w} = \mp \frac{w^1}{{\left\lvert w^1\right\rvert}}{\left\lVert w\right\rVert} \boldsymbol{e}_1</span></p></li>
-</ul>
+<div class="vfr-box vfr-definitie">
+<p><span class="vfr-box-label"><strong>Definitie 7.3.</strong></span> <strong>Permutatiematrix</strong> <span class="math inline">{\mathsf{P}}(\sigma)</span>: <span class="math inline">({\mathsf{P}}(\sigma))^i_{\ j} = \delta^i_{\sigma(j)}</span></p>
+</div>
+<div class="vfr-box vfr-opmerking">
+<p><span class="vfr-box-label"><strong>Opmerking 7.7.</strong></span> <span class="math inline">\Rightarrow</span> <span class="math inline">{\mathsf{P}}(\sigma) \in \mathop{\mathrm{O}}(n)</span>: <span class="math inline">{\mathsf{P}}(\sigma)^{\mathsf{T}}= {\mathsf{P}}(\sigma)^{-1} = {\mathsf{P}}(\sigma^{-1})</span></p>
+</div>
+<div class="vfr-box vfr-opmerking">
+<p><span class="vfr-box-label"><strong>Opmerking 7.8.</strong></span> Elke orthogonale/unitaire matrix met enkel 0 en 1 als elementen is een permutatiematrix (exact één element 1 in elke rij en elke kolom)</p>
+</div>
+<div class="vfr-box vfr-opmerking">
+<p><span class="vfr-box-label"><strong>Opmerking 7.9.</strong></span> <strong>Transpositie</strong> <span class="math inline">\tau_{ij}</span>: verwisselt <span class="math inline">i</span> en <span class="math inline">j</span>, de rest blijft staan<br>
+<span class="math inline">{\mathsf{P}}(\tau_{ij}) = {\mathsf{I}}_n</span> met rijen <span class="math inline">i</span> en <span class="math inline">j</span> verwisseld <span class="math inline">\Rightarrow \det {\mathsf{P}}(\tau_{ij}) = -1</span><br>
+Elke <span class="math inline">\sigma = \tau_1 \circ \cdots \circ \tau_k</span> <span class="math inline">\Rightarrow</span> <span class="math inline">\det {\mathsf{P}}(\sigma) = (-1)^k = \mathop{\mathrm{sgn}}(\sigma)</span></p>
+</div>
 </section>
 <section id="discrete-fouriertransformatie" class="level2 smaller scrollable">
 <h2 class="smaller scrollable anchored" data-anchor-id="discrete-fouriertransformatie">Discrete Fouriertransformatie</h2>
 <p>Functies <span class="math inline">f:\{0,\ldots,n-1\} \to {\mathbb{C}}</span> <span class="math inline">\quad(\eqsim (f_0,f_1,\ldots,f_{n-1})=\boldsymbol{f} \in {\mathbb{C}}^n)</span></p>
+<div class="vfr-box vfr-definitie">
+<p><span class="vfr-box-label"><strong>Definitie 7.4.</strong></span> De <strong>discrete Fouriertransformatie</strong>: <span class="math display">\boxed{F_k = \frac{1}{\sqrt{n}}\sum_{j=0}^{n-1} f_j \exp\left(-{\mathrm{i}}\frac{2\pi}{n}j k \right),\quad \forall k=0,\ldots,n-1}</span></p>
+<p>met evenzeer <span class="math inline">\boldsymbol{F} = (F_0,\ldots,F_{n-1}) \in {\mathbb{C}}^n</span></p>
+</div>
+<div class="vfr-box vfr-propositie">
+<p><span class="vfr-box-label"><strong>Propositie 7.1.</strong></span> Inverse transformatie: <span class="math display">f_j = \frac{1}{\sqrt{n}}\sum_{k=0}^{n-1} F_k \exp\left(+{\mathrm{i}}\frac{2\pi}{n}j k \right)</span></p>
+</div>
+</section>
+<section id="discrete-fouriertransformatie-1" class="level2 smaller scrollable">
+<h2 class="smaller scrollable anchored" data-anchor-id="discrete-fouriertransformatie-1">Discrete Fouriertransformatie</h2>
+<div class="vfr-box vfr-opmerking">
+<p><span class="vfr-box-label"><strong>Opmerking 7.10.</strong></span> <span class="math inline">\boldsymbol{F} = {\mathsf{U}} \boldsymbol{f}</span> en <span class="math inline">\boldsymbol{f} = {\mathsf{U}}^{\mathsf{H}}\boldsymbol{F}</span> met dus <span class="math inline">{\mathsf{U}} \in \mathop{\mathrm{U}}(n)</span>, gegeven door <span class="math display">  {\mathsf{U}} = \frac{1}{\sqrt{n}}\begin{bmatrix}
+        1 &amp; 1  &amp;1 &amp;\dots &amp; 1\\
+        1 &amp; \omega  &amp; \omega^2 &amp; \dots &amp; \omega^{n-1}\\
+        1 &amp; \omega^2  &amp; \omega^4 &amp; \dots &amp; \omega^{2(n-1)}\\
+        \vdots &amp;  &amp; &amp; \ddots &amp; \vdots\\
+        1 &amp; \omega^{n-1} &amp; \omega^{2(n-1)} &amp; \dots &amp;  \omega^{(n-1)^2}
+    \end{bmatrix}, \qquad \omega = {\mathrm{e}}^{-{\mathrm{i}}2\pi/n}</span></p>
+</div>
+<div class="vfr-box vfr-opmerking">
+<p><span class="vfr-box-label"><strong>Opmerking 7.11.</strong></span> <span class="math inline">f_j</span> en <span class="math inline">F_k</span> zijn natuurlijk periodiek met periode <span class="math inline">n</span>: <span class="math display">f_{j+n} = f_j, \qquad F_{k+n} = F_k</span> <span class="math inline">\Rightarrow</span> sommen mogen over elke <span class="math inline">n</span> opeenvolgende gehele getallen lopen</p>
+</div>
+</section>
+<section id="discrete-fouriertransformatie-2" class="level2 smaller scrollable">
+<h2 class="smaller scrollable anchored" data-anchor-id="discrete-fouriertransformatie-2">Discrete Fouriertransformatie</h2>
+<div class="vfr-box vfr-opmerking">
+<p><span class="vfr-box-label"><strong>Opmerking 7.12.</strong></span> Praktisch algoritme: <strong>fast Fourier transform</strong> (zie Py4Sci):<br>
+complexiteit van <span class="math inline">\boldsymbol{F} = {\mathsf{U}}\boldsymbol{f}</span> van <span class="math inline">\mathop{\mathrm{\mathscr{O}}}(n^2)</span> naar <span class="math inline">\mathop{\mathrm{\mathscr{O}}}(n \log_2 n)</span></p>
+</div>
+<div class="columns">
+<div class="column" style="width:62%;">
 <ul>
-<li><p>Discrete Fouriertransformatie: <span class="math display">F_k = \frac{1}{\sqrt{n}}\sum_{j=0}^{n-1} f_j \exp\left(-{\mathrm{i}}\frac{2\pi}{n}j k \right),\quad \forall k=0,\ldots,n-1</span></p>
-<p>met evenzeer <span class="math inline">\boldsymbol{F} = (F_0,\ldots,F_{n-1}) \in {\mathbb{C}}^n</span></p></li>
-<li><p>Stelling: inverse transformatie <span class="math inline">f_j = \frac{1}{\sqrt{n}}\sum_{k=0}^{n-1} F_k \exp\left(+{\mathrm{i}}\frac{2\pi}{n}j k \right)</span></p></li>
-<li><p><span class="math inline">\boldsymbol{F} = {\mathsf{U}} \boldsymbol{f}</span> en <span class="math inline">\boldsymbol{f} = {\mathsf{U}}^{\mathsf{H}}\boldsymbol{F}</span> met dus <span class="math inline">{\mathsf{U}} \in \mathop{\mathrm{U}}(n)</span>; <span class="math inline">{\mathsf{U}}</span> gegeven door (<span class="math inline">\omega = {\mathrm{e}}^{-{\mathrm{i}}\frac{2\pi}{n}}</span>):</p>
-<p><span class="math display">    {\mathsf{U}} = \frac{1}{\sqrt{n}}\begin{bmatrix}
-      1 &amp; 1  &amp;1 &amp;\dots &amp; 1\\
-      1 &amp; \omega  &amp; \omega^2 &amp; \dots &amp; \omega^{n-1}\\
-      1 &amp; \omega^2  &amp; \omega^4 &amp; \dots &amp; \omega^{2(n-1)}\\
-      \vdots &amp;  &amp; &amp; \ddots &amp; \vdots\\
-      1 &amp; \omega^{n-1} &amp; \omega^{2(n-1)} &amp; \dots &amp;  \omega^{(n-1)^2}
-  \end{bmatrix}</span></p></li>
+<li><strong>Vlinder</strong>: <span class="math inline">(a, b) \mapsto (a + \omega^k b,\ a - \omega^k b)</span></li>
+<li><span class="math inline">\log_2 n</span> stappen van <span class="math inline">n/2</span> vlinders</li>
+<li>bv. <span class="math inline">n = 2^{20}</span>: <span class="math inline">n^2 \approx 10^{12}</span>, <span class="math inline">n \log_2 n \approx 2 \cdot 10^7</span></li>
+</ul>
+</div><div class="column" style="width:38%;">
+<div style="text-align: center">
+<p><img src="figures/fig-fft-butterfly.svg" class="img-fluid" style="width:100.0%"></p>
+<p><span style="color: grey; font-size: 70%"><span class="math inline">n = 8</span>, input in bit-omgekeerde volgorde</span></p>
+</div>
+</div>
+</div>
+<ul>
+<li><strong>Toepassingen</strong>:
+<ul>
+<li>relaties met “andere Fouriertransformaties” (zie later)</li>
+<li>diagonalisatie van <strong>circulante matrices</strong> (volgende slide)</li>
+</ul></li>
 </ul>
 </section>
-<section id="discrete-fouriertransformatie-1" class="level2 smaller">
-<h2 class="smaller anchored" data-anchor-id="discrete-fouriertransformatie-1">Discrete Fouriertransformatie</h2>
+<section id="discrete-fouriertransformatie-circulante-matrices" class="level2">
+<h2 class="anchored" data-anchor-id="discrete-fouriertransformatie-circulante-matrices">Discrete Fouriertransformatie: circulante matrices</h2>
+<div class="vfr-box vfr-definitie">
+<p><span class="vfr-box-label"><strong>Definitie 7.5.</strong></span> <span class="math inline">{\mathsf{A}}\in {\mathbb{C}}^{n \times n}</span> is <strong>circulant</strong> als <span class="math inline">A^i_{\ j} = f_{(j-i)\bmod n}</span></p>
+</div>
+<div class="vfr-box vfr-opmerking">
+<p><span class="vfr-box-label"><strong>Opmerking 7.13.</strong></span> Fysisch: circulant = ring (periodieke randvoorwaarden) = translatie-invariant</p>
+</div>
+<div class="vfr-box vfr-propositie">
+<p><span class="vfr-box-label"><strong>Propositie 7.2.</strong></span> Met <span class="math inline">\boldsymbol{u}_k</span> de <span class="math inline">k</span>de kolom uit <span class="math inline">{\mathsf{U}}</span>: <span class="math inline">(\boldsymbol{u}_k)^j = n^{-1/2} \omega^{kj}</span><br>
+<span class="math inline">\Rightarrow {\mathsf{A}}\boldsymbol{u}_k = \lambda_k \boldsymbol{u}_k</span> met <span class="math inline">\lambda_k = \sum_{j=0}^{n-1} f_j {\mathrm{e}}^{-{\mathrm{i}}\frac{2\pi}{n} k j} = \sqrt{n} F_k</span></p>
+</div>
+<p><span class="math inline">\Rightarrow</span> translatie-invariante systemen worden gediagonaliseerd in Fourier (<span class="math inline">\approx</span> momentum) basis, momentum is behouden grootheid</p>
+</section>
+<section id="givenstransformatie" class="level2 smaller scrollable">
+<h2 class="smaller scrollable anchored" data-anchor-id="givenstransformatie">Givenstransformatie</h2>
+<p><strong>Waarom?</strong> Unitaire bouwsteen die <strong>één element</strong> van een vector op nul zet <span class="math inline">\rightarrow</span> QR decompositie zonder het (numeriek instabiele) Gram-Schmidt</p>
+<div class="vfr-box vfr-definitie">
+<p><span class="vfr-box-label"><strong>Definitie.</strong></span> <strong>Givenstransformatie</strong> <span class="math inline">{\mathsf{G}} \in {\mathbb{F}}^{n \times n}</span>: <span class="math inline">{\mathsf{I}}_n</span> behalve in rijen en kolommen <span class="math inline">i &lt; j</span>: <span class="math display">\boxed{\begin{bmatrix} G^i_{\ i} &amp; G^i_{\ j} \\ G^j_{\ i} &amp; G^j_{\ j} \end{bmatrix} = \begin{bmatrix} c &amp; -s \\ {\overline{s}} &amp; c \end{bmatrix}, \qquad c \in {\mathbb{R}},\ c^2 + {\left\lvert s\right\rvert}^2 = 1}</span></p>
+</div>
+<div class="columns">
+<div class="column" style="width:70%;">
 <ul>
-<li><p>Praktisch algoritme: “fast fourier transform” (zie Py4Sci)</p>
-<p>complexiteit van <span class="math inline">\boldsymbol{F} = {\mathsf{U}}\boldsymbol{f}</span> van <span class="math inline">\mathop{\mathrm{\mathscr{O}}}(n^2)</span> naar <span class="math inline">\mathop{\mathrm{\mathscr{O}}}(n \log_2 n)</span></p></li>
-<li><p>Toepassingen:</p>
-<ul>
-<li><p>relaties met “andere Fouriertransformaties” (zie later)</p></li>
-<li><p>diagonalisatie van <strong>circulante matrices</strong></p>
-<ul>
-<li><p><span class="math inline">{\mathsf{A}}\in {\mathbb{C}}^{n \times n}</span> is circulant als <span class="math inline">A^i_{\ j} = f_{(j-i)\mod n}</span></p></li>
-<li><p>met <span class="math inline">\boldsymbol{u}_k</span> de <span class="math inline">k</span>de kolom uit <span class="math inline">{\mathsf{U}}</span>: <span class="math inline">(\boldsymbol{u}_k)^j = n^{-1/2} \omega^{kj}</span></p>
-<p><span class="math inline">\Rightarrow {\mathsf{A}}\boldsymbol{u}_k = \lambda_k \boldsymbol{u}_k</span> met <span class="math inline">\lambda_k = \sum_{j=0}^{n-1} f_j {\mathrm{e}}^{-{\mathrm{i}}\frac{2\pi}{n} k j} = \sqrt{n} F_k</span></p></li>
-<li><p>fysisch: circulant = translatie-invariant</p>
-<p><span class="math inline">\Rightarrow</span> translatie-invariante systemen worden gediagonaliseerd in Fourier (<span class="math inline">\approx</span> momentum) basis, momentum is behouden grootheid</p></li>
-</ul></li>
-</ul></li>
+<li><span class="math inline">{\mathbb{F}}= {\mathbb{R}}</span>, <span class="math inline">c = \cos\theta</span>, <span class="math inline">s = \sin\theta</span>: <strong>rotatie</strong> in het <span class="math inline">(i, j)</span>-vlak</li>
+<li><strong>Toepassing</strong>: <span class="math inline">a = w^i</span>, <span class="math inline">b = w^j</span>, <span class="math inline">c = \frac{{\left\lvert a\right\rvert}}{\rho}</span>, <span class="math inline">s = \frac{a}{{\left\lvert a\right\rvert}} \frac{{\overline{b}}}{\rho}</span> <span class="math display">\Rightarrow {\mathsf{G}}^{\mathsf{H}}\begin{bmatrix} a \\ b \end{bmatrix} = \begin{bmatrix} r \\ 0 \end{bmatrix}, \quad r = \frac{a}{{\left\lvert a\right\rvert}} \rho, \quad \rho = \sqrt{{\left\lvert a\right\rvert}^2+{\left\lvert b\right\rvert}^2}</span></li>
 </ul>
+</div><div class="column" style="width:30%;">
+<div style="text-align: center">
+<p><img src="figures/fig-givens.svg" height="190"></p>
+</div>
+</div>
+</div>
+</section>
+<section id="householdertransformatie" class="level2 smaller scrollable">
+<h2 class="smaller scrollable anchored" data-anchor-id="householdertransformatie">Householdertransformatie</h2>
+<p><strong>Waarom?</strong> Zet in één stap <strong>alle elementen op één na</strong> van een vector op nul <span class="math inline">\rightarrow</span> het standaardalgoritme voor de QR decompositie van dichte matrices</p>
+<div class="vfr-box vfr-definitie">
+<p><span class="vfr-box-label"><strong>Definitie.</strong></span> <strong>Householdertransformatie</strong> op basis van <span class="math inline">\boldsymbol{v} \in {\mathbb{F}}^n</span>: <span class="math display">\boxed{{\mathsf{H}} = {\mathsf{I}}_n - \frac{2}{\boldsymbol{v}^{\mathsf{H}}\boldsymbol{v}}\boldsymbol{v}\boldsymbol{v}^{\mathsf{H}}}</span></p>
+</div>
+<div class="columns">
+<div class="column" style="width:65%;">
+<ul>
+<li><span class="math inline">{\mathsf{H}}^{\mathsf{H}}= {\mathsf{H}}^{-1} = {\mathsf{H}}</span></li>
+<li><span class="math inline">{\mathbb{F}}= {\mathbb{R}}</span>: <strong>spiegeling</strong> t.o.v. het hypervlak <span class="math inline">\perp \boldsymbol{v}</span> (<span class="math inline">\det {\mathsf{H}} = -1</span>)</li>
+<li><strong>Toepassing</strong>: <span class="math inline">\boldsymbol{v} = \boldsymbol{w} + \alpha \boldsymbol{e}_1</span> met <span class="math inline">\alpha = \pm \frac{w^1}{{\left\lvert w^1\right\rvert}}{\left\lVert\boldsymbol{w}\right\rVert}</span> <span class="math display">\Rightarrow {\mathsf{H}}\boldsymbol{w} = \mp \frac{w^1}{{\left\lvert w^1\right\rvert}}{\left\lVert\boldsymbol{w}\right\rVert} \boldsymbol{e}_1</span></li>
+</ul>
+</div><div class="column" style="width:35%;">
+<div style="text-align: center">
+<p><img src="figures/fig-householder.svg" height="230"></p>
+</div>
+</div>
+</div>
 </section>
 </section>
 <section id="qr-decompositie-herbekeken" class="level1">
 <h1>QR decompositie herbekeken</h1>
-<section id="qr-decompositie-van-algemene-matrices" class="level2 smaller scrollable">
-<h2 class="smaller scrollable anchored" data-anchor-id="qr-decompositie-van-algemene-matrices">QR decompositie van algemene matrices</h2>
-<p>Vorig hoofdstuk: <span class="math inline">{\mathsf{A}} \in {\mathbb{F}}^{m \times n}</span> met <span class="math inline">m \geq n</span>:</p>
-<p><span class="math inline">{\mathsf{A}} = {\mathsf{Q}} {\mathsf{R}}</span> via Gram-Schmidt</p>
+<section id="volledige-qr-decompositie" class="level2 smaller scrollable">
+<h2 class="smaller scrollable anchored" data-anchor-id="volledige-qr-decompositie">Volledige QR decompositie</h2>
+<p><strong>Hoofdstuk 5</strong> (<span class="math inline">m \geq n</span>): <span class="math inline">{\mathsf{A}} = {\mathsf{Q}}{\mathsf{R}}</span> via Gram-Schmidt, <span class="math inline">{\mathsf{Q}}^{\mathsf{H}}{\mathsf{Q}} = {\mathsf{I}}_n</span>, <span class="math inline">{\mathsf{R}} \in {\mathbb{F}}^{n \times n}</span> bovendriehoeks</p>
+<p><strong>Volledige QR decompositie</strong>: vul <span class="math inline">{\mathsf{Q}}</span> aan met <span class="math inline">m - n</span> orthonormale kolommen <span class="math display">\boxed{{\mathsf{A}} = \tilde{{\mathsf{Q}}}\tilde{{\mathsf{R}}}, \qquad \tilde{{\mathsf{Q}}} \in \mathop{\mathrm{U}}(m),\ \tilde{{\mathsf{R}}} = \begin{bmatrix} {\mathsf{R}} \\ {\mathsf{O}}\end{bmatrix} \in {\mathbb{F}}^{m \times n}}</span></p>
 <ul>
-<li><span class="math inline">{\mathsf{Q}} \in {\mathbb{F}}^{m \times n}</span> en <span class="math inline">{\mathsf{Q}}^{\mathsf{H}}{\mathsf{Q}} = {\mathsf{I}}_n</span></li>
-<li><span class="math inline">{\mathsf{R}} \in {\mathbb{F}}^{n \times n}</span> bovendriehoeksmatrix</li>
+<li>ook voor <span class="math inline">n &gt; m</span>: <span class="math inline">\tilde{{\mathsf{R}}} \in {\mathbb{F}}^{m \times n}</span> bovendriehoeks (<span class="math inline">\tilde{R}^i_{\ j} = 0</span> voor <span class="math inline">i &gt; j</span>)</li>
+<li>equivalent: zoek <span class="math inline">\tilde{{\mathsf{Q}}} \in \mathop{\mathrm{U}}(m)</span> zodat <span class="math inline">\tilde{{\mathsf{Q}}}^{\mathsf{H}}{\mathsf{A}}</span> bovendriehoeks is<br>
+<span class="math inline">\rightarrow</span> bouw <span class="math inline">\tilde{{\mathsf{Q}}}</span> uit Givens- of Householdertransformaties</li>
 </ul>
-<p>Alternatieve voorstelling:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/fig-qr-variants.svg" class="quarto-figure quarto-figure-center figure-img" height="190"></p>
+</figure>
+</div>
+</section>
+<section id="qr-decompositie-via-householder" class="level2 smaller scrollable">
+<h2 class="smaller scrollable anchored" data-anchor-id="qr-decompositie-via-householder">QR decompositie via Householder</h2>
+<p><span class="math inline">{\mathsf{H}}_k</span>: Householdertransformatie op rijen <span class="math inline">k, \ldots, m</span> die kolom <span class="math inline">k</span> onder de diagonaal op nul zet, bv. <span class="math inline">m = 4</span>, <span class="math inline">n = 3</span>:</p>
+<div style="font-size: 90%">
+<p><span class="math display">\begin{bmatrix} \times &amp; \times &amp; \times \\ \times &amp; \times &amp; \times \\ \times &amp; \times &amp; \times \\ \times &amp; \times &amp; \times \end{bmatrix}
+\xrightarrow{{\mathsf{H}}_1^{\mathsf{H}}}
+\begin{bmatrix} \times &amp; \times &amp; \times \\ \textcolor{#CB3C33}{0} &amp; \times &amp; \times \\ \textcolor{#CB3C33}{0} &amp; \times &amp; \times \\ \textcolor{#CB3C33}{0} &amp; \times &amp; \times \end{bmatrix}
+\xrightarrow{{\mathsf{H}}_2^{\mathsf{H}}}
+\begin{bmatrix} \times &amp; \times &amp; \times \\ 0 &amp; \times &amp; \times \\ 0 &amp; \textcolor{#CB3C33}{0} &amp; \times \\ 0 &amp; \textcolor{#CB3C33}{0} &amp; \times \end{bmatrix}
+\xrightarrow{{\mathsf{H}}_3^{\mathsf{H}}}
+\begin{bmatrix} \times &amp; \times &amp; \times \\ 0 &amp; \times &amp; \times \\ 0 &amp; 0 &amp; \times \\ 0 &amp; 0 &amp; \textcolor{#CB3C33}{0} \end{bmatrix}
+= \tilde{{\mathsf{R}}}</span></p>
+</div>
+<p><span class="math display">{\mathsf{H}}_n^{\mathsf{H}}\ldots {\mathsf{H}}_2^{\mathsf{H}}{\mathsf{H}}_1^{\mathsf{H}}{\mathsf{A}} = \tilde{{\mathsf{R}}} \quad\implies\quad {\mathsf{A}} = \underbrace{{\mathsf{H}}_1 {\mathsf{H}}_2 \ldots {\mathsf{H}}_n}_{\tilde{{\mathsf{Q}}}} \tilde{{\mathsf{R}}}</span></p>
 <ul>
-<li><p>breidt <span class="math inline">{\mathsf{Q}}</span> uit met <span class="math inline">m-n</span> extra orthonormale kolommen tot <span class="math inline">{\mathsf{Q}} \in \mathop{\mathrm{U}}(m)</span></p></li>
-<li><p><span class="math inline">{\mathsf{A}} = {\mathsf{Q}} {\mathsf{\tilde{R}}}</span> met <span class="math inline">\tilde{{\mathsf{R}}} = \begin{bmatrix}
-      {\mathsf{R}}\\ {\mathsf{O}}_{(m-n) \times n}
-  \end{bmatrix} \in {\mathbb{F}}^{m \times n}</span></p></li>
-<li><p>kan ook voor <span class="math inline">{\mathsf{A}} \in {\mathbb{F}}^{m \times n}</span> met <span class="math inline">n &gt; m</span>, nog steeds <span class="math inline">{\mathsf{R}} \in {\mathbb{F}}^{m \times n}</span> met <span class="math inline">R^i_{\ j}=0</span> voor <span class="math inline">i &gt; j</span></p></li>
-<li><p>we zoeken unitaire matrix <span class="math inline">{\mathsf{Q}} \in \mathop{\mathrm{U}}(m)</span> zodat <span class="math inline">{\mathsf{\tilde{R}}}={\mathsf{Q}}^\dagger {\mathsf{A}}</span> bovendriehoeksmatrix is</p>
-<p><span class="math inline">\Rightarrow</span> bouw <span class="math inline">{\mathsf{Q}}</span> uit Givens- of Householdertransformaties</p></li>
+<li><span class="math inline">{\mathsf{H}}_k</span> laat kolommen <span class="math inline">1, \ldots, k-1</span> ongemoeid; <span class="math inline">{\mathsf{H}}_n</span> is niet nodig als <span class="math inline">m = n</span></li>
+<li>in de praktijk: enkel de vectoren <span class="math inline">\boldsymbol{v}_k</span> opslaan, niet de <span class="math inline">m \times m</span> matrices <span class="math inline">{\mathsf{H}}_k</span></li>
+<li><span class="math inline">\tilde{{\mathsf{Q}}}^{\mathsf{H}}\tilde{{\mathsf{Q}}} = {\mathsf{I}}</span> op machineprecisie na <span class="math inline">\rightarrow</span> numeriek veel stabieler dan Gram-Schmidt</li>
 </ul>
 </section>
-<section id="qr-decompositie-van-algemene-matrices-1" class="level2 smaller scrollable">
-<h2 class="smaller scrollable anchored" data-anchor-id="qr-decompositie-van-algemene-matrices-1">QR decompositie van algemene matrices</h2>
-<ul>
-<li><p>algoritme op basis van Householder transformaties:</p>
-<p><span class="math inline">{\mathsf{H}}_{n-1}^{\mathsf{H}}\ldots {\mathsf{H}}_2^{\mathsf{H}}{\mathsf{H}}_{1}^{\mathsf{H}}{\mathsf{A}} =  \tilde{{\mathsf{R}}} \implies  {\mathsf{A}} = \underbrace{{\mathsf{H}}_1 {\mathsf{H}}_2 \ldots {\mathsf{H}}_{n-1}}_{\tilde{{\mathsf{Q}}}} \tilde{{\mathsf{R}}}</span></p>
-<ul>
-<li><span class="math inline">H_1</span> werkt op alle rijen van <span class="math inline">{\mathsf{A}}</span> en transformeert eerste kolom naar <span class="math inline">\sim \boldsymbol{e}_1</span></li>
-<li><span class="math inline">H_2</span> werkt op rijen 2 tot <span class="math inline">m</span> van <span class="math inline">{\mathsf{H}}_1^{\mathsf{H}}{\mathsf{A}}</span> en transformeert tweede kolom naar <span class="math inline">\sim \boldsymbol{e}_2</span></li>
-<li><span class="math inline">H_3</span> werkt op rijen 3 tot <span class="math inline">m</span> …</li>
-<li>…</li>
-<li><span class="math inline">H_{k}</span> met <span class="math inline">k=\min(m-1,n)</span> werkt op rij <span class="math inline">k</span> en <span class="math inline">k+1</span>, transformeert kolom <span class="math inline">k</span> naar <span class="math inline">\sim\boldsymbol{e}_{k}</span> <span class="math inline">\longrightarrow</span> bovendriehoeksmatrix <span class="math inline">\tilde{{\mathsf{R}}}</span></li>
-</ul>
-<p><span class="math inline">\Rightarrow</span> numerieke stabiliteit en precisie in <span class="math inline">{\mathsf{Q}}^{\mathsf{H}}{\mathsf{Q}}={\mathsf{I}}</span> veel beter dan met Gram-Schmidt algoritme (zonder bewijs)</p></li>
-<li><p>decompositie <span class="math inline">{\mathsf{A}}={\mathsf{Q}}{\mathsf{R}}</span> heeft vrijheid <span class="math inline">{\mathsf{Q}}\leftarrow {\mathsf{Q}}{\mathsf{D}}</span> en <span class="math inline">{\mathsf{R}}\leftarrow {\mathsf{D}}^{-1}{\mathsf{R}}</span> met <span class="math inline">{\mathsf{D}}</span> een unitaire diagonaalmatrix (complexe fasen op de diagonaal)</p>
-<p><span class="math inline">\Rightarrow</span> de substitutie met <span class="math inline">{\mathsf{D}}</span> kan worden gebruikt om alle diagonaalelementen van <span class="math inline">{\mathsf{R}}</span> positief te maken; de decompositie wordt dan uniek</p></li>
-</ul>
 </section>
-</section>
-<section id="schur-decompositie-en-machtmethode" class="level1">
-<h1>Schur decompositie en machtmethode</h1>
+<section id="schur-decompositie-en-machtsmethode" class="level1">
+<h1>Schur decompositie en machtsmethode</h1>
 <section id="schur-decompositie" class="level2 smaller scrollable">
 <h2 class="smaller scrollable anchored" data-anchor-id="schur-decompositie">Schur decompositie</h2>
 <p>Beschouw vierkante matrices <span class="math inline">{\mathsf{A}} \in {\mathbb{C}}^{n \times n}</span></p>
 <ul>
-<li><p>Gelijkvormigheidstransformaties:</p>
-<p><span class="math inline">\tilde{{\mathsf{A}}}={\mathsf{V}}^{-1} {\mathsf{A}} {\mathsf{V}}</span> met <span class="math inline">{\mathsf{V}} \in \mathop{\mathrm{GL}}(n)</span></p>
-<p><span class="math inline">\Rightarrow</span> canonische vorm is Jordan-vorm <span class="math inline">{\mathsf{J}}_{{\mathsf{A}}}</span></p></li>
-<li><p>Unitaire gelijkvormigheidstransformaties</p>
-<p><span class="math inline">\tilde{{\mathsf{A}}}={\mathsf{Z}}^{{\mathsf{H}}} {\mathsf{A}} {\mathsf{Z}}</span> met <span class="math inline">{\mathsf{Z}} \in \mathop{\mathrm{U}}(n)</span></p>
-<p><span class="math inline">\Rightarrow</span> canonische vorm is de Schur bovendriehoeksvorm:</p>
-<p><strong>Schur-decompositie:</strong> <span class="math inline">{\mathsf{A}} = {\mathsf{Z}} {\mathsf{T}}{\mathsf{Z}}^{\mathsf{H}}</span> met <span class="math inline">T^i_{\ j}=0</span> voor <span class="math inline">1 \leq j &lt; i \leq n</span></p>
-<p><span class="math inline">\Rightarrow</span> <span class="math inline">\text{diag}({\mathsf{T}}) = \sigma({\mathsf{T}}) = \sigma({\mathsf{A}})</span></p></li>
-<li><p>Praktisch: er is geen deterministisch algoritme dat in een eindig aantal stappen de eigenwaarden bepaalt</p>
+<li>Gelijkvormigheidstransformaties <span class="math inline">\tilde{{\mathsf{A}}}={\mathsf{V}}^{-1} {\mathsf{A}} {\mathsf{V}}</span> met <span class="math inline">{\mathsf{V}} \in \mathop{\mathrm{GL}}(n)</span><br>
+<span class="math inline">\Rightarrow</span> canonische vorm is Jordan-vorm <span class="math inline">{\mathsf{J}}_{{\mathsf{A}}}</span></li>
+<li>Unitaire gelijkvormigheidstransformaties <span class="math inline">\tilde{{\mathsf{A}}}={\mathsf{Z}}^{{\mathsf{H}}} {\mathsf{A}} {\mathsf{Z}}</span> met <span class="math inline">{\mathsf{Z}} \in \mathop{\mathrm{U}}(n)</span><br>
+<span class="math inline">\Rightarrow</span> canonische vorm is de Schur bovendriehoeksvorm:</li>
+</ul>
+<div class="vfr-box vfr-stelling">
+<p><span class="vfr-box-label"><strong>Stelling 7.3 (Schur-triangulatie).</strong></span> Elke matrix <span class="math inline">{\mathsf{A}} \in {\mathbb{C}}^{n \times n}</span> heeft een <strong>Schur-decompositie</strong>, van de vorm <span class="math display">\boxed{{\mathsf{A}} = {\mathsf{Z}} {\mathsf{T}}{\mathsf{Z}}^{\mathsf{H}}}</span> waarbij <span class="math inline">{\mathsf{Z}} \in \mathop{\mathrm{U}}(n)</span> en <span class="math inline">{\mathsf{T}} \in {\mathbb{C}}^{n \times n}</span> een bovendriehoeksmatrix is (<span class="math inline">T^i_{\ j}=0</span> voor <span class="math inline">j &lt; i</span>).</p>
+</div>
+<p><span class="math inline">{\mathsf{A}} \in {\mathbb{R}}^{n \times n}</span>: ook, maar in het algemeen <span class="math inline">{\mathsf{Z}}, {\mathsf{T}} \notin {\mathbb{R}}^{n \times n}</span></p>
+<div class="vfr-box vfr-opmerking">
+<p><span class="vfr-box-label"><strong>Opmerking 7.14.</strong></span> <span class="math inline">\Rightarrow</span> <span class="math inline">\text{diag}({\mathsf{T}}) = \sigma({\mathsf{T}}) = \sigma({\mathsf{A}})</span></p>
+</div>
+</section>
+<section id="schur-decompositie-1" class="level2 smaller scrollable">
+<h2 class="smaller scrollable anchored" data-anchor-id="schur-decompositie-1">Schur decompositie</h2>
+<div class="vfr-box vfr-opmerking">
+<p><span class="vfr-box-label"><strong>Opmerking 7.15.</strong></span> Niet uniek: de eigenwaarden op de diagonaal van <span class="math inline">{\mathsf{T}}</span> kunnen in elke volgorde staan</p>
+</div>
+<div class="vfr-box vfr-opmerking">
+<p><span class="vfr-box-label"><strong>Opmerking 7.16.</strong></span> Reële <span class="math inline">{\mathsf{A}}</span> en reële orthogonale <span class="math inline">{\mathsf{Z}}</span>: <span class="math inline">{\mathsf{T}}</span> heeft op de diagonaal <span class="math inline">1 \times 1</span> blokken (reële eigenwaarden) en <span class="math inline">2 \times 2</span> blokken (paren complex toegevoegde eigenwaarden)</p>
+</div>
+<p><br></p>
+<p><strong>Berekening</strong>: geen algoritme bepaalt de eigenwaarden exact in een eindig aantal stappen</p>
 <ul>
-<li>gerelateerd aan Abel-Ruffini theorema: er is geen expliciete oplossing voor nulpunten van veeltermen van graad 5 of hoger in termen van basisoperaties <span class="math inline">+, -, *, /, \cdot^n , \sqrt[n]{\cdot}</span></li>
-</ul></li>
+<li>elke veelterm <span class="math inline">p</span> is de karakteristieke veelterm van zijn companion matrix <span class="math inline">{\mathsf{C}}_p</span> (Prop 3.12)<br>
+<span class="math inline">\Rightarrow</span> eigenwaarden exact bepalen = nulpunten van willekeurige veeltermen bepalen</li>
+<li>Abel-Ruffini: voor graad <span class="math inline">\geq 5</span> geen formule voor de nulpunten met <span class="math inline">+</span>, <span class="math inline">-</span>, <span class="math inline">*</span>, <span class="math inline">/</span>, <span class="math inline">\cdot^n</span>, <span class="math inline">\sqrt[n]{\cdot}</span></li>
 </ul>
 </section>
 <section id="schur-decompositie-van-normale-matrices" class="level2 smaller scrollable">
 <h2 class="smaller scrollable anchored" data-anchor-id="schur-decompositie-van-normale-matrices">Schur decompositie van normale matrices</h2>
-<p>Normale matrix: <span class="math inline">{\mathsf{A}}^{\mathsf{H}}{\mathsf{A}} = {\mathsf{A}}{\mathsf{A}}^{\mathsf{H}}</span></p>
+<div class="vfr-box vfr-propositie">
+<p><span class="vfr-box-label"><strong>Propositie 7.4.</strong></span> Als <span class="math inline">{\mathsf{A}}</span> normaal is, dan is voor elke Schur-decompositie <span class="math inline">{\mathsf{A}} = {\mathsf{Z}}{\mathsf{T}}{\mathsf{Z}}^{\mathsf{H}}</span> de bovendriehoeksmatrix <span class="math inline">{\mathsf{T}}</span> diagonaal: <span class="math inline">{\mathsf{A}}</span> wordt gediagonaliseerd door een unitaire matrix, en Schur- en eigenwaardedecompositie vallen samen.</p>
+</div>
+<div class="vfr-box vfr-bewijs">
+<p><span class="vfr-box-label"><strong>Bewijs.</strong></span></p>
 <ul>
-<li><p>Schur-decompositie: <span class="math inline">{\mathsf{A}} = {\mathsf{Z}} {\mathsf{T}}{\mathsf{Z}}^{\mathsf{H}}</span></p>
-<ul>
-<li>normaliteit is een intrinsieke eigenschap en blijft behouden onder unitaire basistransformatie <span class="math inline">{\mathsf{Z}}</span> <span class="math inline">\Rightarrow</span> <span class="math inline">{\mathsf{T}}</span> is normaal</li>
-</ul></li>
-<li><p>normale bovendriehoeksmatrix <span class="math inline">{\mathsf{T}}</span> moet zuiver diagonaal zijn</p>
-<p>Bewijs:</p>
-<ul>
-<li><p><span class="math inline">({\mathsf{T}}^{\mathsf{H}}{\mathsf{T}})^1_{\ 1} = {\left\lvert T^1_{ 1}\right\rvert}^2=
-({\mathsf{T}} {\mathsf{T}}^{\mathsf{H}})^1_{\ 1} = \sum_{k=1}^n {\left\lvert T^1_{ k}\right\rvert}^2 \Rightarrow T^1_{\ k} =0</span> voor <span class="math inline">k=2,\ldots,n</span></p></li>
-<li><p>…</p></li>
-<li><p><span class="math inline">({\mathsf{T}}^{\mathsf{H}}{\mathsf{T}})^i_{\ i} = \sum_{k=1}^i{\left\lvert T^k_{\ i}\right\rvert}^2 = {\left\lvert T^i_{\ i}\right\rvert}^2</span> (wegens <span class="math inline">T^k_{\ i}=0</span> voor <span class="math inline">k&gt;i</span> uit voorgaande)</p>
-<p><span class="math inline">({\mathsf{T}} {\mathsf{T}}^{\mathsf{H}})^i_{\ i} = \sum_{k=i}^n {\left\lvert T^i_{ k}\right\rvert}^2 \Rightarrow T^i_{\ k} =0</span> voor <span class="math inline">k=i+1,\ldots,n</span></p></li>
-</ul></li>
-<li><p>Schurdecompositie = eigenwaardedecompositie</p></li>
-<li><p>orthonormale basis van eigenvectoren</p></li>
-<li><p>altijd diagonaliseerbaar, nooit niet-triviale Jordanblokken</p></li>
-<li><p>spectrale decompositie <span class="math inline">V = \sum_{\lambda \in \sigma({\mathsf{A}})} V_\lambda</span> is orthogonale directe som decompositie</p></li>
+<li>normaliteit blijft behouden onder unitaire basistransformatie: <span class="math inline">{\mathsf{T}}^{\mathsf{H}}{\mathsf{T}} = {\mathsf{T}}{\mathsf{T}}^{\mathsf{H}}</span></li>
+<li>diagonaalelement <span class="math inline">(i, i)</span>: norm² van <span style="color: #4063D8">kolom <span class="math inline">i</span></span> = norm² van <span style="color: #CB3C33">rij <span class="math inline">i</span></span> <span class="math display">({\mathsf{T}}^{\mathsf{H}}{\mathsf{T}})^i_{\ i} = \sum_{k=1}^i {\left\lvert T^k_{\ i}\right\rvert}^2 = \sum_{k=i}^n {\left\lvert T^i_{\ k}\right\rvert}^2 = ({\mathsf{T}} {\mathsf{T}}^{\mathsf{H}})^i_{\ i}</span></li>
+<li><span class="math inline">i = 1</span>: kolom 1 <span class="math inline">= T^1_{\ 1}</span> <span class="math inline">\Rightarrow</span> rij 1 nul naast de diagonaal<br>
+<span class="math inline">i = 2</span>: kolom 2 <span class="math inline">= (0, T^2_{\ 2})</span> <span class="math inline">\Rightarrow</span> rij 2 nul naast de diagonaal; enz.</li>
 </ul>
+</div>
+</section>
+<section id="schur-decompositie-van-normale-matrices-1" class="level2 smaller scrollable">
+<h2 class="smaller scrollable anchored" data-anchor-id="schur-decompositie-van-normale-matrices-1">Schur decompositie van normale matrices</h2>
+<p><strong>Normale <span class="math inline">{\mathsf{A}}</span></strong>: Schur-decompositie = eigenwaardedecompositie</p>
+<ul>
+<li>orthonormale basis van eigenvectoren</li>
+<li>altijd diagonaliseerbaar, nooit niet-triviale Jordanblokken</li>
+<li>spectrale decompositie <span class="math inline">V = \sum_{\lambda \in \sigma({\mathsf{A}})} V_\lambda</span>: orthogonale directe som</li>
+</ul>
+<div class="vfr-box vfr-opmerking">
+<p><span class="vfr-box-label"><strong>Opmerking 7.17.</strong></span> Hermitisch <span class="math inline">{\mathsf{A}} = {\mathsf{A}}^{\mathsf{H}}</span>: <span class="math inline">{\mathsf{T}} = {\mathsf{T}}^{\mathsf{H}}</span> <span class="math inline">\Rightarrow</span> reële eigenwaarden<br>
+Reëel symmetrisch: ook reële eigenvectoren <span class="math inline">\Rightarrow</span> gediagonaliseerd door orthogonale <span class="math inline">{\mathsf{Z}}</span></p>
+</div>
+<div class="vfr-box vfr-opmerking">
+<p><span class="vfr-box-label"><strong>Opmerking 7.18.</strong></span> Niet-normale <span class="math inline">{\mathsf{A}}</span>: <span class="math inline">{\mathsf{T}}</span> niet diagonaal, maar Schur is wel de (stabiele) basis om eigenwaarden numeriek te bepalen</p>
+<ul>
+<li>eerste kolom van <span class="math inline">{\mathsf{Z}}</span>: eigenvector bij <span class="math inline">T^1_{\ 1}</span></li>
+<li>eigenvector bij <span class="math inline">T^k_{\ k}</span>: uit een bovendriehoekig stelsel</li>
+</ul>
+</div>
 </section>
 <section id="machtsmethode" class="level2 smaller scrollable">
 <h2 class="smaller scrollable anchored" data-anchor-id="machtsmethode">Machtsmethode</h2>
-<p>Gegeven <span class="math inline">{\mathsf{A}}\in {\mathbb{F}}^{n\times n}</span>:</p>
-<ul>
-<li><p>Machtsmethode/machtsiteratie (power method/iteration):</p>
-<p>startende van willekeurige vector <span class="math inline">\boldsymbol{v}_0</span>, herhaal voor <span class="math inline">k=0,1,2,\ldots</span>:</p>
-<ul>
-<li><span class="math inline">\boldsymbol{q}_k =\boldsymbol{v}_k / {\left\lVert\boldsymbol{v}_k\right\rVert}</span></li>
+<div class="vfr-box vfr-definitie">
+<p><span class="vfr-box-label"><strong>Definitie 7.6.</strong></span> Gegeven een vierkante matrix <span class="math inline">{\mathsf{A}}</span>: de <strong>machtsmethode</strong> of <strong>machtsiteratie</strong> (power method/iteration) start van een vector <span class="math inline">\boldsymbol{v}_0</span> en herhaalt voor <span class="math inline">k=0,1,2,\ldots</span>:</p>
+<ol type="1">
+<li><span class="math inline">\boldsymbol{q}_k =\boldsymbol{v}_k / {\left\lVert\boldsymbol{v}_k\right\rVert}</span> (normalisatie)</li>
 <li><span class="math inline">\boldsymbol{v}_{k+1} = {\mathsf{A}}\boldsymbol{q}_k</span></li>
 <li><span class="math inline">\mu_{k} = {\left\langle\boldsymbol{q}_k,\boldsymbol{v}_{k+1}\right\rangle}= \boldsymbol{q}_k^{\mathsf{H}}{\mathsf{A}}\boldsymbol{q}_k</span></li>
-</ul>
-<p>Gevolgen:</p>
+</ol>
+</div>
+<div class="vfr-box vfr-propositie">
+<p><span class="vfr-box-label"><strong>Propositie 7.5.</strong></span> Zij <span class="math inline">{\mathsf{A}} \in {\mathbb{F}}^{n \times n}</span> zodat</p>
 <ul>
-<li><p><span class="math inline">\boldsymbol{q}_k \sim {\mathsf{A}}^k \boldsymbol{v}_0</span> (op normalisatie na)</p></li>
-<li><p>sorteer eigenwaarden van <span class="math inline">{\mathsf{A}}</span> in afnemende absolute waarde, zodat <span class="math inline">{\left\lvert\lambda_1\right\rvert}=\rho_{{\mathsf{A}}}</span></p></li>
-<li><p>als <span class="math inline">\lambda_1</span> simpel of semisimpel is (geen niet-triviale Jordanblokken, <span class="math inline">V_{\lambda_1}= U_{\lambda_1}</span>):</p>
-<p><span class="math inline">{\mathsf{A}} = \lambda_1 {\mathsf{P}}_{\lambda_1} + \tilde{{\mathsf{A}}}</span> met <span class="math inline">\rho_{\tilde{{\mathsf{A}}}} = {\left\lvert\lambda_2\right\rvert}</span></p></li>
-<li><p>als bovendien <span class="math inline">{\left\lvert\lambda_2\right\rvert} &lt; {\left\lvert\lambda_1\right\rvert}</span>:</p>
-<p><span class="math inline">{\mathsf{A}}^k \boldsymbol{v}_0 = \lambda_1^k \left({\mathsf{P}}_{\lambda_1} \boldsymbol{v}_0 +    \frac{\tilde{{\mathsf{A}}}^k}{\lambda_1^k} \boldsymbol{v}_0\right) \implies \lim_{k\to\infty} \boldsymbol{q}_k \sim {\mathsf{P}}_{\lambda_1} \boldsymbol{v}_0</span>, <span class="math inline">\lim_{k\to \infty} \mu_k = \lambda_1</span></p></li>
-<li><p>convergentie: <span class="math inline">{\left\lVert\boldsymbol{q}_k-\boldsymbol{q}_\infty\right\rVert} = \mathop{\mathrm{\mathscr{O}}}\left({\left\lvert\frac{\lambda_2}{\lambda_1}\right\rvert}^k\right)</span> (<strong>lineaire convergentie</strong>)</p></li>
-</ul></li>
+<li><span class="math inline">\lambda_1</span> de unieke eigenwaarde van grootste modulus is: <span class="math inline">{\left\lvert\lambda_1\right\rvert} = \rho_{{\mathsf{A}}} &gt; {\left\lvert\lambda_i\right\rvert}</span> voor <span class="math inline">i \geq 2</span></li>
+<li><span class="math inline">\lambda_1</span> simpel of semisimpel is (geen niet-triviale Jordanblokken)</li>
 </ul>
+<p>en <span class="math inline">{\mathsf{P}}_1</span> de projector op <span class="math inline">V_{\lambda_1}</span> langs de andere (veralgemeende) eigenruimten. Dan geldt voor elke <span class="math inline">\boldsymbol{v}_0</span> met <span class="math inline">{\mathsf{P}}_1 \boldsymbol{v}_0 \neq {o}</span>: <span class="math display">\boxed{\mu_k \to \lambda_1 \ \text{ en }\ \boldsymbol{q}_k \to \boldsymbol{q}_\infty \text{, een genormeerde eigenvector in } V_{\lambda_1}}</span></p>
+</div>
+</section>
+<section id="machtsmethode-1" class="level2 smaller scrollable">
+<h2 class="smaller scrollable anchored" data-anchor-id="machtsmethode-1">Machtsmethode</h2>
+<div class="vfr-box vfr-propositie">
+<p><span class="vfr-box-label"><strong>Propositie 7.5.</strong></span> Zij <span class="math inline">{\mathsf{A}} \in {\mathbb{F}}^{n \times n}</span> zodat</p>
+<ul>
+<li><span class="math inline">\lambda_1</span> de unieke eigenwaarde van grootste modulus is: <span class="math inline">{\left\lvert\lambda_1\right\rvert} = \rho_{{\mathsf{A}}} &gt; {\left\lvert\lambda_i\right\rvert}</span> voor <span class="math inline">i \geq 2</span></li>
+<li><span class="math inline">\lambda_1</span> simpel of semisimpel is (geen niet-triviale Jordanblokken)</li>
+</ul>
+<p>en <span class="math inline">{\mathsf{P}}_1</span> de projector op <span class="math inline">V_{\lambda_1}</span> langs de andere (veralgemeende) eigenruimten. Dan geldt voor elke <span class="math inline">\boldsymbol{v}_0</span> met <span class="math inline">{\mathsf{P}}_1 \boldsymbol{v}_0 \neq {o}</span>: <span class="math inline">\mu_k \to \lambda_1</span> en <span class="math inline">\boldsymbol{q}_k \to \boldsymbol{q}_\infty</span>, een genormeerde eigenvector in <span class="math inline">V_{\lambda_1}</span>.</p>
+</div>
+<p><strong>Waarom</strong>:</p>
+<ol type="1">
+<li><span class="math inline">{\mathsf{A}} = \lambda_1 {\mathsf{P}}_1 + \tilde{{\mathsf{A}}}</span> met <span class="math inline">{\mathsf{P}}_1 \tilde{{\mathsf{A}}} = \tilde{{\mathsf{A}}} {\mathsf{P}}_1 = {\mathsf{O}}</span> en <span class="math inline">\sigma_{\tilde{{\mathsf{A}}}} = (\sigma_{{\mathsf{A}}} \setminus \{\lambda_1\}) \cup \{0\}</span> <span class="math inline">\Rightarrow</span> <span class="math inline">\rho_{\tilde{{\mathsf{A}}}} = {\left\lvert\lambda_2\right\rvert} &lt; {\left\lvert\lambda_1\right\rvert}</span></li>
+<li>gemengde termen vallen weg: <span class="math inline">{\mathsf{A}}^k = \lambda_1^k {\mathsf{P}}_1 + \tilde{{\mathsf{A}}}^k</span>, dus <span class="math display">{\mathsf{A}}^k \boldsymbol{v}_0 = \lambda_1^k \left({\mathsf{P}}_1 \boldsymbol{v}_0 + \frac{\tilde{{\mathsf{A}}}^k}{\lambda_1^k} \boldsymbol{v}_0\right)</span></li>
+<li>Gelfand: <span class="math inline">{\left\lVert\tilde{{\mathsf{A}}}^k\right\rVert}^{1/k} \to \rho_{\tilde{{\mathsf{A}}}} &lt; {\left\lvert\lambda_1\right\rvert}</span> <span class="math inline">\Rightarrow</span> <span class="math inline">{\left\lVert\tilde{{\mathsf{A}}}^k\right\rVert} / {\left\lvert\lambda_1\right\rvert}^k \to 0</span></li>
+<li><span class="math inline">\boldsymbol{q}_k</span> is <span class="math inline">{\mathsf{A}}^k \boldsymbol{v}_0</span> genormeerd <span class="math inline">\Rightarrow</span> <span class="math inline">\boldsymbol{q}_\infty = {\mathsf{P}}_1 \boldsymbol{v}_0 / {\left\lVert{\mathsf{P}}_1 \boldsymbol{v}_0\right\rVert}</span> en <span class="math inline">\mu_\infty = {\left\langle\boldsymbol{q}_\infty,{\mathsf{A}} \boldsymbol{q}_\infty\right\rangle} = \lambda_1</span></li>
+</ol>
+</section>
+<section id="machtsmethode-2" class="level2 smaller scrollable">
+<h2 class="smaller scrollable anchored" data-anchor-id="machtsmethode-2">Machtsmethode</h2>
+<div class="vfr-box vfr-opmerking">
+<p><span class="vfr-box-label"><strong>Opmerking 7.19.</strong></span> Convergentie: <span class="math inline">{\left\lVert\boldsymbol{q}_k-\boldsymbol{q}_\infty\right\rVert} = \mathop{\mathrm{\mathscr{O}}}\left({\left\lvert\frac{\lambda_2}{\lambda_1}\right\rvert}^k\right)</span><br>
+fout daalt met factor <span class="math inline">r = {\left\lvert\lambda_2 / \lambda_1\right\rvert} &lt; 1</span> per stap: <strong>lineaire convergentie</strong></p>
+</div>
+<div class="vfr-box vfr-opmerking">
+<p><span class="vfr-box-label"><strong>Opmerking 7.20.</strong></span> Voorwaarde <span class="math inline">{\left\lvert\lambda_2\right\rvert} &lt; {\left\lvert\lambda_1\right\rvert}</span> is nodig, en faalt makkelijk:<br>
+reële <span class="math inline">{\mathsf{A}}</span> met complexe <span class="math inline">\lambda_1</span> heeft ook <span class="math inline">\lambda_2 = {\overline{\lambda_1}}</span><br>
+<span class="math inline">\Rightarrow</span> <span class="math inline">\boldsymbol{q}_k</span> blijft roteren in het vlak van <span class="math inline">{\mathsf{P}}_1 \boldsymbol{v}_0</span> en <span class="math inline">{\mathsf{P}}_2 \boldsymbol{v}_0</span></p>
+</div>
 </section>
 <section id="deelruimte-iteratie" class="level2 smaller scrollable">
 <h2 class="smaller scrollable anchored" data-anchor-id="deelruimte-iteratie">Deelruimte-iteratie</h2>
-<p>Gegeven <span class="math inline">{\mathsf{A}}\in {\mathbb{F}}^{n\times n}</span>:</p>
-<ul>
-<li><p>deelruimte-iteratie (subspace iteration):</p>
-<p>startende van <span class="math inline">p\leq n</span> willekeurige vectoren verzamelend als de kolommen van een matrix <span class="math inline">{\mathsf{V}}_0 \in {\mathbb{F}}^{n \times p}</span> herhaal voor <span class="math inline">k=0,1,2,\ldots</span>:</p>
-<ul>
+<div class="vfr-box vfr-definitie">
+<p><span class="vfr-box-label"><strong>Definitie 7.7.</strong></span> Gegeven <span class="math inline">{\mathsf{A}} \in {\mathbb{F}}^{n \times n}</span>: de <strong>deelruimte-iteratie</strong> (subspace iteration) start van <span class="math inline">p \leq n</span> vectoren, de kolommen van <span class="math inline">{\mathsf{V}}_0 \in {\mathbb{F}}^{n \times p}</span>, en herhaalt voor <span class="math inline">k=0,1,2,\ldots</span>:</p>
+<ol type="1">
 <li><span class="math inline">{\mathsf{Q}}_k {\mathsf{R}}_k = {\mathsf{V}}_k</span> (QR decompositie)</li>
 <li><span class="math inline">{\mathsf{V}}_{k+1} = {\mathsf{A}}{\mathsf{Q}}_k</span></li>
 <li><span class="math inline">{\mathsf{T}}_k = {\mathsf{Q}}_k^{\mathsf{H}}{\mathsf{V}}_{k+1} = {\mathsf{Q}}_k^{\mathsf{H}}{\mathsf{A}}{\mathsf{Q}}_k</span></li>
-</ul>
-<p>Indien convergentie (voorwaarden buiten beschouwing van deze cursus): <span class="math inline">{\mathsf{V}}_\infty = {\mathsf{A}} {\mathsf{Q}}_\infty = {\mathsf{Q}}_\infty {\mathsf{R}}_\infty</span> en <span class="math inline">{\mathsf{T}}_\infty = {\mathsf{R}}_\infty</span></p>
-<p><span class="math inline">\Rightarrow {\mathsf{Q}}_\infty</span> is orthonormale basis voor invariante deelruimte</p>
-<p><span class="math inline">\Rightarrow</span> restrictie van <span class="math inline">{\mathsf{A}}</span> op <span class="math inline">{\mathsf{Q}}_\infty</span> is bovendriehoek <span class="math inline">\rightarrow</span> Schur canonische vorm</p>
-<p><span class="math inline">\Rightarrow</span> eigenwaarden van <span class="math inline">{\mathsf{T}}_\infty</span> zijn eigenwaarde van <span class="math inline">{\mathsf{A}}</span></p>
-<p><span class="math inline">\Rightarrow</span> indien <span class="math inline">p=n</span>: volledige Schur-decompositie</p>
-<p>(bemerk: eerste kolom van <span class="math inline">{\mathsf{Q}}</span> ondergaat zelfde stappen als machtsiteratie)</p></li>
+</ol>
+</div>
+<p><strong>Bij convergentie</strong> (voorwaarden buiten deze cursus): <span class="math display">{\mathsf{V}}_\infty = {\mathsf{A}} {\mathsf{Q}}_\infty = {\mathsf{Q}}_\infty {\mathsf{R}}_\infty \qquad\text{en}\qquad {\mathsf{T}}_\infty = {\mathsf{R}}_\infty</span></p>
+<ul>
+<li><span class="math inline">{\mathsf{Q}}_\infty</span>: orthonormale basis voor een invariante deelruimte van <span class="math inline">{\mathsf{A}}</span></li>
+<li>restrictie van <span class="math inline">{\mathsf{A}}</span> daarop is <span class="math inline">{\mathsf{T}}_\infty = {\mathsf{R}}_\infty</span>: bovendriehoeks <span class="math inline">\rightarrow</span> Schur canonische vorm, eigenwaarden van <span class="math inline">{\mathsf{T}}_\infty</span> zijn eigenwaarden van <span class="math inline">{\mathsf{A}}</span></li>
+<li><span class="math inline">p = n</span>: volledige Schur-decompositie</li>
+<li>eerste kolom van <span class="math inline">{\mathsf{Q}}_k</span> ondergaat dezelfde stappen als de machtsmethode</li>
 </ul>
 </section>
 <section id="qr-iteratie" class="level2 smaller scrollable">
 <h2 class="smaller scrollable anchored" data-anchor-id="qr-iteratie">QR-iteratie</h2>
-<p>Gegeven <span class="math inline">{\mathsf{A}}\in {\mathbb{F}}^{n\times n}</span>:</p>
+<p><strong>Waarom?</strong> Praktisch algoritme voor de Schur-decompositie (deelruimte-iteratie, <span class="math inline">p = n</span>)</p>
+<div class="vfr-box vfr-definitie">
+<p><span class="vfr-box-label"><strong>Definitie.</strong></span> <strong>QR-iteratie</strong>: start van <span class="math inline">{\mathsf{T}}_0 = {\mathsf{A}}</span>, <span class="math inline">{\mathsf{Z}}_0 = {\mathsf{I}}</span>; herhaal voor <span class="math inline">k = 1, 2, \ldots</span>:</p>
+<ol type="1">
+<li><span class="math inline">{\mathsf{Q}}_k {\mathsf{R}}_k = {\mathsf{T}}_{k-1}</span> (QR decompositie)</li>
+<li><span class="math inline">{\mathsf{Z}}_k = {\mathsf{Z}}_{k-1} {\mathsf{Q}}_k</span></li>
+<li><span class="math inline">{\mathsf{T}}_k = {\mathsf{R}}_k {\mathsf{Q}}_k</span></li>
+</ol>
+</div>
 <ul>
-<li><p>verbeterd algoritme voor volledige Schur-decompositie: QR iteratie</p>
-<p>uit deelruimte-iteratie voor <span class="math inline">p=n</span> volgt:</p>
-<ul>
-<li><p><span class="math inline">{\mathsf{T}}_k = {\mathsf{Q}}_k^{\mathsf{H}}{\mathsf{A}} {\mathsf{Q}}_k =  {\mathsf{Q}}_k^{\mathsf{H}}{\mathsf{V}}_{k+1} = ({\mathsf{Q}}_k^{\mathsf{H}}{\mathsf{Q}}_{k+1}) {\mathsf{R}}_{k+1}</span></p></li>
-<li><p><span class="math inline">{\mathsf{T}}_{k+1} = {\mathsf{Q}}_{k+1}^{\mathsf{H}}{\mathsf{A}} {\mathsf{Q}}_{k+1} = ({\mathsf{Q}}_k^{\mathsf{H}}{\mathsf{Q}}_{k+1})^{\mathsf{H}}{\mathsf{T}}_k ({\mathsf{Q}}_k^{\mathsf{H}}{\mathsf{Q}}_{k+1}) = {\mathsf{R}}_{k+1} ({\mathsf{Q}}_k^{\mathsf{H}}{\mathsf{Q}}_{k+1})</span></p></li>
-<li><p>Hernoem <span class="math inline">({\mathsf{Q}}_k^{\mathsf{H}}{\mathsf{Q}}_{k+1}) \mapsto {\mathsf{Q}}_k</span></p></li>
-<li><p>Startende van <span class="math inline">{\mathsf{Z}}_0={\mathsf{Q}}_0 = {\mathsf{I}}</span> en <span class="math inline">{\mathsf{T}}_0 = {\mathsf{A}}</span> herhaal voor <span class="math inline">k=1,2,\ldots</span>:</p>
-<ul>
-<li><span class="math inline">{\mathsf{Q}}_k {\mathsf{R}}_k = {\mathsf{T}}_{k-1}</span> en <span class="math inline">{\mathsf{Z}}_k = {\mathsf{Z}}_{k-1} {\mathsf{Q}}_k</span></li>
-<li><span class="math inline">{\mathsf{T}}_{k} = {\mathsf{R}}_k {\mathsf{Q}}_k</span></li>
+<li>elke stap is een unitaire gelijkvormigheid: <span class="math display">\begin{aligned}{\mathsf{A}} = {\mathsf{T}}_0 &amp;= {\mathsf{Q}}_1 {\mathsf{R}}_1 = {\mathsf{Q}}_1 \underbrace{{\mathsf{R}}_1 {\mathsf{Q}}_1}_{{\mathsf{T}}_1} {\mathsf{Q}}_1^{\mathsf{H}}= {\mathsf{Q}}_1 \underbrace{{\mathsf{Q}}_2 {\mathsf{R}}_2}_{{\mathsf{T}}_1} {\mathsf{Q}}_1^{\mathsf{H}}= {\mathsf{Q}}_1 {\mathsf{Q}}_2 \underbrace{{\mathsf{R}}_2 {\mathsf{Q}}_2}_{{\mathsf{T}}_2} {\mathsf{Q}}_2^{\mathsf{H}}{\mathsf{Q}}_1^{\mathsf{H}}\\ &amp;= \ldots = \underbrace{{\mathsf{Q}}_1 {\mathsf{Q}}_2 \cdots {\mathsf{Q}}_k}_{{\mathsf{Z}}_k} {\mathsf{T}}_k {\mathsf{Z}}_k^{\mathsf{H}}\end{aligned}</span></li>
+<li>convergentie: <span class="math inline">{\mathsf{Q}}_k \to {\mathsf{I}}</span>, <span class="math inline">{\mathsf{T}}_k \approx {\mathsf{R}}_k \to {\mathsf{T}}</span> bovendriehoeks, <span class="math inline">{\mathsf{Z}}_k \to {\mathsf{Z}}</span> <span class="math inline">\Rightarrow</span> Schur: <span class="math inline">{\mathsf{A}} = {\mathsf{Z}}{\mathsf{T}}{\mathsf{Z}}^{\mathsf{H}}</span></li>
 </ul>
-<p><span class="math inline">\Rightarrow {\mathsf{A}} = {\mathsf{T}}_0 = {\mathsf{Q}}_1 {\mathsf{R}}_1 = {\mathsf{Q}}_1 {\mathsf{T}}_1 {\mathsf{Q}}_1^{\mathsf{H}}= \ldots = \underbrace{({\mathsf{Q}}_1 {\mathsf{Q}}_2 \cdots {\mathsf{Q}}_k)}_{{\mathsf{Z}}_k}{\mathsf{T}}_{k}     \underbrace{({\mathsf{Q}}_1 {\mathsf{Q}}_2 \cdots {\mathsf{Q}}_k)^{\mathsf{H}}}_{{\mathsf{Z}}_k^{\mathsf{H}}}</span></p>
-<p>Convergentie: <span class="math inline">{\mathsf{Q}}_k \to {\mathsf{I}}\Rightarrow {\mathsf{T}}_k \to {\mathsf{T}}</span> en ook <span class="math inline">{\mathsf{R}}_k \to {\mathsf{T}}</span> en <span class="math inline">{\mathsf{Z}}_k \to {\mathsf{Z}}</span></p>
-<p><span class="math inline">\Rightarrow {\mathsf{A}}={\mathsf{Z}}{\mathsf{T}}{\mathsf{Z}}^{\mathsf{H}}</span>: Schurdecompositie</p>
+</section>
+</section>
+<section id="singuliere-waardendecompositie-en-polaire-decompositie" class="level1">
+<h1>Singuliere waardendecompositie en polaire decompositie</h1>
+<section id="unitaire-equivalentie" class="level2 smaller">
+<h2 class="smaller anchored" data-anchor-id="unitaire-equivalentie">Unitaire equivalentie</h2>
+<p><strong>Matrixnormen</strong> gebaseerd op de Euclidische norm, voor <span class="math inline">{\mathsf{A}} \in {\mathbb{F}}^{m \times n}</span>:</p>
 <ul>
-<li>Praktijk: bijkomende trucs voor lagere kost en snellere convergentie</li>
-</ul></li>
+<li>geïnduceerde 2-norm: <span class="math inline">\displaystyle{\left\lVert{\mathsf{A}}\right\rVert}_{2\to 2} = \max_{{\left\lVert\boldsymbol{v}\right\rVert}_2 = 1} {\left\lVert{\mathsf{A}}\boldsymbol{v}\right\rVert}_2</span></li>
+<li>Frobeniusnorm: <span class="math inline">{\left\lVert{\mathsf{A}}\right\rVert}_{\text{F}} = \sqrt{\mathop{\mathrm{tr}}({\mathsf{A}}^{\mathsf{H}}{\mathsf{A}})}</span></li>
+</ul>
+<p><strong>Unitaire equivalentie</strong>: <span class="math display">\boxed{\tilde{{\mathsf{A}}} = {\mathsf{U}}^{\mathsf{H}}{\mathsf{A}}{\mathsf{V}}, \qquad {\mathsf{U}} \in \mathop{\mathrm{U}}(m),\ {\mathsf{V}} \in \mathop{\mathrm{U}}(n)}</span></p>
+<ul>
+<li>beide normen zijn invariant: <span class="math inline">{\left\lVert\tilde{{\mathsf{A}}}\right\rVert}_{2\to 2} = {\left\lVert{\mathsf{A}}\right\rVert}_{2\to 2}</span>, <span class="math inline">{\left\lVert\tilde{{\mathsf{A}}}\right\rVert}_{\text{F}} = {\left\lVert{\mathsf{A}}\right\rVert}_{\text{F}}</span></li>
+</ul>
+<p><br></p>
+<div style="text-align: center">
+<p><strong>Welke canonische vorm?</strong></p>
+</div>
+</section>
+<section id="singuliere-waardendecompositie" class="level2 smaller">
+<h2 class="smaller anchored" data-anchor-id="singuliere-waardendecompositie">Singuliere waardendecompositie</h2>
+<div class="vfr-box vfr-propositie">
+<p><span class="vfr-box-label"><strong>Propositie 7.6.</strong></span> <strong>Singuliere waardendecompositie</strong> van een matrix <span class="math inline">{\mathsf{A}}\in{\mathbb{F}}^{m \times n}</span>: <span class="math display">\boxed{{\mathsf{A}} = {\mathsf{U}} {\mathsf{S}} {\mathsf{V}}^{\mathsf{H}}}</span></p>
+<p>met hierin</p>
+<ul>
+<li><span class="math inline">{\mathsf{U}}\in \mathop{\mathrm{U}}(m)</span></li>
+<li><span class="math inline">{\mathsf{V}}\in \mathop{\mathrm{U}}(n)</span></li>
+<li><span class="math inline">{\mathsf{S}} \in {\mathbb{F}}^{m \times n}</span> met <span class="math inline">{\mathsf{S}}^i_{\ j} = (\sigma_i) \delta^i_{\ j}</span> en:
+<ul>
+<li><span class="math inline">\sigma_1 \geq \sigma_2 \geq \ldots \geq \sigma_p &gt; \sigma_{p+1} = \ldots = \sigma_{\min(m,n)} = 0</span></li>
+<li><span class="math inline">p \leq \min(m,n)</span></li>
 </ul></li>
 </ul>
+</div>
+</section>
+<section id="singuliere-waardendecompositie-eigenschappen" class="level2 smaller scrollable">
+<h2 class="smaller scrollable anchored" data-anchor-id="singuliere-waardendecompositie-eigenschappen">Singuliere waardendecompositie: eigenschappen</h2>
+<div class="vfr-box vfr-opmerking">
+<p><span class="vfr-box-label"><strong>Opmerking 7.21.</strong></span> <span class="math inline">{\mathsf{A}}{\mathsf{A}}^{\mathsf{H}}= {\mathsf{U}} {\mathsf{S}}{\mathsf{S}}^{\mathsf{H}}{\mathsf{U}}^{\mathsf{H}}</span>: <span class="math inline">{\mathsf{U}}</span> diagonaliseert <span class="math inline">{\mathsf{A}}{\mathsf{A}}^{\mathsf{H}}</span>, met eigenwaarden <span class="math inline">\sigma_1^2, \ldots, \sigma_p^2</span> en <span class="math inline">m - p</span> keer <span class="math inline">0</span></p>
+</div>
+<p><strong>Notatie</strong></p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 20%">
+<col style="width: 80%">
+</colgroup>
+<tbody>
+<tr class="odd">
+<td><span class="math inline">\boldsymbol{u}_i</span>, <span class="math inline">\boldsymbol{v}_i</span></td>
+<td><span class="math inline">i</span>de kolom van <span class="math inline">{\mathsf{U}}</span>, <span class="math inline">{\mathsf{V}}</span>: linker- en rechter singuliere vectoren</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">{\mathsf{U}}_k</span>, <span class="math inline">{\mathsf{V}}_k</span></td>
+<td>eerste <span class="math inline">k</span> kolommen van <span class="math inline">{\mathsf{U}}</span>, <span class="math inline">{\mathsf{V}}</span>: <span class="math inline">{\mathsf{U}}_k \in {\mathbb{F}}^{m \times k}</span>, <span class="math inline">{\mathsf{V}}_k \in {\mathbb{F}}^{n \times k}</span></td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">{\mathsf{S}}_k</span></td>
+<td>eerste <span class="math inline">k</span> rijen en kolommen van <span class="math inline">{\mathsf{S}}</span>: <span class="math inline">{\mathsf{S}}_k \in {\mathbb{F}}^{k \times k}</span></td>
+</tr>
+</tbody>
+</table>
+<div class="vfr-box vfr-opmerking">
+<p><span class="vfr-box-label"><strong>Opmerking 7.22.</strong></span> <span class="math inline">{\mathsf{A}}{\mathsf{V}}_k = {\mathsf{U}}_k {\mathsf{S}}_k</span> en <span class="math inline">{\mathsf{A}}^{\mathsf{H}}{\mathsf{U}}_k = {\mathsf{V}}_k {\mathsf{S}}_k</span> voor alle <span class="math inline">k=1,\ldots,\min(m,n)</span>, of kolom per kolom: <span class="math display">{\mathsf{A}} \boldsymbol{v}_i = \sigma_i \boldsymbol{u}_i, \qquad {\mathsf{A}}^{\mathsf{H}}\boldsymbol{u}_i = \sigma_i \boldsymbol{v}_i</span> Dit legt de singuliere waarden rechtstreeks vast (zonder kwadraat).</p>
+</div>
+</section>
+<section id="singuliere-waardendecompositie-eigenschappen-1" class="level2 smaller scrollable">
+<h2 class="smaller scrollable anchored" data-anchor-id="singuliere-waardendecompositie-eigenschappen-1">Singuliere waardendecompositie: eigenschappen</h2>
+<div class="vfr-box vfr-opmerking">
+<p><span class="vfr-box-label"><strong>Opmerking 7.23 (Uniciteit).</strong></span> De singuliere waarden zijn uniek, de singuliere vectoren niet:</p>
+<ul>
+<li><span class="math inline">{\mathsf{U}}_p \to {\mathsf{U}}_p{\mathsf{Q}}</span> en <span class="math inline">{\mathsf{V}}_p \to {\mathsf{V}}_p{\mathsf{Q}}</span> met <span class="math inline">{\mathsf{Q}} \in \mathop{\mathrm{U}}(p)</span> en <span class="math inline">[{\mathsf{Q}},{\mathsf{S}}_p]={\mathsf{O}}</span><br>
+alle <span class="math inline">\sigma_i</span> verschillend: <span class="math inline">{\mathsf{Q}}</span> diagonaal, met complexe fasen op de diagonaal</li>
+<li>de kolommen <span class="math inline">p+1,\ldots,m</span> van <span class="math inline">{\mathsf{U}}</span> en <span class="math inline">p+1,\ldots,n</span> van <span class="math inline">{\mathsf{V}}</span>: onafhankelijke unitaire transformaties</li>
+</ul>
+</div>
+<div class="vfr-box vfr-opmerking">
+<p><span class="vfr-box-label"><strong>Opmerking 7.24.</strong></span> Reële <span class="math inline">{\mathsf{A}}</span>: <span class="math inline">{\mathsf{U}} \in \mathop{\mathrm{O}}(m)</span>, <span class="math inline">{\mathsf{V}} \in \mathop{\mathrm{O}}(n)</span>, waarvan minstens één (als <span class="math inline">m \neq n</span>: beide) als rotatie te kiezen is. De SVD ontbindt <span class="math inline">{\mathsf{A}}</span> dan in</p>
+<ol type="1">
+<li>een rotatie (<span class="math inline">{\mathsf{V}}^{\mathsf{T}}</span>)</li>
+<li>een herschaling van de assen (<span class="math inline">{\mathsf{S}}</span>)</li>
+<li>een rotatie, eventueel met spiegeling (<span class="math inline">{\mathsf{U}}</span>)</li>
+</ol>
+</div>
+</section>
+<section id="singuliere-waardendecompositie-algoritme" class="level2 smaller scrollable">
+<h2 class="smaller scrollable anchored" data-anchor-id="singuliere-waardendecompositie-algoritme">Singuliere waardendecompositie: algoritme</h2>
+<div class="vfr-box vfr-opmerking">
+<p><span class="vfr-box-label"><strong>Opmerking 7.25.</strong></span> Het bewijs lijkt constructief, maar is numeriek niet nauwkeurig: <span class="math inline">\sigma_i^2</span> (eigenwaarde van <span class="math inline">{\mathsf{A}}^{\mathsf{H}}{\mathsf{A}}</span>) met absolute fout <span class="math inline">\epsilon</span> geeft <span class="math display">\sigma_i^2 + \epsilon \quad\Rightarrow\quad \sigma_i + \mathop{\mathrm{\mathscr{O}}}(\epsilon/\sigma_i)</span></p>
+</div>
+<div class="vfr-box vfr-opmerking">
+<p><span class="vfr-box-label"><strong>Opmerking 7.26.</strong></span> Vierkante <span class="math inline">{\mathsf{A}} \in {\mathbb{F}}^{n\times n}</span>: de SVD geeft de eigenwaardedecompositie van een hermitische <span class="math inline">2n \times 2n</span> matrix, en dat is de basis voor het praktische algoritme: <span class="math display"> \begin{bmatrix}
+        {\mathsf{O}}&amp; {\mathsf{A}} \\ {\mathsf{A}}^{\mathsf{H}}&amp; {\mathsf{O}}
+    \end{bmatrix}\left(\frac{1}{\sqrt{2}}\begin{bmatrix}
+        {\mathsf{U}} &amp; {\mathsf{U}} \\ {\mathsf{V}}  &amp; -{\mathsf{V}}
+    \end{bmatrix}\right)
+= \left(\frac{1}{\sqrt{2}}\begin{bmatrix}
+        {\mathsf{U}} &amp; {\mathsf{U}} \\ {\mathsf{V}}  &amp; -{\mathsf{V}}
+    \end{bmatrix}\right)
+\begin{bmatrix}
+        {\mathsf{S}} &amp; {\mathsf{O}}\\ {\mathsf{O}}&amp; -{\mathsf{S}}
+    \end{bmatrix}</span></p>
+</div>
+<div class="vfr-box vfr-opmerking">
+<p><span class="vfr-box-label"><strong>Opmerking 7.27.</strong></span> Niet-vierkante <span class="math inline">{\mathsf{A}}\in {\mathbb{F}}^{m\times n}</span>, bv. <span class="math inline">m &gt; n</span>: eerst QR, dan de SVD van <span class="math inline">{\mathsf{R}}</span>: <span class="math display">{\mathsf{A}} = {\mathsf{Q}} {\mathsf{R}} = ({\mathsf{Q}} {\mathsf{U}}_{{\mathsf{R}}}) {\mathsf{S}}_{{\mathsf{R}}} {\mathsf{V}}_{{\mathsf{R}}}^{\mathsf{H}}=  {\mathsf{U}}_{{\mathsf{A}}}{\mathsf{S}}_{{\mathsf{A}}} {\mathsf{V}}_{{\mathsf{A}}}^{\mathsf{H}}</span></p>
+</div>
+</section>
+<section id="singuliere-waardendecompositie-varianten" class="level2 smaller scrollable">
+<h2 class="smaller scrollable anchored" data-anchor-id="singuliere-waardendecompositie-varianten">Singuliere waardendecompositie: varianten</h2>
+<p><span class="math inline">p</span>: aantal niet-nul singuliere waarden (zie volgende: <span class="math inline">p=\mathop{\mathrm{rank}}({\mathsf{A}})</span>) <span class="math display">{\mathsf{A}} = \underbrace{{\mathsf{U}} {\mathsf{S}} {\mathsf{V}}^{\mathsf{H}}}_{\text{"full SVD"}} = \underbrace{{\mathsf{U}}_{\min(m,n)} {\mathsf{S}}_{\min(m,n)} {\mathsf{V}}_{\min(m,n)}^{\mathsf{H}}}_{\text{"thin SVD"}} = \underbrace{{\mathsf{U}}_p {\mathsf{S}}_p {\mathsf{V}}_p^{\mathsf{H}}}_{\text{"compact SVD"}}</span></p>
+<div class="vfr-box vfr-definitie">
+<p><span class="vfr-box-label"><strong>Definitie 7.8.</strong></span> <strong>Dunne SVD</strong> (thin SVD): <span class="math inline">{\mathsf{A}} = {\mathsf{U}}_k {\mathsf{S}}_k {\mathsf{V}}_k^{\mathsf{H}}</span> met <span class="math inline">k = \min(m, n)</span></p>
+</div>
+<div class="vfr-box vfr-definitie">
+<p><span class="vfr-box-label"><strong>Definitie 7.9.</strong></span> <strong>Compacte SVD</strong>: <span class="math inline">{\mathsf{A}} = {\mathsf{U}}_p {\mathsf{S}}_p {\mathsf{V}}_p^{\mathsf{H}}</span>, als slechts <span class="math inline">p &lt; \min(m, n)</span> singuliere waarden niet nul zijn</p>
+</div>
+<div class="vfr-box vfr-definitie">
+<p><span class="vfr-box-label"><strong>Definitie 7.10.</strong></span> <strong>Getrunceerde SVD</strong> van rang <span class="math inline">r &lt; p</span>: <span class="math inline">{\mathsf{U}}_r {\mathsf{S}}_r {\mathsf{V}}_r^{\mathsf{H}}</span>, de <span class="math inline">p - r</span> kleinste singuliere waarden weggelaten<br>
+<span class="math inline">\rightarrow</span> geen gelijkheid meer, wel de beste benadering van <span class="math inline">{\mathsf{A}}</span> (Eckart-Young, verder)</p>
+</div>
+</section>
+<section id="singuliere-waardendecompositie-varianten-1" class="level2">
+<h2 class="anchored" data-anchor-id="singuliere-waardendecompositie-varianten-1">Singuliere waardendecompositie: varianten</h2>
+<div style="text-align: center">
+<p><img src="figures/fig-svd-variants.svg" height="440"></p>
+<p><span style="color: grey; font-size: 70%"><span class="math inline">m = 6</span>, <span class="math inline">n = 4</span>, <span class="math inline">p = 3</span>, <span class="math inline">r = 2</span>; gestreept = weggelaten, rode punten = <span class="math inline">\sigma_1, \ldots, \sigma_p</span>, open punt = weggelaten <span class="math inline">\sigma_3</span></span></p>
+</div>
+</section>
+<section id="verband-met-rang-norm-en-conditiegetal" class="level2 smaller scrollable">
+<h2 class="smaller scrollable anchored" data-anchor-id="verband-met-rang-norm-en-conditiegetal">Verband met rang, norm en conditiegetal</h2>
+<div class="vfr-box vfr-propositie">
+<p><span class="vfr-box-label"><strong>Propositie 7.7.</strong></span> De SVD <span class="math inline">{\mathsf{A}} = {\mathsf{U}}{\mathsf{S}}{\mathsf{V}}^{\mathsf{H}}</span> toont de rang van <span class="math inline">{\mathsf{A}}</span>: <span class="math inline">\mathop{\mathrm{rank}}({\mathsf{A}}) = p</span>, het aantal (niet-nul) singuliere waarden. De kolommen van <span class="math inline">{\mathsf{U}}_p</span> vormen een orthonormale basis voor <span class="math inline">\mathop{\mathrm{im}}({\mathsf{A}})</span>, de kolommen <span class="math inline">p+1, \ldots, n</span> van <span class="math inline">{\mathsf{V}}</span> een orthonormale basis voor <span class="math inline">\mathop{\mathrm{ker}}({\mathsf{A}})</span>.</p>
+</div>
+<p><strong>Waarom</strong>: <span class="math inline">{\mathsf{A}}\boldsymbol{v} = {\mathsf{U}}_p({\mathsf{S}}_p{\mathsf{V}}_p^{\mathsf{H}}\boldsymbol{v})</span>, <span class="math inline">{\mathsf{A}}\boldsymbol{v}_i = \sigma_i\boldsymbol{u}_i = {o}</span> voor <span class="math inline">i &gt; p</span></p>
+<div class="vfr-box vfr-opmerking">
+<p><span class="vfr-box-label"><strong>Opmerking 7.28.</strong></span> Rang-nulliteitsstelling: <span class="math inline">\mathop{\mathrm{nullity}}({\mathsf{A}}) = n - \mathop{\mathrm{rank}}({\mathsf{A}})</span></p>
+</div>
+<div class="vfr-box vfr-definitie">
+<p><span class="vfr-box-label"><strong>Definitie 7.11.</strong></span> <strong>Volle rang</strong>: <span class="math inline">\mathop{\mathrm{rank}}({\mathsf{A}}) = \min(m, n)</span>; anders <strong>rangdeficiënt</strong></p>
+</div>
+<div class="vfr-box vfr-opmerking">
+<p><span class="vfr-box-label"><strong>Opmerking 7.30.</strong></span> Numeriek: geen exacte nullen in <span class="math inline">{\mathsf{S}}</span>, enkel waarden van de orde van de machineprecisie <span class="math inline">\Rightarrow</span> kies een tolerantie om rang, beeld en kern te bepalen</p>
+</div>
+</section>
+<section id="verband-met-rang-norm-en-conditiegetal-1" class="level2 smaller scrollable">
+<h2 class="smaller scrollable anchored" data-anchor-id="verband-met-rang-norm-en-conditiegetal-1">Verband met rang, norm en conditiegetal</h2>
+<div class="vfr-box vfr-propositie">
+<p><span class="vfr-box-label"><strong>Propositie 7.8.</strong></span> De geïnduceerde 2-norm is <span class="math inline">{\left\lVert{\mathsf{A}}\right\rVert}_2 = \sigma_1</span>, de grootste singuliere waarde.</p>
+</div>
+<div class="vfr-box vfr-propositie">
+<p><span class="vfr-box-label"><strong>Propositie 7.9.</strong></span> De Frobeniusnorm is <span class="math inline">{\left\lVert{\mathsf{A}}\right\rVert}_{\text{F}} = \left(\sum_{i=1}^p \sigma_i^2\right)^{1/2}</span>.</p>
+</div>
+<div class="vfr-box vfr-propositie">
+<p><span class="vfr-box-label"><strong>Propositie 7.10.</strong></span> Het conditiegetal van een inverteerbare <span class="math inline">{\mathsf{A}}\in{\mathbb{F}}^{n \times n}</span> is <span class="math inline">\kappa({\mathsf{A}}) = \sigma_1/\sigma_n</span>.</p>
+</div>
+<div class="vfr-box vfr-opmerking">
+<p><span class="vfr-box-label"><strong>Opmerking 7.31.</strong></span> <span class="math inline">{\mathsf{A}}</span> singulier: minstens één nul-eigenwaarde én <span class="math inline">\sigma_n = 0</span> <span class="math inline">\Rightarrow</span> <span class="math inline">\kappa({\mathsf{A}}) = \infty</span></p>
+</div>
+<div class="vfr-box vfr-opmerking">
+<p><span class="vfr-box-label"><strong>Opmerking 7.29.</strong></span></p>
+<ul>
+<li>Hermitisch positief definiete <span class="math inline">{\mathsf{A}}</span>: eigenwaardedecompositie = SVD (<span class="math inline">{\mathsf{U}} = {\mathsf{V}}</span>)</li>
+<li>Normale <span class="math inline">{\mathsf{A}}</span>: de fasen van de eigenwaarden gaan in <span class="math inline">{\mathsf{U}}</span>, zodat <span class="math inline">\sigma_i = {\left\lvert\lambda_i\right\rvert}</span>: <span class="math display">{\mathsf{A}} = {\mathsf{V}}{\mathsf{D}}{\mathsf{V}}^{\mathsf{H}}= \underbrace{{\mathsf{V}}\exp({\mathrm{i}}\arg({\mathsf{D}}))}_{{\mathsf{U}}}\, \underbrace{{\left\lvert{\mathsf{D}}\right\rvert}}_{{\mathsf{S}}}\, {\mathsf{V}}^{\mathsf{H}}</span></li>
+</ul>
+</div>
+</section>
+<section id="kleinste-kwadratenoplossing" class="level2 smaller scrollable">
+<h2 class="smaller scrollable anchored" data-anchor-id="kleinste-kwadratenoplossing">Kleinste kwadratenoplossing</h2>
+<p>Lineair stelsel <span class="math inline">{\mathsf{A}}\boldsymbol{x} = \boldsymbol{y}</span> met <span class="math inline">{\mathsf{A}}\in{\mathbb{F}}^{m \times n}</span>:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 26%">
+<col style="width: 30%">
+<col style="width: 44%">
+</colgroup>
+<thead>
+<tr class="header">
+<th></th>
+<th><span class="math inline">\boldsymbol{y} \in \mathop{\mathrm{im}}({\mathsf{A}})</span></th>
+<th><span class="math inline">\boldsymbol{y} \notin \mathop{\mathrm{im}}({\mathsf{A}})</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="math inline">\mathop{\mathrm{ker}}({\mathsf{A}}) = \{{o}\}</span></td>
+<td>unieke oplossing</td>
+<td>unieke kleinste kwadratenoplossing (H5)</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\mathop{\mathrm{ker}}({\mathsf{A}}) \neq \{{o}\}</span></td>
+<td>oplossing, niet uniek</td>
+<td>kleinste kwadratenoplossing, niet uniek</td>
+</tr>
+</tbody>
+</table>
+<div class="vfr-box vfr-definitie">
+<p><span class="vfr-box-label"><strong>Definitie 7.12.</strong></span> Zij <span class="math inline">L = \{\boldsymbol{x} \in {\mathbb{F}}^n \mid {\left\lVert{\mathsf{A}}\boldsymbol{x} - \boldsymbol{y}\right\rVert}_2 = \min_{\boldsymbol{x}' \in {\mathbb{F}}^n} {\left\lVert{\mathsf{A}}\boldsymbol{x}' - \boldsymbol{y}\right\rVert}_2\}</span> de verzameling van alle kleinste kwadratenoplossingen. De <strong>kleinste kwadratenoplossing met minimale norm</strong> is <span class="math inline">\boldsymbol{x}^\ast = \mathop{\mathrm{arg\ min}}_{\boldsymbol{x} \in L} {\left\lVert\boldsymbol{x}\right\rVert}</span>.</p>
+</div>
+<div class="vfr-box vfr-propositie">
+<p><span class="vfr-box-label"><strong>Propositie 7.11.</strong></span> De kleinste kwadratenoplossing met minimale norm is uniek, en met de compacte SVD: <span class="math display">\boxed{\boldsymbol{x}^\ast = {\mathsf{V}}_p {\mathsf{S}}_p^{-1} {\mathsf{U}}_p^{\mathsf{H}}\boldsymbol{y}}</span></p>
+</div>
+</section>
+<section id="moore-penrose-pseudo-inverse" class="level2 smaller scrollable">
+<h2 class="smaller scrollable anchored" data-anchor-id="moore-penrose-pseudo-inverse">Moore-Penrose pseudo-inverse</h2>
+<div class="vfr-box vfr-definitie">
+<p><span class="vfr-box-label"><strong>Definitie 7.13.</strong></span> <strong>Moore-Penrose pseudo-inverse</strong>: <span class="math display">\boxed{{\mathsf{A}}^+ = {\mathsf{V}}_p {\mathsf{S}}_p^{-1} {\mathsf{U}}_p^{\mathsf{H}}}</span> met <span class="math inline">{\mathsf{A}} = {\mathsf{U}}_p {\mathsf{S}}_p {\mathsf{V}}_p^{\mathsf{H}}</span> de compacte SVD, <span class="math inline">p = \mathop{\mathrm{rank}}({\mathsf{A}})</span></p>
+</div>
+<div class="vfr-box vfr-opmerking">
+<p><span class="vfr-box-label"><strong>Opmerking 7.32.</strong></span></p>
+<ul>
+<li><span class="math inline">{\mathsf{A}}{\mathsf{A}}^+{\mathsf{A}} = {\mathsf{A}}</span> en <span class="math inline">{\mathsf{A}}^+{\mathsf{A}}{\mathsf{A}}^+ = {\mathsf{A}}^+</span></li>
+<li><span class="math inline">{\mathsf{A}}{\mathsf{A}}^+ = {\mathsf{U}}_p{\mathsf{U}}_p^{\mathsf{H}}= {\mathsf{P}}_{\mathop{\mathrm{im}}({\mathsf{A}})}</span>: orthogonale projector op <span class="math inline">\mathop{\mathrm{im}}({\mathsf{A}})</span></li>
+<li><span class="math inline">{\mathsf{A}}^+{\mathsf{A}} = {\mathsf{V}}_p{\mathsf{V}}_p^{\mathsf{H}}= {\mathsf{P}}_{\mathop{\mathrm{ker}}({\mathsf{A}})^\perp}</span>: orthogonale projector op <span class="math inline">\mathop{\mathrm{ker}}({\mathsf{A}})^\perp</span></li>
+</ul>
+</div>
+</section>
+<section id="moore-penrose-pseudo-inverse-1" class="level2 smaller scrollable">
+<h2 class="smaller scrollable anchored" data-anchor-id="moore-penrose-pseudo-inverse-1">Moore-Penrose pseudo-inverse</h2>
+<div class="vfr-box vfr-opmerking">
+<p><span class="vfr-box-label"><strong>Opmerking 7.33.</strong></span> <span class="math inline">m \geq n</span> en volle rang: <span class="math inline">{\mathsf{A}}^+ = ({\mathsf{A}}^{\mathsf{H}}{\mathsf{A}})^{-1}{\mathsf{A}}^{\mathsf{H}}</span>, de pseudo-inverse uit hoofdstuk 5; <span class="math inline">m = n = p</span>: <span class="math inline">{\mathsf{A}}^+ = {\mathsf{A}}^{-1}</span></p>
+</div>
+<div class="vfr-box vfr-opmerking">
+<p><span class="vfr-box-label"><strong>Opmerking 7.34.</strong></span> Numeriek: inverteer nooit <span class="math inline">{\mathsf{A}}^{\mathsf{H}}{\mathsf{A}}</span>, want <span class="math inline">\kappa({\mathsf{A}}^{\mathsf{H}}{\mathsf{A}}) = (\sigma_1/\sigma_n)^2</span></p>
+</div>
+<div class="vfr-box vfr-opmerking">
+<p><span class="vfr-box-label"><strong>Opmerking 7.35.</strong></span> In de praktijk: <code>pinv</code>, met een tolerantie waaronder singuliere waarden als nul gelden</p>
+</div>
+</section>
+<section id="laagste-rang-benadering" class="level2">
+<h2 class="anchored" data-anchor-id="laagste-rang-benadering">Laagste rang benadering</h2>
+<p><strong>Doel</strong>: benader <span class="math inline">{\mathsf{A}} \in {\mathbb{F}}^{m\times n}</span> door een matrix <span class="math inline">{\mathsf{B}}</span> van lage rang <span class="math inline">r &lt; \min(m, n)</span>, bv. <span class="math inline">{\mathsf{B}} = {\mathsf{B}}_1{\mathsf{B}}_2</span> met <span class="math inline">{\mathsf{B}}_1 \in {\mathbb{F}}^{m \times r}</span>, <span class="math inline">{\mathsf{B}}_2 \in {\mathbb{F}}^{r \times n}</span> <span class="math inline">\rightarrow</span> datacompressie, dimensiereductie</p>
+<div class="vfr-box vfr-stelling">
+<p><span class="vfr-box-label"><strong>Stelling 7.12 (Eckart-Young-Mirsky).</strong></span> Gegeven <span class="math inline">{\mathsf{A}} \in {\mathbb{F}}^{m \times n}</span>: de matrix <span class="math inline">{\mathsf{B}}</span> van rang <span class="math inline">r</span> die <span class="math inline">{\left\lVert{\mathsf{A}}-{\mathsf{B}}\right\rVert}_2</span> minimaliseert, is de getrunceerde SVD van <span class="math inline">{\mathsf{A}}</span>: <span class="math display">\boxed{{\mathsf{B}}= {\mathsf{U}}_r {\mathsf{S}}_r {\mathsf{V}}_r^{\mathsf{H}}}</span></p>
+</div>
+<div class="vfr-box vfr-stelling">
+<p><span class="vfr-box-label"><strong>Stelling 7.13.</strong></span> Hetzelfde geldt voor de Frobeniusnorm <span class="math inline">{\left\lVert{\mathsf{A}}-{\mathsf{B}}\right\rVert}_{\text{F}}</span>.</p>
+</div>
+</section>
+<section id="laagste-rang-benadering-in-python" class="level2 scrollable">
+<h2 class="scrollable anchored" data-anchor-id="laagste-rang-benadering-in-python">Laagste rang benadering: in Python</h2>
+<p>Afbeelding in grijswaarden = matrix <span class="math inline">{\mathsf{A}} \in {\mathbb{R}}^{m \times n}</span>; benadering <span class="math inline">{\mathsf{A}}_r = {\mathsf{U}}_r {\mathsf{S}}_r {\mathsf{V}}_r^{\mathsf{T}}</span></p>
+<div class="columns">
+<div class="column" style="width:58%;">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> PIL <span class="im">import</span> Image</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>img <span class="op">=</span> Image.<span class="bu">open</span>(<span class="st">"mona_lisa.png"</span>).convert(<span class="st">"L"</span>)</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>A <span class="op">=</span> np.asarray(img, dtype<span class="op">=</span><span class="bu">float</span>)    <span class="co"># 1292 × 850</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>U, s, Vh <span class="op">=</span> np.linalg.svd(A, full_matrices<span class="op">=</span><span class="va">False</span>)</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>r <span class="op">=</span> <span class="dv">20</span>                              <span class="co"># getrunceerde SVD</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>A_r <span class="op">=</span> U[:, :r] <span class="op">@</span> np.diag(s[:r]) <span class="op">@</span> Vh[:r, :]</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>np.linalg.norm(A <span class="op">-</span> A_r) <span class="op">/</span> np.linalg.norm(A)  <span class="co"># 0.146</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>np.sqrt(np.<span class="bu">sum</span>(s[r:]<span class="op">**</span><span class="dv">2</span>) <span class="op">/</span> np.<span class="bu">sum</span>(s<span class="op">**</span><span class="dv">2</span>))     <span class="co"># 0.146</span></span></code></pre></div><button title="Kopieer naar klembord" class="code-copy-button"><i class="bi"></i></button></div>
+</div><div class="column" style="width:42%;">
+<div style="text-align: center">
+<p><img src="figures/fig-mona-lisa-matrix.svg" height="245"></p>
+</div>
+</div>
+</div>
+<ul>
+<li><code>full_matrices=False</code>: dunne SVD (<span class="math inline">{\mathsf{U}}</span>: <span class="math inline">1292 \times 850</span>), anders volledig (<span class="math inline">{\mathsf{U}}</span>: <span class="math inline">1292 \times 1292</span>)</li>
+<li>fout <span class="math inline">= \sqrt{\sum_{i &gt; r} \sigma_i^2 / \sum_i \sigma_i^2}</span>: de staart van de singuliere waarden</li>
+<li>opslag: <span class="math inline">r(m + n + 1)</span> getallen in plaats van <span class="math inline">mn</span></li>
+</ul>
+</section>
+<section id="laagste-rang-benadering-voorbeeld" class="level2">
+<h2 class="anchored" data-anchor-id="laagste-rang-benadering-voorbeeld">Laagste rang benadering: voorbeeld</h2>
+<p>Resultaat voor <span class="math inline">r = 5, 20, 100</span>:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/fig-mona-lisa.svg" class="quarto-figure quarto-figure-center figure-img" height="400"></p>
+</figure>
+</div>
+</section>
+<section id="laagste-rang-benadering-singuliere-waarden" class="level2">
+<h2 class="anchored" data-anchor-id="laagste-rang-benadering-singuliere-waarden">Laagste rang benadering: singuliere waarden</h2>
+<div class="columns">
+<div class="column" style="width:54%;">
+<ul>
+<li>Fout = staart van de singuliere waarden<br>
+(St 7.13 en Prop 7.9): <span class="math display">{\left\lVert{\mathsf{A}} - {\mathsf{A}}_r\right\rVert}_{\text{F}}^2 = \sum_{i &gt; r} \sigma_i^2</span></li>
+<li><span class="math inline">\sigma_1</span> domineert (gemiddelde helderheid)</li>
+<li>Daarna trage afname (fijne textuur)<br>
+<span class="math inline">\rightarrow</span> fout daalt traag voorbij <span class="math inline">r \approx 20</span>,<br>
+hoewel <span class="math inline">{\mathsf{A}}_{20}</span> er al goed uitziet</li>
+</ul>
+</div><div class="column" style="width:46%;">
+<div style="text-align: center">
+<p><img src="figures/fig-mona-lisa-sigma.svg" class="img-fluid" style="width:100.0%"></p>
+<p><span style="color: grey; font-size: 70%"><span class="math inline">\sigma_i/\sigma_1</span> voor de Mona Lisa, log-log</span></p>
+</div>
+</div>
+</div>
+</section>
+<section id="polaire-decompositie-en-isometrische-benadering" class="level2 smaller scrollable">
+<h2 class="smaller scrollable anchored" data-anchor-id="polaire-decompositie-en-isometrische-benadering">Polaire decompositie en isometrische benadering</h2>
+<div class="vfr-box vfr-propositie">
+<p><span class="vfr-box-label"><strong>Propositie 7.14 (Polaire decompositie).</strong></span> Elke <span class="math inline">{\mathsf{A}} \in {\mathbb{F}}^{m \times n}</span> met <span class="math inline">m \geq n</span> kan geschreven worden als <span class="math display">\boxed{{\mathsf{A}} = {\mathsf{U}} {\mathsf{P}}}</span> met <span class="math inline">{\mathsf{U}} \in {\mathbb{F}}^{m \times n}</span> isometrisch (<span class="math inline">{\mathsf{U}}^{\mathsf{H}}{\mathsf{U}} = {\mathsf{I}}_n</span>) en <span class="math inline">{\mathsf{P}} \in {\mathbb{F}}^{n \times n}</span> hermitisch en positief semidefiniet.</p>
+</div>
+<p><strong>Via de dunne SVD</strong> <span class="math inline">{\mathsf{A}} ={\mathsf{U}}_n{\mathsf{S}}_n{\mathsf{V}}_n^{\mathsf{H}}</span>: <span class="math inline">\qquad\displaystyle{\mathsf{A}} = \underbrace{{\mathsf{U}}_n {\mathsf{V}}_n^{\mathsf{H}}}_{{\mathsf{U}}}\, \underbrace{{\mathsf{V}}_n {\mathsf{S}}_n {\mathsf{V}}_n^{\mathsf{H}}}_{{\mathsf{P}}}</span></p>
+<div class="vfr-box vfr-opmerking">
+<p><span class="vfr-box-label"><strong>Opmerking 7.36.</strong></span> Veralgemeent <span class="math inline">z = {\mathrm{e}}^{{\mathrm{i}}\arg(z)} {\left\lvert z\right\rvert}</span> voor complexe getallen (<span class="math inline">m = n = 1</span>)</p>
+</div>
+<div class="vfr-box vfr-opmerking">
+<p><span class="vfr-box-label"><strong>Opmerking 7.37.</strong></span> <span class="math inline">m &lt; n</span>: de polaire decompositie van <span class="math inline">{\mathsf{A}}^{\mathsf{H}}</span> geeft <span class="math inline">{\mathsf{A}} = {\mathsf{P}}{\mathsf{U}}^{\mathsf{H}}</span></p>
+</div>
+</section>
+<section id="isometrische-benadering" class="level2 smaller scrollable">
+<h2 class="smaller scrollable anchored" data-anchor-id="isometrische-benadering">Isometrische benadering</h2>
+<div class="vfr-box vfr-propositie">
+<p><span class="vfr-box-label"><strong>Propositie 7.15.</strong></span> Gegeven <span class="math inline">{\mathsf{A}} \in {\mathbb{F}}^{m \times n}</span> met <span class="math inline">m \geq n</span>: de isometrische matrix <span class="math inline">{\mathsf{B}}</span> die <span class="math inline">{\left\lVert{\mathsf{A}}-{\mathsf{B}}\right\rVert}_{\text{F}}</span> minimaliseert, is de isometrische factor in de polaire decompositie van <span class="math inline">{\mathsf{A}}</span>: <span class="math display">\boxed{{\mathsf{B}} = {\mathsf{U}} = {\mathsf{U}}_n{\mathsf{V}}_n^{{\mathsf{H}}}}</span></p>
+</div>
+<div class="vfr-box vfr-opmerking">
+<p><span class="vfr-box-label"><strong>Opmerking 7.38.</strong></span> Fout: <span class="math inline">{\left\lVert{\mathsf{A}}-{\mathsf{B}}\right\rVert}_{\text{F}} = {\left\lVert{\mathsf{P}}-{\mathsf{I}}\right\rVert}_{\text{F}} = \left(\sum_i (\sigma_i - 1)^2\right)^{1/2}</span></p>
+</div>
+<div class="vfr-box vfr-opmerking">
+<p><span class="vfr-box-label"><strong>Opmerking 7.39.</strong></span> Gebruik: <span class="math inline">{\mathsf{A}}</span> hoort unitair of isometrisch te zijn, maar bevat ruis of benaderingsfouten <span class="math inline">\Rightarrow</span> vervang <span class="math inline">{\mathsf{A}}</span> door zijn isometrische factor: de beste exact isometrische benadering</p>
+</div>
 </section>
 </section>
 <section id="bilineaire-en-kwadratische-vormen-herbekeken" class="level1">
 <h1>Bilineaire en kwadratische vormen herbekeken</h1>
 <section id="matrixcongruentie" class="level2 smaller">
 <h2 class="smaller anchored" data-anchor-id="matrixcongruentie">Matrixcongruentie</h2>
-<ul>
-<li><p>Matrixgelijkvormigheid: <span class="math inline">{\mathsf{\tilde{A}}}={\mathsf{T}}{\mathsf{A}}{\mathsf{T}}^{-1}</span></p>
-<p><span class="math inline">\rightarrow</span> behoudt spectrum, determinant, spoor, rang, …</p>
-<p><span class="math inline">\rightarrow</span> canonische vorm: Jordan</p></li>
-<li><p>Matrixcongruentie: <span class="math inline">{\mathsf{\tilde{C}}} = {\mathsf{T}}^{-{\mathsf{H}}} {\mathsf{C}} {\mathsf{T}}^{-1}</span></p>
-<p><span class="math inline">\rightarrow</span> behoudt spectrum etc niet, behoudt wel rang en nulliteit</p>
-<p><span class="math inline">\rightarrow</span> canonische vorm: ?</p></li>
-<li><p>Unitair: <span class="math inline">{\mathsf{\tilde{A}}} = {\mathsf{U}} {\mathsf{A}} {\mathsf{U}}^{{\mathsf{H}}}</span> met <span class="math inline">{\mathsf{U}}^{\mathsf{H}}{\mathsf{U}}={\mathsf{I}}</span></p>
-<p><span class="math inline">\rightarrow</span> zowel gelijkvormig als congruent: <span class="math inline">{\mathsf{U}}^{-1}={\mathsf{U}}^{\mathsf{H}}</span> en dus <span class="math inline">{\mathsf{U}}={\mathsf{U}}^{-H}</span></p>
-<p><span class="math inline">\rightarrow</span> canonische vorm: Schur (=diagonaal voor normale <span class="math inline">{\mathsf{A}}</span>)</p></li>
-</ul>
+<p>Hoe transformeert de matrixrepresentatie onder een basistransformatie <span class="math inline">{\mathsf{T}}</span>?</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 18%">
+<col style="width: 27%">
+<col style="width: 31%">
+<col style="width: 24%">
+</colgroup>
+<thead>
+<tr class="header">
+<th></th>
+<th><strong>transformatie</strong></th>
+<th><strong>behoudt</strong></th>
+<th><strong>canonische vorm</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Gelijkvormig</strong><br><span style="color: grey; font-size: 85%">lineaire afbeelding</span></td>
+<td><span class="math inline">\tilde{{\mathsf{A}}}={\mathsf{T}}{\mathsf{A}}{\mathsf{T}}^{-1}</span></td>
+<td>spectrum, determinant, spoor, rang, …</td>
+<td>Jordan</td>
+</tr>
+<tr class="even">
+<td><strong>Congruent</strong><br><span style="color: grey; font-size: 85%">bilineaire vorm</span></td>
+<td><span class="math inline">\tilde{{\mathsf{C}}} = {\mathsf{T}}^{-{\mathsf{H}}} {\mathsf{C}} {\mathsf{T}}^{-1}</span></td>
+<td>rang en nulliteit, <strong>niet</strong> het spectrum</td>
+<td>?</td>
+</tr>
+<tr class="odd">
+<td><strong>Unitair</strong><br><span style="color: grey; font-size: 85%"><span class="math inline">{\mathsf{U}}^{-1} = {\mathsf{U}}^{\mathsf{H}}</span></span></td>
+<td><span class="math inline">\tilde{{\mathsf{A}}} = {\mathsf{U}} {\mathsf{A}} {\mathsf{U}}^{{\mathsf{H}}}</span></td>
+<td>beide: gelijkvormig én congruent</td>
+<td>Schur (diagonaal<br>voor normale <span class="math inline">{\mathsf{A}}</span>)</td>
+</tr>
+</tbody>
+</table>
 </section>
 <section id="kwadratische-en-symmetrische-bilineaire-vormen" class="level2 smaller scrollable">
 <h2 class="smaller scrollable anchored" data-anchor-id="kwadratische-en-symmetrische-bilineaire-vormen">Kwadratische en symmetrische bilineaire vormen</h2>
-<p>We beperken ons nu tot reële bilineaire vormen <span class="math inline">B:V \times V \to {\mathbb{R}}</span> (met <span class="math inline">V</span> een reële vectorruimte), die bovendien symmetrisch worden verondersteld (bijvoorbeeld omdat ze geassocieerd zijn aan een kwadratische vorm).</p>
+<p><strong>Vanaf nu</strong>: reële, symmetrische bilineaire vormen <span class="math inline">B:V \times V \to {\mathbb{R}}</span><br>
+<span style="color: grey">(<span class="math inline">V</span> een reële vectorruimte; bijvoorbeeld geassocieerd aan een kwadratische vorm)</span></p>
+<p>Matrixrepresentatie: een reële, symmetrische matrix <span class="math inline">{\mathsf{B}} = {\mathsf{B}}^{\mathsf{T}}</span></p>
 <ul>
-<li><p>Matrixrepresentatie is reële, symmetrische matrix <span class="math inline">{\mathsf{B}} = {\mathsf{B}}^{\mathsf{T}}</span></p>
-<ul>
-<li>hermitisch en dus reële eigenwaarden</li>
-<li>eigenvectoren van reële matrix horende bij reële eigenwaarden kunnen reëel worden gekozen</li>
-<li>eigenvectoren van normale matrix kunnen orthonormaal worden gekozen</li>
+<li>hermitisch <span class="math inline">\Rightarrow</span> reële eigenwaarden</li>
+<li>reële matrix met reële eigenwaarden <span class="math inline">\Rightarrow</span> eigenvectoren reëel te kiezen</li>
+<li>normaal <span class="math inline">\Rightarrow</span> eigenvectoren orthonormaal te kiezen</li>
 </ul>
-<p><span class="math inline">\Rightarrow {\mathsf{B}} = {\mathsf{Q}} {\mathsf{D}} {\mathsf{Q}}^{\mathsf{T}}</span></p>
-<p>waarbij we de eigenwaarden kunnen sorteren zodat we eerst de positieve eigenwaarden, dan de negatieve eigenwaarden en dan de eigenwaarden nul hebben.</p>
-<p>We kunnen deze vorm nog verder reduceren, aangezien matrixcongruentie niet beperkt is tot <span class="math inline">{\mathsf{Q}}</span> unitair/orthogonaal.</p></li>
-</ul>
+<p><span class="math display">\boxed{{\mathsf{B}} = {\mathsf{Q}} {\mathsf{D}} {\mathsf{Q}}^{\mathsf{T}}, \qquad {\mathsf{Q}} \in \mathop{\mathrm{O}}(n)}</span> met de eigenwaarden gesorteerd: eerst de positieve, dan de negatieve, dan de nullen</p>
+<p><strong>Verder</strong>: congruentie is niet beperkt tot orthogonale <span class="math inline">{\mathsf{Q}}</span> <span class="math inline">\rightarrow</span> nog eenvoudigere vorm mogelijk</p>
 </section>
-<section id="kwadratische-en-symmetrische-bilineaire-vormen-1" class="level2 smaller">
-<h2 class="smaller anchored" data-anchor-id="kwadratische-en-symmetrische-bilineaire-vormen-1">Kwadratische en symmetrische bilineaire vormen</h2>
-<ul>
-<li><p>Gegeven <span class="math inline">{\mathsf{B}} = {\mathsf{Q}}{\mathsf{D}}{\mathsf{Q}}^{\mathsf{T}}</span></p>
-<p>Met <span class="math inline">\boldsymbol{q}_k</span> de <span class="math inline">k</span>de kolom van <span class="math inline">{\mathsf{Q}}</span> en <span class="math inline">\boldsymbol{v}_k</span> de <span class="math inline">k</span>de kolom van een nieuwe matrix <span class="math inline">{\mathsf{V}}</span>:</p>
-<p><span class="math inline">\rightarrow</span> <span class="math inline">\boldsymbol{v}_k = \begin{cases} {\left\lvert D_{kk}\right\rvert}^{-1/2} \boldsymbol{q}_k,&amp; D_{kk}\neq 0\\ \boldsymbol{q}_k,&amp; D_{kk}=0 \end{cases}</span></p>
-<p><span class="math inline">\Rightarrow{\mathsf{V}}^{\mathsf{T}}{\mathsf{B}} {\mathsf{V}} = \mathrm{diag}(\underbrace{+1,\ldots,+1}_{n_+\ \text{times}}, \underbrace{-1,\ldots,-1}_{n_-\ \text{times}}, \underbrace{0,\ldots,0}_{n_0\ \text{times}})</span></p>
-<p>Terminologie:</p>
-<ul>
-<li><span class="math inline">n_0 = \mathop{\mathrm{nullity}}({\mathsf{B}})</span>, <span class="math inline">n_+ + n_- = \mathop{\mathrm{rank}}({\mathsf{B}})</span></li>
-<li><span class="math inline">(n_+, n_-, n_0)</span>: traagheid(sindices) / “inertia”</li>
-<li><span class="math inline">n_+</span>: positieve traagheidsindex, <span class="math inline">n_-</span>: negatieve traagheidsindex</li>
-<li><span class="math inline">n_+-n_-</span>: signatuur</li>
-</ul></li>
-</ul>
+<section id="kwadratische-en-symmetrische-bilineaire-vormen-signatuur" class="level2 smaller scrollable">
+<h2 class="smaller scrollable anchored" data-anchor-id="kwadratische-en-symmetrische-bilineaire-vormen-signatuur">Kwadratische en symmetrische bilineaire vormen: signatuur</h2>
+<div class="vfr-box vfr-propositie">
+<p><span class="vfr-box-label"><strong>Propositie.</strong></span> De matrix <span class="math inline">{\mathsf{B}}</span> van een symmetrische bilineaire vorm is congruent met de canonische vorm <span class="math display">{\mathsf{V}}^{\mathsf{T}}{\mathsf{B}} {\mathsf{V}} = \mathrm{diag}(\underbrace{+1,\ldots,+1}_{n_+\ \text{keer}}, \underbrace{-1,\ldots,-1}_{n_-\ \text{keer}}, \underbrace{0,\ldots,0}_{n_0\ \text{keer}})</span> Het drietal <span class="math inline">(n_+, n_-, n_0)</span> heet de <strong>traagheid</strong> (inertia) of <strong>signatuur</strong> van <span class="math inline">{\mathsf{B}}</span>.</p>
+</div>
+<p><strong>Waarom</strong>: herschaal de kolommen <span class="math inline">\boldsymbol{q}_k</span> van <span class="math inline">{\mathsf{Q}}</span> in <span class="math inline">{\mathsf{B}} = {\mathsf{Q}}{\mathsf{D}}{\mathsf{Q}}^{\mathsf{T}}</span>: <span class="math inline">\boldsymbol{v}_k = {\left\lvert D_{kk}\right\rvert}^{-1/2} \boldsymbol{q}_k</span> als <span class="math inline">D_{kk} \neq 0</span>, anders <span class="math inline">\boldsymbol{v}_k = \boldsymbol{q}_k</span></p>
+<p><strong>Terminologie</strong></p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 20%">
+<col style="width: 80%">
+</colgroup>
+<tbody>
+<tr class="odd">
+<td><span class="math inline">n_0</span></td>
+<td><span class="math inline">= \mathop{\mathrm{nullity}}({\mathsf{B}})</span>, en <span class="math inline">n_+ + n_- = \mathop{\mathrm{rank}}({\mathsf{B}})</span></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">n_+</span>, <span class="math inline">n_-</span></td>
+<td>positieve en negatieve traagheidsindex</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">n_+ - n_-</span></td>
+<td>signatuur (in de theorie van kwadratische vormen)</td>
+</tr>
+</tbody>
+</table>
 </section>
-<section id="kwadratische-en-symmetrische-bilineaire-vormen-2" class="level2 smaller">
-<h2 class="smaller anchored" data-anchor-id="kwadratische-en-symmetrische-bilineaire-vormen-2">Kwadratische en symmetrische bilineaire vormen</h2>
-<ul>
-<li><p>Gegeven <span class="math inline">\Rightarrow{\mathsf{V}}^{\mathsf{T}}{\mathsf{B}} {\mathsf{V}} = \mathrm{diag}(\underbrace{+1,\ldots,+1}_{n_+\ \text{times}}, \underbrace{-1,\ldots,-1}_{n_-\ \text{times}}, \underbrace{0,\ldots,0}_{n_0\ \text{times}})</span></p>
-<ul>
-<li>De basistransformatie <span class="math inline">{\mathsf{V}}</span> is verre van uniek (arbitraire orthogonale transformaties binnen de kolommen geassocieerd aan <span class="math inline">+1</span>, deze geassocieerd aan <span class="math inline">-1</span> en deze geassocieerd aan <span class="math inline">0</span> zijn mogelijk)</li>
-<li>De traagheidsindices zijn uniek en bepalen dus de canonische vorm van alle matrices gerelateerd via congruentie, via onderstaande stelling:</li>
-</ul></li>
-<li><p><strong>Traagheidswet van Sylvester</strong>: Twee symmetrische matrices <span class="math inline">{\mathsf{B}},{\mathsf{\tilde{B}}} \in {\mathbb{R}}^{n \times n}</span> zijn congruent als en slechts als hetzelfde aantal positieve, negatieve en nul eigenwaarden hebben.</p></li>
-</ul>
+<section id="kwadratische-en-symmetrische-bilineaire-vormen-traagheidswet" class="level2 smaller">
+<h2 class="smaller anchored" data-anchor-id="kwadratische-en-symmetrische-bilineaire-vormen-traagheidswet">Kwadratische en symmetrische bilineaire vormen: traagheidswet</h2>
+<p>De basistransformatie <span class="math inline">{\mathsf{V}}</span> is verre van uniek: bv. willekeurige orthogonale transformaties binnen de kolommen bij <span class="math inline">+1</span>, bij <span class="math inline">-1</span> en bij <span class="math inline">0</span>. De traagheid is wél uniek, en bepaalt dus de canonische vorm:</p>
+<div class="vfr-box vfr-stelling">
+<p><span class="vfr-box-label"><strong>Stelling (Traagheidswet van Sylvester).</strong></span> Twee symmetrische matrices <span class="math inline">{\mathsf{B}},\tilde{{\mathsf{B}}} \in {\mathbb{R}}^{n \times n}</span> hebben hetzelfde aantal positieve, negatieve en nul eigenwaarden als en slechts als ze congruent zijn, d.w.z. als en slechts als er een <span class="math inline">{\mathsf{T}} \in \mathop{\mathrm{GL}}(n, {\mathbb{R}})</span> bestaat met <span class="math inline">{\mathsf{B}} = {\mathsf{T}}^{\mathsf{T}}\tilde{{\mathsf{B}}} {\mathsf{T}}</span>.</p>
+</div>
 </section>
-<section id="kwadratische-en-symmetrische-bilineaire-vormen-3" class="level2 smaller scrollable">
-<h2 class="smaller scrollable anchored" data-anchor-id="kwadratische-en-symmetrische-bilineaire-vormen-3">Kwadratische en symmetrische bilineaire vormen</h2>
-<ul>
-<li>Praktisch algoritme voor canonische vorm:
-<ul>
-<li><p>eigenwaarden niet van belang, dus misschien mogelijk in eindig aantal stappen</p></li>
-<li><p><span class="math inline">{\mathsf{B}} = {\mathsf{L}}{\mathsf{D}}{\mathsf{L}}^{\mathsf{T}}</span> en absorbeer opnieuw de vierkantswortel van de absolute waarde van de niet-nul elementen van <span class="math inline">{\mathsf{D}}</span> in de kolommen van <span class="math inline">{\mathsf{L}}</span></p></li>
-<li><p>dit komt neer op Lagrange-reductie van de kwadratische vorm:</p>
-<p><span class="math inline">q(\boldsymbol{x})=\boldsymbol{x}^{\mathsf{T}}{\mathsf{B}} \boldsymbol{x} = \sum_{i,j=1}^{n} B_{ij} x^i x^j = B_{11} (x^1)^2 + 2 B_{12} x^1x^2 + \dots</span></p>
-<ul>
-<li>Vervolledig alle termen met <span class="math inline">x^1</span> tot een kwadraat <span class="math inline">\mathop{\mathrm{sgn}}(B_{11}) (\sqrt{{\left\lvert B_{11}\right\rvert}} x^1 + \sum_{k=2}^n B_{1k}/\sqrt{{\left\lvert B_{11}\right\rvert}} x^k)^2</span></li>
-<li>Vervolledig alle overblijvende termen met <span class="math inline">(x^2)</span> tot een kwadraat</li>
+<section id="kwadratische-en-symmetrische-bilineaire-vormen-algoritme" class="level2 smaller scrollable">
+<h2 class="smaller scrollable anchored" data-anchor-id="kwadratische-en-symmetrische-bilineaire-vormen-algoritme">Kwadratische en symmetrische bilineaire vormen: algoritme</h2>
+<p><strong>Praktisch</strong>: de eigenwaarden zijn niet nodig, dus misschien kan het in een eindig aantal stappen: <span class="math inline">{\mathsf{B}} = {\mathsf{L}}{\mathsf{D}}{\mathsf{L}}^{\mathsf{T}}</span>, en absorbeer <span class="math inline">{\left\lvert D_{kk}\right\rvert}^{1/2}</span> (<span class="math inline">D_{kk} \neq 0</span>) in de kolommen van <span class="math inline">{\mathsf{L}}</span></p>
+<p>Dit is <strong>Lagrange-reductie</strong> van de kwadratische vorm <span class="math display">q(\boldsymbol{x})=\boldsymbol{x}^{\mathsf{T}}{\mathsf{B}} \boldsymbol{x} = \sum_{i,j=1}^{n} B_{ij} x^i x^j = B_{11} (x^1)^2 + 2 B_{12} x^1x^2 + \dots</span></p>
+<ol type="1">
+<li>vervolledig alle termen met <span class="math inline">x^1</span> tot een kwadraat: <span class="math display">\mathop{\mathrm{sgn}}(B_{11}) \left(\sqrt{{\left\lvert B_{11}\right\rvert}}\, x^1 + \sum_{k=2}^n \frac{B_{1k}}{\sqrt{{\left\lvert B_{11}\right\rvert}}} x^k\right)^2</span></li>
+<li>vervolledig alle overblijvende termen met <span class="math inline">x^2</span> tot een kwadraat</li>
 <li>…</li>
-</ul></li>
-<li><p>Voor <span class="math inline">n = n_+</span> (positief definiete vorm): <span class="math inline">{\mathsf{B}} = {\mathsf{L}}{\mathsf{L}}^{\mathsf{T}}</span> met <span class="math inline">{\mathsf{L}}</span> benedendriehoeksmatrix</p>
-<p><span class="math inline">\rightarrow</span> gekend als <strong>Cholesky decompositie</strong></p></li>
-</ul></li>
-</ul>
-</section>
-</section>
-<section id="singulaire-waardendecompositie-en-polaire-decompositie" class="level1">
-<h1>Singulaire waardendecompositie en polaire decompositie</h1>
-<section id="unitaire-equivalentie" class="level2 smaller">
-<h2 class="smaller anchored" data-anchor-id="unitaire-equivalentie">Unitaire equivalentie</h2>
-<ul>
-<li><p>Matrixnormen gebaseerd op Euclidische norm:</p>
-<ul>
-<li><p>Geinduceerde 2-norm voor matrix <span class="math inline">{\mathsf{A}} \in {\mathbb{F}}^{m \times n}</span>:</p>
-<p><span class="math display">{\left\lVert{\mathsf{A}}\right\rVert}_{2\to 2} = \max \{ {\left\lVert{\mathsf{A}}\boldsymbol{v}\right\rVert}_2 | \boldsymbol{v}\in {\mathbb{F}}^{n}\ \text{with}\ {\left\lVert\boldsymbol{v}\right\rVert}_2=1\}</span></p></li>
-<li><p>Frobeniusnorm <span class="math inline">{\left\lVert{\mathsf{A}}\right\rVert}_{\text{F}} = \sqrt{\mathop{\mathrm{tr}}({\mathsf{A}}^{\mathsf{H}}{\mathsf{A}})}</span></p></li>
-</ul></li>
-<li><p>Unitaire equivalentie: <span class="math display">{\mathsf{\tilde{A}}} = {\mathsf{U}}^{\mathsf{H}}{\mathsf{A}}{\mathsf{V}}\ \text{met}\ {\mathsf{U}} \in \mathop{\mathrm{U}}(m), {\mathsf{V}} \in \mathop{\mathrm{U}}(n)</span></p>
-<ul>
-<li><span class="math inline">{\left\lVert{\mathsf{A}}\right\rVert}_{2\to 2} = {\left\lVert\tilde{{\mathsf{A}}}\right\rVert}_{2 \to 2}</span></li>
-<li><span class="math inline">{\left\lVert{\mathsf{A}}\right\rVert}_{\text{F}} = {\left\lVert\tilde{{\mathsf{A}}}\right\rVert}_{\text{F}}</span></li>
-</ul>
-<p><span class="math inline">\rightarrow</span> canonisch vorm?</p></li>
-</ul>
-</section>
-<section id="singuliere-waardendecompositie" class="level2 smaller">
-<h2 class="smaller anchored" data-anchor-id="singuliere-waardendecompositie">Singuliere waardendecompositie</h2>
-<p>Singuliere waardendecompositie van een matrix <span class="math inline">{\mathsf{A}}\in{\mathbb{F}}^{m \times n}</span>: <span class="math display">{\mathsf{A}} = {\mathsf{U}} {\mathsf{S}} {\mathsf{V}}^{\mathsf{H}}</span></p>
-<p>met hierin</p>
-<ul>
-<li><span class="math inline">{\mathsf{U}}\in \mathop{\mathrm{U}}(m)</span></li>
-<li><span class="math inline">{\mathsf{V}}\in \mathop{\mathrm{U}}(n)</span></li>
-<li><span class="math inline">{\mathsf{S}} = {\mathbb{F}}^{m \times n}</span> met <span class="math inline">{\mathsf{S}}^i_{\ j} = (\sigma_i) \delta^i_{\ j}</span> en :
-<ul>
-<li><span class="math inline">\sigma_1 \geq \sigma_2 \geq \ldots \geq \sigma_p &gt; \sigma_{p+1} = \ldots \sigma_{\min(m,n)} = 0</span></li>
-<li><span class="math inline">p \leq \min(m,n)</span></li>
-</ul></li>
-</ul>
-</section>
-<section id="singuliere-waardendecompositie-1" class="level2 smaller">
-<h2 class="smaller anchored" data-anchor-id="singuliere-waardendecompositie-1">Singuliere waardendecompositie</h2>
-<p>Singuliere waardendecompositie van een matrix <span class="math inline">{\mathsf{A}}\in{\mathbb{F}}^{m \times n}</span>: <span class="math display">{\mathsf{A}} = {\mathsf{U}} {\mathsf{S}} {\mathsf{V}}^{\mathsf{H}}</span></p>
-<p>Bewijs:</p>
-<ul>
-<li>diagonaliseer positief semidefiniete matrix <span class="math inline">{\mathsf{A}}^{\mathsf{H}}{\mathsf{A}} = {\mathsf{V}}{\mathsf{\Lambda}} {\mathsf{V}}^{\mathsf{H}}</span>:
-<ul>
-<li><span class="math inline">\Lambda^i_{\ j} = \lambda_i \delta^i_{\ j}</span> met <span class="math inline">\lambda_i \geq 0 \Rightarrow \sigma_i = \sqrt{\lambda_i}</span></li>
-</ul></li>
-<li>bereken <span class="math inline">{\mathsf{A}}{\mathsf{V}} = {\mathsf{Q}} {\mathsf{R}}</span> met <span class="math inline">{\mathsf{Q}} \in \mathop{\mathrm{U}}(m)</span>, <span class="math inline">{\mathsf{R}} \in {\mathbb{F}}^{m \times n}</span> en bovendriehoeksmatrix
-<ul>
-<li><p><span class="math inline">\Rightarrow {\mathsf{A}}^{\mathsf{H}}{\mathsf{A}} = {\mathsf{R}}^{\mathsf{H}}{\mathsf{R}} = {\mathsf{\Lambda}}</span> (diagonaal)</p></li>
-<li><p><span class="math inline">\Rightarrow</span> <span class="math inline">{\mathsf{R}}</span> is diagonaal met <span class="math inline">{\left\lvert R^i_{\ i}\right\rvert}^2 = \sigma_i^2</span>.</p></li>
-<li><p>Absorbeer fases van <span class="math inline">{\mathsf{R}}^i_{\ i}</span> in <span class="math inline">{\mathsf{Q}}</span>: <span class="math inline">{\mathsf{R}} \to {\mathsf{S}}, {\mathsf{Q}}\to {\mathsf{U}}</span></p></li>
-</ul></li>
-<li><span class="math inline">{\mathsf{A}}{\mathsf{A}}^{\mathsf{H}}= {\mathsf{U}} {\mathsf{S}}{\mathsf{S}}^{\mathsf{H}}{\mathsf{U}}^{\mathsf{H}}</span>: zelfde niet-nul eigenwaarden als <span class="math inline">{\mathsf{A}}^{\mathsf{H}}{\mathsf{A}}</span></li>
-</ul>
-</section>
-<section id="singuliere-waardendecompositie-eigenschappen" class="level2 smaller scrollable">
-<h2 class="smaller scrollable anchored" data-anchor-id="singuliere-waardendecompositie-eigenschappen">Singuliere waardendecompositie: eigenschappen</h2>
-<ul>
-<li><p>Notatie: <span class="math inline">\boldsymbol{u}_i</span> en <span class="math inline">\boldsymbol{v}_i</span> de <span class="math inline">i</span>de kolom uit <span class="math inline">{\mathsf{U}}</span> en <span class="math inline">{\mathsf{V}}</span></p></li>
-<li><p>Notatie: <span class="math inline">{\mathsf{U}}_k \in {\mathbb{F}}^{m \times k}</span> en <span class="math inline">{\mathsf{V}}_k \in {\mathbb{F}}^{n \times k}</span> de restrictie van <span class="math inline">{\mathsf{U}}</span> en <span class="math inline">{\mathsf{V}}</span> tot de eerste <span class="math inline">k</span> kolommen, en <span class="math inline">{\mathsf{S}}_{k} \in {\mathbb{F}}^{k \times k}</span> de eerste <span class="math inline">k</span> kolommen en rijen van <span class="math inline">{\mathsf{S}}</span></p></li>
-<li><p><span class="math inline">{\mathsf{A}} = \underbrace{{\mathsf{U}} {\mathsf{S}} {\mathsf{V}}^{\mathsf{H}}}_{\text{"full SVD"}} = \underbrace{{\mathsf{U}}_{\min(m,n)} {\mathsf{S}}_{\min(m,n)} {\mathsf{V}}_{\min(m,n)}^{\mathsf{H}}}_{\text{"thin SVD"}} = \underbrace{{\mathsf{U}}_p {\mathsf{S}}_p {\mathsf{V}}_p}_{\text{"compact SVD"}}</span></p>
-<p>met <span class="math inline">p</span> de laatste niet-nul singuliere waarde <span class="math inline">\sigma_p</span> (zie volgende: <span class="math inline">p=\mathop{\mathrm{rank}}({\mathsf{A}})</span>)</p></li>
-<li><p><span class="math inline">{\mathsf{A}}{\mathsf{V}}_k = {\mathsf{U}}_k {\mathsf{S}}_k</span> en <span class="math inline">{\mathsf{A}}^{\mathsf{H}}{\mathsf{U}}_k = {\mathsf{V}}_k {\mathsf{S}}_k</span> voor alle <span class="math inline">k=1,\ldots,\min(m,n)</span></p>
-<p><span class="math inline">\Leftrightarrow {\mathsf{A}} \boldsymbol{v}_i = \sigma_i \boldsymbol{u}_i</span> en <span class="math inline">{\mathsf{A}}^{\mathsf{H}}\boldsymbol{u}_i = \sigma_i \boldsymbol{v}_i</span> voor alle <span class="math inline">i=1,\ldots, \min(m,n)</span></p></li>
-<li><p>Uniciteit van SVD:</p>
-<ul>
-<li><p>Singuliere waarden: uniek</p></li>
-<li><p>Singuliere vectoren: <span class="math inline">{\mathsf{U}}_p \to {\mathsf{U}}_p{\mathsf{Q}}</span> en <span class="math inline">{\mathsf{V}}_\to {\mathsf{V}}_p{\mathsf{Q}}</span> met <span class="math inline">{\mathsf{Q}} \in \mathop{\mathrm{U}}(p)</span> en <span class="math inline">[{\mathsf{Q}},{\mathsf{S}}]=0</span>. Indien geen degeneraties in <span class="math inline">{\mathsf{S}}</span>: <span class="math inline">{\mathsf{Q}}</span> diagonaal met complexe fasen op diagonaal</p></li>
-<li><p>Op de kolommen <span class="math inline">p+1,\ldots,m</span> van <span class="math inline">{\mathsf{U}}</span> en <span class="math inline">p+1,\ldots,n</span> van <span class="math inline">{\mathsf{V}}</span> kunnen onafhankelijke unitaire rotaties worden uitgevoerd</p></li>
-</ul></li>
-</ul>
-</section>
-<section id="singuliere-waardendecompositie-algoritme" class="level2 smaller">
-<h2 class="smaller anchored" data-anchor-id="singuliere-waardendecompositie-algoritme">Singuliere waardendecompositie: Algoritme</h2>
-<ul>
-<li><p>Bewijs: lijkt constructief, maar niet nauwkeurig!</p>
-<ul>
-<li>eigenwaarden van <span class="math inline">{\mathsf{A}}^{\mathsf{H}}{\mathsf{A}}</span> = singuliere waarden kwadraat</li>
-<li><span class="math inline">\sigma_i^2 + \epsilon \Rightarrow \sigma_i + \mathop{\mathrm{\mathscr{O}}}(\epsilon/\sigma_i)</span></li>
-</ul></li>
-<li><p>Voor <span class="math inline">{\mathsf{A}} \boldsymbol{v}_i = \sigma_i \boldsymbol{u}_i</span> en <span class="math inline">{\mathsf{A}}^{\mathsf{H}}\boldsymbol{u}_i = \sigma_i \boldsymbol{v}_i</span>, voor vierkante <span class="math inline">{\mathsf{A}} \in {\mathbb{F}}^{n\times n}</span>:</p>
-<p><span class="math display"> \begin{bmatrix}
-      {\mathsf{O}}&amp; {\mathsf{A}} \\ {\mathsf{A}}^{\mathsf{H}}&amp; {\mathsf{O}}
-  \end{bmatrix}\left(\frac{1}{\sqrt{2}}\begin{bmatrix}
-      {\mathsf{U}} &amp; {\mathsf{U}} \\ {\mathsf{V}}  &amp; -{\mathsf{V}}
-  \end{bmatrix}\right)
-= \left(\frac{1}{\sqrt{2}}\begin{bmatrix}
-      {\mathsf{U}} &amp; {\mathsf{U}} \\ {\mathsf{V}}  &amp; -{\mathsf{V}}
-  \end{bmatrix}\right)
-\begin{bmatrix}
-      {\mathsf{S}} &amp; {\mathsf{O}}\\ {\mathsf{O}}&amp; -{\mathsf{S}}
-  \end{bmatrix}</span></p>
-<p><span class="math inline">{\mathsf{A}}\in {\mathbb{F}}^{m\times n}</span> met <span class="math inline">m &gt; n</span>: <span class="math inline">{\mathsf{A}} = {\mathsf{Q}} {\mathsf{R}} = ({\mathsf{Q}} {\mathsf{U}}_{{\mathsf{R}}}) {\mathsf{S}}_{{\mathsf{R}}} {\mathsf{V}}_{{\mathsf{R}}}^{\mathsf{H}}=  {\mathsf{U}}_{{\mathsf{A}}}{\mathsf{S}}_{{\mathsf{A}}} {\mathsf{V}}_{{\mathsf{A}}}^{\mathsf{H}}</span></p></li>
-</ul>
-</section>
-<section id="verband-met-rang-norm-en-conditiegetal" class="level2 smaller scrollable">
-<h2 class="smaller scrollable anchored" data-anchor-id="verband-met-rang-norm-en-conditiegetal">Verband met rang, norm en conditiegetal:</h2>
-<p>Voor matrix <span class="math inline">{\mathsf{A}} = {\mathsf{U}} {\mathsf{S}}{\mathsf{V}}^{\mathsf{H}}\in {\mathbb{F}}^{m \times n}</span>:</p>
-<ul>
-<li><p><span class="math inline">\boldsymbol{w} \in \mathop{\mathrm{im}}({\mathsf{A}})</span>: <span class="math inline">\boldsymbol{w}</span> is lineaire combinatie van eerste <span class="math inline">p</span> kolommen van <span class="math inline">{\mathsf{U}}</span></p>
-<p><span class="math inline">\Rightarrow \mathop{\mathrm{rank}}({\mathsf{A}}) = p \leq \min(m,n)</span> (aantal niet-nul singuliere waarden)</p>
-<ul>
-<li><span class="math inline">\mathop{\mathrm{rank}}({\mathsf{A}})=\min(m,n)</span>: volle rang</li>
-<li><span class="math inline">\mathop{\mathrm{rank}}({\mathsf{A}})&lt;\min(m,n)</span>: rang-deficiete matrix</li>
-</ul></li>
-<li><p><span class="math inline">{\mathsf{A}} \boldsymbol{v}_i=0</span> voor <span class="math inline">i=p+1,\ldots,n</span>:</p>
-<p><span class="math inline">\Rightarrow</span> deze kolommen vormen orthonormale basis voor <span class="math inline">\mathop{\mathrm{ker}}({\mathsf{A}})</span></p></li>
-<li><p>geïnduceerde norm <span class="math inline">{\left\lVert{\mathsf{A}}\right\rVert}_2 = \sigma_1</span></p></li>
-<li><p>Frobenius norm <span class="math inline">{\left\lVert{\mathsf{A}}\right\rVert}_{\text{F}} = \sqrt{\sum_{i=1}^p \sigma_i^2}</span></p></li>
-<li><p>voor inverteerbare (en dus vierkante volle-rang) <span class="math inline">{\mathsf{A}}\in{\mathbb{F}}^{n \times n}</span>: <span class="math inline">{\mathsf{A}}^{-1} = {\mathsf{V}} {\mathsf{S}}^{-1} {\mathsf{U}}^{\mathsf{H}}</span></p>
-<p><span class="math inline">\Rightarrow</span> conditiegetal (geassocieerd aan geïnduceerde <span class="math inline">2</span>-norm): <span class="math inline">\kappa({\mathsf{A}}) = \sigma_1/\sigma_n</span></p></li>
-</ul>
-</section>
-<section id="kleinste-kwadratenoplossing" class="level2 smaller scrollable">
-<h2 class="smaller scrollable anchored" data-anchor-id="kleinste-kwadratenoplossing">Kleinste kwadratenoplossing</h2>
-<p>Beschouw een lineair stelsel <span class="math inline">{\mathsf{A}}{\mathsf{x}} = {\mathsf{y}}</span> met <span class="math inline">{\mathsf{A}}\in{\mathbb{F}}^{m \times n}</span> en <span class="math inline">\mathop{\mathrm{nullity}}({\mathsf{A}}) \geq 0</span>:</p>
-<ul>
-<li>als <span class="math inline">\boldsymbol{y}\in \mathop{\mathrm{im}}({\mathsf{A}})</span>: oplossing bestaat, uniek als <span class="math inline">\mathop{\mathrm{nullity}}({\mathsf{A}})=0</span></li>
-<li>als <span class="math inline">\boldsymbol{y}\not\in \mathop{\mathrm{im}}({\mathsf{A}})</span>: kleinste kwadratenoplossing, uniek als <span class="math inline">\mathop{\mathrm{nullity}}({\mathsf{A}})=0</span></li>
-<li>generiek geval:
-<ul>
-<li><p>verzameling van alle kleinste kwadratenoplossingen: <span class="math inline">L = \{\boldsymbol{x} \in {\mathbb{F}}^n | {\left\lVert{\mathsf{A}}\boldsymbol{x} - \boldsymbol{y}\right\rVert}_2 = \min_{\boldsymbol{x}' \in {\mathbb{F}}^n} {\left\lVert{\mathsf{A}}\boldsymbol{x}' - \boldsymbol{y}\right\rVert}_2\}</span></p></li>
-<li><p>kleinste kwadratenoplossing met minimale norm (uniek): <span class="math inline">\boldsymbol{x}^\ast = \mathop{\mathrm{arg\ min}}_{\boldsymbol{x} \in L} {\left\lVert\boldsymbol{x}\right\rVert}</span></p>
-<p><span class="math display">\Rightarrow \boldsymbol{x}^\ast = \underbrace{{\mathsf{V}}_p {\mathsf{S}}_p^{-1} {\mathsf{U}}_p^{\mathsf{H}}}_{={\mathsf{A}}^+} \boldsymbol{y}</span></p></li>
-</ul></li>
-<li>Moore-Penrose pseudo-inverse gekarakteriseerd door
-<ul>
-<li><span class="math inline">{\mathsf{A}} {\mathsf{A}}^+ = {\mathsf{P}}_{\mathop{\mathrm{im}}({\mathsf{A}})}</span></li>
-<li><span class="math inline">{\mathsf{A}}^+ {\mathsf{A}} = {\mathsf{P}}_{\mathop{\mathrm{ker}}({\mathsf{A}})^\perp}</span></li>
-</ul></li>
-</ul>
-</section>
-<section id="laagste-rang-benadering" class="level2">
-<h2 class="anchored" data-anchor-id="laagste-rang-benadering">Laagste rang benadering</h2>
-<ul>
-<li><p>gegeven <span class="math inline">{\mathsf{A}} ={\mathsf{U}}{\mathsf{S}}{\mathsf{V}}^{\mathsf{H}}\in {\mathbb{F}}^{m\times n}</span></p></li>
-<li><p>vind matrix <span class="math inline">{\mathsf{B}}\in {\mathbb{F}}^{m \times n}</span> met <span class="math inline">\mathop{\mathrm{rank}}({\mathsf{B}}) \leq r</span> zodat <span class="math inline">{\left\lVert{\mathsf{A}}-{\mathsf{B}}\right\rVert}</span> minimaal is:</p></li>
-<li><p><strong>Eckart-Young-Mirsky theorema</strong>:</p>
-<p>oplossing <span class="math inline">{\mathsf{B}}= {\mathsf{U}}_r {\mathsf{S}}_r {\mathsf{V}}_r^{\mathsf{H}}</span></p>
-<p>(getruncteerde singulierenwaardendecompositie)</p>
-<ul>
-<li>voor <span class="math inline">{\left\lVert{\mathsf{A}}-{\mathsf{B}}\right\rVert}_{2 \times 2}</span></li>
-<li>ook voor <span class="math inline">{\left\lVert{\mathsf{A}}-{\mathsf{B}}\right\rVert}_{\text{F}}</span></li>
-</ul></li>
-</ul>
-</section>
-<section id="polaire-decompositie-en-isometrische-benadering" class="level2">
-<h2 class="anchored" data-anchor-id="polaire-decompositie-en-isometrische-benadering">Polaire decompositie en isometrische benadering</h2>
-<ul>
-<li><p>gegeven <span class="math inline">{\mathsf{A}} ={\mathsf{U}}_n{\mathsf{S}}_n{\mathsf{V}}_n^{\mathsf{H}}\in {\mathbb{F}}^{m\times n}</span> met <span class="math inline">m\geq n</span></p></li>
-<li><p><strong>polaire decompositie</strong> voor <span class="math inline">m \geq n</span>:</p>
-<p><span class="math inline">{\mathsf{A}} = {\mathsf{U}} {\mathsf{P}} = ({\mathsf{U}}_n {\mathsf{V}}_n^{\mathsf{H}}) ({\mathsf{V}}_n {\mathsf{S}}_n {\mathsf{V}}_n^{\mathsf{H}})</span></p>
-<p>met dus <span class="math inline">{\mathsf{U}}^{\mathsf{H}}{\mathsf{U}} = {\mathsf{I}}_n</span> en <span class="math inline">{\mathsf{P}}</span> positief (semi)definiet</p>
-<p><span class="math inline">\Rightarrow</span> veralgemeent <span class="math inline">z = {\mathrm{e}}^{{\mathrm{i}}\arg(z)} {\left\lvert z\right\rvert}</span></p></li>
-<li><p>vind isometrische matrix <span class="math inline">{\mathsf{B}}</span> waarvoor <span class="math inline">{\left\lVert{\mathsf{A}}-{\mathsf{B}}\right\rVert}</span> minimaal is</p>
-<p><span class="math inline">\Rightarrow {\mathsf{B}}= {\mathsf{U}}_n{\mathsf{V}}_n^{{\mathsf{H}}}</span> (als <span class="math inline">m\geq n</span> en voor <span class="math inline">{\left\lVert{\mathsf{A}}-{\mathsf{B}}\right\rVert}_{\text{F}}</span>)</p>
-<p>(bewijs niet te kennen)</p></li>
-</ul>
+</ol>
+<p><strong>Positief definiet</strong> (<span class="math inline">n_+ = n</span>): <span class="math inline">{\mathsf{B}} = {\mathsf{L}}{\mathsf{L}}^{\mathsf{T}}</span> met <span class="math inline">{\mathsf{L}}</span> benedendriehoeks: de <strong>Cholesky-decompositie</strong></p>
 
 
 </section>
