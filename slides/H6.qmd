@@ -141,8 +141,6 @@ Voldoen $(W, \chi)$ en $(W', \chi')$ beide, dan bestaat er een isomorfisme $\map
 :::
 
 * **Bewijs**: de universele eigenschap twee keer toepassen
-  * $\chi'$ is bilineair, dus $\chi' = \map{\phi} \circ \chi$ voor een lineaire $\map{\phi} : W \to W'$
-  * omgekeerd $\chi = \map{\phi}' \circ \chi'$, en dan volgt $\map{\phi}' = \map{\phi}^{-1}$
 * **Gevolg**: Def 6.0 hangt niet af van de basis
   * andere basissen: dezelfde universele eigenschap, dus een isomorfe ruimte
 * Het tensorproduct is dus "het" tensorproduct, op isomorfisme na
