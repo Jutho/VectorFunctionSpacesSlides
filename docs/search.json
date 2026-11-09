@@ -21,480 +21,452 @@
     "text": "Doel van dit hoofdstuk\nNieuw:\n\nMinimaalveelterm, Cayley-Hamiltontheorema\nNilpotente operatoren\nInvariante deelruimten en veralgemeende eigenruimten, Jordan-decompositie\nCompanion-matrix van een veelterm\nFuncties van operatoren\nToepassing: Lineaire dynamische systemen"
   },
   {
-    "objectID": "slides/H3.html#machten-en-veeltermen-1",
-    "href": "slides/H3.html#machten-en-veeltermen-1",
+    "objectID": "slides/H3.html#machten-en-veeltermen-3.1.1",
+    "href": "slides/H3.html#machten-en-veeltermen-3.1.1",
     "title": "Hoofdstuk 3 - Lineaire operatoren en eigenwaarden",
-    "section": "Machten en veeltermen",
-    "text": "Machten en veeltermen\nLineaire operator = endomorfisme: {\\hat{A}} \\in \\mathop{\\mathrm{End}}(V) = \\mathop{\\mathrm{Hom}}(V,V)\n\n\\mathop{\\mathrm{End}}(V) is een “associatieve algebra met eenheid” = “ring die een vectorruimte is”\n\n\nDefinitie 3.1. Machten: aangezien {\\hat{A}} een afbeelding (V \\to V) is, kunnen we composities nemen van {\\hat{A}} met zichzelf: {\\hat{A}}^n = \\underbrace{{\\hat{A}} \\circ {\\hat{A}} \\circ \\cdots \\circ {\\hat{A}}}_{\\text{$n$ keer}} \\quad \\text{en} \\quad {\\hat{A}}^0 = {\\hat{1}}_V\n\n\nDefinitie 3.2. Veeltermen: aangezien \\mathop{\\mathrm{End}}(V) ook een vectorruimte is, kunnen we lineaire combinaties nemen p({\\hat{A}}) = p_s {\\hat{A}}^s + p_{s-1} {\\hat{A}}^{s-1} + \\ldots + p_1 {\\hat{A}} + p_0 {\\hat{1}}_V \\in \\mathop{\\mathrm{End}}(V)"
+    "section": "Machten en veeltermen (3.1.1)",
+    "text": "Machten en veeltermen (3.1.1)\nLineaire operator = endomorfisme: {\\hat{A}} \\in \\mathop{\\mathrm{End}}(V) = \\mathop{\\mathrm{Hom}}(V,V)\n\n\\mathop{\\mathrm{End}}(V) is een “associatieve algebra met eenheid” = “ring die een vectorruimte is”\n\n\nDefinitie 3.1. Machten: aangezien {\\hat{A}} een afbeelding (V \\to V) is, kunnen we composities nemen van {\\hat{A}} met zichzelf: {\\hat{A}}^n = \\underbrace{{\\hat{A}} \\circ {\\hat{A}} \\circ \\cdots \\circ {\\hat{A}}}_{\\text{$n$ keer}} \\quad \\text{en} \\quad {\\hat{A}}^0 = {\\hat{1}}_V\n\n\nDefinitie 3.2. Veeltermen: aangezien \\mathop{\\mathrm{End}}(V) ook een vectorruimte is, kunnen we lineaire combinaties nemen p({\\hat{A}}) = p_s {\\hat{A}}^s + p_{s-1} {\\hat{A}}^{s-1} + \\ldots + p_1 {\\hat{A}} + p_0 {\\hat{1}}_V \\in \\mathop{\\mathrm{End}}(V)"
   },
   {
-    "objectID": "slides/H3.html#eigenschappen-van-veeltermen",
-    "href": "slides/H3.html#eigenschappen-van-veeltermen",
+    "objectID": "slides/H3.html#eigenschappen-van-veeltermen-3.1.1",
+    "href": "slides/H3.html#eigenschappen-van-veeltermen-3.1.1",
     "title": "Hoofdstuk 3 - Lineaire operatoren en eigenwaarden",
-    "section": "Eigenschappen van veeltermen",
-    "text": "Eigenschappen van veeltermen\n\nPropositie 3.1. Voor twee veeltermen p(x) en q(x) en {\\hat{A}}\\in \\mathop{\\mathrm{End}}(V) geldt [p({\\hat{A}}),q({\\hat{A}})] = p({\\hat{A}})q({\\hat{A}}) - q({\\hat{A}})p({\\hat{A}}) = {\\hat{0}}\n\n\nPropositie 3.2. Voor een veelterm p(x), een lineaire operator {\\hat{A}}\\in \\mathop{\\mathrm{End}}(V) en een lineaire transformatie (=inverteerbare lineaire afbeelding) {\\hat{T}} \\in \\mathop{\\mathrm{Hom}}(V,W) geldt \\underbrace{p({\\hat{T}} {\\hat{A}} {\\hat{T}}^{-1})}_{\\in \\mathop{\\mathrm{End}}(W)} = {\\hat{T}} \\underbrace{p({\\hat{A}})}_{\\in \\mathop{\\mathrm{End}}(V)} {\\hat{T}}^{-1}"
+    "section": "Eigenschappen van veeltermen (3.1.1)",
+    "text": "Eigenschappen van veeltermen (3.1.1)\n\nPropositie 3.1. Voor twee veeltermen p(x) en q(x) en {\\hat{A}}\\in \\mathop{\\mathrm{End}}(V) geldt [p({\\hat{A}}),q({\\hat{A}})] = p({\\hat{A}})q({\\hat{A}}) - q({\\hat{A}})p({\\hat{A}}) = {\\hat{0}}\n\n\nPropositie 3.2. Voor een veelterm p(x), een lineaire operator {\\hat{A}}\\in \\mathop{\\mathrm{End}}(V) en een lineaire transformatie (=inverteerbare lineaire afbeelding) {\\hat{T}} \\in \\mathop{\\mathrm{Hom}}(V,W) geldt \\underbrace{p({\\hat{T}} {\\hat{A}} {\\hat{T}}^{-1})}_{\\in \\mathop{\\mathrm{End}}(W)} = {\\hat{T}} \\underbrace{p({\\hat{A}})}_{\\in \\mathop{\\mathrm{End}}(V)} {\\hat{T}}^{-1}"
   },
   {
-    "objectID": "slides/H3.html#projectie-operator",
-    "href": "slides/H3.html#projectie-operator",
+    "objectID": "slides/H3.html#projectie-operator-3.1.2",
+    "href": "slides/H3.html#projectie-operator-3.1.2",
     "title": "Hoofdstuk 3 - Lineaire operatoren en eigenwaarden",
-    "section": "Projectie-operator",
-    "text": "Projectie-operator\n\nDefinitie. Een element a van een ring R dat voldoet aan a^2 = a heet idempotent.\n\n\nIdempotente lineaire operatoren {\\hat{P}} \\in \\mathop{\\mathrm{End}}(V) worden vaak projectie-operatoren, of kortweg projectoren, genoemd, omwille van de volgende eigenschap:\n\nPropositie 3.3. {\\hat{P}}^2 ={\\hat{P}} \\Rightarrow V = \\mathop{\\mathrm{im}}({\\hat{P}}) \\oplus \\mathop{\\mathrm{ker}}({\\hat{P}})\n\n\n\\forall {v}\\in V: {v}= \\underbrace{{\\hat{P}}{v}}_{{v}_1} + \\underbrace{({\\hat{1}}- {\\hat{P}}){v}}_{{v}_2}\n\n\nDefinitie 3.3. Omgekeerd: gegeven V = V_1 \\oplus V_2, de decompositie {v}= {v}_1 + {v}_2 definieert een projector op V_1 parallel met V_2: {\\hat{P}}{v}= {v}_1 \\in V_1 \\quad (\\text{en } {v}_2 = {v}-{v}_1 = ({\\hat{1}}- {\\hat{P}}){v})"
+    "section": "Projectie-operator (3.1.2)",
+    "text": "Projectie-operator (3.1.2)\n\nDefinitie. Een element a van een ring R dat voldoet aan a^2 = a heet idempotent.\n\n\nIdempotente lineaire operatoren {\\hat{P}} \\in \\mathop{\\mathrm{End}}(V) worden vaak projectie-operatoren, of kortweg projectoren, genoemd, omwille van de volgende eigenschap:\n\nPropositie 3.3. {\\hat{P}}^2 ={\\hat{P}} \\Rightarrow V = \\mathop{\\mathrm{im}}({\\hat{P}}) \\oplus \\mathop{\\mathrm{ker}}({\\hat{P}})\n\n\n\\forall {v}\\in V: {v}= \\underbrace{{\\hat{P}}{v}}_{{v}_1} + \\underbrace{({\\hat{1}}- {\\hat{P}}){v}}_{{v}_2}\n\n\nDefinitie 3.3. Omgekeerd: gegeven V = V_1 \\oplus V_2, de decompositie {v}= {v}_1 + {v}_2 definieert een projector op V_1 parallel met V_2: {\\hat{P}}{v}= {v}_1 \\in V_1 \\quad (\\text{en } {v}_2 = {v}-{v}_1 = ({\\hat{1}}- {\\hat{P}}){v})"
   },
   {
-    "objectID": "slides/H3.html#nilpotente-operatoren",
-    "href": "slides/H3.html#nilpotente-operatoren",
+    "objectID": "slides/H3.html#nilpotente-operatoren-3.1.3",
+    "href": "slides/H3.html#nilpotente-operatoren-3.1.3",
     "title": "Hoofdstuk 3 - Lineaire operatoren en eigenwaarden",
-    "section": "Nilpotente operatoren",
-    "text": "Nilpotente operatoren\n\nDefinitie 3.5. Een element a van een ring R dat voldoet aan a^s = 0 heet nilpotent met index s (als n=s de kleinste waarde is waarvoor a^n=0)\n\n\nNilpotente operatoren {\\hat{N}} \\in \\mathop{\\mathrm{End}}(V) voldoen dus aan {\\hat{N}}^s = {\\hat{0}} en spelen een rol bij de veralgemeende eigenwaardendecompositie\nVoorbeeld: {\\mathsf{A}} = \\begin{bmatrix} 0 & c \\\\ 0 & 0 \\end{bmatrix} is nilpotent met index s=2 (voor elke c \\neq 0)"
+    "section": "Nilpotente operatoren (3.1.3)",
+    "text": "Nilpotente operatoren (3.1.3)\n\nDefinitie 3.5. Een element a van een ring R dat voldoet aan a^s = 0 heet nilpotent met index s (als n=s de kleinste waarde is waarvoor a^n=0)\n\n\nNilpotente operatoren {\\hat{N}} \\in \\mathop{\\mathrm{End}}(V) voldoen dus aan {\\hat{N}}^s = {\\hat{0}} en spelen een rol bij de veralgemeende eigenwaardendecompositie\nVoorbeeld: {\\mathsf{A}} = \\begin{bmatrix} 0 & c \\\\ 0 & 0 \\end{bmatrix} is nilpotent met index s=2 (voor elke c \\neq 0)"
   },
   {
-    "objectID": "slides/H3.html#annihilerende-veeltermen",
-    "href": "slides/H3.html#annihilerende-veeltermen",
+    "objectID": "slides/H3.html#annihilerende-veeltermen-3.1.3",
+    "href": "slides/H3.html#annihilerende-veeltermen-3.1.3",
     "title": "Hoofdstuk 3 - Lineaire operatoren en eigenwaarden",
-    "section": "Annihilerende veeltermen",
-    "text": "Annihilerende veeltermen\n\nDefinitie 3.4. Een veelterm p \\in {\\mathbb{F}}[x] annihileert {\\hat{A}}\\in \\mathop{\\mathrm{End}}(V) als p({\\hat{A}})={\\hat{0}}\n\n\nVoorbeeld 3.1. {\\hat{P}}^2 = {\\hat{P}} \\Rightarrow p(x) = x^2 - x annihileert {\\hat{P}}\n\n\nV eindig-dimensionaal \\Rightarrow \\mathop{\\mathrm{dim}}(\\mathop{\\mathrm{End}}(V)) = \\mathop{\\mathrm{dim}}(V)^2\n\n\\Rightarrow er bestaat een s waarvoor \\{{\\hat{A}}^0,{\\hat{A}}^1,\\ldots,{\\hat{A}}^k\\,\\ldots,{\\hat{A}}^s\\} niet meer lineair onafhankelijk is\n\n\nPropositie 3.4. De minimaalveelterm m_{{\\hat{A}}}(x)= x^s + \\ldots is de monische veelterm van laagste graad s die {\\hat{A}} annihileert en is uniek\n\n\n\nPropositie 3.5. Elke annihilerende veelterm p van {\\hat{A}} voldoet aan p(x) = m_{{\\hat{A}}}(x) q(x)"
+    "section": "Annihilerende veeltermen (3.1.3)",
+    "text": "Annihilerende veeltermen (3.1.3)\n\nDefinitie 3.4. Een veelterm p \\in {\\mathbb{F}}[x] annihileert {\\hat{A}}\\in \\mathop{\\mathrm{End}}(V) als p({\\hat{A}})={\\hat{0}}\n\n\nVoorbeeld 3.1. {\\hat{P}}^2 = {\\hat{P}} \\Rightarrow p(x) = x^2 - x annihileert {\\hat{P}}\n\n\nV eindig-dimensionaal \\Rightarrow \\mathop{\\mathrm{dim}}(\\mathop{\\mathrm{End}}(V)) = \\mathop{\\mathrm{dim}}(V)^2\n\n\\Rightarrow er bestaat een s waarvoor \\{{\\hat{A}}^0,{\\hat{A}}^1,\\ldots,{\\hat{A}}^k\\,\\ldots,{\\hat{A}}^s\\} niet meer lineair onafhankelijk is\n\n\nPropositie 3.4. De minimaalveelterm m_{{\\hat{A}}}(x)= x^s + \\ldots is de monische veelterm van laagste graad s die {\\hat{A}} annihileert en is uniek\n\n\n\nPropositie 3.5. Elke annihilerende veelterm p van {\\hat{A}} voldoet aan p(x) = m_{{\\hat{A}}}(x) q(x)"
   },
   {
-    "objectID": "slides/H3.html#eigenwaarden-en-eigenvectoren",
-    "href": "slides/H3.html#eigenwaarden-en-eigenvectoren",
+    "objectID": "slides/H3.html#eigenwaarden-en-eigenvectoren-3.2.1",
+    "href": "slides/H3.html#eigenwaarden-en-eigenvectoren-3.2.1",
     "title": "Hoofdstuk 3 - Lineaire operatoren en eigenwaarden",
-    "section": "Eigenwaarden en eigenvectoren",
-    "text": "Eigenwaarden en eigenvectoren\n\nDefinitie 3.6. {\\hat{A}} \\in \\mathop{\\mathrm{End}}(V), \\lambda \\in {\\mathbb{F}}, {v}\\in V met {v}\\neq {o}: \\boxed{{\\hat{A}} {v}= \\lambda {v}}\n\nEigenwaarde (karakteristieke waarde) \\lambda, eigenvector {v}\n\n\n\nOpmerking 3.6. Elke a {v} met a \\neq 0 is ook een eigenvector"
+    "section": "Eigenwaarden en eigenvectoren (3.2.1)",
+    "text": "Eigenwaarden en eigenvectoren (3.2.1)\n\nDefinitie 3.6. {\\hat{A}} \\in \\mathop{\\mathrm{End}}(V), \\lambda \\in {\\mathbb{F}}, {v}\\in V met {v}\\neq {o}: \\boxed{{\\hat{A}} {v}= \\lambda {v}}\n\nEigenwaarde (karakteristieke waarde) \\lambda, eigenvector {v}\n\n\n\nOpmerking 3.6. Elke a {v} met a \\neq 0 is ook een eigenvector"
   },
   {
-    "objectID": "slides/H3.html#eigenwaarden-en-eigenvectoren-1",
-    "href": "slides/H3.html#eigenwaarden-en-eigenvectoren-1",
+    "objectID": "slides/H3.html#eigenwaarden-en-eigenvectoren-3.2.1-1",
+    "href": "slides/H3.html#eigenwaarden-en-eigenvectoren-3.2.1-1",
     "title": "Hoofdstuk 3 - Lineaire operatoren en eigenwaarden",
-    "section": "Eigenwaarden en eigenvectoren",
-    "text": "Eigenwaarden en eigenvectoren\n\nVoorbeeld 3.5. Belang van het veld {\\mathbb{F}}: {\\mathsf{A}} = \\begin{bmatrix}\n        0 & -1 \\\\ 1 & 0\n    \\end{bmatrix}\n\n\\lambda \\in {\\mathbb{R}}: geen\n\\lambda \\in {\\mathbb{C}}: {\\mathsf{A}}(\\boldsymbol{e}_1 \\pm {\\mathrm{i}}\\boldsymbol{e}_2) = \\mp {\\mathrm{i}}(\\boldsymbol{e}_1 \\pm {\\mathrm{i}}\\boldsymbol{e}_2)\n\\Rightarrow \\lambda = +{\\mathrm{i}} en \\lambda = -{\\mathrm{i}}\n\n\n\nVoorbeeld 3.6. Belang van domein: {\\hat{D}} = \\frac{{\\mathrm{d}}\\ }{{\\mathrm{d}}x}\n\nOp C^{\\infty}({\\mathbb{R}},{\\mathbb{F}}): \\frac{{\\mathrm{d}}\\ }{{\\mathrm{d}}x} {\\mathrm{e}}^{\\lambda x} = \\lambda {\\mathrm{e}}^{\\lambda x}\nOp {\\mathbb{F}}[x]: geen eigenvectoren / eigenwaarden"
+    "section": "Eigenwaarden en eigenvectoren (3.2.1)",
+    "text": "Eigenwaarden en eigenvectoren (3.2.1)\n\nVoorbeeld 3.5. Belang van het veld {\\mathbb{F}}: {\\mathsf{A}} = \\begin{bmatrix}\n        0 & -1 \\\\ 1 & 0\n    \\end{bmatrix}\n\n\\lambda \\in {\\mathbb{R}}: geen\n\\lambda \\in {\\mathbb{C}}: {\\mathsf{A}}(\\boldsymbol{e}_1 \\pm {\\mathrm{i}}\\boldsymbol{e}_2) = \\mp {\\mathrm{i}}(\\boldsymbol{e}_1 \\pm {\\mathrm{i}}\\boldsymbol{e}_2)\n\\Rightarrow \\lambda = +{\\mathrm{i}} en \\lambda = -{\\mathrm{i}}\n\n\n\nVoorbeeld 3.6. Belang van domein: {\\hat{D}} = \\frac{{\\mathrm{d}}\\ }{{\\mathrm{d}}x}\n\nOp C^{\\infty}({\\mathbb{R}},{\\mathbb{F}}): \\frac{{\\mathrm{d}}\\ }{{\\mathrm{d}}x} {\\mathrm{e}}^{\\lambda x} = \\lambda {\\mathrm{e}}^{\\lambda x}\nOp {\\mathbb{F}}[x]: geen eigenvectoren / eigenwaarden"
   },
   {
-    "objectID": "slides/H3.html#eigenruimten",
-    "href": "slides/H3.html#eigenruimten",
+    "objectID": "slides/H3.html#eigenruimten-3.2.1",
+    "href": "slides/H3.html#eigenruimten-3.2.1",
     "title": "Hoofdstuk 3 - Lineaire operatoren en eigenwaarden",
-    "section": "Eigenruimten",
-    "text": "Eigenruimten\n\nDefinitie 3.7. Eigenruimte V_\\lambda = \\{{v}\\in V | {\\hat{A}} {v}= \\lambda {v}\\} = \\mathop{\\mathrm{ker}}({\\hat{A}} - \\lambda )\n\n\\Rightarrow \\lambda is eigenwaarde als \\mathop{\\mathrm{dim}}(V_\\lambda) &gt; 0\nr_\\lambda = \\mathop{\\mathrm{dim}}(V_\\lambda): geometrische multipliciteit\n\n\n\nV eindig-dimensionaal: r_\\lambda &gt; 0 \\Rightarrow \\mathop{\\mathrm{rank}}({\\hat{A}}-\\lambda {\\hat{1}}) &lt; \\mathop{\\mathrm{dim}}(V) en dus is {\\hat{A}}-\\lambda {\\hat{1}} niet injectief en niet-inverteerbaar. Er geldt dus ook \\det({\\hat{A}}-\\lambda {\\hat{1}})=0."
+    "section": "Eigenruimten (3.2.1)",
+    "text": "Eigenruimten (3.2.1)\n\nDefinitie 3.7. Eigenruimte V_\\lambda = \\{{v}\\in V | {\\hat{A}} {v}= \\lambda {v}\\} = \\mathop{\\mathrm{ker}}({\\hat{A}} - \\lambda )\n\n\\Rightarrow \\lambda is eigenwaarde als \\mathop{\\mathrm{dim}}(V_\\lambda) &gt; 0\nr_\\lambda = \\mathop{\\mathrm{dim}}(V_\\lambda): geometrische multipliciteit\n\n\n\nV eindig-dimensionaal: r_\\lambda &gt; 0 \\Rightarrow \\mathop{\\mathrm{rank}}({\\hat{A}}-\\lambda {\\hat{1}}) &lt; \\mathop{\\mathrm{dim}}(V) en dus is {\\hat{A}}-\\lambda {\\hat{1}} niet injectief en niet-inverteerbaar. Er geldt dus ook \\det({\\hat{A}}-\\lambda {\\hat{1}})=0."
   },
   {
-    "objectID": "slides/H3.html#spectrum",
-    "href": "slides/H3.html#spectrum",
+    "objectID": "slides/H3.html#spectrum-3.2.1",
+    "href": "slides/H3.html#spectrum-3.2.1",
     "title": "Hoofdstuk 3 - Lineaire operatoren en eigenwaarden",
-    "section": "Spectrum",
-    "text": "Spectrum\n\nDefinitie 3.8. Spectrum: \\sigma_{{\\hat{A}}} = \\{ \\lambda \\in {\\mathbb{F}}\\,|\\, ({\\hat{A}} - \\lambda) \\text{ heeft geen ‘goed gedefinieerde inverse’} \\}\n\n\nOpmerking 3.10. V eindig-dimensionaal: \\sigma = \\{\\lambda_1,\\ldots,\\lambda_m\\} bevat alleen eigenwaarden\n\n\nV oneindig-dimensionaal: zie later\n\n\nOpmerking 3.11. Terzijde: {\\hat{R}}_{{\\hat{A}}}(z) = (z{\\hat{1}}-{\\hat{A}})^{-1} voor waarden z \\in {\\mathbb{C}}\\setminus \\sigma_{{\\hat{A}}} is de resolvent. Nuttig in theoretische fysica met behulp van technieken uit de complexe analyse."
+    "section": "Spectrum (3.2.1)",
+    "text": "Spectrum (3.2.1)\n\nDefinitie 3.8. Spectrum: \\sigma_{{\\hat{A}}} = \\{ \\lambda \\in {\\mathbb{F}}\\,|\\, ({\\hat{A}} - \\lambda) \\text{ heeft geen ‘goed gedefinieerde inverse’} \\}\n\n\nOpmerking 3.10. V eindig-dimensionaal: \\sigma = \\{\\lambda_1,\\ldots,\\lambda_m\\} bevat alleen eigenwaarden\n\n\nV oneindig-dimensionaal: zie later\n\n\nOpmerking 3.11. Terzijde: {\\hat{R}}_{{\\hat{A}}}(z) = (z{\\hat{1}}-{\\hat{A}})^{-1} voor waarden z \\in {\\mathbb{C}}\\setminus \\sigma_{{\\hat{A}}} is de resolvent. Nuttig in theoretische fysica met behulp van technieken uit de complexe analyse."
   },
   {
-    "objectID": "slides/H3.html#eigenschappen-van-eigenwaarden-en-eigenruimten",
-    "href": "slides/H3.html#eigenschappen-van-eigenwaarden-en-eigenruimten",
+    "objectID": "slides/H3.html#eigenschappen-van-eigenwaarden-en-eigenruimten-3.2.1",
+    "href": "slides/H3.html#eigenschappen-van-eigenwaarden-en-eigenruimten-3.2.1",
     "title": "Hoofdstuk 3 - Lineaire operatoren en eigenwaarden",
-    "section": "Eigenschappen van eigenwaarden en eigenruimten",
-    "text": "Eigenschappen van eigenwaarden en eigenruimten\n\nPropositie 3.6. {\\hat{A}}{v}= \\lambda {v}\\Rightarrow p({\\hat{A}}){v}= p(\\lambda) {v}\n\n\nGevolg 3.7. p(x) is een annihilerende veelterm van {\\hat{A}}: \\lambda is een nulpunt van p\n\n\nPropositie 3.8. Een verzameling van eigenvectoren \\{{v}_1,\\ldots,{v}_k\\} horende bij onderling verschillende eigenwaarden \\{\\lambda_1,\\ldots,\\lambda_k\\} met \\lambda_i\\neq \\lambda_j is lineair onafhankelijk.\n\n\nPropositie 3.9. \\Rightarrow Som van eigenruimten \\sum_{k} V_{\\lambda_k} wordt directe som \\bigoplus_{k} V_{\\lambda_k}\n\n\nGevolg 3.10. \\Rightarrow \\sum_{\\lambda \\in \\sigma_{{\\hat{A}}}} r_\\lambda \\leq \\mathop{\\mathrm{dim}}(V)"
+    "section": "Eigenschappen van eigenwaarden en eigenruimten (3.2.1)",
+    "text": "Eigenschappen van eigenwaarden en eigenruimten (3.2.1)\n\nPropositie 3.6. {\\hat{A}}{v}= \\lambda {v}\\Rightarrow p({\\hat{A}}){v}= p(\\lambda) {v}\n\n\nGevolg 3.7. p(x) is een annihilerende veelterm van {\\hat{A}}: \\lambda is een nulpunt van p\n\n\nPropositie 3.8. Een verzameling van eigenvectoren \\{{v}_1,\\ldots,{v}_k\\} horende bij onderling verschillende eigenwaarden \\{\\lambda_1,\\ldots,\\lambda_k\\} met \\lambda_i\\neq \\lambda_j is lineair onafhankelijk.\n\n\nPropositie 3.9. \\Rightarrow Som van eigenruimten \\sum_{k} V_{\\lambda_k} wordt directe som \\bigoplus_{k} V_{\\lambda_k}\n\n\nGevolg 3.10. \\Rightarrow \\sum_{\\lambda \\in \\sigma_{{\\hat{A}}}} r_\\lambda \\leq \\mathop{\\mathrm{dim}}(V)"
   },
   {
-    "objectID": "slides/H3.html#eigenruimten-van-producten-van-lineaire-afbeeldingen",
-    "href": "slides/H3.html#eigenruimten-van-producten-van-lineaire-afbeeldingen",
+    "objectID": "slides/H3.html#eigenruimten-van-producten-van-lineaire-afbeeldingen-3.2.1",
+    "href": "slides/H3.html#eigenruimten-van-producten-van-lineaire-afbeeldingen-3.2.1",
     "title": "Hoofdstuk 3 - Lineaire operatoren en eigenwaarden",
-    "section": "Eigenruimten van producten van lineaire afbeeldingen",
-    "text": "Eigenruimten van producten van lineaire afbeeldingen\n\nPropositie 3.11. Beschouw {\\hat{A}} \\in \\mathop{\\mathrm{Hom}}(V,W) en {\\hat{B}} \\in \\mathop{\\mathrm{Hom}}(W,V), dan is {\\hat{A}}{\\hat{B}} \\in \\mathop{\\mathrm{Hom}}(W,W) en {\\hat{B}}{\\hat{A}} \\in \\mathop{\\mathrm{Hom}}(V,V).\n\nElke eigenwaarde \\lambda\\neq 0 van {\\hat{B}}{\\hat{A}} is ook een eigenwaarde van {\\hat{A}}{\\hat{B}} (en vice versa)\nEigenruimte W_\\lambda van {\\hat{A}}{\\hat{B}} komt overeen met {\\hat{A}} V_\\lambda, en \\mathop{\\mathrm{dim}}(W_\\lambda) = \\mathop{\\mathrm{dim}}(V_\\lambda), d.w.z. de restrictie van {\\hat{A}} tot V_\\lambda is injectief\n\n((\\lambda^{-1}{\\hat{B}})\\circ {\\hat{A}}){v}= {v},\\qquad \\forall {v}\\in V_\\lambda\n({\\hat{A}} \\circ (\\lambda^{-1}{\\hat{B}})){w}= {w},\\qquad \\forall {w}\\in W_\\lambda"
+    "section": "Eigenruimten van producten van lineaire afbeeldingen (3.2.1)",
+    "text": "Eigenruimten van producten van lineaire afbeeldingen (3.2.1)\n\nPropositie 3.11. Beschouw {\\hat{A}} \\in \\mathop{\\mathrm{Hom}}(V,W) en {\\hat{B}} \\in \\mathop{\\mathrm{Hom}}(W,V), dan is {\\hat{A}}{\\hat{B}} \\in \\mathop{\\mathrm{Hom}}(W,W) en {\\hat{B}}{\\hat{A}} \\in \\mathop{\\mathrm{Hom}}(V,V).\n\nElke eigenwaarde \\lambda\\neq 0 van {\\hat{B}}{\\hat{A}} is ook een eigenwaarde van {\\hat{A}}{\\hat{B}} (en vice versa)\nEigenruimte W_\\lambda van {\\hat{A}}{\\hat{B}} komt overeen met {\\hat{A}} V_\\lambda, en \\mathop{\\mathrm{dim}}(W_\\lambda) = \\mathop{\\mathrm{dim}}(V_\\lambda), d.w.z. de restrictie van {\\hat{A}} tot V_\\lambda is injectief\n\n((\\lambda^{-1}{\\hat{B}})\\circ {\\hat{A}}){v}= {v},\\qquad \\forall {v}\\in V_\\lambda\n({\\hat{A}} \\circ (\\lambda^{-1}{\\hat{B}})){w}= {w},\\qquad \\forall {w}\\in W_\\lambda"
   },
   {
-    "objectID": "slides/H3.html#karakteristieke-veelterm",
-    "href": "slides/H3.html#karakteristieke-veelterm",
+    "objectID": "slides/H3.html#karakteristieke-veelterm-3.2.2",
+    "href": "slides/H3.html#karakteristieke-veelterm-3.2.2",
     "title": "Hoofdstuk 3 - Lineaire operatoren en eigenwaarden",
-    "section": "Karakteristieke veelterm",
-    "text": "Karakteristieke veelterm\n\nDefinitie 3.9. Voor V eindig-dimensionaal en {\\hat{A}}\\in \\mathop{\\mathrm{End}}(V) is de karakteristieke veelterm \\boxed{k_{{\\hat{A}}}(z) = \\det(z{\\hat{1}}- {\\hat{A}}) = z^n + c_{n-1} z^{n-1} + \\ldots + c_0}\nmet c_{n-1} = - \\mathop{\\mathrm{tr}}({\\hat{A}}) en c_0 = (-1)^n \\det({\\hat{A}}).\n\n\nOpmerking 3.14. Elke eigenwaarde is een nulpunt, elk nulpunt is een eigenwaarde"
+    "section": "Karakteristieke veelterm (3.2.2)",
+    "text": "Karakteristieke veelterm (3.2.2)\n\nDefinitie 3.9. Voor V eindig-dimensionaal en {\\hat{A}}\\in \\mathop{\\mathrm{End}}(V) is de karakteristieke veelterm \\boxed{k_{{\\hat{A}}}(z) = \\det(z{\\hat{1}}- {\\hat{A}}) = z^n + c_{n-1} z^{n-1} + \\ldots + c_0}\nmet c_{n-1} = - \\mathop{\\mathrm{tr}}({\\hat{A}}) en c_0 = (-1)^n \\det({\\hat{A}}).\n\n\nOpmerking 3.14. Elke eigenwaarde is een nulpunt, elk nulpunt is een eigenwaarde"
   },
   {
-    "objectID": "slides/H3.html#karakteristieke-veelterm-1",
-    "href": "slides/H3.html#karakteristieke-veelterm-1",
+    "objectID": "slides/H3.html#karakteristieke-veelterm-3.2.2-1",
+    "href": "slides/H3.html#karakteristieke-veelterm-3.2.2-1",
     "title": "Hoofdstuk 3 - Lineaire operatoren en eigenwaarden",
-    "section": "Karakteristieke veelterm",
-    "text": "Karakteristieke veelterm\n\nOpmerking 3.16. k_{{\\hat{A}}}(z) = (z - \\lambda_1)^{q_{\\lambda_1}} (z- \\lambda_2)^{q_{\\lambda_2}} \\ldots (z-\\lambda_m)^{q_{\\lambda_m}} met q_{\\lambda} de algebraïsche multipliciteit\n\n\nOpmerking 3.17. \\begin{aligned}\n\\mathop{\\mathrm{tr}}({\\hat{A}}) &= q_{\\lambda_1} \\lambda_1+ q_{\\lambda_2} \\lambda_2+ \\cdots + q_{\\lambda_m} \\lambda_m = \\sum_{\\lambda \\in \\sigma_{{\\hat{A}}}} q_{\\lambda} \\lambda\\\\\n\\det({\\hat{A}}) &=  \\lambda_1^{q_{\\lambda_1}}   \\lambda_2^{q_{\\lambda_2}}  \\cdots \\lambda_m^{q_{\\lambda_m} } = \\prod_{\\lambda \\in \\sigma_{{\\hat{A}}}}  \\lambda^{q_{\\lambda}}\n\\end{aligned}"
+    "section": "Karakteristieke veelterm (3.2.2)",
+    "text": "Karakteristieke veelterm (3.2.2)\n\nOpmerking 3.16. k_{{\\hat{A}}}(z) = (z - \\lambda_1)^{q_{\\lambda_1}} (z- \\lambda_2)^{q_{\\lambda_2}} \\ldots (z-\\lambda_m)^{q_{\\lambda_m}} met q_{\\lambda} de algebraïsche multipliciteit\n\n\nOpmerking 3.17. \\begin{aligned}\n\\mathop{\\mathrm{tr}}({\\hat{A}}) &= q_{\\lambda_1} \\lambda_1+ q_{\\lambda_2} \\lambda_2+ \\cdots + q_{\\lambda_m} \\lambda_m = \\sum_{\\lambda \\in \\sigma_{{\\hat{A}}}} q_{\\lambda} \\lambda\\\\\n\\det({\\hat{A}}) &=  \\lambda_1^{q_{\\lambda_1}}   \\lambda_2^{q_{\\lambda_2}}  \\cdots \\lambda_m^{q_{\\lambda_m} } = \\prod_{\\lambda \\in \\sigma_{{\\hat{A}}}}  \\lambda^{q_{\\lambda}}\n\\end{aligned}"
   },
   {
-    "objectID": "slides/H3.html#companion-matrix",
-    "href": "slides/H3.html#companion-matrix",
+    "objectID": "slides/H3.html#companion-matrix-3.2.2",
+    "href": "slides/H3.html#companion-matrix-3.2.2",
     "title": "Hoofdstuk 3 - Lineaire operatoren en eigenwaarden",
-    "section": "Companion matrix",
-    "text": "Companion matrix\nGegeven een veelterm p(z) = z^n + p_{n-1} z^{n-1} + \\ldots + p_0 \\in {\\mathbb{F}}[z], construeer een matrix {\\mathsf{A}} \\in {\\mathbb{F}}^{n \\times n} zodat p(z) = k_{{\\mathsf{A}}}(z)?\n\nPropositie 3.12. Companion matrix   {\\mathsf{C}}_p = \\begin{bmatrix}\n        0 & 1 & 0 & \\ldots & 0  & 0 & 0\\\\\n        0 & 0 & 1 &\\ldots & 0  & 0 & 0\\\\\n        0 & 0 & 0 &\\ldots & 0  & 0 & 0\\\\\n        \\vdots & \\vdots & \\vdots & \\ddots & \\vdots & \\vdots\\\\\n        0 & 0 & 0 &\\ldots & 0 & 1 & 0\\\\\n        0 & 0 & 0 &\\ldots & 0 & 0 & 1\\\\\n        -p_0 & -p_1 & -p_2& \\ldots & -p_{n-3} & -p_{n-2} & -p_{n-1}\n    \\end{bmatrix}"
+    "section": "Companion matrix (3.2.2)",
+    "text": "Companion matrix (3.2.2)\nGegeven een veelterm p(z) = z^n + p_{n-1} z^{n-1} + \\ldots + p_0 \\in {\\mathbb{F}}[z], construeer een matrix {\\mathsf{A}} \\in {\\mathbb{F}}^{n \\times n} zodat p(z) = k_{{\\mathsf{A}}}(z)?\n\nPropositie 3.12. Companion matrix   {\\mathsf{C}}_p = \\begin{bmatrix}\n        0 & 1 & 0 & \\ldots & 0  & 0 & 0\\\\\n        0 & 0 & 1 &\\ldots & 0  & 0 & 0\\\\\n        0 & 0 & 0 &\\ldots & 0  & 0 & 0\\\\\n        \\vdots & \\vdots & \\vdots & \\ddots & \\vdots & \\vdots\\\\\n        0 & 0 & 0 &\\ldots & 0 & 1 & 0\\\\\n        0 & 0 & 0 &\\ldots & 0 & 0 & 1\\\\\n        -p_0 & -p_1 & -p_2& \\ldots & -p_{n-3} & -p_{n-2} & -p_{n-1}\n    \\end{bmatrix}"
   },
   {
-    "objectID": "slides/H3.html#stelling-van-cayley-hamilton",
-    "href": "slides/H3.html#stelling-van-cayley-hamilton",
+    "objectID": "slides/H3.html#stelling-van-cayley-hamilton-3.2.2",
+    "href": "slides/H3.html#stelling-van-cayley-hamilton-3.2.2",
     "title": "Hoofdstuk 3 - Lineaire operatoren en eigenwaarden",
-    "section": "Stelling van Cayley-Hamilton",
-    "text": "Stelling van Cayley-Hamilton\n\nStelling 3.13 (Cayley-Hamilton). De karakteristieke veelterm k_{{\\hat{A}}}(z) annihileert {\\hat{A}}.\n\n\nOpmerking 3.20. \\Rightarrow k_{{\\hat{A}}}(z)= m_{{\\hat{A}}}(z) q(z) met bovendien: k_{{\\hat{A}}}(z) en m_{{\\hat{A}}}(z) hebben dezelfde nulpunten \\Rightarrow k_{{\\hat{A}}}(z) = \\prod_{\\lambda \\in \\sigma_{{\\hat{A}}}}(z - \\lambda)^{q_\\lambda}, \\quad m_{{\\hat{A}}}(z) = \\prod_{\\lambda \\in \\sigma_{{\\hat{A}}}}(z - \\lambda)^{s_\\lambda} \\quad \\text{met } s_\\lambda \\leq q_\\lambda"
+    "section": "Stelling van Cayley-Hamilton (3.2.2)",
+    "text": "Stelling van Cayley-Hamilton (3.2.2)\n\nStelling 3.13 (Cayley-Hamilton). De karakteristieke veelterm k_{{\\hat{A}}}(z) annihileert {\\hat{A}}.\n\n\nOpmerking 3.20. \\Rightarrow k_{{\\hat{A}}}(z)= m_{{\\hat{A}}}(z) q(z) met bovendien: k_{{\\hat{A}}}(z) en m_{{\\hat{A}}}(z) hebben dezelfde nulpunten \\Rightarrow k_{{\\hat{A}}}(z) = \\prod_{\\lambda \\in \\sigma_{{\\hat{A}}}}(z - \\lambda)^{q_\\lambda}, \\quad m_{{\\hat{A}}}(z) = \\prod_{\\lambda \\in \\sigma_{{\\hat{A}}}}(z - \\lambda)^{s_\\lambda} \\quad \\text{met } s_\\lambda \\leq q_\\lambda"
   },
   {
-    "objectID": "slides/H3.html#stelling-van-cayley-hamilton-toepassingen",
-    "href": "slides/H3.html#stelling-van-cayley-hamilton-toepassingen",
+    "objectID": "slides/H3.html#stelling-van-cayley-hamilton-toepassingen-3.2.2",
+    "href": "slides/H3.html#stelling-van-cayley-hamilton-toepassingen-3.2.2",
     "title": "Hoofdstuk 3 - Lineaire operatoren en eigenwaarden",
-    "section": "Stelling van Cayley-Hamilton: toepassingen",
-    "text": "Stelling van Cayley-Hamilton: toepassingen\n\nOpmerking 3.22. Toepassingen: {\\hat{A}}^n = - c_{n-1} {\\hat{A}}^{n-1} - \\ldots - c_1 {\\hat{A}} - c_0 {\\hat{1}} en als c_0 = (-1)^n \\det({\\hat{A}}) \\neq 0: {\\hat{A}}^{-1} = \\frac{(-1)^{n-1}}{\\det({\\hat{A}})} \\left({\\hat{A}}^{n-1} + c_{n-1} {\\hat{A}}^{n-2} + \\ldots + c_1 {\\hat{1}}\\right)"
+    "section": "Stelling van Cayley-Hamilton: toepassingen (3.2.2)",
+    "text": "Stelling van Cayley-Hamilton: toepassingen (3.2.2)\n\nOpmerking 3.22. Toepassingen: {\\hat{A}}^n = - c_{n-1} {\\hat{A}}^{n-1} - \\ldots - c_1 {\\hat{A}} - c_0 {\\hat{1}} en als c_0 = (-1)^n \\det({\\hat{A}}) \\neq 0: {\\hat{A}}^{-1} = \\frac{(-1)^{n-1}}{\\det({\\hat{A}})} \\left({\\hat{A}}^{n-1} + c_{n-1} {\\hat{A}}^{n-2} + \\ldots + c_1 {\\hat{1}}\\right)"
   },
   {
-    "objectID": "slides/H3.html#voorbeelden-van-karakteristieke-en-minimaalveelterm",
-    "href": "slides/H3.html#voorbeelden-van-karakteristieke-en-minimaalveelterm",
+    "objectID": "slides/H3.html#voorbeelden-van-karakteristieke-en-minimaalveelterm-3.2.2",
+    "href": "slides/H3.html#voorbeelden-van-karakteristieke-en-minimaalveelterm-3.2.2",
     "title": "Hoofdstuk 3 - Lineaire operatoren en eigenwaarden",
-    "section": "Voorbeelden van karakteristieke en minimaalveelterm",
-    "text": "Voorbeelden van karakteristieke en minimaalveelterm\n\nVoorbeeld 3.8. {\\mathsf{A}} = \\begin{bmatrix} 1 & 0 & 0 & 0\\\\ 0 & 1 & 0 & 0 \\\\ 0 & 0 & 0 & 0 \\\\ 0 & 0 & 0 & 0 \\end{bmatrix}\n\\rightarrow m_{{\\mathsf{A}}}(z) = z(z- 1) en k_{{\\mathsf{A}}}(z) = z^2 (z-1)^2\n\n\nVoorbeeld 3.9. {\\mathsf{A}} = \\begin{bmatrix} 1 & c \\\\ 0 & 1 \\end{bmatrix}\n\\rightarrow k_{{\\mathsf{A}}}(z) = m_{{\\mathsf{A}}}(z) = (z- 1)^2."
+    "section": "Voorbeelden van karakteristieke en minimaalveelterm (3.2.2)",
+    "text": "Voorbeelden van karakteristieke en minimaalveelterm (3.2.2)\n\nVoorbeeld 3.8. {\\mathsf{A}} = \\begin{bmatrix} 1 & 0 & 0 & 0\\\\ 0 & 1 & 0 & 0 \\\\ 0 & 0 & 0 & 0 \\\\ 0 & 0 & 0 & 0 \\end{bmatrix}\n\\rightarrow m_{{\\mathsf{A}}}(z) = z(z- 1) en k_{{\\mathsf{A}}}(z) = z^2 (z-1)^2\n\n\nVoorbeeld 3.9. {\\mathsf{A}} = \\begin{bmatrix} 1 & c \\\\ 0 & 1 \\end{bmatrix}\n\\rightarrow k_{{\\mathsf{A}}}(z) = m_{{\\mathsf{A}}}(z) = (z- 1)^2."
   },
   {
-    "objectID": "slides/H3.html#diagonalisatie",
-    "href": "slides/H3.html#diagonalisatie",
+    "objectID": "slides/H3.html#diagonalisatie-3.2.3",
+    "href": "slides/H3.html#diagonalisatie-3.2.3",
     "title": "Hoofdstuk 3 - Lineaire operatoren en eigenwaarden",
-    "section": "Diagonalisatie",
-    "text": "Diagonalisatie\n\nDefinitie 3.10.\n\n{\\hat{A}} \\in \\mathop{\\mathrm{End}}(V) is diagonaliseerbaar als \\boxed{\\bigoplus_{\\lambda \\in \\sigma_{{\\hat{A}}}} V_\\lambda = V \\Leftrightarrow \\sum_{\\lambda \\in \\sigma_{{\\hat{A}}}} r_\\lambda = \\mathop{\\mathrm{dim}}(V)}\n\\sum_{\\lambda \\in \\sigma_{{\\hat{A}}}} r_\\lambda &lt; \\mathop{\\mathrm{dim}}(V): {\\hat{A}} is niet-diagonaliseerbaar of defect\n\n\n\nOpmerking 3.23. Er bestaat een basis van eigenvectoren\n\n\nOpmerking 3.24. Matrixrepresentatie: er bestaat een basistransformatie {\\mathsf{V}} naar deze nieuwe basis van eigenvectoren zodat {\\mathsf{A}} = {\\mathsf{V}}{\\mathsf{D}} {\\mathsf{V}}^{-1} \\quad \\Leftrightarrow \\quad {\\mathsf{A}} {\\mathsf{V}} = {\\mathsf{V}} {\\mathsf{D}} \\quad \\text{met} \\quad {\\mathsf{D}} = \\text{diag}(\\begin{bmatrix} \\lambda_{i_1} & \\lambda_{i_2} & \\cdots & \\lambda_{i_n} \\end{bmatrix})"
+    "section": "Diagonalisatie (3.2.3)",
+    "text": "Diagonalisatie (3.2.3)\n\nDefinitie 3.10.\n\n{\\hat{A}} \\in \\mathop{\\mathrm{End}}(V) is diagonaliseerbaar als \\boxed{\\bigoplus_{\\lambda \\in \\sigma_{{\\hat{A}}}} V_\\lambda = V \\Leftrightarrow \\sum_{\\lambda \\in \\sigma_{{\\hat{A}}}} r_\\lambda = \\mathop{\\mathrm{dim}}(V)}\n\\sum_{\\lambda \\in \\sigma_{{\\hat{A}}}} r_\\lambda &lt; \\mathop{\\mathrm{dim}}(V): {\\hat{A}} is niet-diagonaliseerbaar of defect\n\n\n\nOpmerking 3.23. Er bestaat een basis van eigenvectoren\n\n\nOpmerking 3.24. Matrixrepresentatie: er bestaat een basistransformatie {\\mathsf{V}} naar deze nieuwe basis van eigenvectoren zodat {\\mathsf{A}} = {\\mathsf{V}}{\\mathsf{D}} {\\mathsf{V}}^{-1} \\quad \\Leftrightarrow \\quad {\\mathsf{A}} {\\mathsf{V}} = {\\mathsf{V}} {\\mathsf{D}} \\quad \\text{met} \\quad {\\mathsf{D}} = \\text{diag}(\\begin{bmatrix} \\lambda_{i_1} & \\lambda_{i_2} & \\cdots & \\lambda_{i_n} \\end{bmatrix})"
   },
   {
-    "objectID": "slides/H3.html#diagonalisatie-voorbeelden",
-    "href": "slides/H3.html#diagonalisatie-voorbeelden",
+    "objectID": "slides/H3.html#diagonalisatie-voorbeelden-3.2.3",
+    "href": "slides/H3.html#diagonalisatie-voorbeelden-3.2.3",
     "title": "Hoofdstuk 3 - Lineaire operatoren en eigenwaarden",
-    "section": "Diagonalisatie: voorbeelden",
-    "text": "Diagonalisatie: voorbeelden\n\nVoorbeeld 3.10. \\underbrace{\\begin{bmatrix} 0 & -1 \\\\ 1 & 0 \\end{bmatrix}}_{{\\mathsf{A}}}\\underbrace{\\begin{bmatrix} 1 & 1 \\\\ -{\\mathrm{i}}& + {\\mathrm{i}}\\end{bmatrix}}_{{\\mathsf{V}}} = \\underbrace{\\begin{bmatrix} 1 & 1 \\\\ -{\\mathrm{i}}& +{\\mathrm{i}}\\end{bmatrix}}_{{\\mathsf{V}}} \\underbrace{\\begin{bmatrix} {\\mathrm{i}}& 0 \\\\ 0 & -{\\mathrm{i}}\\end{bmatrix}}_{{\\mathsf{D}}}\n\n\nVoorbeeld 3.11. {\\mathsf{A}} = \\begin{bmatrix} 1 & c \\\\ 0 & 1 \\end{bmatrix}: m_{{\\mathsf{A}}}(z)=(z-1)^2\n\\Rightarrow niet diagonaliseerbaar: \\sigma_{{\\mathsf{A}}} = \\{1\\} met r_1 = 1 &lt; q_1=2"
+    "section": "Diagonalisatie: voorbeelden (3.2.3)",
+    "text": "Diagonalisatie: voorbeelden (3.2.3)\n\nVoorbeeld 3.10. \\underbrace{\\begin{bmatrix} 0 & -1 \\\\ 1 & 0 \\end{bmatrix}}_{{\\mathsf{A}}}\\underbrace{\\begin{bmatrix} 1 & 1 \\\\ -{\\mathrm{i}}& + {\\mathrm{i}}\\end{bmatrix}}_{{\\mathsf{V}}} = \\underbrace{\\begin{bmatrix} 1 & 1 \\\\ -{\\mathrm{i}}& +{\\mathrm{i}}\\end{bmatrix}}_{{\\mathsf{V}}} \\underbrace{\\begin{bmatrix} {\\mathrm{i}}& 0 \\\\ 0 & -{\\mathrm{i}}\\end{bmatrix}}_{{\\mathsf{D}}}\n\n\nVoorbeeld 3.11. {\\mathsf{A}} = \\begin{bmatrix} 1 & c \\\\ 0 & 1 \\end{bmatrix}: m_{{\\mathsf{A}}}(z)=(z-1)^2\n\\Rightarrow niet diagonaliseerbaar: \\sigma_{{\\mathsf{A}}} = \\{1\\} met r_1 = 1 &lt; q_1=2"
   },
   {
-    "objectID": "slides/H3.html#diagonalisatie-en-minimaalveelterm",
-    "href": "slides/H3.html#diagonalisatie-en-minimaalveelterm",
+    "objectID": "slides/H3.html#diagonalisatie-en-minimaalveelterm-3.2.3",
+    "href": "slides/H3.html#diagonalisatie-en-minimaalveelterm-3.2.3",
     "title": "Hoofdstuk 3 - Lineaire operatoren en eigenwaarden",
-    "section": "Diagonalisatie en minimaalveelterm",
-    "text": "Diagonalisatie en minimaalveelterm\n\nPropositie 3.14. {\\hat{A}} \\in \\mathop{\\mathrm{End}}(V) is diagonaliseerbaar als en slechts als s_{\\lambda} =1 voor alle eigenwaarden \\lambda \\in \\sigma_{{\\hat{A}}}, of dus m_{{\\hat{A}}}(z) = \\prod_{\\lambda \\in \\sigma_{{\\hat{A}}}} (z-\\lambda)\n\nCentrale grootheid in het bewijs: spectrale projector\n\nOpmerking 3.28. {\\hat{P}}_\\lambda = \\prod_{\\substack{\\lambda'\\in\\sigma_{{\\hat{A}}}\\\\\\lambda\\neq \\lambda'}} \\frac{({\\hat{A}} - \\lambda')}{(\\lambda - \\lambda')}"
+    "section": "Diagonalisatie en minimaalveelterm (3.2.3)",
+    "text": "Diagonalisatie en minimaalveelterm (3.2.3)\n\nPropositie 3.14. {\\hat{A}} \\in \\mathop{\\mathrm{End}}(V) is diagonaliseerbaar als en slechts als s_{\\lambda} =1 voor alle eigenwaarden \\lambda \\in \\sigma_{{\\hat{A}}}, of dus m_{{\\hat{A}}}(z) = \\prod_{\\lambda \\in \\sigma_{{\\hat{A}}}} (z-\\lambda)\n\nCentrale grootheid in het bewijs: spectrale projector\n\nOpmerking 3.28. {\\hat{P}}_\\lambda = \\prod_{\\substack{\\lambda'\\in\\sigma_{{\\hat{A}}}\\\\\\lambda\\neq \\lambda'}} \\frac{({\\hat{A}} - \\lambda')}{(\\lambda - \\lambda')}"
   },
   {
-    "objectID": "slides/H3.html#spectrale-decompositie",
-    "href": "slides/H3.html#spectrale-decompositie",
+    "objectID": "slides/H3.html#spectrale-decompositie-3.2.3",
+    "href": "slides/H3.html#spectrale-decompositie-3.2.3",
     "title": "Hoofdstuk 3 - Lineaire operatoren en eigenwaarden",
-    "section": "Spectrale decompositie",
-    "text": "Spectrale decompositie\n{\\hat{A}} diagonaliseerbaar: \\bigoplus_{\\lambda \\in \\sigma_{{\\hat{A}}}} V_\\lambda = V\n\nDefinitie 3.11.\n\nSpectrale projector {\\hat{P}}_\\lambda op V_\\lambda parallel met \\bigoplus_{\\lambda' \\neq \\lambda} V_{\\lambda'}\nEigenschappen:\n\n{\\hat{P}}_\\lambda {\\hat{P}}_{\\lambda'} = \\delta_{\\lambda,\\lambda'} {\\hat{P}}_\\lambda\n\\sum_{\\lambda \\in \\sigma_{{\\hat{A}}}} {\\hat{P}}_\\lambda = {\\hat{1}}_V (resolutie van de identiteit)\n{\\hat{A}} {\\hat{P}}_\\lambda = {\\hat{P}}_\\lambda {\\hat{A}} = \\lambda {\\hat{P}}_\\lambda"
+    "section": "Spectrale decompositie (3.2.3)",
+    "text": "Spectrale decompositie (3.2.3)\n{\\hat{A}} diagonaliseerbaar: \\bigoplus_{\\lambda \\in \\sigma_{{\\hat{A}}}} V_\\lambda = V\n\nDefinitie 3.11.\n\nSpectrale projector {\\hat{P}}_\\lambda op V_\\lambda parallel met \\bigoplus_{\\lambda' \\neq \\lambda} V_{\\lambda'}\nEigenschappen:\n\n{\\hat{P}}_\\lambda {\\hat{P}}_{\\lambda'} = \\delta_{\\lambda,\\lambda'} {\\hat{P}}_\\lambda\n\\sum_{\\lambda \\in \\sigma_{{\\hat{A}}}} {\\hat{P}}_\\lambda = {\\hat{1}}_V (resolutie van de identiteit)\n{\\hat{A}} {\\hat{P}}_\\lambda = {\\hat{P}}_\\lambda {\\hat{A}} = \\lambda {\\hat{P}}_\\lambda"
   },
   {
-    "objectID": "slides/H3.html#spectrale-decompositie-1",
-    "href": "slides/H3.html#spectrale-decompositie-1",
+    "objectID": "slides/H3.html#spectrale-decompositie-3.2.3-1",
+    "href": "slides/H3.html#spectrale-decompositie-3.2.3-1",
     "title": "Hoofdstuk 3 - Lineaire operatoren en eigenwaarden",
-    "section": "Spectrale decompositie",
-    "text": "Spectrale decompositie\n\nOpmerking 3.29. Spectrale decompositie (diagonaalvorm in operatornotatie): \\boxed{{\\hat{A}} = \\sum_{\\lambda \\in \\sigma_{{\\hat{A}}}} \\lambda {\\hat{P}}_\\lambda}\n\n\nOpmerking 3.30. \\Rightarrow p({\\hat{A}}) = \\sum p(\\lambda) {\\hat{P}}_\\lambda,\\quad {\\hat{A}}^{-1} = \\sum \\lambda^{-1} {\\hat{P}}_\\lambda (als 0\\not\\in \\sigma_{{\\hat{A}}})"
+    "section": "Spectrale decompositie (3.2.3)",
+    "text": "Spectrale decompositie (3.2.3)\n\nOpmerking 3.29. Spectrale decompositie (diagonaalvorm in operatornotatie): \\boxed{{\\hat{A}} = \\sum_{\\lambda \\in \\sigma_{{\\hat{A}}}} \\lambda {\\hat{P}}_\\lambda}\n\n\nOpmerking 3.30. \\Rightarrow p({\\hat{A}}) = \\sum p(\\lambda) {\\hat{P}}_\\lambda,\\quad {\\hat{A}}^{-1} = \\sum \\lambda^{-1} {\\hat{P}}_\\lambda (als 0\\not\\in \\sigma_{{\\hat{A}}})"
   },
   {
-    "objectID": "slides/H3.html#spectrale-decompositie-van-commuterende-operatoren",
-    "href": "slides/H3.html#spectrale-decompositie-van-commuterende-operatoren",
+    "objectID": "slides/H3.html#spectrale-decompositie-van-commuterende-operatoren-3.2.4",
+    "href": "slides/H3.html#spectrale-decompositie-van-commuterende-operatoren-3.2.4",
     "title": "Hoofdstuk 3 - Lineaire operatoren en eigenwaarden",
-    "section": "Spectrale decompositie van commuterende operatoren",
-    "text": "Spectrale decompositie van commuterende operatoren\n\nStelling 3.17. Diagonaliseerbare operatoren {\\hat{A}},{\\hat{B}} \\in \\mathop{\\mathrm{End}}(V) die bovendien commuteren, d.w.z. {\\left[{\\hat{A}},{\\hat{B}}\\right]}={\\hat{A}}{\\hat{B}} - {\\hat{B}}{\\hat{A}}={\\hat{0}} hebben een gezamenlijke spectrale decompositie\n\\begin{align*}\n    {\\hat{P}}_{i} {\\hat{P}}_j &= \\delta_{i,j} {\\hat{P}}_i,&\\sum_{i\\in I} {\\hat{P}}_i = {\\hat{1}}_V\\\\\n    {\\hat{A}} &= \\sum_{i\\in I} \\lambda_{i} {\\hat{P}}_i&{\\hat{B}} = \\sum_{i\\in I} \\mu_{i} {\\hat{P}}_i\n\\end{align*}"
+    "section": "Spectrale decompositie van commuterende operatoren (3.2.4)",
+    "text": "Spectrale decompositie van commuterende operatoren (3.2.4)\n\nStelling 3.17. Diagonaliseerbare operatoren {\\hat{A}},{\\hat{B}} \\in \\mathop{\\mathrm{End}}(V) die bovendien commuteren, d.w.z. {\\left[{\\hat{A}},{\\hat{B}}\\right]}={\\hat{A}}{\\hat{B}} - {\\hat{B}}{\\hat{A}}={\\hat{0}} hebben een gezamenlijke spectrale decompositie\n\\begin{align*}\n    {\\hat{P}}_{i} {\\hat{P}}_j &= \\delta_{i,j} {\\hat{P}}_i,&\\sum_{i\\in I} {\\hat{P}}_i = {\\hat{1}}_V\\\\\n    {\\hat{A}} &= \\sum_{i\\in I} \\lambda_{i} {\\hat{P}}_i&{\\hat{B}} = \\sum_{i\\in I} \\mu_{i} {\\hat{P}}_i\n\\end{align*}"
   },
   {
-    "objectID": "slides/H3.html#invariante-deelruimten",
-    "href": "slides/H3.html#invariante-deelruimten",
+    "objectID": "slides/H3.html#invariante-deelruimten-3.3.1",
+    "href": "slides/H3.html#invariante-deelruimten-3.3.1",
     "title": "Hoofdstuk 3 - Lineaire operatoren en eigenwaarden",
-    "section": "Invariante deelruimten",
-    "text": "Invariante deelruimten\n\nDefinitie 3.12. Voor {\\hat{A}}\\in \\mathop{\\mathrm{End}}(V) is een invariante deelruimte een deelruimte U {\\preccurlyeq}V waarvoor {\\hat{A}} U = \\{ {\\hat{A}} {u}| {u}\\in U\\} {\\preccurlyeq}U\n\n\nDe restrictie van {\\hat{A}} tot U, genoteerd als \\left.{\\hat{A}}\\right|_{U}, kan geïnterpreteerd worden als een lineaire operator op U\nGegeven een basis B_U = \\{{u}_1,\\ldots,{u}_k\\} voor U, die uitgebreid wordt tot een volledige basis B_V = \\{{u}_1, \\ldots, {u}_k, {u}_{k+1}, \\ldots, {u}_n \\} voor V, dan geldt: {\\mathsf{A}} = \\Phi_{B_V} ({\\hat{A}}) = \\begin{bmatrix}\n      {\\mathsf{A}}_U & \\cdots\\\\ {\\mathsf{O}}& \\ddots\n  \\end{bmatrix} \\quad \\text{met} \\quad {\\mathsf{A}}_U = \\Phi_{B_U}\\left(\\left.{\\hat{A}}\\right|_{U}\\right)"
+    "section": "Invariante deelruimten (3.3.1)",
+    "text": "Invariante deelruimten (3.3.1)\n\nDefinitie 3.12. Voor {\\hat{A}}\\in \\mathop{\\mathrm{End}}(V) is een invariante deelruimte een deelruimte U {\\preccurlyeq}V waarvoor {\\hat{A}} U = \\{ {\\hat{A}} {u}| {u}\\in U\\} {\\preccurlyeq}U\n\n\nDe restrictie van {\\hat{A}} tot U, genoteerd als \\left.{\\hat{A}}\\right|_{U}, kan geïnterpreteerd worden als een lineaire operator op U\nGegeven een basis B_U = \\{{u}_1,\\ldots,{u}_k\\} voor U, die uitgebreid wordt tot een volledige basis B_V = \\{{u}_1, \\ldots, {u}_k, {u}_{k+1}, \\ldots, {u}_n \\} voor V, dan geldt: {\\mathsf{A}} = \\Phi_{B_V} ({\\hat{A}}) = \\begin{bmatrix}\n      {\\mathsf{A}}_U & \\cdots\\\\ {\\mathsf{O}}& \\ddots\n  \\end{bmatrix} \\quad \\text{met} \\quad {\\mathsf{A}}_U = \\Phi_{B_U}\\left(\\left.{\\hat{A}}\\right|_{U}\\right)"
   },
   {
-    "objectID": "slides/H3.html#invariante-deelruimten-1",
-    "href": "slides/H3.html#invariante-deelruimten-1",
+    "objectID": "slides/H3.html#invariante-deelruimten-3.3.1-1",
+    "href": "slides/H3.html#invariante-deelruimten-3.3.1-1",
     "title": "Hoofdstuk 3 - Lineaire operatoren en eigenwaarden",
-    "section": "Invariante deelruimten",
-    "text": "Invariante deelruimten\n\nAls we een complement U^\\text{c} voor U kunnen kiezen (met dus V = U \\oplus U^\\text{c}) die zelf ook een invariante deelruimte is ten opzichte van {\\hat{A}}, dan krijgen we de blokdiagonaalmatrix {\\mathsf{A}} = \\Phi_{B_V} ({\\hat{A}}) = \\begin{bmatrix}\n      {\\mathsf{A}}_U & {\\mathsf{O}}\\\\ {\\mathsf{O}}& {\\mathsf{A}}_{U^\\text{c}}\n  \\end{bmatrix} met dus B_V = B_U \\cup B_{U^{\\text{c}}}.\nNotatie: {\\mathsf{A}} = {\\mathsf{A}}_U \\oplus {\\mathsf{A}}_{U^\\text{c}} (directe som van matrices)\n\n\nDefinitie 3.13. Directe som van operatoren: gegeven {\\hat{A}}_i \\in \\mathop{\\mathrm{End}}(V_i) voor i=1,2, we definiëren {\\hat{A}} = {\\hat{A}}_1 \\oplus {\\hat{A}}_2 \\in \\mathop{\\mathrm{End}}(V_1 \\oplus V_2) via de eigenschap dat \\left.{\\hat{A}}\\right|_{V_i} = {\\hat{A}}_i voor i=1,2."
+    "section": "Invariante deelruimten (3.3.1)",
+    "text": "Invariante deelruimten (3.3.1)\n\nAls we een complement U^\\text{c} voor U kunnen kiezen (met dus V = U \\oplus U^\\text{c}) die zelf ook een invariante deelruimte is ten opzichte van {\\hat{A}}, dan krijgen we de blokdiagonaalmatrix {\\mathsf{A}} = \\Phi_{B_V} ({\\hat{A}}) = \\begin{bmatrix}\n      {\\mathsf{A}}_U & {\\mathsf{O}}\\\\ {\\mathsf{O}}& {\\mathsf{A}}_{U^\\text{c}}\n  \\end{bmatrix} met dus B_V = B_U \\cup B_{U^{\\text{c}}}.\nNotatie: {\\mathsf{A}} = {\\mathsf{A}}_U \\oplus {\\mathsf{A}}_{U^\\text{c}} (directe som van matrices)\n\n\nDefinitie 3.13. Directe som van operatoren: gegeven {\\hat{A}}_i \\in \\mathop{\\mathrm{End}}(V_i) voor i=1,2, we definiëren {\\hat{A}} = {\\hat{A}}_1 \\oplus {\\hat{A}}_2 \\in \\mathop{\\mathrm{End}}(V_1 \\oplus V_2) via de eigenschap dat \\left.{\\hat{A}}\\right|_{V_i} = {\\hat{A}}_i voor i=1,2."
   },
   {
-    "objectID": "slides/H3.html#invariante-deelruimten-voorbeelden-en-eigenschappen",
-    "href": "slides/H3.html#invariante-deelruimten-voorbeelden-en-eigenschappen",
+    "objectID": "slides/H3.html#invariante-deelruimten-voorbeelden-en-eigenschappen-3.3.1",
+    "href": "slides/H3.html#invariante-deelruimten-voorbeelden-en-eigenschappen-3.3.1",
     "title": "Hoofdstuk 3 - Lineaire operatoren en eigenwaarden",
-    "section": "Invariante deelruimten: voorbeelden en eigenschappen",
-    "text": "Invariante deelruimten: voorbeelden en eigenschappen\n\nVoorbeeld 3.12. Invariante deelruimte van een gegeven operator {\\hat{A}}\\in\\mathop{\\mathrm{End}}(V)\n\nTriviaal: \\{{o}\\} en V\nEigenvector {\\mathbb{F}}{v}_{\\lambda} = \\{a {v}_{\\lambda}; a \\in {\\mathbb{F}}\\}; eigenruimte V_\\lambda\n\\mathop{\\mathrm{im}}({\\hat{A}}): {\\hat{A}} \\mathop{\\mathrm{im}}({\\hat{A}}) {\\preccurlyeq}\\mathop{\\mathrm{im}}({\\hat{A}})\n\\mathop{\\mathrm{ker}}({\\hat{A}}): {\\hat{A}} \\mathop{\\mathrm{ker}}({\\hat{A}}) = \\{0\\} {\\preccurlyeq}\\mathop{\\mathrm{ker}}({\\hat{A}})"
+    "section": "Invariante deelruimten: voorbeelden en eigenschappen (3.3.1)",
+    "text": "Invariante deelruimten: voorbeelden en eigenschappen (3.3.1)\n\nVoorbeeld 3.12. Invariante deelruimte van een gegeven operator {\\hat{A}}\\in\\mathop{\\mathrm{End}}(V)\n\nTriviaal: \\{{o}\\} en V\nEigenvector {\\mathbb{F}}{v}_{\\lambda} = \\{a {v}_{\\lambda}; a \\in {\\mathbb{F}}\\}; eigenruimte V_\\lambda\n\\mathop{\\mathrm{im}}({\\hat{A}}): {\\hat{A}} \\mathop{\\mathrm{im}}({\\hat{A}}) {\\preccurlyeq}\\mathop{\\mathrm{im}}({\\hat{A}})\n\\mathop{\\mathrm{ker}}({\\hat{A}}): {\\hat{A}} \\mathop{\\mathrm{ker}}({\\hat{A}}) = \\{0\\} {\\preccurlyeq}\\mathop{\\mathrm{ker}}({\\hat{A}})"
   },
   {
-    "objectID": "slides/H3.html#invariante-deelruimten-2",
-    "href": "slides/H3.html#invariante-deelruimten-2",
+    "objectID": "slides/H3.html#invariante-deelruimten-3.3.1-2",
+    "href": "slides/H3.html#invariante-deelruimten-3.3.1-2",
     "title": "Hoofdstuk 3 - Lineaire operatoren en eigenwaarden",
-    "section": "Invariante deelruimten",
-    "text": "Invariante deelruimten\n\nLemma 3.18. {\\hat{A}} en {\\hat{A}} + a {\\hat{1}} hebben dezelfde invariante deelruimten\n\n\nPropositie 3.19. Twee reeksen van invariante deelruimten: \\begin{aligned}\n\\{{o}\\} = \\mathop{\\mathrm{ker}}(({\\hat{A}}-{a}{\\hat{1}})^0) &{\\preccurlyeq}\\mathop{\\mathrm{ker}}({\\hat{A}}-{a}{\\hat{1}}) {\\preccurlyeq}\\mathop{\\mathrm{ker}}(({\\hat{A}}-{a}{\\hat{1}})^2) {\\preccurlyeq}\\ldots\\\\\n&{\\preccurlyeq}\\mathop{\\mathrm{ker}}(({\\hat{A}}-{a}{\\hat{1}})^k) {\\preccurlyeq}\\ldots\\\\\nV = \\mathop{\\mathrm{im}}(({\\hat{A}}-{a}{\\hat{1}})^0) &{\\succcurlyeq}\\mathop{\\mathrm{im}}({\\hat{A}}-{a}{\\hat{1}}) {\\succcurlyeq}\\mathop{\\mathrm{im}}(({\\hat{A}}-{a}{\\hat{1}})^2) {\\succcurlyeq}\\ldots\\\\\n&{\\succcurlyeq}\\mathop{\\mathrm{im}}(({\\hat{A}}-{a}{\\hat{1}})^k) {\\succcurlyeq}\\ldots\n\\end{aligned}\nDimensie van deze deelruimten is monotoon stijgend (strikte relatie, eigenlijke deelruimten) in de eerste reeks, en monotoon dalend in de tweede, tot een bepaalde index k=s, waar beide reeksen stabiliseren:\n\n\\mathop{\\mathrm{ker}}(({\\hat{A}}-{a}{\\hat{1}})^s) = \\mathop{\\mathrm{ker}}(({\\hat{A}}-{a}{\\hat{1}})^{s+1})= \\ldots\n\\mathop{\\mathrm{im}}(({\\hat{A}}-{a}{\\hat{1}})^s) = \\mathop{\\mathrm{im}}(({\\hat{A}}-{a}{\\hat{1}})^{s+1})= \\ldots\n\nEr geldt dan ook V = \\mathop{\\mathrm{ker}}(({\\hat{A}}-{a}{\\hat{1}})^s) \\oplus \\mathop{\\mathrm{im}}(({\\hat{A}}-{a}{\\hat{1}})^s)"
+    "section": "Invariante deelruimten (3.3.1)",
+    "text": "Invariante deelruimten (3.3.1)\n\nLemma 3.18. {\\hat{A}} en {\\hat{A}} + a {\\hat{1}} hebben dezelfde invariante deelruimten\n\n\nPropositie 3.19. Twee reeksen van invariante deelruimten: \\begin{aligned}\n\\{{o}\\} = \\mathop{\\mathrm{ker}}(({\\hat{A}}-{a}{\\hat{1}})^0) &{\\preccurlyeq}\\mathop{\\mathrm{ker}}({\\hat{A}}-{a}{\\hat{1}}) {\\preccurlyeq}\\mathop{\\mathrm{ker}}(({\\hat{A}}-{a}{\\hat{1}})^2) {\\preccurlyeq}\\ldots\\\\\n&{\\preccurlyeq}\\mathop{\\mathrm{ker}}(({\\hat{A}}-{a}{\\hat{1}})^k) {\\preccurlyeq}\\ldots\\\\\nV = \\mathop{\\mathrm{im}}(({\\hat{A}}-{a}{\\hat{1}})^0) &{\\succcurlyeq}\\mathop{\\mathrm{im}}({\\hat{A}}-{a}{\\hat{1}}) {\\succcurlyeq}\\mathop{\\mathrm{im}}(({\\hat{A}}-{a}{\\hat{1}})^2) {\\succcurlyeq}\\ldots\\\\\n&{\\succcurlyeq}\\mathop{\\mathrm{im}}(({\\hat{A}}-{a}{\\hat{1}})^k) {\\succcurlyeq}\\ldots\n\\end{aligned}\nDimensie van deze deelruimten is monotoon stijgend (strikte relatie, eigenlijke deelruimten) in de eerste reeks, en monotoon dalend in de tweede, tot een bepaalde index k=s, waar beide reeksen stabiliseren:\n\n\\mathop{\\mathrm{ker}}(({\\hat{A}}-{a}{\\hat{1}})^s) = \\mathop{\\mathrm{ker}}(({\\hat{A}}-{a}{\\hat{1}})^{s+1})= \\ldots\n\\mathop{\\mathrm{im}}(({\\hat{A}}-{a}{\\hat{1}})^s) = \\mathop{\\mathrm{im}}(({\\hat{A}}-{a}{\\hat{1}})^{s+1})= \\ldots\n\nEr geldt dan ook V = \\mathop{\\mathrm{ker}}(({\\hat{A}}-{a}{\\hat{1}})^s) \\oplus \\mathop{\\mathrm{im}}(({\\hat{A}}-{a}{\\hat{1}})^s)"
   },
   {
-    "objectID": "slides/H3.html#veralgemeende-eigenruimten",
-    "href": "slides/H3.html#veralgemeende-eigenruimten",
+    "objectID": "slides/H3.html#veralgemeende-eigenruimten-3.3.2",
+    "href": "slides/H3.html#veralgemeende-eigenruimten-3.3.2",
     "title": "Hoofdstuk 3 - Lineaire operatoren en eigenwaarden",
-    "section": "Veralgemeende eigenruimten",
-    "text": "Veralgemeende eigenruimten\n\nDefinitie 3.14. Gegeven een eigenwaarde \\lambda \\in \\sigma_{{\\hat{A}}}, dan bestaat er een s zodat V = \\underbrace{\\mathop{\\mathrm{ker}}(({\\hat{A}}-\\lambda{\\hat{1}})^s)}_{\\text{\\textbf{veralgemeende eigenruimte} $U_\\lambda$}} \\oplus \\underbrace{\\mathop{\\mathrm{im}}(({\\hat{A}}-\\lambda{\\hat{1}})^s)}_{\\text{complement $U_\\lambda^{\\text{c}}$}}\nmet U_\\lambda en U_\\lambda^{\\text{c}} beide invariante deelruimten van {\\hat{A}}\n\n\nPer constructie is {\\hat{A}}|_{U_\\lambda} = \\lambda {\\hat{1}}_{U_\\lambda} + {\\hat{N}} voor een nilpotente operator {\\hat{N}} met index s \\Rightarrow m_{{\\hat{A}}|_{U_\\lambda}}(z) = (z-\\lambda)^s \\quad \\text{en} \\quad k_{{\\hat{A}}|_{U_\\lambda}}(z) = (z-\\lambda)^{\\mathop{\\mathrm{dim}}(U_\\lambda)}"
+    "section": "Veralgemeende eigenruimten (3.3.2)",
+    "text": "Veralgemeende eigenruimten (3.3.2)\n\nDefinitie 3.14. Gegeven een eigenwaarde \\lambda \\in \\sigma_{{\\hat{A}}}, dan bestaat er een s zodat V = \\underbrace{\\mathop{\\mathrm{ker}}(({\\hat{A}}-\\lambda{\\hat{1}})^s)}_{\\text{\\textbf{veralgemeende eigenruimte} $U_\\lambda$}} \\oplus \\underbrace{\\mathop{\\mathrm{im}}(({\\hat{A}}-\\lambda{\\hat{1}})^s)}_{\\text{complement $U_\\lambda^{\\text{c}}$}}\nmet U_\\lambda en U_\\lambda^{\\text{c}} beide invariante deelruimten van {\\hat{A}}\n\n\nPer constructie is {\\hat{A}}|_{U_\\lambda} = \\lambda {\\hat{1}}_{U_\\lambda} + {\\hat{N}} voor een nilpotente operator {\\hat{N}} met index s \\Rightarrow m_{{\\hat{A}}|_{U_\\lambda}}(z) = (z-\\lambda)^s \\quad \\text{en} \\quad k_{{\\hat{A}}|_{U_\\lambda}}(z) = (z-\\lambda)^{\\mathop{\\mathrm{dim}}(U_\\lambda)}"
   },
   {
-    "objectID": "slides/H3.html#veralgemeende-eigenruimten-1",
-    "href": "slides/H3.html#veralgemeende-eigenruimten-1",
+    "objectID": "slides/H3.html#veralgemeende-eigenruimten-3.3.2-1",
+    "href": "slides/H3.html#veralgemeende-eigenruimten-3.3.2-1",
     "title": "Hoofdstuk 3 - Lineaire operatoren en eigenwaarden",
-    "section": "Veralgemeende eigenruimten",
-    "text": "Veralgemeende eigenruimten\n\nPer constructie is {\\hat{A}}|_{U_{\\lambda}^{\\text{c}}}-\\lambda {\\hat{1}}_{U_\\lambda^{\\text{c}}} injectief/inverteerbaar, zodat {\\hat{A}}|_{U_{\\lambda}^{\\text{c}}} geen eigenwaarden \\lambda kan hebben. \\begin{aligned}\n\\Rightarrow m_{{\\hat{A}}}(z) &= m_{{\\hat{A}}|_{U_\\lambda}}(z) m_{{\\hat{A}}|_{U_\\lambda^{\\text{c}}}}(z)\\\\\nk_{{\\hat{A}}}(z) &= k_{{\\hat{A}}|_{U_\\lambda}}(z) \\underbrace{k_{{\\hat{A}}|_{U_\\lambda^{\\text{c}}}}(z)}_{\\text{geen nulpunten $\\lambda$}}\n\\end{aligned}\n\n\\Rightarrow \\mathop{\\mathrm{dim}}(U_\\lambda) = q_\\lambda en s = s_\\lambda (macht van (z-\\lambda) in m_{{\\hat{A}}}(z))"
+    "section": "Veralgemeende eigenruimten (3.3.2)",
+    "text": "Veralgemeende eigenruimten (3.3.2)\n\nPer constructie is {\\hat{A}}|_{U_{\\lambda}^{\\text{c}}}-\\lambda {\\hat{1}}_{U_\\lambda^{\\text{c}}} injectief/inverteerbaar, zodat {\\hat{A}}|_{U_{\\lambda}^{\\text{c}}} geen eigenwaarden \\lambda kan hebben. \\begin{aligned}\n\\Rightarrow m_{{\\hat{A}}}(z) &= m_{{\\hat{A}}|_{U_\\lambda}}(z) m_{{\\hat{A}}|_{U_\\lambda^{\\text{c}}}}(z)\\\\\nk_{{\\hat{A}}}(z) &= k_{{\\hat{A}}|_{U_\\lambda}}(z) \\underbrace{k_{{\\hat{A}}|_{U_\\lambda^{\\text{c}}}}(z)}_{\\text{geen nulpunten $\\lambda$}}\n\\end{aligned}\n\n\\Rightarrow \\mathop{\\mathrm{dim}}(U_\\lambda) = q_\\lambda en s = s_\\lambda (macht van (z-\\lambda) in m_{{\\hat{A}}}(z))"
   },
   {
-    "objectID": "slides/H3.html#veralgemeende-eigenruimten-voorbeeld",
-    "href": "slides/H3.html#veralgemeende-eigenruimten-voorbeeld",
+    "objectID": "slides/H3.html#veralgemeende-eigenruimten-voorbeeld-3.3.2",
+    "href": "slides/H3.html#veralgemeende-eigenruimten-voorbeeld-3.3.2",
     "title": "Hoofdstuk 3 - Lineaire operatoren en eigenwaarden",
-    "section": "Veralgemeende eigenruimten: voorbeeld",
-    "text": "Veralgemeende eigenruimten: voorbeeld\n\nVoorbeeld 3.13. p(z) = (z-1)(z+1)^2 = z^3 + z^2 - z - 1 \\Rightarrow {\\mathsf{C}}_p = \\begin{bmatrix} 0 & 1 & 0 \\\\ 0 & 0 & 1 \\\\ 1 & 1 & -1 \\end{bmatrix}:\n\nVanwege de constructie: \\sigma_{{\\mathsf{C}}_p} = \\{-1, +1\\} met q_{-1} = 2 en q_{+1} = 1\n{\\mathsf{C}}_p {v}_\\lambda = \\lambda {v}_\\lambda \\Rightarrow \\boldsymbol{v}_\\lambda = {a}\\begin{bmatrix} 1 \\\\ \\lambda \\\\ \\lambda^2 \\end{bmatrix} \\Rightarrow r_{-1} = r_{+1} = 1\n\\boldsymbol{v}_{+1} = (1,1,1): V_{+1} = U_{+1} = {\\mathbb{F}}\\boldsymbol{v}_{+1}\n\\boldsymbol{v}_{-1} = (1,-1,1): V_{-1} = {\\mathbb{F}}\\boldsymbol{v}_{-1}\nU_{-1} = \\mathop{\\mathrm{ker}}(({\\mathsf{C}}_p - (-1) {\\mathsf{I}})^2) = \\mathop{\\mathrm{ker}}\\left(\\begin{bmatrix}\n      1 & 1 & 0 \\\\ 0 & 1 & 1 \\\\ 1 & 1 & 0\n  \\end{bmatrix}^2\\right) = \\mathop{\\mathrm{ker}}\\left(\\begin{bmatrix} 1 & 2 & 1 \\\\ 1 & 2 & 1 \\\\ 1 & 2 & 1 \\end{bmatrix}\\right)"
+    "section": "Veralgemeende eigenruimten: voorbeeld (3.3.2)",
+    "text": "Veralgemeende eigenruimten: voorbeeld (3.3.2)\n\nVoorbeeld 3.13. p(z) = (z-1)(z+1)^2 = z^3 + z^2 - z - 1 \\Rightarrow {\\mathsf{C}}_p = \\begin{bmatrix} 0 & 1 & 0 \\\\ 0 & 0 & 1 \\\\ 1 & 1 & -1 \\end{bmatrix}:\n\nVanwege de constructie: \\sigma_{{\\mathsf{C}}_p} = \\{-1, +1\\} met q_{-1} = 2 en q_{+1} = 1\n{\\mathsf{C}}_p {v}_\\lambda = \\lambda {v}_\\lambda \\Rightarrow \\boldsymbol{v}_\\lambda = {a}\\begin{bmatrix} 1 \\\\ \\lambda \\\\ \\lambda^2 \\end{bmatrix} \\Rightarrow r_{-1} = r_{+1} = 1\n\\boldsymbol{v}_{+1} = (1,1,1): V_{+1} = U_{+1} = {\\mathbb{F}}\\boldsymbol{v}_{+1}\n\\boldsymbol{v}_{-1} = (1,-1,1): V_{-1} = {\\mathbb{F}}\\boldsymbol{v}_{-1}\nU_{-1} = \\mathop{\\mathrm{ker}}(({\\mathsf{C}}_p - (-1) {\\mathsf{I}})^2) = \\mathop{\\mathrm{ker}}\\left(\\begin{bmatrix}\n      1 & 1 & 0 \\\\ 0 & 1 & 1 \\\\ 1 & 1 & 0\n  \\end{bmatrix}^2\\right) = \\mathop{\\mathrm{ker}}\\left(\\begin{bmatrix} 1 & 2 & 1 \\\\ 1 & 2 & 1 \\\\ 1 & 2 & 1 \\end{bmatrix}\\right)"
   },
   {
-    "objectID": "slides/H3.html#veralgemeende-eigenruimten-voorbeeld-1",
-    "href": "slides/H3.html#veralgemeende-eigenruimten-voorbeeld-1",
+    "objectID": "slides/H3.html#veralgemeende-eigenruimten-voorbeeld-3.3.2-1",
+    "href": "slides/H3.html#veralgemeende-eigenruimten-voorbeeld-3.3.2-1",
     "title": "Hoofdstuk 3 - Lineaire operatoren en eigenwaarden",
-    "section": "Veralgemeende eigenruimten: voorbeeld",
-    "text": "Veralgemeende eigenruimten: voorbeeld\n\nVoorbeeld 3.13. p(z) = (z-1)(z+1)^2 = z^3 + z^2 - z - 1 \\Rightarrow {\\mathsf{C}}_p = \\begin{bmatrix} 0 & 1 & 0 \\\\ 0 & 0 & 1 \\\\ 1 & 1 & -1 \\end{bmatrix}:\n\nU_{-1} = \\mathop{\\mathrm{ker}}(({\\mathsf{C}}_p - (-1) {\\mathsf{I}})^2) = \\mathop{\\mathrm{ker}}\\left(\\begin{bmatrix}\n      1 & 1 & 0 \\\\ 0 & 1 & 1 \\\\ 1 & 1 & 0\n  \\end{bmatrix}^2\\right) = \\mathop{\\mathrm{ker}}\\left(\\begin{bmatrix} 1 & 2 & 1 \\\\ 1 & 2 & 1 \\\\ 1 & 2 & 1 \\end{bmatrix}\\right)\nBasis voor U_{-1}: \\{\\boldsymbol{v}_{-1}=(+1,-1,+1), \\boldsymbol{w}_{-1} = (1, 0, -1)\\}\n{\\mathsf{C}}_p \\begin{bmatrix} 1 & 1\\\\ -1 & 0 \\\\ 1 & -1\\end{bmatrix} = \\begin{bmatrix} -1 & 0 \\\\ 1 & -1 \\\\ -1 & 2 \\end{bmatrix}=\\begin{bmatrix} 1 & 1\\\\ -1 & 0 \\\\ 1 & -1\\end{bmatrix} \\underbrace{\\begin{bmatrix} -1 & 1 \\\\ 0 & -1\\end{bmatrix}}_{\\left.{\\mathsf{C}}_p\\right|_{U_{-1}} = (-1) {\\mathsf{I}}+ {\\mathsf{N}}}"
+    "section": "Veralgemeende eigenruimten: voorbeeld (3.3.2)",
+    "text": "Veralgemeende eigenruimten: voorbeeld (3.3.2)\n\nVoorbeeld 3.13. p(z) = (z-1)(z+1)^2 = z^3 + z^2 - z - 1 \\Rightarrow {\\mathsf{C}}_p = \\begin{bmatrix} 0 & 1 & 0 \\\\ 0 & 0 & 1 \\\\ 1 & 1 & -1 \\end{bmatrix}:\n\nU_{-1} = \\mathop{\\mathrm{ker}}(({\\mathsf{C}}_p - (-1) {\\mathsf{I}})^2) = \\mathop{\\mathrm{ker}}\\left(\\begin{bmatrix}\n      1 & 1 & 0 \\\\ 0 & 1 & 1 \\\\ 1 & 1 & 0\n  \\end{bmatrix}^2\\right) = \\mathop{\\mathrm{ker}}\\left(\\begin{bmatrix} 1 & 2 & 1 \\\\ 1 & 2 & 1 \\\\ 1 & 2 & 1 \\end{bmatrix}\\right)\nBasis voor U_{-1}: \\{\\boldsymbol{v}_{-1}=(+1,-1,+1), \\boldsymbol{w}_{-1} = (1, 0, -1)\\}\n{\\mathsf{C}}_p \\begin{bmatrix} 1 & 1\\\\ -1 & 0 \\\\ 1 & -1\\end{bmatrix} = \\begin{bmatrix} -1 & 0 \\\\ 1 & -1 \\\\ -1 & 2 \\end{bmatrix}=\\begin{bmatrix} 1 & 1\\\\ -1 & 0 \\\\ 1 & -1\\end{bmatrix} \\underbrace{\\begin{bmatrix} -1 & 1 \\\\ 0 & -1\\end{bmatrix}}_{\\left.{\\mathsf{C}}_p\\right|_{U_{-1}} = (-1) {\\mathsf{I}}+ {\\mathsf{N}}}"
   },
   {
-    "objectID": "slides/H3.html#veralgemeende-eigenruimten-2",
-    "href": "slides/H3.html#veralgemeende-eigenruimten-2",
+    "objectID": "slides/H3.html#veralgemeende-eigenruimten-3.3.2-2",
+    "href": "slides/H3.html#veralgemeende-eigenruimten-3.3.2-2",
     "title": "Hoofdstuk 3 - Lineaire operatoren en eigenwaarden",
-    "section": "Veralgemeende eigenruimten",
-    "text": "Veralgemeende eigenruimten\n\nStelling 3.20.\n\nWe kunnen nu V volledig ontbinden als V = U_{\\lambda_1} \\oplus U_{\\lambda_1}^{\\text{c}} = U_{\\lambda_1} \\oplus (U_{\\lambda_2} \\oplus \\cdots) = \\bigoplus_{\\lambda \\in \\sigma_{{\\hat{A}}}} U_\\lambda\nElke deelruimte in deze ontbinding is een invariante deelruimte van {\\hat{A}}, en er geldt {\\hat{A}}|_{U_\\lambda} = \\lambda {\\hat{1}}_{U_\\lambda} + {\\hat{N}}_\\lambda met ({\\hat{N}}_\\lambda)^{s_\\lambda} ={\\hat{0}} (nilpotent met index s_\\lambda)\n\n\n\nAls alle s_\\lambda=1 \\Leftrightarrow alle {\\hat{N}}_\\lambda={\\hat{0}} \\Rightarrow diagonaalvorm"
+    "section": "Veralgemeende eigenruimten (3.3.2)",
+    "text": "Veralgemeende eigenruimten (3.3.2)\n\nStelling 3.20.\n\nWe kunnen nu V volledig ontbinden als V = U_{\\lambda_1} \\oplus U_{\\lambda_1}^{\\text{c}} = U_{\\lambda_1} \\oplus (U_{\\lambda_2} \\oplus \\cdots) = \\bigoplus_{\\lambda \\in \\sigma_{{\\hat{A}}}} U_\\lambda\nElke deelruimte in deze ontbinding is een invariante deelruimte van {\\hat{A}}, en er geldt {\\hat{A}}|_{U_\\lambda} = \\lambda {\\hat{1}}_{U_\\lambda} + {\\hat{N}}_\\lambda met ({\\hat{N}}_\\lambda)^{s_\\lambda} ={\\hat{0}} (nilpotent met index s_\\lambda)\n\n\n\nAls alle s_\\lambda=1 \\Leftrightarrow alle {\\hat{N}}_\\lambda={\\hat{0}} \\Rightarrow diagonaalvorm"
   },
   {
-    "objectID": "slides/H3.html#jordan-normaalvorm-geen-bewijzen",
-    "href": "slides/H3.html#jordan-normaalvorm-geen-bewijzen",
+    "objectID": "slides/H3.html#jordan-normaalvorm-geen-bewijzen-3.3.3",
+    "href": "slides/H3.html#jordan-normaalvorm-geen-bewijzen-3.3.3",
     "title": "Hoofdstuk 3 - Lineaire operatoren en eigenwaarden",
-    "section": "Jordan normaalvorm (geen bewijzen)",
-    "text": "Jordan normaalvorm (geen bewijzen)\n\nWe kunnen een specifieke basis kiezen voor U_\\lambda zodat {\\hat{N}}_\\lambda een canonische vorm / normaalvorm aanneemt\n\n\nPropositie 3.21.\n\nBeschouw de k \\times k matrix {\\mathsf{N}}_k = \\begin{bmatrix} 0 & 1 & 0 & \\cdots & 0 & 0\\\\ 0 & 0 & 1 & \\cdots & 0 & 0 \\\\\n  \\vdots & \\vdots & \\vdots & \\ddots & \\vdots & \\vdots\\\\\n  0 & 0 & 0 & \\cdots & 0 & 1\\\\\n  0 & 0 & 0 & \\cdots & 0 & 0\n\\end{bmatrix}\n\\Rightarrow nilpotent met index k\nGegeven {\\hat{N}} met {\\hat{N}}^s={\\hat{0}}, er bestaat een basis B zodat: {\\mathsf{N}} = \\Phi_B({\\hat{N}}) = \\bigoplus_{k=1}^s \\bigoplus_{i=1}^{p_k} {\\mathsf{N}}_k met p_k \\geq 0 het aantal keer dat er een blok met index k voorkomt, en dus p_s \\geq 1."
+    "section": "Jordan normaalvorm (geen bewijzen) (3.3.3)",
+    "text": "Jordan normaalvorm (geen bewijzen) (3.3.3)\n\nWe kunnen een specifieke basis kiezen voor U_\\lambda zodat {\\hat{N}}_\\lambda een canonische vorm / normaalvorm aanneemt\n\n\nPropositie 3.21.\n\nBeschouw de k \\times k matrix {\\mathsf{N}}_k = \\begin{bmatrix} 0 & 1 & 0 & \\cdots & 0 & 0\\\\ 0 & 0 & 1 & \\cdots & 0 & 0 \\\\\n  \\vdots & \\vdots & \\vdots & \\ddots & \\vdots & \\vdots\\\\\n  0 & 0 & 0 & \\cdots & 0 & 1\\\\\n  0 & 0 & 0 & \\cdots & 0 & 0\n\\end{bmatrix}\n\\Rightarrow nilpotent met index k\nGegeven {\\hat{N}} met {\\hat{N}}^s={\\hat{0}}, er bestaat een basis B zodat: {\\mathsf{N}} = \\Phi_B({\\hat{N}}) = \\bigoplus_{k=1}^s \\bigoplus_{i=1}^{p_k} {\\mathsf{N}}_k met p_k \\geq 0 het aantal keer dat er een blok met index k voorkomt, en dus p_s \\geq 1."
   },
   {
-    "objectID": "slides/H3.html#jordan-normaalvorm-geen-bewijzen-1",
-    "href": "slides/H3.html#jordan-normaalvorm-geen-bewijzen-1",
+    "objectID": "slides/H3.html#jordan-normaalvorm-geen-bewijzen-3.3.3-1",
+    "href": "slides/H3.html#jordan-normaalvorm-geen-bewijzen-3.3.3-1",
     "title": "Hoofdstuk 3 - Lineaire operatoren en eigenwaarden",
-    "section": "Jordan normaalvorm (geen bewijzen)",
-    "text": "Jordan normaalvorm (geen bewijzen)\n\nStelling 3.22 (Jordan-decompositie). Jordan normaalvorm / canonische vorm: er bestaat een basis B zodat \\boxed{{\\mathsf{J}}_{{\\hat{A}}}= \\Phi_B({\\hat{A}}) = \\bigoplus_{\\lambda \\in \\sigma_{{\\hat{A}}}} \\bigoplus_{k=1}^{s_\\lambda} \\bigoplus_{i=1}^{p_{\\lambda,k}} {\\mathsf{J}}_k(\\lambda)} met J_k(\\lambda) = \\lambda {\\mathsf{I}}_{k} + {\\mathsf{N}}_k (Jordan-blokken) en p_{\\lambda,k} \\geq 0 voor k=1,\\ldots,s_\\lambda-1 en p_{\\lambda,s_\\lambda} &gt; 0"
+    "section": "Jordan normaalvorm (geen bewijzen) (3.3.3)",
+    "text": "Jordan normaalvorm (geen bewijzen) (3.3.3)\n\nStelling 3.22 (Jordan-decompositie). Jordan normaalvorm / canonische vorm: er bestaat een basis B zodat \\boxed{{\\mathsf{J}}_{{\\hat{A}}}= \\Phi_B({\\hat{A}}) = \\bigoplus_{\\lambda \\in \\sigma_{{\\hat{A}}}} \\bigoplus_{k=1}^{s_\\lambda} \\bigoplus_{i=1}^{p_{\\lambda,k}} {\\mathsf{J}}_k(\\lambda)} met J_k(\\lambda) = \\lambda {\\mathsf{I}}_{k} + {\\mathsf{N}}_k (Jordan-blokken) en p_{\\lambda,k} \\geq 0 voor k=1,\\ldots,s_\\lambda-1 en p_{\\lambda,s_\\lambda} &gt; 0"
   },
   {
-    "objectID": "slides/H3.html#jordan-normaalvorm-geen-bewijzen-2",
-    "href": "slides/H3.html#jordan-normaalvorm-geen-bewijzen-2",
+    "objectID": "slides/H3.html#jordan-normaalvorm-geen-bewijzen-3.3.3-2",
+    "href": "slides/H3.html#jordan-normaalvorm-geen-bewijzen-3.3.3-2",
     "title": "Hoofdstuk 3 - Lineaire operatoren en eigenwaarden",
-    "section": "Jordan normaalvorm (geen bewijzen)",
-    "text": "Jordan normaalvorm (geen bewijzen)\n\nOpmerking 3.41. Per Jordan-blok is er 1 eigenvector: r_\\lambda = \\sum_{k=1}^{s_\\lambda} p_{\\lambda,k} en q_\\lambda = \\sum_{k=1}^{s_\\lambda} k p_{\\lambda,k}\n\n\nJordan-decompositie: er bestaat een basistransformatie {\\mathsf{V}} \\in \\mathop{\\mathrm{GL}}(n,{\\mathbb{C}}) zodat {\\mathsf{A}}= {\\mathsf{V}} {\\mathsf{J}}_{\\mathsf{A}} {\\mathsf{V}}^{-1} = {\\mathsf{V}} \\left[\\bigoplus_{\\lambda \\in \\sigma_{{\\mathsf{A}}}} \\bigoplus_{k=1}^{s_\\lambda} \\bigoplus_{i=1}^{p^{(\\lambda)}_{k}} {\\mathsf{J}}_k(\\lambda) \\right]{\\mathsf{V}}^{-1}"
+    "section": "Jordan normaalvorm (geen bewijzen) (3.3.3)",
+    "text": "Jordan normaalvorm (geen bewijzen) (3.3.3)\n\nOpmerking 3.41. Per Jordan-blok is er 1 eigenvector: r_\\lambda = \\sum_{k=1}^{s_\\lambda} p_{\\lambda,k} en q_\\lambda = \\sum_{k=1}^{s_\\lambda} k p_{\\lambda,k}\n\n\nJordan-decompositie: er bestaat een basistransformatie {\\mathsf{V}} \\in \\mathop{\\mathrm{GL}}(n,{\\mathbb{C}}) zodat {\\mathsf{A}}= {\\mathsf{V}} {\\mathsf{J}}_{\\mathsf{A}} {\\mathsf{V}}^{-1} = {\\mathsf{V}} \\left[\\bigoplus_{\\lambda \\in \\sigma_{{\\mathsf{A}}}} \\bigoplus_{k=1}^{s_\\lambda} \\bigoplus_{i=1}^{p^{(\\lambda)}_{k}} {\\mathsf{J}}_k(\\lambda) \\right]{\\mathsf{V}}^{-1}"
   },
   {
-    "objectID": "slides/H3.html#companion-matrix-herbekeken",
-    "href": "slides/H3.html#companion-matrix-herbekeken",
+    "objectID": "slides/H3.html#companion-matrix-herbekeken-3.3.3",
+    "href": "slides/H3.html#companion-matrix-herbekeken-3.3.3",
     "title": "Hoofdstuk 3 - Lineaire operatoren en eigenwaarden",
-    "section": "Companion matrix herbekeken",
-    "text": "Companion matrix herbekeken\n\nPropositie 3.23. Voor een companion matrix {\\mathsf{C}} \\in {\\mathbb{F}}^{n \\times n} met (unieke) eigenwaarden {\\lambda_1,\\lambda_2,\\cdots,\\lambda_m} geldt\n\nr_\\lambda=1 met \\boldsymbol{v}_\\lambda = (1,\\lambda,\\ldots,\\lambda^{n-1}); s_\\lambda=q_\\lambda: 1 Jordan-blok per eigenwaarde\n\n\n\nOpmerking 3.44. Als m = n (alle q_\\lambda=1, alle eigenwaarden verschillend): diagonalisatie van {\\mathsf{C}} via de Vandermonde matrix {\\mathsf{V}}(\\lambda_1,\\ldots,\\lambda_n) = \\begin{bmatrix} 1 & 1 & 1 &\\dots & 1\\\\\n\\lambda_1 & \\lambda_2 & \\lambda_3 & \\dots & \\lambda_n\\\\\n\\lambda_1^2 & \\lambda_2^2 & \\lambda_3^2 & \\dots & \\lambda_n^2\\\\\n\\vdots & \\vdots & \\vdots & \\ddots & \\vdots\\\\\n\\lambda_1^{n-1} & \\lambda_2^{n-1} & \\lambda_3^{n-1} &\\dots & \\lambda_n^{n-1}\n\\end{bmatrix}"
+    "section": "Companion matrix herbekeken (3.3.3)",
+    "text": "Companion matrix herbekeken (3.3.3)\n\nPropositie 3.23. Voor een companion matrix {\\mathsf{C}} \\in {\\mathbb{F}}^{n \\times n} met (unieke) eigenwaarden {\\lambda_1,\\lambda_2,\\cdots,\\lambda_m} geldt\n\nr_\\lambda=1 met \\boldsymbol{v}_\\lambda = (1,\\lambda,\\ldots,\\lambda^{n-1}); s_\\lambda=q_\\lambda: 1 Jordan-blok per eigenwaarde\n\n\n\nOpmerking 3.44. Als m = n (alle q_\\lambda=1, alle eigenwaarden verschillend): diagonalisatie van {\\mathsf{C}} via de Vandermonde matrix {\\mathsf{V}}(\\lambda_1,\\ldots,\\lambda_n) = \\begin{bmatrix} 1 & 1 & 1 &\\dots & 1\\\\\n\\lambda_1 & \\lambda_2 & \\lambda_3 & \\dots & \\lambda_n\\\\\n\\lambda_1^2 & \\lambda_2^2 & \\lambda_3^2 & \\dots & \\lambda_n^2\\\\\n\\vdots & \\vdots & \\vdots & \\ddots & \\vdots\\\\\n\\lambda_1^{n-1} & \\lambda_2^{n-1} & \\lambda_3^{n-1} &\\dots & \\lambda_n^{n-1}\n\\end{bmatrix}"
   },
   {
-    "objectID": "slides/H3.html#companion-matrix-herbekeken-1",
-    "href": "slides/H3.html#companion-matrix-herbekeken-1",
+    "objectID": "slides/H3.html#companion-matrix-herbekeken-3.3.3-1",
+    "href": "slides/H3.html#companion-matrix-herbekeken-3.3.3-1",
     "title": "Hoofdstuk 3 - Lineaire operatoren en eigenwaarden",
-    "section": "Companion matrix herbekeken",
-    "text": "Companion matrix herbekeken\n\nq_\\lambda = s_\\lambda &gt; 1: Jordan-basisvectoren voor k=0,\\ldots,q_\\lambda-1: (\\boldsymbol{u}_{\\lambda,k})^i = \\frac{1}{k!}\\frac{{\\mathrm{d}}^k }{{\\mathrm{d}}\\lambda^k} \\lambda^{i-1} = \\begin{cases} 0,& i \\leq k \\\\ {i-1 \\choose k} \\lambda^{i-1-k},& i &gt; k\\end{cases}\\qquad (\\text{voor $i=1,\\ldots,n$}) (afgeleiden als gevolg van limiet van samenvallende eigenwaarden)"
+    "section": "Companion matrix herbekeken (3.3.3)",
+    "text": "Companion matrix herbekeken (3.3.3)\n\nq_\\lambda = s_\\lambda &gt; 1: Jordan-basisvectoren voor k=0,\\ldots,q_\\lambda-1: (\\boldsymbol{u}_{\\lambda,k})^i = \\frac{1}{k!}\\frac{{\\mathrm{d}}^k }{{\\mathrm{d}}\\lambda^k} \\lambda^{i-1} = \\begin{cases} 0,& i \\leq k \\\\ {i-1 \\choose k} \\lambda^{i-1-k},& i &gt; k\\end{cases}\\qquad (\\text{voor $i=1,\\ldots,n$}) (afgeleiden als gevolg van limiet van samenvallende eigenwaarden)"
   },
   {
-    "objectID": "slides/H3.html#sensitiviteit-van-eigenwaarden-en-eigenruimten",
-    "href": "slides/H3.html#sensitiviteit-van-eigenwaarden-en-eigenruimten",
+    "objectID": "slides/H3.html#verwante-eigenwaardenproblemen-3.3.4",
+    "href": "slides/H3.html#verwante-eigenwaardenproblemen-3.3.4",
     "title": "Hoofdstuk 3 - Lineaire operatoren en eigenwaarden",
-    "section": "Sensitiviteit van eigenwaarden en eigenruimten",
-    "text": "Sensitiviteit van eigenwaarden en eigenruimten\n\nSensitiviteitsanalyse \\approx perturbatietheorie\nHoe sterk verandert de eigenwaardedecompositie of Jordandecompositie van een matrix bij een kleine variatie in de matrixcomponenten? Is er een notie van “continuïteit” of “gladheid”?\nMoeilijk en uitgebreid onderwerp waarvoor we nog niet alle gereedschappen en concepten ter beschikking hebben (normen, hermitische matrices, …)"
+    "section": "Verwante eigenwaardenproblemen (3.3.4)",
+    "text": "Verwante eigenwaardenproblemen (3.3.4)\n\n{\\mathsf{A}} \\boldsymbol{v} = \\lambda \\boldsymbol{v} \\Rightarrow {\\overline{{\\mathsf{A}}}} {\\overline{\\boldsymbol{v}}} = {\\overline{\\lambda}} {\\overline{\\boldsymbol{v}}}\n\n{\\mathsf{A}} reëel: voor elke \\lambda \\in {\\mathbb{C}} is ook {\\overline{\\lambda}} een eigenwaarde (complex toegevoegde paren), bijbehorende eigenvectoren zijn ook complex toegevoegd\n{\\mathsf{A}} reëel en \\lambda reëel: zowel \\boldsymbol{v} als {\\overline{\\boldsymbol{v}}} zijn eigenvectoren, en dus ook de reële combinaties \\mathop{\\mathrm{Re}}(\\boldsymbol{v}) = (\\boldsymbol{v}+{\\overline{\\boldsymbol{v}}})/2 \\quad \\text{en} \\quad \\mathop{\\mathrm{Im}}(\\boldsymbol{v}) = (\\boldsymbol{v}-{\\overline{\\boldsymbol{v}}})/(2{\\mathrm{i}}) (minstens 1 van beide is niet nul)\n\\Rightarrow eigenvectoren horende bij reële eigenwaarden kunnen reëel worden gekozen"
   },
   {
-    "objectID": "slides/H3.html#sensitiviteit-van-eigenwaarden-en-eigenruimten-1",
-    "href": "slides/H3.html#sensitiviteit-van-eigenwaarden-en-eigenruimten-1",
+    "objectID": "slides/H3.html#verwante-eigenwaardenproblemen-3.3.4-1",
+    "href": "slides/H3.html#verwante-eigenwaardenproblemen-3.3.4-1",
     "title": "Hoofdstuk 3 - Lineaire operatoren en eigenwaarden",
-    "section": "Sensitiviteit van eigenwaarden en eigenruimten",
-    "text": "Sensitiviteit van eigenwaarden en eigenruimten\n\nVoorbeeld 1: {\\mathsf{A}}_1({\\varepsilon}) = \\begin{bmatrix}\n   0 & 1\\\\ {\\varepsilon}& 0\n  \\end{bmatrix}\n\n{\\varepsilon}= 0: \\sigma_{{\\mathsf{A}}}=\\{0\\} met q_0 = s_0 = 2, r_0=1: 1 Jordan-blok\n{\\varepsilon}&gt; 0: \\sigma_{{\\mathsf{A}}}=\\{+\\sqrt{{\\varepsilon}},-\\sqrt{{\\varepsilon}}\\} en {\\mathsf{V}}({\\varepsilon}) = \\begin{bmatrix}\n    1 & 1 \\\\ +\\sqrt{{\\varepsilon}} & -\\sqrt{{\\varepsilon}}\n\\end{bmatrix}\n\nVoorbeeld 2: {\\mathsf{A}}_2({\\varepsilon}) = \\begin{bmatrix}\n   0 & 1\\\\ 0 & {\\varepsilon}\n  \\end{bmatrix}\n\n{\\varepsilon}= 0: \\sigma_{{\\mathsf{A}}}=\\{0\\} met q_0 = s_0 = 2, r_0=1: 1 Jordan-blok\n{\\varepsilon}&gt; 0: \\sigma_{{\\mathsf{A}}}=\\{0,{\\varepsilon}\\} met {\\mathsf{V}}({\\varepsilon}) = \\begin{bmatrix}\n    1 & 1 \\\\ 0 & {\\varepsilon}\n\\end{bmatrix}\n\n\nProblemen omdat \\mathop{\\mathrm{GL}}(V) niet compact is: limieten van inverteerbare matrices kunnen niet-inverteerbare matrices opleveren"
+    "section": "Verwante eigenwaardenproblemen (3.3.4)",
+    "text": "Verwante eigenwaardenproblemen (3.3.4)\n\n{\\mathsf{A}} en {\\mathsf{A}}^{\\mathsf{T}} hebben dezelfde karakteristieke veelterm (en minimaalveelterm)\nVoor elke eigenwaarde \\lambda van {\\mathsf{A}} bestaan er ook “linkse” eigenvectoren \\boldsymbol{w}^{\\mathsf{T}}{\\mathsf{A}} = \\lambda \\boldsymbol{w}^{\\mathsf{T}}\\iff {\\mathsf{A}}^{\\mathsf{T}}\\boldsymbol{w} = \\lambda \\boldsymbol{w}\n\nIntrinsieke betekenis:\nals {\\mathsf{A}} = \\Phi_B({\\hat{A}}) voor een basis B=\\{{e}_1,\\ldots,{e}_n\\}, beschouw dan duale basis B^\\ast=\\{\\varepsilon^1,\\ldots,\\varepsilon^n\\} met \\varepsilon^i[{e}_j] = \\delta^i_{\\ j}:\n\\omega = w_i \\varepsilon^i voldoet aan {\\hat{A}}^\\ast(\\omega) = \\lambda \\omega"
   },
   {
-    "objectID": "slides/H3.html#verwante-eigenwaardenproblemen",
-    "href": "slides/H3.html#verwante-eigenwaardenproblemen",
+    "objectID": "slides/H3.html#verwante-eigenwaardenproblemen-3.3.4-2",
+    "href": "slides/H3.html#verwante-eigenwaardenproblemen-3.3.4-2",
     "title": "Hoofdstuk 3 - Lineaire operatoren en eigenwaarden",
-    "section": "Verwante eigenwaardenproblemen",
-    "text": "Verwante eigenwaardenproblemen\n\n{\\mathsf{A}} \\boldsymbol{v} = \\lambda \\boldsymbol{v} \\Rightarrow {\\overline{{\\mathsf{A}}}} {\\overline{\\boldsymbol{v}}} = {\\overline{\\lambda}} {\\overline{\\boldsymbol{v}}}\n\n{\\mathsf{A}} reëel: voor elke \\lambda \\in {\\mathbb{C}} is ook {\\overline{\\lambda}} een eigenwaarde (complex toegevoegde paren), bijbehorende eigenvectoren zijn ook complex toegevoegd\n{\\mathsf{A}} reëel en \\lambda reëel: zowel \\boldsymbol{v} als {\\overline{\\boldsymbol{v}}} zijn eigenvectoren, en dus ook de reële combinaties \\mathop{\\mathrm{Re}}(\\boldsymbol{v}) = (\\boldsymbol{v}+{\\overline{\\boldsymbol{v}}})/2 \\quad \\text{en} \\quad \\mathop{\\mathrm{Im}}(\\boldsymbol{v}) = (\\boldsymbol{v}-{\\overline{\\boldsymbol{v}}})/(2{\\mathrm{i}}) (minstens 1 van beide is niet nul)\n\\Rightarrow eigenvectoren horende bij reële eigenwaarden kunnen reëel worden gekozen"
+    "section": "Verwante eigenwaardenproblemen (3.3.4)",
+    "text": "Verwante eigenwaardenproblemen (3.3.4)\nStel {\\hat{A}}^\\ast(\\omega') = \\lambda' \\omega' en {\\hat{A}}{v}= \\lambda {v}:\n\n\\omega'[{\\hat{A}}{v}] = ({\\hat{A}}^\\ast \\omega')[{v}] \\Rightarrow \\lambda \\omega'[{v}] = \\lambda' \\omega'[{v}]\n\\lambda \\neq \\lambda' \\Rightarrow \\omega'[{v}] = 0\n\\lambda = \\lambda' : \\omega[{v}] \\neq 0?\nUit Jordan-decompositie {\\mathsf{J}}_{{\\mathsf{A}}} = \\bigoplus_{\\lambda \\in \\sigma_{{\\hat{A}}}} \\bigoplus_{k=1}^{s_\\lambda} \\bigoplus_{i=1}^{p^{(\\lambda)}_{k-1}} {\\mathsf{J}}^{(k)}(\\lambda) leren we dat elk Jordan-blok één rechtse eigenvector oplevert (de basisvector geassocieerd met de eerste kolom van het blok), en één linkse eigenvector (de basisvector geassocieerd met de laatste rij van het blok)\n\\Rightarrow \\omega[{v}] \\neq 0 enkel als ze horen bij een Jordan-blok van grootte 1"
   },
   {
-    "objectID": "slides/H3.html#verwante-eigenwaardenproblemen-1",
-    "href": "slides/H3.html#verwante-eigenwaardenproblemen-1",
+    "objectID": "slides/H3.html#functies-van-lineaire-operatoren-3.4",
+    "href": "slides/H3.html#functies-van-lineaire-operatoren-3.4",
     "title": "Hoofdstuk 3 - Lineaire operatoren en eigenwaarden",
-    "section": "Verwante eigenwaardenproblemen",
-    "text": "Verwante eigenwaardenproblemen\n\n{\\mathsf{A}} en {\\mathsf{A}}^{\\mathsf{T}} hebben dezelfde karakteristieke veelterm (en minimaalveelterm)\nVoor elke eigenwaarde \\lambda van {\\mathsf{A}} bestaan er ook “linkse” eigenvectoren \\boldsymbol{w}^{\\mathsf{T}}{\\mathsf{A}} = \\lambda \\boldsymbol{w}^{\\mathsf{T}}\\iff {\\mathsf{A}}^{\\mathsf{T}}\\boldsymbol{w} = \\lambda \\boldsymbol{w}\n\nIntrinsieke betekenis:\nals {\\mathsf{A}} = \\Phi_B({\\hat{A}}) voor een basis B=\\{{e}_1,\\ldots,{e}_n\\}, beschouw dan duale basis B^\\ast=\\{\\varepsilon^1,\\ldots,\\varepsilon^n\\} met \\varepsilon^i[{e}_j] = \\delta^i_{\\ j}:\n\\omega = w_i \\varepsilon^i voldoet aan {\\hat{A}}^\\ast(\\omega) = \\lambda \\omega"
+    "section": "Functies van lineaire operatoren (3.4)",
+    "text": "Functies van lineaire operatoren (3.4)\n\nWe kunnen al veeltermen p({\\hat{A}}) en inverses {\\hat{A}}^{-1} berekenen:\nsamen geeft dit alle rationale functies r({\\hat{A}})=p({\\hat{A}})/q({\\hat{A}})\nAndere functies f van {\\hat{A}} \\in \\mathop{\\mathrm{End}}(V)?\nHoe definiëren we f({\\hat{A}})?"
   },
   {
-    "objectID": "slides/H3.html#verwante-eigenwaardenproblemen-2",
-    "href": "slides/H3.html#verwante-eigenwaardenproblemen-2",
+    "objectID": "slides/H3.html#functies-van-lineaire-operatoren-verwachtingen-3.4",
+    "href": "slides/H3.html#functies-van-lineaire-operatoren-verwachtingen-3.4",
     "title": "Hoofdstuk 3 - Lineaire operatoren en eigenwaarden",
-    "section": "Verwante eigenwaardenproblemen",
-    "text": "Verwante eigenwaardenproblemen\nStel {\\hat{A}}^\\ast(\\omega') = \\lambda' \\omega' en {\\hat{A}}{v}= \\lambda {v}:\n\n\\omega'[{\\hat{A}}{v}] = ({\\hat{A}}^\\ast \\omega')[{v}] \\Rightarrow \\lambda \\omega'[{v}] = \\lambda' \\omega'[{v}]\n\\lambda \\neq \\lambda' \\Rightarrow \\omega'[{v}] = 0\n\\lambda = \\lambda' : \\omega[{v}] \\neq 0?\nUit Jordan-decompositie {\\mathsf{J}}_{{\\mathsf{A}}} = \\bigoplus_{\\lambda \\in \\sigma_{{\\hat{A}}}} \\bigoplus_{k=1}^{s_\\lambda} \\bigoplus_{i=1}^{p^{(\\lambda)}_{k-1}} {\\mathsf{J}}^{(k)}(\\lambda) leren we dat elk Jordan-blok één rechtse eigenvector oplevert (de basisvector geassocieerd met de eerste kolom van het blok), en één linkse eigenvector (de basisvector geassocieerd met de laatste rij van het blok)\n\\Rightarrow \\omega[{v}] \\neq 0 enkel als ze horen bij een Jordan-blok van grootte 1"
+    "section": "Functies van lineaire operatoren: verwachtingen (3.4)",
+    "text": "Functies van lineaire operatoren: verwachtingen (3.4)\n\n{\\hat{A}}{v}= \\lambda {v}\\Rightarrow f({\\hat{A}}){v}= f(\\lambda){v}\nf moet goed gedefinieerd zijn voor alle \\lambda \\in \\sigma_{{\\hat{A}}}\nVoor elke lineaire transformatie {\\hat{T}} \\in \\mathop{\\mathrm{Hom}}(V,W): f({\\hat{T}} {\\hat{A}} {\\hat{T}}^{-1}) = {\\hat{T}} f({\\hat{A}}) {\\hat{T}}^{-1}\nVoor {\\hat{A}} \\in \\mathop{\\mathrm{End}}(V) en {\\hat{B}} \\in \\mathop{\\mathrm{End}}(W): f({\\hat{A}} \\oplus {\\hat{B}}) = f({\\hat{A}}) \\oplus f({\\hat{B}})\n(blokdiagonale matrix: f werkt op afzonderlijke diagonaalblokken)\nVoor {\\hat{A}},{\\hat{B}} \\in \\mathop{\\mathrm{End}}(V) met {\\left[{\\hat{A}},{\\hat{B}}\\right]}={\\hat{0}} en twee functies f,g: {\\left[f({\\hat{A}}),g({\\hat{B}})\\right]}={\\hat{0}}"
   },
   {
-    "objectID": "slides/H3.html#functies-van-lineaire-operatoren-1",
-    "href": "slides/H3.html#functies-van-lineaire-operatoren-1",
+    "objectID": "slides/H3.html#functies-van-lineaire-operatoren-definitie-1-3.4",
+    "href": "slides/H3.html#functies-van-lineaire-operatoren-definitie-1-3.4",
     "title": "Hoofdstuk 3 - Lineaire operatoren en eigenwaarden",
-    "section": "Functies van lineaire operatoren",
-    "text": "Functies van lineaire operatoren\n\nWe kunnen al veeltermen p({\\hat{A}}) en inverses {\\hat{A}}^{-1} berekenen:\nsamen geeft dit alle rationale functies r({\\hat{A}})=p({\\hat{A}})/q({\\hat{A}})\nAndere functies f van {\\hat{A}} \\in \\mathop{\\mathrm{End}}(V)?\nHoe definiëren we f({\\hat{A}})?"
+    "section": "Functies van lineaire operatoren: definitie 1 (3.4)",
+    "text": "Functies van lineaire operatoren: definitie 1 (3.4)\n\nDefinitie 3.16. Als {\\hat{A}} diagonaliseerbaar is, definitie van f({\\hat{A}}) via diagonaalvorm / spectrale decompositie: \\boxed{{\\hat{A}} = \\sum_{\\lambda} \\lambda {\\hat{P}}_\\lambda \\Rightarrow f({\\hat{A}}) = \\sum_\\lambda f(\\lambda) {\\hat{P}}_\\lambda}\n\n\nVoorbeeld 3.14. {\\mathsf{A}} = \\begin{bmatrix}\n        0 & -\\theta\\\\ \\theta & 0\n    \\end{bmatrix} = \\underbrace{\\begin{bmatrix} 1 & 1 \\\\ -{\\mathrm{i}}& +{\\mathrm{i}}\\end{bmatrix}}_{{\\mathsf{V}}} \\underbrace{\\begin{bmatrix} {\\mathrm{i}}\\theta & 0 \\\\ 0 & -{\\mathrm{i}}\\theta\\end{bmatrix}}_{{\\mathsf{D}}}  \\underbrace{\\begin{bmatrix} \\frac{1}{2} & +\\frac{{\\mathrm{i}}}{2} \\\\ \\frac{1}{2} & -\\frac{{\\mathrm{i}}}{2}\\end{bmatrix}}_{{\\mathsf{V}}^{-1}} \\exp({\\mathsf{A}}) = \\begin{bmatrix} 1 & 1 \\\\ -{\\mathrm{i}}& +{\\mathrm{i}}\\end{bmatrix} \\begin{bmatrix} {\\mathrm{e}}^{{\\mathrm{i}}\\theta } & 0 \\\\ 0 & {\\mathrm{e}}^{-{\\mathrm{i}}\\theta} \\end{bmatrix}  \\begin{bmatrix} \\frac{1}{2} & +\\frac{{\\mathrm{i}}}{2} \\\\ \\frac{1}{2} & -\\frac{{\\mathrm{i}}}{2}\\end{bmatrix} = \\begin{bmatrix}\n            \\cos(\\theta) & -\\sin(\\theta) \\\\ \\sin(\\theta) & \\cos(\\theta)\n        \\end{bmatrix}"
   },
   {
-    "objectID": "slides/H3.html#functies-van-lineaire-operatoren-verwachtingen",
-    "href": "slides/H3.html#functies-van-lineaire-operatoren-verwachtingen",
+    "objectID": "slides/H3.html#functies-van-lineaire-operatoren-definitie-2-3.4",
+    "href": "slides/H3.html#functies-van-lineaire-operatoren-definitie-2-3.4",
     "title": "Hoofdstuk 3 - Lineaire operatoren en eigenwaarden",
-    "section": "Functies van lineaire operatoren: verwachtingen",
-    "text": "Functies van lineaire operatoren: verwachtingen\n\n{\\hat{A}}{v}= \\lambda {v}\\Rightarrow f({\\hat{A}}){v}= f(\\lambda){v}\nf moet goed gedefinieerd zijn voor alle \\lambda \\in \\sigma_{{\\hat{A}}}\nVoor elke lineaire transformatie {\\hat{T}} \\in \\mathop{\\mathrm{Hom}}(V,W): f({\\hat{T}} {\\hat{A}} {\\hat{T}}^{-1}) = {\\hat{T}} f({\\hat{A}}) {\\hat{T}}^{-1}\nVoor {\\hat{A}} \\in \\mathop{\\mathrm{End}}(V) en {\\hat{B}} \\in \\mathop{\\mathrm{End}}(W): f({\\hat{A}} \\oplus {\\hat{B}}) = f({\\hat{A}}) \\oplus f({\\hat{B}})\n(blokdiagonale matrix: f werkt op afzonderlijke diagonaalblokken)\nVoor {\\hat{A}},{\\hat{B}} \\in \\mathop{\\mathrm{End}}(V) met {\\left[{\\hat{A}},{\\hat{B}}\\right]}={\\hat{0}} en twee functies f,g: {\\left[f({\\hat{A}}),g({\\hat{B}})\\right]}={\\hat{0}}"
+    "section": "Functies van lineaire operatoren: definitie 2 (3.4)",
+    "text": "Functies van lineaire operatoren: definitie 2 (3.4)\n\nDefinitie. Als f(z) = \\sum_{n=0}^{+\\infty} f_n z^n een Taylorreeks rond z=0 (Maclaurin reeks) heeft: f({\\hat{A}}) = \\sum_{n=0}^{+\\infty} f_n {\\hat{A}}^n\n\nBetekenis van een reeks van een operator? Convergentie? Zie Hoofdstuk 4"
   },
   {
-    "objectID": "slides/H3.html#functies-van-lineaire-operatoren-definitie-1",
-    "href": "slides/H3.html#functies-van-lineaire-operatoren-definitie-1",
+    "objectID": "slides/H3.html#functies-van-lineaire-operatoren-definitie-2-3.4-1",
+    "href": "slides/H3.html#functies-van-lineaire-operatoren-definitie-2-3.4-1",
     "title": "Hoofdstuk 3 - Lineaire operatoren en eigenwaarden",
-    "section": "Functies van lineaire operatoren: definitie 1",
-    "text": "Functies van lineaire operatoren: definitie 1\n\nDefinitie 3.16. Als {\\hat{A}} diagonaliseerbaar is, definitie van f({\\hat{A}}) via diagonaalvorm / spectrale decompositie: \\boxed{{\\hat{A}} = \\sum_{\\lambda} \\lambda {\\hat{P}}_\\lambda \\Rightarrow f({\\hat{A}}) = \\sum_\\lambda f(\\lambda) {\\hat{P}}_\\lambda}\n\n\nVoorbeeld 3.14. {\\mathsf{A}} = \\begin{bmatrix}\n        0 & -\\theta\\\\ \\theta & 0\n    \\end{bmatrix} = \\underbrace{\\begin{bmatrix} 1 & 1 \\\\ -{\\mathrm{i}}& +{\\mathrm{i}}\\end{bmatrix}}_{{\\mathsf{V}}} \\underbrace{\\begin{bmatrix} {\\mathrm{i}}\\theta & 0 \\\\ 0 & -{\\mathrm{i}}\\theta\\end{bmatrix}}_{{\\mathsf{D}}}  \\underbrace{\\begin{bmatrix} \\frac{1}{2} & +\\frac{{\\mathrm{i}}}{2} \\\\ \\frac{1}{2} & -\\frac{{\\mathrm{i}}}{2}\\end{bmatrix}}_{{\\mathsf{V}}^{-1}} \\exp({\\mathsf{A}}) = \\begin{bmatrix} 1 & 1 \\\\ -{\\mathrm{i}}& +{\\mathrm{i}}\\end{bmatrix} \\begin{bmatrix} {\\mathrm{e}}^{{\\mathrm{i}}\\theta } & 0 \\\\ 0 & {\\mathrm{e}}^{-{\\mathrm{i}}\\theta} \\end{bmatrix}  \\begin{bmatrix} \\frac{1}{2} & +\\frac{{\\mathrm{i}}}{2} \\\\ \\frac{1}{2} & -\\frac{{\\mathrm{i}}}{2}\\end{bmatrix} = \\begin{bmatrix}\n            \\cos(\\theta) & -\\sin(\\theta) \\\\ \\sin(\\theta) & \\cos(\\theta)\n        \\end{bmatrix}"
+    "section": "Functies van lineaire operatoren: definitie 2 (3.4)",
+    "text": "Functies van lineaire operatoren: definitie 2 (3.4)\n\nVoorbeeld: f(z)=\\exp(z)=\\sum_{n=0}^{+\\infty} \\frac{1}{n!} z^n {\\mathsf{A}}^{2n+1} = (-1)^{n} \\begin{bmatrix}\n      0 & -\\theta^{2n+1}\\\\ \\theta^{2n+1} & 0\n  \\end{bmatrix} \\quad \\text{en} \\quad {\\mathsf{A}}^{2n} = (-1)^n \\begin{bmatrix}\n      \\theta^{2n} & 0\\\\ 0 & \\theta^{2n}\n  \\end{bmatrix} voor alle n\\in {\\mathbb{N}} \\begin{aligned}\nf({\\mathsf{A}}) &= \\sum_{n=0}^{+\\infty} \\frac{(-1)^n}{(2n)!} \\begin{bmatrix}\n      \\theta^{2n} & 0\\\\ 0 & \\theta^{2n}\n  \\end{bmatrix} + \\sum_{n=0}^{+\\infty} \\frac{(-1)^n}{(2n+1)!}\\begin{bmatrix}\n      0 & -\\theta^{2n+1}\\\\ \\theta^{2n+1} & 0\n  \\end{bmatrix}\\\\\n&= \\begin{bmatrix}\n          \\cos(\\theta) & -\\sin(\\theta) \\\\ \\sin(\\theta) & \\cos(\\theta)\n      \\end{bmatrix}\n\\end{aligned}"
   },
   {
-    "objectID": "slides/H3.html#functies-van-lineaire-operatoren-definitie-2",
-    "href": "slides/H3.html#functies-van-lineaire-operatoren-definitie-2",
+    "objectID": "slides/H3.html#functies-van-lineaire-operatoren-definitie-3-3.4",
+    "href": "slides/H3.html#functies-van-lineaire-operatoren-definitie-3-3.4",
     "title": "Hoofdstuk 3 - Lineaire operatoren en eigenwaarden",
-    "section": "Functies van lineaire operatoren: definitie 2",
-    "text": "Functies van lineaire operatoren: definitie 2\n\nDefinitie. Als f(z) = \\sum_{n=0}^{+\\infty} f_n z^n een Taylorreeks rond z=0 (Maclaurin reeks) heeft: f({\\hat{A}}) = \\sum_{n=0}^{+\\infty} f_n {\\hat{A}}^n\n\nBetekenis van een reeks van een operator? Convergentie? Zie Hoofdstuk 4"
+    "section": "Functies van lineaire operatoren: definitie 3 (3.4)",
+    "text": "Functies van lineaire operatoren: definitie 3 (3.4)\n\nDefinitie. Via Jordan-decompositie: f({\\mathsf{A}}) = {\\mathsf{V}} \\left[\\bigoplus_{\\lambda \\in \\sigma_{{\\mathsf{A}}}} \\bigoplus_{k=1}^{s_\\lambda} \\bigoplus_{i=1}^{p^{(\\lambda)}_{k}} f\\left({\\mathsf{J}}_k(\\lambda)\\right) \\right]{\\mathsf{V}}^{-1}\n\n\nFunctie van een Jordan-blok J_k(\\lambda): voldoende dat f een Taylorreeks rond z=\\lambda heeft met eindige convergentieradius a: f(z) = \\sum_{n=0}^{+\\infty} \\frac{f^{(n)}(\\lambda)}{n!} (z - \\lambda)^n, \\qquad \\forall z\\ \\text{met}\\ |z - \\lambda| &lt; a,\\ \\text{voor een $a &gt; 0$}"
   },
   {
-    "objectID": "slides/H3.html#functies-van-lineaire-operatoren-definitie-2-1",
-    "href": "slides/H3.html#functies-van-lineaire-operatoren-definitie-2-1",
+    "objectID": "slides/H3.html#functies-van-lineaire-operatoren-definitie-3-3.4-1",
+    "href": "slides/H3.html#functies-van-lineaire-operatoren-definitie-3-3.4-1",
     "title": "Hoofdstuk 3 - Lineaire operatoren en eigenwaarden",
-    "section": "Functies van lineaire operatoren: definitie 2",
-    "text": "Functies van lineaire operatoren: definitie 2\n\nVoorbeeld: f(z)=\\exp(z)=\\sum_{n=0}^{+\\infty} \\frac{1}{n!} z^n {\\mathsf{A}}^{2n+1} = (-1)^{n} \\begin{bmatrix}\n      0 & -\\theta^{2n+1}\\\\ \\theta^{2n+1} & 0\n  \\end{bmatrix} \\quad \\text{en} \\quad {\\mathsf{A}}^{2n} = (-1)^n \\begin{bmatrix}\n      \\theta^{2n} & 0\\\\ 0 & \\theta^{2n}\n  \\end{bmatrix} voor alle n\\in {\\mathbb{N}} \\begin{aligned}\nf({\\mathsf{A}}) &= \\sum_{n=0}^{+\\infty} \\frac{(-1)^n}{(2n)!} \\begin{bmatrix}\n      \\theta^{2n} & 0\\\\ 0 & \\theta^{2n}\n  \\end{bmatrix} + \\sum_{n=0}^{+\\infty} \\frac{(-1)^n}{(2n+1)!}\\begin{bmatrix}\n      0 & -\\theta^{2n+1}\\\\ \\theta^{2n+1} & 0\n  \\end{bmatrix}\\\\\n&= \\begin{bmatrix}\n          \\cos(\\theta) & -\\sin(\\theta) \\\\ \\sin(\\theta) & \\cos(\\theta)\n      \\end{bmatrix}\n\\end{aligned}"
+    "section": "Functies van lineaire operatoren: definitie 3 (3.4)",
+    "text": "Functies van lineaire operatoren: definitie 3 (3.4)\n\\begin{aligned}\nf(J_k(\\lambda)) &= \\sum_{n=0}^{+\\infty} \\frac{f^{(n)}(\\lambda)}{n!} (J_k(\\lambda) - \\lambda{\\mathsf{I}}_k)^n\\\\\n&= \\sum_{n=0}^{+\\infty} \\frac{f^{(n)}(\\lambda)}{n!} ({\\mathsf{N}}_k)^n = \\sum_{n=0}^{k-1} \\frac{f^{(n)}(\\lambda)}{n!} ({\\mathsf{N}}_k)^n\n\\end{aligned}\n\\Rightarrow f({\\mathsf{J}}^{(k)}(\\lambda)) = \\begin{bmatrix}\nf(\\lambda) & f^{(1)}(\\lambda) & \\frac{f^{(2)}(\\lambda)}{2} & \\frac{f^{(3)}(\\lambda)}{3!} & \\cdots &    \\frac{f^{(k-1)}(\\lambda)}{(k-1)!}\\\\\n0 & f(\\lambda) & f^{(1)}(\\lambda) & \\frac{f^{(2)}(\\lambda)}{2} & \\cdots &       \\frac{f^{(k-2)}(\\lambda)}{(k-2)!}\\\\\n0 & 0 & f(\\lambda) & f^{(1)}(\\lambda) & \\cdots &    \\frac{f^{(k-3)}(\\lambda)}{(k-3)!}\\\\\n0 & 0 & 0 & f(\\lambda) & \\cdots &       \\frac{f^{(k-4)}(\\lambda)}{(k-4)!}\\\\\n    \\vdots & \\vdots & \\vdots & \\vdots & \\ddots & \\vdots\\\\\n    0 & 0 & 0 & 0 & \\cdots & f(\\lambda)\n\\end{bmatrix}"
   },
   {
-    "objectID": "slides/H3.html#functies-van-lineaire-operatoren-definitie-3",
-    "href": "slides/H3.html#functies-van-lineaire-operatoren-definitie-3",
+    "objectID": "slides/H3.html#exponentiële-functie-3.4.1",
+    "href": "slides/H3.html#exponentiële-functie-3.4.1",
     "title": "Hoofdstuk 3 - Lineaire operatoren en eigenwaarden",
-    "section": "Functies van lineaire operatoren: definitie 3",
-    "text": "Functies van lineaire operatoren: definitie 3\n\nDefinitie. Via Jordan-decompositie: f({\\mathsf{A}}) = {\\mathsf{V}} \\left[\\bigoplus_{\\lambda \\in \\sigma_{{\\mathsf{A}}}} \\bigoplus_{k=1}^{s_\\lambda} \\bigoplus_{i=1}^{p^{(\\lambda)}_{k}} f\\left({\\mathsf{J}}_k(\\lambda)\\right) \\right]{\\mathsf{V}}^{-1}\n\n\nFunctie van een Jordan-blok J_k(\\lambda): voldoende dat f een Taylorreeks rond z=\\lambda heeft met eindige convergentieradius a: f(z) = \\sum_{n=0}^{+\\infty} \\frac{f^{(n)}(\\lambda)}{n!} (z - \\lambda)^n, \\qquad \\forall z\\ \\text{met}\\ |z - \\lambda| &lt; a,\\ \\text{voor een $a &gt; 0$}"
+    "section": "Exponentiële functie (3.4.1)",
+    "text": "Exponentiële functie (3.4.1)\n\\begin{aligned}\n\\exp(t J^{(k)}(\\lambda)) &= e^{t \\lambda} \\left({\\mathsf{I}}+ t {\\mathsf{N}}_k + \\frac{t^2}{2} \\big({\\mathsf{N}}_k\\big)^2 + \\ldots \\right)\\\\\n  &= e^{t \\lambda} \\begin{bmatrix}\n1 & t & \\frac{t^2}{2} & \\frac{t^3}{3!} & \\cdots &       \\frac{t^{k-1}}{(k-1)!}\\\\\n0 & 1 & t & \\frac{t^2}{2} & \\cdots &    \\frac{t^{k-2}}{(k-2)!}\\\\\n0 & 0 & 1 & t & \\cdots &    \\frac{t^{k-3}}{(k-3)!}\\\\\n0 & 0 & 0 & 1 & \\cdots &    \\frac{t^{k-4}}{(k-4)!}\\\\\n    \\vdots & \\vdots & \\vdots & \\vdots & \\ddots & \\vdots\\\\\n    0 & 0 & 0 & 0 & \\cdots & 1\n\\end{bmatrix}\n\\end{aligned}"
   },
   {
-    "objectID": "slides/H3.html#functies-van-lineaire-operatoren-definitie-3-1",
-    "href": "slides/H3.html#functies-van-lineaire-operatoren-definitie-3-1",
+    "objectID": "slides/H3.html#exponentiële-functie-eigenschappen-3.4.1",
+    "href": "slides/H3.html#exponentiële-functie-eigenschappen-3.4.1",
     "title": "Hoofdstuk 3 - Lineaire operatoren en eigenwaarden",
-    "section": "Functies van lineaire operatoren: definitie 3",
-    "text": "Functies van lineaire operatoren: definitie 3\n\\begin{aligned}\nf(J_k(\\lambda)) &= \\sum_{n=0}^{+\\infty} \\frac{f^{(n)}(\\lambda)}{n!} (J_k(\\lambda) - \\lambda{\\mathsf{I}}_k)^n\\\\\n&= \\sum_{n=0}^{+\\infty} \\frac{f^{(n)}(\\lambda)}{n!} ({\\mathsf{N}}_k)^n = \\sum_{n=0}^{k-1} \\frac{f^{(n)}(\\lambda)}{n!} ({\\mathsf{N}}_k)^n\n\\end{aligned}\n\\Rightarrow f({\\mathsf{J}}^{(k)}(\\lambda)) = \\begin{bmatrix}\nf(\\lambda) & f^{(1)}(\\lambda) & \\frac{f^{(2)}(\\lambda)}{2} & \\frac{f^{(3)}(\\lambda)}{3!} & \\cdots &    \\frac{f^{(k-1)}(\\lambda)}{(k-1)!}\\\\\n0 & f(\\lambda) & f^{(1)}(\\lambda) & \\frac{f^{(2)}(\\lambda)}{2} & \\cdots &       \\frac{f^{(k-2)}(\\lambda)}{(k-2)!}\\\\\n0 & 0 & f(\\lambda) & f^{(1)}(\\lambda) & \\cdots &    \\frac{f^{(k-3)}(\\lambda)}{(k-3)!}\\\\\n0 & 0 & 0 & f(\\lambda) & \\cdots &       \\frac{f^{(k-4)}(\\lambda)}{(k-4)!}\\\\\n    \\vdots & \\vdots & \\vdots & \\vdots & \\ddots & \\vdots\\\\\n    0 & 0 & 0 & 0 & \\cdots & f(\\lambda)\n\\end{bmatrix}"
+    "section": "Exponentiële functie: eigenschappen (3.4.1)",
+    "text": "Exponentiële functie: eigenschappen (3.4.1)\n\n\\exp({\\hat{A}}) is goed gedefinieerd en uniek\nExponentiële van reële matrix is reëel\n\n\nOpmerking 3.46. {\\mathrm{e}}^{t_1 {\\hat{A}}} {\\mathrm{e}}^{t_2{\\hat{A}}} = {\\mathrm{e}}^{(t_1 + t_2){\\hat{A}}} en (\\exp({\\hat{A}}))^{-1} = \\exp(-{\\hat{A}})\n\n\nOpmerking 3.47. \\det(\\exp({\\hat{A}})) = \\exp(\\mathop{\\mathrm{tr}}({\\hat{A}}))\n\n\nOpmerking 3.48. \\frac{{\\mathrm{d}}\\ }{{\\mathrm{d}}t} {\\mathrm{e}}^{t{\\hat{A}}} = {\\hat{A}} {\\mathrm{e}}^{t {\\hat{A}}} = {\\mathrm{e}}^{t{\\hat{A}}} {\\hat{A}}\n\nMaar niet:\n\n\\exp({\\hat{A}} + {\\hat{B}}) \\neq \\exp({\\hat{A}})\\exp({\\hat{B}}) \\neq \\exp({\\hat{B}})\\exp({\\hat{A}})\n\\frac{{\\mathrm{d}}\\ }{{\\mathrm{d}}t} {\\mathrm{e}}^{{\\mathsf{A}}(t)}\\neq \\frac{{\\mathrm{d}}{\\mathsf{A}}(t)}{{\\mathrm{d}}t} {\\mathrm{e}}^{{\\mathsf{A}}(t)}\\neq  {\\mathrm{e}}^{{\\mathsf{A}}(t)} \\frac{{\\mathrm{d}}{\\mathsf{A}}(t)}{{\\mathrm{d}}t}"
   },
   {
-    "objectID": "slides/H3.html#exponentiële-functie",
-    "href": "slides/H3.html#exponentiële-functie",
+    "objectID": "slides/H3.html#exponentiële-functie-eigenschappen-3.4.1-1",
+    "href": "slides/H3.html#exponentiële-functie-eigenschappen-3.4.1-1",
     "title": "Hoofdstuk 3 - Lineaire operatoren en eigenwaarden",
-    "section": "Exponentiële functie",
-    "text": "Exponentiële functie\n\\begin{aligned}\n\\exp(t J^{(k)}(\\lambda)) &= e^{t \\lambda} \\left({\\mathsf{I}}+ t {\\mathsf{N}}_k + \\frac{t^2}{2} \\big({\\mathsf{N}}_k\\big)^2 + \\ldots \\right)\\\\\n  &= e^{t \\lambda} \\begin{bmatrix}\n1 & t & \\frac{t^2}{2} & \\frac{t^3}{3!} & \\cdots &       \\frac{t^{k-1}}{(k-1)!}\\\\\n0 & 1 & t & \\frac{t^2}{2} & \\cdots &    \\frac{t^{k-2}}{(k-2)!}\\\\\n0 & 0 & 1 & t & \\cdots &    \\frac{t^{k-3}}{(k-3)!}\\\\\n0 & 0 & 0 & 1 & \\cdots &    \\frac{t^{k-4}}{(k-4)!}\\\\\n    \\vdots & \\vdots & \\vdots & \\vdots & \\ddots & \\vdots\\\\\n    0 & 0 & 0 & 0 & \\cdots & 1\n\\end{bmatrix}\n\\end{aligned}"
+    "section": "Exponentiële functie: eigenschappen (3.4.1)",
+    "text": "Exponentiële functie: eigenschappen (3.4.1)\n\nOpmerking 3.49.\n\nBaker-Campbell-Hausdorff formule: e^{t{\\hat{A}}} e^{t{\\hat{B}}} = e^{{\\hat{C}}} met {\\hat{C}} = t({\\hat{A}} + {\\hat{B}}) + \\frac{t^2}{2} {\\left[{\\hat{A}},{\\hat{B}}\\right]} + \\frac{t^3}{12} {\\left[{\\hat{A}},{\\left[{\\hat{A}},{\\hat{B}}\\right]}\\right]}- \\frac{t^3}{12} {\\left[{\\hat{B}},{\\left[{\\hat{A}},{\\hat{B}}\\right]}\\right]}+\\mathop{\\mathrm{\\mathscr{O}}}(t^4)\nZassenhaus formule e^{t({\\hat{A}}+{\\hat{B}})} = e^{t{\\hat{A}}} e^{t{\\hat{B}}} e^{-\\frac{t^2}{2} {\\left[{\\hat{A}},{\\hat{B}}\\right]}}e^{\\frac{t^3}{6}\\left(2 {\\left[{\\hat{B}},{\\left[{\\hat{A}},{\\hat{B}}\\right]}\\right]}+ {\\left[{\\hat{A}},{\\left[{\\hat{A}},{\\hat{B}}\\right]}\\right]}\\right)}\\cdots\n\n\n\nBewijs. Door uitwerking van de Taylorreeks en vergelijken van de machten in t"
   },
   {
-    "objectID": "slides/H3.html#exponentiële-functie-eigenschappen",
-    "href": "slides/H3.html#exponentiële-functie-eigenschappen",
+    "objectID": "slides/H3.html#dynamische-systemen-3.5",
+    "href": "slides/H3.html#dynamische-systemen-3.5",
     "title": "Hoofdstuk 3 - Lineaire operatoren en eigenwaarden",
-    "section": "Exponentiële functie: eigenschappen",
-    "text": "Exponentiële functie: eigenschappen\n\n\\exp({\\hat{A}}) is goed gedefinieerd en uniek\nExponentiële van reële matrix is reëel\n\n\nOpmerking 3.46. {\\mathrm{e}}^{t_1 {\\hat{A}}} {\\mathrm{e}}^{t_2{\\hat{A}}} = {\\mathrm{e}}^{(t_1 + t_2){\\hat{A}}} en (\\exp({\\hat{A}}))^{-1} = \\exp(-{\\hat{A}})\n\n\nOpmerking 3.47. \\det(\\exp({\\hat{A}})) = \\exp(\\mathop{\\mathrm{tr}}({\\hat{A}}))\n\n\nOpmerking 3.48. \\frac{{\\mathrm{d}}\\ }{{\\mathrm{d}}t} {\\mathrm{e}}^{t{\\hat{A}}} = {\\hat{A}} {\\mathrm{e}}^{t {\\hat{A}}} = {\\mathrm{e}}^{t{\\hat{A}}} {\\hat{A}}\n\nMaar niet:\n\n\\exp({\\hat{A}} + {\\hat{B}}) \\neq \\exp({\\hat{A}})\\exp({\\hat{B}}) \\neq \\exp({\\hat{B}})\\exp({\\hat{A}})\n\\frac{{\\mathrm{d}}\\ }{{\\mathrm{d}}t} {\\mathrm{e}}^{{\\mathsf{A}}(t)}\\neq \\frac{{\\mathrm{d}}{\\mathsf{A}}(t)}{{\\mathrm{d}}t} {\\mathrm{e}}^{{\\mathsf{A}}(t)}\\neq  {\\mathrm{e}}^{{\\mathsf{A}}(t)} \\frac{{\\mathrm{d}}{\\mathsf{A}}(t)}{{\\mathrm{d}}t}"
+    "section": "Dynamische systemen (3.5)",
+    "text": "Dynamische systemen (3.5)\nEen dynamisch systeem is een algemene naam voor de wiskundige modellering van een tijdsafhankelijk fenomeen of proces van natuurlijke of menselijke origine (fysisch, chemisch, biologisch, ecologisch, economisch, sociaal, …)."
   },
   {
-    "objectID": "slides/H3.html#exponentiële-functie-eigenschappen-1",
-    "href": "slides/H3.html#exponentiële-functie-eigenschappen-1",
+    "objectID": "slides/H3.html#dynamische-systemen-3.5-1",
+    "href": "slides/H3.html#dynamische-systemen-3.5-1",
     "title": "Hoofdstuk 3 - Lineaire operatoren en eigenwaarden",
-    "section": "Exponentiële functie: eigenschappen",
-    "text": "Exponentiële functie: eigenschappen\n\nOpmerking 3.49.\n\nBaker-Campbell-Hausdorff formule: e^{t{\\hat{A}}} e^{t{\\hat{B}}} = e^{{\\hat{C}}} met {\\hat{C}} = t({\\hat{A}} + {\\hat{B}}) + \\frac{t^2}{2} {\\left[{\\hat{A}},{\\hat{B}}\\right]} + \\frac{t^3}{12} {\\left[{\\hat{A}},{\\left[{\\hat{A}},{\\hat{B}}\\right]}\\right]}- \\frac{t^3}{12} {\\left[{\\hat{B}},{\\left[{\\hat{A}},{\\hat{B}}\\right]}\\right]}+\\mathop{\\mathrm{\\mathscr{O}}}(t^4)\nZassenhaus formule e^{t({\\hat{A}}+{\\hat{B}})} = e^{t{\\hat{A}}} e^{t{\\hat{B}}} e^{-\\frac{t^2}{2} {\\left[{\\hat{A}},{\\hat{B}}\\right]}}e^{\\frac{t^3}{6}\\left(2 {\\left[{\\hat{B}},{\\left[{\\hat{A}},{\\hat{B}}\\right]}\\right]}+ {\\left[{\\hat{A}},{\\left[{\\hat{A}},{\\hat{B}}\\right]}\\right]}\\right)}\\cdots\n\n\n\nBewijs. Door uitwerking van de Taylorreeks en vergelijken van de machten in t"
+    "section": "Dynamische systemen (3.5)",
+    "text": "Dynamische systemen (3.5)\n\nDefinitie 3.17. Ingrediënten van een (deterministisch en autonoom/translatie-invariant) dynamisch systeem:\n\nToestandsruimte / configuratieruimte S: verzameling van toestanden waarin het systeem zich op bepaald tijdstip kan bevinden\nVerzameling T van tijdstippen t waarover het systeem kan worden geëvolueerd, waarbij tijdstippen kunnen worden opgeteld: t_1 + t_2 \\in T voor alle t_1,t_2 \\in T\n(T,+) is een Abelse monoïde; inverse evolutie moet niet bestaan\nEvolutieregel \\Phi_t:S\\to S voor alle t \\in T zodat \\Phi_{t_1} \\circ \\Phi_{t_2} = \\Phi_{t_1 + t_2} en \\Phi_0 = \\mathop{\\mathrm{id}}_S"
   },
   {
-    "objectID": "slides/H3.html#logaritmische-functie-en-machten",
-    "href": "slides/H3.html#logaritmische-functie-en-machten",
+    "objectID": "slides/H3.html#dynamische-systemen-3.5-2",
+    "href": "slides/H3.html#dynamische-systemen-3.5-2",
     "title": "Hoofdstuk 3 - Lineaire operatoren en eigenwaarden",
-    "section": "Logaritmische functie en machten",
-    "text": "Logaritmische functie en machten\nf(z) = \\log(z) of f(z)=z^{\\alpha} met \\alpha \\not\\in{\\mathbb{N}}: geen Taylorreeks rond z=0\n\\begin{align*}\n    \\log(z) &= \\log(\\lambda + (z-\\lambda)) = \\log(\\lambda) + \\log\\left(1 + \\frac{z-\\lambda}{\\lambda}\\right) \\\\\n    &= \\log(\\lambda) + \\sum_{n=1}^{+\\infty} (-1)^{n+1} \\frac{(z-\\lambda)^n}{n\\lambda^n}\n\\end{align*}\n\\begin{equation*}\n    z^\\alpha = \\lambda^\\alpha\\left(1 + \\frac{z-\\lambda}{\\lambda}\\right)^\\alpha = \\lambda^\\alpha \\sum_{n=0}^{+\\infty} \\frac{\\alpha (\\alpha-1)\n    \\cdots (\\alpha - n + 1)}{n!}\\left(\\frac{z-\\lambda}{\\lambda}\\right)^n\n\\end{equation*}\nVoor de definitie van \\log(\\lambda) of \\lambda^{\\alpha}: meerdere keuzes (vertakkingslijnen in complexe analyse)\n\\Rightarrow typisch niet uniek (meerdere {\\hat{B}} voldoen aan {\\hat{A}}=\\exp({\\hat{B}}) voor gegeven {\\hat{A}}), maar altijd mogelijk zolang geen \\lambda=0"
+    "section": "Dynamische systemen (3.5)",
+    "text": "Dynamische systemen (3.5)\n\nIn deze cursus: S is vectorruimte\nEvolutieregel vaak geschreven als \\Phi:T \\times S \\to S\nOpsplitsing in:\n\nT = ({\\mathbb{R}}_{\\geq 0},+): continue (tijd) dynamische systemen\nT = ({\\mathbb{N}}, +): discrete (tijd) dynamische systemen\n\nAlgemene concepten:\n\nDefinitie 3.18. Fixpunt, vast punt of evenwichtspunt x^\\ast: \\Phi(t,x^\\ast) = x^\\ast, \\forall t \\in T\n\n\nDefinitie 3.19. Traject \\gamma_x: T\\to S : t \\mapsto \\Phi(t,x); baan O_x = \\gamma_x(T)"
   },
   {
-    "objectID": "slides/H3.html#logaritmische-functie-en-machten-1",
-    "href": "slides/H3.html#logaritmische-functie-en-machten-1",
+    "objectID": "slides/H3.html#discreet-dynamisch-systeem-3.5.1",
+    "href": "slides/H3.html#discreet-dynamisch-systeem-3.5.1",
     "title": "Hoofdstuk 3 - Lineaire operatoren en eigenwaarden",
-    "section": "Logaritmische functie en machten",
-    "text": "Logaritmische functie en machten\n\nVoorbeeld: J_3(\\lambda)^{1/2}=\\begin{bmatrix}\n      \\lambda & 1 & 0\\\\ 0 & \\lambda & 1 \\\\ 0 & 0 & \\lambda\n  \\end{bmatrix}^{1/2} = \\begin{bmatrix} \\sqrt{\\lambda} & \\frac{1}{2\\sqrt{\\lambda}} & -\\frac{1}{8 \\lambda^{3/2}}\\\\ 0 & \\sqrt{\\lambda}  & \\frac{1}{2\\sqrt{\\lambda}} \\\\ 0 & 0 & \\sqrt{\\lambda}\\end{bmatrix}"
+    "section": "Discreet dynamisch systeem (3.5.1)",
+    "text": "Discreet dynamisch systeem (3.5.1)\n\\Phi_n(x) = (\\Phi_{n-1} \\circ \\phi)(x) = \\underbrace{\\phi \\circ \\phi \\circ \\cdots \\circ \\phi}_{\\text{$n$ keer}}(x) = \\phi^n(x)\nmet \\phi = \\Phi_1\n\\Rightarrow \\boldsymbol{x}_{n+1} = \\phi(x_{n}) : recurrentierelatie, iteratief proces"
   },
   {
-    "objectID": "slides/H3.html#dynamische-systemen",
-    "href": "slides/H3.html#dynamische-systemen",
+    "objectID": "slides/H3.html#discreet-dynamisch-systeem-3.5.1-1",
+    "href": "slides/H3.html#discreet-dynamisch-systeem-3.5.1-1",
     "title": "Hoofdstuk 3 - Lineaire operatoren en eigenwaarden",
-    "section": "Dynamische systemen",
-    "text": "Dynamische systemen\nEen dynamisch systeem is een algemene naam voor de wiskundige modellering van een tijdsafhankelijk fenomeen of proces van natuurlijke of menselijke origine (fysisch, chemisch, biologisch, ecologisch, economisch, sociaal, …)."
+    "section": "Discreet dynamisch systeem (3.5.1)",
+    "text": "Discreet dynamisch systeem (3.5.1)\nBeschouw nu S = {\\mathbb{R}}^m: \\boldsymbol{x}, \\boldsymbol{\\phi}, \n\nEvenwichtspunt: \\boldsymbol{\\phi}(\\boldsymbol{x}^\\ast) = \\boldsymbol{x}^\\ast\n\n\nDefinitie 3.20. Affien: \\boldsymbol{\\phi}(\\boldsymbol{x}) = {\\mathsf{A}}\\boldsymbol{x}+\\boldsymbol{b}; lineair: \\boldsymbol{\\phi}(\\boldsymbol{x}) = {\\mathsf{A}}\\boldsymbol{x}\n\n\nTypische dynamische systemen zijn niet lineair:\n\\Rightarrow linearisatie rond evenwichtspunt \\boldsymbol{\\phi}(\\boldsymbol{x}^\\ast + \\boldsymbol{y}_n) \\approx \\underbrace{\\boldsymbol{\\phi}(\\boldsymbol{x}^\\ast)}_{= \\boldsymbol{x}^\\ast} + \\underbrace{\\sum_{j=1}^{m}\\frac{\\partial \\boldsymbol{\\phi}}{\\partial x^j}(\\boldsymbol{x}^\\ast) (\\boldsymbol{y}_n)^j}_{={\\mathsf{J}}_{\\boldsymbol{\\phi}}(\\boldsymbol{x}^\\ast) \\boldsymbol{y}_n}+ \\mathop{\\mathrm{\\mathscr{O}}}(\\boldsymbol{y}^2)\n\\Rightarrow eigenschappen van {\\mathsf{J}}_{\\boldsymbol{\\phi}}(\\boldsymbol{x}^\\ast) bepalen gedrag rond en stabiliteit van \\boldsymbol{x}^\\ast"
   },
   {
-    "objectID": "slides/H3.html#dynamische-systemen-1",
-    "href": "slides/H3.html#dynamische-systemen-1",
+    "objectID": "slides/H3.html#discreet-dynamisch-systeem-3.5.1-2",
+    "href": "slides/H3.html#discreet-dynamisch-systeem-3.5.1-2",
     "title": "Hoofdstuk 3 - Lineaire operatoren en eigenwaarden",
-    "section": "Dynamische systemen",
-    "text": "Dynamische systemen\n\nDefinitie 3.17. Ingrediënten van een (deterministisch en autonoom/translatie-invariant) dynamisch systeem:\n\nToestandsruimte / configuratieruimte S: verzameling van toestanden waarin het systeem zich op bepaald tijdstip kan bevinden\nVerzameling T van tijdstippen t waarover het systeem kan worden geëvolueerd, waarbij tijdstippen kunnen worden opgeteld: t_1 + t_2 \\in T voor alle t_1,t_2 \\in T\n(T,+) is een Abelse monoïde; inverse evolutie moet niet bestaan\nEvolutieregel \\Phi_t:S\\to S voor alle t \\in T zodat \\Phi_{t_1} \\circ \\Phi_{t_2} = \\Phi_{t_1 + t_2} en \\Phi_0 = \\mathop{\\mathrm{id}}_S"
+    "section": "Discreet dynamisch systeem (3.5.1)",
+    "text": "Discreet dynamisch systeem (3.5.1)\n\\boldsymbol{x}_n = {\\mathsf{A}} \\boldsymbol{x}_{n-1} \\Rightarrow \\boldsymbol{x}_n = {\\mathsf{A}}^n \\boldsymbol{x}_0\nPerturbaties rond \\boldsymbol{x}^\\ast=\\boldsymbol{0} bepaald door eigenwaarden (Jordan-decompositie) van {\\mathsf{A}}:\n\n{\\left\\lvert\\lambda\\right\\rvert} &gt; 1: afstand tot evenwichtspunt neemt exponentieel toe\nAlle {\\left\\lvert\\lambda\\right\\rvert} &lt; 1: perturbaties rond evenwicht convergeren terug naar evenwichtspunt \\Rightarrow stabiliteit\n\\lambda = \\exp({\\mathrm{i}}2\\pi/p): periodieke oplossingen met periode p"
   },
   {
-    "objectID": "slides/H3.html#dynamische-systemen-2",
-    "href": "slides/H3.html#dynamische-systemen-2",
+    "objectID": "slides/H3.html#recurrentierelaties-3.5.1",
+    "href": "slides/H3.html#recurrentierelaties-3.5.1",
     "title": "Hoofdstuk 3 - Lineaire operatoren en eigenwaarden",
-    "section": "Dynamische systemen",
-    "text": "Dynamische systemen\n\nIn deze cursus: S is vectorruimte\nEvolutieregel vaak geschreven als \\Phi:T \\times S \\to S\nOpsplitsing in:\n\nT = ({\\mathbb{R}}_{\\geq 0},+): continue (tijd) dynamische systemen\nT = ({\\mathbb{N}}, +): discrete (tijd) dynamische systemen\n\nAlgemene concepten:\n\nDefinitie 3.18. Fixpunt, vast punt of evenwichtspunt x^\\ast: \\Phi(t,x^\\ast) = x^\\ast, \\forall t \\in T\n\n\nDefinitie 3.19. Traject \\gamma_x: T\\to S : t \\mapsto \\Phi(t,x); baan O_x = \\gamma_x(T)"
+    "section": "Recurrentierelaties (3.5.1)",
+    "text": "Recurrentierelaties (3.5.1)\n\nDynamisch systeem: \\boldsymbol{x}_{n+1}= \\boldsymbol{\\phi}(\\boldsymbol{x}_n)\n\n\nDefinitie 3.21. Meer algemeen: \\boldsymbol{x}_{n+1}= \\boldsymbol{\\phi}(n, \\boldsymbol{x}_n) Niet autonoom / tijdshomogeen / translatie-invariant\n\n\nDefinitie 3.22. Hogere orde (maar autonoom): \\boldsymbol{x}_{n+k} = \\boldsymbol{\\phi}(\\boldsymbol{x}_{n}, \\dots, \\boldsymbol{x}_{n+k-2}, \\boldsymbol{x}_{n+k-1}) kan omgezet worden in een eerste orde relatie voor \\boldsymbol{y}_{n} = (\\boldsymbol{x}_{n}, \\dots, \\boldsymbol{x}_{n+k-2}, \\boldsymbol{x}_{n+k-1}) \\in {\\mathbb{R}}^{km}\n\\begin{align*}\\small\n    \\boldsymbol{y}_{n+1} = \\boldsymbol{\\psi}(\\boldsymbol{y}_n) &= \\boldsymbol{\\psi}(\\boldsymbol{x}_{n}, \\dots, \\boldsymbol{x}_{n+k-2}, \\boldsymbol{x}_{n+k-1})  \\\\\n    &= (\\boldsymbol{x}_{n+1}, \\dots, \\boldsymbol{x}_{n+k-1}, \\boldsymbol{\\phi}(\\boldsymbol{x}_{n}, \\dots, \\boldsymbol{x}_{n+k-2}, \\boldsymbol{x}_{n+k-1}))\n\\end{align*}"
   },
   {
-    "objectID": "slides/H3.html#discreet-dynamisch-systeem",
-    "href": "slides/H3.html#discreet-dynamisch-systeem",
+    "objectID": "slides/H3.html#recurrentierelaties-3.5.1-1",
+    "href": "slides/H3.html#recurrentierelaties-3.5.1-1",
     "title": "Hoofdstuk 3 - Lineaire operatoren en eigenwaarden",
-    "section": "Discreet dynamisch systeem",
-    "text": "Discreet dynamisch systeem\n\\Phi_n(x) = (\\Phi_{n-1} \\circ \\phi)(x) = \\underbrace{\\phi \\circ \\phi \\circ \\cdots \\circ \\phi}_{\\text{$n$ keer}}(x) = \\phi^n(x)\nmet \\phi = \\Phi_1\n\\Rightarrow \\boldsymbol{x}_{n+1} = \\phi(x_{n}) : recurrentierelatie, iteratief proces"
+    "section": "Recurrentierelaties (3.5.1)",
+    "text": "Recurrentierelaties (3.5.1)\n\\boldsymbol{x}_{n+k} = {\\mathsf{A}}_{0} \\boldsymbol{x}_{n} + {\\mathsf{A}}_{1} \\boldsymbol{x}_{n+1} + \\dots + {\\mathsf{A}}_{k-2} \\boldsymbol{x}_{n+k-2} + {\\mathsf{A}}_{k-1} \\boldsymbol{x}_{n+k-1}\n\\begin{equation*}\n\\Rightarrow \\boldsymbol{y}_{n+1} = \\begin{bmatrix}\n        \\boldsymbol{x}_{n+1} \\\\ \\boldsymbol{x}_{n+2} \\\\ \\vdots \\\\ \\boldsymbol{x}_{n+k-1} \\\\ \\boldsymbol{x}_{n+k}\n    \\end{bmatrix} = \\begin{bmatrix} {\\mathsf{O}}& {\\mathsf{I}}& \\dots & {\\mathsf{O}}& {\\mathsf{O}}\\\\\n{\\mathsf{O}}& {\\mathsf{O}}& \\dots & {\\mathsf{O}}& {\\mathsf{O}}\\\\\n\\vdots & \\vdots & \\ddots & \\vdots & \\vdots\\\\\n{\\mathsf{O}}& {\\mathsf{O}}& \\dots & {\\mathsf{O}}& {\\mathsf{I}}\\\\\n{\\mathsf{A}}_{0} & {\\mathsf{A}}_{1} & \\dots & {\\mathsf{A}}_{k-2} & {\\mathsf{A}}_{k-1}\n\\end{bmatrix}\\begin{bmatrix}\n        \\boldsymbol{x}_{n} \\\\ \\boldsymbol{x}_{n+1} \\\\ \\vdots \\\\ \\boldsymbol{x}_{n+k-2} \\\\ \\boldsymbol{x}_{n+k-1}\n    \\end{bmatrix}.\n\\end{equation*}\nVoor m=1 (x_n scalair): y_{n+1} = {\\mathsf{C}} \\boldsymbol{y}_n = {\\mathsf{C}}^{n+1}\\boldsymbol{y}_0 met {\\mathsf{C}} een companion matrix"
   },
   {
-    "objectID": "slides/H3.html#discreet-dynamisch-systeem-1",
-    "href": "slides/H3.html#discreet-dynamisch-systeem-1",
+    "objectID": "slides/H3.html#recurrentierelaties-3.5.1-2",
+    "href": "slides/H3.html#recurrentierelaties-3.5.1-2",
     "title": "Hoofdstuk 3 - Lineaire operatoren en eigenwaarden",
-    "section": "Discreet dynamisch systeem",
-    "text": "Discreet dynamisch systeem\nBeschouw nu S = {\\mathbb{R}}^m: \\boldsymbol{x}, \\boldsymbol{\\phi}, \n\nEvenwichtspunt: \\boldsymbol{\\phi}(\\boldsymbol{x}^\\ast) = \\boldsymbol{x}^\\ast\n\n\nDefinitie 3.20. Affien: \\boldsymbol{\\phi}(\\boldsymbol{x}) = {\\mathsf{A}}\\boldsymbol{x}+\\boldsymbol{b}; lineair: \\boldsymbol{\\phi}(\\boldsymbol{x}) = {\\mathsf{A}}\\boldsymbol{x}\n\n\nTypische dynamische systemen zijn niet lineair:\n\\Rightarrow linearisatie rond evenwichtspunt \\boldsymbol{\\phi}(\\boldsymbol{x}^\\ast + \\boldsymbol{y}_n) \\approx \\underbrace{\\boldsymbol{\\phi}(\\boldsymbol{x}^\\ast)}_{= \\boldsymbol{x}^\\ast} + \\underbrace{\\sum_{j=1}^{m}\\frac{\\partial \\boldsymbol{\\phi}}{\\partial x^j}(\\boldsymbol{x}^\\ast) (\\boldsymbol{y}_n)^j}_{={\\mathsf{J}}_{\\boldsymbol{\\phi}}(\\boldsymbol{x}^\\ast) \\boldsymbol{y}_n}+ \\mathop{\\mathrm{\\mathscr{O}}}(\\boldsymbol{y}^2)\n\\Rightarrow eigenschappen van {\\mathsf{J}}_{\\boldsymbol{\\phi}}(\\boldsymbol{x}^\\ast) bepalen gedrag rond en stabiliteit van \\boldsymbol{x}^\\ast"
+    "section": "Recurrentierelaties (3.5.1)",
+    "text": "Recurrentierelaties (3.5.1)\n\nStelling 3.24. Algemene oplossing is een lineaire combinatie van elementaire oplossingen x_n = n^j \\lambda^n voor \\lambda een nulpunt van de bijbehorende polynoom en j=0,1,\\ldots,q-1 met q de algebraïsche multipliciteit van \\lambda.\n\n\nOpmerking 3.55. Polynoom voor \\lambda kan gevonden worden door oplossingen x_n=\\lambda^n in te vullen in de recurrentierelatie\n\n\nLineaire combinatie vinden door te “matchen” met beginvoorwaarden x_0,\\ldots,x_{k-1}."
   },
   {
-    "objectID": "slides/H3.html#discreet-dynamisch-systeem-2",
-    "href": "slides/H3.html#discreet-dynamisch-systeem-2",
+    "objectID": "slides/H3.html#recurrentierelatie-voorbeeld-3.5.1",
+    "href": "slides/H3.html#recurrentierelatie-voorbeeld-3.5.1",
     "title": "Hoofdstuk 3 - Lineaire operatoren en eigenwaarden",
-    "section": "Discreet dynamisch systeem",
-    "text": "Discreet dynamisch systeem\n\\boldsymbol{x}_n = {\\mathsf{A}} \\boldsymbol{x}_{n-1} \\Rightarrow \\boldsymbol{x}_n = {\\mathsf{A}}^n \\boldsymbol{x}_0\nPerturbaties rond \\boldsymbol{x}^\\ast=\\boldsymbol{0} bepaald door eigenwaarden (Jordan-decompositie) van {\\mathsf{A}}:\n\n{\\left\\lvert\\lambda\\right\\rvert} &gt; 1: afstand tot evenwichtspunt neemt exponentieel toe\nAlle {\\left\\lvert\\lambda\\right\\rvert} &lt; 1: perturbaties rond evenwicht convergeren terug naar evenwichtspunt \\Rightarrow stabiliteit\n\\lambda = \\exp({\\mathrm{i}}2\\pi/p): periodieke oplossingen met periode p"
+    "section": "Recurrentierelatie: voorbeeld (3.5.1)",
+    "text": "Recurrentierelatie: voorbeeld (3.5.1)\n\nVoorbeeld 3.15. Bekendste voorbeeld: Fibonacci\nx_{n+2} = x_{n} + x_{n+1}\n\\Rightarrow \\lambda^2 = \\lambda + 1\n\\Rightarrow \\lambda = \\frac{1\\pm \\sqrt{5}}{2}\nx_0 = 0, x_1 = 1 \\Rightarrow (x_n)_{n \\in {\\mathbb{N}}} = (0,1,1,2,3,5,8,13,\\ldots)\n\\Rightarrow x_n = \\frac{1}{\\sqrt{5}} \\left[\\left(\\frac{1 + \\sqrt{5}}{2}\\right)^n - \\left(\\frac{1 - \\sqrt{5}}{2}\\right)^n\\right]"
   },
   {
-    "objectID": "slides/H3.html#recurrentierelaties",
-    "href": "slides/H3.html#recurrentierelaties",
+    "objectID": "slides/H3.html#continue-dynamische-systemen-3.5.2",
+    "href": "slides/H3.html#continue-dynamische-systemen-3.5.2",
     "title": "Hoofdstuk 3 - Lineaire operatoren en eigenwaarden",
-    "section": "Recurrentierelaties",
-    "text": "Recurrentierelaties\n\nDynamisch systeem: \\boldsymbol{x}_{n+1}= \\boldsymbol{\\phi}(\\boldsymbol{x}_n)\n\n\nDefinitie 3.21. Meer algemeen: \\boldsymbol{x}_{n+1}= \\boldsymbol{\\phi}(n, \\boldsymbol{x}_n) Niet autonoom / tijdshomogeen / translatie-invariant\n\n\nDefinitie 3.22. Hogere orde (maar autonoom): \\boldsymbol{x}_{n+k} = \\boldsymbol{\\phi}(\\boldsymbol{x}_{n}, \\dots, \\boldsymbol{x}_{n+k-2}, \\boldsymbol{x}_{n+k-1}) kan omgezet worden in een eerste orde relatie voor \\boldsymbol{y}_{n} = (\\boldsymbol{x}_{n}, \\dots, \\boldsymbol{x}_{n+k-2}, \\boldsymbol{x}_{n+k-1}) \\in {\\mathbb{R}}^{km}\n\\begin{align*}\\small\n    \\boldsymbol{y}_{n+1} = \\boldsymbol{\\psi}(\\boldsymbol{y}_n) &= \\boldsymbol{\\psi}(\\boldsymbol{x}_{n}, \\dots, \\boldsymbol{x}_{n+k-2}, \\boldsymbol{x}_{n+k-1})  \\\\\n    &= (\\boldsymbol{x}_{n+1}, \\dots, \\boldsymbol{x}_{n+k-1}, \\boldsymbol{\\phi}(\\boldsymbol{x}_{n}, \\dots, \\boldsymbol{x}_{n+k-2}, \\boldsymbol{x}_{n+k-1}))\n\\end{align*}"
+    "section": "Continue dynamische systemen (3.5.2)",
+    "text": "Continue dynamische systemen (3.5.2)\nEr is geen “kleinste eenheid van evolutie”\n\\dot{\\boldsymbol{x}}(t) = \\boldsymbol{\\varphi}(\\boldsymbol{x}(t)) (eerste orde differentiaalvergelijking)\n\nEvenwichtspunt \\boldsymbol{\\varphi}(\\boldsymbol{x}^\\ast) = \\boldsymbol{0}\n\n\nOpmerking 3.59. Linearisatie rond evenwichtspunt \\boldsymbol{\\varphi}(\\boldsymbol{x}^\\ast + \\boldsymbol{y}(t)) \\approx \\underbrace{\\boldsymbol{\\varphi}(\\boldsymbol{x}^\\ast)}_{=\\boldsymbol{0}} + \\underbrace{\\sum_{j=1}^{m}\\frac{\\partial \\boldsymbol{\\varphi}}{\\partial x^j}(\\boldsymbol{x}^\\ast) (\\boldsymbol{y}(t))^j}_{={\\mathsf{J}}_{\\boldsymbol{\\varphi}}(\\boldsymbol{x}^\\ast) \\boldsymbol{y}(t)}+ \\mathop{\\mathrm{\\mathscr{O}}}(\\boldsymbol{y}^2)"
   },
   {
-    "objectID": "slides/H3.html#recurrentierelaties-1",
-    "href": "slides/H3.html#recurrentierelaties-1",
+    "objectID": "slides/H3.html#continue-dynamische-systemen-3.5.2-1",
+    "href": "slides/H3.html#continue-dynamische-systemen-3.5.2-1",
     "title": "Hoofdstuk 3 - Lineaire operatoren en eigenwaarden",
-    "section": "Recurrentierelaties",
-    "text": "Recurrentierelaties\n\\boldsymbol{x}_{n+k} = {\\mathsf{A}}_{0} \\boldsymbol{x}_{n} + {\\mathsf{A}}_{1} \\boldsymbol{x}_{n+1} + \\dots + {\\mathsf{A}}_{k-2} \\boldsymbol{x}_{n+k-2} + {\\mathsf{A}}_{k-1} \\boldsymbol{x}_{n+k-1}\n\\begin{equation*}\n\\Rightarrow \\boldsymbol{y}_{n+1} = \\begin{bmatrix}\n        \\boldsymbol{x}_{n+1} \\\\ \\boldsymbol{x}_{n+2} \\\\ \\vdots \\\\ \\boldsymbol{x}_{n+k-1} \\\\ \\boldsymbol{x}_{n+k}\n    \\end{bmatrix} = \\begin{bmatrix} {\\mathsf{O}}& {\\mathsf{I}}& \\dots & {\\mathsf{O}}& {\\mathsf{O}}\\\\\n{\\mathsf{O}}& {\\mathsf{O}}& \\dots & {\\mathsf{O}}& {\\mathsf{O}}\\\\\n\\vdots & \\vdots & \\ddots & \\vdots & \\vdots\\\\\n{\\mathsf{O}}& {\\mathsf{O}}& \\dots & {\\mathsf{O}}& {\\mathsf{I}}\\\\\n{\\mathsf{A}}_{0} & {\\mathsf{A}}_{1} & \\dots & {\\mathsf{A}}_{k-2} & {\\mathsf{A}}_{k-1}\n\\end{bmatrix}\\begin{bmatrix}\n        \\boldsymbol{x}_{n} \\\\ \\boldsymbol{x}_{n+1} \\\\ \\vdots \\\\ \\boldsymbol{x}_{n+k-2} \\\\ \\boldsymbol{x}_{n+k-1}\n    \\end{bmatrix}.\n\\end{equation*}\nVoor m=1 (x_n scalair): y_{n+1} = {\\mathsf{C}} \\boldsymbol{y}_n = {\\mathsf{C}}^{n+1}\\boldsymbol{y}_0 met {\\mathsf{C}} een companion matrix"
+    "section": "Continue dynamische systemen (3.5.2)",
+    "text": "Continue dynamische systemen (3.5.2)\n\nLineaire systemen: \\dot{\\boldsymbol{x}}(t) = {\\mathsf{A}}\\boldsymbol{x}(t)\n\\Rightarrow\\boldsymbol{x}(t) = {\\mathrm{e}}^{t{\\mathsf{A}}} \\boldsymbol{x}_0\nPerturbaties rond \\boldsymbol{x}^\\ast=\\boldsymbol{0} bepaald door eigenwaarden (Jordan-decompositie) van {\\mathsf{A}}:\n\nalle \\mathop{\\mathrm{Re}}{\\lambda}&lt;0: perturbaties sterven uit, evenwichtspunt stabiel\neen \\mathop{\\mathrm{Re}}{\\lambda}&gt;0: perturbatie groeit exponentieel in de tijd\n\\lambda = {\\mathrm{i}}2\\pi/p: periodieke baan met periode p"
   },
   {
-    "objectID": "slides/H3.html#recurrentierelaties-2",
-    "href": "slides/H3.html#recurrentierelaties-2",
+    "objectID": "slides/H3.html#hogere-orde-differentiaalvergelijkingen-3.5.2",
+    "href": "slides/H3.html#hogere-orde-differentiaalvergelijkingen-3.5.2",
     "title": "Hoofdstuk 3 - Lineaire operatoren en eigenwaarden",
-    "section": "Recurrentierelaties",
-    "text": "Recurrentierelaties\n\nStelling 3.24. Algemene oplossing is een lineaire combinatie van elementaire oplossingen x_n = n^j \\lambda^n voor \\lambda een nulpunt van de bijbehorende polynoom en j=0,1,\\ldots,q-1 met q de algebraïsche multipliciteit van \\lambda.\n\n\nOpmerking 3.55. Polynoom voor \\lambda kan gevonden worden door oplossingen x_n=\\lambda^n in te vullen in de recurrentierelatie\n\n\nLineaire combinatie vinden door te “matchen” met beginvoorwaarden x_0,\\ldots,x_{k-1}."
+    "section": "Hogere orde differentiaalvergelijkingen (3.5.2)",
+    "text": "Hogere orde differentiaalvergelijkingen (3.5.2)\n\nDefinitie 3.24. \\boldsymbol{x}^{(k)}(t) = \\boldsymbol{\\varphi}(t, \\boldsymbol{x}(t), \\dot{\\boldsymbol{x}}(t),\\ldots, \\boldsymbol{x}^{(k-1)}(t)) Herleidbaar naar eerste orde differentiaalvergelijking voor \\boldsymbol{y}(t) = (\\boldsymbol{x}(t), \\dot{\\boldsymbol{x}}(t), \\ddot{\\boldsymbol{x}}(t), \\dots, \\boldsymbol{x}^{(k-1)}(t))\n\n\nVoor m=1 (x(t) scalair): x^{(k)}(t) = a_{0} x(t) + a_{1} \\dot{x}(t) + \\dots + a_{k-2} x^{(k-2)}(t) + a_{k-1} x^{(k-1)}(t)\n\\Rightarrow \\dot{\\boldsymbol{y}}(t) = {\\mathsf{C}} \\boldsymbol{y}(t) met {\\mathsf{C}} een companion matrix\n\nStelling 3.25. Algemene oplossing is een lineaire combinatie van elementaire oplossingen x(t) = t^j {\\mathrm{e}}^{\\lambda t} voor \\lambda een nulpunt van de bijbehorende polynoom en j=0,1,\\ldots,q-1 met q de algebraïsche multipliciteit van \\lambda"
   },
   {
-    "objectID": "slides/H3.html#recurrentierelatie-voorbeeld",
-    "href": "slides/H3.html#recurrentierelatie-voorbeeld",
+    "objectID": "slides/H3.html#hogere-orde-differentiaalvergelijkingen-3.5.2-1",
+    "href": "slides/H3.html#hogere-orde-differentiaalvergelijkingen-3.5.2-1",
     "title": "Hoofdstuk 3 - Lineaire operatoren en eigenwaarden",
-    "section": "Recurrentierelatie: voorbeeld",
-    "text": "Recurrentierelatie: voorbeeld\n\nVoorbeeld 3.15. Bekendste voorbeeld: Fibonacci\nx_{n+2} = x_{n} + x_{n+1}\n\\Rightarrow \\lambda^2 = \\lambda + 1\n\\Rightarrow \\lambda = \\frac{1\\pm \\sqrt{5}}{2}\nx_0 = 0, x_1 = 1 \\Rightarrow (x_n)_{n \\in {\\mathbb{N}}} = (0,1,1,2,3,5,8,13,\\ldots)\n\\Rightarrow x_n = \\frac{1}{\\sqrt{5}} \\left[\\left(\\frac{1 + \\sqrt{5}}{2}\\right)^n - \\left(\\frac{1 - \\sqrt{5}}{2}\\right)^n\\right]"
-  },
-  {
-    "objectID": "slides/H3.html#continue-dynamische-systemen",
-    "href": "slides/H3.html#continue-dynamische-systemen",
-    "title": "Hoofdstuk 3 - Lineaire operatoren en eigenwaarden",
-    "section": "Continue dynamische systemen",
-    "text": "Continue dynamische systemen\nEr is geen “kleinste eenheid van evolutie”\n\\dot{\\boldsymbol{x}}(t) = \\boldsymbol{\\varphi}(\\boldsymbol{x}(t)) (eerste orde differentiaalvergelijking)\n\nEvenwichtspunt \\boldsymbol{\\varphi}(\\boldsymbol{x}^\\ast) = \\boldsymbol{0}\n\n\nOpmerking 3.59. Linearisatie rond evenwichtspunt \\boldsymbol{\\varphi}(\\boldsymbol{x}^\\ast + \\boldsymbol{y}(t)) \\approx \\underbrace{\\boldsymbol{\\varphi}(\\boldsymbol{x}^\\ast)}_{=\\boldsymbol{0}} + \\underbrace{\\sum_{j=1}^{m}\\frac{\\partial \\boldsymbol{\\varphi}}{\\partial x^j}(\\boldsymbol{x}^\\ast) (\\boldsymbol{y}(t))^j}_{={\\mathsf{J}}_{\\boldsymbol{\\varphi}}(\\boldsymbol{x}^\\ast) \\boldsymbol{y}(t)}+ \\mathop{\\mathrm{\\mathscr{O}}}(\\boldsymbol{y}^2)"
-  },
-  {
-    "objectID": "slides/H3.html#continue-dynamische-systemen-1",
-    "href": "slides/H3.html#continue-dynamische-systemen-1",
-    "title": "Hoofdstuk 3 - Lineaire operatoren en eigenwaarden",
-    "section": "Continue dynamische systemen",
-    "text": "Continue dynamische systemen\n\nLineaire systemen: \\dot{\\boldsymbol{x}}(t) = {\\mathsf{A}}\\boldsymbol{x}(t)\n\\Rightarrow\\boldsymbol{x}(t) = {\\mathrm{e}}^{t{\\mathsf{A}}} \\boldsymbol{x}_0\nPerturbaties rond \\boldsymbol{x}^\\ast=\\boldsymbol{0} bepaald door eigenwaarden (Jordan-decompositie) van {\\mathsf{A}}:\n\nalle \\mathop{\\mathrm{Re}}{\\lambda}&lt;0: perturbaties sterven uit, evenwichtspunt stabiel\neen \\mathop{\\mathrm{Re}}{\\lambda}&gt;0: perturbatie groeit exponentieel in de tijd\n\\lambda = {\\mathrm{i}}2\\pi/p: periodieke baan met periode p"
-  },
-  {
-    "objectID": "slides/H3.html#hogere-orde-differentiaalvergelijkingen",
-    "href": "slides/H3.html#hogere-orde-differentiaalvergelijkingen",
-    "title": "Hoofdstuk 3 - Lineaire operatoren en eigenwaarden",
-    "section": "Hogere orde differentiaalvergelijkingen",
-    "text": "Hogere orde differentiaalvergelijkingen\n\nDefinitie 3.24. \\boldsymbol{x}^{(k)}(t) = \\boldsymbol{\\varphi}(t, \\boldsymbol{x}(t), \\dot{\\boldsymbol{x}}(t),\\ldots, \\boldsymbol{x}^{(k-1)}(t)) Herleidbaar naar eerste orde differentiaalvergelijking voor \\boldsymbol{y}(t) = (\\boldsymbol{x}(t), \\dot{\\boldsymbol{x}}(t), \\ddot{\\boldsymbol{x}}(t), \\dots, \\boldsymbol{x}^{(k-1)}(t))\n\n\nVoor m=1 (x(t) scalair): x^{(k)}(t) = a_{0} x(t) + a_{1} \\dot{x}(t) + \\dots + a_{k-2} x^{(k-2)}(t) + a_{k-1} x^{(k-1)}(t)\n\\Rightarrow \\dot{\\boldsymbol{y}}(t) = {\\mathsf{C}} \\boldsymbol{y}(t) met {\\mathsf{C}} een companion matrix\n\nStelling 3.25. Algemene oplossing is een lineaire combinatie van elementaire oplossingen x(t) = t^j {\\mathrm{e}}^{\\lambda t} voor \\lambda een nulpunt van de bijbehorende polynoom en j=0,1,\\ldots,q-1 met q de algebraïsche multipliciteit van \\lambda"
-  },
-  {
-    "objectID": "slides/H3.html#hogere-orde-differentiaalvergelijkingen-1",
-    "href": "slides/H3.html#hogere-orde-differentiaalvergelijkingen-1",
-    "title": "Hoofdstuk 3 - Lineaire operatoren en eigenwaarden",
-    "section": "Hogere orde differentiaalvergelijkingen",
-    "text": "Hogere orde differentiaalvergelijkingen\n\nOpmerking 3.62. Polynoom voor \\lambda kan gevonden worden door oplossingen x(t)={\\mathrm{e}}^{\\lambda t} in te vullen in de differentiaalvergelijking\n\n\nLineaire combinatie vinden door te “matchen” met beginvoorwaarden x(0),\\dot{x}(0),\\ldots,x^{(k-1)}(0)."
+    "section": "Hogere orde differentiaalvergelijkingen (3.5.2)",
+    "text": "Hogere orde differentiaalvergelijkingen (3.5.2)\n\nOpmerking 3.62. Polynoom voor \\lambda kan gevonden worden door oplossingen x(t)={\\mathrm{e}}^{\\lambda t} in te vullen in de differentiaalvergelijking\n\n\nLineaire combinatie vinden door te “matchen” met beginvoorwaarden x(0),\\dot{x}(0),\\ldots,x^{(k-1)}(0)."
   },
   {
     "objectID": "slides/H0.html",
