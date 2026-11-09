@@ -1,8 +1,8 @@
 ---
 title: "Hoofdstuk 7 - Unitaire gelijkvormigheid en unitaire equivalentie"
 order: 7
-author: "Jutho Haegeman"
-date: "11/12/2025"
+author: "Lander Burgelman"
+date: "11/03/2026"
 ---
 
 ## Doel van dit hoofdstuk
