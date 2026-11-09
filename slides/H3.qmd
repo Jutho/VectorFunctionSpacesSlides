@@ -553,34 +553,6 @@ $$\mat{V}(\lambda_1,\ldots,\lambda_n) = \begin{bmatrix} 1 & 1 & 1 &\dots & 1\\
   $$(\vec{u}_{\lambda,k})^i = \frac{1}{k!}\frac{\drm^k }{\drm \lambda^k} \lambda^{i-1} = \begin{cases} 0,& i \leq k \\ {i-1 \choose k} \lambda^{i-1-k},& i > k\end{cases}\qquad (\text{voor $i=1,\ldots,n$})$$
   (afgeleiden als gevolg van limiet van samenvallende eigenwaarden)
 
-## Sensitiviteit van eigenwaarden en eigenruimten
-
-* Sensitiviteitsanalyse $\approx$ perturbatietheorie
-* Hoe sterk verandert de eigenwaardedecompositie of Jordandecompositie van een matrix bij een kleine variatie in de matrixcomponenten? Is er een notie van "continuïteit" of "gladheid"?
-* Moeilijk en uitgebreid onderwerp waarvoor we nog niet alle gereedschappen en concepten ter beschikking hebben (normen, hermitische matrices, …)
-
-## Sensitiviteit van eigenwaarden en eigenruimten
-
-* Voorbeeld 1: $\mat{A}_1(\eps)	= \begin{bmatrix}
-	 0 & 1\\ \eps & 0
-	\end{bmatrix}$
-
-  * $\eps = 0$: $\sigma_{\mat{A}}=\{0\}$ met $q_0 = s_0 = 2$, $r_0=1$: 1 Jordan-blok
-  * $\eps > 0$: $\sigma_{\mat{A}}=\{+\sqrt{\eps},-\sqrt{\eps}\}$ en $\mat{V}(\eps) = \begin{bmatrix}
-		1 & 1 \\ +\sqrt{\eps} & -\sqrt{\eps}
-	\end{bmatrix}$
-
-* Voorbeeld 2: $\mat{A}_2(\eps)	= \begin{bmatrix}
-	 0 & 1\\ 0 & \eps
-	\end{bmatrix}$
-
-  * $\eps = 0$: $\sigma_{\mat{A}}=\{0\}$ met $q_0 = s_0 = 2$, $r_0=1$: 1 Jordan-blok
-  * $\eps > 0$: $\sigma_{\mat{A}}=\{0,\eps\}$ met $\mat{V}(\eps) = \begin{bmatrix}
-		1 & 1 \\ 0 & \eps
-	\end{bmatrix}$
-
-Problemen omdat $\GL(V)$ niet compact is: limieten van inverteerbare matrices kunnen niet-inverteerbare matrices opleveren
-
 ## Verwante eigenwaardenproblemen (3.3.4)
 
 * $\mat{A} \vec{v} = \lambda \vec{v} \Rightarrow \conj{\mat{A}} \conj{\vec{v}} = \conj{\lambda} \conj{\vec{v}}$
@@ -767,30 +739,6 @@ Maar niet:
 ::: {.bewijs}
 Door uitwerking van de Taylorreeks en vergelijken van de machten in $t$
 :::
-
-## Logaritmische functie en machten {.scrollable}
-
-$f(z) = \log(z)$ of $f(z)=z^{\alpha}$ met $\alpha \not\in\bbN$: geen Taylorreeks rond $z=0$
-
-\begin{align*}
-	\log(z) &= \log(\lambda + (z-\lambda)) = \log(\lambda) + \log\left(1 + \frac{z-\lambda}{\lambda}\right) \\
-	&= \log(\lambda) + \sum_{n=1}^{+\infty} (-1)^{n+1} \frac{(z-\lambda)^n}{n\lambda^n}
-\end{align*}
-
-\begin{equation*}
-	z^\alpha = \lambda^\alpha\left(1 + \frac{z-\lambda}{\lambda}\right)^\alpha = \lambda^\alpha \sum_{n=0}^{+\infty} \frac{\alpha (\alpha-1)
-	\cdots (\alpha - n + 1)}{n!}\left(\frac{z-\lambda}{\lambda}\right)^n
-\end{equation*}
-
-Voor de definitie van $\log(\lambda)$ of $\lambda^{\alpha}$: meerdere keuzes (vertakkingslijnen in complexe analyse)
-
-$\Rightarrow$ typisch niet uniek (meerdere $\map{B}$ voldoen aan $\map{A}=\exp(\map{B})$ voor gegeven $\map{A}$), maar altijd mogelijk zolang geen $\lambda=0$
-
-## Logaritmische functie en machten
-
-* Voorbeeld: $J_3(\lambda)^{1/2}=\begin{bmatrix}
-		\lambda & 1 & 0\\ 0 & \lambda & 1 \\ 0 & 0 & \lambda
-	\end{bmatrix}^{1/2} = \begin{bmatrix} \sqrt{\lambda} & \frac{1}{2\sqrt{\lambda}} & -\frac{1}{8 \lambda^{3/2}}\\ 0 & \sqrt{\lambda}  & \frac{1}{2\sqrt{\lambda}} \\ 0 & 0 & \sqrt{\lambda}\end{bmatrix}$
 
 # 3.5 Toepassing: lineaire dynamische systemen
 
