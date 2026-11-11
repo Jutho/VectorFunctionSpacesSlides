@@ -34,55 +34,31 @@ date: "11/10/2026"
 
 wat we nodig hebben
 
-## Terugblik: normen en volledigheid (H4) {.scrollable}
+## Terugblik: normen en begrensde operatoren (H4)
 
-* **$p$-norm** op $C^0([a,b])$: $\norm{f}_p = \left(\int_a^b \abs{f(x)}^p\,\drm x\right)^{1/p}$ [(Vb 4.3)]{style="color: grey; font-size: 80%"}
-  * **Uniforme norm**: $\norm{f}_\infty = \max_{x\in[a,b]}\abs{f(x)}$ [(Vb 4.5)]{style="color: grey; font-size: 80%"}
-  * Puntsgewijze convergentie komt van geen enkele norm [(Vb 4.6)]{style="color: grey; font-size: 80%"}
+* **$p$-norm** op $C^0([a,b])$: $\norm{f}_p = \left(\int_a^b \abs{f(x)}^p\,\drm x\right)^{1/p}$, $\;\norm{f}_\infty = \max_{x\in[a,b]}\abs{f(x)}$ [(Vb 4.3, 4.5)]{style="color: grey; font-size: 80%"}
+* **Banachruimte**: genormeerd en compleet (elke Cauchy-rij convergeert) [(Def 4.8–4.10)]{style="color: grey; font-size: 80%"}
+  * $(C^0([a,b]), \norm{\cdot}_\infty)$ is Banach, met $\norm{\cdot}_p$ voor $p < \infty$ niet [(Vb 4.10, 5.5)]{style="color: grey; font-size: 80%"}
+* **Complete verzameling** $S$: $\overline{\bbF S} = V$, bv. monomen $x^n$ (Weierstrass) [(Def 4.11, Vb 4.12)]{style="color: grey; font-size: 80%"}
+* **Begrensd**: $\norm{\map{A} v} \leq C \norm{v}$ $\Leftrightarrow$ continu [(Def 4.16, Prop 4.12)]{style="color: grey; font-size: 80%"}
+  * **Operatornorm**: $\norm{\map{A}} = \sup_{v \neq 0} \norm{\map{A} v} / \norm{v}$ [(Def 4.19)]{style="color: grey; font-size: 80%"}
 
-<br>
+## Terugblik: Hilbertruimten en orthonormale basissen (H5)
 
-* **Cauchy-rij**: $\norm{v_n - v_m} \to 0$; **compleet**: elke Cauchy-rij convergeert [(Def 4.8–4.9)]{style="color: grey; font-size: 80%"}
-  * **Banachruimte** = complete genormeerde vectorruimte [(Def 4.10)]{style="color: grey; font-size: 80%"}
-  * $(C^0([a,b]), \norm{\cdot}_\infty)$ is Banach [(Vb 4.10)]{style="color: grey; font-size: 80%"}
-  * $(C^0([a,b]), \norm{\cdot}_p)$ met $p < \infty$ is niet compleet, bv. $p = 2$ [(Vb 5.5)]{style="color: grey; font-size: 80%"}
-* **Complete verzameling** $S$: $\overline{\bbF S} = V$ [(Def 4.11)]{style="color: grey; font-size: 80%"}
-  * Weierstrass: de eentermen (monomen) $x^n$ zijn compleet in $(C^0([a,b]), \norm{\cdot}_\infty)$ [(Vb 4.12)]{style="color: grey; font-size: 80%"}
-
-## Terugblik: begrensde operatoren (H4)
-
-* **Begrensd**: $\norm{\map{A} v} \leq C \norm{v}$ voor alle $v \in V$ [(Def 4.16)]{style="color: grey; font-size: 80%"}
-  * Begrensd $\Leftrightarrow$ continu [(Prop 4.12)]{style="color: grey; font-size: 80%"}
-  * $\dim V < \infty$: elke lineaire afbeelding is begrensd [(Prop 4.13)]{style="color: grey; font-size: 80%"}
-* **Operatornorm**: kleinste zo'n $C$ [(Def 4.19)]{style="color: grey; font-size: 80%"}
-  $$\norm{\map{A}} = \sup_{v \neq 0} \frac{\norm{\map{A} v}}{\norm{v}}$$
-
-## Terugblik: Hilbertruimten (H5)
-
-* **Hilbertruimte**: inwendigproductruimte die compleet is voor $\norm{v} = \sqrt{\inner{v}{v}}$ [(Def 5.14)]{style="color: grey; font-size: 80%"}
-  * Voorbeelden: $\ell^2$ [(Vb 5.4)]{style="color: grey; font-size: 80%"}, $L^2$ met $\inner{f}{g} = \int \overline{f(x)} g(x)\,\drm x$ [(Vb 5.6)]{style="color: grey; font-size: 80%"}
-* **Parallellogramwet**: de norm komt van een inwendig product $\Leftrightarrow$ [(Prop 5.5, St 5.6)]{style="color: grey; font-size: 80%"}
-  $$\norm{v + w}^2 + \norm{v - w}^2 = 2 \left(\norm{v}^2 + \norm{w}^2\right)$$
-* **Projectiestelling**: $W$ gesloten deelruimte $\Rightarrow$ $V = W \oplus W^\perp$ [(St 5.13)]{style="color: grey; font-size: 80%"}
-  * De beste benadering van $v$ in $W$ is de orthogonale projectie
+* **Hilbertruimte**: inwendigproductruimte die compleet is voor de geïnduceerde norm
+  * $\norm{v} = \sqrt{\inner{v}{v}}$ [(Def 5.14)]{style="color: grey; font-size: 80%"}, voorbeeld: $\ell^2$ [(Vb 5.4)]{style="color: grey; font-size: 80%"}
+* **Projectiestelling**: beste benadering in gesloten $W$ = orthogonale projectie [(St 5.13)]{style="color: grey; font-size: 80%"}
 * **Gram-Schmidt**: lineair onafhankelijke rij $\rightarrow$ orthonormale rij [(Def 5.20)]{style="color: grey; font-size: 80%"}
-
-## Terugblik: orthonormale basissen (H5)
-
-* **Complete orthonormale rij** $(e_i)$: orthonormaal met $\overline{\spanop\{e_i\}} = V$
-* **Expansiestelling**: $(e_i)$ is een Schauderbasis [(St 5.23)]{style="color: grey; font-size: 80%"}
-  $$\boxed{v = \sum_{i=1}^{+\infty} \inner{e_i}{v}\, e_i}$$
-* **Plancherel**: $\norm{v}^2 = \sum_{i=1}^{+\infty} \abs{\inner{e_i}{v}}^2$ [(Gev 5.24)]{style="color: grey; font-size: 80%"}
+* **Complete orthonormale rij** $(e_i)$: **expansiestelling** en **Plancherel** [(St 5.23, Gev 5.24)]{style="color: grey; font-size: 80%"}
+  $$\boxed{v = \sum_{i=1}^{+\infty} \inner{e_i}{v}\, e_i \qquad \norm{v}^2 = \sum_{i=1}^{+\infty} \abs{\inner{e_i}{v}}^2}$$
 * Voorbeeld: $f_k(x) = \frac{1}{\sqrt{L}}\erm^{\irm 2\pi k x/L}$ op $L^2([0,L])$ [(Vb 5.8)]{style="color: grey; font-size: 80%"}
 
-## Terugblik: operatoren op Hilbertruimten (H5, H7) {.scrollable}
+## Terugblik: operatoren op Hilbertruimten (H5, H7)
 
 * **Riesz**: elke begrensde lineaire functionaal is $\xi[w] = \inner{v_\xi}{w}$ [(St 5.27)]{style="color: grey; font-size: 80%"}
 * **Toegevoegde**: $\inner{w}{\map{A} v} = \inner{\map{A}^\dagger w}{v}$, met $\norm{\map{A}^\dagger} = \norm{\map{A}}$ [(Prop 5.28)]{style="color: grey; font-size: 80%"}
   * **Zelftoegevoegd**: $\map{A} = \map{A}^\dagger$ [(Def 5.23)]{style="color: grey; font-size: 80%"} $\Rightarrow$ eigenwaarden reëel [(Opm 5.43)]{style="color: grey; font-size: 80%"}
   * **Unitair**: $\map{U}^\dagger\map{U} = \idmap$ en $\map{U}\map{U}^\dagger = \idmap$ [(Prop 5.32)]{style="color: grey; font-size: 80%"}
-  * **Normaal**: $\map{A}^\dagger\map{A} = \map{A}\map{A}^\dagger$ [(Def 5.24)]{style="color: grey; font-size: 80%"}
-    * Eigenvectoren bij verschillende eigenwaarden zijn orthogonaal [(Prop 5.35)]{style="color: grey; font-size: 80%"}
 
 <br>
 
@@ -92,7 +68,7 @@ wat we nodig hebben
 
 # Functieruimten en normen
 
-(achtergrond en motivatie)
+(achtergrond en motivatie; geen rechtstreekse theorievragen)
 
 ## Functieruimten {.scrollable}
 
@@ -353,7 +329,8 @@ $\rightarrow$ geldt voor elke $p$: de sluiting hangt zelf af van $\norm{\cdot}_p
 
 ::: {.opmerking nr="8.15"}
 $I = \bbR$: continue functies hebben niet noodzakelijk een eindige $p$-norm\
-$\rightarrow$ **drager** $\operatorname{supp}(f) = \overline{\{x \in I \mid f(x) \neq 0\}}$ en $C_c^k(\bbR)$: functies met compacte drager, dicht in $L^p(\bbR)$
+$\rightarrow$ **drager** $\operatorname{supp}(f) = \overline{\{x \in I \mid f(x) \neq 0\}}$\
+$\rightarrow$ $C_c^k(\bbR)$: functies met compacte drager, dicht in $L^p(\bbR)$
 :::
 
 ::: {.opmerking nr="8.16"}
@@ -437,8 +414,8 @@ Symmetrisch interval en $w$ even: $b_n = 0$
 ::: {.propositie nr="8.9"}
 Orthogonale projector op de veeltermen van graad $\leq n$:
 $$(\map{P}_n f)(x) = \int_I w(y) K_n(x,y) f(y)\,\drm y, \quad K_n(x,y) = \sum_{k=0}^n \frac{p_k(x)\, p_k(y)}{\inner{p_k}{p_k}_w}$$
-met (**Christoffel-Darboux**) voor $x \neq y$:
-$$K_n(x,y) = \frac{a_n}{\inner{p_n}{p_n}_w} \frac{p_{n+1}(x)\, p_n(y) - p_n(x)\, p_{n+1}(y)}{x - y}$$
+met (**Christoffel-Darboux**):
+$$K_n(x,y) = \frac{a_n}{\inner{p_n}{p_n}_w} \begin{cases} \dfrac{p_{n+1}(x)\, p_n(y) - p_n(x)\, p_{n+1}(y)}{x - y} & \quad x \neq y\\[1ex] p_{n+1}'(x)\, p_n(x) - p_n'(x)\, p_{n+1}(x) & \quad x = y\end{cases}$$
 :::
 
 ::: {.propositie nr="8.10"}
@@ -474,7 +451,8 @@ $P_1, \ldots, P_5$: de nulpunten van $P_4$ en $P_5$ alterneren
   $$\begin{aligned} &H_0(x) = 1, \quad H_1(x) = 2x, \quad H_2(x) = 4x^2 - 2,\\ &H_3(x) = 8x^3 - 12x, \quad H_4(x) = 16x^4 - 48x^2 + 12, \quad \ldots\end{aligned}$$
 * Genererende functie: $$\exp(2xt - t^2) = \sum_{n=0}^{+\infty} \frac{1}{n!} H_n(x)\, t^n$$
   $\rightarrow$ $\inner{H_m}{H_n}_w = \int_{-\infty}^{+\infty} \erm^{-x^2} H_m(x) H_n(x)\,\drm x = 2^n n! \sqrt{\pi}\,\delta_{m,n}$
-* Recursie $H_{n+1}(x) + 2n H_{n-1}(x) = 2x H_n(x)$, Rodrigues $H_n(x) = (-1)^n \erm^{x^2}\frac{\drm^n}{\drm x^n}\erm^{-x^2}$
+* Recursie $H_{n+1}(x) + 2n H_{n-1}(x) = 2x H_n(x)$
+* Rodrigues-formule: $H_n(x) = (-1)^n \erm^{x^2}\frac{\drm^n}{\drm x^n}\erm^{-x^2}$
 
 ## Hermite-functies
 
@@ -595,7 +573,8 @@ $f : \bbR \to \bbF$ is **periodiek met periode $L$** als $f(x + L) = f(x)$ voor 
 :::
 
 ::: {.opmerking nr="8.29"}
-Volledig bepaald door de waarden op $[0, L)$; omgekeerd periodiek uitbreiden
+Een periodieke functie met periode $L$ is volledig bepaald door haar waarden op het interval $[0, L)$ (of op eender welk interval $[a, a + L)$)\
+Omgekeerd kan elke functie gedefinieerd op $[0, L)$ periodiek uitgebreid worden tot een functie op heel $\bbR$, via $f(x + mL) = f(x)$ voor $x \in [0, L)$ en $m \in \bbZ$
 :::
 
 ::: {.opmerking nr="8.30"}
@@ -636,7 +615,16 @@ $$\boxed{\hat{f}_k = \inner{\varphi_k}{f} = \frac{1}{\sqrt{L}}\int_0^L f(x)\,\er
 ::: {.propositie nr="8.14"}
 Orthogonale projectie op trigonometrische veeltermen van graad $\leq n$:
 $$f_n(x) = (\map{P}_n f)(x) = \sum_{k=-n}^{+n} \hat{f}_k \varphi_k(x) = \int_0^L D_n(x - t) f(t)\,\drm t$$
-met de **Dirichlet-kern** $D_n(x) = \frac{1}{L}\sum_{k=-n}^{+n}\erm^{+\irm\frac{2\pi}{L} k x} = \frac{\sin\left(\frac{(2n+1)\pi}{L} x\right)}{L \sin\left(\frac{\pi}{L} x\right)}$
+
+:::: {.columns}
+::: {.column width="55%"}
+met de **Dirichlet-kern**
+$$D_n(x) = \frac{1}{L}\sum_{k=-n}^{+n}\erm^{+\irm\frac{2\pi}{L} k x} = \frac{\sin\left(\frac{(2n+1)\pi}{L} x\right)}{L \sin\left(\frac{\pi}{L} x\right)}$$
+:::
+::: {.column width="45%"}
+![](figures/fig-dirichlet.svg){width="100%" fig-align="center"}
+:::
+::::
 :::
 
 ## Fourierreeks {.scrollable}
@@ -1061,15 +1049,26 @@ Dus $\map{X}$ en $\map{P}$ kunnen niet allebei begrensd zijn: op begrensde $I$ (
 
 ## Commutatoren
 
+:::: {.columns}
+::: {.column width="52%" style="font-size: 90%;"}
 ::: {.voorbeeld nr="8.9"}
-$H = \ell^2(\bbN)$ met basis $\{e_n, n \in \bbN\}$:
-$$\map{A}^- e_n = \begin{cases} o, & n = 0\\ \sqrt{n}\, e_{n-1}, & n > 0\end{cases}, \quad \map{A}^+ e_n = \sqrt{n+1}\, e_{n+1}$$
+$H = \ell^2(\bbN)$ met basis $\{e_n\}$:
+$$\map{A}^- e_n = \begin{cases} o, & n = 0\\ \sqrt{n}\, e_{n-1}, & n > 0\end{cases}$$
+$$\map{A}^+ e_n = \sqrt{n+1}\, e_{n+1}$$
+In componenten:
+$$(\map{A}^+ v)^n = \sqrt{n}\, v^{n-1}, \quad (\map{A}^- v)^n = \sqrt{n+1}\, v^{n+1}$$
+$\Rightarrow \commutator{\map{A}^-}{\map{A}^+} = \idmap$: beide onbegrensd.
 
-* $\commutator{\map{A}^-}{\map{A}^+} e_n = e_n$: beide onbegrensd
-* Domein $\D_{\map{A}^\pm} = \{v \in \ell^2(\bbN) \mid \sum_{n\in\bbN} n\abs{v^n}^2 < \infty\}$\
-  $\map{A}^-\map{A}^+$: enkel voor $\sum_n n^2\abs{v^n}^2 < \infty$
-* Beide domeinen zijn dicht: bevatten alle vectoren met eindig veel niet-nul-componenten
+Domein $\D_{\map{A}^\pm}$: $\sum_n n\abs{v^n}^2 < \infty$;\
+voor $\map{A}^-\map{A}^+$ ook $\sum_n n^2\abs{v^n}^2 < \infty$.
+
+Beide dicht: ze bevatten alle vectoren met eindig veel niet-nul-componenten.
 :::
+:::
+::: {.column width="48%"}
+![](figures/fig-ladder-operators.svg){width="100%" fig-align="center"}
+:::
+::::
 
 ## Toegevoegde van een onbegrensde operator {.scrollable}
 
@@ -1370,12 +1369,20 @@ Compacte $\map{A} e_n = \frac{1}{n} e_n$ op $\ell^2$: $\sigma^{(p)} = \{1/n \mid
 $R_0(\map{A})$ is dicht gedefinieerd maar onbegrensd, want $\norm{R_0(\map{A}) e_n} = n$ $\Rightarrow \sigma^{(c)} = \{0\}$
 :::
 
-## Spectrum: verschuivingsoperatoren {.scrollable}
+## Spectrum: verschuivingsoperatoren
 
 ::: {.voorbeeld nr="8.19"}
 Verschuivingsoperatoren op $\ell^2$:
 $$\map{L}(v^0, v^1, v^2, \ldots) = (v^1, v^2, v^3, \ldots), \quad \map{R}(v^0, v^1, v^2, \ldots) = (0, v^0, v^1, \ldots)$$
-Met $\map{L}^\dagger = \map{R}$ en $\norm{\map{L}} = \norm{\map{R}} = 1$ ligt $\abs{\lambda} > 1$ niet in het spectrum.
+Uit H5 (Voorbeeld 5.15, daar $\map{S} = \map{R}$ en $\map{T} = \map{S}^\dagger = \map{L}$): $\map{L}^\dagger = \map{R}$, en $\map{R}$ is een isometrie maar niet unitair
+:::
+
+![](figures/fig-shift-operators.svg){width="70%" fig-align="center"}
+
+## Spectrum: verschuivingsoperatoren {.scrollable}
+
+::: {.voorbeeld nr="8.19" title="vervolg"}
+Met $\norm{\map{L}} = \norm{\map{R}} = 1$ ligt $\abs{\lambda} > 1$ niet in het spectrum.
 
 $\map{R}$ heeft geen eigenwaarden; $v_\lambda = \sum_n \lambda^n e_n$ is eigenvector van $\map{L}$ voor $\abs{\lambda} < 1$ $\Rightarrow \sigma_{\map{L}}^{(p)} = \{\abs{\lambda} < 1\}$
 
