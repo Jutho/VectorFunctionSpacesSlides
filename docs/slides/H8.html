@@ -203,10 +203,8 @@ window.Quarto = {
   <li><a href="#doel-van-dit-hoofdstuk-1" id="toc-doel-van-dit-hoofdstuk-1" class="nav-link" data-scroll-target="#doel-van-dit-hoofdstuk-1">Doel van dit hoofdstuk</a></li>
   <li><a href="#terugblik-h4-h5-en-h7" id="toc-terugblik-h4-h5-en-h7" class="nav-link" data-scroll-target="#terugblik-h4-h5-en-h7">Terugblik: H4, H5 en H7</a>
   <ul class="collapse">
-  <li><a href="#terugblik-normen-en-volledigheid-h4" id="toc-terugblik-normen-en-volledigheid-h4" class="nav-link" data-scroll-target="#terugblik-normen-en-volledigheid-h4">Terugblik: normen en volledigheid (H4)</a></li>
-  <li><a href="#terugblik-begrensde-operatoren-h4" id="toc-terugblik-begrensde-operatoren-h4" class="nav-link" data-scroll-target="#terugblik-begrensde-operatoren-h4">Terugblik: begrensde operatoren (H4)</a></li>
-  <li><a href="#terugblik-hilbertruimten-h5" id="toc-terugblik-hilbertruimten-h5" class="nav-link" data-scroll-target="#terugblik-hilbertruimten-h5">Terugblik: Hilbertruimten (H5)</a></li>
-  <li><a href="#terugblik-orthonormale-basissen-h5" id="toc-terugblik-orthonormale-basissen-h5" class="nav-link" data-scroll-target="#terugblik-orthonormale-basissen-h5">Terugblik: orthonormale basissen (H5)</a></li>
+  <li><a href="#terugblik-normen-en-begrensde-operatoren-h4" id="toc-terugblik-normen-en-begrensde-operatoren-h4" class="nav-link" data-scroll-target="#terugblik-normen-en-begrensde-operatoren-h4">Terugblik: normen en begrensde operatoren (H4)</a></li>
+  <li><a href="#terugblik-hilbertruimten-en-orthonormale-basissen-h5" id="toc-terugblik-hilbertruimten-en-orthonormale-basissen-h5" class="nav-link" data-scroll-target="#terugblik-hilbertruimten-en-orthonormale-basissen-h5">Terugblik: Hilbertruimten en orthonormale basissen (H5)</a></li>
   <li><a href="#terugblik-operatoren-op-hilbertruimten-h5-h7" id="toc-terugblik-operatoren-op-hilbertruimten-h5-h7" class="nav-link" data-scroll-target="#terugblik-operatoren-op-hilbertruimten-h5-h7">Terugblik: operatoren op Hilbertruimten (H5, H7)</a></li>
   </ul></li>
   <li><a href="#functieruimten-en-normen" id="toc-functieruimten-en-normen" class="nav-link" data-scroll-target="#functieruimten-en-normen">Functieruimten en normen</a>
@@ -308,6 +306,7 @@ window.Quarto = {
   <li><a href="#spectrum-van-algemene-operatoren-1" id="toc-spectrum-van-algemene-operatoren-1" class="nav-link" data-scroll-target="#spectrum-van-algemene-operatoren-1">Spectrum van algemene operatoren</a></li>
   <li><a href="#spectrum-voorbeelden" id="toc-spectrum-voorbeelden" class="nav-link" data-scroll-target="#spectrum-voorbeelden">Spectrum: voorbeelden</a></li>
   <li><a href="#spectrum-verschuivingsoperatoren" id="toc-spectrum-verschuivingsoperatoren" class="nav-link" data-scroll-target="#spectrum-verschuivingsoperatoren">Spectrum: verschuivingsoperatoren</a></li>
+  <li><a href="#spectrum-verschuivingsoperatoren-1" id="toc-spectrum-verschuivingsoperatoren-1" class="nav-link" data-scroll-target="#spectrum-verschuivingsoperatoren-1">Spectrum: verschuivingsoperatoren</a></li>
   <li><a href="#spectrum-overzicht" id="toc-spectrum-overzicht" class="nav-link" data-scroll-target="#spectrum-overzicht">Spectrum: overzicht</a></li>
   <li><a href="#spectrum-van-zelftoegevoegde-operatoren" id="toc-spectrum-van-zelftoegevoegde-operatoren" class="nav-link" data-scroll-target="#spectrum-van-zelftoegevoegde-operatoren">Spectrum van zelftoegevoegde operatoren</a></li>
   <li><a href="#spectrale-decompositie-van-zelftoegevoegde-operatoren" id="toc-spectrale-decompositie-van-zelftoegevoegde-operatoren" class="nav-link" data-scroll-target="#spectrale-decompositie-van-zelftoegevoegde-operatoren">Spectrale decompositie van zelftoegevoegde operatoren</a></li>
@@ -396,76 +395,42 @@ window.Quarto = {
 <section id="terugblik-h4-h5-en-h7" class="level1">
 <h1>Terugblik: H4, H5 en H7</h1>
 <p>wat we nodig hebben</p>
-<section id="terugblik-normen-en-volledigheid-h4" class="level2 scrollable">
-<h2 class="scrollable anchored" data-anchor-id="terugblik-normen-en-volledigheid-h4">Terugblik: normen en volledigheid (H4)</h2>
+<section id="terugblik-normen-en-begrensde-operatoren-h4" class="level2">
+<h2 class="anchored" data-anchor-id="terugblik-normen-en-begrensde-operatoren-h4">Terugblik: normen en begrensde operatoren (H4)</h2>
 <ul>
-<li><strong><span class="math inline">p</span>-norm</strong> op <span class="math inline">C^0([a,b])</span>: <span class="math inline">{\left\lVert f\right\rVert}_p = \left(\int_a^b {\left\lvert f(x)\right\rvert}^p\,{\mathrm{d}}x\right)^{1/p}</span> <span style="color: grey; font-size: 80%">(Vb 4.3)</span>
+<li><strong><span class="math inline">p</span>-norm</strong> op <span class="math inline">C^0([a,b])</span>: <span class="math inline">{\left\lVert f\right\rVert}_p = \left(\int_a^b {\left\lvert f(x)\right\rvert}^p\,{\mathrm{d}}x\right)^{1/p}</span>, <span class="math inline">\;{\left\lVert f\right\rVert}_\infty = \max_{x\in[a,b]}{\left\lvert f(x)\right\rvert}</span> <span style="color: grey; font-size: 80%">(Vb 4.3, 4.5)</span></li>
+<li><strong>Banachruimte</strong>: genormeerd en compleet (elke Cauchy-rij convergeert) <span style="color: grey; font-size: 80%">(Def 4.8–4.10)</span>
 <ul>
-<li><strong>Uniforme norm</strong>: <span class="math inline">{\left\lVert f\right\rVert}_\infty = \max_{x\in[a,b]}{\left\lvert f(x)\right\rvert}</span> <span style="color: grey; font-size: 80%">(Vb 4.5)</span></li>
-<li>Puntsgewijze convergentie komt van geen enkele norm <span style="color: grey; font-size: 80%">(Vb 4.6)</span></li>
+<li><span class="math inline">(C^0([a,b]), {\left\lVert\cdot\right\rVert}_\infty)</span> is Banach, met <span class="math inline">{\left\lVert\cdot\right\rVert}_p</span> voor <span class="math inline">p &lt; \infty</span> niet <span style="color: grey; font-size: 80%">(Vb 4.10, 5.5)</span></li>
 </ul></li>
-</ul>
-<p><br></p>
+<li><strong>Complete verzameling</strong> <span class="math inline">S</span>: <span class="math inline">\overline{{\mathbb{F}}S} = V</span>, bv. monomen <span class="math inline">x^n</span> (Weierstrass) <span style="color: grey; font-size: 80%">(Def 4.11, Vb 4.12)</span></li>
+<li><strong>Begrensd</strong>: <span class="math inline">{\left\lVert{\hat{A}} v\right\rVert} \leq C {\left\lVert v\right\rVert}</span> <span class="math inline">\Leftrightarrow</span> continu <span style="color: grey; font-size: 80%">(Def 4.16, Prop 4.12)</span>
 <ul>
-<li><strong>Cauchy-rij</strong>: <span class="math inline">{\left\lVert v_n - v_m\right\rVert} \to 0</span>; <strong>compleet</strong>: elke Cauchy-rij convergeert <span style="color: grey; font-size: 80%">(Def 4.8–4.9)</span>
-<ul>
-<li><strong>Banachruimte</strong> = complete genormeerde vectorruimte <span style="color: grey; font-size: 80%">(Def 4.10)</span></li>
-<li><span class="math inline">(C^0([a,b]), {\left\lVert\cdot\right\rVert}_\infty)</span> is Banach <span style="color: grey; font-size: 80%">(Vb 4.10)</span></li>
-<li><span class="math inline">(C^0([a,b]), {\left\lVert\cdot\right\rVert}_p)</span> met <span class="math inline">p &lt; \infty</span> is niet compleet, bv. <span class="math inline">p = 2</span> <span style="color: grey; font-size: 80%">(Vb 5.5)</span></li>
-</ul></li>
-<li><strong>Complete verzameling</strong> <span class="math inline">S</span>: <span class="math inline">\overline{{\mathbb{F}}S} = V</span> <span style="color: grey; font-size: 80%">(Def 4.11)</span>
-<ul>
-<li>Weierstrass: de eentermen (monomen) <span class="math inline">x^n</span> zijn compleet in <span class="math inline">(C^0([a,b]), {\left\lVert\cdot\right\rVert}_\infty)</span> <span style="color: grey; font-size: 80%">(Vb 4.12)</span></li>
+<li><strong>Operatornorm</strong>: <span class="math inline">{\left\lVert{\hat{A}}\right\rVert} = \sup_{v \neq 0} {\left\lVert{\hat{A}} v\right\rVert} / {\left\lVert v\right\rVert}</span> <span style="color: grey; font-size: 80%">(Def 4.19)</span></li>
 </ul></li>
 </ul>
 </section>
-<section id="terugblik-begrensde-operatoren-h4" class="level2">
-<h2 class="anchored" data-anchor-id="terugblik-begrensde-operatoren-h4">Terugblik: begrensde operatoren (H4)</h2>
+<section id="terugblik-hilbertruimten-en-orthonormale-basissen-h5" class="level2">
+<h2 class="anchored" data-anchor-id="terugblik-hilbertruimten-en-orthonormale-basissen-h5">Terugblik: Hilbertruimten en orthonormale basissen (H5)</h2>
 <ul>
-<li><strong>Begrensd</strong>: <span class="math inline">{\left\lVert{\hat{A}} v\right\rVert} \leq C {\left\lVert v\right\rVert}</span> voor alle <span class="math inline">v \in V</span> <span style="color: grey; font-size: 80%">(Def 4.16)</span>
+<li><strong>Hilbertruimte</strong>: inwendigproductruimte die compleet is voor de geïnduceerde norm
 <ul>
-<li>Begrensd <span class="math inline">\Leftrightarrow</span> continu <span style="color: grey; font-size: 80%">(Prop 4.12)</span></li>
-<li><span class="math inline">\mathop{\mathrm{dim}}V &lt; \infty</span>: elke lineaire afbeelding is begrensd <span style="color: grey; font-size: 80%">(Prop 4.13)</span></li>
+<li><span class="math inline">{\left\lVert v\right\rVert} = \sqrt{{\left\langle v,v\right\rangle}}</span> <span style="color: grey; font-size: 80%">(Def 5.14)</span>, voorbeeld: <span class="math inline">\ell^2</span> <span style="color: grey; font-size: 80%">(Vb 5.4)</span></li>
 </ul></li>
-<li><strong>Operatornorm</strong>: kleinste zo’n <span class="math inline">C</span> <span style="color: grey; font-size: 80%">(Def 4.19)</span> <span class="math display">{\left\lVert{\hat{A}}\right\rVert} = \sup_{v \neq 0} \frac{{\left\lVert{\hat{A}} v\right\rVert}}{{\left\lVert v\right\rVert}}</span></li>
-</ul>
-</section>
-<section id="terugblik-hilbertruimten-h5" class="level2">
-<h2 class="anchored" data-anchor-id="terugblik-hilbertruimten-h5">Terugblik: Hilbertruimten (H5)</h2>
-<ul>
-<li><strong>Hilbertruimte</strong>: inwendigproductruimte die compleet is voor <span class="math inline">{\left\lVert v\right\rVert} = \sqrt{{\left\langle v,v\right\rangle}}</span> <span style="color: grey; font-size: 80%">(Def 5.14)</span>
-<ul>
-<li>Voorbeelden: <span class="math inline">\ell^2</span> <span style="color: grey; font-size: 80%">(Vb 5.4)</span>, <span class="math inline">L^2</span> met <span class="math inline">{\left\langle f,g\right\rangle} = \int \overline{f(x)} g(x)\,{\mathrm{d}}x</span> <span style="color: grey; font-size: 80%">(Vb 5.6)</span></li>
-</ul></li>
-<li><strong>Parallellogramwet</strong>: de norm komt van een inwendig product <span class="math inline">\Leftrightarrow</span> <span style="color: grey; font-size: 80%">(Prop 5.5, St 5.6)</span> <span class="math display">{\left\lVert v + w\right\rVert}^2 + {\left\lVert v - w\right\rVert}^2 = 2 \left({\left\lVert v\right\rVert}^2 + {\left\lVert w\right\rVert}^2\right)</span></li>
-<li><strong>Projectiestelling</strong>: <span class="math inline">W</span> gesloten deelruimte <span class="math inline">\Rightarrow</span> <span class="math inline">V = W \oplus W^\perp</span> <span style="color: grey; font-size: 80%">(St 5.13)</span>
-<ul>
-<li>De beste benadering van <span class="math inline">v</span> in <span class="math inline">W</span> is de orthogonale projectie</li>
-</ul></li>
+<li><strong>Projectiestelling</strong>: beste benadering in gesloten <span class="math inline">W</span> = orthogonale projectie <span style="color: grey; font-size: 80%">(St 5.13)</span></li>
 <li><strong>Gram-Schmidt</strong>: lineair onafhankelijke rij <span class="math inline">\rightarrow</span> orthonormale rij <span style="color: grey; font-size: 80%">(Def 5.20)</span></li>
-</ul>
-</section>
-<section id="terugblik-orthonormale-basissen-h5" class="level2">
-<h2 class="anchored" data-anchor-id="terugblik-orthonormale-basissen-h5">Terugblik: orthonormale basissen (H5)</h2>
-<ul>
-<li><strong>Complete orthonormale rij</strong> <span class="math inline">(e_i)</span>: orthonormaal met <span class="math inline">\overline{\mathop{\mathrm{span}}\{e_i\}} = V</span></li>
-<li><strong>Expansiestelling</strong>: <span class="math inline">(e_i)</span> is een Schauderbasis <span style="color: grey; font-size: 80%">(St 5.23)</span> <span class="math display">\boxed{v = \sum_{i=1}^{+\infty} {\left\langle e_i,v\right\rangle}\, e_i}</span></li>
-<li><strong>Plancherel</strong>: <span class="math inline">{\left\lVert v\right\rVert}^2 = \sum_{i=1}^{+\infty} {\left\lvert{\left\langle e_i,v\right\rangle}\right\rvert}^2</span> <span style="color: grey; font-size: 80%">(Gev 5.24)</span></li>
+<li><strong>Complete orthonormale rij</strong> <span class="math inline">(e_i)</span>: <strong>expansiestelling</strong> en <strong>Plancherel</strong> <span style="color: grey; font-size: 80%">(St 5.23, Gev 5.24)</span> <span class="math display">\boxed{v = \sum_{i=1}^{+\infty} {\left\langle e_i,v\right\rangle}\, e_i \qquad {\left\lVert v\right\rVert}^2 = \sum_{i=1}^{+\infty} {\left\lvert{\left\langle e_i,v\right\rangle}\right\rvert}^2}</span></li>
 <li>Voorbeeld: <span class="math inline">f_k(x) = \frac{1}{\sqrt{L}}{\mathrm{e}}^{{\mathrm{i}}2\pi k x/L}</span> op <span class="math inline">L^2([0,L])</span> <span style="color: grey; font-size: 80%">(Vb 5.8)</span></li>
 </ul>
 </section>
-<section id="terugblik-operatoren-op-hilbertruimten-h5-h7" class="level2 scrollable">
-<h2 class="scrollable anchored" data-anchor-id="terugblik-operatoren-op-hilbertruimten-h5-h7">Terugblik: operatoren op Hilbertruimten (H5, H7)</h2>
+<section id="terugblik-operatoren-op-hilbertruimten-h5-h7" class="level2">
+<h2 class="anchored" data-anchor-id="terugblik-operatoren-op-hilbertruimten-h5-h7">Terugblik: operatoren op Hilbertruimten (H5, H7)</h2>
 <ul>
 <li><strong>Riesz</strong>: elke begrensde lineaire functionaal is <span class="math inline">\xi[w] = {\left\langle v_\xi,w\right\rangle}</span> <span style="color: grey; font-size: 80%">(St 5.27)</span></li>
 <li><strong>Toegevoegde</strong>: <span class="math inline">{\left\langle w,{\hat{A}} v\right\rangle} = {\left\langle{\hat{A}}^\dagger w,v\right\rangle}</span>, met <span class="math inline">{\left\lVert{\hat{A}}^\dagger\right\rVert} = {\left\lVert{\hat{A}}\right\rVert}</span> <span style="color: grey; font-size: 80%">(Prop 5.28)</span>
 <ul>
 <li><strong>Zelftoegevoegd</strong>: <span class="math inline">{\hat{A}} = {\hat{A}}^\dagger</span> <span style="color: grey; font-size: 80%">(Def 5.23)</span> <span class="math inline">\Rightarrow</span> eigenwaarden reëel <span style="color: grey; font-size: 80%">(Opm 5.43)</span></li>
 <li><strong>Unitair</strong>: <span class="math inline">{\hat{U}}^\dagger{\hat{U}} = {\hat{1}}</span> en <span class="math inline">{\hat{U}}{\hat{U}}^\dagger = {\hat{1}}</span> <span style="color: grey; font-size: 80%">(Prop 5.32)</span></li>
-<li><strong>Normaal</strong>: <span class="math inline">{\hat{A}}^\dagger{\hat{A}} = {\hat{A}}{\hat{A}}^\dagger</span> <span style="color: grey; font-size: 80%">(Def 5.24)</span>
-<ul>
-<li>Eigenvectoren bij verschillende eigenwaarden zijn orthogonaal <span style="color: grey; font-size: 80%">(Prop 5.35)</span></li>
-</ul></li>
 </ul></li>
 </ul>
 <p><br></p>
@@ -479,7 +444,7 @@ window.Quarto = {
 </section>
 <section id="functieruimten-en-normen" class="level1">
 <h1>Functieruimten en normen</h1>
-<p>(achtergrond en motivatie)</p>
+<p>(achtergrond en motivatie; geen rechtstreekse theorievragen)</p>
 <section id="functieruimten" class="level2 scrollable">
 <h2 class="scrollable anchored" data-anchor-id="functieruimten">Functieruimten</h2>
 <div class="vfr-box vfr-definitie">
@@ -710,7 +675,8 @@ Algemene <span class="math inline">f</span>: <span class="math inline">l_f = l_{
 </div>
 <div class="vfr-box vfr-opmerking">
 <p><span class="vfr-box-label"><strong>Opmerking 8.15.</strong></span> <span class="math inline">I = {\mathbb{R}}</span>: continue functies hebben niet noodzakelijk een eindige <span class="math inline">p</span>-norm<br>
-<span class="math inline">\rightarrow</span> <strong>drager</strong> <span class="math inline">\operatorname{supp}(f) = \overline{\{x \in I \mid f(x) \neq 0\}}</span> en <span class="math inline">C_c^k({\mathbb{R}})</span>: functies met compacte drager, dicht in <span class="math inline">L^p({\mathbb{R}})</span></p>
+<span class="math inline">\rightarrow</span> <strong>drager</strong> <span class="math inline">\operatorname{supp}(f) = \overline{\{x \in I \mid f(x) \neq 0\}}</span><br>
+<span class="math inline">\rightarrow</span> <span class="math inline">C_c^k({\mathbb{R}})</span>: functies met compacte drager, dicht in <span class="math inline">L^p({\mathbb{R}})</span></p>
 </div>
 <div class="vfr-box vfr-opmerking">
 <p><span class="vfr-box-label"><strong>Opmerking 8.16.</strong></span> <span class="math inline">L^p(I)</span> is <strong>separabel</strong>: er bestaat een aftelbare fundamentele verzameling</p>
@@ -785,7 +751,7 @@ Algemene <span class="math inline">f</span>: <span class="math inline">l_f = l_{
 <section id="projector-en-nulpunten" class="level2 scrollable">
 <h2 class="scrollable anchored" data-anchor-id="projector-en-nulpunten">Projector en nulpunten</h2>
 <div class="vfr-box vfr-propositie">
-<p><span class="vfr-box-label"><strong>Propositie 8.9.</strong></span> Orthogonale projector op de veeltermen van graad <span class="math inline">\leq n</span>: <span class="math display">({\hat{P}}_n f)(x) = \int_I w(y) K_n(x,y) f(y)\,{\mathrm{d}}y, \quad K_n(x,y) = \sum_{k=0}^n \frac{p_k(x)\, p_k(y)}{{\left\langle p_k,p_k\right\rangle}_w}</span> met (<strong>Christoffel-Darboux</strong>) voor <span class="math inline">x \neq y</span>: <span class="math display">K_n(x,y) = \frac{a_n}{{\left\langle p_n,p_n\right\rangle}_w} \frac{p_{n+1}(x)\, p_n(y) - p_n(x)\, p_{n+1}(y)}{x - y}</span></p>
+<p><span class="vfr-box-label"><strong>Propositie 8.9.</strong></span> Orthogonale projector op de veeltermen van graad <span class="math inline">\leq n</span>: <span class="math display">({\hat{P}}_n f)(x) = \int_I w(y) K_n(x,y) f(y)\,{\mathrm{d}}y, \quad K_n(x,y) = \sum_{k=0}^n \frac{p_k(x)\, p_k(y)}{{\left\langle p_k,p_k\right\rangle}_w}</span> met (<strong>Christoffel-Darboux</strong>): <span class="math display">K_n(x,y) = \frac{a_n}{{\left\langle p_n,p_n\right\rangle}_w} \begin{cases} \dfrac{p_{n+1}(x)\, p_n(y) - p_n(x)\, p_{n+1}(y)}{x - y} &amp; \quad x \neq y\\[1ex] p_{n+1}'(x)\, p_n(x) - p_n'(x)\, p_{n+1}(x) &amp; \quad x = y\end{cases}</span></p>
 </div>
 <div class="vfr-box vfr-propositie">
 <p><span class="vfr-box-label"><strong>Propositie 8.10.</strong></span> <span class="math inline">p_n</span> heeft <span class="math inline">n</span> verschillende nulpunten in het inwendige van <span class="math inline">I</span>; de nulpunten van <span class="math inline">p_n</span> en <span class="math inline">p_{n+1}</span> alterneren</p>
@@ -817,7 +783,8 @@ Algemene <span class="math inline">f</span>: <span class="math inline">l_f = l_{
 <ul>
 <li><span class="math inline">I = {\mathbb{R}}</span>, <span class="math inline">w(x) = \exp(-x^2)</span>: <span class="math display">\begin{aligned} &amp;H_0(x) = 1, \quad H_1(x) = 2x, \quad H_2(x) = 4x^2 - 2,\\ &amp;H_3(x) = 8x^3 - 12x, \quad H_4(x) = 16x^4 - 48x^2 + 12, \quad \ldots\end{aligned}</span></li>
 <li>Genererende functie: <span class="math display">\exp(2xt - t^2) = \sum_{n=0}^{+\infty} \frac{1}{n!} H_n(x)\, t^n</span> <span class="math inline">\rightarrow</span> <span class="math inline">{\left\langle H_m,H_n\right\rangle}_w = \int_{-\infty}^{+\infty} {\mathrm{e}}^{-x^2} H_m(x) H_n(x)\,{\mathrm{d}}x = 2^n n! \sqrt{\pi}\,\delta_{m,n}</span></li>
-<li>Recursie <span class="math inline">H_{n+1}(x) + 2n H_{n-1}(x) = 2x H_n(x)</span>, Rodrigues <span class="math inline">H_n(x) = (-1)^n {\mathrm{e}}^{x^2}\frac{{\mathrm{d}}^n}{{\mathrm{d}}x^n}{\mathrm{e}}^{-x^2}</span></li>
+<li>Recursie <span class="math inline">H_{n+1}(x) + 2n H_{n-1}(x) = 2x H_n(x)</span></li>
+<li>Rodrigues-formule: <span class="math inline">H_n(x) = (-1)^n {\mathrm{e}}^{x^2}\frac{{\mathrm{d}}^n}{{\mathrm{d}}x^n}{\mathrm{e}}^{-x^2}</span></li>
 </ul>
 </section>
 <section id="hermite-functies" class="level2">
@@ -1004,7 +971,8 @@ Niet-lineair probleem, maar:</li>
 <p><span class="vfr-box-label"><strong>Definitie 8.9.</strong></span> <span class="math inline">f : {\mathbb{R}}\to {\mathbb{F}}</span> is <strong>periodiek met periode <span class="math inline">L</span></strong> als <span class="math inline">f(x + L) = f(x)</span> voor alle <span class="math inline">x \in {\mathbb{R}}</span></p>
 </div>
 <div class="vfr-box vfr-opmerking">
-<p><span class="vfr-box-label"><strong>Opmerking 8.29.</strong></span> Volledig bepaald door de waarden op <span class="math inline">[0, L)</span>; omgekeerd periodiek uitbreiden</p>
+<p><span class="vfr-box-label"><strong>Opmerking 8.29.</strong></span> Een periodieke functie met periode <span class="math inline">L</span> is volledig bepaald door haar waarden op het interval <span class="math inline">[0, L)</span> (of op eender welk interval <span class="math inline">[a, a + L)</span>)<br>
+Omgekeerd kan elke functie gedefinieerd op <span class="math inline">[0, L)</span> periodiek uitgebreid worden tot een functie op heel <span class="math inline">{\mathbb{R}}</span>, via <span class="math inline">f(x + mL) = f(x)</span> voor <span class="math inline">x \in [0, L)</span> en <span class="math inline">m \in {\mathbb{Z}}</span></p>
 </div>
 <div class="vfr-box vfr-opmerking">
 <p><span class="vfr-box-label"><strong>Opmerking 8.30.</strong></span> Functie op een cirkel met omtrek <span class="math inline">L</span>: <span class="math inline">{\mathbb{T}}_L = {\mathbb{R}}/(L{\mathbb{Z}})</span> (eendimensionale torus)</p>
@@ -1034,7 +1002,18 @@ Niet-lineair probleem, maar:</li>
 <p><span class="vfr-box-label"><strong>Definitie 8.11.</strong></span> <strong>Fouriercoëfficiënten</strong>: <span class="math display">\boxed{\hat{f}_k = {\left\langle\varphi_k,f\right\rangle} = \frac{1}{\sqrt{L}}\int_0^L f(x)\,{\mathrm{e}}^{-{\mathrm{i}}\frac{2\pi}{L} k x}\,{\mathrm{d}}x}</span></p>
 </div>
 <div class="vfr-box vfr-propositie">
-<p><span class="vfr-box-label"><strong>Propositie 8.14.</strong></span> Orthogonale projectie op trigonometrische veeltermen van graad <span class="math inline">\leq n</span>: <span class="math display">f_n(x) = ({\hat{P}}_n f)(x) = \sum_{k=-n}^{+n} \hat{f}_k \varphi_k(x) = \int_0^L D_n(x - t) f(t)\,{\mathrm{d}}t</span> met de <strong>Dirichlet-kern</strong> <span class="math inline">D_n(x) = \frac{1}{L}\sum_{k=-n}^{+n}{\mathrm{e}}^{+{\mathrm{i}}\frac{2\pi}{L} k x} = \frac{\sin\left(\frac{(2n+1)\pi}{L} x\right)}{L \sin\left(\frac{\pi}{L} x\right)}</span></p>
+<p><span class="vfr-box-label"><strong>Propositie 8.14.</strong></span> Orthogonale projectie op trigonometrische veeltermen van graad <span class="math inline">\leq n</span>: <span class="math display">f_n(x) = ({\hat{P}}_n f)(x) = \sum_{k=-n}^{+n} \hat{f}_k \varphi_k(x) = \int_0^L D_n(x - t) f(t)\,{\mathrm{d}}t</span></p>
+<div class="columns">
+<div class="column" style="width:55%;">
+<p>met de <strong>Dirichlet-kern</strong> <span class="math display">D_n(x) = \frac{1}{L}\sum_{k=-n}^{+n}{\mathrm{e}}^{+{\mathrm{i}}\frac{2\pi}{L} k x} = \frac{\sin\left(\frac{(2n+1)\pi}{L} x\right)}{L \sin\left(\frac{\pi}{L} x\right)}</span></p>
+</div><div class="column" style="width:45%;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/fig-dirichlet.svg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></p>
+</figure>
+</div>
+</div>
+</div>
 </div>
 </section>
 <section id="fourierreeks" class="level2 scrollable">
@@ -1441,14 +1420,21 @@ Op <span class="math inline">L^2({\mathbb{R}})</span>: <span class="math inline"
 </section>
 <section id="commutatoren-1" class="level2">
 <h2 class="anchored" data-anchor-id="commutatoren-1">Commutatoren</h2>
+<div class="columns">
+<div class="column" style="font-size: 90%;">
 <div class="vfr-box vfr-voorbeeld">
-<p><span class="vfr-box-label"><strong>Voorbeeld 8.9.</strong></span> <span class="math inline">H = \ell^2({\mathbb{N}})</span> met basis <span class="math inline">\{e_n, n \in {\mathbb{N}}\}</span>: <span class="math display">{\hat{A}}^- e_n = \begin{cases} o, &amp; n = 0\\ \sqrt{n}\, e_{n-1}, &amp; n &gt; 0\end{cases}, \quad {\hat{A}}^+ e_n = \sqrt{n+1}\, e_{n+1}</span></p>
-<ul>
-<li><span class="math inline">{\left[{\hat{A}}^-,{\hat{A}}^+\right]} e_n = e_n</span>: beide onbegrensd</li>
-<li>Domein <span class="math inline">\mathop{\mathrm{\mathcal{D}}}_{{\hat{A}}^\pm} = \{v \in \ell^2({\mathbb{N}}) \mid \sum_{n\in{\mathbb{N}}} n{\left\lvert v^n\right\rvert}^2 &lt; \infty\}</span><br>
-<span class="math inline">{\hat{A}}^-{\hat{A}}^+</span>: enkel voor <span class="math inline">\sum_n n^2{\left\lvert v^n\right\rvert}^2 &lt; \infty</span></li>
-<li>Beide domeinen zijn dicht: bevatten alle vectoren met eindig veel niet-nul-componenten</li>
-</ul>
+<p><span class="vfr-box-label"><strong>Voorbeeld 8.9.</strong></span> <span class="math inline">H = \ell^2({\mathbb{N}})</span> met basis <span class="math inline">\{e_n\}</span>: <span class="math display">{\hat{A}}^- e_n = \begin{cases} o, &amp; n = 0\\ \sqrt{n}\, e_{n-1}, &amp; n &gt; 0\end{cases}</span> <span class="math display">{\hat{A}}^+ e_n = \sqrt{n+1}\, e_{n+1}</span> In componenten: <span class="math display">({\hat{A}}^+ v)^n = \sqrt{n}\, v^{n-1}, \quad ({\hat{A}}^- v)^n = \sqrt{n+1}\, v^{n+1}</span> <span class="math inline">\Rightarrow {\left[{\hat{A}}^-,{\hat{A}}^+\right]} = {\hat{1}}</span>: beide onbegrensd.</p>
+<p>Domein <span class="math inline">\mathop{\mathrm{\mathcal{D}}}_{{\hat{A}}^\pm}</span>: <span class="math inline">\sum_n n{\left\lvert v^n\right\rvert}^2 &lt; \infty</span>;<br>
+voor <span class="math inline">{\hat{A}}^-{\hat{A}}^+</span> ook <span class="math inline">\sum_n n^2{\left\lvert v^n\right\rvert}^2 &lt; \infty</span>.</p>
+<p>Beide dicht: ze bevatten alle vectoren met eindig veel niet-nul-componenten.</p>
+</div>
+</div><div class="column" style="width:48%;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/fig-ladder-operators.svg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></p>
+</figure>
+</div>
+</div>
 </div>
 </section>
 <section id="toegevoegde-van-een-onbegrensde-operator" class="level2 scrollable">
@@ -1703,10 +1689,21 @@ Voor <span class="math inline">\lambda \notin [a,b]</span> begrensd, voor <span 
 <span class="math inline">R_0({\hat{A}})</span> is dicht gedefinieerd maar onbegrensd, want <span class="math inline">{\left\lVert R_0({\hat{A}}) e_n\right\rVert} = n</span> <span class="math inline">\Rightarrow \sigma^{(c)} = \{0\}</span></p>
 </div>
 </section>
-<section id="spectrum-verschuivingsoperatoren" class="level2 scrollable">
-<h2 class="scrollable anchored" data-anchor-id="spectrum-verschuivingsoperatoren">Spectrum: verschuivingsoperatoren</h2>
+<section id="spectrum-verschuivingsoperatoren" class="level2">
+<h2 class="anchored" data-anchor-id="spectrum-verschuivingsoperatoren">Spectrum: verschuivingsoperatoren</h2>
 <div class="vfr-box vfr-voorbeeld">
-<p><span class="vfr-box-label"><strong>Voorbeeld 8.19.</strong></span> Verschuivingsoperatoren op <span class="math inline">\ell^2</span>: <span class="math display">{\hat{L}}(v^0, v^1, v^2, \ldots) = (v^1, v^2, v^3, \ldots), \quad {\hat{R}}(v^0, v^1, v^2, \ldots) = (0, v^0, v^1, \ldots)</span> Met <span class="math inline">{\hat{L}}^\dagger = {\hat{R}}</span> en <span class="math inline">{\left\lVert{\hat{L}}\right\rVert} = {\left\lVert{\hat{R}}\right\rVert} = 1</span> ligt <span class="math inline">{\left\lvert\lambda\right\rvert} &gt; 1</span> niet in het spectrum.</p>
+<p><span class="vfr-box-label"><strong>Voorbeeld 8.19.</strong></span> Verschuivingsoperatoren op <span class="math inline">\ell^2</span>: <span class="math display">{\hat{L}}(v^0, v^1, v^2, \ldots) = (v^1, v^2, v^3, \ldots), \quad {\hat{R}}(v^0, v^1, v^2, \ldots) = (0, v^0, v^1, \ldots)</span> Uit H5 (Voorbeeld 5.15, daar <span class="math inline">{\hat{S}} = {\hat{R}}</span> en <span class="math inline">{\hat{T}} = {\hat{S}}^\dagger = {\hat{L}}</span>): <span class="math inline">{\hat{L}}^\dagger = {\hat{R}}</span>, en <span class="math inline">{\hat{R}}</span> is een isometrie maar niet unitair</p>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/fig-shift-operators.svg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%"></p>
+</figure>
+</div>
+</section>
+<section id="spectrum-verschuivingsoperatoren-1" class="level2 scrollable">
+<h2 class="scrollable anchored" data-anchor-id="spectrum-verschuivingsoperatoren-1">Spectrum: verschuivingsoperatoren</h2>
+<div class="vfr-box vfr-voorbeeld">
+<p><span class="vfr-box-label"><strong>Voorbeeld 8.19 (vervolg).</strong></span> Met <span class="math inline">{\left\lVert{\hat{L}}\right\rVert} = {\left\lVert{\hat{R}}\right\rVert} = 1</span> ligt <span class="math inline">{\left\lvert\lambda\right\rvert} &gt; 1</span> niet in het spectrum.</p>
 <p><span class="math inline">{\hat{R}}</span> heeft geen eigenwaarden; <span class="math inline">v_\lambda = \sum_n \lambda^n e_n</span> is eigenvector van <span class="math inline">{\hat{L}}</span> voor <span class="math inline">{\left\lvert\lambda\right\rvert} &lt; 1</span> <span class="math inline">\Rightarrow \sigma_{{\hat{L}}}^{(p)} = \{{\left\lvert\lambda\right\rvert} &lt; 1\}</span></p>
 <p>Domein van <span class="math inline">R_\lambda({\hat{R}})</span>: <span class="math inline">\overline{\mathop{\mathrm{im}}({\hat{R}} - \lambda{\hat{1}})} = \mathop{\mathrm{ker}}({\hat{L}} - \overline{\lambda}{\hat{1}})^\perp \neq H</span> voor <span class="math inline">{\left\lvert\lambda\right\rvert} &lt; 1</span> <span class="math inline">\Rightarrow \sigma_{{\hat{R}}}^{(r)} = \{{\left\lvert\lambda\right\rvert} &lt; 1\}</span></p>
 <p>Het spectrum is gesloten: <span class="math inline">\sigma_{{\hat{L}}}^{(c)} = \sigma_{{\hat{R}}}^{(c)} = \{{\left\lvert\lambda\right\rvert} = 1\}</span>, met benaderende eigenvectoren <span class="math display">v_{\lambda,n} = \frac{1}{\sqrt{n}}\sum_{k=0}^{n-1}{\mathrm{e}}^{{\mathrm{i}}k\phi} e_k \quad (\lambda = {\mathrm{e}}^{{\mathrm{i}}\phi})</span></p>

@@ -2527,39 +2527,25 @@
     "text": "Doel van dit hoofdstuk\n\nBelangrijkste operatoren op functieruimten: integraaloperatoren, vermenigvuldigingsoperatoren, differentiaaloperatoren\nEigenschappen van onbegrensde operatoren\n\nToegevoegde van een onbegrensde operator\nVerschil tussen symmetrisch en zelftoegevoegd\nBelang hiervan in de context van differentiaaloperatoren en randvoorwaarden\n\nIntuïtie krijgen voor de spectraaltheorie van begrensde en onbegrensde operatoren op oneindig-dimensionale Hilbertruimten aan de hand van relevante voorbeelden"
   },
   {
-    "objectID": "slides/H8.html#terugblik-normen-en-volledigheid-h4",
-    "href": "slides/H8.html#terugblik-normen-en-volledigheid-h4",
+    "objectID": "slides/H8.html#terugblik-normen-en-begrensde-operatoren-h4",
+    "href": "slides/H8.html#terugblik-normen-en-begrensde-operatoren-h4",
     "title": "Hoofdstuk 8 - Functieruimten",
-    "section": "Terugblik: normen en volledigheid (H4)",
-    "text": "Terugblik: normen en volledigheid (H4)\n\np-norm op C^0([a,b]): {\\left\\lVert f\\right\\rVert}_p = \\left(\\int_a^b {\\left\\lvert f(x)\\right\\rvert}^p\\,{\\mathrm{d}}x\\right)^{1/p} (Vb 4.3)\n\nUniforme norm: {\\left\\lVert f\\right\\rVert}_\\infty = \\max_{x\\in[a,b]}{\\left\\lvert f(x)\\right\\rvert} (Vb 4.5)\nPuntsgewijze convergentie komt van geen enkele norm (Vb 4.6)\n\n\n\n\nCauchy-rij: {\\left\\lVert v_n - v_m\\right\\rVert} \\to 0; compleet: elke Cauchy-rij convergeert (Def 4.8–4.9)\n\nBanachruimte = complete genormeerde vectorruimte (Def 4.10)\n(C^0([a,b]), {\\left\\lVert\\cdot\\right\\rVert}_\\infty) is Banach (Vb 4.10)\n(C^0([a,b]), {\\left\\lVert\\cdot\\right\\rVert}_p) met p &lt; \\infty is niet compleet, bv. p = 2 (Vb 5.5)\n\nComplete verzameling S: \\overline{{\\mathbb{F}}S} = V (Def 4.11)\n\nWeierstrass: de eentermen (monomen) x^n zijn compleet in (C^0([a,b]), {\\left\\lVert\\cdot\\right\\rVert}_\\infty) (Vb 4.12)"
+    "section": "Terugblik: normen en begrensde operatoren (H4)",
+    "text": "Terugblik: normen en begrensde operatoren (H4)\n\np-norm op C^0([a,b]): {\\left\\lVert f\\right\\rVert}_p = \\left(\\int_a^b {\\left\\lvert f(x)\\right\\rvert}^p\\,{\\mathrm{d}}x\\right)^{1/p}, \\;{\\left\\lVert f\\right\\rVert}_\\infty = \\max_{x\\in[a,b]}{\\left\\lvert f(x)\\right\\rvert} (Vb 4.3, 4.5)\nBanachruimte: genormeerd en compleet (elke Cauchy-rij convergeert) (Def 4.8–4.10)\n\n(C^0([a,b]), {\\left\\lVert\\cdot\\right\\rVert}_\\infty) is Banach, met {\\left\\lVert\\cdot\\right\\rVert}_p voor p &lt; \\infty niet (Vb 4.10, 5.5)\n\nComplete verzameling S: \\overline{{\\mathbb{F}}S} = V, bv. monomen x^n (Weierstrass) (Def 4.11, Vb 4.12)\nBegrensd: {\\left\\lVert{\\hat{A}} v\\right\\rVert} \\leq C {\\left\\lVert v\\right\\rVert} \\Leftrightarrow continu (Def 4.16, Prop 4.12)\n\nOperatornorm: {\\left\\lVert{\\hat{A}}\\right\\rVert} = \\sup_{v \\neq 0} {\\left\\lVert{\\hat{A}} v\\right\\rVert} / {\\left\\lVert v\\right\\rVert} (Def 4.19)"
   },
   {
-    "objectID": "slides/H8.html#terugblik-begrensde-operatoren-h4",
-    "href": "slides/H8.html#terugblik-begrensde-operatoren-h4",
+    "objectID": "slides/H8.html#terugblik-hilbertruimten-en-orthonormale-basissen-h5",
+    "href": "slides/H8.html#terugblik-hilbertruimten-en-orthonormale-basissen-h5",
     "title": "Hoofdstuk 8 - Functieruimten",
-    "section": "Terugblik: begrensde operatoren (H4)",
-    "text": "Terugblik: begrensde operatoren (H4)\n\nBegrensd: {\\left\\lVert{\\hat{A}} v\\right\\rVert} \\leq C {\\left\\lVert v\\right\\rVert} voor alle v \\in V (Def 4.16)\n\nBegrensd \\Leftrightarrow continu (Prop 4.12)\n\\mathop{\\mathrm{dim}}V &lt; \\infty: elke lineaire afbeelding is begrensd (Prop 4.13)\n\nOperatornorm: kleinste zo’n C (Def 4.19) {\\left\\lVert{\\hat{A}}\\right\\rVert} = \\sup_{v \\neq 0} \\frac{{\\left\\lVert{\\hat{A}} v\\right\\rVert}}{{\\left\\lVert v\\right\\rVert}}"
-  },
-  {
-    "objectID": "slides/H8.html#terugblik-hilbertruimten-h5",
-    "href": "slides/H8.html#terugblik-hilbertruimten-h5",
-    "title": "Hoofdstuk 8 - Functieruimten",
-    "section": "Terugblik: Hilbertruimten (H5)",
-    "text": "Terugblik: Hilbertruimten (H5)\n\nHilbertruimte: inwendigproductruimte die compleet is voor {\\left\\lVert v\\right\\rVert} = \\sqrt{{\\left\\langle v,v\\right\\rangle}} (Def 5.14)\n\nVoorbeelden: \\ell^2 (Vb 5.4), L^2 met {\\left\\langle f,g\\right\\rangle} = \\int \\overline{f(x)} g(x)\\,{\\mathrm{d}}x (Vb 5.6)\n\nParallellogramwet: de norm komt van een inwendig product \\Leftrightarrow (Prop 5.5, St 5.6) {\\left\\lVert v + w\\right\\rVert}^2 + {\\left\\lVert v - w\\right\\rVert}^2 = 2 \\left({\\left\\lVert v\\right\\rVert}^2 + {\\left\\lVert w\\right\\rVert}^2\\right)\nProjectiestelling: W gesloten deelruimte \\Rightarrow V = W \\oplus W^\\perp (St 5.13)\n\nDe beste benadering van v in W is de orthogonale projectie\n\nGram-Schmidt: lineair onafhankelijke rij \\rightarrow orthonormale rij (Def 5.20)"
-  },
-  {
-    "objectID": "slides/H8.html#terugblik-orthonormale-basissen-h5",
-    "href": "slides/H8.html#terugblik-orthonormale-basissen-h5",
-    "title": "Hoofdstuk 8 - Functieruimten",
-    "section": "Terugblik: orthonormale basissen (H5)",
-    "text": "Terugblik: orthonormale basissen (H5)\n\nComplete orthonormale rij (e_i): orthonormaal met \\overline{\\mathop{\\mathrm{span}}\\{e_i\\}} = V\nExpansiestelling: (e_i) is een Schauderbasis (St 5.23) \\boxed{v = \\sum_{i=1}^{+\\infty} {\\left\\langle e_i,v\\right\\rangle}\\, e_i}\nPlancherel: {\\left\\lVert v\\right\\rVert}^2 = \\sum_{i=1}^{+\\infty} {\\left\\lvert{\\left\\langle e_i,v\\right\\rangle}\\right\\rvert}^2 (Gev 5.24)\nVoorbeeld: f_k(x) = \\frac{1}{\\sqrt{L}}{\\mathrm{e}}^{{\\mathrm{i}}2\\pi k x/L} op L^2([0,L]) (Vb 5.8)"
+    "section": "Terugblik: Hilbertruimten en orthonormale basissen (H5)",
+    "text": "Terugblik: Hilbertruimten en orthonormale basissen (H5)\n\nHilbertruimte: inwendigproductruimte die compleet is voor de geïnduceerde norm\n\n{\\left\\lVert v\\right\\rVert} = \\sqrt{{\\left\\langle v,v\\right\\rangle}} (Def 5.14), voorbeeld: \\ell^2 (Vb 5.4)\n\nProjectiestelling: beste benadering in gesloten W = orthogonale projectie (St 5.13)\nGram-Schmidt: lineair onafhankelijke rij \\rightarrow orthonormale rij (Def 5.20)\nComplete orthonormale rij (e_i): expansiestelling en Plancherel (St 5.23, Gev 5.24) \\boxed{v = \\sum_{i=1}^{+\\infty} {\\left\\langle e_i,v\\right\\rangle}\\, e_i \\qquad {\\left\\lVert v\\right\\rVert}^2 = \\sum_{i=1}^{+\\infty} {\\left\\lvert{\\left\\langle e_i,v\\right\\rangle}\\right\\rvert}^2}\nVoorbeeld: f_k(x) = \\frac{1}{\\sqrt{L}}{\\mathrm{e}}^{{\\mathrm{i}}2\\pi k x/L} op L^2([0,L]) (Vb 5.8)"
   },
   {
     "objectID": "slides/H8.html#terugblik-operatoren-op-hilbertruimten-h5-h7",
     "href": "slides/H8.html#terugblik-operatoren-op-hilbertruimten-h5-h7",
     "title": "Hoofdstuk 8 - Functieruimten",
     "section": "Terugblik: operatoren op Hilbertruimten (H5, H7)",
-    "text": "Terugblik: operatoren op Hilbertruimten (H5, H7)\n\nRiesz: elke begrensde lineaire functionaal is \\xi[w] = {\\left\\langle v_\\xi,w\\right\\rangle} (St 5.27)\nToegevoegde: {\\left\\langle w,{\\hat{A}} v\\right\\rangle} = {\\left\\langle{\\hat{A}}^\\dagger w,v\\right\\rangle}, met {\\left\\lVert{\\hat{A}}^\\dagger\\right\\rVert} = {\\left\\lVert{\\hat{A}}\\right\\rVert} (Prop 5.28)\n\nZelftoegevoegd: {\\hat{A}} = {\\hat{A}}^\\dagger (Def 5.23) \\Rightarrow eigenwaarden reëel (Opm 5.43)\nUnitair: {\\hat{U}}^\\dagger{\\hat{U}} = {\\hat{1}} en {\\hat{U}}{\\hat{U}}^\\dagger = {\\hat{1}} (Prop 5.32)\nNormaal: {\\hat{A}}^\\dagger{\\hat{A}} = {\\hat{A}}{\\hat{A}}^\\dagger (Def 5.24)\n\nEigenvectoren bij verschillende eigenwaarden zijn orthogonaal (Prop 5.35)\n\n\n\n\n\nDiscrete Fouriertransformatie: unitair op {\\mathbb{C}}^n (Def 7.4) F_k = \\frac{1}{\\sqrt{n}} \\sum_{j=0}^{n-1} f_j\\, {\\mathrm{e}}^{-{\\mathrm{i}}2\\pi j k/n}\n\nVerband met de Fourierreeks?"
+    "text": "Terugblik: operatoren op Hilbertruimten (H5, H7)\n\nRiesz: elke begrensde lineaire functionaal is \\xi[w] = {\\left\\langle v_\\xi,w\\right\\rangle} (St 5.27)\nToegevoegde: {\\left\\langle w,{\\hat{A}} v\\right\\rangle} = {\\left\\langle{\\hat{A}}^\\dagger w,v\\right\\rangle}, met {\\left\\lVert{\\hat{A}}^\\dagger\\right\\rVert} = {\\left\\lVert{\\hat{A}}\\right\\rVert} (Prop 5.28)\n\nZelftoegevoegd: {\\hat{A}} = {\\hat{A}}^\\dagger (Def 5.23) \\Rightarrow eigenwaarden reëel (Opm 5.43)\nUnitair: {\\hat{U}}^\\dagger{\\hat{U}} = {\\hat{1}} en {\\hat{U}}{\\hat{U}}^\\dagger = {\\hat{1}} (Prop 5.32)\n\n\n\n\nDiscrete Fouriertransformatie: unitair op {\\mathbb{C}}^n (Def 7.4) F_k = \\frac{1}{\\sqrt{n}} \\sum_{j=0}^{n-1} f_j\\, {\\mathrm{e}}^{-{\\mathrm{i}}2\\pi j k/n}\n\nVerband met de Fourierreeks?"
   },
   {
     "objectID": "slides/H8.html#functieruimten",
@@ -2678,7 +2664,7 @@
     "href": "slides/H8.html#bijkomende-opmerkingen-1",
     "title": "Hoofdstuk 8 - Functieruimten",
     "section": "Bijkomende opmerkingen",
-    "text": "Bijkomende opmerkingen\n\nOpmerking 8.14. I = [a,b] compact: \\overline{C^\\infty(I)} = L^p(I), en ook \\overline{C^k(I)} = L^p(I)\n\\rightarrow geldt voor elke p: de sluiting hangt zelf af van {\\left\\lVert\\cdot\\right\\rVert}_p\n\n\nOpmerking 8.15. I = {\\mathbb{R}}: continue functies hebben niet noodzakelijk een eindige p-norm\n\\rightarrow drager \\operatorname{supp}(f) = \\overline{\\{x \\in I \\mid f(x) \\neq 0\\}} en C_c^k({\\mathbb{R}}): functies met compacte drager, dicht in L^p({\\mathbb{R}})\n\n\nOpmerking 8.16. L^p(I) is separabel: er bestaat een aftelbare fundamentele verzameling\n\nI compact: eentermen (monomen) \\{x^n, n \\in {\\mathbb{N}}\\} (Weierstrass)\nI = {\\mathbb{R}}: \\{x^n \\chi_{[-N,N]} \\mid n \\in {\\mathbb{N}}, N \\in {\\mathbb{N}}_0\\}"
+    "text": "Bijkomende opmerkingen\n\nOpmerking 8.14. I = [a,b] compact: \\overline{C^\\infty(I)} = L^p(I), en ook \\overline{C^k(I)} = L^p(I)\n\\rightarrow geldt voor elke p: de sluiting hangt zelf af van {\\left\\lVert\\cdot\\right\\rVert}_p\n\n\nOpmerking 8.15. I = {\\mathbb{R}}: continue functies hebben niet noodzakelijk een eindige p-norm\n\\rightarrow drager \\operatorname{supp}(f) = \\overline{\\{x \\in I \\mid f(x) \\neq 0\\}}\n\\rightarrow C_c^k({\\mathbb{R}}): functies met compacte drager, dicht in L^p({\\mathbb{R}})\n\n\nOpmerking 8.16. L^p(I) is separabel: er bestaat een aftelbare fundamentele verzameling\n\nI compact: eentermen (monomen) \\{x^n, n \\in {\\mathbb{N}}\\} (Weierstrass)\nI = {\\mathbb{R}}: \\{x^n \\chi_{[-N,N]} \\mid n \\in {\\mathbb{N}}, N \\in {\\mathbb{N}}_0\\}"
   },
   {
     "objectID": "slides/H8.html#hilbertruimten-en-inwendig-product-1",
@@ -2713,7 +2699,7 @@
     "href": "slides/H8.html#projector-en-nulpunten",
     "title": "Hoofdstuk 8 - Functieruimten",
     "section": "Projector en nulpunten",
-    "text": "Projector en nulpunten\n\nPropositie 8.9. Orthogonale projector op de veeltermen van graad \\leq n: ({\\hat{P}}_n f)(x) = \\int_I w(y) K_n(x,y) f(y)\\,{\\mathrm{d}}y, \\quad K_n(x,y) = \\sum_{k=0}^n \\frac{p_k(x)\\, p_k(y)}{{\\left\\langle p_k,p_k\\right\\rangle}_w} met (Christoffel-Darboux) voor x \\neq y: K_n(x,y) = \\frac{a_n}{{\\left\\langle p_n,p_n\\right\\rangle}_w} \\frac{p_{n+1}(x)\\, p_n(y) - p_n(x)\\, p_{n+1}(y)}{x - y}\n\n\nPropositie 8.10. p_n heeft n verschillende nulpunten in het inwendige van I; de nulpunten van p_n en p_{n+1} alterneren"
+    "text": "Projector en nulpunten\n\nPropositie 8.9. Orthogonale projector op de veeltermen van graad \\leq n: ({\\hat{P}}_n f)(x) = \\int_I w(y) K_n(x,y) f(y)\\,{\\mathrm{d}}y, \\quad K_n(x,y) = \\sum_{k=0}^n \\frac{p_k(x)\\, p_k(y)}{{\\left\\langle p_k,p_k\\right\\rangle}_w} met (Christoffel-Darboux): K_n(x,y) = \\frac{a_n}{{\\left\\langle p_n,p_n\\right\\rangle}_w} \\begin{cases} \\dfrac{p_{n+1}(x)\\, p_n(y) - p_n(x)\\, p_{n+1}(y)}{x - y} & \\quad x \\neq y\\\\[1ex] p_{n+1}'(x)\\, p_n(x) - p_n'(x)\\, p_{n+1}(x) & \\quad x = y\\end{cases}\n\n\nPropositie 8.10. p_n heeft n verschillende nulpunten in het inwendige van I; de nulpunten van p_n en p_{n+1} alterneren"
   },
   {
     "objectID": "slides/H8.html#legendre-veeltermen",
@@ -2734,7 +2720,7 @@
     "href": "slides/H8.html#hermite-veeltermen",
     "title": "Hoofdstuk 8 - Functieruimten",
     "section": "Hermite-veeltermen",
-    "text": "Hermite-veeltermen\n\nI = {\\mathbb{R}}, w(x) = \\exp(-x^2): \\begin{aligned} &H_0(x) = 1, \\quad H_1(x) = 2x, \\quad H_2(x) = 4x^2 - 2,\\\\ &H_3(x) = 8x^3 - 12x, \\quad H_4(x) = 16x^4 - 48x^2 + 12, \\quad \\ldots\\end{aligned}\nGenererende functie: \\exp(2xt - t^2) = \\sum_{n=0}^{+\\infty} \\frac{1}{n!} H_n(x)\\, t^n \\rightarrow {\\left\\langle H_m,H_n\\right\\rangle}_w = \\int_{-\\infty}^{+\\infty} {\\mathrm{e}}^{-x^2} H_m(x) H_n(x)\\,{\\mathrm{d}}x = 2^n n! \\sqrt{\\pi}\\,\\delta_{m,n}\nRecursie H_{n+1}(x) + 2n H_{n-1}(x) = 2x H_n(x), Rodrigues H_n(x) = (-1)^n {\\mathrm{e}}^{x^2}\\frac{{\\mathrm{d}}^n}{{\\mathrm{d}}x^n}{\\mathrm{e}}^{-x^2}"
+    "text": "Hermite-veeltermen\n\nI = {\\mathbb{R}}, w(x) = \\exp(-x^2): \\begin{aligned} &H_0(x) = 1, \\quad H_1(x) = 2x, \\quad H_2(x) = 4x^2 - 2,\\\\ &H_3(x) = 8x^3 - 12x, \\quad H_4(x) = 16x^4 - 48x^2 + 12, \\quad \\ldots\\end{aligned}\nGenererende functie: \\exp(2xt - t^2) = \\sum_{n=0}^{+\\infty} \\frac{1}{n!} H_n(x)\\, t^n \\rightarrow {\\left\\langle H_m,H_n\\right\\rangle}_w = \\int_{-\\infty}^{+\\infty} {\\mathrm{e}}^{-x^2} H_m(x) H_n(x)\\,{\\mathrm{d}}x = 2^n n! \\sqrt{\\pi}\\,\\delta_{m,n}\nRecursie H_{n+1}(x) + 2n H_{n-1}(x) = 2x H_n(x)\nRodrigues-formule: H_n(x) = (-1)^n {\\mathrm{e}}^{x^2}\\frac{{\\mathrm{d}}^n}{{\\mathrm{d}}x^n}{\\mathrm{e}}^{-x^2}"
   },
   {
     "objectID": "slides/H8.html#hermite-functies",
@@ -2790,7 +2776,7 @@
     "href": "slides/H8.html#periodieke-functies",
     "title": "Hoofdstuk 8 - Functieruimten",
     "section": "Periodieke functies",
-    "text": "Periodieke functies\n\nDefinitie 8.9. f : {\\mathbb{R}}\\to {\\mathbb{F}} is periodiek met periode L als f(x + L) = f(x) voor alle x \\in {\\mathbb{R}}\n\n\nOpmerking 8.29. Volledig bepaald door de waarden op [0, L); omgekeerd periodiek uitbreiden\n\n\nOpmerking 8.30. Functie op een cirkel met omtrek L: {\\mathbb{T}}_L = {\\mathbb{R}}/(L{\\mathbb{Z}}) (eendimensionale torus)"
+    "text": "Periodieke functies\n\nDefinitie 8.9. f : {\\mathbb{R}}\\to {\\mathbb{F}} is periodiek met periode L als f(x + L) = f(x) voor alle x \\in {\\mathbb{R}}\n\n\nOpmerking 8.29. Een periodieke functie met periode L is volledig bepaald door haar waarden op het interval [0, L) (of op eender welk interval [a, a + L))\nOmgekeerd kan elke functie gedefinieerd op [0, L) periodiek uitgebreid worden tot een functie op heel {\\mathbb{R}}, via f(x + mL) = f(x) voor x \\in [0, L) en m \\in {\\mathbb{Z}}\n\n\nOpmerking 8.30. Functie op een cirkel met omtrek L: {\\mathbb{T}}_L = {\\mathbb{R}}/(L{\\mathbb{Z}}) (eendimensionale torus)"
   },
   {
     "objectID": "slides/H8.html#trigonometrische-veeltermen",
@@ -2811,7 +2797,7 @@
     "href": "slides/H8.html#fouriercoëfficiënten-en-fourierreeks",
     "title": "Hoofdstuk 8 - Functieruimten",
     "section": "Fouriercoëfficiënten en Fourierreeks",
-    "text": "Fouriercoëfficiënten en Fourierreeks\n\nDefinitie 8.11. Fouriercoëfficiënten: \\boxed{\\hat{f}_k = {\\left\\langle\\varphi_k,f\\right\\rangle} = \\frac{1}{\\sqrt{L}}\\int_0^L f(x)\\,{\\mathrm{e}}^{-{\\mathrm{i}}\\frac{2\\pi}{L} k x}\\,{\\mathrm{d}}x}\n\n\nPropositie 8.14. Orthogonale projectie op trigonometrische veeltermen van graad \\leq n: f_n(x) = ({\\hat{P}}_n f)(x) = \\sum_{k=-n}^{+n} \\hat{f}_k \\varphi_k(x) = \\int_0^L D_n(x - t) f(t)\\,{\\mathrm{d}}t met de Dirichlet-kern D_n(x) = \\frac{1}{L}\\sum_{k=-n}^{+n}{\\mathrm{e}}^{+{\\mathrm{i}}\\frac{2\\pi}{L} k x} = \\frac{\\sin\\left(\\frac{(2n+1)\\pi}{L} x\\right)}{L \\sin\\left(\\frac{\\pi}{L} x\\right)}"
+    "text": "Fouriercoëfficiënten en Fourierreeks\n\nDefinitie 8.11. Fouriercoëfficiënten: \\boxed{\\hat{f}_k = {\\left\\langle\\varphi_k,f\\right\\rangle} = \\frac{1}{\\sqrt{L}}\\int_0^L f(x)\\,{\\mathrm{e}}^{-{\\mathrm{i}}\\frac{2\\pi}{L} k x}\\,{\\mathrm{d}}x}\n\n\nPropositie 8.14. Orthogonale projectie op trigonometrische veeltermen van graad \\leq n: f_n(x) = ({\\hat{P}}_n f)(x) = \\sum_{k=-n}^{+n} \\hat{f}_k \\varphi_k(x) = \\int_0^L D_n(x - t) f(t)\\,{\\mathrm{d}}t\n\n\nmet de Dirichlet-kern D_n(x) = \\frac{1}{L}\\sum_{k=-n}^{+n}{\\mathrm{e}}^{+{\\mathrm{i}}\\frac{2\\pi}{L} k x} = \\frac{\\sin\\left(\\frac{(2n+1)\\pi}{L} x\\right)}{L \\sin\\left(\\frac{\\pi}{L} x\\right)}"
   },
   {
     "objectID": "slides/H8.html#fourierreeks",
@@ -3007,7 +2993,7 @@
     "href": "slides/H8.html#commutatoren-1",
     "title": "Hoofdstuk 8 - Functieruimten",
     "section": "Commutatoren",
-    "text": "Commutatoren\n\nVoorbeeld 8.9. H = \\ell^2({\\mathbb{N}}) met basis \\{e_n, n \\in {\\mathbb{N}}\\}: {\\hat{A}}^- e_n = \\begin{cases} o, & n = 0\\\\ \\sqrt{n}\\, e_{n-1}, & n &gt; 0\\end{cases}, \\quad {\\hat{A}}^+ e_n = \\sqrt{n+1}\\, e_{n+1}\n\n{\\left[{\\hat{A}}^-,{\\hat{A}}^+\\right]} e_n = e_n: beide onbegrensd\nDomein \\mathop{\\mathrm{\\mathcal{D}}}_{{\\hat{A}}^\\pm} = \\{v \\in \\ell^2({\\mathbb{N}}) \\mid \\sum_{n\\in{\\mathbb{N}}} n{\\left\\lvert v^n\\right\\rvert}^2 &lt; \\infty\\}\n{\\hat{A}}^-{\\hat{A}}^+: enkel voor \\sum_n n^2{\\left\\lvert v^n\\right\\rvert}^2 &lt; \\infty\nBeide domeinen zijn dicht: bevatten alle vectoren met eindig veel niet-nul-componenten"
+    "text": "Commutatoren\n\n\n\nVoorbeeld 8.9. H = \\ell^2({\\mathbb{N}}) met basis \\{e_n\\}: {\\hat{A}}^- e_n = \\begin{cases} o, & n = 0\\\\ \\sqrt{n}\\, e_{n-1}, & n &gt; 0\\end{cases} {\\hat{A}}^+ e_n = \\sqrt{n+1}\\, e_{n+1} In componenten: ({\\hat{A}}^+ v)^n = \\sqrt{n}\\, v^{n-1}, \\quad ({\\hat{A}}^- v)^n = \\sqrt{n+1}\\, v^{n+1} \\Rightarrow {\\left[{\\hat{A}}^-,{\\hat{A}}^+\\right]} = {\\hat{1}}: beide onbegrensd.\nDomein \\mathop{\\mathrm{\\mathcal{D}}}_{{\\hat{A}}^\\pm}: \\sum_n n{\\left\\lvert v^n\\right\\rvert}^2 &lt; \\infty;\nvoor {\\hat{A}}^-{\\hat{A}}^+ ook \\sum_n n^2{\\left\\lvert v^n\\right\\rvert}^2 &lt; \\infty.\nBeide dicht: ze bevatten alle vectoren met eindig veel niet-nul-componenten."
   },
   {
     "objectID": "slides/H8.html#toegevoegde-van-een-onbegrensde-operator",
@@ -3133,7 +3119,14 @@
     "href": "slides/H8.html#spectrum-verschuivingsoperatoren",
     "title": "Hoofdstuk 8 - Functieruimten",
     "section": "Spectrum: verschuivingsoperatoren",
-    "text": "Spectrum: verschuivingsoperatoren\n\nVoorbeeld 8.19. Verschuivingsoperatoren op \\ell^2: {\\hat{L}}(v^0, v^1, v^2, \\ldots) = (v^1, v^2, v^3, \\ldots), \\quad {\\hat{R}}(v^0, v^1, v^2, \\ldots) = (0, v^0, v^1, \\ldots) Met {\\hat{L}}^\\dagger = {\\hat{R}} en {\\left\\lVert{\\hat{L}}\\right\\rVert} = {\\left\\lVert{\\hat{R}}\\right\\rVert} = 1 ligt {\\left\\lvert\\lambda\\right\\rvert} &gt; 1 niet in het spectrum.\n{\\hat{R}} heeft geen eigenwaarden; v_\\lambda = \\sum_n \\lambda^n e_n is eigenvector van {\\hat{L}} voor {\\left\\lvert\\lambda\\right\\rvert} &lt; 1 \\Rightarrow \\sigma_{{\\hat{L}}}^{(p)} = \\{{\\left\\lvert\\lambda\\right\\rvert} &lt; 1\\}\nDomein van R_\\lambda({\\hat{R}}): \\overline{\\mathop{\\mathrm{im}}({\\hat{R}} - \\lambda{\\hat{1}})} = \\mathop{\\mathrm{ker}}({\\hat{L}} - \\overline{\\lambda}{\\hat{1}})^\\perp \\neq H voor {\\left\\lvert\\lambda\\right\\rvert} &lt; 1 \\Rightarrow \\sigma_{{\\hat{R}}}^{(r)} = \\{{\\left\\lvert\\lambda\\right\\rvert} &lt; 1\\}\nHet spectrum is gesloten: \\sigma_{{\\hat{L}}}^{(c)} = \\sigma_{{\\hat{R}}}^{(c)} = \\{{\\left\\lvert\\lambda\\right\\rvert} = 1\\}, met benaderende eigenvectoren v_{\\lambda,n} = \\frac{1}{\\sqrt{n}}\\sum_{k=0}^{n-1}{\\mathrm{e}}^{{\\mathrm{i}}k\\phi} e_k \\quad (\\lambda = {\\mathrm{e}}^{{\\mathrm{i}}\\phi})\n\n\nOpmerking 8.68. Algemeen: eigenwaarde \\lambda van {\\hat{A}} \\Rightarrow \\overline{\\lambda} \\in \\sigma_{{\\hat{A}}^\\dagger}^{(p)} \\cup \\sigma_{{\\hat{A}}^\\dagger}^{(r)}\n\n\nBv. {\\hat{A}}^+ = ({\\hat{A}}^-)^\\dagger (Voorbeeld 8.14) heeft geen eigenwaarden: volledige {\\mathbb{C}} is residueel spectrum"
+    "text": "Spectrum: verschuivingsoperatoren\n\nVoorbeeld 8.19. Verschuivingsoperatoren op \\ell^2: {\\hat{L}}(v^0, v^1, v^2, \\ldots) = (v^1, v^2, v^3, \\ldots), \\quad {\\hat{R}}(v^0, v^1, v^2, \\ldots) = (0, v^0, v^1, \\ldots) Uit H5 (Voorbeeld 5.15, daar {\\hat{S}} = {\\hat{R}} en {\\hat{T}} = {\\hat{S}}^\\dagger = {\\hat{L}}): {\\hat{L}}^\\dagger = {\\hat{R}}, en {\\hat{R}} is een isometrie maar niet unitair"
+  },
+  {
+    "objectID": "slides/H8.html#spectrum-verschuivingsoperatoren-1",
+    "href": "slides/H8.html#spectrum-verschuivingsoperatoren-1",
+    "title": "Hoofdstuk 8 - Functieruimten",
+    "section": "Spectrum: verschuivingsoperatoren",
+    "text": "Spectrum: verschuivingsoperatoren\n\nVoorbeeld 8.19 (vervolg). Met {\\left\\lVert{\\hat{L}}\\right\\rVert} = {\\left\\lVert{\\hat{R}}\\right\\rVert} = 1 ligt {\\left\\lvert\\lambda\\right\\rvert} &gt; 1 niet in het spectrum.\n{\\hat{R}} heeft geen eigenwaarden; v_\\lambda = \\sum_n \\lambda^n e_n is eigenvector van {\\hat{L}} voor {\\left\\lvert\\lambda\\right\\rvert} &lt; 1 \\Rightarrow \\sigma_{{\\hat{L}}}^{(p)} = \\{{\\left\\lvert\\lambda\\right\\rvert} &lt; 1\\}\nDomein van R_\\lambda({\\hat{R}}): \\overline{\\mathop{\\mathrm{im}}({\\hat{R}} - \\lambda{\\hat{1}})} = \\mathop{\\mathrm{ker}}({\\hat{L}} - \\overline{\\lambda}{\\hat{1}})^\\perp \\neq H voor {\\left\\lvert\\lambda\\right\\rvert} &lt; 1 \\Rightarrow \\sigma_{{\\hat{R}}}^{(r)} = \\{{\\left\\lvert\\lambda\\right\\rvert} &lt; 1\\}\nHet spectrum is gesloten: \\sigma_{{\\hat{L}}}^{(c)} = \\sigma_{{\\hat{R}}}^{(c)} = \\{{\\left\\lvert\\lambda\\right\\rvert} = 1\\}, met benaderende eigenvectoren v_{\\lambda,n} = \\frac{1}{\\sqrt{n}}\\sum_{k=0}^{n-1}{\\mathrm{e}}^{{\\mathrm{i}}k\\phi} e_k \\quad (\\lambda = {\\mathrm{e}}^{{\\mathrm{i}}\\phi})\n\n\nOpmerking 8.68. Algemeen: eigenwaarde \\lambda van {\\hat{A}} \\Rightarrow \\overline{\\lambda} \\in \\sigma_{{\\hat{A}}^\\dagger}^{(p)} \\cup \\sigma_{{\\hat{A}}^\\dagger}^{(r)}\n\n\nBv. {\\hat{A}}^+ = ({\\hat{A}}^-)^\\dagger (Voorbeeld 8.14) heeft geen eigenwaarden: volledige {\\mathbb{C}} is residueel spectrum"
   },
   {
     "objectID": "slides/H8.html#spectrum-overzicht",
